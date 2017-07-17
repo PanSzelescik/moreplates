@@ -13,7 +13,7 @@ public class ModChecker {
 	
 	public ModChecker() {
 		this.isBotaniaLoaded = Loader.isModLoaded("botania");
-		this.isDraconicEvolutionLoaded = Loader.isModLoaded("draconicevoulution");
+		this.isDraconicEvolutionLoaded = Loader.isModLoaded("draconicevolution");
 		this.isEnderIOLoaded = Loader.isModLoaded("enderio");
 		this.isMekanismLoaded = Loader.isModLoaded("mekanism");
 		this.isRefinedStorageLoaded = Loader.isModLoaded("refinedstorage");
