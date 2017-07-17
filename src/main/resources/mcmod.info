@@ -1,0 +1,19 @@
+[
+{
+  "modid": "moreplates",
+  "name": "More Plates",
+  "description": "This mod adds plates and gears from Ender IO, Botania, Mekanism, Draconic Evolution, Tinkers' Construct and Refined Storage.",
+  "version": "1.12-2.0.0",
+  "credits": "",
+  "logoFile": "",
+  "mcversion": "1.12",
+  "url": "https://minecraft.curseforge.com/projects/moreplates",
+  "updateUrl": "https://minecraft.curseforge.com/projects/moreplates/files",
+  "authorList": ["PanSzelescik"],
+  "parent": "",
+  "screenshots": [],
+  "dependencies": [
+     "mod_MinecraftForge"
+  ]
+}
+]
