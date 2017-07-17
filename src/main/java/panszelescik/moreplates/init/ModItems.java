@@ -25,6 +25,30 @@ import panszelescik.moreplates.items.ItemElementiumGear;
 import panszelescik.moreplates.items.ItemElementiumPlate;
 import panszelescik.moreplates.items.ItemEnergeticAlloyGear;
 import panszelescik.moreplates.items.ItemEnergeticAlloyPlate;
+import panszelescik.moreplates.items.ItemGaiaSpiritGear;
+import panszelescik.moreplates.items.ItemGaiaSpiritPlate;
+import panszelescik.moreplates.items.ItemKnightslimeGear;
+import panszelescik.moreplates.items.ItemKnightslimePlate;
+import panszelescik.moreplates.items.ItemManasteelGear;
+import panszelescik.moreplates.items.ItemManasteelPlate;
+import panszelescik.moreplates.items.ItemManyullynGear;
+import panszelescik.moreplates.items.ItemManyullynPlate;
+import panszelescik.moreplates.items.ItemOsmiumGear;
+import panszelescik.moreplates.items.ItemOsmiumPlate;
+import panszelescik.moreplates.items.ItemPigIronGear;
+import panszelescik.moreplates.items.ItemPigIronPlate;
+import panszelescik.moreplates.items.ItemPulsatingIronGear;
+import panszelescik.moreplates.items.ItemPulsatingIronPlate;
+import panszelescik.moreplates.items.ItemQuartzEnrichedIronGear;
+import panszelescik.moreplates.items.ItemQuartzEnrichedIronPlate;
+import panszelescik.moreplates.items.ItemRedstoneAlloyGear;
+import panszelescik.moreplates.items.ItemRedstoneAlloyPlate;
+import panszelescik.moreplates.items.ItemSoulariumGear;
+import panszelescik.moreplates.items.ItemSoulariumPlate;
+import panszelescik.moreplates.items.ItemTerrasteelGear;
+import panszelescik.moreplates.items.ItemTerrasteelPlate;
+import panszelescik.moreplates.items.ItemVibrantAlloyGear;
+import panszelescik.moreplates.items.ItemVibrantAlloyPlate;
 import panszelescik.moreplates.util.Utils;
 
 public class ModItems {
@@ -91,6 +115,30 @@ public class ModItems {
 		elementiumPlate = new ItemElementiumPlate("elementium_plate", "elementium_plate");
 		energeticAlloyGear = new ItemEnergeticAlloyGear("energetic_alloy_gear", "energetic_alloy_gear");
 		energeticAlloyPlate = new ItemEnergeticAlloyPlate("energetic_alloy_plate", "energetic_alloy_plate");
+		gaiaSpiritGear = new ItemGaiaSpiritGear("gaia_spirit_gear", "gaia_spirit_gear");
+		gaiaSpiritPlate = new ItemGaiaSpiritPlate("gaia_spirit_plate", "gaia_spirit_plate");
+		knightslimeGear = new ItemKnightslimeGear("knightslime_gear", "knightslime_gear");
+		knightslimePlate = new ItemKnightslimePlate("knightslime_plate", "knightslime_plate");
+		manasteelGear = new ItemManasteelGear("manasteel_gear", "manasteel_gear");
+		manasteelPlate = new ItemManasteelPlate("manasteel_plate", "manasteel_plate");
+		manyullynGear = new ItemManyullynGear("manyullyn_gear", "manyullyn_gear");
+		manyullynPlate = new ItemManyullynPlate("manyullyn_plate", "manyullyn_plate");
+		osmiumGear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
+		osmiumPlate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
+		pigIronGear = new ItemPigIronGear("pig_iron_gear", "pig_iron_gear");
+		pigIronPlate = new ItemPigIronPlate("pig_iron_plate", "pig_iron_plate");
+		pulsatingIronGear = new ItemPulsatingIronGear("pulsating_iron_gear", "pulsating_iron_gear");
+		pulsatingIronPlate = new ItemPulsatingIronPlate("pulsating_iron_plate", "pulsating_iron_plate");
+		quartzEnrichedIronGear = new ItemQuartzEnrichedIronGear("quartz_enriched_iron_gear", "quartz_enriched_iron_gear");
+		quartzEnrichedIronPlate = new ItemQuartzEnrichedIronPlate("quartz_enriched_iron_plate", "quartz_enriched_iron_plate");
+		redstoneAlloyGear = new ItemRedstoneAlloyGear("redstone_alloy_gear", "redstone_alloy_gear");
+		redstoneAlloyPlate = new ItemRedstoneAlloyPlate("redstone_alloy_plate", "redstone_alloy_plate");
+		soulariumGear = new ItemSoulariumGear("soularium_gear", "soularium_gear");
+		soulariumPlate = new ItemSoulariumPlate("soularium_plate", "soularium_plate");
+		terrasteelGear = new ItemTerrasteelGear("terrasteel_gear", "terrasteel_gear");
+		terrasteelPlate = new ItemTerrasteelPlate("terrasteel_plate", "terrasteel_plate");
+		vibrantAlloyGear = new ItemVibrantAlloyGear("vibrant_alloy_gear", "vibrant_alloy_gear");
+		vibrantAlloyPlate = new ItemVibrantAlloyPlate("vibrant_alloy_plate", "vibrant_alloy_plate");
 	}
 	
 	public static void register() {
@@ -112,6 +160,30 @@ public class ModItems {
 		registerItem(elementiumPlate);
 		registerItem(energeticAlloyGear);
 		registerItem(energeticAlloyPlate);
+		registerItem(gaiaSpiritGear);
+		registerItem(gaiaSpiritPlate);
+		registerItem(knightslimeGear);
+		registerItem(knightslimePlate);
+		registerItem(manasteelGear);
+		registerItem(manasteelPlate);
+		registerItem(manyullynGear);
+		registerItem(manyullynPlate);
+		registerItem(osmiumGear);
+		registerItem(osmiumPlate);
+		registerItem(pigIronGear);
+		registerItem(pigIronPlate);
+		registerItem(pulsatingIronGear);
+		registerItem(pulsatingIronPlate);
+		registerItem(quartzEnrichedIronGear);
+		registerItem(quartzEnrichedIronPlate);
+		registerItem(redstoneAlloyGear);
+		registerItem(redstoneAlloyPlate);
+		registerItem(soulariumGear);
+		registerItem(soulariumPlate);
+		registerItem(terrasteelGear);
+		registerItem(terrasteelPlate);
+		registerItem(vibrantAlloyGear);
+		registerItem(vibrantAlloyPlate);
 	}
 	
 	public static void registerRenders() {
@@ -133,6 +205,30 @@ public class ModItems {
 		registerRender(elementiumPlate);
 		registerRender(energeticAlloyGear);
 		registerRender(energeticAlloyPlate);
+		registerRender(gaiaSpiritGear);
+		registerRender(gaiaSpiritPlate);
+		registerRender(knightslimeGear);
+		registerRender(knightslimePlate);
+		registerRender(manasteelGear);
+		registerRender(manasteelPlate);
+		registerRender(manyullynGear);
+		registerRender(manyullynPlate);
+		registerRender(osmiumGear);
+		registerRender(osmiumPlate);
+		registerRender(pigIronGear);
+		registerRender(pigIronPlate);
+		registerRender(pulsatingIronGear);
+		registerRender(pulsatingIronPlate);
+		registerRender(quartzEnrichedIronGear);
+		registerRender(quartzEnrichedIronPlate);
+		registerRender(redstoneAlloyGear);
+		registerRender(redstoneAlloyPlate);
+		registerRender(soulariumGear);
+		registerRender(soulariumPlate);
+		registerRender(terrasteelGear);
+		registerRender(terrasteelPlate);
+		registerRender(vibrantAlloyGear);
+		registerRender(vibrantAlloyPlate);
 	}
 	
 	public static void registerItem(Item item) {
