@@ -33,12 +33,12 @@ public class MorePlates {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
+		modChecker = new ModChecker();
+		modChecker.printSuccessMessage();
+		
 		ModItems.init();
 		ModItems.register();
 		Utils.getLogger().info("Pre Initialize");
-		
-		modChecker = new ModChecker();
-		modChecker.printSuccessMessage();
 		
 		proxy.registerRenders();
 	}
