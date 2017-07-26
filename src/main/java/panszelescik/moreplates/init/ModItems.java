@@ -5,50 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import panszelescik.moreplates.ModChecker;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.Reference;
-import panszelescik.moreplates.items.ItemArditeGear;
-import panszelescik.moreplates.items.ItemArditePlate;
-import panszelescik.moreplates.items.ItemAwakenedDraconiumGear;
-import panszelescik.moreplates.items.ItemAwakenedDraconiumPlate;
-import panszelescik.moreplates.items.ItemCobaltGear;
-import panszelescik.moreplates.items.ItemCobaltPlate;
-import panszelescik.moreplates.items.ItemConductiveIronGear;
-import panszelescik.moreplates.items.ItemConductiveIronPlate;
-import panszelescik.moreplates.items.ItemDarkSteelGear;
-import panszelescik.moreplates.items.ItemDarkSteelPlate;
-import panszelescik.moreplates.items.ItemDraconiumGear;
-import panszelescik.moreplates.items.ItemDraconiumPlate;
-import panszelescik.moreplates.items.ItemElectricalSteelGear;
-import panszelescik.moreplates.items.ItemElectricalSteelPlate;
-import panszelescik.moreplates.items.ItemElementiumGear;
-import panszelescik.moreplates.items.ItemElementiumPlate;
-import panszelescik.moreplates.items.ItemEnergeticAlloyGear;
-import panszelescik.moreplates.items.ItemEnergeticAlloyPlate;
-import panszelescik.moreplates.items.ItemGaiaSpiritGear;
-import panszelescik.moreplates.items.ItemGaiaSpiritPlate;
-import panszelescik.moreplates.items.ItemKnightslimeGear;
-import panszelescik.moreplates.items.ItemKnightslimePlate;
-import panszelescik.moreplates.items.ItemManasteelGear;
-import panszelescik.moreplates.items.ItemManasteelPlate;
-import panszelescik.moreplates.items.ItemManyullynGear;
-import panszelescik.moreplates.items.ItemManyullynPlate;
-import panszelescik.moreplates.items.ItemOsmiumGear;
-import panszelescik.moreplates.items.ItemOsmiumPlate;
-import panszelescik.moreplates.items.ItemPigIronGear;
-import panszelescik.moreplates.items.ItemPigIronPlate;
-import panszelescik.moreplates.items.ItemPulsatingIronGear;
-import panszelescik.moreplates.items.ItemPulsatingIronPlate;
-import panszelescik.moreplates.items.ItemQuartzEnrichedIronGear;
-import panszelescik.moreplates.items.ItemQuartzEnrichedIronPlate;
-import panszelescik.moreplates.items.ItemRedstoneAlloyGear;
-import panszelescik.moreplates.items.ItemRedstoneAlloyPlate;
-import panszelescik.moreplates.items.ItemSoulariumGear;
-import panszelescik.moreplates.items.ItemSoulariumPlate;
-import panszelescik.moreplates.items.ItemTerrasteelGear;
-import panszelescik.moreplates.items.ItemTerrasteelPlate;
-import panszelescik.moreplates.items.ItemVibrantAlloyGear;
-import panszelescik.moreplates.items.ItemVibrantAlloyPlate;
+import panszelescik.moreplates.items.*;
 import panszelescik.moreplates.util.Utils;
 
 public class ModItems {
@@ -73,6 +33,7 @@ public class ModItems {
 	public static Item energeticAlloyPlate;
 	public static Item gaiaSpiritGear;
 	public static Item gaiaSpiritPlate;
+	public static Item hammer;
 	public static Item knightslimeGear;
 	public static Item knightslimePlate;
 	public static Item manasteelGear;
@@ -97,138 +58,177 @@ public class ModItems {
 	public static Item vibrantAlloyPlate;
 	
 	public static void init() {
-		arditeGear = new ItemArditeGear("ardite_gear", "ardite_gear");
-		arditePlate = new ItemArditePlate("ardite_plate", "ardite_plate");
-		awakenedDraconiumGear = new ItemAwakenedDraconiumGear("awakened_draconium_gear", "awakened_draconium_gear");
-		awakenedDraconiumPlate = new ItemAwakenedDraconiumPlate("awakened_draconium_plate", "awakened_draconium_plate");
-		cobaltGear = new ItemCobaltGear("cobalt_gear", "cobalt_gear");
-		cobaltPlate = new ItemCobaltPlate("cobalt_plate", "cobalt_plate");
-		conductiveIronGear = new ItemConductiveIronGear("conductive_iron_gear", "conductive_iron_gear");
-		conductiveIronPlate = new ItemConductiveIronPlate("conductive_iron_plate", "conductive_iron_plate");
-		darkSteelGear = new ItemDarkSteelGear("dark_steel_gear", "dark_steel_gear");
-		darkSteelPlate = new ItemDarkSteelPlate("dark_steel_plate", "dark_steel_plate");
-		draconiumGear = new ItemDraconiumGear("draconium_gear", "draconium_gear");
-		draconiumPlate = new ItemDraconiumPlate("draconium_plate", "draconium_plate");
-		electricalSteelGear = new ItemElectricalSteelGear("electrical_steel_gear", "electrical_steel_gear");
-		electricalSteelPlate = new ItemElectricalSteelPlate("electrical_steel_plate", "electrical_steel_plate");
-		elementiumGear = new ItemElementiumGear("elementium_gear", "elementium_gear");
-		elementiumPlate = new ItemElementiumPlate("elementium_plate", "elementium_plate");
-		energeticAlloyGear = new ItemEnergeticAlloyGear("energetic_alloy_gear", "energetic_alloy_gear");
-		energeticAlloyPlate = new ItemEnergeticAlloyPlate("energetic_alloy_plate", "energetic_alloy_plate");
-		gaiaSpiritGear = new ItemGaiaSpiritGear("gaia_spirit_gear", "gaia_spirit_gear");
-		gaiaSpiritPlate = new ItemGaiaSpiritPlate("gaia_spirit_plate", "gaia_spirit_plate");
-		knightslimeGear = new ItemKnightslimeGear("knightslime_gear", "knightslime_gear");
-		knightslimePlate = new ItemKnightslimePlate("knightslime_plate", "knightslime_plate");
-		manasteelGear = new ItemManasteelGear("manasteel_gear", "manasteel_gear");
-		manasteelPlate = new ItemManasteelPlate("manasteel_plate", "manasteel_plate");
-		manyullynGear = new ItemManyullynGear("manyullyn_gear", "manyullyn_gear");
-		manyullynPlate = new ItemManyullynPlate("manyullyn_plate", "manyullyn_plate");
-		osmiumGear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
-		osmiumPlate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
-		pigIronGear = new ItemPigIronGear("pig_iron_gear", "pig_iron_gear");
-		pigIronPlate = new ItemPigIronPlate("pig_iron_plate", "pig_iron_plate");
-		pulsatingIronGear = new ItemPulsatingIronGear("pulsating_iron_gear", "pulsating_iron_gear");
-		pulsatingIronPlate = new ItemPulsatingIronPlate("pulsating_iron_plate", "pulsating_iron_plate");
-		quartzEnrichedIronGear = new ItemQuartzEnrichedIronGear("quartz_enriched_iron_gear", "quartz_enriched_iron_gear");
-		quartzEnrichedIronPlate = new ItemQuartzEnrichedIronPlate("quartz_enriched_iron_plate", "quartz_enriched_iron_plate");
-		redstoneAlloyGear = new ItemRedstoneAlloyGear("redstone_alloy_gear", "redstone_alloy_gear");
-		redstoneAlloyPlate = new ItemRedstoneAlloyPlate("redstone_alloy_plate", "redstone_alloy_plate");
-		soulariumGear = new ItemSoulariumGear("soularium_gear", "soularium_gear");
-		soulariumPlate = new ItemSoulariumPlate("soularium_plate", "soularium_plate");
-		terrasteelGear = new ItemTerrasteelGear("terrasteel_gear", "terrasteel_gear");
-		terrasteelPlate = new ItemTerrasteelPlate("terrasteel_plate", "terrasteel_plate");
-		vibrantAlloyGear = new ItemVibrantAlloyGear("vibrant_alloy_gear", "vibrant_alloy_gear");
-		vibrantAlloyPlate = new ItemVibrantAlloyPlate("vibrant_alloy_plate", "vibrant_alloy_plate");
+		hammer = new ItemHammer("hammer", "hammer");
+		if(ModChecker.isBotaniaLoaded) {
+			elementiumGear = new ItemElementiumGear("elementium_gear", "elementium_gear");
+			elementiumPlate = new ItemElementiumPlate("elementium_plate", "elementium_plate");
+			gaiaSpiritGear = new ItemGaiaSpiritGear("gaia_spirit_gear", "gaia_spirit_gear");
+			gaiaSpiritPlate = new ItemGaiaSpiritPlate("gaia_spirit_plate", "gaia_spirit_plate");
+			manasteelGear = new ItemManasteelGear("manasteel_gear", "manasteel_gear");
+			manasteelPlate = new ItemManasteelPlate("manasteel_plate", "manasteel_plate");
+			terrasteelGear = new ItemTerrasteelGear("terrasteel_gear", "terrasteel_gear");
+			terrasteelPlate = new ItemTerrasteelPlate("terrasteel_plate", "terrasteel_plate");
+		}
+		if(ModChecker.isDraconicEvolutionLoaded) {
+			awakenedDraconiumGear = new ItemAwakenedDraconiumGear("awakened_draconium_gear", "awakened_draconium_gear");
+			awakenedDraconiumPlate = new ItemAwakenedDraconiumPlate("awakened_draconium_plate", "awakened_draconium_plate");
+			draconiumGear = new ItemDraconiumGear("draconium_gear", "draconium_gear");
+			draconiumPlate = new ItemDraconiumPlate("draconium_plate", "draconium_plate");
+		}
+		if(ModChecker.isEnderIOLoaded) {
+			conductiveIronGear = new ItemConductiveIronGear("conductive_iron_gear", "conductive_iron_gear");
+			conductiveIronPlate = new ItemConductiveIronPlate("conductive_iron_plate", "conductive_iron_plate");
+			darkSteelGear = new ItemDarkSteelGear("dark_steel_gear", "dark_steel_gear");
+			darkSteelPlate = new ItemDarkSteelPlate("dark_steel_plate", "dark_steel_plate");
+			electricalSteelGear = new ItemElectricalSteelGear("electrical_steel_gear", "electrical_steel_gear");
+			electricalSteelPlate = new ItemElectricalSteelPlate("electrical_steel_plate", "electrical_steel_plate");
+			energeticAlloyGear = new ItemEnergeticAlloyGear("energetic_alloy_gear", "energetic_alloy_gear");
+			energeticAlloyPlate = new ItemEnergeticAlloyPlate("energetic_alloy_plate", "energetic_alloy_plate");
+			pulsatingIronGear = new ItemPulsatingIronGear("pulsating_iron_gear", "pulsating_iron_gear");
+			pulsatingIronPlate = new ItemPulsatingIronPlate("pulsating_iron_plate", "pulsating_iron_plate");
+			redstoneAlloyGear = new ItemRedstoneAlloyGear("redstone_alloy_gear", "redstone_alloy_gear");
+			redstoneAlloyPlate = new ItemRedstoneAlloyPlate("redstone_alloy_plate", "redstone_alloy_plate");
+			soulariumGear = new ItemSoulariumGear("soularium_gear", "soularium_gear");
+			soulariumPlate = new ItemSoulariumPlate("soularium_plate", "soularium_plate");
+			vibrantAlloyGear = new ItemVibrantAlloyGear("vibrant_alloy_gear", "vibrant_alloy_gear");
+			vibrantAlloyPlate = new ItemVibrantAlloyPlate("vibrant_alloy_plate", "vibrant_alloy_plate");
+		}
+		if(ModChecker.isMekanismLoaded) {
+			osmiumGear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
+			osmiumPlate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
+		}
+		if(ModChecker.isRefinedStorageLoaded) {
+			quartzEnrichedIronGear = new ItemQuartzEnrichedIronGear("quartz_enriched_iron_gear", "quartz_enriched_iron_gear");
+			quartzEnrichedIronPlate = new ItemQuartzEnrichedIronPlate("quartz_enriched_iron_plate", "quartz_enriched_iron_plate");
+		}
+		if(ModChecker.isTinkersConstructLoaded) {
+			arditeGear = new ItemArditeGear("ardite_gear", "ardite_gear");
+			arditePlate = new ItemArditePlate("ardite_plate", "ardite_plate");
+			cobaltGear = new ItemCobaltGear("cobalt_gear", "cobalt_gear");
+			cobaltPlate = new ItemCobaltPlate("cobalt_plate", "cobalt_plate");
+			knightslimeGear = new ItemKnightslimeGear("knightslime_gear", "knightslime_gear");
+			knightslimePlate = new ItemKnightslimePlate("knightslime_plate", "knightslime_plate");
+			manyullynGear = new ItemManyullynGear("manyullyn_gear", "manyullyn_gear");
+			manyullynPlate = new ItemManyullynPlate("manyullyn_plate", "manyullyn_plate");
+			pigIronGear = new ItemPigIronGear("pig_iron_gear", "pig_iron_gear");
+			pigIronPlate = new ItemPigIronPlate("pig_iron_plate", "pig_iron_plate");
+		}
 	}
 	
 	public static void register() {
-		registerItem(arditeGear);
-		registerItem(arditePlate);
-		registerItem(awakenedDraconiumGear);
-		registerItem(awakenedDraconiumPlate);
-		registerItem(cobaltGear);
-		registerItem(cobaltPlate);
-		registerItem(conductiveIronGear);
-		registerItem(conductiveIronPlate);
-		registerItem(darkSteelGear);
-		registerItem(darkSteelPlate);
-		registerItem(draconiumGear);
-		registerItem(draconiumPlate);
-		registerItem(electricalSteelGear);
-		registerItem(electricalSteelPlate);
-		registerItem(elementiumGear);
-		registerItem(elementiumPlate);
-		registerItem(energeticAlloyGear);
-		registerItem(energeticAlloyPlate);
-		registerItem(gaiaSpiritGear);
-		registerItem(gaiaSpiritPlate);
-		registerItem(knightslimeGear);
-		registerItem(knightslimePlate);
-		registerItem(manasteelGear);
-		registerItem(manasteelPlate);
-		registerItem(manyullynGear);
-		registerItem(manyullynPlate);
-		registerItem(osmiumGear);
-		registerItem(osmiumPlate);
-		registerItem(pigIronGear);
-		registerItem(pigIronPlate);
-		registerItem(pulsatingIronGear);
-		registerItem(pulsatingIronPlate);
-		registerItem(quartzEnrichedIronGear);
-		registerItem(quartzEnrichedIronPlate);
-		registerItem(redstoneAlloyGear);
-		registerItem(redstoneAlloyPlate);
-		registerItem(soulariumGear);
-		registerItem(soulariumPlate);
-		registerItem(terrasteelGear);
-		registerItem(terrasteelPlate);
-		registerItem(vibrantAlloyGear);
-		registerItem(vibrantAlloyPlate);
+		registerItem(hammer);
+		if(ModChecker.isBotaniaLoaded) {
+			registerItem(elementiumGear);
+			registerItem(elementiumPlate);
+			registerItem(gaiaSpiritGear);
+			registerItem(gaiaSpiritPlate);
+			registerItem(manasteelGear);
+			registerItem(manasteelPlate);
+			registerItem(terrasteelGear);
+			registerItem(terrasteelPlate);
+		}
+		if(ModChecker.isDraconicEvolutionLoaded) {
+			registerItem(awakenedDraconiumGear);
+			registerItem(awakenedDraconiumPlate);
+			registerItem(draconiumGear);
+			registerItem(draconiumPlate);
+		}
+		if(ModChecker.isEnderIOLoaded) {
+			registerItem(conductiveIronGear);
+			registerItem(conductiveIronPlate);
+			registerItem(darkSteelGear);
+			registerItem(darkSteelPlate);
+			registerItem(electricalSteelGear);
+			registerItem(electricalSteelPlate);
+			registerItem(energeticAlloyGear);
+			registerItem(energeticAlloyPlate);
+			registerItem(pulsatingIronGear);
+			registerItem(pulsatingIronPlate);
+			registerItem(redstoneAlloyGear);
+			registerItem(redstoneAlloyPlate);
+			registerItem(soulariumGear);
+			registerItem(soulariumPlate);
+			registerItem(vibrantAlloyGear);
+			registerItem(vibrantAlloyPlate);
+		}
+		if(ModChecker.isMekanismLoaded) {
+			registerItem(osmiumGear);
+			registerItem(osmiumPlate);
+		}
+		if(ModChecker.isRefinedStorageLoaded) {
+			registerItem(quartzEnrichedIronGear);
+			registerItem(quartzEnrichedIronPlate);
+		}
+		if(ModChecker.isTinkersConstructLoaded) {
+			registerItem(arditeGear);
+			registerItem(arditePlate);
+			registerItem(cobaltGear);
+			registerItem(cobaltPlate);
+			registerItem(knightslimeGear);
+			registerItem(knightslimePlate);
+			registerItem(manyullynGear);
+			registerItem(manyullynPlate);
+			registerItem(pigIronGear);
+			registerItem(pigIronPlate);
+		}
 	}
 	
 	public static void registerRenders() {
-		registerRender(arditeGear);
-		registerRender(arditePlate);
-		registerRender(awakenedDraconiumGear);
-		registerRender(awakenedDraconiumPlate);
-		registerRender(cobaltGear);
-		registerRender(cobaltPlate);
-		registerRender(conductiveIronGear);
-		registerRender(conductiveIronPlate);
-		registerRender(darkSteelGear);
-		registerRender(darkSteelPlate);
-		registerRender(draconiumGear);
-		registerRender(draconiumPlate);
-		registerRender(electricalSteelGear);
-		registerRender(electricalSteelPlate);
-		registerRender(elementiumGear);
-		registerRender(elementiumPlate);
-		registerRender(energeticAlloyGear);
-		registerRender(energeticAlloyPlate);
-		registerRender(gaiaSpiritGear);
-		registerRender(gaiaSpiritPlate);
-		registerRender(knightslimeGear);
-		registerRender(knightslimePlate);
-		registerRender(manasteelGear);
-		registerRender(manasteelPlate);
-		registerRender(manyullynGear);
-		registerRender(manyullynPlate);
-		registerRender(osmiumGear);
-		registerRender(osmiumPlate);
-		registerRender(pigIronGear);
-		registerRender(pigIronPlate);
-		registerRender(pulsatingIronGear);
-		registerRender(pulsatingIronPlate);
-		registerRender(quartzEnrichedIronGear);
-		registerRender(quartzEnrichedIronPlate);
-		registerRender(redstoneAlloyGear);
-		registerRender(redstoneAlloyPlate);
-		registerRender(soulariumGear);
-		registerRender(soulariumPlate);
-		registerRender(terrasteelGear);
-		registerRender(terrasteelPlate);
-		registerRender(vibrantAlloyGear);
-		registerRender(vibrantAlloyPlate);
+		registerRender(hammer);
+		if(ModChecker.isBotaniaLoaded) {
+			registerRender(elementiumGear);
+			registerRender(elementiumPlate);
+			registerRender(gaiaSpiritGear);
+			registerRender(gaiaSpiritPlate);
+			registerRender(manasteelGear);
+			registerRender(manasteelPlate);
+			registerRender(terrasteelGear);
+			registerRender(terrasteelPlate);
+		}
+		if(ModChecker.isDraconicEvolutionLoaded) {
+			registerRender(awakenedDraconiumGear);
+			registerRender(awakenedDraconiumPlate);
+			registerRender(draconiumGear);
+			registerRender(draconiumPlate);
+		}
+		if(ModChecker.isEnderIOLoaded) {
+			registerRender(conductiveIronGear);
+			registerRender(conductiveIronPlate);
+			registerRender(darkSteelGear);
+			registerRender(darkSteelPlate);
+			registerRender(electricalSteelGear);
+			registerRender(electricalSteelPlate);
+			registerRender(energeticAlloyGear);
+			registerRender(energeticAlloyPlate);
+			registerRender(pulsatingIronGear);
+			registerRender(pulsatingIronPlate);
+			registerRender(redstoneAlloyGear);
+			registerRender(redstoneAlloyPlate);
+			registerRender(soulariumGear);
+			registerRender(soulariumPlate);
+			registerRender(vibrantAlloyGear);
+			registerRender(vibrantAlloyPlate);
+		}
+		if(ModChecker.isMekanismLoaded) {
+			registerRender(osmiumGear);
+			registerRender(osmiumPlate);
+		}
+		if(ModChecker.isRefinedStorageLoaded) {
+			registerRender(quartzEnrichedIronGear);
+			registerRender(quartzEnrichedIronPlate);
+		}
+		if(ModChecker.isTinkersConstructLoaded) {
+			registerRender(arditeGear);
+			registerRender(arditePlate);
+			registerRender(cobaltGear);
+			registerRender(cobaltPlate);
+			registerRender(knightslimeGear);
+			registerRender(knightslimePlate);
+			registerRender(manyullynGear);
+			registerRender(manyullynPlate);
+			registerRender(pigIronGear);
+			registerRender(pigIronPlate);
+		}
 	}
 	
 	public static void registerItem(Item item) {
