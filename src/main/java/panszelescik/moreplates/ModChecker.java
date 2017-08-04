@@ -9,6 +9,9 @@ public class ModChecker {
 	public static boolean isEnderIOLoaded;
 	public static boolean isImmersiveEngineeringLoaded;
 	public static boolean isMekanismLoaded;
+	public static boolean isMysticalAgradditionsLoaded;
+	public static boolean isMysticalAgricultureLoaded;
+	public static boolean isProjectRedLoaded;
 	public static boolean isRefinedStorageLoaded;
 	public static boolean isTinkersConstructLoaded;
 	
@@ -18,6 +21,9 @@ public class ModChecker {
 		this.isEnderIOLoaded = Loader.isModLoaded("enderio");
 		this.isImmersiveEngineeringLoaded = Loader.isModLoaded("immersiveengineering");
 		this.isMekanismLoaded = Loader.isModLoaded("mekanism");
+		this.isMysticalAgradditionsLoaded = Loader.isModLoaded("mysticalagradditions");
+		this.isMysticalAgricultureLoaded = Loader.isModLoaded("mysticalagriculture");
+		this.isProjectRedLoaded = Loader.isModLoaded("projectred-core");
 		this.isRefinedStorageLoaded = Loader.isModLoaded("refinedstorage");
 		this.isTinkersConstructLoaded = Loader.isModLoaded("tconstruct");
 	}
@@ -37,6 +43,15 @@ public class ModChecker {
 		}
 		if(isMekanismLoaded) {
 			MorePlates.logger.info("Mekanism has been detected. Loading integration...");
+		}
+		if(isMysticalAgradditionsLoaded) {
+			MorePlates.logger.info("Mystical Agradditions has been detected. Loading integration...");
+		}
+		if(isMysticalAgricultureLoaded) {
+			MorePlates.logger.info("Mystical Agriculture has been detected. Loading integration...");
+		}
+		if(isProjectRedLoaded) {
+			MorePlates.logger.info("Project Red has been detected. Loading integration...");
 		}
 		if(isRefinedStorageLoaded) {
 			MorePlates.logger.info("Refined Storage has been detected. Loading integration...");
