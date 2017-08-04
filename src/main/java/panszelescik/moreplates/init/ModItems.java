@@ -27,6 +27,8 @@ public class ModItems {
 	public static Item draconiumPlate;
 	public static Item electricalSteelGear;
 	public static Item electricalSteelPlate;
+	public static Item electrotineAlloyGear;
+	public static Item electrotineAlloyPlate;
 	public static Item elementiumGear;
 	public static Item elementiumPlate;
 	public static Item energeticAlloyGear;
@@ -34,6 +36,12 @@ public class ModItems {
 	public static Item gaiaSpiritGear;
 	public static Item gaiaSpiritPlate;
 	public static Item hammer;
+	public static Item inferiumGear;
+	public static Item inferiumPlate;
+	public static Item insaniumGear;
+	public static Item insaniumPlate;
+	public static Item intermediumGear;
+	public static Item intermediumPlate;
 	public static Item knightslimeGear;
 	public static Item knightslimePlate;
 	public static Item manasteelGear;
@@ -44,14 +52,24 @@ public class ModItems {
 	public static Item osmiumPlate;
 	public static Item pigIronGear;
 	public static Item pigIronPlate;
+	public static Item prudentiumGear;
+	public static Item prudentiumPlate;
 	public static Item pulsatingIronGear;
 	public static Item pulsatingIronPlate;
 	public static Item quartzEnrichedIronGear;
 	public static Item quartzEnrichedIronPlate;
+	public static Item redAlloyGear;
+	public static Item redAlloyPlate;
 	public static Item redstoneAlloyGear;
 	public static Item redstoneAlloyPlate;
 	public static Item soulariumGear;
 	public static Item soulariumPlate;
+	public static Item souliumGear;
+	public static Item souliumPlate;
+	public static Item superiumGear;
+	public static Item superiumPlate;
+	public static Item supremiumGear;
+	public static Item supremiumPlate;
 	public static Item terrasteelGear;
 	public static Item terrasteelPlate;
 	public static Item vibrantAlloyGear;
@@ -96,6 +114,30 @@ public class ModItems {
 		if(ModChecker.isMekanismLoaded) {
 			osmiumGear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
 			osmiumPlate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
+		}
+		if(ModChecker.isMysticalAgradditionsLoaded) {
+			insaniumGear = new ItemInsaniumGear("insanium_gear", "insanium_gear");
+			insaniumPlate = new ItemInsaniumPlate("insanium_plate", "insanium_plate");
+		}
+		if(ModChecker.isMysticalAgricultureLoaded) {
+			inferiumGear  = new ItemInferiumGear("inferium_gear", "inferium_gear");
+			inferiumPlate = new ItemInferiumPlate("inferium_plate", "inferium_plate");
+			intermediumGear = new ItemIntermediumGear("intermedium_gear", "intermedium_gear");
+			intermediumPlate = new ItemIntermediumPlate("intermedium_plate", "intermedium_plate");
+			prudentiumGear = new ItemPrudentiumGear("prudentium_gear", "prudentium_gear");
+			prudentiumPlate = new ItemPrudentiumPlate("prudentium_plate", "prudentium_plate");
+			souliumGear = new ItemSouliumGear("soulium_gear", "soulium_gear");
+			souliumPlate = new ItemSouliumPlate("soulium_plate", "soulium_plate");
+			superiumGear = new ItemSuperiumGear("superium_gear", "superium_gear");
+			superiumPlate = new ItemSuperiumPlate("superium_plate", "superium_plate");
+			supremiumGear = new ItemSupremiumGear("supremium_gear", "supremium_gear");
+			supremiumPlate = new ItemSupremiumPlate("supremium_plate", "supremium_plate");
+		}
+		if(ModChecker.isProjectRedLoaded) {
+			electrotineAlloyGear = new ItemElectrotineAlloyGear("electrotine_alloy_gear", "electrotine_alloy_gear");
+			electrotineAlloyPlate = new ItemElectrotineAlloyPlate("electrotine_alloy_plate", "electrotine_alloy_plate");
+			redAlloyGear = new ItemRedAlloyGear("red_alloy_gear", "red_alloy_gear");
+			redAlloyPlate = new ItemRedAlloyPlate("red_alloy_plate", "red_alloy_plate");
 		}
 		if(ModChecker.isRefinedStorageLoaded) {
 			quartzEnrichedIronGear = new ItemQuartzEnrichedIronGear("quartz_enriched_iron_gear", "quartz_enriched_iron_gear");
@@ -155,6 +197,30 @@ public class ModItems {
 			registerItem(osmiumGear);
 			registerItem(osmiumPlate);
 		}
+		if(ModChecker.isMysticalAgradditionsLoaded) {
+			registerItem(insaniumGear);
+			registerItem(insaniumPlate);
+		}
+		if(ModChecker.isMysticalAgricultureLoaded) {
+			registerItem(inferiumGear);
+			registerItem(inferiumPlate);
+			registerItem(intermediumGear);
+			registerItem(intermediumPlate);
+			registerItem(prudentiumGear);
+			registerItem(prudentiumPlate);
+			registerItem(souliumGear);
+			registerItem(souliumPlate);
+			registerItem(superiumGear);
+			registerItem(superiumPlate);
+			registerItem(supremiumGear);
+			registerItem(supremiumPlate);
+		}
+		if(ModChecker.isProjectRedLoaded) {
+			registerItem(electrotineAlloyGear);
+			registerItem(electrotineAlloyPlate);
+			registerItem(redAlloyGear);
+			registerItem(redAlloyPlate);
+		}
 		if(ModChecker.isRefinedStorageLoaded) {
 			registerItem(quartzEnrichedIronGear);
 			registerItem(quartzEnrichedIronPlate);
@@ -212,6 +278,30 @@ public class ModItems {
 		if(ModChecker.isMekanismLoaded) {
 			registerRender(osmiumGear);
 			registerRender(osmiumPlate);
+		}
+		if(ModChecker.isMysticalAgradditionsLoaded) {
+			registerRender(insaniumGear);
+			registerRender(insaniumPlate);
+		}
+		if(ModChecker.isMysticalAgricultureLoaded) {
+			registerRender(inferiumGear);
+			registerRender(inferiumPlate);
+			registerRender(intermediumGear);
+			registerRender(intermediumPlate);
+			registerRender(prudentiumGear);
+			registerRender(prudentiumPlate);
+			registerRender(souliumGear);
+			registerRender(souliumPlate);
+			registerRender(superiumGear);
+			registerRender(superiumPlate);
+			registerRender(supremiumGear);
+			registerRender(supremiumPlate);
+		}
+		if(ModChecker.isProjectRedLoaded) {
+			registerRender(electrotineAlloyGear);
+			registerRender(electrotineAlloyPlate);
+			registerRender(redAlloyGear);
+			registerRender(redAlloyPlate);
 		}
 		if(ModChecker.isRefinedStorageLoaded) {
 			registerRender(quartzEnrichedIronGear);
