@@ -13,7 +13,7 @@ public class TabItems extends CreativeTabs{
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(ModItems.arditeGear);
+		return new ItemStack(ModItems.hammer);
 	}
 
 }
