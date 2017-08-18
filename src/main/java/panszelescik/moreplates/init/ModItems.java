@@ -13,70 +13,114 @@ import panszelescik.moreplates.util.Utils;
 
 public class ModItems {
 
-	public static Item arditeGear;
-	public static Item arditePlate;
+	public static Item hammer;
+	
+	//Applied Energistics 2 and Applied Llamagistics
+	
+	public static Item certusQuartzGear;
+	public static Item certusQuartzPlate;
+	public static Item fluixGear;
+	public static Item fluixPlate;
+	
+	//Botania
+	
+	public static Item elementiumGear;
+	public static Item elementiumPlate;
+	public static Item gaiaSpiritGear;
+	public static Item gaiaSpiritPlate;
+	public static Item manasteelGear;
+	public static Item manasteelPlate;
+	public static Item terrasteelGear;
+	public static Item terrasteelPlate;
+	
+	//Draconic Evolution
+	
 	public static Item awakenedDraconiumGear;
 	public static Item awakenedDraconiumPlate;
-	public static Item cobaltGear;
-	public static Item cobaltPlate;
+	public static Item draconiumGear;
+	public static Item draconiumPlate;
+	
+	//Ender IO
+	
 	public static Item conductiveIronGear;
 	public static Item conductiveIronPlate;
 	public static Item darkSteelGear;
 	public static Item darkSteelPlate;
-	public static Item draconiumGear;
-	public static Item draconiumPlate;
 	public static Item electricalSteelGear;
 	public static Item electricalSteelPlate;
-	public static Item electrotineAlloyGear;
-	public static Item electrotineAlloyPlate;
-	public static Item elementiumGear;
-	public static Item elementiumPlate;
 	public static Item energeticAlloyGear;
 	public static Item energeticAlloyPlate;
-	public static Item gaiaSpiritGear;
-	public static Item gaiaSpiritPlate;
-	public static Item hammer;
-	public static Item inferiumGear;
-	public static Item inferiumPlate;
-	public static Item insaniumGear;
-	public static Item insaniumPlate;
-	public static Item intermediumGear;
-	public static Item intermediumPlate;
-	public static Item knightslimeGear;
-	public static Item knightslimePlate;
-	public static Item manasteelGear;
-	public static Item manasteelPlate;
-	public static Item manyullynGear;
-	public static Item manyullynPlate;
-	public static Item osmiumGear;
-	public static Item osmiumPlate;
-	public static Item pigIronGear;
-	public static Item pigIronPlate;
-	public static Item prudentiumGear;
-	public static Item prudentiumPlate;
 	public static Item pulsatingIronGear;
 	public static Item pulsatingIronPlate;
-	public static Item quartzEnrichedIronGear;
-	public static Item quartzEnrichedIronPlate;
-	public static Item redAlloyGear;
-	public static Item redAlloyPlate;
 	public static Item redstoneAlloyGear;
 	public static Item redstoneAlloyPlate;
 	public static Item soulariumGear;
 	public static Item soulariumPlate;
+	public static Item vibrantAlloyGear;
+	public static Item vibrantAlloyPlate;
+	
+	//Mekanism
+	
+	public static Item glowstoneGear;
+	public static Item glowstonePlate;
+	public static Item osmiumGear;
+	public static Item osmiumPlate;
+	public static Item refinedObsidianGear;
+	public static Item refinedObsidianPlate;
+	
+	//Mystical Agradditions
+	
+	public static Item insaniumGear;
+	public static Item insaniumPlate;
+	
+	//Mystical Agriculture
+	
+	public static Item inferiumGear;
+	public static Item inferiumPlate;
+	public static Item intermediumGear;
+	public static Item intermediumPlate;
+	public static Item prudentiumGear;
+	public static Item prudentiumPlate;
 	public static Item souliumGear;
 	public static Item souliumPlate;
 	public static Item superiumGear;
 	public static Item superiumPlate;
 	public static Item supremiumGear;
 	public static Item supremiumPlate;
-	public static Item terrasteelGear;
-	public static Item terrasteelPlate;
-	public static Item vibrantAlloyGear;
-	public static Item vibrantAlloyPlate;
+	
+	//Project Red
+	
+	public static Item electrotineAlloyGear;
+	public static Item electrotineAlloyPlate;
+	public static Item redAlloyGear;
+	public static Item redAlloyPlate;
+	
+	//Refined Storage
+	
+	public static Item quartzEnrichedIronGear;
+	public static Item quartzEnrichedIronPlate;
+	
+	//Tinkers' Construct
+	
+	public static Item arditeGear;
+	public static Item arditePlate;
+	public static Item cobaltGear;
+	public static Item cobaltPlate;
+	public static Item knightslimeGear;
+	public static Item knightslimePlate;
+	public static Item manyullynGear;
+	public static Item manyullynPlate;
+	public static Item pigIronGear;
+	public static Item pigIronPlate;
 	
 	public static void init() {
 		hammer = new ItemHammer("hammer", "hammer");
+		if(ModChecker.isAppliedEnergisticsLoaded) {
+			certusQuartzGear = new ItemCertusQuartzPlate("certus_quartz_gear", "certus_quartz_gear");
+			certusQuartzPlate = new ItemCertusQuartzGear("certus_quartz_plate", "certus_quartz_plate");
+			fluixGear = new ItemFluixGear("fluix_gear", "fluix_gear");
+			fluixPlate = new ItemFluixPlate("fluix_plate", "fluix_plate");
+		}
 		if(ModChecker.isBotaniaLoaded) {
 			elementiumGear = new ItemElementiumGear("elementium_gear", "elementium_gear");
 			elementiumPlate = new ItemElementiumPlate("elementium_plate", "elementium_plate");
@@ -112,8 +156,12 @@ public class ModItems {
 			vibrantAlloyPlate = new ItemVibrantAlloyPlate("vibrant_alloy_plate", "vibrant_alloy_plate");
 		}
 		if(ModChecker.isMekanismLoaded) {
+			glowstoneGear = new ItemGlowstoneGear("glowstone_gear", "glowstone_gear");
+			glowstonePlate = new ItemGlowstonePlate("glowstone_plate", "glowstone_plate");
 			osmiumGear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
 			osmiumPlate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
+			refinedObsidianGear = new ItemRefinedObsidianGear("refined_obsidian_gear", "refined_obsidian_gear");
+			refinedObsidianPlate = new ItemRefinedObsidianPlate("refined_obsidian_plate", "refined_obsidian_plate");
 		}
 		if(ModChecker.isMysticalAgradditionsLoaded) {
 			insaniumGear = new ItemInsaniumGear("insanium_gear", "insanium_gear");
@@ -159,6 +207,12 @@ public class ModItems {
 	
 	public static void register() {
 		registerItem(hammer);
+		if(ModChecker.isAppliedEnergisticsLoaded) {
+			registerItem(certusQuartzGear);
+			registerItem(certusQuartzPlate);
+			registerItem(fluixGear);
+			registerItem(fluixPlate);
+		}
 		if(ModChecker.isBotaniaLoaded) {
 			registerItem(elementiumGear);
 			registerItem(elementiumPlate);
@@ -194,8 +248,12 @@ public class ModItems {
 			registerItem(vibrantAlloyPlate);
 		}
 		if(ModChecker.isMekanismLoaded) {
+			registerItem(glowstoneGear);
+			registerItem(glowstonePlate);
 			registerItem(osmiumGear);
 			registerItem(osmiumPlate);
+			registerItem(refinedObsidianGear);
+			registerItem(refinedObsidianPlate);
 		}
 		if(ModChecker.isMysticalAgradditionsLoaded) {
 			registerItem(insaniumGear);
@@ -241,6 +299,12 @@ public class ModItems {
 	
 	public static void registerRenders() {
 		registerRender(hammer);
+		if(ModChecker.isAppliedEnergisticsLoaded) {
+			registerRender(certusQuartzGear);
+			registerRender(certusQuartzPlate);
+			registerRender(fluixGear);
+			registerRender(fluixPlate);
+		}
 		if(ModChecker.isBotaniaLoaded) {
 			registerRender(elementiumGear);
 			registerRender(elementiumPlate);
@@ -276,8 +340,12 @@ public class ModItems {
 			registerRender(vibrantAlloyPlate);
 		}
 		if(ModChecker.isMekanismLoaded) {
+			registerRender(glowstoneGear);
+			registerRender(glowstonePlate);
 			registerRender(osmiumGear);
 			registerRender(osmiumPlate);
+			registerRender(refinedObsidianGear);
+			registerRender(refinedObsidianPlate);
 		}
 		if(ModChecker.isMysticalAgradditionsLoaded) {
 			registerRender(insaniumGear);

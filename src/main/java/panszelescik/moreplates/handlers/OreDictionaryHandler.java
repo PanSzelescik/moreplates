@@ -8,6 +8,12 @@ public class OreDictionaryHandler {
 
 	public static void registerOreDictionary() {
 		
+		if(ModChecker.isAppliedEnergisticsLoaded) {
+			OreDictionary.registerOre("gearCertusQuartz", ModItems.certusQuartzGear);
+			OreDictionary.registerOre("plateCertusQuartz", ModItems.certusQuartzPlate);
+			OreDictionary.registerOre("gearFluix", ModItems.fluixGear);
+			OreDictionary.registerOre("plateFluix", ModItems.fluixPlate);
+		}
 		if(ModChecker.isBotaniaLoaded) {
 			OreDictionary.registerOre("gearElementium", ModItems.elementiumGear);
 			OreDictionary.registerOre("plateElementium", ModItems.elementiumPlate);
@@ -43,8 +49,12 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("plateVibrantAlloy", ModItems.vibrantAlloyPlate);
 		}
 		if(ModChecker.isMekanismLoaded) {
+			OreDictionary.registerOre("gearRefinedGlowstone", ModItems.glowstoneGear);
+			OreDictionary.registerOre("plateRefinedGlowstone", ModItems.glowstonePlate);
 			OreDictionary.registerOre("gearOsmium", ModItems.osmiumGear);
 			OreDictionary.registerOre("plateOsmium", ModItems.osmiumPlate);
+			OreDictionary.registerOre("gearRefinedObsidian", ModItems.refinedObsidianGear);
+			OreDictionary.registerOre("plateRefinedObsidian", ModItems.refinedObsidianPlate);
 		}
 		if(ModChecker.isMysticalAgradditionsLoaded) {
 			OreDictionary.registerOre("gearInsanium", ModItems.insaniumGear);
