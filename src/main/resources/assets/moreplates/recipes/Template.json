@@ -1,0 +1,41 @@
+{
+
+  "type": "minecraft:crafting_shaped",
+
+  "pattern": [
+
+    " M ",
+
+    "MIM",
+
+    " M "
+
+  ],
+
+  "key": {
+
+    "M": {
+
+      "type": "forge:ore_dict",
+
+      "ore": "ingot"
+
+    },
+
+    "I": {
+
+      "type": "forge:ore_dict",
+
+      "ore": "ingotIron"
+
+   }
+
+  "result": {
+
+    "item": "moreplates:Gear",
+
+    "data": 0
+
+  }
+
+}
