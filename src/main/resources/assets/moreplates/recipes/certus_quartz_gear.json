@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"key": {
+		"M": {
+			"type": "forge:ore_dict",
+			"ore": "crystalCertusQuartz
+		},
+		"I": {
+			"type": "forge:ore_dict",
+			"ore": "ingotIron"
+		}
+	},
+	"result": {
+		"item": "moreplates:certus_quartz_gear",
+		"data": 0
+	}
+}
