@@ -8,7 +8,7 @@
 	"key": {
 		"M": {
 			"type": "forge:ore_dict",
-			"ore": "crystalCertusQuartz
+			"ore": "crystalCertusQuartz"
 		},
 		"I": {
 			"type": "forge:ore_dict",
