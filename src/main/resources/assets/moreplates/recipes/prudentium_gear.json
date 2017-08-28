@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"key": {
+		"M": {
+			"type": "forge:ore_dict",
+			"ore": "ingotPrudentium"
+		},
+		"I": {
+			"type": "forge:ore_dict",
+			"ore": "ingotIron"
+		}
+	},
+	"result": {
+		"item": "moreplates:prudentium_gear",
+		"data": 0
+	}
+}
