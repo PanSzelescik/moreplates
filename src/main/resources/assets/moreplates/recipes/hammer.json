@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"IGI",
+		" S ",
+		" S "
+	],
+	"key": {
+		"G": {
+			"type": "forge:ore_dict",
+			"ore": "ingotGold"
+		},
+		"I": {
+			"type": "forge:ore_dict",
+			"ore": "ingotIron"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "moreplates:hammer",
+		"data": 0
+	}
+}
