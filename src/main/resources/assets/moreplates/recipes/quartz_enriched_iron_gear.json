@@ -7,8 +7,7 @@
 	],
 	"key": {
 		"M": {
-			"type": "forge:ore_dict",
-			"ore": "ingotQuartzEnrichedIron"
+			"item": "refinedstorage:quartz_enriched_iron"
 		},
 		"I": {
 			"type": "forge:ore_dict",
