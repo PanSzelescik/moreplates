@@ -8,7 +8,7 @@
 	"key": {
 		"M": {
 			"type": "forge:ore_dict",
-			"ore": "ingotGaiaSpirit"
+			"ore": "gaiaIngot"
 		},
 		"I": {
 			"type": "forge:ore_dict",
