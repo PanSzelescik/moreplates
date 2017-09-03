@@ -15,10 +15,10 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("plateFluix", ModItems.fluixPlate);
 		}
 		if(ModChecker.isBotaniaLoaded) {
-			OreDictionary.registerOre("gearElementium", ModItems.elementiumGear);
-			OreDictionary.registerOre("plateElementium", ModItems.elementiumPlate);
-			OreDictionary.registerOre("gearGaiaSpirit", ModItems.gaiaSpiritGear);
-			OreDictionary.registerOre("plateGaiaSpirit", ModItems.gaiaSpiritPlate);
+			OreDictionary.registerOre("gearElvenElementium", ModItems.elementiumGear);
+			OreDictionary.registerOre("plateElvenElementium", ModItems.elementiumPlate);
+			OreDictionary.registerOre("gaiaGear", ModItems.gaiaSpiritGear);
+			OreDictionary.registerOre("gaiaPlate", ModItems.gaiaSpiritPlate);
 			OreDictionary.registerOre("gearManasteel", ModItems.manasteelGear);
 			OreDictionary.registerOre("plateManasteel", ModItems.manasteelPlate);
 			OreDictionary.registerOre("gearTerrasteel", ModItems.terrasteelGear);
