@@ -48,6 +48,15 @@ item.soularium_plate.name=Soularium Plate
 item.vibrant_alloy_gear.name=Vibrant Alloy Gear
 item.vibrant_alloy_plate.name=Vibrant Alloy Plate
 
+//Extra Utilities
+
+item.demon_gear.name=Demon Gear
+item.demon_plate.name=Demon Plate
+item.enchanted_gear.name=Enchanted Gear
+item.enchanted_plate.name=Enchanted Plate
+item.evil_infused_iron_gear.name=Evil Infused Iron Gear
+item.evil_infused_iron_plate.name=Evil Infused Iron Plate
+
 //Mekanism
 
 item.glowstone_gear.name=Glowstone Gear
