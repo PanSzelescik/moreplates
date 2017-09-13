@@ -2,8 +2,8 @@
 {
   "modid": "moreplates",
   "name": "More Plates",
-  "description": "This mod adds plates and gears from Ender IO, Botania, Mekanism, Draconic Evolution, Tinkers' Construct, Project Red, Mystical Agriculture, Mystical Agradditions, Applied Energistics and Refined Storage.",
-  "version": "1.12.x-2.4.3.2463",
+  "description": "This mod adds plates and gears from Ender IO, Botania, Mekanism, Draconic Evolution, Extra Utilities, Tinkers' Construct, Project Red, Mystical Agriculture, Mystical Agradditions, Applied Energistics and Refined Storage.",
+  "version": "2.5.0",
   "credits": "",
   "logoFile": "",
   "mcversion": "1.12.1",
