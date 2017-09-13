@@ -8,6 +8,7 @@ public class ModChecker {
 	public static boolean isBotaniaLoaded;
 	public static boolean isDraconicEvolutionLoaded;
 	public static boolean isEnderIOLoaded;
+	public static boolean isExtraUtilitiesLoaded;
 	public static boolean isMekanismLoaded;
 	public static boolean isMysticalAgradditionsLoaded;
 	public static boolean isMysticalAgricultureLoaded;
@@ -20,6 +21,7 @@ public class ModChecker {
 		this.isBotaniaLoaded = Loader.isModLoaded("botania");
 		this.isDraconicEvolutionLoaded = Loader.isModLoaded("draconicevolution");
 		this.isEnderIOLoaded = Loader.isModLoaded("enderio");
+		this.isExtraUtilitiesLoaded = Loader.isModLoaded("extrautils2");
 		this.isMekanismLoaded = Loader.isModLoaded("mekanism");
 		this.isMysticalAgradditionsLoaded = Loader.isModLoaded("mysticalagradditions");
 		this.isMysticalAgricultureLoaded = Loader.isModLoaded("mysticalagriculture");
@@ -40,6 +42,9 @@ public class ModChecker {
 		}
 		if(isEnderIOLoaded) {
 			MorePlates.logger.info("Ender IO has been detected.");
+		}
+		if(isExtraUtilitiesLoaded) {
+			MorePlates.logger.info("Extra Utilities 2 has been detected.");
 		}
 		if(isMekanismLoaded) {
 			MorePlates.logger.info("Mekanism has been detected.");
