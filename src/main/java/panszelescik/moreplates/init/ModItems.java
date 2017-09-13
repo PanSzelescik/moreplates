@@ -59,6 +59,15 @@ public class ModItems {
 	public static Item vibrantAlloyGear;
 	public static Item vibrantAlloyPlate;
 	
+	//Extra Utilities
+	
+	public static Item demonGear;
+	public static Item demonPlate;
+	public static Item enchantedGear;
+	public static Item enchantedPlate;
+	public static Item evilInfusedIronGear;
+	public static Item evilInfusedIronPlate;
+	
 	//Mekanism
 	
 	public static Item glowstoneGear;
@@ -155,6 +164,14 @@ public class ModItems {
 			vibrantAlloyGear = new ItemVibrantAlloyGear("vibrant_alloy_gear", "vibrant_alloy_gear");
 			vibrantAlloyPlate = new ItemVibrantAlloyPlate("vibrant_alloy_plate", "vibrant_alloy_plate");
 		}
+		if(ModChecker.isExtraUtilitiesLoaded) {
+			demonGear = new ItemDemonGear("demon_gear", "demon_gear");
+			demonPlate = new ItemDemonPlate("demon_plate", "demon_plate");
+			enchantedGear = new ItemEnchantedGear("enchanted_gear", "enchanted_gear");
+			enchantedPlate = new ItemEnchantedPlate("enchanted_plate", "enchanted_plate");
+			evilInfusedIronGear = new ItemEvilInfusedIronGear("evil_infused_iron_gear", "evil_infused_iron_gear");
+			evilInfusedIronPlate = new ItemEvilInfusedIronPlate("evil_infused_iron_plate", "evil_infused_iron_plate");
+		}
 		if(ModChecker.isMekanismLoaded) {
 			glowstoneGear = new ItemGlowstoneGear("glowstone_gear", "glowstone_gear");
 			glowstonePlate = new ItemGlowstonePlate("glowstone_plate", "glowstone_plate");
@@ -247,6 +264,14 @@ public class ModItems {
 			registerItem(vibrantAlloyGear);
 			registerItem(vibrantAlloyPlate);
 		}
+		if(ModChecker.isExtraUtilitiesLoaded) {
+			registerItem(demonGear);
+			registerItem(demonPlate);
+			registerItem(enchantedGear);
+			registerItem(enchantedPlate);
+			registerItem(evilInfusedIronGear);
+			registerItem(evilInfusedIronPlate);
+		}
 		if(ModChecker.isMekanismLoaded) {
 			registerItem(glowstoneGear);
 			registerItem(glowstonePlate);
@@ -338,6 +363,14 @@ public class ModItems {
 			registerRender(soulariumPlate);
 			registerRender(vibrantAlloyGear);
 			registerRender(vibrantAlloyPlate);
+		}
+		if(ModChecker.isExtraUtilitiesLoaded) {
+			registerRender(demonGear);
+			registerRender(demonPlate);
+			registerRender(enchantedGear);
+			registerRender(enchantedPlate);
+			registerRender(evilInfusedIronGear);
+			registerRender(evilInfusedIronPlate);
 		}
 		if(ModChecker.isMekanismLoaded) {
 			registerRender(glowstoneGear);
