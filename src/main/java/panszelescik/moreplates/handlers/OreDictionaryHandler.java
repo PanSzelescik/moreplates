@@ -48,6 +48,14 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("gearVibrantAlloy", ModItems.vibrantAlloyGear);
 			OreDictionary.registerOre("plateVibrantAlloy", ModItems.vibrantAlloyPlate);
 		}
+		if(ModChecker.isExtraUtilitiesLoaded) {
+			OreDictionary.registerOre("gearDemon", ModItems.demonGear);
+			OreDictionary.registerOre("plateDemon", ModItems.demonPlate);
+			OreDictionary.registerOre("gearEnchanted", ModItems.enchantedGear);
+			OreDictionary.registerOre("plateEnchanted", ModItems.enchantedPlate);
+			OreDictionary.registerOre("gearEvilInfusedIron", ModItems.evilInfusedIronGear);
+			OreDictionary.registerOre("plateEvilInfusedIron", ModItems.evilInfusedIronPlate);
+		}
 		if(ModChecker.isMekanismLoaded) {
 			OreDictionary.registerOre("gearRefinedGlowstone", ModItems.glowstoneGear);
 			OreDictionary.registerOre("plateRefinedGlowstone", ModItems.glowstonePlate);
