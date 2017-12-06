@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "appliedenergistics2"
+    }
+  ],
+  "result": {
+    "item": "moreplates:fluix_plate",
+	"data": 0
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+	  "ore": "crystalFluix"
+    },
+	{
+      "item": "moreplates:hammer",
+	  "data": 0
+    }
+  ]
+}

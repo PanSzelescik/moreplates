@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "extrautils2"
+    }
+  ],
+  "result": {
+    "item": "moreplates:demon_gear",
+	"data": 0
+  },
+  "pattern": [
+    " M ",
+    "MIM",
+    " M "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "item": "extrautils2:ingredients",
+	  "data": 11
+    },
+	"I": {
+      "type": "forge:ore_dict",
+	  "ore": "ingotIron"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "result": {
+    "item": "moreplates:electrical_steel_gear",
+	"data": 0
+  },
+  "pattern": [
+    " M ",
+    "MIM",
+    " M "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+	  "ore": "ingotElectricalSteel"
+    },
+	"I": {
+      "type": "forge:ore_dict",
+	  "ore": "ingotIron"
+    }
+  }
+}

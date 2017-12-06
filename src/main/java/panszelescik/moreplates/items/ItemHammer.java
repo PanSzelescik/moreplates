@@ -9,6 +9,9 @@ public class ItemHammer extends Item {
 	public ItemHammer(String unlocalizedName, String registryName) {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+		setMaxDamage(100);
+		maxStackSize = 1;
+		setContainerItem(this);
 	}
 	
 }
