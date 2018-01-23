@@ -16,7 +16,7 @@ import panszelescik.moreplates.init.ModItems;
 import panszelescik.moreplates.proxy.CommonProxy;
 import panszelescik.moreplates.util.Utils;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = "[1.12,1.13)")
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.MINECRAFT_VERSION)
 public class MorePlates {
 	
 	public static final Logger logger = LogManager.getFormatterLogger(Reference.MODID);
