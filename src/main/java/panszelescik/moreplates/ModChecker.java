@@ -15,6 +15,7 @@ public class ModChecker {
 	public static boolean isProjectRedLoaded;
 	public static boolean isRefinedStorageLoaded;
 	public static boolean isTinkersConstructLoaded;
+	public static boolean minecraft_version;
 	
 	public ModChecker() {
 		this.isAppliedEnergisticsLoaded = Loader.isModLoaded("appliedenergistics2");
@@ -28,6 +29,7 @@ public class ModChecker {
 		this.isProjectRedLoaded = Loader.isModLoaded("projectred-core");
 		this.isRefinedStorageLoaded = Loader.isModLoaded("refinedstorage");
 		this.isTinkersConstructLoaded = Loader.isModLoaded("tconstruct");
+		this.minecraft_version = Loader.isModLoaded("minecraft");
 	}
 	
 	public static void printSuccessMessage() {
