@@ -20,7 +20,7 @@ import panszelescik.moreplates.proxy.CommonProxy;
 import panszelescik.moreplates.util.Utils;
 
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, dependencies = Reference.DEPENDENCIES, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_MINECRAFT_VERSIONS)
+@Mod(modid = Reference.MODID, name = Reference.NAME, dependencies = Reference.DEPENDENCIES, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_MINECRAFT_VERSIONS, updateJSON = Reference.UPDATE_JSON)
 public class MorePlates {
 	
 	public static final Logger logger = LogManager.getFormatterLogger(Reference.MODID);
