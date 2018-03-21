@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ],
+  "result": {
+    "item": "moreplates:terrasteel_plate",
+	"data": 0
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+	  "ore": "ingotTerrasteel"
+    },
+	{
+      "item": "moreplates:hammer",
+	  "data": 0
+    }
+  ]
+}

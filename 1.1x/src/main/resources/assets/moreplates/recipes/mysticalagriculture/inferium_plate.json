@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mysticalagriculture"
+    }
+  ],
+  "result": {
+    "item": "moreplates:inferium_plate",
+	"data": 0
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+	  "ore": "ingotInferium"
+    },
+	{
+      "item": "moreplates:hammer",
+	  "data": 0
+    }
+  ]
+}

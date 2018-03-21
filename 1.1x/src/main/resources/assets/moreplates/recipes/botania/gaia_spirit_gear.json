@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ],
+  "result": {
+    "item": "moreplates:gaia_spirit_gear",
+	"data": 0
+  },
+  "pattern": [
+    " M ",
+    "MIM",
+    " M "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+	  "ore": "gaiaIngot"
+    },
+	"I": {
+      "type": "forge:ore_dict",
+	  "ore": "ingotIron"
+    }
+  }
+}

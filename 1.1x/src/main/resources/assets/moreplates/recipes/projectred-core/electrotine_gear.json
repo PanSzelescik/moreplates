@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "projectred-core"
+    }
+  ],
+  "result": {
+    "item": "moreplates:electrotine_gear",
+	"data": 0
+  },
+  "pattern": [
+    " M ",
+    "MIM",
+    " M "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+	  "ore": "ingotElectrotineAlloy"
+    },
+	"I": {
+      "type": "forge:ore_dict",
+	  "ore": "ingotIron"
+    }
+  }
+}

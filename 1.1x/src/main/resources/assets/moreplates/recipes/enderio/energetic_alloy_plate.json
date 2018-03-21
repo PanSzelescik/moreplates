@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "result": {
+    "item": "moreplates:energetic_alloy_plate",
+	"data": 0
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+	  "ore": "ingotEnergeticAlloy"
+    },
+	{
+      "item": "moreplates:hammer",
+	  "data": 0
+    }
+  ]
+}
