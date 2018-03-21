@@ -9,20 +9,19 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
+version = "${mod_version}"
+group = "${mod_group}"
+archivesBaseName = "${mod_name}-${version_minecraft}"
 
-version = "1.1x-2.6.0"
-group = "panszelescik.moreplates" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "moreplates"
-
-sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = "1.8"
 compileJava {
     sourceCompatibility = targetCompatibility = "1.8"
 }
 
 minecraft {
-    version = "1.11.2-13.20.1.2588"
+    version = "${version_minecraft}-${version_forge}"
     runDir = "run"
-	mappings = "snapshot_20170411"
+	mappings = "${version_mcp}"
     useDepAts = true
 }
 
@@ -37,23 +36,19 @@ repositories {
 }
 
 dependencies {
-	deobfCompile "com.github.mcjty:compatlayer:1.11.2-0.3.0"
+	deobfCompile "com.github.mcjty:compatlayer:${version_minecraft}-${version_compatlayer}"
 }
 
 processResources {
-    // this will ensure that this task is redone when the versions change.
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
 
-    // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
                 
-        // replace version and mcversion
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
         
-    // copy everything else except the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
