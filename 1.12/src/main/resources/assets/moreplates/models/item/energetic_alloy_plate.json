@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:enderio/energeti_alloy_plate"
+        "layer0": "moreplates:enderio/energetic_alloy_plate"
     }
 }

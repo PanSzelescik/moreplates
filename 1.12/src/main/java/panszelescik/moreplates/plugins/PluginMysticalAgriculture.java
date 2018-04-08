@@ -51,7 +51,18 @@ public class PluginMysticalAgriculture {
 	}
 	
 	public static void registerRenders() {
-		
+		RegisterRender.register(inferium_gear);
+		RegisterRender.register(inferium_plate);
+		RegisterRender.register(intermedium_gear);
+		RegisterRender.register(intermedium_plate);
+		RegisterRender.register(prudentium_gear);
+		RegisterRender.register(prudentium_plate);
+		RegisterRender.register(soulium_gear);
+		RegisterRender.register(soulium_plate);
+		RegisterRender.register(superium_gear);
+		RegisterRender.register(superium_plate);
+		RegisterRender.register(supremium_gear);
+		RegisterRender.register(supremium_plate);
 	}
 	
 	public static void registerOreDict() {
