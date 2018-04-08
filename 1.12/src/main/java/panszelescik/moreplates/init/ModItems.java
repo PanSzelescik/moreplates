@@ -125,8 +125,8 @@ public class ModItems {
 	public static void init() {
 		hammer = new ItemHammer("hammer", "hammer");
 		if(ModChecker.isAppliedEnergisticsLoaded) {
-			certusQuartzGear = new ItemCertusQuartzPlate("certus_quartz_gear", "certus_quartz_gear");
-			certusQuartzPlate = new ItemCertusQuartzGear("certus_quartz_plate", "certus_quartz_plate");
+			certusQuartzGear = new ItemCertusQuartzGear("certus_quartz_gear", "certus_quartz_gear");
+			certusQuartzPlate = new ItemCertusQuartzPlate("certus_quartz_plate", "certus_quartz_plate");
 			fluixGear = new ItemFluixGear("fluix_gear", "fluix_gear");
 			fluixPlate = new ItemFluixPlate("fluix_plate", "fluix_plate");
 		}
