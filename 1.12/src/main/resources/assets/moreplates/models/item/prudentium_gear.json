@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/prudentiumgear"
+        "layer0": "moreplates:mysticalagriculture/prudentium_gear"
     }
 }

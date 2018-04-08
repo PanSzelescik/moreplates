@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/cobaltplate"
+        "layer0": "moreplates:tconstruct/cobalt_plate"
     }
 }

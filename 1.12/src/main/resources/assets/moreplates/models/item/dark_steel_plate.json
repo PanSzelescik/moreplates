@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/darksteelplate"
+        "layer0": "moreplates:enderio/dark_steel_plate"
     }
 }

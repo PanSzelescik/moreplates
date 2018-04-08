@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/gaiaspiritgear"
+        "layer0": "moreplates:botania/gaia_spirit_gear"
     }
 }

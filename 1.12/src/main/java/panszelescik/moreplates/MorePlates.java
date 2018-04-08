@@ -11,16 +11,15 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import panszelescik.moreplates.creativetabs.TabItems;
-import panszelescik.moreplates.handlers.OreDictionaryHandler;
-import panszelescik.moreplates.init.ModItems;
+import panszelescik.moreplates.init.Items;
+import panszelescik.moreplates.init.PluginLoader;
 import panszelescik.moreplates.proxy.CommonProxy;
-import panszelescik.moreplates.util.Utils;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_MINECRAFT_VERSIONS, updateJSON = Reference.UPDATE_JSON)
 public class MorePlates {
 	
 	public static final Logger logger = LogManager.getFormatterLogger(Reference.MODID);
-
+	
 	public static final CreativeTabs items = new TabItems();
 	
 	@Mod.Instance(Reference.MODID)
@@ -36,21 +35,22 @@ public class MorePlates {
 		modChecker = new ModChecker();
 		modChecker.printSuccessMessage();
 		
-		ModItems.init();
-		ModItems.register();
-		Utils.getLogger().info("Pre Initialize");
+		Items.init();
+		PluginLoader.init();
+		
+		Items.register();
+		PluginLoader.register();
 		
 		proxy.registerRenders();
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event){
-		OreDictionaryHandler.registerOreDictionary();
-		Utils.getLogger().info("Initialize");
+		PluginLoader.registerOreDict();
 	}
 	
 	public void postInit(FMLPostInitializationEvent event) {
-		Utils.getLogger().info("Post Initialize");
+		
 	}
 	
 }

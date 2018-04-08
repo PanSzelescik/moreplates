@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/redstonealloygear"
+        "layer0": "moreplates:enderio/redstone_alloy_gear"
     }
 }

@@ -3,7 +3,7 @@ package panszelescik.moreplates;
 import net.minecraftforge.fml.common.Loader;
 
 public class ModChecker {
-
+	
 	public static boolean isAppliedEnergisticsLoaded;
 	public static boolean isBotaniaLoaded;
 	public static boolean isDraconicEvolutionLoaded;
@@ -31,38 +31,29 @@ public class ModChecker {
 	}
 	
 	public static void printSuccessMessage() {
-		if(isAppliedEnergisticsLoaded) {
+		if (isAppliedEnergisticsLoaded)
 			MorePlates.logger.info("Applied Energistics 2 or Applied Llamagistics has been detected.");
-		}
-		if(isBotaniaLoaded) {
+		if (isBotaniaLoaded)
 			MorePlates.logger.info("Botania has been detected.");
-		}
-		if(isDraconicEvolutionLoaded) {
+		if (isDraconicEvolutionLoaded)
 			MorePlates.logger.info("Draconic Evolution has been detected.");
-		}
-		if(isEnderIOLoaded) {
+		if (isEnderIOLoaded)
 			MorePlates.logger.info("Ender IO has been detected.");
-		}
-		if(isExtraUtilitiesLoaded) {
+		if (isExtraUtilitiesLoaded)
 			MorePlates.logger.info("Extra Utilities 2 has been detected.");
-		}
-		if(isMekanismLoaded) {
+		if (isMekanismLoaded)
 			MorePlates.logger.info("Mekanism has been detected.");
-		}
-		if(isMysticalAgradditionsLoaded) {
+		if (isMysticalAgradditionsLoaded)
 			MorePlates.logger.info("Mystical Agradditions has been detected.");
-		}
-		if(isMysticalAgricultureLoaded) {
+		if (isMysticalAgricultureLoaded)
 			MorePlates.logger.info("Mystical Agriculture has been detected.");
-		}
-		if(isProjectRedLoaded) {
+		if (isProjectRedLoaded)
 			MorePlates.logger.info("Project Red has been detected.");
-		}
-		if(isRefinedStorageLoaded) {
+		if (isRefinedStorageLoaded)
 			MorePlates.logger.info("Refined Storage has been detected.");
-		}
-		if(isTinkersConstructLoaded) {
+		if (isTinkersConstructLoaded)
 			MorePlates.logger.info("Tinkers' Construct has been detected.");
-		}
+		
 	}
+	
 }

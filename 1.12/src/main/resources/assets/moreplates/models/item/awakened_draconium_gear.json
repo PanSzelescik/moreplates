@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/awakeneddraconiumgear"
+        "layer0": "moreplates:draconicevolution/awakened_draconium_gear"
     }
 }

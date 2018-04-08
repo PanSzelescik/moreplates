@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/supremiumgear"
+        "layer0": "moreplates:mysticalagriculture/supremium_gear"
     }
 }

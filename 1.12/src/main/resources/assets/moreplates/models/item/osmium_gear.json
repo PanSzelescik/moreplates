@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/osmiumgear"
+        "layer0": "moreplates:mekanism/osmium_gear"
     }
 }

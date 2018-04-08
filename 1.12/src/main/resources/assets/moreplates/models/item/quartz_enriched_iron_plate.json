@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/quartzenrichedironplate"
+        "layer0": "moreplates:refinedstorage/quartz_enriched_iron_plate"
     }
 }

@@ -1,12 +1,15 @@
 package panszelescik.moreplates.proxy;
 
-import panszelescik.moreplates.init.ModItems;
+import panszelescik.moreplates.ModChecker;
+import panszelescik.moreplates.init.Items;
+import panszelescik.moreplates.init.PluginLoader;
 
 public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void registerRenders() {
-		ModItems.registerRenders();
+		Items.registerRenders();
+		PluginLoader.registerRenders();
 	}
 	
 }

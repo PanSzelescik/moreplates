@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/insaniumgear"
+        "layer0": "moreplates:mysticalagradditions/insanium_gear"
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/certusquartzgear"
+        "layer0": "moreplates:appliedenergistics2/certus_quartz_gear"
     }
 }

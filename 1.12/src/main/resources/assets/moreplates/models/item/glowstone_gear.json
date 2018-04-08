@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/glowstonegear"
+        "layer0": "moreplates:mekanism/glowstone_gear"
     }
 }

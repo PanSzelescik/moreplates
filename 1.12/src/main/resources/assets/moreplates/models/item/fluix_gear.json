@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/fluixgear"
+        "layer0": "moreplates:appliedenergistics2/fluix_gear"
     }
 }

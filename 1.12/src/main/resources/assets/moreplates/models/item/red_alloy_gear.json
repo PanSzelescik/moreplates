@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/redalloygear"
+        "layer0": "moreplates:projectred/red_alloy_gear"
     }
 }

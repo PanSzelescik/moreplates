@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:items/conductiveirongear"
+        "layer0": "moreplates:enderio/conductive_iron_gear"
     }
 }
