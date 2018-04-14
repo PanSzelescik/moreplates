@@ -1,5 +1,3 @@
-#Lang file created by PanSzelescik
-
 itemGroup.items=More Plates
 
 item.hammer.name=Hammer
@@ -37,6 +35,8 @@ item.dark_steel_gear.name=Dark Steel Gear
 item.dark_steel_plate.name=Dark Steel Plate
 item.electrical_steel_gear.name=Electrical Steel Gear
 item.electrical_steel_plate.name=Electrical Steel Plate
+item.end_steel_gear.name=End Steel Gear
+item.end_steel_plate.name=End Steel Plate
 item.energetic_alloy_gear.name=Energetic Alloy Gear
 item.energetic_alloy_plate.name=Energetic Alloy Plate
 item.pulsating_iron_gear.name=Pulsating Iron Gear

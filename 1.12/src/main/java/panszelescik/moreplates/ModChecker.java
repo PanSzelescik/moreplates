@@ -53,7 +53,6 @@ public class ModChecker {
 			MorePlates.logger.info("Refined Storage has been detected.");
 		if (isTinkersConstructLoaded)
 			MorePlates.logger.info("Tinkers' Construct has been detected.");
-		
 	}
 	
 }

@@ -28,7 +28,6 @@ public class PluginLoader {
 			PluginRefinedStorage.init();
 		if (ModChecker.isTinkersConstructLoaded)
 			PluginTinkersConstruct.init();
-		
 	}
 	
 	public static void register() {
@@ -54,7 +53,6 @@ public class PluginLoader {
 			PluginRefinedStorage.register();
 		if (ModChecker.isTinkersConstructLoaded)
 			PluginTinkersConstruct.register();
-		
 	}
 	
 	public static void registerRenders() {
@@ -80,7 +78,6 @@ public class PluginLoader {
 			PluginRefinedStorage.registerRenders();
 		if (ModChecker.isTinkersConstructLoaded)
 			PluginTinkersConstruct.registerRenders();
-		
 	}
 	
 	public static void registerOreDict() {
@@ -106,7 +103,6 @@ public class PluginLoader {
 			PluginRefinedStorage.registerOreDict();
 		if (ModChecker.isTinkersConstructLoaded)
 			PluginTinkersConstruct.registerOreDict();
-		
 	}
 	
 }

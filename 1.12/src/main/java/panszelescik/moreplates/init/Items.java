@@ -2,8 +2,7 @@ package panszelescik.moreplates.init;
 
 import net.minecraft.item.Item;
 import panszelescik.moreplates.items.*;
-import panszelescik.moreplates.register.RegisterItem;
-import panszelescik.moreplates.register.RegisterRender;
+import panszelescik.moreplates.register.*;
 
 public class Items {
 	

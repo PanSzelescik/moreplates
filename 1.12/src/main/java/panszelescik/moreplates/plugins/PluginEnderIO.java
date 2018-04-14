@@ -13,6 +13,8 @@ public class PluginEnderIO {
 	public static Item dark_steel_plate;
 	public static Item electrical_steel_gear;
 	public static Item electrical_steel_plate;
+	public static Item end_steel_gear;
+	public static Item end_steel_plate;
 	public static Item energetic_alloy_gear;
 	public static Item energetic_alloy_plate;
 	public static Item pulsating_iron_gear;
@@ -31,6 +33,8 @@ public class PluginEnderIO {
 		dark_steel_plate = new ItemDarkSteelPlate("dark_steel_plate", "dark_steel_plate");
 		electrical_steel_gear = new ItemElectricalSteelGear("electrical_steel_gear", "electrical_steel_gear");
 		electrical_steel_plate = new ItemElectricalSteelPlate("electrical_steel_plate", "electrical_steel_plate");
+		end_steel_gear = new ItemEndSteelGear("end_steel_gear", "end_steel_gear");
+		end_steel_plate = new ItemEndSteelPlate("end_steel_plate", "end_steel_plate");
 		energetic_alloy_gear = new ItemEnergeticAlloyGear("energetic_alloy_gear", "energetic_alloy_gear");
 		energetic_alloy_plate = new ItemEnergeticAlloyPlate("energetic_alloy_plate", "energetic_alloy_plate");
 		pulsating_iron_gear = new ItemPulsatingIronGear("pulsating_iron_gear", "pulsating_iron_gear");
@@ -50,6 +54,8 @@ public class PluginEnderIO {
 		RegisterItem.register(dark_steel_plate);
 		RegisterItem.register(electrical_steel_gear);
 		RegisterItem.register(electrical_steel_plate);
+		RegisterItem.register(end_steel_gear);
+		RegisterItem.register(end_steel_plate);
 		RegisterItem.register(energetic_alloy_gear);
 		RegisterItem.register(energetic_alloy_plate);
 		RegisterItem.register(pulsating_iron_gear);
@@ -69,6 +75,8 @@ public class PluginEnderIO {
 		RegisterRender.register(dark_steel_plate);
 		RegisterRender.register(electrical_steel_gear);
 		RegisterRender.register(electrical_steel_plate);
+		RegisterRender.register(end_steel_gear);
+		RegisterRender.register(end_steel_plate);
 		RegisterRender.register(energetic_alloy_gear);
 		RegisterRender.register(energetic_alloy_plate);
 		RegisterRender.register(pulsating_iron_gear);
@@ -88,6 +96,8 @@ public class PluginEnderIO {
 		OreDictionary.registerOre("plateDarkSteel", dark_steel_plate);
 		OreDictionary.registerOre("gearElectricalSteel", electrical_steel_gear);
 		OreDictionary.registerOre("plateElectricalSteel", electrical_steel_plate);
+		OreDictionary.registerOre("gearEndSteel", end_steel_gear);
+		OreDictionary.registerOre("plateEndSteel", end_steel_plate);
 		OreDictionary.registerOre("gearEnergeticAlloy", energetic_alloy_gear);
 		OreDictionary.registerOre("plateEnergeticAlloy", energetic_alloy_plate);
 		OreDictionary.registerOre("gearPulsatingIron", pulsating_iron_gear);
