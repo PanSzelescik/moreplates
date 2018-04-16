@@ -17,10 +17,10 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
 		File directory = event.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), "moreplates.cfg"));
-        Config.readConfig();
-        
-        Items.init();
+		config = new Configuration(new File(directory.getPath(), "moreplates.cfg"));
+		Config.readConfig();
+		
+		Items.init();
 		PluginLoader.init();
 		
 		Items.register();
