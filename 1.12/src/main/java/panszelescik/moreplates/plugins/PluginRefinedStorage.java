@@ -11,8 +11,8 @@ public class PluginRefinedStorage {
 	public static Item quartz_enriched_iron_plate;
 	
 	public static void init() {
-		quartz_enriched_iron_gear = new ItemQuartzEnrichedIronGear("quartz_enriched_iron_gear", "quartz_enriched_iron_gear");
-		quartz_enriched_iron_plate = new ItemQuartzEnrichedIronPlate("quartz_enriched_iron_plate", "quartz_enriched_iron_plate");
+		quartz_enriched_iron_gear =		new ItemQuartzEnrichedIronGear	("quartz_enriched_iron_gear",	"quartz_enriched_iron_gear");
+		quartz_enriched_iron_plate =	new ItemQuartzEnrichedIronPlate	("quartz_enriched_iron_plate",	"quartz_enriched_iron_plate");
 	}
 	
 	public static void register() {
@@ -26,8 +26,8 @@ public class PluginRefinedStorage {
 	}
 	
 	public static void registerOreDict() {
-		OreDictionary.registerOre("gearQuartzEnrichedIron", quartz_enriched_iron_gear);
-		OreDictionary.registerOre("plateQuartzEnrichedIron", quartz_enriched_iron_plate);
+		OreDictionary.registerOre("gearQuartzEnrichedIron",		quartz_enriched_iron_gear);
+		OreDictionary.registerOre("plateQuartzEnrichedIron",	quartz_enriched_iron_plate);
 	}
 	
 }

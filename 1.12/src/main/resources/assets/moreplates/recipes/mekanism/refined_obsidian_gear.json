@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "mekanism"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:refined_obsidian_gear"
     }
   ],
   "result": {

@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "mysticalagradditions"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:insanium_plate"
     }
   ],
   "result": {

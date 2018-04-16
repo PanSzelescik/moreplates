@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "botania"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:gaia_spirit_plate"
     }
   ],
   "result": {

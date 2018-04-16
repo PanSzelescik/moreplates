@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "enderio"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:redstone_alloy_plate"
     }
   ],
   "result": {

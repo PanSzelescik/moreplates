@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import panszelescik.moreplates.creativetabs.TabItems;
-import panszelescik.moreplates.init.*;
 import panszelescik.moreplates.proxy.CommonProxy;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, dependencies = Reference.DEPENDENCIES, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_MINECRAFT_VERSIONS, updateJSON = Reference.UPDATE_JSON)
@@ -34,22 +33,18 @@ public class MorePlates {
 		modChecker = new ModChecker();
 		modChecker.printSuccessMessage();
 		
-		Items.init();
-		PluginLoader.init();
-		
-		Items.register();
-		PluginLoader.register();
-		
+		proxy.preInit(event);
 		proxy.registerRenders();
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event){
-		PluginLoader.registerOreDict();
+		proxy.init(event);
 	}
 	
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		
+		proxy.postInit(event);
 	}
 	
 }

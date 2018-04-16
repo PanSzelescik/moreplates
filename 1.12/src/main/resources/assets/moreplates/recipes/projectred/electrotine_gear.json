@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "projectred-core"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:electrotine_gear"
     }
   ],
   "result": {

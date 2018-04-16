@@ -13,10 +13,10 @@ public class PluginAppliedEnergistics2 {
 	public static Item fluix_plate;
 	
 	public static void init() {
-		certus_quartz_gear = new ItemCertusQuartzGear("certus_quartz_gear", "certus_quartz_gear");
-		certus_quartz_plate = new ItemCertusQuartzPlate("certus_quartz_plate", "certus_quartz_plate");
-		fluix_gear = new ItemFluixGear("fluix_gear", "fluix_gear");
-		fluix_plate = new ItemFluixPlate("fluix_plate", "fluix_plate");
+		certus_quartz_gear =	new ItemCertusQuartzGear	("certus_quartz_gear",	"certus_quartz_gear");
+		certus_quartz_plate =	new ItemCertusQuartzPlate	("certus_quartz_plate",	"certus_quartz_plate");
+		fluix_gear =			new ItemFluixGear			("fluix_gear",			"fluix_gear");
+		fluix_plate =			new ItemFluixPlate			("fluix_plate",			"fluix_plate");
 	}
 	
 	public static void register() {
@@ -34,10 +34,10 @@ public class PluginAppliedEnergistics2 {
 	}
 	
 	public static void registerOreDict() {
-		OreDictionary.registerOre("gearCertusQuartz", certus_quartz_gear);
-		OreDictionary.registerOre("plateCertusQuartz", certus_quartz_plate);
-		OreDictionary.registerOre("gearFluix", fluix_gear);
-		OreDictionary.registerOre("plateFluix", fluix_plate);
+		OreDictionary.registerOre("gearCertusQuartz",	certus_quartz_gear);
+		OreDictionary.registerOre("plateCertusQuartz",	certus_quartz_plate);
+		OreDictionary.registerOre("gearFluix",			fluix_gear);
+		OreDictionary.registerOre("plateFluix",			fluix_plate);
 	}
 	
 }

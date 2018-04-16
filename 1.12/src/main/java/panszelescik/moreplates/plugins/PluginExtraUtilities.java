@@ -15,12 +15,12 @@ public class PluginExtraUtilities {
 	public static Item evil_infused_iron_plate;
 	
 	public static void init() {
-		demon_gear = new ItemDemonGear("demon_gear", "demon_gear");
-		demon_plate = new ItemDemonPlate("demon_plate", "demon_plate");
-		enchanted_gear = new ItemEnchantedGear("enchanted_gear", "enchanted_gear");
-		enchanted_plate = new ItemEnchantedPlate("enchanted_plate", "enchanted_plate");
-		evil_infused_iron_gear = new ItemEvilInfusedIronGear("evil_infused_iron_gear", "evil_infused_iron_gear");
-		evil_infused_iron_plate = new ItemEvilInfusedIronPlate("evil_infused_iron_plate", "evil_infused_iron_plate");
+		demon_gear =				new ItemDemonGear				("demon_gear",				"demon_gear");
+		demon_plate =				new ItemDemonPlate				("demon_plate",				"demon_plate");
+		enchanted_gear =			new ItemEnchantedGear			("enchanted_gear",			"enchanted_gear");
+		enchanted_plate =			new ItemEnchantedPlate			("enchanted_plate",			"enchanted_plate");
+		evil_infused_iron_gear =	new ItemEvilInfusedIronGear		("evil_infused_iron_gear",	"evil_infused_iron_gear");
+		evil_infused_iron_plate =	new ItemEvilInfusedIronPlate	("evil_infused_iron_plate",	"evil_infused_iron_plate");
 	}
 	
 	public static void register() {
@@ -42,12 +42,12 @@ public class PluginExtraUtilities {
 	}
 	
 	public static void registerOreDict() {
-		OreDictionary.registerOre("gearDemon", demon_gear);
-		OreDictionary.registerOre("plateDemon", demon_plate);
-		OreDictionary.registerOre("gearEnchanted", enchanted_gear);
-		OreDictionary.registerOre("plateEnchanted", enchanted_plate);
-		OreDictionary.registerOre("gearEvilInfusedIron", evil_infused_iron_gear);
-		OreDictionary.registerOre("plateEvilInfusedIron", evil_infused_iron_plate);
+		OreDictionary.registerOre("gearDemon",				demon_gear);
+		OreDictionary.registerOre("plateDemon",				demon_plate);
+		OreDictionary.registerOre("gearEnchanted",			enchanted_gear);
+		OreDictionary.registerOre("plateEnchanted",			enchanted_plate);
+		OreDictionary.registerOre("gearEvilInfusedIron",	evil_infused_iron_gear);
+		OreDictionary.registerOre("plateEvilInfusedIron",	evil_infused_iron_plate);
 	}
 	
 }

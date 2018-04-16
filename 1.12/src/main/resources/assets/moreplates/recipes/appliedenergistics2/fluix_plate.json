@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "appliedenergistics2"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:fluix_plate"
     }
   ],
   "result": {

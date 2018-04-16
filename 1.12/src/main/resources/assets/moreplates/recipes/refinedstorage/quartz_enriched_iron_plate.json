@@ -1,8 +1,8 @@
 {
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "refinedstorage"
+      "type": "minecraft:item_exists",
+      "item": "moreplates:quartz_enriched_iron_plate"
     }
   ],
   "result": {

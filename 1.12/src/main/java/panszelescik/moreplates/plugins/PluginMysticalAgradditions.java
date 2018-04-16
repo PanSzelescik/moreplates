@@ -11,8 +11,8 @@ public class PluginMysticalAgradditions {
 	public static Item insanium_plate;
 	
 	public static void init() {
-		insanium_gear = new ItemInsaniumGear("insanium_gear", "insanium_gear");
-		insanium_plate = new ItemInsaniumPlate("insanium_plate", "insanium_plate");
+		insanium_gear =		new ItemInsaniumGear	("insanium_gear",	"insanium_gear");
+		insanium_plate =	new ItemInsaniumPlate	("insanium_plate",	"insanium_plate");
 	}
 	
 	public static void register() {
@@ -26,8 +26,8 @@ public class PluginMysticalAgradditions {
 	}
 	
 	public static void registerOreDict() {
-		OreDictionary.registerOre("gearInsanium", insanium_gear);
-		OreDictionary.registerOre("plateInsanium", insanium_plate);
+		OreDictionary.registerOre("gearInsanium",	insanium_gear);
+		OreDictionary.registerOre("plateInsanium",	insanium_plate);
 	}
 	
 }

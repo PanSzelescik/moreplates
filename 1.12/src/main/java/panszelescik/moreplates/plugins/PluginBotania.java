@@ -17,14 +17,14 @@ public class PluginBotania {
 	public static Item terrasteel_plate;
 	
 	public static void init() {
-		elementium_gear = new ItemElementiumGear("elementium_gear", "elementium_gear");
-		elementium_plate = new ItemElementiumPlate("elementium_plate", "elementium_plate");
-		gaia_spirit_gear = new ItemGaiaSpiritGear("gaia_spirit_gear", "gaia_spirit_gear");
-		gaia_spirit_plate = new ItemGaiaSpiritPlate("gaia_spirit_plate", "gaia_spirit_plate");
-		manasteel_gear = new ItemManasteelGear("manasteel_gear", "manasteel_gear");
-		manasteel_plate = new ItemManasteelPlate("manasteel_plate", "manasteel_plate");
-		terrasteel_gear = new ItemTerrasteelGear("terrasteel_gear", "terrasteel_gear");
-		terrasteel_plate = new ItemTerrasteelPlate("terrasteel_plate", "terrasteel_plate");
+		elementium_gear =	new ItemElementiumGear	("elementium_gear",		"elementium_gear");
+		elementium_plate =	new ItemElementiumPlate	("elementium_plate",	"elementium_plate");
+		gaia_spirit_gear =	new ItemGaiaSpiritGear	("gaia_spirit_gear",	"gaia_spirit_gear");
+		gaia_spirit_plate =	new ItemGaiaSpiritPlate	("gaia_spirit_plate",	"gaia_spirit_plate");
+		manasteel_gear =	new ItemManasteelGear	("manasteel_gear",		"manasteel_gear");
+		manasteel_plate =	new ItemManasteelPlate	("manasteel_plate",		"manasteel_plate");
+		terrasteel_gear =	new ItemTerrasteelGear	("terrasteel_gear",		"terrasteel_gear");
+		terrasteel_plate =	new ItemTerrasteelPlate	("terrasteel_plate",	"terrasteel_plate");
 	}
 	
 	public static void register() {
@@ -50,14 +50,14 @@ public class PluginBotania {
 	}
 	
 	public static void registerOreDict() {
-		OreDictionary.registerOre("gearElvenElementium", elementium_gear);
-		OreDictionary.registerOre("plateElvenElementium", elementium_plate);
-		OreDictionary.registerOre("gaiaGear", gaia_spirit_gear);
-		OreDictionary.registerOre("gaiaPlate", gaia_spirit_plate);
-		OreDictionary.registerOre("gearManasteel", manasteel_gear);
-		OreDictionary.registerOre("plateManasteel", manasteel_plate);
-		OreDictionary.registerOre("gearTerrasteel", terrasteel_gear);
-		OreDictionary.registerOre("plateTerrasteel", terrasteel_plate);
+		OreDictionary.registerOre("gearElvenElementium",	elementium_gear);
+		OreDictionary.registerOre("plateElvenElementium",	elementium_plate);
+		OreDictionary.registerOre("gaiaGear",				gaia_spirit_gear);
+		OreDictionary.registerOre("gaiaPlate",				gaia_spirit_plate);
+		OreDictionary.registerOre("gearManasteel",			manasteel_gear);
+		OreDictionary.registerOre("plateManasteel",			manasteel_plate);
+		OreDictionary.registerOre("gearTerrasteel",			terrasteel_gear);
+		OreDictionary.registerOre("plateTerrasteel",		terrasteel_plate);
 	}
 	
 }

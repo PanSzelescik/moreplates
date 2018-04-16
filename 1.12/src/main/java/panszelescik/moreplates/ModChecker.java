@@ -17,22 +17,22 @@ public class ModChecker {
 	public static boolean isTinkersConstructLoaded;
 	
 	public ModChecker() {
-		this.isAppliedEnergisticsLoaded = Loader.isModLoaded("appliedenergistics2");
-		this.isBotaniaLoaded = Loader.isModLoaded("botania");
-		this.isDraconicEvolutionLoaded = Loader.isModLoaded("draconicevolution");
-		this.isEnderIOLoaded = Loader.isModLoaded("enderio");
-		this.isExtraUtilitiesLoaded = Loader.isModLoaded("extrautils2");
-		this.isMekanismLoaded = Loader.isModLoaded("mekanism");
-		this.isMysticalAgradditionsLoaded = Loader.isModLoaded("mysticalagradditions");
-		this.isMysticalAgricultureLoaded = Loader.isModLoaded("mysticalagriculture");
-		this.isProjectRedLoaded = Loader.isModLoaded("projectred-core");
-		this.isRefinedStorageLoaded = Loader.isModLoaded("refinedstorage");
-		this.isTinkersConstructLoaded = Loader.isModLoaded("tconstruct");
+		this.isAppliedEnergisticsLoaded =	Loader.isModLoaded("appliedenergistics2");
+		this.isBotaniaLoaded =				Loader.isModLoaded("botania");
+		this.isDraconicEvolutionLoaded =	Loader.isModLoaded("draconicevolution");
+		this.isEnderIOLoaded =				Loader.isModLoaded("enderio");
+		this.isExtraUtilitiesLoaded =		Loader.isModLoaded("extrautils2");
+		this.isMekanismLoaded =				Loader.isModLoaded("mekanism");
+		this.isMysticalAgradditionsLoaded =	Loader.isModLoaded("mysticalagradditions");
+		this.isMysticalAgricultureLoaded =	Loader.isModLoaded("mysticalagriculture");
+		this.isProjectRedLoaded =			Loader.isModLoaded("projectred-core");
+		this.isRefinedStorageLoaded =		Loader.isModLoaded("refinedstorage");
+		this.isTinkersConstructLoaded =		Loader.isModLoaded("tconstruct");
 	}
 	
 	public static void printSuccessMessage() {
 		if (isAppliedEnergisticsLoaded)
-			MorePlates.logger.info("Applied Energistics 2 or Applied Llamagistics has been detected.");
+			MorePlates.logger.info("Applied Energistics 2 has been detected.");
 		if (isBotaniaLoaded)
 			MorePlates.logger.info("Botania has been detected.");
 		if (isDraconicEvolutionLoaded)
