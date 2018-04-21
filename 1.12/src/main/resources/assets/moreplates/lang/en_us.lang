@@ -110,3 +110,7 @@ item.manyullyn_gear.name=Manyullyn Gear
 item.manyullyn_plate.name=Manyullyn Plate
 item.pig_iron_gear.name=Pig Iron Gear
 item.pig_iron_plate.name=Pig Iron Plate
+
+//MultiMod
+item.silicon_gear.name=Silicon Gear
+item.silicon_plate.name=Silicon Plate
