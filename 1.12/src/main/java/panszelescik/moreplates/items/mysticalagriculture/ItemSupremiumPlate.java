@@ -7,8 +7,8 @@ import panszelescik.moreplates.Reference;
 public class ItemSupremiumPlate extends Item {
 
 	public ItemSupremiumPlate(String unlocalizedName, String registryName) {
-		this.setUnlocalizedName(unlocalizedName);
-		this.setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+		setUnlocalizedName(unlocalizedName);
+		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
 	}
 	
 }

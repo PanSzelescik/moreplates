@@ -47,20 +47,20 @@ public class Config {
 	private static final String DURABILITYHAMMER_COMMENT = "Durability of Hammer.";
 	
 	public Config(File configFile) {
-        cfg = new Configuration(configFile);
-        MinecraftForge.EVENT_BUS.register(this);
-        loadConfig();
-    }
+		cfg = new Configuration(configFile);
+		MinecraftForge.EVENT_BUS.register(this);
+		loadConfig();
+	}
 	
 	public Configuration getConfig() {
-        return cfg;
-    }
+		return cfg;
+	}
 	
 	@SubscribeEvent
-    public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equalsIgnoreCase(Reference.MODID))
-            loadConfig();
-    }
+	public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
+		if (event.getModID().equalsIgnoreCase(Reference.MODID))
+			loadConfig();
+	}
 	
 	public void loadConfig() {
 		//Plugins
@@ -90,9 +90,9 @@ public class Config {
 	}
 	
 	@SuppressWarnings("unchecked")
-    public List<IConfigElement> getConfigElements() {
+	public List<IConfigElement> getConfigElements() {
 		List<IConfigElement> list = new ArrayList<>();
-        
+		
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_GENERAL)));
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_PLUGINS)));
 		

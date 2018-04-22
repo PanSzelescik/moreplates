@@ -18,6 +18,7 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent event) {
+		//Items.registerOredict();
 		PluginLoader.registerOreDict();
 	}
 	

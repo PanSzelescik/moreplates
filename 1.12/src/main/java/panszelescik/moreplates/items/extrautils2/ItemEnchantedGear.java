@@ -7,8 +7,8 @@ import panszelescik.moreplates.Reference;
 public class ItemEnchantedGear extends Item {
 
 	public ItemEnchantedGear(String unlocalizedName, String registryName) {
-		this.setUnlocalizedName(unlocalizedName);
-		this.setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+		setUnlocalizedName(unlocalizedName);
+		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
 	}
 	
 }

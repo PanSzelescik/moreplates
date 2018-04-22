@@ -10,9 +10,8 @@ public class Utils {
 	private static Logger logger;
 	
 	public static Logger getLogger() {
-		if(logger == null) {
+		if (logger == null)
 			logger = LogManager.getFormatterLogger(Reference.MODID);
-		}
 		
 		return logger;
 	}
