@@ -33,6 +33,7 @@ public class Config {
 	public static boolean loadMekanism = true;
 	public static boolean loadMysticalAgradditions = true;
 	public static boolean loadMysticalAgriculture = true;
+	public static boolean loadProjectE = true;
 	public static boolean loadProjectRed = true;
 	public static boolean loadRefinedStorage = true;
 	public static boolean loadTinkersConstruct = true;
@@ -75,6 +76,7 @@ public class Config {
 		loadMekanism =				cfg.getBoolean("loadMekanism",				CATEGORY_PLUGINS, loadMekanism,				LOADPLUGIN_COMMENT);
 		loadMysticalAgradditions =	cfg.getBoolean("loadMysticalAgradditions",	CATEGORY_PLUGINS, loadMysticalAgradditions,	LOADPLUGIN_COMMENT);
 		loadMysticalAgriculture =	cfg.getBoolean("loadMysticalAgriculture",	CATEGORY_PLUGINS, loadMysticalAgriculture,	LOADPLUGIN_COMMENT);
+		loadProjectE =				cfg.getBoolean("loadProjectE",				CATEGORY_PLUGINS, loadProjectE,				LOADPLUGIN_COMMENT);
 		loadProjectRed =			cfg.getBoolean("loadProjectRed",			CATEGORY_PLUGINS, loadProjectRed,			LOADPLUGIN_COMMENT);
 		loadRefinedStorage =		cfg.getBoolean("loadRefinedStorage",		CATEGORY_PLUGINS, loadRefinedStorage,		LOADPLUGIN_COMMENT);
 		loadTinkersConstruct =		cfg.getBoolean("loadTinkersConstruct",		CATEGORY_PLUGINS, loadTinkersConstruct,		LOADPLUGIN_COMMENT);

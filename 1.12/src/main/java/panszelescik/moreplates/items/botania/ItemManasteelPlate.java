@@ -10,5 +10,4 @@ public class ItemManasteelPlate extends Item {
 		setUnlocalizedName(unlocalizedName);
 		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
 	}
-	
 }

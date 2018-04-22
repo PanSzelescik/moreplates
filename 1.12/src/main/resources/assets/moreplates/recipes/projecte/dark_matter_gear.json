@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "moreplates:dark_matter_gear"
+    }
+  ],
+  "result": {
+    "item": "moreplates:dark_matter_gear",
+	"data": 0
+  },
+  "pattern": [
+    " M ",
+    "MIM",
+    " M "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "item": "projecte:item.pe_matter",
+	  "data": 0
+    },
+	"I": {
+      "type": "projecte:item.pe_fuel",
+	  "data": 2
+    }
+  }
+}

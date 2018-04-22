@@ -86,6 +86,13 @@ item.superium_plate.name=Superium Plate
 item.supremium_gear.name=Supremium Gear
 item.supremium_plate.name=Supremium Plate
 
+//Project E
+
+item.dark_matter_gear.name=Dark Matter Gear
+item.dark_matter_plate.name=Dark Matter Plate
+item.red_matter_gear.name=Red Matter Gear
+item.red_matter_plate.name=Red Matter Plate
+
 //Project Red
 
 item.electrotine_alloy_gear.name=Electrotine Alloy Gear

@@ -45,7 +45,6 @@ public class MorePlates {
 		modChecker.printSuccessMessage();
 		
 		proxy.preInit(event);
-		proxy.registerRenders();
 	}
 	
 	@EventHandler
@@ -57,5 +56,4 @@ public class MorePlates {
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 	}
-	
 }

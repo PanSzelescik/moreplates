@@ -10,5 +10,4 @@ public class RegisterItem {
 		item.setCreativeTab(MorePlates.items);
 		ForgeRegistries.ITEMS.register(item);
 	}
-	
 }

@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "moreplates:dark_matter_plate"
+    }
+  ],
+  "result": {
+    "item": "moreplates:dark_matter_plate",
+	"data": 0
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "projecte:item.pe_matter",
+	  "data": 0
+    },
+	{
+      "item": "moreplates:hammer",
+	  "data": 0
+    }
+  ]
+}

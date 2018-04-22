@@ -20,7 +20,7 @@ public class PluginMysticalAgriculture {
 	public static Item supremium_gear;
 	public static Item supremium_plate;
 	
-	public static void init() {
+	public static void preInit() {
 		inferium_gear  =	new ItemInferiumGear		("inferium_gear",		"inferium_gear");
 		inferium_plate =	new ItemInferiumPlate		("inferium_plate",		"inferium_plate");
 		intermedium_gear =	new ItemIntermediumGear		("intermedium_gear",	"intermedium_gear");
@@ -33,9 +33,7 @@ public class PluginMysticalAgriculture {
 		superium_plate =	new ItemSuperiumPlate		("superium_plate",		"superium_plate");
 		supremium_gear =	new ItemSupremiumGear		("supremium_gear",		"supremium_gear");
 		supremium_plate =	new ItemSupremiumPlate		("supremium_plate",		"supremium_plate");
-	}
-	
-	public static void register() {
+		
 		RegisterItem.register(inferium_gear);
 		RegisterItem.register(inferium_plate);
 		RegisterItem.register(intermedium_gear);
@@ -50,7 +48,7 @@ public class PluginMysticalAgriculture {
 		RegisterItem.register(supremium_plate);
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		RegisterRender.register(inferium_gear);
 		RegisterRender.register(inferium_plate);
 		RegisterRender.register(intermedium_gear);
@@ -65,7 +63,7 @@ public class PluginMysticalAgriculture {
 		RegisterRender.register(supremium_plate);
 	}
 	
-	public static void registerOreDict() {
+	public static void init() {
 		OreDictionary.registerOre("gearInferium",		inferium_gear);
 		OreDictionary.registerOre("plateInferium",		inferium_plate);
 		OreDictionary.registerOre("gearIntermedium",	intermedium_gear);
@@ -79,5 +77,4 @@ public class PluginMysticalAgriculture {
 		OreDictionary.registerOre("gearSupremium",		supremium_gear);
 		OreDictionary.registerOre("plateSupremium",		supremium_plate);
 	}
-	
 }

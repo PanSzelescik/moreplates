@@ -14,5 +14,4 @@ public class TabItems extends CreativeTabs {
 	public ItemStack getTabIconItem() {
 		return new ItemStack(Items.hammer);
 	}
-	
 }

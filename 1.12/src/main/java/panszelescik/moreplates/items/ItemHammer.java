@@ -14,5 +14,4 @@ public class ItemHammer extends Item {
 		maxStackSize = 1;
 		setContainerItem(this);
 	}
-	
 }

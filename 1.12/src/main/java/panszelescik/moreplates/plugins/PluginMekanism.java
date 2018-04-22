@@ -14,16 +14,14 @@ public class PluginMekanism {
 	public static Item refined_obsidian_gear;
 	public static Item refined_obsidian_plate;
 	
-	public static void init() {
+	public static void preInit() {
 		glowstone_gear =			new ItemGlowstoneGear			("glowstone_gear",			"glowstone_gear");
 		glowstone_plate =			new ItemGlowstonePlate			("glowstone_plate",			"glowstone_plate");
 		osmium_gear =				new ItemOsmiumGear				("osmium_gear",				"osmium_gear");
 		osmium_plate =				new ItemOsmiumPlate				("osmium_plate",			"osmium_plate");
 		refined_obsidian_gear =		new ItemRefinedObsidianGear		("refined_obsidian_gear",	"refined_obsidian_gear");
 		refined_obsidian_plate =	new ItemRefinedObsidianPlate	("refined_obsidian_plate",	"refined_obsidian_plate");
-	}
-	
-	public static void register() {
+		
 		RegisterItem.register(glowstone_gear);
 		RegisterItem.register(glowstone_plate);
 		RegisterItem.register(osmium_gear);
@@ -32,7 +30,7 @@ public class PluginMekanism {
 		RegisterItem.register(refined_obsidian_plate);
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		RegisterRender.register(glowstone_gear);
 		RegisterRender.register(glowstone_plate);
 		RegisterRender.register(osmium_gear);
@@ -41,7 +39,7 @@ public class PluginMekanism {
 		RegisterRender.register(refined_obsidian_plate);
 	}
 	
-	public static void registerOreDict() {
+	public static void init() {
 		OreDictionary.registerOre("gearRefinedGlowstone",	glowstone_gear);
 		OreDictionary.registerOre("plateRefinedGlowstone",	glowstone_plate);
 		OreDictionary.registerOre("gearOsmium",				osmium_gear);

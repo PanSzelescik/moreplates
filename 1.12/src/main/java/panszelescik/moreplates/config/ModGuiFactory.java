@@ -7,6 +7,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.fml.client.IModGuiFactory;
 
 public class ModGuiFactory implements IModGuiFactory {
+	
 	@Override
 	public void initialize(Minecraft mc) {
     	

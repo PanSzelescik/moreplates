@@ -16,7 +16,7 @@ public class PluginBotania {
 	public static Item terrasteel_gear;
 	public static Item terrasteel_plate;
 	
-	public static void init() {
+	public static void preInit() {
 		elementium_gear =	new ItemElementiumGear	("elementium_gear",		"elementium_gear");
 		elementium_plate =	new ItemElementiumPlate	("elementium_plate",	"elementium_plate");
 		gaia_spirit_gear =	new ItemGaiaSpiritGear	("gaia_spirit_gear",	"gaia_spirit_gear");
@@ -25,9 +25,7 @@ public class PluginBotania {
 		manasteel_plate =	new ItemManasteelPlate	("manasteel_plate",		"manasteel_plate");
 		terrasteel_gear =	new ItemTerrasteelGear	("terrasteel_gear",		"terrasteel_gear");
 		terrasteel_plate =	new ItemTerrasteelPlate	("terrasteel_plate",	"terrasteel_plate");
-	}
-	
-	public static void register() {
+		
 		RegisterItem.register(elementium_gear);
 		RegisterItem.register(elementium_plate);
 		RegisterItem.register(gaia_spirit_gear);
@@ -38,7 +36,7 @@ public class PluginBotania {
 		RegisterItem.register(terrasteel_plate);
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		RegisterRender.register(elementium_gear);
 		RegisterRender.register(elementium_plate);
 		RegisterRender.register(gaia_spirit_gear);
@@ -49,7 +47,7 @@ public class PluginBotania {
 		RegisterRender.register(terrasteel_plate);
 	}
 	
-	public static void registerOreDict() {
+	public static void init() {
 		OreDictionary.registerOre("gearElvenElementium",	elementium_gear);
 		OreDictionary.registerOre("plateElvenElementium",	elementium_plate);
 		OreDictionary.registerOre("gaiaGear",				gaia_spirit_gear);
@@ -59,5 +57,4 @@ public class PluginBotania {
 		OreDictionary.registerOre("gearTerrasteel",			terrasteel_gear);
 		OreDictionary.registerOre("plateTerrasteel",		terrasteel_plate);
 	}
-	
 }

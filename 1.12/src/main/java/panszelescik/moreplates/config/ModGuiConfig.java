@@ -16,5 +16,5 @@ public class ModGuiConfig extends GuiConfig {
         	false,
         	GuiConfig.getAbridgedConfigPath(MorePlates.instance.config.getConfig().toString())
 			);
-		}
+	}
 }

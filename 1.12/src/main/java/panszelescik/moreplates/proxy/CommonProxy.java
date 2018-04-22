@@ -10,23 +10,16 @@ import panszelescik.moreplates.init.*;
 public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
-		Items.init();
-		PluginLoader.init();
-		
-		Items.register();
-		PluginLoader.register();
+		Items.preInit();
+		PluginLoader.preInit();
 	}
 	
 	public void init(FMLInitializationEvent event) {
-		//Items.registerOredict();
-		PluginLoader.registerOreDict();
+		Items.init();
+		PluginLoader.init();
 	}
 	
 	public void postInit(FMLPostInitializationEvent event) {
-		
-	}
-	
-	public void registerRenders() {
 		
 	}
 }

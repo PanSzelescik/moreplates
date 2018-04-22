@@ -10,5 +10,4 @@ public class ItemElementiumGear extends Item {
 		setUnlocalizedName(unlocalizedName);
 		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
 	}
-	
 }

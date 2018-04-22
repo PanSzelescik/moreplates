@@ -26,7 +26,7 @@ public class PluginEnderIO {
 	public static Item vibrant_alloy_gear;
 	public static Item vibrant_alloy_plate;
 	
-	public static void init() {
+	public static void preInit() {
 		conductive_iron_gear =		new ItemConductiveIronGear		("conductive_iron_gear",	"conductive_iron_gear");
 		conductive_iron_plate =		new ItemConductiveIronPlate		("conductive_iron_plate",	"conductive_iron_plate");
 		dark_steel_gear =			new ItemDarkSteelGear			("dark_steel_gear",			"dark_steel_gear");
@@ -45,9 +45,7 @@ public class PluginEnderIO {
 		soularium_plate =			new ItemSoulariumPlate			("soularium_plate",			"soularium_plate");
 		vibrant_alloy_gear =		new ItemVibrantAlloyGear		("vibrant_alloy_gear",		"vibrant_alloy_gear");
 		vibrant_alloy_plate =		new ItemVibrantAlloyPlate		("vibrant_alloy_plate",		"vibrant_alloy_plate");
-	}
-	
-	public static void register() {
+		
 		RegisterItem.register(conductive_iron_gear);
 		RegisterItem.register(conductive_iron_plate);
 		RegisterItem.register(dark_steel_gear);
@@ -68,7 +66,7 @@ public class PluginEnderIO {
 		RegisterItem.register(vibrant_alloy_plate);
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		RegisterRender.register(conductive_iron_gear);
 		RegisterRender.register(conductive_iron_plate);
 		RegisterRender.register(dark_steel_gear);
@@ -89,7 +87,7 @@ public class PluginEnderIO {
 		RegisterRender.register(vibrant_alloy_plate);
 	}
 	
-	public static void registerOreDict() {
+	public static void init() {
 		OreDictionary.registerOre("gearConductiveIron",		conductive_iron_gear);
 		OreDictionary.registerOre("plateConductiveIron",	conductive_iron_plate);
 		OreDictionary.registerOre("gearDarkSteel",			dark_steel_gear);
@@ -109,5 +107,4 @@ public class PluginEnderIO {
 		OreDictionary.registerOre("gearVibrantAlloy",		vibrant_alloy_gear);
 		OreDictionary.registerOre("plateVibrantAlloy",		vibrant_alloy_plate);
 	}
-	
 }

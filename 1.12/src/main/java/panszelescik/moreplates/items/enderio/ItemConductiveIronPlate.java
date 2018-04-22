@@ -10,5 +10,4 @@ public class ItemConductiveIronPlate extends Item {
 		setUnlocalizedName(unlocalizedName);
 		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
 	}
-	
 }

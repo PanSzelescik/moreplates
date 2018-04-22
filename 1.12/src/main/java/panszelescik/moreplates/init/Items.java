@@ -8,16 +8,17 @@ public class Items {
 	
 	public static Item hammer;
 	
-	public static void init() {
+	public static void preInit() {
 		hammer = new ItemHammer("hammer", "hammer");
-	}
-	
-	public static void register() {
 		RegisterItem.register(hammer);
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		RegisterRender.register(hammer);
+	}
+	
+	public static void init() {
+		
 	}
 	
 }

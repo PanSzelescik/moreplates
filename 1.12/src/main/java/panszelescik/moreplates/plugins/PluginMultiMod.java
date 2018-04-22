@@ -12,29 +12,24 @@ public class PluginMultiMod {
 	public static Item silicon_gear;
 	public static Item silicon_plate;
 	
-	public static void init() {
+	public static void preInit() {
 		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2) {
 			silicon_gear =	new ItemSiliconGear	("silicon_gear",	"silicon_gear");
 			silicon_plate =	new ItemSiliconPlate("silicon_plate",	"silicon_plate");
+			
+			RegisterItem.register(silicon_gear);
+			RegisterItem.register(silicon_plate);
 		}
 		else if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage) {
-			silicon_gear = new	ItemSiliconGear	("silicon_gear",	"silicon_gear");
+			silicon_gear =	new	ItemSiliconGear	("silicon_gear",	"silicon_gear");
 			silicon_plate = new	ItemSiliconPlate("silicon_plate",	"silicon_plate");
-		}
-	}
-	
-	public static void register() {
-		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2) {
-			RegisterItem.register(silicon_gear);
-			RegisterItem.register(silicon_plate);
-		}
-		else if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage) {
+			
 			RegisterItem.register(silicon_gear);
 			RegisterItem.register(silicon_plate);
 		}
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2) {
 			RegisterRender.register(silicon_gear);
 			RegisterRender.register(silicon_plate);
@@ -45,7 +40,7 @@ public class PluginMultiMod {
 		}
 	}
 	
-	public static void registerOreDict() {
+	public static void init() {
 		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2) {
 			OreDictionary.registerOre("gearSilicon",	silicon_gear);
 			OreDictionary.registerOre("plateSilicon",	silicon_plate);
@@ -55,5 +50,4 @@ public class PluginMultiMod {
 			OreDictionary.registerOre("plateSilicon",	silicon_plate);
 		}
 	}
-	
 }

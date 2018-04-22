@@ -12,6 +12,7 @@ public class ModChecker {
 	public static boolean isMekanismLoaded;
 	public static boolean isMysticalAgradditionsLoaded;
 	public static boolean isMysticalAgricultureLoaded;
+	public static boolean isProjectELoaded;
 	public static boolean isProjectRedLoaded;
 	public static boolean isRefinedStorageLoaded;
 	public static boolean isTinkersConstructLoaded;
@@ -25,6 +26,7 @@ public class ModChecker {
 		isMekanismLoaded =				Loader.isModLoaded("mekanism");
 		isMysticalAgradditionsLoaded =	Loader.isModLoaded("mysticalagradditions");
 		isMysticalAgricultureLoaded =	Loader.isModLoaded("mysticalagriculture");
+		isProjectELoaded = 				Loader.isModLoaded("projecte");
 		isProjectRedLoaded =			Loader.isModLoaded("projectred-core");
 		isRefinedStorageLoaded =		Loader.isModLoaded("refinedstorage");
 		isTinkersConstructLoaded =		Loader.isModLoaded("tconstruct");
@@ -47,6 +49,8 @@ public class ModChecker {
 			MorePlates.logger.info("Mystical Agradditions has been detected.");
 		if (isMysticalAgricultureLoaded)
 			MorePlates.logger.info("Mystical Agriculture has been detected.");
+		if (isProjectELoaded)
+			MorePlates.logger.info("ProjectE has been detected.");
 		if (isProjectRedLoaded)
 			MorePlates.logger.info("Project Red has been detected.");
 		if (isRefinedStorageLoaded)
@@ -54,5 +58,4 @@ public class ModChecker {
 		if (isTinkersConstructLoaded)
 			MorePlates.logger.info("Tinkers' Construct has been detected.");
 	}
-	
 }

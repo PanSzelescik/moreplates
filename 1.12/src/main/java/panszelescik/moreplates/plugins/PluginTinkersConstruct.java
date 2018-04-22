@@ -18,7 +18,7 @@ public class PluginTinkersConstruct {
 	public static Item pig_iron_gear;
 	public static Item pig_iron_plate;
 	
-	public static void init() {
+	public static void preInit() {
 		ardite_gear =		new ItemArditeGear			("ardite_gear",			"ardite_gear");
 		ardite_plate =		new ItemArditePlate			("ardite_plate",		"ardite_plate");
 		cobalt_gear =		new ItemCobaltGear			("cobalt_gear",			"cobalt_gear");
@@ -29,9 +29,7 @@ public class PluginTinkersConstruct {
 		manyullyn_plate =	new ItemManyullynPlate		("manyullyn_plate",		"manyullyn_plate");
 		pig_iron_gear =		new ItemPigIronGear			("pig_iron_gear",		"pig_iron_gear");
 		pig_iron_plate =	new ItemPigIronPlate		("pig_iron_plate",		"pig_iron_plate");
-	}
-	
-	public static void register() {
+		
 		RegisterItem.register(ardite_gear);
 		RegisterItem.register(ardite_plate);
 		RegisterItem.register(cobalt_gear);
@@ -44,7 +42,7 @@ public class PluginTinkersConstruct {
 		RegisterItem.register(pig_iron_plate);
 	}
 	
-	public static void registerRenders() {
+	public static void clientPreInit() {
 		RegisterRender.register(ardite_gear);
 		RegisterRender.register(ardite_plate);
 		RegisterRender.register(cobalt_gear);
@@ -57,7 +55,7 @@ public class PluginTinkersConstruct {
 		RegisterRender.register(pig_iron_plate);
 	}
 	
-	public static void registerOreDict() {
+	public static void init() {
 		OreDictionary.registerOre("gearArdite",			ardite_gear);
 		OreDictionary.registerOre("plateArdite",		ardite_plate);
 		OreDictionary.registerOre("gearCobalt",			cobalt_gear);
@@ -69,5 +67,4 @@ public class PluginTinkersConstruct {
 		OreDictionary.registerOre("gearPigiron",		pig_iron_gear);
 		OreDictionary.registerOre("platePigiron",		pig_iron_plate);
 	}
-	
 }
