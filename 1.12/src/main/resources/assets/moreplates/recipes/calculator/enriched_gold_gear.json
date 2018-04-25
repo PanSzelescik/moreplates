@@ -2,11 +2,11 @@
   "conditions": [
     {
       "type": "minecraft:item_exists",
-      "item": "moreplates:red_matter_gear"
+      "item": "moreplates:enriched_gold_gear"
     }
   ],
   "result": {
-    "item": "moreplates:red_matter_gear",
+    "item": "moreplates:enriched_gold_gear",
 	"data": 0
   },
   "pattern": [
@@ -17,12 +17,12 @@
   "type": "forge:ore_shaped",
   "key": {
     "M": {
-      "item": "projecte:item.pe_matter",
-	  "data": 1
+      "type": "forge:ore_dict",
+	  "ore": "ingotEnrichedGold"
     },
 	"I": {
-      "item": "projecte:item.pe_fuel",
-	  "data": 2
+      "type": "forge:ore_dict",
+	  "ore": "ingotIron"
     }
   }
 }

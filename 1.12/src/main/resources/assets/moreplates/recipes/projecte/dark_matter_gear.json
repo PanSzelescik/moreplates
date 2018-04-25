@@ -21,7 +21,7 @@
 	  "data": 0
     },
 	"I": {
-      "type": "projecte:item.pe_fuel",
+      "item": "projecte:item.pe_fuel",
 	  "data": 2
     }
   }

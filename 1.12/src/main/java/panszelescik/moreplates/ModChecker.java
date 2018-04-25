@@ -6,6 +6,7 @@ public class ModChecker {
 	
 	public static boolean isAppliedEnergisticsLoaded;
 	public static boolean isBotaniaLoaded;
+	public static boolean isCalculatorLoaded;
 	public static boolean isDraconicEvolutionLoaded;
 	public static boolean isEnderIOLoaded;
 	public static boolean isExtraUtilitiesLoaded;
@@ -20,6 +21,7 @@ public class ModChecker {
 	public ModChecker() {
 		isAppliedEnergisticsLoaded =	Loader.isModLoaded("appliedenergistics2");
 		isBotaniaLoaded =				Loader.isModLoaded("botania");
+		isCalculatorLoaded =			Loader.isModLoaded("calculator");
 		isDraconicEvolutionLoaded =		Loader.isModLoaded("draconicevolution");
 		isEnderIOLoaded =				Loader.isModLoaded("enderio");
 		isExtraUtilitiesLoaded =		Loader.isModLoaded("extrautils2");
@@ -37,6 +39,8 @@ public class ModChecker {
 			MorePlates.logger.info("Applied Energistics 2 has been detected.");
 		if (isBotaniaLoaded)
 			MorePlates.logger.info("Botania has been detected.");
+		if (isCalculatorLoaded)
+			MorePlates.logger.info("Calculator has been detected.");
 		if (isDraconicEvolutionLoaded)
 			MorePlates.logger.info("Draconic Evolution has been detected.");
 		if (isEnderIOLoaded)

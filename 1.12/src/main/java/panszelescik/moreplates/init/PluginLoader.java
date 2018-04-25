@@ -11,6 +11,8 @@ public class PluginLoader {
 			PluginAppliedEnergistics2.preInit();
 		if (ModChecker.isBotaniaLoaded & Config.loadBotania)
 			PluginBotania.preInit();
+		if (ModChecker.isCalculatorLoaded & Config.loadCalculator)
+			PluginCalculator.preInit();
 		if (ModChecker.isDraconicEvolutionLoaded & Config.loadDraconicEvolution)
 			PluginDraconicEvolution.preInit();
 		if (ModChecker.isEnderIOLoaded & Config.loadEnderIO)
@@ -39,6 +41,8 @@ public class PluginLoader {
 			PluginAppliedEnergistics2.clientPreInit();
 		if (ModChecker.isBotaniaLoaded & Config.loadBotania)
 			PluginBotania.clientPreInit();
+		if (ModChecker.isCalculatorLoaded & Config.loadCalculator)
+			PluginCalculator.clientPreInit();
 		if (ModChecker.isDraconicEvolutionLoaded & Config.loadDraconicEvolution)
 			PluginDraconicEvolution.clientPreInit();
 		if (ModChecker.isEnderIOLoaded & Config.loadEnderIO)
@@ -67,6 +71,8 @@ public class PluginLoader {
 			PluginAppliedEnergistics2.init();
 		if (ModChecker.isBotaniaLoaded & Config.loadBotania)
 			PluginBotania.init();
+		if (ModChecker.isCalculatorLoaded & Config.loadCalculator)
+			PluginCalculator.init();
 		if (ModChecker.isDraconicEvolutionLoaded & Config.loadDraconicEvolution)
 			PluginDraconicEvolution.init();
 		if (ModChecker.isEnderIOLoaded & Config.loadEnderIO)

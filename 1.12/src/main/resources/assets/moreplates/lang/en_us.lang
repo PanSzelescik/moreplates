@@ -20,6 +20,19 @@ item.manasteel_plate.name=Manasteel Plate
 item.terrasteel_gear.name=Terrasteel Gear
 item.terrasteel_plate.name=Terrasteel Plate
 
+//Calculator
+
+item.amethyst_gear.name=Amethyst Gear
+item.amethyst_plate.name=Amethyst Plate
+item.enriched_gold_gear.name=Enriched Gold Gear
+item.enriched_gold_plate.name=Enriched Gold Plate
+item.redstone_gear.name=Redstone Gear
+item.redstone_plate.name=Redstone Plate
+item.reinforced_iron_gear.name=Reinforced Iron Gear
+item.reinforced_iron_plate.name=Reinforced Iron Plate
+item.tanzanite_gear.name=Tanzanite Gear
+item.tanzanite_plate.name=Tanzanite Plate
+
 //Draconic Evolution
 
 item.awakened_draconium_gear.name=Awakened Draconium Gear

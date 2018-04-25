@@ -27,6 +27,7 @@ public class Config {
 	//Booleans
 	public static boolean loadAppliedEnergistics2 = true;
 	public static boolean loadBotania = true;
+	public static boolean loadCalculator = true;
 	public static boolean loadDraconicEvolution = true;
 	public static boolean loadEnderIO = true;
 	public static boolean loadExtraUtilities = true;
@@ -70,6 +71,7 @@ public class Config {
 		
 		loadAppliedEnergistics2 =	cfg.getBoolean("loadAppliedEnergistics2",	CATEGORY_PLUGINS, loadAppliedEnergistics2,	LOADPLUGIN_COMMENT);
 		loadBotania =				cfg.getBoolean("loadBotania",				CATEGORY_PLUGINS, loadBotania,				LOADPLUGIN_COMMENT);
+		loadCalculator =			cfg.getBoolean("loadCalculator",			CATEGORY_PLUGINS, loadCalculator,			LOADPLUGIN_COMMENT);			
 		loadDraconicEvolution =		cfg.getBoolean("loadDraconicEvolution",		CATEGORY_PLUGINS, loadDraconicEvolution,	LOADPLUGIN_COMMENT);
 		loadEnderIO =				cfg.getBoolean("loadEnderIO",				CATEGORY_PLUGINS, loadEnderIO,				LOADPLUGIN_COMMENT);
 		loadExtraUtilities =		cfg.getBoolean("loadExtraUtilities",		CATEGORY_PLUGINS, loadExtraUtilities,		LOADPLUGIN_COMMENT);
