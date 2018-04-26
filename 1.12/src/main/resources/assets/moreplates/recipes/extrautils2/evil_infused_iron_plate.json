@@ -1,23 +1,20 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:evil_infused_iron_plate"
-    }
-  ],
-  "result": {
-    "item": "moreplates:evil_infused_iron_plate",
-	"data": 0
-  },
-  "type": "forge:ore_shapeless",
-  "ingredients": [
-    {
-      "item": "extrautils2:ingredients",
-	  "data": 17
-    },
-	{
-      "item": "moreplates:hammer",
-	  "data": 0
-    }
-  ]
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:evil_infused_iron_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:evil_infused_iron_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#EVIL_INFUSED_IRON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
 }

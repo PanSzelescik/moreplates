@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.draconicevolution.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginDraconicEvolution {
 	
@@ -18,17 +18,17 @@ public class PluginDraconicEvolution {
 		draconium_gear =			new ItemDraconiumGear			("draconium_gear",				"draconium_gear");
 		draconium_plate =			new ItemDraconiumPlate			("draconium_plate",				"draconium_plate");
 		
-		RegisterItem.register(awakened_draconium_gear);
-		RegisterItem.register(awakened_draconium_plate);
-		RegisterItem.register(draconium_gear);
-		RegisterItem.register(draconium_plate);
+		Helper.registerItem(awakened_draconium_gear);
+		Helper.registerItem(awakened_draconium_plate);
+		Helper.registerItem(draconium_gear);
+		Helper.registerItem(draconium_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(awakened_draconium_gear);
-		RegisterRender.register(awakened_draconium_plate);
-		RegisterRender.register(draconium_gear);
-		RegisterRender.register(draconium_plate);
+		Helper.registerRender(awakened_draconium_gear);
+		Helper.registerRender(awakened_draconium_plate);
+		Helper.registerRender(draconium_gear);
+		Helper.registerRender(draconium_plate);
 	}
 	
 	public static void init() {

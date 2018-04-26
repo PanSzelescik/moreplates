@@ -4,8 +4,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.ModChecker;
 import panszelescik.moreplates.config.Config;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.multimod.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginMultiMod {
 	
@@ -17,26 +17,26 @@ public class PluginMultiMod {
 			silicon_gear =	new ItemSiliconGear	("silicon_gear",	"silicon_gear");
 			silicon_plate =	new ItemSiliconPlate("silicon_plate",	"silicon_plate");
 			
-			RegisterItem.register(silicon_gear);
-			RegisterItem.register(silicon_plate);
+			Helper.registerItem(silicon_gear);
+			Helper.registerItem(silicon_plate);
 		}
 		else if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage) {
 			silicon_gear =	new	ItemSiliconGear	("silicon_gear",	"silicon_gear");
 			silicon_plate = new	ItemSiliconPlate("silicon_plate",	"silicon_plate");
 			
-			RegisterItem.register(silicon_gear);
-			RegisterItem.register(silicon_plate);
+			Helper.registerRender(silicon_gear);
+			Helper.registerRender(silicon_plate);
 		}
 	}
 	
 	public static void clientPreInit() {
 		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2) {
-			RegisterRender.register(silicon_gear);
-			RegisterRender.register(silicon_plate);
+			Helper.registerRender(silicon_gear);
+			Helper.registerRender(silicon_plate);
 		}
 		else if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage) {
-			RegisterRender.register(silicon_gear);
-			RegisterRender.register(silicon_plate);
+			Helper.registerRender(silicon_gear);
+			Helper.registerRender(silicon_plate);
 		}
 	}
 	

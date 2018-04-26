@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.calculator.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginCalculator {
 	
@@ -30,29 +30,29 @@ public class PluginCalculator {
 		tanzanite_gear =		new ItemTanzaniteGear		("tanzanite_gear",			"tanzanite_gear");
 		tanzanite_plate =		new ItemTanzanitePlate		("tanzanite_plate",			"tanzanite_plate");
 		
-		RegisterItem.register(amethyst_gear);
-		RegisterItem.register(amethyst_plate);
-		RegisterItem.register(enriched_gold_gear);
-		RegisterItem.register(enriched_gold_plate);
-		RegisterItem.register(redstone_gear);
-		RegisterItem.register(redstone_plate);
-		RegisterItem.register(reinforced_iron_gear);
-		RegisterItem.register(reinforced_iron_plate);
-		RegisterItem.register(tanzanite_gear);
-		RegisterItem.register(tanzanite_plate);
+		Helper.registerItem(amethyst_gear);
+		Helper.registerItem(amethyst_plate);
+		Helper.registerItem(enriched_gold_gear);
+		Helper.registerItem(enriched_gold_plate);
+		Helper.registerItem(redstone_gear);
+		Helper.registerItem(redstone_plate);
+		Helper.registerItem(reinforced_iron_gear);
+		Helper.registerItem(reinforced_iron_plate);
+		Helper.registerItem(tanzanite_gear);
+		Helper.registerItem(tanzanite_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(amethyst_gear);
-		RegisterRender.register(amethyst_plate);
-		RegisterRender.register(enriched_gold_gear);
-		RegisterRender.register(enriched_gold_plate);
-		RegisterRender.register(redstone_gear);
-		RegisterRender.register(redstone_plate);
-		RegisterRender.register(reinforced_iron_gear);
-		RegisterRender.register(reinforced_iron_plate);
-		RegisterRender.register(tanzanite_gear);
-		RegisterRender.register(tanzanite_plate);
+		Helper.registerRender(amethyst_gear);
+		Helper.registerRender(amethyst_plate);
+		Helper.registerRender(enriched_gold_gear);
+		Helper.registerRender(enriched_gold_plate);
+		Helper.registerRender(redstone_gear);
+		Helper.registerRender(redstone_plate);
+		Helper.registerRender(reinforced_iron_gear);
+		Helper.registerRender(reinforced_iron_plate);
+		Helper.registerRender(tanzanite_gear);
+		Helper.registerRender(tanzanite_plate);
 	}
 	
 	public static void init() {

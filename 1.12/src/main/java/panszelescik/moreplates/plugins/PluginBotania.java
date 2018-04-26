@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.botania.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginBotania {
 	
@@ -26,25 +26,25 @@ public class PluginBotania {
 		terrasteel_gear =	new ItemTerrasteelGear	("terrasteel_gear",		"terrasteel_gear");
 		terrasteel_plate =	new ItemTerrasteelPlate	("terrasteel_plate",	"terrasteel_plate");
 		
-		RegisterItem.register(elementium_gear);
-		RegisterItem.register(elementium_plate);
-		RegisterItem.register(gaia_spirit_gear);
-		RegisterItem.register(gaia_spirit_plate);
-		RegisterItem.register(manasteel_gear);
-		RegisterItem.register(manasteel_plate);
-		RegisterItem.register(terrasteel_gear);
-		RegisterItem.register(terrasteel_plate);
+		Helper.registerItem(elementium_gear);
+		Helper.registerItem(elementium_plate);
+		Helper.registerItem(gaia_spirit_gear);
+		Helper.registerItem(gaia_spirit_plate);
+		Helper.registerItem(manasteel_gear);
+		Helper.registerItem(manasteel_plate);
+		Helper.registerItem(terrasteel_gear);
+		Helper.registerItem(terrasteel_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(elementium_gear);
-		RegisterRender.register(elementium_plate);
-		RegisterRender.register(gaia_spirit_gear);
-		RegisterRender.register(gaia_spirit_plate);
-		RegisterRender.register(manasteel_gear);
-		RegisterRender.register(manasteel_plate);
-		RegisterRender.register(terrasteel_gear);
-		RegisterRender.register(terrasteel_plate);
+		Helper.registerRender(elementium_gear);
+		Helper.registerRender(elementium_plate);
+		Helper.registerRender(gaia_spirit_gear);
+		Helper.registerRender(gaia_spirit_plate);
+		Helper.registerRender(manasteel_gear);
+		Helper.registerRender(manasteel_plate);
+		Helper.registerRender(terrasteel_gear);
+		Helper.registerRender(terrasteel_plate);
 	}
 	
 	public static void init() {

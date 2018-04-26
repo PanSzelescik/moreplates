@@ -1,8 +1,8 @@
 package panszelescik.moreplates.init;
 
 import net.minecraft.item.Item;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.*;
-import panszelescik.moreplates.register.*;
 
 public class Items {
 	
@@ -10,11 +10,11 @@ public class Items {
 	
 	public static void preInit() {
 		hammer = new ItemHammer("hammer", "hammer");
-		RegisterItem.register(hammer);
+		Helper.registerItem(hammer);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(hammer);
+		Helper.registerRender(hammer);
 	}
 	
 	public static void init() {

@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:ardite_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:ardite_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotArdite"
-    },
-	"I": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotIron"
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:ardite_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:ardite_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#ARDITE"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
 }

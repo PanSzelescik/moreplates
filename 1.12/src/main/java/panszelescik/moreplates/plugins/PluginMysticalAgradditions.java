@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.mysticalagradditions.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginMysticalAgradditions {
 	
@@ -14,13 +14,13 @@ public class PluginMysticalAgradditions {
 		insanium_gear =		new ItemInsaniumGear	("insanium_gear",	"insanium_gear");
 		insanium_plate =	new ItemInsaniumPlate	("insanium_plate",	"insanium_plate");
 		
-		RegisterItem.register(insanium_gear);
-		RegisterItem.register(insanium_plate);
+		Helper.registerItem(insanium_gear);
+		Helper.registerItem(insanium_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(insanium_gear);
-		RegisterRender.register(insanium_plate);
+		Helper.registerRender(insanium_gear);
+		Helper.registerRender(insanium_plate);
 	}
 	
 	public static void init() {

@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:cobalt_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:cobalt_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotCobalt"
-    },
-	"I": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotIron"
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:cobalt_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:cobalt_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#COBALT"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
 }

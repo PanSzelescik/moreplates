@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:certus_quartz_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:certus_quartz_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "type": "forge:ore_dict",
-	  "ore": "crystalCertusQuartz"
-    },
-	"I": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotIron"
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:certus_quartz_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:certus_quartz_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#CERTUS"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
 }

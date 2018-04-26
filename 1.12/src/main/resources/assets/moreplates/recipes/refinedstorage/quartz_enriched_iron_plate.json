@@ -1,22 +1,20 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:quartz_enriched_iron_plate"
-    }
-  ],
-  "result": {
-    "item": "moreplates:quartz_enriched_iron_plate",
-	"data": 0
-  },
-  "type": "forge:ore_shapeless",
-  "ingredients": [
-    {
-      "item": "refinedstorage:quartz_enriched_iron"
-    },
-	{
-      "item": "moreplates:hammer",
-	  "data": 0
-    }
-  ]
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:quartz_enriched_iron_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:quartz_enriched_iron_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#QUARTZ_ENRICHED_IRON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
 }

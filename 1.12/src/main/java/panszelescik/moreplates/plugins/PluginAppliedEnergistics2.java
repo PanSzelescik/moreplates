@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.appliedenergistics2.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginAppliedEnergistics2 {
 	
@@ -18,17 +18,17 @@ public class PluginAppliedEnergistics2 {
 		fluix_gear =			new ItemFluixGear			("fluix_gear",			"fluix_gear");
 		fluix_plate =			new ItemFluixPlate			("fluix_plate",			"fluix_plate");
 		
-		RegisterItem.register(certus_quartz_gear);
-		RegisterItem.register(certus_quartz_plate);
-		RegisterItem.register(fluix_gear);
-		RegisterItem.register(fluix_plate);
+		Helper.registerItem(certus_quartz_gear);
+		Helper.registerItem(certus_quartz_plate);
+		Helper.registerItem(fluix_gear);
+		Helper.registerItem(fluix_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(certus_quartz_gear);
-		RegisterRender.register(certus_quartz_plate);
-		RegisterRender.register(fluix_gear);
-		RegisterRender.register(fluix_plate);
+		Helper.registerRender(certus_quartz_gear);
+		Helper.registerRender(certus_quartz_plate);
+		Helper.registerRender(fluix_gear);
+		Helper.registerRender(fluix_plate);
 	}
 	
 	public static void init() {

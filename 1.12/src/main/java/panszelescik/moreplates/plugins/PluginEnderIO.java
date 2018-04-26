@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.enderio.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginEnderIO {
 	
@@ -46,45 +46,45 @@ public class PluginEnderIO {
 		vibrant_alloy_gear =		new ItemVibrantAlloyGear		("vibrant_alloy_gear",		"vibrant_alloy_gear");
 		vibrant_alloy_plate =		new ItemVibrantAlloyPlate		("vibrant_alloy_plate",		"vibrant_alloy_plate");
 		
-		RegisterItem.register(conductive_iron_gear);
-		RegisterItem.register(conductive_iron_plate);
-		RegisterItem.register(dark_steel_gear);
-		RegisterItem.register(dark_steel_plate);
-		RegisterItem.register(electrical_steel_gear);
-		RegisterItem.register(electrical_steel_plate);
-		RegisterItem.register(end_steel_gear);
-		RegisterItem.register(end_steel_plate);
-		RegisterItem.register(energetic_alloy_gear);
-		RegisterItem.register(energetic_alloy_plate);
-		RegisterItem.register(pulsating_iron_gear);
-		RegisterItem.register(pulsating_iron_plate);
-		RegisterItem.register(redstone_alloy_gear);
-		RegisterItem.register(redstone_alloy_plate);
-		RegisterItem.register(soularium_gear);
-		RegisterItem.register(soularium_plate);
-		RegisterItem.register(vibrant_alloy_gear);
-		RegisterItem.register(vibrant_alloy_plate);
+		Helper.registerItem(conductive_iron_gear);
+		Helper.registerItem(conductive_iron_plate);
+		Helper.registerItem(dark_steel_gear);
+		Helper.registerItem(dark_steel_plate);
+		Helper.registerItem(electrical_steel_gear);
+		Helper.registerItem(electrical_steel_plate);
+		Helper.registerItem(end_steel_gear);
+		Helper.registerItem(end_steel_plate);
+		Helper.registerItem(energetic_alloy_gear);
+		Helper.registerItem(energetic_alloy_plate);
+		Helper.registerItem(pulsating_iron_gear);
+		Helper.registerItem(pulsating_iron_plate);
+		Helper.registerItem(redstone_alloy_gear);
+		Helper.registerItem(redstone_alloy_plate);
+		Helper.registerItem(soularium_gear);
+		Helper.registerItem(soularium_plate);
+		Helper.registerItem(vibrant_alloy_gear);
+		Helper.registerItem(vibrant_alloy_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(conductive_iron_gear);
-		RegisterRender.register(conductive_iron_plate);
-		RegisterRender.register(dark_steel_gear);
-		RegisterRender.register(dark_steel_plate);
-		RegisterRender.register(electrical_steel_gear);
-		RegisterRender.register(electrical_steel_plate);
-		RegisterRender.register(end_steel_gear);
-		RegisterRender.register(end_steel_plate);
-		RegisterRender.register(energetic_alloy_gear);
-		RegisterRender.register(energetic_alloy_plate);
-		RegisterRender.register(pulsating_iron_gear);
-		RegisterRender.register(pulsating_iron_plate);
-		RegisterRender.register(redstone_alloy_gear);
-		RegisterRender.register(redstone_alloy_plate);
-		RegisterRender.register(soularium_gear);
-		RegisterRender.register(soularium_plate);
-		RegisterRender.register(vibrant_alloy_gear);
-		RegisterRender.register(vibrant_alloy_plate);
+		Helper.registerRender(conductive_iron_gear);
+		Helper.registerRender(conductive_iron_plate);
+		Helper.registerRender(dark_steel_gear);
+		Helper.registerRender(dark_steel_plate);
+		Helper.registerRender(electrical_steel_gear);
+		Helper.registerRender(electrical_steel_plate);
+		Helper.registerRender(end_steel_gear);
+		Helper.registerRender(end_steel_plate);
+		Helper.registerRender(energetic_alloy_gear);
+		Helper.registerRender(energetic_alloy_plate);
+		Helper.registerRender(pulsating_iron_gear);
+		Helper.registerRender(pulsating_iron_plate);
+		Helper.registerRender(redstone_alloy_gear);
+		Helper.registerRender(redstone_alloy_plate);
+		Helper.registerRender(soularium_gear);
+		Helper.registerRender(soularium_plate);
+		Helper.registerRender(vibrant_alloy_gear);
+		Helper.registerRender(vibrant_alloy_plate);
 	}
 	
 	public static void init() {

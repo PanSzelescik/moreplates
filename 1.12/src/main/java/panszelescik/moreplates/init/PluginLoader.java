@@ -96,4 +96,9 @@ public class PluginLoader {
 		PluginMultiMod.init();
 	}
 	
+	public static void postInit() {
+		if (ModChecker.isThermalExpansionLoaded & Config.loadThermalExpansion)
+			PluginThermalExpansion.postInit();
+	}
+	
 }

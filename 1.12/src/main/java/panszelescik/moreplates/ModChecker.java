@@ -16,6 +16,7 @@ public class ModChecker {
 	public static boolean isProjectELoaded;
 	public static boolean isProjectRedLoaded;
 	public static boolean isRefinedStorageLoaded;
+	public static boolean isThermalExpansionLoaded;
 	public static boolean isTinkersConstructLoaded;
 	
 	public ModChecker() {
@@ -31,6 +32,7 @@ public class ModChecker {
 		isProjectELoaded = 				Loader.isModLoaded("projecte");
 		isProjectRedLoaded =			Loader.isModLoaded("projectred-core");
 		isRefinedStorageLoaded =		Loader.isModLoaded("refinedstorage");
+		isThermalExpansionLoaded =		Loader.isModLoaded("thermalexpansion");
 		isTinkersConstructLoaded =		Loader.isModLoaded("tconstruct");
 	}
 	
@@ -59,6 +61,8 @@ public class ModChecker {
 			MorePlates.logger.info("Project Red has been detected.");
 		if (isRefinedStorageLoaded)
 			MorePlates.logger.info("Refined Storage has been detected.");
+		if (isThermalExpansionLoaded)
+			MorePlates.logger.info("Thermal Expansion has been detected.");
 		if (isTinkersConstructLoaded)
 			MorePlates.logger.info("Tinkers' Construct has been detected.");
 	}

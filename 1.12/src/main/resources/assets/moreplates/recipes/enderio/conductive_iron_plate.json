@@ -1,23 +1,20 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:conductive_iron_plate"
-    }
-  ],
-  "result": {
-    "item": "moreplates:conductive_iron_plate",
-	"data": 0
-  },
-  "type": "forge:ore_shapeless",
-  "ingredients": [
-    {
-      "type": "forge:ore_dict",
-	  "ore": "ingotConductiveIron"
-    },
-	{
-      "item": "moreplates:hammer",
-	  "data": 0
-    }
-  ]
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:conductive_iron_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:conductive_iron_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#CONDUCTIVE_IRON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
 }

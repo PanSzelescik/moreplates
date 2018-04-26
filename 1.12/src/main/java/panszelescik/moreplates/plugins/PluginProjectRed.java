@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.projectred.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginProjectRed {
 	
@@ -18,17 +18,17 @@ public class PluginProjectRed {
 		red_alloy_gear =			new ItemRedAlloyGear			("red_alloy_gear",			"red_alloy_gear");
 		red_alloy_plate =			new ItemRedAlloyPlate			("red_alloy_plate",			"red_alloy_plate");
 		
-		RegisterItem.register(electrotine_alloy_gear);
-		RegisterItem.register(electrotine_alloy_plate);
-		RegisterItem.register(red_alloy_gear);
-		RegisterItem.register(red_alloy_plate);
+		Helper.registerItem(electrotine_alloy_gear);
+		Helper.registerItem(electrotine_alloy_plate);
+		Helper.registerItem(red_alloy_gear);
+		Helper.registerItem(red_alloy_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(electrotine_alloy_gear);
-		RegisterRender.register(electrotine_alloy_plate);
-		RegisterRender.register(red_alloy_gear);
-		RegisterRender.register(red_alloy_plate);
+		Helper.registerRender(electrotine_alloy_gear);
+		Helper.registerRender(electrotine_alloy_plate);
+		Helper.registerRender(red_alloy_gear);
+		Helper.registerRender(red_alloy_plate);
 	}
 	
 	public static void init() {

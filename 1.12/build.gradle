@@ -25,8 +25,25 @@ minecraft {
     // makeObfSourceJar = false
 }
 
-dependencies {
+repositories {
+	maven {
+		name = "CoFH Maven"
+		url = "http://maven.covers1624.net"
+	}
+	maven {
+		name = "ChickenBones Maven"
+		url = "http://chickenbones.net/maven/"
+	}
+	maven {
+		name = "JEI Maven"
+		url = "http://dvs1.progwml6.com/files/maven"
+	}
+}
 
+dependencies {
+	compile "cofh:CoFHCore:${version_minecraft}-${version_cofh_core}:deobf"
+	compile "cofh:ThermalExpansion:${version_minecraft}-${version_te}:deobf"
+	
 }
 
 processResources {

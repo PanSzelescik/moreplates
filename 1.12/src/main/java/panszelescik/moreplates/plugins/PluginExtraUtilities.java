@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.extrautils2.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginExtraUtilities {
 	
@@ -22,21 +22,21 @@ public class PluginExtraUtilities {
 		evil_infused_iron_gear =	new ItemEvilInfusedIronGear		("evil_infused_iron_gear",	"evil_infused_iron_gear");
 		evil_infused_iron_plate =	new ItemEvilInfusedIronPlate	("evil_infused_iron_plate",	"evil_infused_iron_plate");
 		
-		RegisterItem.register(demon_gear);
-		RegisterItem.register(demon_plate);
-		RegisterItem.register(enchanted_gear);
-		RegisterItem.register(enchanted_plate);
-		RegisterItem.register(evil_infused_iron_gear);
-		RegisterItem.register(evil_infused_iron_plate);
+		Helper.registerItem(demon_gear);
+		Helper.registerItem(demon_plate);
+		Helper.registerItem(enchanted_gear);
+		Helper.registerItem(enchanted_plate);
+		Helper.registerItem(evil_infused_iron_gear);
+		Helper.registerItem(evil_infused_iron_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(demon_gear);
-		RegisterRender.register(demon_plate);
-		RegisterRender.register(enchanted_gear);
-		RegisterRender.register(enchanted_plate);
-		RegisterRender.register(evil_infused_iron_gear);
-		RegisterRender.register(evil_infused_iron_plate);
+		Helper.registerRender(demon_gear);
+		Helper.registerRender(demon_plate);
+		Helper.registerRender(enchanted_gear);
+		Helper.registerRender(enchanted_plate);
+		Helper.registerRender(evil_infused_iron_gear);
+		Helper.registerRender(evil_infused_iron_plate);
 	}
 	
 	public static void init() {

@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:prudentium_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:prudentium_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotPrudentium"
-    },
-	"I": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotIron"
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:prudentium_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:prundetium_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#PRUDENTIUM"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
 }

@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:red_matter_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:red_matter_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "item": "projecte:item.pe_matter",
-	  "data": 1
-    },
-	"I": {
-      "item": "projecte:item.pe_fuel",
-	  "data": 2
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:red_matter_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:red_matter_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#RED_MATTER"
+		},
+		"I": {
+			"item": "#AETERNALIS_FUEL"
+		}
+	}
 }

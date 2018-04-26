@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:conductive_iron_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:conductive_iron_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotConductiveIron"
-    },
-	"I": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotIron"
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:conductive_iron_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:conductive_iron_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#CONDUCTIVE_IRON"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
 }

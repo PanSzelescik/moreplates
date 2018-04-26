@@ -4,17 +4,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.Level;
-
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.IConfigElement;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.Reference;
-import panszelescik.moreplates.proxy.CommonProxy;
 
 public class Config {
 	
@@ -37,6 +33,7 @@ public class Config {
 	public static boolean loadProjectE = true;
 	public static boolean loadProjectRed = true;
 	public static boolean loadRefinedStorage = true;
+	public static boolean loadThermalExpansion = true;
 	public static boolean loadTinkersConstruct = true;
 	
 	//Ints
@@ -81,6 +78,7 @@ public class Config {
 		loadProjectE =				cfg.getBoolean("loadProjectE",				CATEGORY_PLUGINS, loadProjectE,				LOADPLUGIN_COMMENT);
 		loadProjectRed =			cfg.getBoolean("loadProjectRed",			CATEGORY_PLUGINS, loadProjectRed,			LOADPLUGIN_COMMENT);
 		loadRefinedStorage =		cfg.getBoolean("loadRefinedStorage",		CATEGORY_PLUGINS, loadRefinedStorage,		LOADPLUGIN_COMMENT);
+		loadThermalExpansion =		cfg.getBoolean("loadThermalExpansion",		CATEGORY_PLUGINS, loadThermalExpansion,		LOADPLUGIN_COMMENT);
 		loadTinkersConstruct =		cfg.getBoolean("loadTinkersConstruct",		CATEGORY_PLUGINS, loadTinkersConstruct,		LOADPLUGIN_COMMENT);
 		
 		//General

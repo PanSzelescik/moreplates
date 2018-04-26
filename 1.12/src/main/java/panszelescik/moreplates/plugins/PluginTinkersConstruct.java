@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.tconstruct.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginTinkersConstruct {
 	
@@ -30,29 +30,29 @@ public class PluginTinkersConstruct {
 		pig_iron_gear =		new ItemPigIronGear			("pig_iron_gear",		"pig_iron_gear");
 		pig_iron_plate =	new ItemPigIronPlate		("pig_iron_plate",		"pig_iron_plate");
 		
-		RegisterItem.register(ardite_gear);
-		RegisterItem.register(ardite_plate);
-		RegisterItem.register(cobalt_gear);
-		RegisterItem.register(cobalt_plate);
-		RegisterItem.register(knightslime_gear);
-		RegisterItem.register(knightslime_plate);
-		RegisterItem.register(manyullyn_gear);
-		RegisterItem.register(manyullyn_plate);
-		RegisterItem.register(pig_iron_gear);
-		RegisterItem.register(pig_iron_plate);
+		Helper.registerItem(ardite_gear);
+		Helper.registerItem(ardite_plate);
+		Helper.registerItem(cobalt_gear);
+		Helper.registerItem(cobalt_plate);
+		Helper.registerItem(knightslime_gear);
+		Helper.registerItem(knightslime_plate);
+		Helper.registerItem(manyullyn_gear);
+		Helper.registerItem(manyullyn_plate);
+		Helper.registerItem(pig_iron_gear);
+		Helper.registerItem(pig_iron_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(ardite_gear);
-		RegisterRender.register(ardite_plate);
-		RegisterRender.register(cobalt_gear);
-		RegisterRender.register(cobalt_plate);
-		RegisterRender.register(knightslime_gear);
-		RegisterRender.register(knightslime_plate);
-		RegisterRender.register(manyullyn_gear);
-		RegisterRender.register(manyullyn_plate);
-		RegisterRender.register(pig_iron_gear);
-		RegisterRender.register(pig_iron_plate);
+		Helper.registerRender(ardite_gear);
+		Helper.registerRender(ardite_plate);
+		Helper.registerRender(cobalt_gear);
+		Helper.registerRender(cobalt_plate);
+		Helper.registerRender(knightslime_gear);
+		Helper.registerRender(knightslime_plate);
+		Helper.registerRender(manyullyn_gear);
+		Helper.registerRender(manyullyn_plate);
+		Helper.registerRender(pig_iron_gear);
+		Helper.registerRender(pig_iron_plate);
 	}
 	
 	public static void init() {

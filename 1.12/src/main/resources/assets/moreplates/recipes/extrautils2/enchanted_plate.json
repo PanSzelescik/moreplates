@@ -1,23 +1,20 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:enchanted_plate"
-    }
-  ],
-  "result": {
-    "item": "moreplates:enchanted_plate",
-	"data": 0
-  },
-  "type": "forge:ore_shapeless",
-  "ingredients": [
-    {
-      "item": "extrautils2:ingredients",
-	  "data": 12
-    },
-	{
-      "item": "moreplates:hammer",
-	  "data": 0
-    }
-  ]
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:enchanted_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:enchanted_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#ENCHANTED"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
 }

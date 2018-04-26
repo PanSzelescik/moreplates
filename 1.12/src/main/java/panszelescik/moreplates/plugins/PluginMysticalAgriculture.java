@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.mysticalagriculture.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginMysticalAgriculture {
 	
@@ -34,33 +34,33 @@ public class PluginMysticalAgriculture {
 		supremium_gear =	new ItemSupremiumGear		("supremium_gear",		"supremium_gear");
 		supremium_plate =	new ItemSupremiumPlate		("supremium_plate",		"supremium_plate");
 		
-		RegisterItem.register(inferium_gear);
-		RegisterItem.register(inferium_plate);
-		RegisterItem.register(intermedium_gear);
-		RegisterItem.register(intermedium_plate);
-		RegisterItem.register(prudentium_gear);
-		RegisterItem.register(prudentium_plate);
-		RegisterItem.register(soulium_gear);
-		RegisterItem.register(soulium_plate);
-		RegisterItem.register(superium_gear);
-		RegisterItem.register(superium_plate);
-		RegisterItem.register(supremium_gear);
-		RegisterItem.register(supremium_plate);
+		Helper.registerItem(inferium_gear);
+		Helper.registerItem(inferium_plate);
+		Helper.registerItem(intermedium_gear);
+		Helper.registerItem(intermedium_plate);
+		Helper.registerItem(prudentium_gear);
+		Helper.registerItem(prudentium_plate);
+		Helper.registerItem(soulium_gear);
+		Helper.registerItem(soulium_plate);
+		Helper.registerItem(superium_gear);
+		Helper.registerItem(superium_plate);
+		Helper.registerItem(supremium_gear);
+		Helper.registerItem(supremium_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(inferium_gear);
-		RegisterRender.register(inferium_plate);
-		RegisterRender.register(intermedium_gear);
-		RegisterRender.register(intermedium_plate);
-		RegisterRender.register(prudentium_gear);
-		RegisterRender.register(prudentium_plate);
-		RegisterRender.register(soulium_gear);
-		RegisterRender.register(soulium_plate);
-		RegisterRender.register(superium_gear);
-		RegisterRender.register(superium_plate);
-		RegisterRender.register(supremium_gear);
-		RegisterRender.register(supremium_plate);
+		Helper.registerRender(inferium_gear);
+		Helper.registerRender(inferium_plate);
+		Helper.registerRender(intermedium_gear);
+		Helper.registerRender(intermedium_plate);
+		Helper.registerRender(prudentium_gear);
+		Helper.registerRender(prudentium_plate);
+		Helper.registerRender(soulium_gear);
+		Helper.registerRender(soulium_plate);
+		Helper.registerRender(superium_gear);
+		Helper.registerRender(superium_plate);
+		Helper.registerRender(supremium_gear);
+		Helper.registerRender(supremium_plate);
 	}
 	
 	public static void init() {

@@ -1,28 +1,25 @@
 {
-  "conditions": [
-    {
-      "type": "minecraft:item_exists",
-      "item": "moreplates:redstone_alloy_gear"
-    }
-  ],
-  "result": {
-    "item": "moreplates:redstone_alloy_gear",
-	"data": 0
-  },
-  "pattern": [
-    " M ",
-    "MIM",
-    " M "
-  ],
-  "type": "forge:ore_shaped",
-  "key": {
-    "M": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotRedstoneAlloy"
-    },
-	"I": {
-      "type": "forge:ore_dict",
-	  "ore": "ingotIron"
-    }
-  }
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:redstone_alloy_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:redstone_alloy_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#REDSTONE_ALLOY"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
 }

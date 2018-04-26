@@ -2,8 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.projecte.*;
-import panszelescik.moreplates.register.*;
 
 public class PluginProjectE {
 	
@@ -18,17 +18,17 @@ public class PluginProjectE {
 		red_matter_gear =	new ItemRedMatterGear	("red_matter_gear",		"red_matter_gear");
 		red_matter_plate =	new ItemRedMatterPlate	("red_matter_plate",	"red_matter_plate");
 		
-		RegisterItem.register(dark_matter_gear);
-		RegisterItem.register(dark_matter_plate);
-		RegisterItem.register(red_matter_gear);
-		RegisterItem.register(red_matter_plate);
+		Helper.registerItem(dark_matter_gear);
+		Helper.registerItem(dark_matter_plate);
+		Helper.registerItem(red_matter_gear);
+		Helper.registerItem(red_matter_plate);
 	}
 	
 	public static void clientPreInit() {
-		RegisterRender.register(dark_matter_gear);
-		RegisterRender.register(dark_matter_plate);
-		RegisterRender.register(red_matter_gear);
-		RegisterRender.register(red_matter_plate);
+		Helper.registerRender(dark_matter_gear);
+		Helper.registerRender(dark_matter_plate);
+		Helper.registerRender(red_matter_gear);
+		Helper.registerRender(red_matter_plate);
 	}
 	
 	public static void init() {
