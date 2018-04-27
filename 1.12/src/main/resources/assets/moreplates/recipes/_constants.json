@@ -30,7 +30,7 @@
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
-			"ore": "stick"
+			"ore": "stickWood"
 		}
 	]
 },
@@ -379,7 +379,7 @@
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
-			"ore": "ingotPrundentium"
+			"ore": "ingotPrudentium"
 		}
 	]
 },

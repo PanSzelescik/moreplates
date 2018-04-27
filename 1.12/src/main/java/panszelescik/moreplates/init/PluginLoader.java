@@ -97,6 +97,8 @@ public class PluginLoader {
 	}
 	
 	public static void postInit() {
+		if (ModChecker.isCoFHCoreLoaded & ModChecker.isImmersiveEngineeringLoaded & Config.loadImmersiveEngineering)
+			PluginImmersiveEngineering.postInit();
 		if (ModChecker.isThermalExpansionLoaded & Config.loadThermalExpansion)
 			PluginThermalExpansion.postInit();
 	}

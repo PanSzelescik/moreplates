@@ -20,15 +20,18 @@ public class Helper {
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
 	}
 	
+	//@author King Lemming
 	public static ItemStack getItemStack(String id, String name, int amount, int meta) {
 		Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(id + ":" + name));
 		return item != null ? new ItemStack(item, amount, meta) : ItemStack.EMPTY;
 	}
 	
+	//@author King Lemming
 	public static ItemStack getItemStack(String id, String name, int amount) {
 		return getItemStack(id, name, amount, 0);
 	}
 	
+	//@author King Lemming
 	public static ItemStack getItemStack(String id, String name) {
 		return getItemStack(id, name, 1, 0);
 	}

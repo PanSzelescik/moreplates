@@ -7,9 +7,11 @@ public class ModChecker {
 	public static boolean isAppliedEnergisticsLoaded;
 	public static boolean isBotaniaLoaded;
 	public static boolean isCalculatorLoaded;
+	public static boolean isCoFHCoreLoaded;
 	public static boolean isDraconicEvolutionLoaded;
 	public static boolean isEnderIOLoaded;
 	public static boolean isExtraUtilitiesLoaded;
+	public static boolean isImmersiveEngineeringLoaded;
 	public static boolean isMekanismLoaded;
 	public static boolean isMysticalAgradditionsLoaded;
 	public static boolean isMysticalAgricultureLoaded;
@@ -23,9 +25,11 @@ public class ModChecker {
 		isAppliedEnergisticsLoaded =	Loader.isModLoaded("appliedenergistics2");
 		isBotaniaLoaded =				Loader.isModLoaded("botania");
 		isCalculatorLoaded =			Loader.isModLoaded("calculator");
+		isCoFHCoreLoaded = 				Loader.isModLoaded("cofhcore");
 		isDraconicEvolutionLoaded =		Loader.isModLoaded("draconicevolution");
 		isEnderIOLoaded =				Loader.isModLoaded("enderio");
 		isExtraUtilitiesLoaded =		Loader.isModLoaded("extrautils2");
+		isImmersiveEngineeringLoaded =	Loader.isModLoaded("immersiveengineering");
 		isMekanismLoaded =				Loader.isModLoaded("mekanism");
 		isMysticalAgradditionsLoaded =	Loader.isModLoaded("mysticalagradditions");
 		isMysticalAgricultureLoaded =	Loader.isModLoaded("mysticalagriculture");
@@ -43,12 +47,16 @@ public class ModChecker {
 			MorePlates.logger.info("Botania has been detected.");
 		if (isCalculatorLoaded)
 			MorePlates.logger.info("Calculator has been detected.");
+		if (isCoFHCoreLoaded)
+			MorePlates.logger.info("CoFH Core has been detected.");
 		if (isDraconicEvolutionLoaded)
 			MorePlates.logger.info("Draconic Evolution has been detected.");
 		if (isEnderIOLoaded)
 			MorePlates.logger.info("Ender IO has been detected.");
 		if (isExtraUtilitiesLoaded)
 			MorePlates.logger.info("Extra Utilities 2 has been detected.");
+		if (isImmersiveEngineeringLoaded)
+			MorePlates.logger.info("Immersive Engineering has been detected.");
 		if (isMekanismLoaded)
 			MorePlates.logger.info("Mekanism has been detected.");
 		if (isMysticalAgradditionsLoaded)
