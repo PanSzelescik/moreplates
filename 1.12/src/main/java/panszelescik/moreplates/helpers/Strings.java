@@ -20,7 +20,7 @@ public class Strings {
 	public static String CERTUS_QUARTZ = "CertusQuartz";
 	public static String FLUIX = "Fluix";
 	public static String PURE_CERTUS_QUARTZ_NAME = "material";
-	public static String PURE_FLUIX = "PureFluix";
+	public static String PURE_FLUIX = "Pure" + FLUIX;
 	
 	public static int PURE_CERTUS_QUARTZ_META = 10;
 	
