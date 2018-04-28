@@ -1,9 +1,10 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.oredict.OreDictionary;
-import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.mekanism.*;
+
+import static panszelescik.moreplates.helpers.Helper.*;
+import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginMekanism {
 	
@@ -15,37 +16,37 @@ public class PluginMekanism {
 	public static Item refined_obsidian_plate;
 	
 	public static void preInit() {
-		glowstone_gear =			new ItemGlowstoneGear			("glowstone_gear",			"glowstone_gear");
-		glowstone_plate =			new ItemGlowstonePlate			("glowstone_plate",			"glowstone_plate");
-		osmium_gear =				new ItemOsmiumGear				("osmium_gear",				"osmium_gear");
-		osmium_plate =				new ItemOsmiumPlate				("osmium_plate",			"osmium_plate");
-		refined_obsidian_gear =		new ItemRefinedObsidianGear		("refined_obsidian_gear",	"refined_obsidian_gear");
-		refined_obsidian_plate =	new ItemRefinedObsidianPlate	("refined_obsidian_plate",	"refined_obsidian_plate");
+		glowstone_gear = new ItemGlowstoneGear("glowstone_gear", "glowstone_gear");
+		glowstone_plate = new ItemGlowstonePlate("glowstone_plate", "glowstone_plate");
+		osmium_gear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
+		osmium_plate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
+		refined_obsidian_gear = new ItemRefinedObsidianGear("refined_obsidian_gear", "refined_obsidian_gear");
+		refined_obsidian_plate = new ItemRefinedObsidianPlate("refined_obsidian_plate", "refined_obsidian_plate");
 		
-		Helper.registerItem(glowstone_gear);
-		Helper.registerItem(glowstone_plate);
-		Helper.registerItem(osmium_gear);
-		Helper.registerItem(osmium_plate);
-		Helper.registerItem(refined_obsidian_gear);
-		Helper.registerItem(refined_obsidian_plate);
+		registerItem(glowstone_gear);
+		registerItem(glowstone_plate);
+		registerItem(osmium_gear);
+		registerItem(osmium_plate);
+		registerItem(refined_obsidian_gear);
+		registerItem(refined_obsidian_plate);
 	}
 	
 	public static void clientPreInit() {
-		Helper.registerRender(glowstone_gear);
-		Helper.registerRender(glowstone_plate);
-		Helper.registerRender(osmium_gear);
-		Helper.registerRender(osmium_plate);
-		Helper.registerRender(refined_obsidian_gear);
-		Helper.registerRender(refined_obsidian_plate);
+		registerRender(glowstone_gear);
+		registerRender(glowstone_plate);
+		registerRender(osmium_gear);
+		registerRender(osmium_plate);
+		registerRender(refined_obsidian_gear);
+		registerRender(refined_obsidian_plate);
 	}
 	
 	public static void init() {
-		OreDictionary.registerOre("gearRefinedGlowstone",	glowstone_gear);
-		OreDictionary.registerOre("plateRefinedGlowstone",	glowstone_plate);
-		OreDictionary.registerOre("gearOsmium",				osmium_gear);
-		OreDictionary.registerOre("plateOsmium",			osmium_plate);
-		OreDictionary.registerOre("gearRefinedObsidian",	refined_obsidian_gear);
-		OreDictionary.registerOre("plateRefinedObsidian",	refined_obsidian_plate);
+		oreGear(GLOWSTONE, glowstone_gear);
+		orePlate(GLOWSTONE, glowstone_plate);
+		oreGear(OSMIUM, osmium_gear);
+		orePlate(OSMIUM, osmium_plate);
+		oreGear(REFINED_OBSIDIAN, refined_obsidian_gear);
+		orePlate(REFINED_OBSIDIAN, refined_obsidian_plate);
 	}
 	
 }

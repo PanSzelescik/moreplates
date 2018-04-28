@@ -1,105 +1,106 @@
 package panszelescik.moreplates.init;
 
-import panszelescik.moreplates.ModChecker;
-import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.plugins.*;
+
+import static panszelescik.moreplates.ModChecker.*;
+import static panszelescik.moreplates.config.Config.*;
 
 public class PluginLoader {
 	
 	public static void preInit() {
-		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2)
+		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.preInit();
-		if (ModChecker.isBotaniaLoaded & Config.loadBotania)
+		if (isBotaniaLoaded & loadBotania)
 			PluginBotania.preInit();
-		if (ModChecker.isCalculatorLoaded & Config.loadCalculator)
+		if (isCalculatorLoaded & loadCalculator)
 			PluginCalculator.preInit();
-		if (ModChecker.isDraconicEvolutionLoaded & Config.loadDraconicEvolution)
+		if (isDraconicEvolutionLoaded & loadDraconicEvolution)
 			PluginDraconicEvolution.preInit();
-		if (ModChecker.isEnderIOLoaded & Config.loadEnderIO)
+		if (isEnderIOLoaded & loadEnderIO)
 			PluginEnderIO.preInit();
-		if (ModChecker.isExtraUtilitiesLoaded & Config.loadExtraUtilities)
+		if (isExtraUtilitiesLoaded & loadExtraUtilities)
 			PluginExtraUtilities.preInit();
-		if (ModChecker.isMekanismLoaded & Config.loadMekanism)
+		if (isMekanismLoaded & loadMekanism)
 			PluginMekanism.preInit();
-		if (ModChecker.isMysticalAgradditionsLoaded & Config.loadMysticalAgradditions)
+		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions)
 			PluginMysticalAgradditions.preInit();
-		if (ModChecker.isMysticalAgricultureLoaded & Config.loadMysticalAgriculture)
+		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
 			PluginMysticalAgriculture.preInit();
-		if (ModChecker.isProjectELoaded & Config.loadProjectE)
+		if (isProjectELoaded & loadProjectE)
 			PluginProjectE.preInit();
-		if (ModChecker.isProjectRedLoaded & Config.loadProjectRed)
+		if (isProjectRedLoaded & loadProjectRed)
 			PluginProjectRed.preInit();
-		if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage)
+		if (isRefinedStorageLoaded & loadRefinedStorage)
 			PluginRefinedStorage.preInit();
-		if (ModChecker.isTinkersConstructLoaded & Config.loadTinkersConstruct)
+		if (isTinkersConstructLoaded & loadTinkersConstruct)
 			PluginTinkersConstruct.preInit();
 		PluginMultiMod.preInit();
 	}
 	
 	public static void clientPreInit() {
-		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2)
+		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.clientPreInit();
-		if (ModChecker.isBotaniaLoaded & Config.loadBotania)
+		if (isBotaniaLoaded & loadBotania)
 			PluginBotania.clientPreInit();
-		if (ModChecker.isCalculatorLoaded & Config.loadCalculator)
+		if (isCalculatorLoaded & loadCalculator)
 			PluginCalculator.clientPreInit();
-		if (ModChecker.isDraconicEvolutionLoaded & Config.loadDraconicEvolution)
+		if (isDraconicEvolutionLoaded & loadDraconicEvolution)
 			PluginDraconicEvolution.clientPreInit();
-		if (ModChecker.isEnderIOLoaded & Config.loadEnderIO)
+		if (isEnderIOLoaded & loadEnderIO)
 			PluginEnderIO.clientPreInit();
-		if (ModChecker.isExtraUtilitiesLoaded & Config.loadExtraUtilities)
+		if (isExtraUtilitiesLoaded & loadExtraUtilities)
 			PluginExtraUtilities.clientPreInit();
-		if (ModChecker.isMekanismLoaded & Config.loadMekanism)
+		if (isMekanismLoaded & loadMekanism)
 			PluginMekanism.clientPreInit();
-		if (ModChecker.isMysticalAgradditionsLoaded & Config.loadMysticalAgradditions)
+		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions)
 			PluginMysticalAgradditions.clientPreInit();
-		if (ModChecker.isMysticalAgricultureLoaded & Config.loadMysticalAgriculture)
+		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
 			PluginMysticalAgriculture.clientPreInit();
-		if (ModChecker.isProjectELoaded & Config.loadProjectE)
+		if (isProjectELoaded & loadProjectE)
 			PluginProjectE.clientPreInit();
-		if (ModChecker.isProjectRedLoaded & Config.loadProjectRed)
+		if (isProjectRedLoaded & loadProjectRed)
 			PluginProjectRed.clientPreInit();
-		if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage)
+		if (isRefinedStorageLoaded & loadRefinedStorage)
 			PluginRefinedStorage.clientPreInit();
-		if (ModChecker.isTinkersConstructLoaded & Config.loadTinkersConstruct)
+		if (isTinkersConstructLoaded & loadTinkersConstruct)
 			PluginTinkersConstruct.clientPreInit();
 		PluginMultiMod.clientPreInit();
 	}
 	
 	public static void init() {
-		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2)
+		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.init();
-		if (ModChecker.isBotaniaLoaded & Config.loadBotania)
+		if (isBotaniaLoaded & loadBotania)
 			PluginBotania.init();
-		if (ModChecker.isCalculatorLoaded & Config.loadCalculator)
+		if (isCalculatorLoaded & loadCalculator)
 			PluginCalculator.init();
-		if (ModChecker.isDraconicEvolutionLoaded & Config.loadDraconicEvolution)
+		if (isDraconicEvolutionLoaded & loadDraconicEvolution)
 			PluginDraconicEvolution.init();
-		if (ModChecker.isEnderIOLoaded & Config.loadEnderIO)
+		if (isEnderIOLoaded & loadEnderIO)
 			PluginEnderIO.init();
-		if (ModChecker.isExtraUtilitiesLoaded & Config.loadExtraUtilities)
+		if (isExtraUtilitiesLoaded & loadExtraUtilities)
 			PluginExtraUtilities.init();
-		if (ModChecker.isMekanismLoaded & Config.loadMekanism)
+		if (isMekanismLoaded & loadMekanism)
 			PluginMekanism.init();
-		if (ModChecker.isMysticalAgradditionsLoaded & Config.loadMysticalAgradditions)
+		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions)
 			PluginMysticalAgradditions.init();
-		if (ModChecker.isMysticalAgricultureLoaded & Config.loadMysticalAgriculture)
+		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
 			PluginMysticalAgriculture.init();
-		if (ModChecker.isProjectELoaded & Config.loadProjectE)
+		if (isProjectELoaded & loadProjectE)
 			PluginProjectE.init();
-		if (ModChecker.isProjectRedLoaded & Config.loadProjectRed)
+		if (isProjectRedLoaded & loadProjectRed)
 			PluginProjectRed.init();
-		if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage)
+		if (isRefinedStorageLoaded & loadRefinedStorage)
 			PluginRefinedStorage.init();
-		if (ModChecker.isTinkersConstructLoaded & Config.loadTinkersConstruct)
+		if (isTinkersConstructLoaded & loadTinkersConstruct)
 			PluginTinkersConstruct.init();
 		PluginMultiMod.init();
 	}
 	
 	public static void postInit() {
-		if (ModChecker.isCoFHCoreLoaded & ModChecker.isImmersiveEngineeringLoaded & Config.loadImmersiveEngineering)
+		if (isCoFHCoreLoaded & isImmersiveEngineeringLoaded & loadImmersiveEngineering)
 			PluginImmersiveEngineering.postInit();
-		if (ModChecker.isThermalExpansionLoaded & Config.loadThermalExpansion)
+		if (isThermalExpansionLoaded & loadThermalExpansion)
 			PluginThermalExpansion.postInit();
 	}
 	

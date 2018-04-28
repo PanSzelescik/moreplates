@@ -1,9 +1,10 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.oredict.OreDictionary;
-import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.items.calculator.*;
+
+import static panszelescik.moreplates.helpers.Helper.*;
+import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginCalculator {
 	
@@ -19,52 +20,52 @@ public class PluginCalculator {
 	public static Item tanzanite_plate;
 	
 	public static void preInit() {
-		amethyst_gear =			new ItemAmethystGear		("amethyst_gear",			"amethyst_gear");
-		amethyst_plate =		new ItemAmethystPlate		("amethyst_plate",			"amethyst_plate");
-		enriched_gold_gear =	new ItemEnrichedGoldGear	("enriched_gold_gear",		"enriched_gold_gear");
-		enriched_gold_plate =	new ItemEnrichedGoldPlate	("enriched_gold_plate",		"enriched_gold_plate");
-		redstone_gear =			new ItemRedstoneGear		("redstone_gear",			"redstone_gear");
-		redstone_plate =		new ItemRedstonePlate		("redstone_plate",			"redstone_plate");
-		reinforced_iron_gear =	new ItemReinforcedIronGear	("reinforced_iron_gear",	"reinforced_iron_gear");
-		reinforced_iron_plate =	new ItemReinforcedIronPlate	("reinforced_iron_plate",	"reinforced_iron_plate");
-		tanzanite_gear =		new ItemTanzaniteGear		("tanzanite_gear",			"tanzanite_gear");
-		tanzanite_plate =		new ItemTanzanitePlate		("tanzanite_plate",			"tanzanite_plate");
+		amethyst_gear = new ItemAmethystGear("amethyst_gear", "amethyst_gear");
+		amethyst_plate = new ItemAmethystPlate("amethyst_plate", "amethyst_plate");
+		enriched_gold_gear = new ItemEnrichedGoldGear("enriched_gold_gear", "enriched_gold_gear");
+		enriched_gold_plate = new ItemEnrichedGoldPlate("enriched_gold_plate", "enriched_gold_plate");
+		redstone_gear =	 new ItemRedstoneGear("redstone_gear", "redstone_gear");
+		redstone_plate = new ItemRedstonePlate("redstone_plate", "redstone_plate");
+		reinforced_iron_gear = new ItemReinforcedIronGear("reinforced_iron_gear", "reinforced_iron_gear");
+		reinforced_iron_plate = new ItemReinforcedIronPlate("reinforced_iron_plate", "reinforced_iron_plate");
+		tanzanite_gear = new ItemTanzaniteGear("tanzanite_gear", "tanzanite_gear");
+		tanzanite_plate = new ItemTanzanitePlate("tanzanite_plate", "tanzanite_plate");
 		
-		Helper.registerItem(amethyst_gear);
-		Helper.registerItem(amethyst_plate);
-		Helper.registerItem(enriched_gold_gear);
-		Helper.registerItem(enriched_gold_plate);
-		Helper.registerItem(redstone_gear);
-		Helper.registerItem(redstone_plate);
-		Helper.registerItem(reinforced_iron_gear);
-		Helper.registerItem(reinforced_iron_plate);
-		Helper.registerItem(tanzanite_gear);
-		Helper.registerItem(tanzanite_plate);
+		registerItem(amethyst_gear);
+		registerItem(amethyst_plate);
+		registerItem(enriched_gold_gear);
+		registerItem(enriched_gold_plate);
+		registerItem(redstone_gear);
+		registerItem(redstone_plate);
+		registerItem(reinforced_iron_gear);
+		registerItem(reinforced_iron_plate);
+		registerItem(tanzanite_gear);
+		registerItem(tanzanite_plate);
 	}
 	
 	public static void clientPreInit() {
-		Helper.registerRender(amethyst_gear);
-		Helper.registerRender(amethyst_plate);
-		Helper.registerRender(enriched_gold_gear);
-		Helper.registerRender(enriched_gold_plate);
-		Helper.registerRender(redstone_gear);
-		Helper.registerRender(redstone_plate);
-		Helper.registerRender(reinforced_iron_gear);
-		Helper.registerRender(reinforced_iron_plate);
-		Helper.registerRender(tanzanite_gear);
-		Helper.registerRender(tanzanite_plate);
+		registerRender(amethyst_gear);
+		registerRender(amethyst_plate);
+		registerRender(enriched_gold_gear);
+		registerRender(enriched_gold_plate);
+		registerRender(redstone_gear);
+		registerRender(redstone_plate);
+		registerRender(reinforced_iron_gear);
+		registerRender(reinforced_iron_plate);
+		registerRender(tanzanite_gear);
+		registerRender(tanzanite_plate);
 	}
 	
 	public static void init() {
-		OreDictionary.registerOre("gearAmethyst",			amethyst_gear);
-		OreDictionary.registerOre("plateAmethyst",			amethyst_plate);
-		OreDictionary.registerOre("gearEnrichedGold",		enriched_gold_gear);
-		OreDictionary.registerOre("plateEnrichedGold",		enriched_gold_plate);
-		OreDictionary.registerOre("gearRedstone",			redstone_gear);
-		OreDictionary.registerOre("plateRedstone",			redstone_plate);
-		OreDictionary.registerOre("gearReinforcedIron",		reinforced_iron_gear);
-		OreDictionary.registerOre("plateReinforcedIron",	reinforced_iron_plate);
-		OreDictionary.registerOre("gearTanzanite",			tanzanite_gear);
-		OreDictionary.registerOre("plateTanzanite",			tanzanite_plate);
+		oreGear(AMETHYST, amethyst_gear);
+		orePlate(AMETHYST, amethyst_plate);
+		oreGear(ENRICHED_GOLD, enriched_gold_gear);
+		orePlate(ENRICHED_GOLD, enriched_gold_plate);
+		oreGear(REDSTONE, redstone_gear);
+		orePlate(REDSTONE, redstone_plate);
+		oreGear(REINFORCED_IRON, reinforced_iron_gear);
+		orePlate(REINFORCED_IRON, reinforced_iron_plate);
+		oreGear(TANZANITE, tanzanite_gear);
+		orePlate(TANZANITE, tanzanite_plate);
 	}
 }

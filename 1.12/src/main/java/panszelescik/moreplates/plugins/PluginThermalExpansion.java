@@ -3,61 +3,65 @@ package panszelescik.moreplates.plugins;
 import cofh.core.util.helpers.ItemHelper;
 import cofh.thermalexpansion.util.managers.machine.CompactorManager;
 import cofh.thermalexpansion.util.managers.machine.CompactorManager.Mode;
-import panszelescik.moreplates.ModChecker;
-import panszelescik.moreplates.config.Config;
-import panszelescik.moreplates.helpers.ItemStacks;
+import panszelescik.moreplates.helpers.Helper;
+
+import static panszelescik.moreplates.ModChecker.*;
+import static panszelescik.moreplates.config.Config.*;
+import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginThermalExpansion {
 	
+	private static int energy = energyCompactor;
+
 	public static void postInit() {
-		if (ModChecker.isAppliedEnergisticsLoaded & Config.loadAppliedEnergistics2) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.certus_4,				ItemStacks.certus_quartz_gear,			Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.pure_certus_4,			ItemStacks.certus_quartz_gear,			Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.fluix_4,					ItemStacks.fluix_gear,					Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.pure_fluix_4,			ItemStacks.fluix_gear,					Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.certus,					ItemStacks.certus_quartz_plate,			Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.pure_certus,				ItemStacks.certus_quartz_plate,			Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.fluix,					ItemStacks.fluix_plate,					Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.pure_fluix,				ItemStacks.fluix_plate,					Mode.PLATE);
+		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
+			String id = "appliedenergistics2";	
+			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
+			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
+			add(FLUIX, CRYSTAL + FLUIX);
+			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
-		if (ModChecker.isBotaniaLoaded & Config.loadBotania) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.gaia_4,					ItemStacks.gaia_spirit_gear,			Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.gaia,					ItemStacks.gaia_spirit_plate,			Mode.PLATE);
+		if (isBotaniaLoaded & loadBotania) {
+			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
 		}
-		if (ModChecker.isCalculatorLoaded & Config.loadCalculator) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.redstone_4,				ItemStacks.redstone_gear,				Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.reinforced_iron_4,		ItemStacks.reinforced_iron_gear,		Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.redstone,				ItemStacks.redstone_plate,				Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.reinforced_iron,			ItemStacks.reinforced_iron_plate,		Mode.PLATE);
+		if (isCalculatorLoaded & loadCalculator) {
+			String id = "calculator";
+			add(REDSTONE, REDSTONE_NAME, id);
+			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 		}
-		if (ModChecker.isExtraUtilitiesLoaded & Config.loadExtraUtilities) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.demon_4,					ItemStacks.demon_gear,					Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.enchanted_4,				ItemStacks.enchanted_gear,				Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.evil_infused_iron_4,		ItemStacks.evil_infused_iron_gear,		Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.demon,					ItemStacks.demon_plate,					Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.enchanted,				ItemStacks.enchanted_plate,				Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.evil_infused_iron,		ItemStacks.evil_infused_iron_plate,		Mode.PLATE);
+		if (isExtraUtilitiesLoaded & loadExtraUtilities) {
+			String id = "extrautils2";
+			add(DEMON, EXU2_NAME, id, DEMON_META);
+			add(ENCHANTED, EXU2_NAME, id, ENCHANTED_META);
+			add(EVIL_INFUSED_IRON, EXU2_NAME, id, EVIL_INFUSED_IRON_META);
 		}
-		if (ModChecker.isProjectELoaded & Config.loadProjectE) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.dark_matter_4,			ItemStacks.dark_matter_gear,			Mode.GEAR);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.red_matter_4,			ItemStacks.red_matter_gear,				Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.dark_matter,				ItemStacks.dark_matter_plate,			Mode.PLATE);
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.red_matter,				ItemStacks.red_matter_plate,			Mode.PLATE);
+		if (isProjectELoaded & loadProjectE) {
+			String id = "projecte";
+			add(DARK_MATTER, DARK_MATTER_NAME, id, DARK_MATTER_META);
+			add(RED_MATTER, RED_MATTER_NAME, id, RED_MATTER_META);
 		}
-		if (ModChecker.isRefinedStorageLoaded & Config.loadRefinedStorage) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.quartz_enriched_iron_4,	ItemStacks.quartz_enriched_iron_gear,	Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.quartz_enriched_iron,	ItemStacks.quartz_enriched_iron_plate,	Mode.PLATE);
+		if (isRefinedStorageLoaded & loadRefinedStorage) {
+			String id = "refinedstorage";
+			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
-		if (ItemHelper.oreNameExists("itemSilicon")) {
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.silicon_4,				ItemStacks.silicon_gear,				Mode.GEAR);
-			
-			CompactorManager.addRecipe(Config.energyCompactor,	ItemStacks.silicon,					ItemStacks.silicon_plate,				Mode.PLATE);
+		if (ItemHelper.oreNameExists(ITEM + SILICON)) {
+			add(SILICON, ITEM + SILICON);
 		}
+	}
+	private static void add(String output, String input) {
+		CompactorManager.addRecipe(energy, ItemHelper.getOre(input, 4), ItemHelper.getOre(GEAR + output), Mode.GEAR);
+		CompactorManager.addRecipe(energy, ItemHelper.getOre(input), ItemHelper.getOre(PLATE + output), Mode.PLATE);
+	}
+	private static void add(String output, String input, String id) {
+		CompactorManager.addRecipe(energy, Helper.getItemStack(id, input, 4), ItemHelper.getOre(GEAR + output), Mode.GEAR);
+		CompactorManager.addRecipe(energy, Helper.getItemStack(id, input), ItemHelper.getOre(PLATE + output), Mode.PLATE);
+	}
+	private static void add(String output, String input, String id, int meta) {
+		CompactorManager.addRecipe(energy, Helper.getItemStack(id, input, 4, meta), ItemHelper.getOre(GEAR + output), Mode.GEAR);
+		CompactorManager.addRecipe(energy, Helper.getItemStack(id, input, 1, meta), ItemHelper.getOre(PLATE + output), Mode.PLATE);
+	}
+	private static void addGaia(String output, String input) {
+		CompactorManager.addRecipe(energy, ItemHelper.getOre(input, 4), ItemHelper.getOre(output + "Gear"), Mode.GEAR);
+		CompactorManager.addRecipe(energy, ItemHelper.getOre(input), ItemHelper.getOre(output + "Plate"), Mode.PLATE);
 	}
 }
