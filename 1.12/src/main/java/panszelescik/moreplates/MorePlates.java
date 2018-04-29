@@ -39,21 +39,27 @@ public class MorePlates {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
+		logger.info("Started PreInitialization.");
 		config = new Config(event.getSuggestedConfigurationFile());
 		
 		modChecker = new ModChecker();
 		modChecker.printSuccessMessage();
 		
 		proxy.preInit(event);
+		logger.info("Completed PreInitialization.");
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event){
+		logger.info("Started Initialization.");
 		proxy.init(event);
+		logger.info("Completed Initialization.");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		logger.info("Started PostInitialization.");
 		proxy.postInit(event);
+		logger.info("Completed PostInitialization.");
 	}
 }

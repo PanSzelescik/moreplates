@@ -16,6 +16,17 @@ public class Strings {
 	public static String GOLD = "Gold";
 	public static String STEEL = "Steel";
 	
+	//Infos
+	private static String INFO_1 = "Adding ";
+	private static String INFO_2 = " recipe for: ";
+	public static String INFO_3 = " from: ";
+	
+	private static String IE_MACHINE_NAME = "Metal Press";
+	private static String TE_MACHINE_NAME = "Compactor";
+	
+	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2;
+	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2;
+	
 	//Applied Energistics
 	public static String CERTUS_QUARTZ = "CertusQuartz";
 	public static String FLUIX = "Fluix";

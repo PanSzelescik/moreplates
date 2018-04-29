@@ -10,6 +10,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.IConfigElement;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.Reference;
 
 public class Config {
@@ -70,8 +71,10 @@ public class Config {
 	
 	@SubscribeEvent
 	public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
-		if (event.getModID().equalsIgnoreCase(Reference.MODID))
+		if (event.getModID().equalsIgnoreCase(Reference.MODID)) {
+			MorePlates.logger.info("Loading config file.");
 			loadConfig();
+		}
 	}
 	
 	public void loadConfig() {
@@ -104,8 +107,10 @@ public class Config {
 		
 		durabilityHammer = cfg.getInt("durabilityHammer", CATEGORY_GENERAL, durabilityHammer, minDurabilityHammer, maxDurabilityHammer, DURABILITYHAMMER_COMMENT);
 		
-		if (cfg.hasChanged())
+		if (cfg.hasChanged()) {
+			MorePlates.logger.info("Saving config file.");
 			cfg.save();
+		}
 	}
 	
 	@SuppressWarnings("unchecked")

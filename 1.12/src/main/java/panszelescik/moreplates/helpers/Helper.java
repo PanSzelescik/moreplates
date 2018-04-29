@@ -34,6 +34,11 @@ public class Helper {
 	public static ItemStack getItemStack(String id, String name) {
 		return getItemStack(id, name, 1, 0);
 	}
+	public static String getItemName(ItemStack stack) {
+		String name = "";
+		name += stack.getDisplayName();
+		return name;
+	}
 	public static void oreGear(String ore, Item item) {
 		OreDictionary.registerOre(GEAR + ore, item);
 	}
