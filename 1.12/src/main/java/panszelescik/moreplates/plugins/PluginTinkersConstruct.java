@@ -20,16 +20,16 @@ public class PluginTinkersConstruct {
 	public static Item pig_iron_plate;
 	
 	public static void preInit() {
-		ardite_gear = new ItemArditeGear("ardite_gear", "ardite_gear");
-		ardite_plate = new ItemArditePlate("ardite_plate", "ardite_plate");
-		cobalt_gear = new ItemCobaltGear("cobalt_gear", "cobalt_gear");
-		cobalt_plate = new ItemCobaltPlate("cobalt_plate", "cobalt_plate");
-		knightslime_gear = new ItemKnightslimeGear("knightslime_gear", "knightslime_gear");
-		knightslime_plate = new ItemKnightslimePlate("knightslime_plate", "knightslime_plate");
-		manyullyn_gear = new ItemManyullynGear("manyullyn_gear", "manyullyn_gear");
-		manyullyn_plate = new ItemManyullynPlate("manyullyn_plate", "manyullyn_plate");
-		pig_iron_gear = new ItemPigIronGear("pig_iron_gear", "pig_iron_gear");
-		pig_iron_plate = new ItemPigIronPlate("pig_iron_plate", "pig_iron_plate");
+		ardite_gear = new ItemArditeGear("ardite_gear");
+		ardite_plate = new ItemArditePlate("ardite_plate");
+		cobalt_gear = new ItemCobaltGear("cobalt_gear");
+		cobalt_plate = new ItemCobaltPlate("cobalt_plate");
+		knightslime_gear = new ItemKnightslimeGear("knightslime_gear");
+		knightslime_plate = new ItemKnightslimePlate("knightslime_plate");
+		manyullyn_gear = new ItemManyullynGear("manyullyn_gear");
+		manyullyn_plate = new ItemManyullynPlate("manyullyn_plate");
+		pig_iron_gear = new ItemPigIronGear("pig_iron_gear");
+		pig_iron_plate = new ItemPigIronPlate("pig_iron_plate");
 		
 		registerItem(ardite_gear);
 		registerItem(ardite_plate);

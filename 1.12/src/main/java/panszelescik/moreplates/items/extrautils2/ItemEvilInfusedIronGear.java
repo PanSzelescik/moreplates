@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemEvilInfusedIronGear extends Item {
 
-	public ItemEvilInfusedIronGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemEvilInfusedIronGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

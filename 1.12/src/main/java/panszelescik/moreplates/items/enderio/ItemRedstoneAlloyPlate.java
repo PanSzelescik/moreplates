@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemRedstoneAlloyPlate extends Item {
 
-	public ItemRedstoneAlloyPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemRedstoneAlloyPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

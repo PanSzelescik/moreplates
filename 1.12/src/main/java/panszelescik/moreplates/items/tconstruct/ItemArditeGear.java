@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemArditeGear extends Item {
 
-	public ItemArditeGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemArditeGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

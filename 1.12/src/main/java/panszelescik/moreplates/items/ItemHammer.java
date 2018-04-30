@@ -7,9 +7,9 @@ import panszelescik.moreplates.config.Config;
 
 public class ItemHammer extends Item {
 
-	public ItemHammer(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemHammer(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 		setMaxDamage(Config.durabilityHammer);
 		maxStackSize = 1;
 		setContainerItem(this);

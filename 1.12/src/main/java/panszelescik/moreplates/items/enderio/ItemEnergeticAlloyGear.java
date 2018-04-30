@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemEnergeticAlloyGear extends Item {
 
-	public ItemEnergeticAlloyGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemEnergeticAlloyGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

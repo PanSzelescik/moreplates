@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemEnrichedGoldPlate extends Item {
 
-	public ItemEnrichedGoldPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemEnrichedGoldPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

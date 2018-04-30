@@ -18,14 +18,14 @@ public class PluginBotania {
 	public static Item terrasteel_plate;
 	
 	public static void preInit() {
-		elementium_gear = new ItemElementiumGear("elementium_gear", "elementium_gear");
-		elementium_plate = new ItemElementiumPlate("elementium_plate", "elementium_plate");
-		gaia_spirit_gear = new ItemGaiaSpiritGear("gaia_spirit_gear", "gaia_spirit_gear");
-		gaia_spirit_plate = new ItemGaiaSpiritPlate("gaia_spirit_plate", "gaia_spirit_plate");
-		manasteel_gear = new ItemManasteelGear("manasteel_gear", "manasteel_gear");
-		manasteel_plate = new ItemManasteelPlate("manasteel_plate", "manasteel_plate");
-		terrasteel_gear = new ItemTerrasteelGear("terrasteel_gear", "terrasteel_gear");
-		terrasteel_plate = new ItemTerrasteelPlate("terrasteel_plate", "terrasteel_plate");
+		elementium_gear = new ItemElementiumGear("elementium_gear");
+		elementium_plate = new ItemElementiumPlate("elementium_plate");
+		gaia_spirit_gear = new ItemGaiaSpiritGear("gaia_spirit_gear");
+		gaia_spirit_plate = new ItemGaiaSpiritPlate("gaia_spirit_plate");
+		manasteel_gear = new ItemManasteelGear("manasteel_gear");
+		manasteel_plate = new ItemManasteelPlate("manasteel_plate");
+		terrasteel_gear = new ItemTerrasteelGear("terrasteel_gear");
+		terrasteel_plate = new ItemTerrasteelPlate("terrasteel_plate");
 		
 		registerItem(elementium_gear);
 		registerItem(elementium_plate);

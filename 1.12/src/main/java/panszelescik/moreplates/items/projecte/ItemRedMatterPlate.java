@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemRedMatterPlate extends Item {
 
-	public ItemRedMatterPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemRedMatterPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

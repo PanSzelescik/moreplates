@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemConductiveIronGear extends Item {
 
-	public ItemConductiveIronGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemConductiveIronGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

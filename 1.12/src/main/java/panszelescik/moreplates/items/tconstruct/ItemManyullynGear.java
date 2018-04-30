@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemManyullynGear extends Item {
 
-	public ItemManyullynGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemManyullynGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

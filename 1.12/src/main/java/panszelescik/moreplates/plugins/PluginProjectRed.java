@@ -14,10 +14,10 @@ public class PluginProjectRed {
 	public static Item red_alloy_plate;
 	
 	public static void preInit() {
-		electrotine_alloy_gear = new ItemElectrotineAlloyGear("electrotine_alloy_gear", "electrotine_alloy_gear");
-		electrotine_alloy_plate = new ItemElectrotineAlloyPlate("electrotine_alloy_plate", "electrotine_alloy_plate");
-		red_alloy_gear = new ItemRedAlloyGear("red_alloy_gear", "red_alloy_gear");
-		red_alloy_plate = new ItemRedAlloyPlate("red_alloy_plate", "red_alloy_plate");
+		electrotine_alloy_gear = new ItemElectrotineAlloyGear("electrotine_alloy_gear");
+		electrotine_alloy_plate = new ItemElectrotineAlloyPlate("electrotine_alloy_plate");
+		red_alloy_gear = new ItemRedAlloyGear("red_alloy_gear");
+		red_alloy_plate = new ItemRedAlloyPlate("red_alloy_plate");
 		
 		registerItem(electrotine_alloy_gear);
 		registerItem(electrotine_alloy_plate);

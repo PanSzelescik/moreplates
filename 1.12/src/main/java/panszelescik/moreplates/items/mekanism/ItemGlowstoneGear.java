@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemGlowstoneGear extends Item {
 
-	public ItemGlowstoneGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemGlowstoneGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

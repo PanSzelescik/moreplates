@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemKnightslimeGear extends Item {
 
-	public ItemKnightslimeGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemKnightslimeGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

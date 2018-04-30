@@ -16,12 +16,12 @@ public class PluginMekanism {
 	public static Item refined_obsidian_plate;
 	
 	public static void preInit() {
-		glowstone_gear = new ItemGlowstoneGear("glowstone_gear", "glowstone_gear");
-		glowstone_plate = new ItemGlowstonePlate("glowstone_plate", "glowstone_plate");
-		osmium_gear = new ItemOsmiumGear("osmium_gear", "osmium_gear");
-		osmium_plate = new ItemOsmiumPlate("osmium_plate", "osmium_plate");
-		refined_obsidian_gear = new ItemRefinedObsidianGear("refined_obsidian_gear", "refined_obsidian_gear");
-		refined_obsidian_plate = new ItemRefinedObsidianPlate("refined_obsidian_plate", "refined_obsidian_plate");
+		glowstone_gear = new ItemGlowstoneGear("glowstone_gear");
+		glowstone_plate = new ItemGlowstonePlate("glowstone_plate");
+		osmium_gear = new ItemOsmiumGear("osmium_gear");
+		osmium_plate = new ItemOsmiumPlate("osmium_plate");
+		refined_obsidian_gear = new ItemRefinedObsidianGear("refined_obsidian_gear");
+		refined_obsidian_plate = new ItemRefinedObsidianPlate("refined_obsidian_plate");
 		
 		registerItem(glowstone_gear);
 		registerItem(glowstone_plate);

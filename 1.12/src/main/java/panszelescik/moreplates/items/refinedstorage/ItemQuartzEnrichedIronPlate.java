@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemQuartzEnrichedIronPlate extends Item {
 
-	public ItemQuartzEnrichedIronPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemQuartzEnrichedIronPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

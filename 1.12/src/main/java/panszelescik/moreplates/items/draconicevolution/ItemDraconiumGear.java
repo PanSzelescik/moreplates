@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemDraconiumGear extends Item {
 
-	public ItemDraconiumGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemDraconiumGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

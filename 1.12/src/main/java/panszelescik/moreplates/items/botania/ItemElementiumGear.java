@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemElementiumGear extends Item {
 
-	public ItemElementiumGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemElementiumGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

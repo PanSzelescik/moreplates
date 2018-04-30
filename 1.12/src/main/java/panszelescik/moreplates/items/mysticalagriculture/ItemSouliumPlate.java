@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemSouliumPlate extends Item {
 
-	public ItemSouliumPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemSouliumPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

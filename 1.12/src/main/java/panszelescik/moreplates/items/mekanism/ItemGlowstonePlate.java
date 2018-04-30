@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemGlowstonePlate extends Item {
 
-	public ItemGlowstonePlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemGlowstonePlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

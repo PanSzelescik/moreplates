@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemIntermediumPlate extends Item {
 
-	public ItemIntermediumPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemIntermediumPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

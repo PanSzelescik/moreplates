@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemPigIronPlate extends Item {
 
-	public ItemPigIronPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemPigIronPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

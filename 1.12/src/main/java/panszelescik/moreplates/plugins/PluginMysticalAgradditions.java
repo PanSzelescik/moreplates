@@ -12,8 +12,8 @@ public class PluginMysticalAgradditions {
 	public static Item insanium_plate;
 	
 	public static void preInit() {
-		insanium_gear = new ItemInsaniumGear("insanium_gear", "insanium_gear");
-		insanium_plate = new ItemInsaniumPlate("insanium_plate", "insanium_plate");
+		insanium_gear = new ItemInsaniumGear("insanium_gear");
+		insanium_plate = new ItemInsaniumPlate("insanium_plate");
 		
 		registerItem(insanium_gear);
 		registerItem(insanium_plate);

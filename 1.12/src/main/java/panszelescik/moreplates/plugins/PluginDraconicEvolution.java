@@ -14,10 +14,10 @@ public class PluginDraconicEvolution {
 	public static Item draconium_plate;
 	
 	public static void preInit() {
-		awakened_draconium_gear = new ItemAwakenedDraconiumGear("awakened_draconium_gear",	 "awakened_draconium_gear");
-		awakened_draconium_plate = new ItemAwakenedDraconiumPlate("awakened_draconium_plate", "awakened_draconium_plate");
-		draconium_gear = new ItemDraconiumGear("draconium_gear", "draconium_gear");
-		draconium_plate = new ItemDraconiumPlate("draconium_plate",	 "draconium_plate");
+		awakened_draconium_gear = new ItemAwakenedDraconiumGear("awakened_draconium_gear");
+		awakened_draconium_plate = new ItemAwakenedDraconiumPlate("awakened_draconium_plate");
+		draconium_gear = new ItemDraconiumGear("draconium_gear");
+		draconium_plate = new ItemDraconiumPlate("draconium_plate");
 		
 		registerItem(awakened_draconium_gear);
 		registerItem(awakened_draconium_plate);

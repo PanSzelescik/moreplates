@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemDarkMatterGear extends Item {
 
-	public ItemDarkMatterGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemDarkMatterGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

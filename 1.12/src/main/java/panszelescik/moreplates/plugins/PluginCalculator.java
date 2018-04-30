@@ -20,16 +20,16 @@ public class PluginCalculator {
 	public static Item tanzanite_plate;
 	
 	public static void preInit() {
-		amethyst_gear = new ItemAmethystGear("amethyst_gear", "amethyst_gear");
-		amethyst_plate = new ItemAmethystPlate("amethyst_plate", "amethyst_plate");
-		enriched_gold_gear = new ItemEnrichedGoldGear("enriched_gold_gear", "enriched_gold_gear");
-		enriched_gold_plate = new ItemEnrichedGoldPlate("enriched_gold_plate", "enriched_gold_plate");
-		redstone_gear =	 new ItemRedstoneGear("redstone_gear", "redstone_gear");
-		redstone_plate = new ItemRedstonePlate("redstone_plate", "redstone_plate");
-		reinforced_iron_gear = new ItemReinforcedIronGear("reinforced_iron_gear", "reinforced_iron_gear");
-		reinforced_iron_plate = new ItemReinforcedIronPlate("reinforced_iron_plate", "reinforced_iron_plate");
-		tanzanite_gear = new ItemTanzaniteGear("tanzanite_gear", "tanzanite_gear");
-		tanzanite_plate = new ItemTanzanitePlate("tanzanite_plate", "tanzanite_plate");
+		amethyst_gear = new ItemAmethystGear("amethyst_gear");
+		amethyst_plate = new ItemAmethystPlate("amethyst_plate");
+		enriched_gold_gear = new ItemEnrichedGoldGear("enriched_gold_gear");
+		enriched_gold_plate = new ItemEnrichedGoldPlate("enriched_gold_plate");
+		redstone_gear =	 new ItemRedstoneGear("redstone_gear");
+		redstone_plate = new ItemRedstonePlate("redstone_plate");
+		reinforced_iron_gear = new ItemReinforcedIronGear("reinforced_iron_gear");
+		reinforced_iron_plate = new ItemReinforcedIronPlate("reinforced_iron_plate");
+		tanzanite_gear = new ItemTanzaniteGear("tanzanite_gear");
+		tanzanite_plate = new ItemTanzanitePlate("tanzanite_plate");
 		
 		registerItem(amethyst_gear);
 		registerItem(amethyst_plate);

@@ -28,24 +28,24 @@ public class PluginEnderIO {
 	public static Item vibrant_alloy_plate;
 	
 	public static void preInit() {
-		conductive_iron_gear = new ItemConductiveIronGear("conductive_iron_gear", "conductive_iron_gear");
-		conductive_iron_plate = new ItemConductiveIronPlate("conductive_iron_plate", "conductive_iron_plate");
-		dark_steel_gear = new ItemDarkSteelGear("dark_steel_gear", "dark_steel_gear");
-		dark_steel_plate = new ItemDarkSteelPlate("dark_steel_plate", "dark_steel_plate");
-		electrical_steel_gear =	 new ItemElectricalSteelGear("electrical_steel_gear", "electrical_steel_gear");
-		electrical_steel_plate = new ItemElectricalSteelPlate("electrical_steel_plate", "electrical_steel_plate");
-		end_steel_gear = new ItemEndSteelGear("end_steel_gear", "end_steel_gear");
-		end_steel_plate = new ItemEndSteelPlate("end_steel_plate", "end_steel_plate");
-		energetic_alloy_gear = new ItemEnergeticAlloyGear("energetic_alloy_gear", "energetic_alloy_gear");
-		energetic_alloy_plate =  new ItemEnergeticAlloyPlate("energetic_alloy_plate", "energetic_alloy_plate");
-		pulsating_iron_gear = new ItemPulsatingIronGear("pulsating_iron_gear", "pulsating_iron_gear");
-		pulsating_iron_plate = new ItemPulsatingIronPlate("pulsating_iron_plate", "pulsating_iron_plate");
-		redstone_alloy_gear = new ItemRedstoneAlloyGear("redstone_alloy_gear", "redstone_alloy_gear");
-		redstone_alloy_plate = new ItemRedstoneAlloyPlate("redstone_alloy_plate", "redstone_alloy_plate");
-		soularium_gear = new ItemSoulariumGear("soularium_gear", "soularium_gear");
-		soularium_plate = new ItemSoulariumPlate("soularium_plate", "soularium_plate");
-		vibrant_alloy_gear = new ItemVibrantAlloyGear("vibrant_alloy_gear", "vibrant_alloy_gear");
-		vibrant_alloy_plate = new ItemVibrantAlloyPlate("vibrant_alloy_plate", "vibrant_alloy_plate");
+		conductive_iron_gear = new ItemConductiveIronGear("conductive_iron_gear");
+		conductive_iron_plate = new ItemConductiveIronPlate("conductive_iron_plate");
+		dark_steel_gear = new ItemDarkSteelGear("dark_steel_gear");
+		dark_steel_plate = new ItemDarkSteelPlate("dark_steel_plate");
+		electrical_steel_gear =	 new ItemElectricalSteelGear("electrical_steel_gear");
+		electrical_steel_plate = new ItemElectricalSteelPlate("electrical_steel_plate");
+		end_steel_gear = new ItemEndSteelGear("end_steel_gear");
+		end_steel_plate = new ItemEndSteelPlate("end_steel_plate");
+		energetic_alloy_gear = new ItemEnergeticAlloyGear("energetic_alloy_gear");
+		energetic_alloy_plate =  new ItemEnergeticAlloyPlate("energetic_alloy_plate");
+		pulsating_iron_gear = new ItemPulsatingIronGear("pulsating_iron_gear");
+		pulsating_iron_plate = new ItemPulsatingIronPlate("pulsating_iron_plate");
+		redstone_alloy_gear = new ItemRedstoneAlloyGear("redstone_alloy_gear");
+		redstone_alloy_plate = new ItemRedstoneAlloyPlate("redstone_alloy_plate");
+		soularium_gear = new ItemSoulariumGear("soularium_gear");
+		soularium_plate = new ItemSoulariumPlate("soularium_plate");
+		vibrant_alloy_gear = new ItemVibrantAlloyGear("vibrant_alloy_gear");
+		vibrant_alloy_plate = new ItemVibrantAlloyPlate("vibrant_alloy_plate");
 		
 		registerItem(conductive_iron_gear);
 		registerItem(conductive_iron_plate);

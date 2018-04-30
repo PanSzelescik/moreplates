@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemFluixPlate extends Item {
 
-	public ItemFluixPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemFluixPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

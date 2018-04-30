@@ -12,12 +12,12 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginImmersiveEngineering {
 	
-	private static String modid = "immersiveengineering";
+	private static String MOD_ID = "immersiveengineering";
 	
 	private static int energy = energyMetalPress;
 
-	private static ItemStack mold_gear = Helper.getItemStack(modid, "mold", 1, 1);
-	private static ItemStack mold_plate = Helper.getItemStack(modid, "mold", 1, 0);
+	private static ItemStack mold_gear = Helper.getItemStack(MOD_ID, "mold", 1, 1);
+	private static ItemStack mold_plate = Helper.getItemStack(MOD_ID, "mold", 1, 0);
 	
 	public static void postInit() {
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {	

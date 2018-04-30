@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemSiliconGear extends Item {
 
-	public ItemSiliconGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemSiliconGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

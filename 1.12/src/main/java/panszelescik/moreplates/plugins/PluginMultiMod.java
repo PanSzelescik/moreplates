@@ -15,15 +15,15 @@ public class PluginMultiMod {
 	
 	public static void preInit() {
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
-			silicon_gear = new ItemSiliconGear("silicon_gear", "silicon_gear");
-			silicon_plate = new ItemSiliconPlate("silicon_plate", "silicon_plate");
+			silicon_gear = new ItemSiliconGear("silicon_gear");
+			silicon_plate = new ItemSiliconPlate("silicon_plate");
 			
 			registerItem(silicon_gear);
 			registerItem(silicon_plate);
 		}
 		else if (isRefinedStorageLoaded & loadRefinedStorage) {
-			silicon_gear = new ItemSiliconGear("silicon_gear", "silicon_gear");
-			silicon_plate = new	ItemSiliconPlate("silicon_plate", "silicon_plate");
+			silicon_gear = new ItemSiliconGear("silicon_gear");
+			silicon_plate = new	ItemSiliconPlate("silicon_plate");
 			
 			registerRender(silicon_gear);
 			registerRender(silicon_plate);

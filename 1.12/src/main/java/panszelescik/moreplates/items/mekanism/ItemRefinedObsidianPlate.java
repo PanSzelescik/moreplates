@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemRefinedObsidianPlate extends Item {
 
-	public ItemRefinedObsidianPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemRefinedObsidianPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemElectricalSteelGear extends Item {
 
-	public ItemElectricalSteelGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemElectricalSteelGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

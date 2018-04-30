@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemRedstoneGear extends Item {
 
-	public ItemRedstoneGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemRedstoneGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

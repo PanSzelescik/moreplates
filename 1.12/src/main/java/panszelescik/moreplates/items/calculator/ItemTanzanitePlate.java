@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemTanzanitePlate extends Item {
 
-	public ItemTanzanitePlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemTanzanitePlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

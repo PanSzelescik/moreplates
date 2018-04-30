@@ -71,10 +71,8 @@ public class Config {
 	
 	@SubscribeEvent
 	public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
-		if (event.getModID().equalsIgnoreCase(Reference.MODID)) {
-			MorePlates.logger.info("Loading config file.");
+		if (event.getModID().equalsIgnoreCase(Reference.MODID))
 			loadConfig();
-		}
 	}
 	
 	public void loadConfig() {
@@ -107,10 +105,8 @@ public class Config {
 		
 		durabilityHammer = cfg.getInt("durabilityHammer", CATEGORY_GENERAL, durabilityHammer, minDurabilityHammer, maxDurabilityHammer, DURABILITYHAMMER_COMMENT);
 		
-		if (cfg.hasChanged()) {
-			MorePlates.logger.info("Saving config file.");
+		if (cfg.hasChanged())
 			cfg.save();
-		}
 	}
 	
 	@SuppressWarnings("unchecked")

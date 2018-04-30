@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemCobaltGear extends Item {
 
-	public ItemCobaltGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemCobaltGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

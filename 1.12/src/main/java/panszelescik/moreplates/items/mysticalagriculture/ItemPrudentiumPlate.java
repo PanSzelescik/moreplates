@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemPrudentiumPlate extends Item {
 
-	public ItemPrudentiumPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemPrudentiumPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

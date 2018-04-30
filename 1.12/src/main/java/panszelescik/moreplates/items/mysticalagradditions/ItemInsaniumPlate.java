@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemInsaniumPlate extends Item {
 
-	public ItemInsaniumPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemInsaniumPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

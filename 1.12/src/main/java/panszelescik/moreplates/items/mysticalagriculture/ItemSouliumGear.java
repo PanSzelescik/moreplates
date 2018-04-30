@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemSouliumGear extends Item {
 
-	public ItemSouliumGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemSouliumGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

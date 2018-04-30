@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemSupremiumGear extends Item {
 
-	public ItemSupremiumGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemSupremiumGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

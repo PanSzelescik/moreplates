@@ -22,18 +22,18 @@ public class PluginMysticalAgriculture {
 	public static Item supremium_plate;
 	
 	public static void preInit() {
-		inferium_gear  = new ItemInferiumGear("inferium_gear", "inferium_gear");
-		inferium_plate = new ItemInferiumPlate("inferium_plate", "inferium_plate");
-		intermedium_gear = new ItemIntermediumGear("intermedium_gear", "intermedium_gear");
-		intermedium_plate = new ItemIntermediumPlate("intermedium_plate", "intermedium_plate");
-		prudentium_gear = new ItemPrudentiumGear("prudentium_gear", "prudentium_gear");
-		prudentium_plate = new ItemPrudentiumPlate("prudentium_plate", "prudentium_plate");
-		soulium_gear = new ItemSouliumGear("soulium_gear", "soulium_gear");
-		soulium_plate = new ItemSouliumPlate("soulium_plate", "soulium_plate");
-		superium_gear = new ItemSuperiumGear("superium_gear", "superium_gear");
-		superium_plate = new ItemSuperiumPlate("superium_plate", "superium_plate");
-		supremium_gear = new ItemSupremiumGear("supremium_gear", "supremium_gear");
-		supremium_plate = new ItemSupremiumPlate("supremium_plate",	 "supremium_plate");
+		inferium_gear  = new ItemInferiumGear("inferium_gear");
+		inferium_plate = new ItemInferiumPlate("inferium_plate");
+		intermedium_gear = new ItemIntermediumGear("intermedium_gear");
+		intermedium_plate = new ItemIntermediumPlate("intermedium_plate");
+		prudentium_gear = new ItemPrudentiumGear("prudentium_gear");
+		prudentium_plate = new ItemPrudentiumPlate("prudentium_plate");
+		soulium_gear = new ItemSouliumGear("soulium_gear");
+		soulium_plate = new ItemSouliumPlate("soulium_plate");
+		superium_gear = new ItemSuperiumGear("superium_gear");
+		superium_plate = new ItemSuperiumPlate("superium_plate");
+		supremium_gear = new ItemSupremiumGear("supremium_gear");
+		supremium_plate = new ItemSupremiumPlate("supremium_plate");
 		
 		registerItem(inferium_gear);
 		registerItem(inferium_plate);

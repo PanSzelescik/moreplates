@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemGaiaSpiritGear extends Item {
 
-	public ItemGaiaSpiritGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemGaiaSpiritGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

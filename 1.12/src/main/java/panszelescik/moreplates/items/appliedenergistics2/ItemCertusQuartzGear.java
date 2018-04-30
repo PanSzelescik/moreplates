@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemCertusQuartzGear extends Item {
 
-	public ItemCertusQuartzGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemCertusQuartzGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

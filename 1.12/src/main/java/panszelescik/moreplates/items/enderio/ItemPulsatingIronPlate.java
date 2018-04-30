@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemPulsatingIronPlate extends Item {
 
-	public ItemPulsatingIronPlate(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemPulsatingIronPlate(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

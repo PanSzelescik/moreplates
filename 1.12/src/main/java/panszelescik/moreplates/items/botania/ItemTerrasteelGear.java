@@ -6,8 +6,8 @@ import panszelescik.moreplates.Reference;
 
 public class ItemTerrasteelGear extends Item {
 
-	public ItemTerrasteelGear(String unlocalizedName, String registryName) {
-		setUnlocalizedName(unlocalizedName);
-		setRegistryName(new ResourceLocation(Reference.MODID, registryName));
+	public ItemTerrasteelGear(String name) {
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
 }

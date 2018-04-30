@@ -462,7 +462,7 @@
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
-			"ore": "ingotElectrotine"
+			"ore": "ingotElectrotineAlloy"
 		}
 	]
 },
