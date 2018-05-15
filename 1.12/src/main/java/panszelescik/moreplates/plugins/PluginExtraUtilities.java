@@ -1,7 +1,8 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.extrautils2.*;
+import panszelescik.moreplates.items.ItemGear;
+import panszelescik.moreplates.items.ItemPlate;
 
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
@@ -16,12 +17,12 @@ public class PluginExtraUtilities {
 	public static Item evil_infused_iron_plate;
 	
 	public static void preInit() {
-		demon_gear = new ItemDemonGear("demon_gear");
-		demon_plate = new ItemDemonPlate("demon_plate");
-		enchanted_gear = new ItemEnchantedGear("enchanted_gear");
-		enchanted_plate = new ItemEnchantedPlate("enchanted_plate");
-		evil_infused_iron_gear = new ItemEvilInfusedIronGear("evil_infused_iron_gear");
-		evil_infused_iron_plate = new ItemEvilInfusedIronPlate("evil_infused_iron_plate");
+		demon_gear = new ItemGear("demon");
+		demon_plate = new ItemPlate("demon");
+		enchanted_gear = new ItemGear("enchanted");
+		enchanted_plate = new ItemPlate("enchanted");
+		evil_infused_iron_gear = new ItemGear("evil_infused_iron");
+		evil_infused_iron_plate = new ItemPlate("evil_infused_iron");
 		
 		registerItem(demon_gear);
 		registerItem(demon_plate);
@@ -29,6 +30,13 @@ public class PluginExtraUtilities {
 		registerItem(enchanted_plate);
 		registerItem(evil_infused_iron_gear);
 		registerItem(evil_infused_iron_plate);
+		
+		oreGear(DEMON, demon_gear);
+		orePlate(DEMON, demon_plate);
+		oreGear(ENCHANTED, enchanted_gear);
+		orePlate(ENCHANTED, enchanted_plate);
+		oreGear(EVIL_INFUSED_IRON, evil_infused_iron_gear);
+		orePlate(EVIL_INFUSED_IRON, evil_infused_iron_plate);
 	}
 	
 	public static void clientPreInit() {
@@ -38,14 +46,5 @@ public class PluginExtraUtilities {
 		registerRender(enchanted_plate);
 		registerRender(evil_infused_iron_gear);
 		registerRender(evil_infused_iron_plate);
-	}
-	
-	public static void init() {
-		oreGear(DEMON, demon_gear);
-		orePlate(DEMON, demon_plate);
-		oreGear(ENCHANTED, enchanted_gear);
-		orePlate(ENCHANTED, enchanted_plate);
-		oreGear(EVIL_INFUSED_IRON, evil_infused_iron_gear);
-		orePlate(EVIL_INFUSED_IRON, evil_infused_iron_plate);
 	}
 }

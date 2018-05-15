@@ -1,7 +1,8 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.mekanism.*;
+import panszelescik.moreplates.items.ItemGear;
+import panszelescik.moreplates.items.ItemPlate;
 
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
@@ -16,12 +17,12 @@ public class PluginMekanism {
 	public static Item refined_obsidian_plate;
 	
 	public static void preInit() {
-		glowstone_gear = new ItemGlowstoneGear("glowstone_gear");
-		glowstone_plate = new ItemGlowstonePlate("glowstone_plate");
-		osmium_gear = new ItemOsmiumGear("osmium_gear");
-		osmium_plate = new ItemOsmiumPlate("osmium_plate");
-		refined_obsidian_gear = new ItemRefinedObsidianGear("refined_obsidian_gear");
-		refined_obsidian_plate = new ItemRefinedObsidianPlate("refined_obsidian_plate");
+		glowstone_gear = new ItemGear("glowstone");
+		glowstone_plate = new ItemPlate("glowstone");
+		osmium_gear = new ItemGear("osmium");
+		osmium_plate = new ItemPlate("osmium");
+		refined_obsidian_gear = new ItemGear("refined_obsidian");
+		refined_obsidian_plate = new ItemPlate("refined_obsidian");
 		
 		registerItem(glowstone_gear);
 		registerItem(glowstone_plate);
@@ -29,6 +30,13 @@ public class PluginMekanism {
 		registerItem(osmium_plate);
 		registerItem(refined_obsidian_gear);
 		registerItem(refined_obsidian_plate);
+		
+		oreGear(GLOWSTONE, glowstone_gear);
+		orePlate(GLOWSTONE, glowstone_plate);
+		oreGear(OSMIUM, osmium_gear);
+		orePlate(OSMIUM, osmium_plate);
+		oreGear(REFINED_OBSIDIAN, refined_obsidian_gear);
+		orePlate(REFINED_OBSIDIAN, refined_obsidian_plate);
 	}
 	
 	public static void clientPreInit() {
@@ -39,14 +47,4 @@ public class PluginMekanism {
 		registerRender(refined_obsidian_gear);
 		registerRender(refined_obsidian_plate);
 	}
-	
-	public static void init() {
-		oreGear(GLOWSTONE, glowstone_gear);
-		orePlate(GLOWSTONE, glowstone_plate);
-		oreGear(OSMIUM, osmium_gear);
-		orePlate(OSMIUM, osmium_plate);
-		oreGear(REFINED_OBSIDIAN, refined_obsidian_gear);
-		orePlate(REFINED_OBSIDIAN, refined_obsidian_plate);
-	}
-	
 }

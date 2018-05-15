@@ -14,11 +14,6 @@ public class CommonProxy {
 		PluginLoader.preInit();
 	}
 	
-	public void init(FMLInitializationEvent event) {
-		Items.init();
-		PluginLoader.init();
-	}
-	
 	public void postInit(FMLPostInitializationEvent event) {
 		PluginLoader.postInit();
 	}

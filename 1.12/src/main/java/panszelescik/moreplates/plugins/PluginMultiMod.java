@@ -1,7 +1,8 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.multimod.*;
+import panszelescik.moreplates.items.ItemGear;
+import panszelescik.moreplates.items.ItemPlate;
 
 import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
@@ -15,18 +16,24 @@ public class PluginMultiMod {
 	
 	public static void preInit() {
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
-			silicon_gear = new ItemSiliconGear("silicon_gear");
-			silicon_plate = new ItemSiliconPlate("silicon_plate");
+			silicon_gear = new ItemGear("silicon");
+			silicon_plate = new ItemPlate("silicon");
 			
 			registerItem(silicon_gear);
 			registerItem(silicon_plate);
+			
+			oreGear(SILICON, silicon_gear);
+			orePlate(SILICON, silicon_plate);
 		}
 		else if (isRefinedStorageLoaded & loadRefinedStorage) {
-			silicon_gear = new ItemSiliconGear("silicon_gear");
-			silicon_plate = new	ItemSiliconPlate("silicon_plate");
+			silicon_gear = new ItemGear("silicon");
+			silicon_plate = new ItemPlate("silicon");
 			
 			registerRender(silicon_gear);
 			registerRender(silicon_plate);
+			
+			oreGear(SILICON, silicon_gear);
+			orePlate(SILICON, silicon_plate);
 		}
 	}
 	
@@ -38,17 +45,6 @@ public class PluginMultiMod {
 		else if (isRefinedStorageLoaded & loadRefinedStorage) {
 			registerRender(silicon_gear);
 			registerRender(silicon_plate);
-		}
-	}
-	
-	public static void init() {
-		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
-			oreGear(SILICON, silicon_gear);
-			orePlate(SILICON, silicon_plate);
-		}
-		else if (isRefinedStorageLoaded & loadRefinedStorage) {
-			oreGear(SILICON, silicon_gear);
-			orePlate(SILICON, silicon_plate);
 		}
 	}
 }

@@ -1,7 +1,8 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.mysticalagriculture.*;
+import panszelescik.moreplates.items.ItemGear;
+import panszelescik.moreplates.items.ItemPlate;
 
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
@@ -22,18 +23,18 @@ public class PluginMysticalAgriculture {
 	public static Item supremium_plate;
 	
 	public static void preInit() {
-		inferium_gear  = new ItemInferiumGear("inferium_gear");
-		inferium_plate = new ItemInferiumPlate("inferium_plate");
-		intermedium_gear = new ItemIntermediumGear("intermedium_gear");
-		intermedium_plate = new ItemIntermediumPlate("intermedium_plate");
-		prudentium_gear = new ItemPrudentiumGear("prudentium_gear");
-		prudentium_plate = new ItemPrudentiumPlate("prudentium_plate");
-		soulium_gear = new ItemSouliumGear("soulium_gear");
-		soulium_plate = new ItemSouliumPlate("soulium_plate");
-		superium_gear = new ItemSuperiumGear("superium_gear");
-		superium_plate = new ItemSuperiumPlate("superium_plate");
-		supremium_gear = new ItemSupremiumGear("supremium_gear");
-		supremium_plate = new ItemSupremiumPlate("supremium_plate");
+		inferium_gear  = new ItemGear("inferium");
+		inferium_plate = new ItemPlate("inferium");
+		intermedium_gear = new ItemGear("intermedium");
+		intermedium_plate = new ItemPlate("intermedium");
+		prudentium_gear = new ItemGear("prudentium");
+		prudentium_plate = new ItemPlate("prudentium");
+		soulium_gear = new ItemGear("soulium");
+		soulium_plate = new ItemPlate("soulium");
+		superium_gear = new ItemGear("superium");
+		superium_plate = new ItemPlate("superium");
+		supremium_gear = new ItemGear("supremium");
+		supremium_plate = new ItemPlate("supremium");
 		
 		registerItem(inferium_gear);
 		registerItem(inferium_plate);
@@ -47,6 +48,19 @@ public class PluginMysticalAgriculture {
 		registerItem(superium_plate);
 		registerItem(supremium_gear);
 		registerItem(supremium_plate);
+		
+		oreGear(INFERIUM, inferium_gear);
+		orePlate(INFERIUM, inferium_plate);
+		oreGear(INTERMEDIUM, intermedium_gear);
+		orePlate(INTERMEDIUM, intermedium_plate);
+		oreGear(PRUDENTIUM, prudentium_gear);
+		orePlate(PRUDENTIUM, prudentium_plate);
+		oreGear(SOULIUM, soulium_gear);
+		orePlate(SOULIUM, soulium_plate);
+		oreGear(SUPERIUM, superium_gear);
+		orePlate(SUPERIUM, superium_plate);
+		oreGear(SUPREMIUM, supremium_gear);
+		orePlate(SUPREMIUM, supremium_plate);
 	}
 	
 	public static void clientPreInit() {
@@ -62,20 +76,5 @@ public class PluginMysticalAgriculture {
 		registerRender(superium_plate);
 		registerRender(supremium_gear);
 		registerRender(supremium_plate);
-	}
-	
-	public static void init() {
-		oreGear(INFERIUM, inferium_gear);
-		orePlate(INFERIUM, inferium_plate);
-		oreGear(INTERMEDIUM, intermedium_gear);
-		orePlate(INTERMEDIUM, intermedium_plate);
-		oreGear(PRUDENTIUM, prudentium_gear);
-		orePlate(PRUDENTIUM, prudentium_plate);
-		oreGear(SOULIUM, soulium_gear);
-		orePlate(SOULIUM, soulium_plate);
-		oreGear(SUPERIUM, superium_gear);
-		orePlate(SUPERIUM, superium_plate);
-		oreGear(SUPREMIUM, supremium_gear);
-		orePlate(SUPREMIUM, supremium_plate);
 	}
 }

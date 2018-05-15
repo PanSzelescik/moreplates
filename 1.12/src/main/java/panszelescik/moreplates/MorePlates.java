@@ -50,13 +50,6 @@ public class MorePlates {
 	}
 	
 	@EventHandler
-	public void init(FMLInitializationEvent event){
-		logger.info("Started Initialization.");
-		proxy.init(event);
-		logger.info("Completed Initialization.");
-	}
-	
-	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Started PostInitialization.");
 		proxy.postInit(event);

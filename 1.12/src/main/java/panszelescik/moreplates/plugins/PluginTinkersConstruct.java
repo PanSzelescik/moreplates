@@ -1,7 +1,8 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.tconstruct.*;
+import panszelescik.moreplates.items.ItemGear;
+import panszelescik.moreplates.items.ItemPlate;
 
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
@@ -20,16 +21,16 @@ public class PluginTinkersConstruct {
 	public static Item pig_iron_plate;
 	
 	public static void preInit() {
-		ardite_gear = new ItemArditeGear("ardite_gear");
-		ardite_plate = new ItemArditePlate("ardite_plate");
-		cobalt_gear = new ItemCobaltGear("cobalt_gear");
-		cobalt_plate = new ItemCobaltPlate("cobalt_plate");
-		knightslime_gear = new ItemKnightslimeGear("knightslime_gear");
-		knightslime_plate = new ItemKnightslimePlate("knightslime_plate");
-		manyullyn_gear = new ItemManyullynGear("manyullyn_gear");
-		manyullyn_plate = new ItemManyullynPlate("manyullyn_plate");
-		pig_iron_gear = new ItemPigIronGear("pig_iron_gear");
-		pig_iron_plate = new ItemPigIronPlate("pig_iron_plate");
+		ardite_gear = new ItemGear("ardite");
+		ardite_plate = new ItemPlate("ardite");
+		cobalt_gear = new ItemGear("cobalt");
+		cobalt_plate = new ItemPlate("cobalt");
+		knightslime_gear = new ItemGear("knightslime");
+		knightslime_plate = new ItemPlate("knightslime");
+		manyullyn_gear = new ItemGear("manyullyn");
+		manyullyn_plate = new ItemPlate("manyullyn");
+		pig_iron_gear = new ItemGear("pig_iron");
+		pig_iron_plate = new ItemPlate("pig_iron");
 		
 		registerItem(ardite_gear);
 		registerItem(ardite_plate);
@@ -41,6 +42,17 @@ public class PluginTinkersConstruct {
 		registerItem(manyullyn_plate);
 		registerItem(pig_iron_gear);
 		registerItem(pig_iron_plate);
+		
+		oreGear(ARDITE, ardite_gear);
+		orePlate(ARDITE, ardite_plate);
+		oreGear(COBALT, cobalt_gear);
+		orePlate(COBALT, cobalt_plate);
+		oreGear(KNIGHTSLIME, knightslime_gear);
+		orePlate(KNIGHTSLIME, knightslime_plate);
+		oreGear(MANYULLYN, manyullyn_gear);
+		orePlate(MANYULLYN, manyullyn_plate);
+		oreGear(PIG_IRON, pig_iron_gear);
+		orePlate(PIG_IRON, pig_iron_plate);
 	}
 	
 	public static void clientPreInit() {
@@ -54,18 +66,5 @@ public class PluginTinkersConstruct {
 		registerRender(manyullyn_plate);
 		registerRender(pig_iron_gear);
 		registerRender(pig_iron_plate);
-	}
-	
-	public static void init() {
-		oreGear(ARDITE, ardite_gear);
-		orePlate(ARDITE, ardite_plate);
-		oreGear(COBALT, cobalt_gear);
-		orePlate(COBALT, cobalt_plate);
-		oreGear(KNIGHTSLIME, knightslime_gear);
-		orePlate(KNIGHTSLIME, knightslime_plate);
-		oreGear(MANYULLYN, manyullyn_gear);
-		orePlate(MANYULLYN, manyullyn_plate);
-		oreGear(PIG_IRON, pig_iron_gear);
-		orePlate(PIG_IRON, pig_iron_plate);
 	}
 }

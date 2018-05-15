@@ -18,8 +18,4 @@ public class Items {
 	public static void clientPreInit() {
 		registerRender(hammer);
 	}
-	
-	public static void init() {
-		
-	}
 }
