@@ -14,5 +14,4 @@ public class ItemPlate extends Item {
 		setUnlocalizedName(name);
 		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
-	
 }

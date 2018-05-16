@@ -17,10 +17,12 @@ public class Helper {
 	public static void registerItem(Item item) {
 		item.setCreativeTab(MorePlates.items);
 		ForgeRegistries.ITEMS.register(item);
+		MorePlates.logger.debug(INFO_REG_ITEM + getItemName(getItemStack(item)));
 	}
 	
 	public static void registerRender(Item item) {
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
+		MorePlates.logger.debug(INFO_REG_RENDER + getItemName(getItemStack(item)));
 	}
 	
 	//@author King Lemming
@@ -39,6 +41,10 @@ public class Helper {
 		return getItemStack(id, name, 1, 0);
 	}
 	
+	public static ItemStack getItemStack(Item item) {
+		return item != null ? new ItemStack(item, 1, 0) : ItemStack.EMPTY;
+	}
+	
 	//@author King Lemming
 	public static String getItemName(ItemStack stack) {
 		String name = "";
@@ -47,18 +53,26 @@ public class Helper {
 	}
 	
 	public static void oreGear(String ore, Item item) {
-		OreDictionary.registerOre(GEAR + ore, item);
+		ore = GEAR + ore;
+		OreDictionary.registerOre(ore, item);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemName(getItemStack(item)));
 	}
 	
 	public static void orePlate(String ore, Item item) {
-		OreDictionary.registerOre(PLATE + ore, item);
+		ore = PLATE + ore;
+		OreDictionary.registerOre(ore, item);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemName(getItemStack(item)));
 	}
 	
 	public static void oreGearGaia(String ore, Item item) {
-		OreDictionary.registerOre(ore + "Gear", item);
+		ore += "Gear";
+		OreDictionary.registerOre(ore, item);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemName(getItemStack(item)));
 	}
 	
 	public static void orePlateGaia(String ore, Item item) {
-		OreDictionary.registerOre(ore + "Plate", item);
+		ore += "Plate";
+		OreDictionary.registerOre(ore, item);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemName(getItemStack(item)));
 	}
 }

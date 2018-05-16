@@ -2,6 +2,8 @@ package panszelescik.moreplates;
 
 import net.minecraftforge.fml.common.Loader;
 
+import static panszelescik.moreplates.helpers.Strings.*;
+
 public class ModChecker {
 	
 	public static boolean isAppliedEnergisticsLoaded;
@@ -24,56 +26,56 @@ public class ModChecker {
 	private static String INFO = " has been detected.";
 	
 	public ModChecker() {
-		isAppliedEnergisticsLoaded = Loader.isModLoaded("appliedenergistics2");
-		isBotaniaLoaded = Loader.isModLoaded("botania");
-		isCalculatorLoaded = Loader.isModLoaded("calculator");
-		isCoFHCoreLoaded =  Loader.isModLoaded("cofhcore");
-		isDraconicEvolutionLoaded = Loader.isModLoaded("draconicevolution");
-		isEnderIOLoaded = Loader.isModLoaded("enderio");
-		isExtraUtilitiesLoaded = Loader.isModLoaded("extrautils2");
-		isImmersiveEngineeringLoaded = Loader.isModLoaded("immersiveengineering");
-		isMekanismLoaded = Loader.isModLoaded("mekanism");
-		isMysticalAgradditionsLoaded = Loader.isModLoaded("mysticalagradditions");
-		isMysticalAgricultureLoaded = Loader.isModLoaded("mysticalagriculture");
-		isProjectELoaded = Loader.isModLoaded("projecte");
-		isProjectRedLoaded = Loader.isModLoaded("projectred-core");
-		isRefinedStorageLoaded = Loader.isModLoaded("refinedstorage");
-		isThermalExpansionLoaded = Loader.isModLoaded("thermalexpansion");
-		isTinkersConstructLoaded = Loader.isModLoaded("tconstruct");
+		isAppliedEnergisticsLoaded = Loader.isModLoaded(AE2_MODID);
+		isBotaniaLoaded = Loader.isModLoaded(BOTANIA_MODID);
+		isCalculatorLoaded = Loader.isModLoaded(CALCULATOR_MODID);
+		isCoFHCoreLoaded =  Loader.isModLoaded(COFH_CORE_MODID);
+		isDraconicEvolutionLoaded = Loader.isModLoaded(DRACONIC_MODID);
+		isEnderIOLoaded = Loader.isModLoaded(ENDER_IO_MODID);
+		isExtraUtilitiesLoaded = Loader.isModLoaded(EXTRA_UTILITIES_MODID);
+		isImmersiveEngineeringLoaded = Loader.isModLoaded(IMMERSIVE_MODID);
+		isMekanismLoaded = Loader.isModLoaded(MEKANISM_MODID);
+		isMysticalAgradditionsLoaded = Loader.isModLoaded(M_AGRADDITIONS_MODID);
+		isMysticalAgricultureLoaded = Loader.isModLoaded(M_AGRICULTURE_MODID);
+		isProjectELoaded = Loader.isModLoaded(PROJECTE_MODID);
+		isProjectRedLoaded = Loader.isModLoaded(PROJECT_RED_MODID);
+		isRefinedStorageLoaded = Loader.isModLoaded(REFINED_STORAGE_MODID);
+		isThermalExpansionLoaded = Loader.isModLoaded(THERMAL_MODID);
+		isTinkersConstructLoaded = Loader.isModLoaded(TINKERS_MODID);
 	}
 	
 	public static void printSuccessMessage() {
 		if (isAppliedEnergisticsLoaded)
-			MorePlates.logger.info("Applied Energistics 2" + INFO);
+			MorePlates.logger.info(AE2_MODNAME + INFO);
 		if (isBotaniaLoaded)
-			MorePlates.logger.info("Botania" + INFO);
+			MorePlates.logger.info(BOTANIA_MODNAME + INFO);
 		if (isCalculatorLoaded)
-			MorePlates.logger.info("Calculator" + INFO);
+			MorePlates.logger.info(CALCULATOR_MODNAME + INFO);
 		if (isCoFHCoreLoaded)
-			MorePlates.logger.info("CoFH Core" + INFO);
+			MorePlates.logger.info(COFH_CORE_MODNAME + INFO);
 		if (isDraconicEvolutionLoaded)
-			MorePlates.logger.info("Draconic Evolution" + INFO);
+			MorePlates.logger.info(DRACONIC_MODNAME + INFO);
 		if (isEnderIOLoaded)
-			MorePlates.logger.info("Ender IO" + INFO);
+			MorePlates.logger.info(ENDER_IO_MODNAME + INFO);
 		if (isExtraUtilitiesLoaded)
-			MorePlates.logger.info("Extra Utilities 2" + INFO);
+			MorePlates.logger.info(EXTRA_UTILITIES_MODNAME + INFO);
 		if (isImmersiveEngineeringLoaded)
-			MorePlates.logger.info("Immersive Engineering" + INFO);
+			MorePlates.logger.info(IMMERSIVE_MODNAME + INFO);
 		if (isMekanismLoaded)
-			MorePlates.logger.info("Mekanism" + INFO);
+			MorePlates.logger.info(MEKANISM_MODNAME + INFO);
 		if (isMysticalAgradditionsLoaded)
-			MorePlates.logger.info("Mystical Agradditions" + INFO);
+			MorePlates.logger.info(M_AGRADDITIONS_MODNAME + INFO);
 		if (isMysticalAgricultureLoaded)
-			MorePlates.logger.info("Mystical Agriculture" + INFO);
+			MorePlates.logger.info(M_AGRICULTURE_MODNAME + INFO);
 		if (isProjectELoaded)
-			MorePlates.logger.info("ProjectE" + INFO);
+			MorePlates.logger.info(PROJECTE_MODNAME + INFO);
 		if (isProjectRedLoaded)
-			MorePlates.logger.info("Project Red" + INFO);
+			MorePlates.logger.info(PROJECT_RED_MODNAME + INFO);
 		if (isRefinedStorageLoaded)
-			MorePlates.logger.info("Refined Storage" + INFO);
+			MorePlates.logger.info(REFINED_STORAGE_MODNAME + INFO);
 		if (isThermalExpansionLoaded)
-			MorePlates.logger.info("Thermal Expansion" + INFO);
+			MorePlates.logger.info(THERMAL_MODNAME + INFO);
 		if (isTinkersConstructLoaded)
-			MorePlates.logger.info("Tinkers' Construct" + INFO);
+			MorePlates.logger.info(TINKERS_MODNAME + INFO);
 	}
 }

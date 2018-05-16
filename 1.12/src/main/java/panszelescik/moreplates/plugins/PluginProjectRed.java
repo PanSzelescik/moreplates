@@ -26,7 +26,7 @@ public class PluginProjectRed {
 		registerItem(red_alloy_plate);
 		
 		oreGear(ELECTROTINE, electrotine_alloy_gear);
-		orePlate(ELECTROTINE, electrotine_alloy_gear);
+		orePlate(ELECTROTINE, electrotine_alloy_plate);
 		oreGear(RED_ALLOY, red_alloy_gear);
 		orePlate(RED_ALLOY, red_alloy_plate);
 	}

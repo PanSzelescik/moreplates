@@ -12,16 +12,14 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginImmersiveEngineering {
 	
-	private static String MOD_ID = "immersiveengineering";
-	
 	private static int energy = energyMetalPress;
 
-	private static ItemStack mold_gear = Helper.getItemStack(MOD_ID, "mold", 1, 1);
-	private static ItemStack mold_plate = Helper.getItemStack(MOD_ID, "mold", 1, 0);
+	private static ItemStack mold_gear = Helper.getItemStack(IMMERSIVE_MODID, "mold", 1, 1);
+	private static ItemStack mold_plate = Helper.getItemStack(IMMERSIVE_MODID, "mold", 1, 0);
 	
 	public static void postInit() {
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {	
-			String id = "appliedenergistics2";
+			String id = AE2_MODID;
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
 			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
 			add(FLUIX, CRYSTAL + FLUIX);
@@ -34,7 +32,7 @@ public class PluginImmersiveEngineering {
 			add(TERRASTEEL, INGOT + TERRASTEEL);
 		}
 		if (isCalculatorLoaded & loadCalculator) {
-			String id = "calculator";
+			String id = CALCULATOR_MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
 			add(REDSTONE, REDSTONE_NAME, id);
@@ -57,7 +55,7 @@ public class PluginImmersiveEngineering {
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 		}
 		if (isExtraUtilitiesLoaded & loadExtraUtilities) {
-			String id = "extrautils2";
+			String id = EXTRA_UTILITIES_MODID;
 			add(DEMON, EXU2_NAME, id, DEMON_META);
 			add(ENCHANTED, EXU2_NAME, id, ENCHANTED_META);
 			add(EVIL_INFUSED_IRON, EXU2_NAME, id, EVIL_INFUSED_IRON_META);
@@ -79,7 +77,7 @@ public class PluginImmersiveEngineering {
 			add(SUPREMIUM, INGOT + SUPREMIUM);
 		}
 		if (isProjectELoaded & loadProjectE) {
-			String id = "projecte";
+			String id = PROJECTE_MODID;
 			add(DARK_MATTER, DARK_MATTER_NAME, id, DARK_MATTER_META);
 			add(RED_MATTER, RED_MATTER_NAME, id, RED_MATTER_META);
 		}
@@ -88,7 +86,7 @@ public class PluginImmersiveEngineering {
 			add(RED_ALLOY, INGOT + RED_ALLOY);
 		}
 		if (isRefinedStorageLoaded & loadRefinedStorage) {
-			String id = "refinedstorage";
+			String id = REFINED_STORAGE_MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
 		if (isTinkersConstructLoaded & loadTinkersConstruct) {
@@ -104,27 +102,27 @@ public class PluginImmersiveEngineering {
 	}
 	private static void add(String output, String input) {
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(GEAR + output), ItemHelper.getOre(input, 4), mold_gear, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)) + " x4");
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(PLATE + output), input, mold_plate, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
 	}
 	private static void add(String output, String input, String id) {
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(GEAR + output), Helper.getItemStack(id, input, 4), mold_gear, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input)) + " x4");
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(PLATE + output), Helper.getItemStack(id, input), mold_plate, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input)));
 	}
 	private static void add(String output, String input, String id, int meta) {
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(GEAR + output), Helper.getItemStack(id, input, 4, meta), mold_gear, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input, 1, meta)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input, 1, meta)) + " x4");
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(PLATE + output), Helper.getItemStack(id, input, 1, meta), mold_plate, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input, 1, meta)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input, 1, meta)));
 	}
 	//Special for Gaia Spirit Gear and Plate
 	private static void addGaia(String output, String input) {
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(output + "Gear"), ItemHelper.getOre(input, 4), mold_gear, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(output + "Gear")) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(output + "Gear")) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)) + " x4");
 		MetalPressRecipe.addRecipe(ItemHelper.getOre(output + "Plate"), input, mold_plate, energy);
-		MorePlates.logger.info(INFO_IE + Helper.getItemName(ItemHelper.getOre(output + "Plate")) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
+		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(output + "Plate")) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
 	}
 }

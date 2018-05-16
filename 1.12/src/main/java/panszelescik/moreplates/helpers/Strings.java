@@ -18,14 +18,23 @@ public class Strings {
 	
 	//Infos
 	private static String INFO_1 = "Adding ";
-	private static String INFO_2 = " recipe for: ";
+	private static String INFO_2 = " recipe";
 	public static String INFO_3 = " from: ";
+	private static String INFO_4 = "Registering ";
+	private static String INFO_5 = "item: ";
+	private static String INFO_6 = "render for: ";
+	private static String INFO_7 = "Ore Dictionary: ";
+	public static String INFO_8 = " for: ";
+	public static String INFO_9 = " to: ";
 	
 	private static String IE_MACHINE_NAME = "Metal Press";
 	private static String TE_MACHINE_NAME = "Compactor";
 	
-	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2;
-	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2;
+	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2 + INFO_8;
+	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2 + INFO_8;
+	public static String INFO_REG_ITEM = INFO_4 + INFO_5;
+	public static String INFO_REG_RENDER = INFO_4 + INFO_6;
+	public static String INFO_ORE = INFO_1 + INFO_7;
 	
 	//Applied Energistics
 	public static String CERTUS_QUARTZ = "CertusQuartz";
@@ -121,4 +130,53 @@ public class Strings {
 	
 	//Silicon
 	public static String SILICON = "Silicon";
+	
+	//Mods
+	public static String AE2_MODID = "appliedenergistics2";
+	public static String AE2_MODNAME = "Applied Energistics 2";
+	
+	public static String BOTANIA_MODID = "botania";
+	public static String BOTANIA_MODNAME = "Botania";
+	
+	public static String CALCULATOR_MODID = "calculator";
+	public static String CALCULATOR_MODNAME = "Calculator";
+	
+	public static String COFH_CORE_MODID = "cofhcore";
+	public static String COFH_CORE_MODNAME = "CoFH Core";
+	
+	public static String DRACONIC_MODID = "draconicevolution";
+	public static String DRACONIC_MODNAME = "Draconic Evolution";
+	
+	public static String ENDER_IO_MODID = "enderio";
+	public static String ENDER_IO_MODNAME = "Ender IO";
+	
+	public static String EXTRA_UTILITIES_MODID = "extrautils2";
+	public static String EXTRA_UTILITIES_MODNAME = "Extra Utilities 2";
+	
+	public static String IMMERSIVE_MODID = "immersiveengineering";
+	public static String IMMERSIVE_MODNAME = "Immersive Engineering";
+	
+	public static String MEKANISM_MODID = "mekanism";
+	public static String MEKANISM_MODNAME = "Mekanism";
+	
+	public static String M_AGRADDITIONS_MODID = "mysticalagradditions";
+	public static String M_AGRADDITIONS_MODNAME = "Mystical Agradditions";
+	
+	public static String M_AGRICULTURE_MODID = "mysticalagriculture";
+	public static String M_AGRICULTURE_MODNAME = "Mystical Agriculture";
+	
+	public static String PROJECTE_MODID = "projecte";
+	public static String PROJECTE_MODNAME = "ProjectE";
+	
+	public static String PROJECT_RED_MODID = "projectred-core";
+	public static String PROJECT_RED_MODNAME = "Project Red";
+	
+	public static String REFINED_STORAGE_MODID = "refinedstorage";
+	public static String REFINED_STORAGE_MODNAME = "Refined Storage";
+	
+	public static String THERMAL_MODID = "thermalexpansion";
+	public static String THERMAL_MODNAME = "Thermal Expansion";
+	
+	public static String TINKERS_MODID = "tconstruct";
+	public static String TINKERS_MODNAME = "Tinkers' Construct";
 }

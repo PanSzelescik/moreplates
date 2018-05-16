@@ -14,5 +14,4 @@ public class ItemGear extends Item {
 		setUnlocalizedName(name);
 		setRegistryName(new ResourceLocation(Reference.MODID, name));
 	}
-	
 }
