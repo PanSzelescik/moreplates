@@ -25,10 +25,10 @@ public class PluginImmersiveEngineering {
 			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
 		if (isBotaniaLoaded & loadBotania) {
-			add(ELEMENTIUM, INGOT + ELEMENTIUM);
+			//add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
-			add(MANASTEEL, INGOT + MANASTEEL);
-			add(TERRASTEEL, INGOT + TERRASTEEL);
+			//add(MANASTEEL, INGOT + MANASTEEL);
+			//add(TERRASTEEL, INGOT + TERRASTEEL);
 		}
 		if (isCalculatorLoaded & loadCalculator) {
 			String id = CALCULATOR_MODID;
@@ -38,11 +38,11 @@ public class PluginImmersiveEngineering {
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 		}
-		if (isDraconicEvolutionLoaded & loadDraconicEvolution) {
+		/*if (isDraconicEvolutionLoaded & loadDraconicEvolution) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
-		}
-		if (isEnderIOLoaded & loadEnderIO) {
+		}*/
+		/*if (isEnderIOLoaded & loadEnderIO) {
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(DARK_STEEL, INGOT + DARK_STEEL);
 			add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
@@ -52,30 +52,30 @@ public class PluginImmersiveEngineering {
 			add(REDSTONE_ALLOY, INGOT + REDSTONE_ALLOY);
 			add(SOULARIUM, INGOT + SOULARIUM);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
-		}
+		}*/
 		if (isExtraUtilitiesLoaded & loadExtraUtilities) {
 			String id = EXTRA_UTILITIES_MODID;
 			add(DEMON, EXU2_NAME, id, DEMON_META);
 			add(ENCHANTED, EXU2_NAME, id, ENCHANTED_META);
 			add(EVIL_INFUSED_IRON, EXU2_NAME, id, EVIL_INFUSED_IRON_META);
 		}
-		if (isMekanismLoaded & loadMekanism) {
+		/*if (isMekanismLoaded & loadMekanism) {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
-		}
-		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions) {
+		}*/
+		/*if (isMysticalAgradditionsLoaded & loadMysticalAgradditions) {
 			add(INSANIUM, INGOT + INSANIUM);
-		}
-		if (isMysticalAgricultureLoaded & loadMysticalAgriculture) {
+		}*/
+		/*if (isMysticalAgricultureLoaded & loadMysticalAgriculture) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
 			add(SOULIUM, INGOT + SOULIUM);
 			add(SUPERIUM, INGOT + SUPERIUM);
 			add(SUPREMIUM, INGOT + SUPREMIUM);
-		}
-		if (isPlusTiCLoaded & loadPlusTiC) {
+		}*/
+		/*if (isPlusTiCLoaded & loadPlusTiC) {
 			add(ALUMITE, INGOT + ALUMITE);
 			if (isBotaniaLoaded)
 				add(MIRION, INGOT + MIRION);
@@ -83,7 +83,7 @@ public class PluginImmersiveEngineering {
 				add(OSGLOGLAS, INGOT + OSGLOGLAS);
 			if (isMekanismLoaded & isThermalExpansionLoaded)
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
-		}
+		}*/
 		if (isPneumaticCraftLoaded & loadPneumaticCraft) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 		}
@@ -104,18 +104,18 @@ public class PluginImmersiveEngineering {
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 		}
-		if (isTinkersConstructLoaded & loadTinkersConstruct) {
+		/*if (isTinkersConstructLoaded & loadTinkersConstruct) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
 			add(MANYULLYN, INGOT + MANYULLYN);
 			add(PIG_IRON, INGOT + PIG_IRON);
-		}
-		if (isTwilightForestLoaded & loadTwilightForest) {
+		}*/
+		/*if (isTwilightForestLoaded & loadTwilightForest) {
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
-		}
+		}*/
 		if (oreNameExists(ITEM + SILICON)) {
 			add(SILICON, ITEM + SILICON);
 		}

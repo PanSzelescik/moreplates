@@ -59,7 +59,7 @@ public class Config {
 	private static final String DURABILITYHAMMER_COMMENT = "Durability of Hammer.";
 	private static final String ENERGYCOMPACTOR_COMMENT = "Energy used to make Gears and Plates in Compactor from Thermal Expansion when support is loaded.";
 	private static final String ENERGYMETALPRESS_COMMENT = "Energy used to make Gears and Plates in Metal Press from Immersive Engineering when support is loaded.";
-	private static final String LOADIMMERSIVEENGINEERING_COMMENT = "Enable this to add recipes for all Gears and Plates to Metal Press (requires CoFH Core!).";
+	private static final String LOADIMMERSIVEENGINEERING_COMMENT = "Enable this to add recipes for some Gears and Plates to Metal Press (not all, because Immersive Engineering adds).";
 	private static final String LOADPLUGIN_COMMENT = "Enable this to load this plugin when mod is loaded.";
 	private static final String LOADTHERMALEXPANSION_COMMENT = "Enable this to add recipes for some Gears and Plates to Compactor (not all, because Thermal Expansion adds).";
 	
