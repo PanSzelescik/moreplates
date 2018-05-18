@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:alumite_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:alumite_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#ALUMITE"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

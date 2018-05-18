@@ -102,6 +102,15 @@ public class Strings {
 	public static String SUPERIUM = "Superium";
 	public static String SUPREMIUM = "Supremium";
 	
+	//PlusTiC
+	public static String ALUMITE = "Alumite";
+	public static String MIRION = "Mirion";
+	public static String OSGLOGLAS = "Osgloglas";
+	public static String OSMIRIDIUM = "Osmiridium";
+	
+	//PneumaticCraft
+	public static String COMPRESSED_IRON = IRON + "Compressed";
+	
 	//ProjectE
 	public static String DARK_MATTER = "DarkMatter";
 	public static String RED_MATTER = "RedMatter";
@@ -121,12 +130,23 @@ public class Strings {
 	
 	public static String QUARTZ_ENRICHED_IRON_NAME = "quartz_enriched_iron";
 	
+	//Thaumcraft
+	public static String AMBER = "Amber";
+	public static String QUICKSILVER = "Quicksilver";
+	
+	public static String QUICKSILVER_NAME = "quicksilver";
+	
 	//Tinkers' Construct
 	public static String ARDITE = "Ardite";
 	public static String COBALT = "Cobalt";
 	public static String KNIGHTSLIME = "Knightslime";
 	public static String MANYULLYN = "Manyullyn";
 	public static String PIG_IRON = "Pigiron";
+	
+	//Twilight Forest
+	public static String FIERY = "Fiery";
+	public static String IRONWOOD = IRON + "wood";
+	public static String KNIGHTMETAL = "Knightmetal";
 	
 	//Silicon
 	public static String SILICON = "Silicon";
@@ -140,9 +160,6 @@ public class Strings {
 	
 	public static String CALCULATOR_MODID = "calculator";
 	public static String CALCULATOR_MODNAME = "Calculator";
-	
-	public static String COFH_CORE_MODID = "cofhcore";
-	public static String COFH_CORE_MODNAME = "CoFH Core";
 	
 	public static String DRACONIC_MODID = "draconicevolution";
 	public static String DRACONIC_MODNAME = "Draconic Evolution";
@@ -165,6 +182,12 @@ public class Strings {
 	public static String M_AGRICULTURE_MODID = "mysticalagriculture";
 	public static String M_AGRICULTURE_MODNAME = "Mystical Agriculture";
 	
+	public static String PLUSTIC_MODID = "plustic";
+	public static String PLUSTIC_MODNAME = "PlusTiC";
+	
+	public static String PNEUMATIC_MODID = "pneumaticcraft";
+	public static String PNEUMATIC_MODNAME = "PneumaticCraft: Repressurized";
+	
 	public static String PROJECTE_MODID = "projecte";
 	public static String PROJECTE_MODNAME = "ProjectE";
 	
@@ -174,9 +197,15 @@ public class Strings {
 	public static String REFINED_STORAGE_MODID = "refinedstorage";
 	public static String REFINED_STORAGE_MODNAME = "Refined Storage";
 	
+	public static String THAUMCRAFT_MODID = "thaumcraft";
+	public static String THAUMCRAFT_MODNAME = "Thaumcraft";
+	
 	public static String THERMAL_MODID = "thermalexpansion";
 	public static String THERMAL_MODNAME = "Thermal Expansion";
 	
 	public static String TINKERS_MODID = "tconstruct";
 	public static String TINKERS_MODNAME = "Tinkers' Construct";
+	
+	public static String TWILIGHT_MODID = "twilightforest";
+	public static String TWILIGHT_MODNAME = "The Twilight Forest";
 }

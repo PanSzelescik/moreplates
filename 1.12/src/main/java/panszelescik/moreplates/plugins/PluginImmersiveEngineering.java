@@ -1,21 +1,20 @@
 package panszelescik.moreplates.plugins;
 
 import blusunrize.immersiveengineering.api.crafting.MetalPressRecipe;
-import cofh.core.util.helpers.ItemHelper;
 import net.minecraft.item.ItemStack;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.helpers.Helper;
 
 import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
+import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginImmersiveEngineering {
 	
 	private static int energy = energyMetalPress;
 
-	private static ItemStack mold_gear = Helper.getItemStack(IMMERSIVE_MODID, "mold", 1, 1);
-	private static ItemStack mold_plate = Helper.getItemStack(IMMERSIVE_MODID, "mold", 1, 0);
+	private static ItemStack mold_gear = getItemStack(IMMERSIVE_MODID, "mold", 1, 1);
+	private static ItemStack mold_plate = getItemStack(IMMERSIVE_MODID, "mold", 1, 0);
 	
 	public static void postInit() {
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {	
@@ -76,6 +75,18 @@ public class PluginImmersiveEngineering {
 			add(SUPERIUM, INGOT + SUPERIUM);
 			add(SUPREMIUM, INGOT + SUPREMIUM);
 		}
+		if (isPlusTiCLoaded & loadPlusTiC) {
+			add(ALUMITE, INGOT + ALUMITE);
+			if (isBotaniaLoaded)
+				add(MIRION, INGOT + MIRION);
+			if (isMekanismLoaded)
+				add(OSGLOGLAS, INGOT + OSGLOGLAS);
+			if (isMekanismLoaded & isThermalExpansionLoaded)
+				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
+		}
+		if (isPneumaticCraftLoaded & loadPneumaticCraft) {
+			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
+		}
 		if (isProjectELoaded & loadProjectE) {
 			String id = PROJECTE_MODID;
 			add(DARK_MATTER, DARK_MATTER_NAME, id, DARK_MATTER_META);
@@ -89,6 +100,10 @@ public class PluginImmersiveEngineering {
 			String id = REFINED_STORAGE_MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
+		if (isThaumcraftLoaded & loadThaumcraft) {
+			add(AMBER, GEM + AMBER);
+			add(QUICKSILVER, "quicksilver");
+		}
 		if (isTinkersConstructLoaded & loadTinkersConstruct) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
@@ -96,33 +111,38 @@ public class PluginImmersiveEngineering {
 			add(MANYULLYN, INGOT + MANYULLYN);
 			add(PIG_IRON, INGOT + PIG_IRON);
 		}
-		if (ItemHelper.oreNameExists(ITEM + SILICON)) {
+		if (isTwilightForestLoaded & loadTwilightForest) {
+			add(FIERY, INGOT + FIERY);
+			add(IRONWOOD, INGOT + IRONWOOD);
+			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
+		}
+		if (oreNameExists(ITEM + SILICON)) {
 			add(SILICON, ITEM + SILICON);
 		}
 	}
 	private static void add(String output, String input) {
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(GEAR + output), ItemHelper.getOre(input, 4), mold_gear, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)) + " x4");
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(PLATE + output), input, mold_plate, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getOre(input, 4), mold_gear, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getOre(input)) + " x4");
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), input, mold_plate, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getOre(input)));
 	}
 	private static void add(String output, String input, String id) {
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(GEAR + output), Helper.getItemStack(id, input, 4), mold_gear, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input)) + " x4");
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(PLATE + output), Helper.getItemStack(id, input), mold_plate, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input)));
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4), mold_gear, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getItemStack(id, input)) + " x4");
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input), mold_plate, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getItemStack(id, input)));
 	}
 	private static void add(String output, String input, String id, int meta) {
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(GEAR + output), Helper.getItemStack(id, input, 4, meta), mold_gear, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(GEAR + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input, 1, meta)) + " x4");
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(PLATE + output), Helper.getItemStack(id, input, 1, meta), mold_plate, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(PLATE + output)) + INFO_3 + Helper.getItemName(Helper.getItemStack(id, input, 1, meta)));
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4, meta), mold_gear, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getItemStack(id, input, 1, meta)) + " x4");
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input, 1, meta), mold_plate, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getItemStack(id, input, 1, meta)));
 	}
 	//Special for Gaia Spirit Gear and Plate
 	private static void addGaia(String output, String input) {
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(output + "Gear"), ItemHelper.getOre(input, 4), mold_gear, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(output + "Gear")) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)) + " x4");
-		MetalPressRecipe.addRecipe(ItemHelper.getOre(output + "Plate"), input, mold_plate, energy);
-		MorePlates.logger.debug(INFO_IE + Helper.getItemName(ItemHelper.getOre(output + "Plate")) + INFO_3 + Helper.getItemName(ItemHelper.getOre(input)));
+		MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input, 4), mold_gear, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(output + "Gear")) + INFO_3 + getItemName(getOre(input)) + " x4");
+		MetalPressRecipe.addRecipe(getOre(output + "Plate"), input, mold_plate, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(output + "Plate")) + INFO_3 + getItemName(getOre(input)));
 	}
 }

@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:osgloglas_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:osgloglas_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#OSGLOGLAS"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

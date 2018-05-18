@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:alumite_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:alumite_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#ALUMITE"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
+}

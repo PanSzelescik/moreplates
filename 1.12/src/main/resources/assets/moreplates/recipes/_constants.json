@@ -412,6 +412,53 @@
 },
 
 {
+	"name": "ALUMITE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotAlumite"
+		}
+	]
+},
+{
+	"name": "MIRION",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotMirion"
+		}
+	]
+},
+{
+	"name": "OSGLOGLAS",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotOsgloglas"
+		}
+	]
+},
+{
+	"name": "OSMIRIDIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotOsmiridium"
+		}
+	]
+},
+
+{
+	"name": "COMPRESSED_IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIronCompressed"
+		}
+	]
+},
+
+{
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",
@@ -492,6 +539,25 @@
 },
 
 {
+	"name": "AMBER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemAmber"
+		}
+	]
+},
+{
+	"name": "QUICKSILVER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "quicksilver"
+		}
+	]
+},
+
+{
 	"name": "ARDITE",
 	"ingredient": [
 		{
@@ -533,6 +599,34 @@
 		{
 			"type": "forge:ore_dict",
 			"ore": "ingotPigiron"
+		}
+	]
+},
+
+{
+	"name": "FIERY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotFiery"
+		}
+	]
+},
+{
+	"name": "IRONWOOD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIronwood"
+		}
+	]
+},
+{
+	"name": "KNIGHTMETAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotKnightmetal"
 		}
 	]
 }

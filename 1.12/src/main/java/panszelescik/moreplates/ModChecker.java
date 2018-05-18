@@ -9,7 +9,6 @@ public class ModChecker {
 	public static boolean isAppliedEnergisticsLoaded;
 	public static boolean isBotaniaLoaded;
 	public static boolean isCalculatorLoaded;
-	public static boolean isCoFHCoreLoaded;
 	public static boolean isDraconicEvolutionLoaded;
 	public static boolean isEnderIOLoaded;
 	public static boolean isExtraUtilitiesLoaded;
@@ -17,11 +16,15 @@ public class ModChecker {
 	public static boolean isMekanismLoaded;
 	public static boolean isMysticalAgradditionsLoaded;
 	public static boolean isMysticalAgricultureLoaded;
+	public static boolean isPlusTiCLoaded;
+	public static boolean isPneumaticCraftLoaded;
 	public static boolean isProjectELoaded;
 	public static boolean isProjectRedLoaded;
 	public static boolean isRefinedStorageLoaded;
+	public static boolean isThaumcraftLoaded;
 	public static boolean isThermalExpansionLoaded;
 	public static boolean isTinkersConstructLoaded;
+	public static boolean isTwilightForestLoaded;
 	
 	private static String INFO = " has been detected.";
 	
@@ -29,7 +32,6 @@ public class ModChecker {
 		isAppliedEnergisticsLoaded = Loader.isModLoaded(AE2_MODID);
 		isBotaniaLoaded = Loader.isModLoaded(BOTANIA_MODID);
 		isCalculatorLoaded = Loader.isModLoaded(CALCULATOR_MODID);
-		isCoFHCoreLoaded =  Loader.isModLoaded(COFH_CORE_MODID);
 		isDraconicEvolutionLoaded = Loader.isModLoaded(DRACONIC_MODID);
 		isEnderIOLoaded = Loader.isModLoaded(ENDER_IO_MODID);
 		isExtraUtilitiesLoaded = Loader.isModLoaded(EXTRA_UTILITIES_MODID);
@@ -37,11 +39,15 @@ public class ModChecker {
 		isMekanismLoaded = Loader.isModLoaded(MEKANISM_MODID);
 		isMysticalAgradditionsLoaded = Loader.isModLoaded(M_AGRADDITIONS_MODID);
 		isMysticalAgricultureLoaded = Loader.isModLoaded(M_AGRICULTURE_MODID);
+		isPlusTiCLoaded = Loader.isModLoaded(PLUSTIC_MODID);
+		isPneumaticCraftLoaded = Loader.isModLoaded(PNEUMATIC_MODID);
 		isProjectELoaded = Loader.isModLoaded(PROJECTE_MODID);
 		isProjectRedLoaded = Loader.isModLoaded(PROJECT_RED_MODID);
 		isRefinedStorageLoaded = Loader.isModLoaded(REFINED_STORAGE_MODID);
+		isThaumcraftLoaded = Loader.isModLoaded(THAUMCRAFT_MODID);
 		isThermalExpansionLoaded = Loader.isModLoaded(THERMAL_MODID);
 		isTinkersConstructLoaded = Loader.isModLoaded(TINKERS_MODID);
+		isTwilightForestLoaded = Loader.isModLoaded(TWILIGHT_MODID);
 	}
 	
 	public static void printSuccessMessage() {
@@ -51,8 +57,6 @@ public class ModChecker {
 			MorePlates.logger.info(BOTANIA_MODNAME + INFO);
 		if (isCalculatorLoaded)
 			MorePlates.logger.info(CALCULATOR_MODNAME + INFO);
-		if (isCoFHCoreLoaded)
-			MorePlates.logger.info(COFH_CORE_MODNAME + INFO);
 		if (isDraconicEvolutionLoaded)
 			MorePlates.logger.info(DRACONIC_MODNAME + INFO);
 		if (isEnderIOLoaded)
@@ -67,15 +71,23 @@ public class ModChecker {
 			MorePlates.logger.info(M_AGRADDITIONS_MODNAME + INFO);
 		if (isMysticalAgricultureLoaded)
 			MorePlates.logger.info(M_AGRICULTURE_MODNAME + INFO);
+		if (isPlusTiCLoaded)
+			MorePlates.logger.info(PLUSTIC_MODNAME + INFO);
+		if (isPneumaticCraftLoaded)
+			MorePlates.logger.info(PNEUMATIC_MODNAME + INFO);
 		if (isProjectELoaded)
 			MorePlates.logger.info(PROJECTE_MODNAME + INFO);
 		if (isProjectRedLoaded)
 			MorePlates.logger.info(PROJECT_RED_MODNAME + INFO);
 		if (isRefinedStorageLoaded)
 			MorePlates.logger.info(REFINED_STORAGE_MODNAME + INFO);
+		if (isThaumcraftLoaded)
+			MorePlates.logger.info(THAUMCRAFT_MODNAME + INFO);
 		if (isThermalExpansionLoaded)
 			MorePlates.logger.info(THERMAL_MODNAME + INFO);
 		if (isTinkersConstructLoaded)
 			MorePlates.logger.info(TINKERS_MODNAME + INFO);
+		if (isTwilightForestLoaded)
+			MorePlates.logger.info(TWILIGHT_MODNAME + INFO);
 	}
 }

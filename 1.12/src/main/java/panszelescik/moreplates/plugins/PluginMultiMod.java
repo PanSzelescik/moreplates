@@ -1,8 +1,7 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.ItemGear;
-import panszelescik.moreplates.items.ItemPlate;
+import panszelescik.moreplates.items.*;
 
 import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;

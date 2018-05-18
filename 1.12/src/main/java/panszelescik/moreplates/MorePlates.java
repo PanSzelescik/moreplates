@@ -16,8 +16,8 @@ import panszelescik.moreplates.proxy.CommonProxy;
 @Mod(
 		modid = Reference.MODID, 
 		name = Reference.NAME, 
-		dependencies = Reference.DEPENDENCIES, 
 		version = Reference.VERSION, 
+		dependencies = Reference.DEPENDENCIES, 
 		guiFactory = Reference.GUI_FACTORY, 
 		acceptedMinecraftVersions = Reference.ACCEPTED_MINECRAFT_VERSIONS, 
 		updateJSON = Reference.UPDATE_JSON

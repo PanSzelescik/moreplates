@@ -9,10 +9,13 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.Reference;
+import panszelescik.moreplates.proxy.OreDictionaryProxy;
 
 import static panszelescik.moreplates.helpers.Strings.*;
 
 public class Helper {
+	
+	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
 	
 	public static void registerItem(Item item) {
 		item.setCreativeTab(MorePlates.items);
@@ -25,18 +28,18 @@ public class Helper {
 		MorePlates.logger.debug(INFO_REG_RENDER + getItemName(getItemStack(item)));
 	}
 	
-	//@author King Lemming
+	//From CoFH Core
 	public static ItemStack getItemStack(String id, String name, int amount, int meta) {
 		Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(id + ":" + name));
 		return item != null ? new ItemStack(item, amount, meta) : ItemStack.EMPTY;
 	}
 	
-	//@author King Lemming
+	//From CoFH Core
 	public static ItemStack getItemStack(String id, String name, int amount) {
 		return getItemStack(id, name, amount, 0);
 	}
 	
-	//@author King Lemming
+	//From CoFH Core
 	public static ItemStack getItemStack(String id, String name) {
 		return getItemStack(id, name, 1, 0);
 	}
@@ -45,11 +48,36 @@ public class Helper {
 		return item != null ? new ItemStack(item, 1, 0) : ItemStack.EMPTY;
 	}
 	
-	//@author King Lemming
+	//From CoFH Core
 	public static String getItemName(ItemStack stack) {
 		String name = "";
 		name += stack.getDisplayName();
 		return name;
+	}
+	
+	//From CoFH Core
+	public static boolean oreNameExists(String oreName) {
+		return oreProxy.oreNameExists(oreName);
+	}
+	
+	//From CoFH Core
+	public static ItemStack getOre(String oreName) {
+		return getOre(oreName, 1);
+	}
+	
+	//From CoFH Core
+	public static ItemStack getOre(String oreName, int amount) {
+		return oreProxy.getOre(oreName, amount);
+	}
+	
+	//From CoFH Core
+	public static ItemStack cloneStack(ItemStack stack, int stackSize) {
+		if (stack.isEmpty())
+			return ItemStack.EMPTY;
+		ItemStack retStack = stack.copy();
+		retStack.setCount(stackSize);
+
+		return retStack;
 	}
 	
 	public static void oreGear(String ore, Item item) {

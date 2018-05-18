@@ -26,14 +26,22 @@ public class PluginLoader {
 			PluginMysticalAgradditions.preInit();
 		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
 			PluginMysticalAgriculture.preInit();
+		if (isPlusTiCLoaded & loadPlusTiC)
+			PluginPlusTiC.preInit();
+		if (isPneumaticCraftLoaded & loadPneumaticCraft)
+			PluginPneumaticCraft.preInit();
 		if (isProjectELoaded & loadProjectE)
 			PluginProjectE.preInit();
 		if (isProjectRedLoaded & loadProjectRed)
 			PluginProjectRed.preInit();
 		if (isRefinedStorageLoaded & loadRefinedStorage)
 			PluginRefinedStorage.preInit();
+		if (isThaumcraftLoaded & loadThaumcraft)
+			PluginThaumcraft.preInit();
 		if (isTinkersConstructLoaded & loadTinkersConstruct)
 			PluginTinkersConstruct.preInit();
+		if (isTwilightForestLoaded & loadTwilightForest)
+			PluginTwilightForest.preInit();
 		PluginMultiMod.preInit();
 	}
 	
@@ -56,19 +64,27 @@ public class PluginLoader {
 			PluginMysticalAgradditions.clientPreInit();
 		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
 			PluginMysticalAgriculture.clientPreInit();
+		if (isPlusTiCLoaded & loadPlusTiC)
+			PluginPlusTiC.clientPreInit();
+		if (isPneumaticCraftLoaded & loadPneumaticCraft)
+			PluginPneumaticCraft.clientPreInit();
 		if (isProjectELoaded & loadProjectE)
 			PluginProjectE.clientPreInit();
 		if (isProjectRedLoaded & loadProjectRed)
 			PluginProjectRed.clientPreInit();
 		if (isRefinedStorageLoaded & loadRefinedStorage)
 			PluginRefinedStorage.clientPreInit();
+		if (isThaumcraftLoaded & loadThaumcraft)
+			PluginThaumcraft.clientPreInit();
 		if (isTinkersConstructLoaded & loadTinkersConstruct)
 			PluginTinkersConstruct.clientPreInit();
+		if (isTwilightForestLoaded & loadTwilightForest)
+			PluginTwilightForest.clientPreInit();
 		PluginMultiMod.clientPreInit();
 	}
 	
 	public static void postInit() {
-		if (isCoFHCoreLoaded & isImmersiveEngineeringLoaded & loadImmersiveEngineering)
+		if (isImmersiveEngineeringLoaded & loadImmersiveEngineering)
 			PluginImmersiveEngineering.postInit();
 		if (isThermalExpansionLoaded & loadThermalExpansion)
 			PluginThermalExpansion.postInit();

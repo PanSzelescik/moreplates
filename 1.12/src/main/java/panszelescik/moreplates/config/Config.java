@@ -32,11 +32,15 @@ public class Config {
 	public static boolean loadMekanism = true;
 	public static boolean loadMysticalAgradditions = true;
 	public static boolean loadMysticalAgriculture = true;
+	public static boolean loadPlusTiC = true;
+	public static boolean loadPneumaticCraft = true;
 	public static boolean loadProjectE = true;
 	public static boolean loadProjectRed = true;
 	public static boolean loadRefinedStorage = true;
+	public static boolean loadThaumcraft = true;
 	public static boolean loadThermalExpansion = true;
 	public static boolean loadTinkersConstruct = true;
+	public static boolean loadTwilightForest = true;
 	
 	//Ints
 	public static int durabilityHammer = 150;
@@ -57,7 +61,7 @@ public class Config {
 	private static final String ENERGYMETALPRESS_COMMENT = "Energy used to make Gears and Plates in Metal Press from Immersive Engineering when support is loaded.";
 	private static final String LOADIMMERSIVEENGINEERING_COMMENT = "Enable this to add recipes for all Gears and Plates to Metal Press (requires CoFH Core!).";
 	private static final String LOADPLUGIN_COMMENT = "Enable this to load this plugin when mod is loaded.";
-	private static final String LOADTHERMALEXPANSION_COMMENT = "Enable this to add recipes for some Gears and Plates to Compactor (not all, because Thermal adds).";
+	private static final String LOADTHERMALEXPANSION_COMMENT = "Enable this to add recipes for some Gears and Plates to Compactor (not all, because Thermal Expansion adds).";
 	
 	public Config(File configFile) {
 		cfg = new Configuration(configFile);
@@ -90,11 +94,15 @@ public class Config {
 		loadMekanism = cfg.getBoolean("loadMekanism", CATEGORY_PLUGINS, loadMekanism, LOADPLUGIN_COMMENT);
 		loadMysticalAgradditions = cfg.getBoolean("loadMysticalAgradditions", CATEGORY_PLUGINS, loadMysticalAgradditions, LOADPLUGIN_COMMENT);
 		loadMysticalAgriculture = cfg.getBoolean("loadMysticalAgriculture", CATEGORY_PLUGINS, loadMysticalAgriculture, LOADPLUGIN_COMMENT);
+		loadPlusTiC = cfg.getBoolean("loadPlusTiC", CATEGORY_PLUGINS, loadPlusTiC, LOADPLUGIN_COMMENT);
+		loadPneumaticCraft = cfg.getBoolean("loadPneumaticCraft", CATEGORY_PLUGINS, loadPneumaticCraft, LOADPLUGIN_COMMENT);
 		loadProjectE = cfg.getBoolean("loadProjectE", CATEGORY_PLUGINS, loadProjectE, LOADPLUGIN_COMMENT);
 		loadProjectRed = cfg.getBoolean("loadProjectRed", CATEGORY_PLUGINS, loadProjectRed, LOADPLUGIN_COMMENT);
 		loadRefinedStorage = cfg.getBoolean("loadRefinedStorage", CATEGORY_PLUGINS, loadRefinedStorage, LOADPLUGIN_COMMENT);
+		loadThaumcraft = cfg.getBoolean("loadThaumcraft", CATEGORY_PLUGINS, loadThaumcraft, LOADPLUGIN_COMMENT);
 		loadThermalExpansion = cfg.getBoolean("loadThermalExpansion", CATEGORY_PLUGINS, loadThermalExpansion, LOADTHERMALEXPANSION_COMMENT);
 		loadTinkersConstruct = cfg.getBoolean("loadTinkersConstruct", CATEGORY_PLUGINS, loadTinkersConstruct, LOADPLUGIN_COMMENT);
+		loadTwilightForest = cfg.getBoolean("loadTwilightForest", CATEGORY_PLUGINS, loadTwilightForest, LOADPLUGIN_COMMENT);
 		
 		energyMetalPress = cfg.getInt("energyMetalPress", CATEGORY_PLUGINS, energyMetalPress, minEnergyMetalPress, maxEnergyMetalPress, ENERGYMETALPRESS_COMMENT);
 		energyCompactor = cfg.getInt("energyCompactor", CATEGORY_PLUGINS, energyCompactor, minEnergyCompactor, maxEnergyCompactor, ENERGYCOMPACTOR_COMMENT);

@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:osmiridium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:osmiridium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#OSMIRIDIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

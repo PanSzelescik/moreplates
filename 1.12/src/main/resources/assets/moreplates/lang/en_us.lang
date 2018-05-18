@@ -99,7 +99,23 @@ item.superium_plate.name=Superium Plate
 item.supremium_gear.name=Supremium Gear
 item.supremium_plate.name=Supremium Plate
 
-//Project E
+//PlusTiC
+
+item.alumite_gear.name=Alumite Gear
+item.alumite_plate.name=Alumite Plate
+item.mirion_gear.name=Mirion Gear
+item.mirion_plate.name=Mirion Plate
+item.osgloglas_gear.name=Osgloglas Gear
+item.osgloglas_plate.name=Osgloglas Plate
+item.osmiridium_gear.name=Osmiridium Gear
+item.osmiridium_plate.name=Osmiridium Plate
+
+//PneumaticCraft
+
+item.compressed_iron_gear.name=Compressed Iron Gear
+item.compressed_iron_plate.name=Compressed Iron Plate
+
+//ProjectE
 
 item.dark_matter_gear.name=Dark Matter Gear
 item.dark_matter_plate.name=Dark Matter Plate
@@ -118,6 +134,13 @@ item.red_alloy_plate.name=Red Alloy Plate
 item.quartz_enriched_iron_gear.name=Quartz Enriched Iron Gear
 item.quartz_enriched_iron_plate.name=Quartz Enriched Iron Plate
 
+//Thaumcraft
+
+item.amber_gear.name=Amber Gear
+item.amber_plate.name=Amber Plate
+item.quicksilver_gear.name=Quicksilver Gear
+item.quicksilver_plate.name=Quicksilver Plate
+
 //Tinkers' Construct
 
 item.ardite_gear.name=Ardite Gear
@@ -131,6 +154,16 @@ item.manyullyn_plate.name=Manyullyn Plate
 item.pig_iron_gear.name=Pig Iron Gear
 item.pig_iron_plate.name=Pig Iron Plate
 
+//The Twilight Forest
+
+item.fiery_gear.name=Fiery Gear
+item.fiery_plate.name=Fiery Plate
+item.ironwood_gear.name=Ironwood Gear
+item.ironwood_plate.name=Ironwood Plate
+item.knightmetal_gear.name=Knightmetal Gear
+item.knightmetal_plate.name=Knightmetal Plate
+
 //MultiMod
+
 item.silicon_gear.name=Silicon Gear
 item.silicon_plate.name=Silicon Plate
