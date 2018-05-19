@@ -19,6 +19,7 @@ public class PluginImmersiveEngineering {
 	public static void postInit() {
 		if (isActuallyAdditionsLoaded & loadActuallyAdditions) {
 			String id = ACTUALLY_MODID;
+			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
 			add(DIAMANTINE, CRYSTAL_NAME, id, DIAMANTINE_META);
 			add(EMERALDIC, CRYSTAL_NAME, id, EMERALDIC_META);
 			add(ENORI, CRYSTAL_NAME, id, ENORI_META);

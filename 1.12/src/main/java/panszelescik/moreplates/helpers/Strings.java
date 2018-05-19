@@ -39,6 +39,7 @@ public class Strings {
 	//Actually Additions
 	public static String EMPOWERED = "Empowered";
 	
+	public static String BLACK_QUARTZ = "QuartzBlack";
 	public static String DIAMANTINE = "Diamantine";
 	public static String EMERALDIC = "Emeraldic";
 	public static String ENORI = "Enori";

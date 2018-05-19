@@ -36,6 +36,15 @@
 },
 
 {
+	"name": "BLACK_QUARTZ",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemQuartzBlack"
+		}
+	]
+},
+{
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",

@@ -8,6 +8,8 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginActuallyAdditions {
 	
+	public static Item black_quartz_gear;
+	public static Item black_quartz_plate;
 	public static Item diamantine_gear;
 	public static Item diamantine_plate;
 	public static Item emeraldic_gear;
@@ -35,6 +37,8 @@ public class PluginActuallyAdditions {
 	public static Item empowered_void_plate;
 	
 	public static void preInit() {
+		black_quartz_gear = new ItemGear("black_quartz");
+		black_quartz_plate = new ItemPlate("black_quartz");
 		diamantine_gear = new ItemGear("diamantine");
 		diamantine_plate = new ItemPlate("diamantine");
 		emeraldic_gear = new ItemGear("emeraldic");
@@ -61,6 +65,8 @@ public class PluginActuallyAdditions {
 		empowered_void_gear = new ItemGear("empowered_void");
 		empowered_void_plate = new ItemPlate("empowered_void");
 		
+		registerItem(black_quartz_gear);
+		registerItem(black_quartz_plate);
 		registerItem(diamantine_gear);
 		registerItem(diamantine_plate);
 		registerItem(emeraldic_gear);
@@ -87,6 +93,8 @@ public class PluginActuallyAdditions {
 		registerItem(empowered_void_gear);
 		registerItem(empowered_void_plate);
 		
+		oreGear(BLACK_QUARTZ, black_quartz_gear);
+		orePlate(BLACK_QUARTZ, black_quartz_plate);
 		oreGear(DIAMANTINE, diamantine_gear);
 		orePlate(DIAMANTINE, diamantine_plate);
 		oreGear(EMERALDIC, emeraldic_gear);
@@ -115,6 +123,8 @@ public class PluginActuallyAdditions {
 	}
 	
 	public static void clientPreInit() {
+		registerRender(black_quartz_gear);
+		registerRender(black_quartz_plate);
 		registerRender(diamantine_gear);
 		registerRender(diamantine_plate);
 		registerRender(emeraldic_gear);
