@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:palis_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:palis_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#PALIS"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
+}

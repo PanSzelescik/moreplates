@@ -2,6 +2,34 @@ itemGroup.items=More Plates
 
 item.hammer.name=Hammer
 
+//Actually Additions
+
+item.diamantine_gear.name=Diamantine Gear
+item.diamantine_plate.name=Diamantine Plate
+item.emeraldic_gear.name=Emeraldic Gear
+item.emeraldic_plate.name=Emeraldic Plate
+item.enori_gear.name=Enori Gear
+item.enori_plate.name=Enori Plate
+item.palis_gear.name=Palis Gear
+item.palis_plate.name=Palis Plate
+item.restonia_gear.name=Restonia Gear
+item.restonia_plate.name=Restonia Plate
+item.void_gear.name=Void Gear
+item.void_plate.name=Void Plate
+
+item.empowered_diamantine_gear.name=Empowered Diamantine Gear
+item.empowered_diamantine_plate.name=Empowered Diamantine Plate
+item.empowered_emeraldic_gear.name=Empowered Emeraldic Gear
+item.empowered_emeraldic_plate.name=Empowered Emeraldic Plate
+item.empowered_enori_gear.name=Empowered Enori Gear
+item.empowered_enori_plate.name=Empowered Enori Plate
+item.empowered_palis_gear.name=Empowered Palis Gear
+item.empowered_palis_plate.name=Empowered Palis Plate
+item.empowered_restonia_gear.name=Empowered Restonia Gear
+item.empowered_restonia_plate.name=Empowered Restonia Plate
+item.empowered_void_gear.name=Empowered Void Gear
+item.empowered_void_plate.name=Empowered Void Plate
+
 //Applied Energistics 2
 
 item.certus_quartz_gear.name=Certus Quartz Gear

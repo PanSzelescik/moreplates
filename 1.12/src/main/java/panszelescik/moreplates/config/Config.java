@@ -22,6 +22,7 @@ public class Config {
 	private static final String CATEGORY_PLUGINS = "plugins";
 	
 	//Booleans
+	public static boolean loadActuallyAdditions = true;
 	public static boolean loadAppliedEnergistics2 = true;
 	public static boolean loadBotania = true;
 	public static boolean loadCalculator = true;
@@ -84,6 +85,7 @@ public class Config {
 		cfg.addCustomCategoryComment(CATEGORY_PLUGINS, "Loading plugins.");
 		cfg.setCategoryRequiresMcRestart(CATEGORY_PLUGINS, true);
 		
+		loadActuallyAdditions = cfg.getBoolean("loadActuallyAdditions", CATEGORY_PLUGINS, loadActuallyAdditions, LOADPLUGIN_COMMENT);
 		loadAppliedEnergistics2 = cfg.getBoolean("loadAppliedEnergistics2", CATEGORY_PLUGINS, loadAppliedEnergistics2, LOADPLUGIN_COMMENT);
 		loadBotania = cfg.getBoolean("loadBotania", CATEGORY_PLUGINS, loadBotania, LOADPLUGIN_COMMENT);
 		loadCalculator = cfg.getBoolean("loadCalculator", CATEGORY_PLUGINS, loadCalculator, LOADPLUGIN_COMMENT);			

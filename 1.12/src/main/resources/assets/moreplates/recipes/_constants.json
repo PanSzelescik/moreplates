@@ -39,6 +39,187 @@
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "DIAMANTINE",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 2
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMERALDIC",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 4
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "ENORI",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 5
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "PALIS",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 1
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "RESTONIA",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "VOID",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 3
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_DIAMANTINE",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 2
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_EMERALDIC",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 4
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_ENORI",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 5
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_PALIS",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 1
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_RESTONIA",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_VOID",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 3
+		}
+	]
+},
+
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
 			"modid": "appliedenergistics2"
 		}
 	],

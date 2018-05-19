@@ -6,6 +6,7 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class ModChecker {
 	
+	public static boolean isActuallyAdditionsLoaded;
 	public static boolean isAppliedEnergisticsLoaded;
 	public static boolean isBotaniaLoaded;
 	public static boolean isCalculatorLoaded;
@@ -29,6 +30,7 @@ public class ModChecker {
 	private static String INFO = " has been detected.";
 	
 	public ModChecker() {
+		isActuallyAdditionsLoaded = Loader.isModLoaded(ACTUALLY_MODID);
 		isAppliedEnergisticsLoaded = Loader.isModLoaded(AE2_MODID);
 		isBotaniaLoaded = Loader.isModLoaded(BOTANIA_MODID);
 		isCalculatorLoaded = Loader.isModLoaded(CALCULATOR_MODID);
@@ -51,6 +53,8 @@ public class ModChecker {
 	}
 	
 	public static void printSuccessMessage() {
+		if (isActuallyAdditionsLoaded)
+			MorePlates.logger.info(ACTUALLY_MODNAME + INFO);
 		if (isAppliedEnergisticsLoaded)
 			MorePlates.logger.info(AE2_MODNAME + INFO);
 		if (isBotaniaLoaded)

@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:diamantine_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:diamantine_gear"
+	},
+	"pattern": [
+		" M ",
+		"MIM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#DIAMANTINE"
+		},
+		"I": {
+			"item": "#IRON"
+		}
+	}
+}

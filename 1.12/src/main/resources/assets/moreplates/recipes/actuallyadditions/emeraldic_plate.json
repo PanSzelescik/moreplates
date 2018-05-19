@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:emeraldic_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:emeraldic_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#EMERALDIC"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

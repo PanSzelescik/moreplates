@@ -36,6 +36,33 @@ public class Strings {
 	public static String INFO_REG_RENDER = INFO_4 + INFO_6;
 	public static String INFO_ORE = INFO_1 + INFO_7;
 	
+	//Actually Additions
+	public static String EMPOWERED = "Empowered";
+	
+	public static String DIAMANTINE = "Diamantine";
+	public static String EMERALDIC = "Emeraldic";
+	public static String ENORI = "Enori";
+	public static String PALIS = "Palis";
+	public static String RESTONIA = "Restonia";
+	public static String VOID = "Void";
+	
+	public static String EMPOWERED_DIAMANTINE = DIAMANTINE + EMPOWERED;
+	public static String EMPOWERED_EMERALDIC = EMERALDIC + EMPOWERED;
+	public static String EMPOWERED_ENORI = ENORI + EMPOWERED;
+	public static String EMPOWERED_PALIS = PALIS + EMPOWERED;
+	public static String EMPOWERED_RESTONIA = RESTONIA + EMPOWERED;
+	public static String EMPOWERED_VOID = VOID + EMPOWERED;
+	
+	public static String CRYSTAL_NAME = "item_crystal";
+	public static String EMPOWERED_CRYSTAL_NAME = CRYSTAL_NAME + "_empowered";
+	
+	public static int DIAMANTINE_META = 2;
+	public static int EMERALDIC_META = 4;
+	public static int ENORI_META = 5;
+	public static int PALIS_META = 1;
+	public static int RESTONIA_META = 0;
+	public static int VOID_META = 3;
+	
 	//Applied Energistics
 	public static String CERTUS_QUARTZ = "CertusQuartz";
 	public static String FLUIX = "Fluix";
@@ -152,6 +179,9 @@ public class Strings {
 	public static String SILICON = "Silicon";
 	
 	//Mods
+	public static String ACTUALLY_MODID = "actuallyadditions";
+	public static String ACTUALLY_MODNAME = "Actually Additions";
+	
 	public static String AE2_MODID = "appliedenergistics2";
 	public static String AE2_MODNAME = "Applied Energistics 2";
 	

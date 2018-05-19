@@ -8,6 +8,8 @@ import static panszelescik.moreplates.config.Config.*;
 public class PluginLoader {
 	
 	public static void preInit() {
+		if (isActuallyAdditionsLoaded & loadActuallyAdditions)
+			PluginActuallyAdditions.preInit();
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.preInit();
 		if (isBotaniaLoaded & loadBotania)
@@ -46,6 +48,8 @@ public class PluginLoader {
 	}
 	
 	public static void clientPreInit() {
+		if (isActuallyAdditionsLoaded & loadActuallyAdditions)
+			PluginActuallyAdditions.clientPreInit();
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.clientPreInit();
 		if (isBotaniaLoaded & loadBotania)

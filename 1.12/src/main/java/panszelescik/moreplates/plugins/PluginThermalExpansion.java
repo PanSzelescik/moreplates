@@ -14,6 +14,22 @@ public class PluginThermalExpansion {
 	private static int energy = energyCompactor;
 
 	public static void postInit() {
+		if (isActuallyAdditionsLoaded & loadActuallyAdditions) {
+			String id = ACTUALLY_MODID;
+			add(DIAMANTINE, CRYSTAL_NAME, id, DIAMANTINE_META);
+			add(EMERALDIC, CRYSTAL_NAME, id, EMERALDIC_META);
+			add(ENORI, CRYSTAL_NAME, id, ENORI_META);
+			add(PALIS, CRYSTAL_NAME, id, PALIS_META);
+			add(RESTONIA, CRYSTAL_NAME, id, RESTONIA_META);
+			add(VOID, CRYSTAL_NAME, id, VOID_META);
+			
+			add(EMPOWERED_DIAMANTINE, EMPOWERED_CRYSTAL_NAME, id, DIAMANTINE_META);
+			add(EMPOWERED_EMERALDIC, EMPOWERED_CRYSTAL_NAME, id, EMERALDIC_META);
+			add(EMPOWERED_ENORI, EMPOWERED_CRYSTAL_NAME, id, ENORI_META);
+			add(EMPOWERED_PALIS, EMPOWERED_CRYSTAL_NAME, id, PALIS_META);
+			add(EMPOWERED_RESTONIA, EMPOWERED_CRYSTAL_NAME, id, RESTONIA_META);
+			add(EMPOWERED_VOID, EMPOWERED_CRYSTAL_NAME, id, VOID_META);
+		}
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
 			String id = AE2_MODID;	
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
