@@ -12,6 +12,8 @@ public class PluginLoader {
 			PluginActuallyAdditions.preInit();
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.preInit();
+		if (isAvaritiaLoaded & loadAvaritia)
+			PluginAvaritia.preInit();
 		if (isBotaniaLoaded & loadBotania)
 			PluginBotania.preInit();
 		if (isCalculatorLoaded & loadCalculator)
@@ -52,6 +54,8 @@ public class PluginLoader {
 			PluginActuallyAdditions.clientPreInit();
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
 			PluginAppliedEnergistics2.clientPreInit();
+		if (isAvaritiaLoaded & loadAvaritia)
+			PluginAvaritia.clientPreInit();
 		if (isBotaniaLoaded & loadBotania)
 			PluginBotania.clientPreInit();
 		if (isCalculatorLoaded & loadCalculator)

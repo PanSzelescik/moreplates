@@ -17,6 +17,7 @@ public class Reference {
 	public static final String DEPENDENCIES = 
 			  "after:actuallyadditions;"
 			+ "after:appliedenergistics2;"
+			+ "after:avaritia;"
 			+ "after:botania;"
 			+ "after:calculator;"
 			+ "after:draconicevolution;"

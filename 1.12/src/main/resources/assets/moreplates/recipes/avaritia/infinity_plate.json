@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:infinity_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:infinity_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#INFINITY"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

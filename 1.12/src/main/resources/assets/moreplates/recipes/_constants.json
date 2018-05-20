@@ -259,6 +259,34 @@
 },
 
 {
+	"name": "CRYSTAL_MATRIX",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystalMatrix"
+		}
+	]
+},
+{
+	"name": "INFINITY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotInfinity"
+		}
+	]
+},
+{
+	"name": "NEUTRONIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCosmicNeutronium"
+		}
+	]
+},
+
+{
 	"name": "ELEMENTIUM",
 	"ingredient": [
 		{

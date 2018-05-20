@@ -8,6 +8,7 @@ public class ModChecker {
 	
 	public static boolean isActuallyAdditionsLoaded;
 	public static boolean isAppliedEnergisticsLoaded;
+	public static boolean isAvaritiaLoaded;
 	public static boolean isBotaniaLoaded;
 	public static boolean isCalculatorLoaded;
 	public static boolean isDraconicEvolutionLoaded;
@@ -32,6 +33,7 @@ public class ModChecker {
 	public ModChecker() {
 		isActuallyAdditionsLoaded = Loader.isModLoaded(ACTUALLY_MODID);
 		isAppliedEnergisticsLoaded = Loader.isModLoaded(AE2_MODID);
+		isAvaritiaLoaded = Loader.isModLoaded(AVARITIA_MODID);
 		isBotaniaLoaded = Loader.isModLoaded(BOTANIA_MODID);
 		isCalculatorLoaded = Loader.isModLoaded(CALCULATOR_MODID);
 		isDraconicEvolutionLoaded = Loader.isModLoaded(DRACONIC_MODID);
@@ -57,6 +59,8 @@ public class ModChecker {
 			MorePlates.logger.info(ACTUALLY_MODNAME + INFO);
 		if (isAppliedEnergisticsLoaded)
 			MorePlates.logger.info(AE2_MODNAME + INFO);
+		if (isAvaritiaLoaded)
+			MorePlates.logger.info(AVARITIA_MODNAME + INFO);
 		if (isBotaniaLoaded)
 			MorePlates.logger.info(BOTANIA_MODNAME + INFO);
 		if (isCalculatorLoaded)

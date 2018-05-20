@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:neutronium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:neutronium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#NEUTRONIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

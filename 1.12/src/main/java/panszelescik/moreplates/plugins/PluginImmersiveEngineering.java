@@ -41,6 +41,11 @@ public class PluginImmersiveEngineering {
 			add(FLUIX, CRYSTAL + FLUIX);
 			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
+		/*if (isAvaritiaLoaded & loadAvaritia) {
+			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
+			add(INFINITY, INGOT + INFINITY);
+			add(NEUTRONIUM, INGOT + NEUTRONIUM);
+		}*/
 		if (isBotaniaLoaded & loadBotania) {
 			//add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");

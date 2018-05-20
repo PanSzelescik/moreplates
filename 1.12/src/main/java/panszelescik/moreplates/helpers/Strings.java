@@ -72,6 +72,11 @@ public class Strings {
 	
 	public static int PURE_CERTUS_QUARTZ_META = 10;
 	
+	//Avaritia
+	public static String CRYSTAL_MATRIX = "CrystalMatrix";
+	public static String INFINITY = "Infinity";
+	public static String NEUTRONIUM = "CosmicNeutronium";
+	
 	//Botania
 	public static String ELEMENTIUM = "ElvenElementium";
 	public static String GAIA_SPIRIT = "gaia";
@@ -185,6 +190,9 @@ public class Strings {
 	
 	public static String AE2_MODID = "appliedenergistics2";
 	public static String AE2_MODNAME = "Applied Energistics 2";
+	
+	public static String AVARITIA_MODID = "avaritia";
+	public static String AVARITIA_MODNAME = "Avaritia";
 	
 	public static String BOTANIA_MODID = "botania";
 	public static String BOTANIA_MODNAME = "Botania";

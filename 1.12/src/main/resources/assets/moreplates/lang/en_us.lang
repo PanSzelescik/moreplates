@@ -39,6 +39,15 @@ item.certus_quartz_plate.name=Certus Quartz Plate
 item.fluix_gear.name=Fluix Gear
 item.fluix_plate.name=Fluix Plate
 
+//Avaritia
+
+item.crystal_matrix_gear.name=Crystal Matrix Gear
+item.crystal_matrix_plate.name=Crystal Matrix Plate
+item.infinity_gear.name=Infinity Gear
+item.infinity_plate.name=Infinity Plate
+item.neutronium_gear.name=Neutronium Gear
+item.neutronium_plate.name=Neutronium Plate
+
 //Botania
 
 item.elementium_gear.name=Elementium Gear
