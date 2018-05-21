@@ -162,7 +162,6 @@ public class PluginActuallyAdditions {
 		registerRender(empowered_void_plate);
 	}
 	public static void postInit() {
-		String id = "minecraft";
 		add(EMPOWERED_DIAMATINE, DIAMATINE, DYE_LIGHT_BLUE, new ItemStack(Items.CLAY_BALL), new ItemStack(Items.CLAY_BALL), new ItemStack(Blocks.CLAY));
 		List<ItemStack> balls = OreDictionary.getOres("slimeball");
         for (ItemStack ball : balls) {

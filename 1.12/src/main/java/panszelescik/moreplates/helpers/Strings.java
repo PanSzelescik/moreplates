@@ -9,12 +9,10 @@ public class Strings {
 	public static String CRYSTAL = "crystal";
 	public static String GEM = "gem";
 	public static String ITEM = "item";
-	public static String DUST = "dust";
 	
 	public static String REFINED = "Refined";
 	public static String ALLOY = "Alloy";
 	
-	public static String REDSTONE_MC = DUST + "Redstone";
 	public static String IRON = "Iron";
 	public static String GOLD = "Gold";
 	public static String STEEL = "Steel";
