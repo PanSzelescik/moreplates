@@ -21,7 +21,7 @@ public class Strings {
 	public static String DYE_LIGHT_BLUE = DYE + "LightBlue";
 	public static String DYE_GRAY = DYE + "Gray";
 	public static String DYE_LIME = DYE + "Lime";
-	public static String DYE_BLUE = DYE + "Blue";
+	public static String DYE_CYAN = DYE + "Cyan";
 	public static String DYE_RED = DYE + "Red";
 	public static String DYE_BLACK = DYE + "Black";
 	
