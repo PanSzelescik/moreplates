@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:emeraldic_gear"
+			"item": "moreplates:emeradic_gear"
 		}
 	],
 	"result": {
-		"item": "moreplates:emeraldic_gear"
+		"item": "moreplates:emeradic_gear"
 	},
 	"pattern": [
 		" M ",
@@ -16,7 +16,7 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"M": {
-			"item": "#EMERALDIC"
+			"item": "#EMERADIC"
 		},
 		"I": {
 			"item": "#IRON"

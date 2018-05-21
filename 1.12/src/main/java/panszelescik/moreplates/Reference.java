@@ -10,12 +10,13 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "panszelescik.moreplates.proxy.ClientProxy";
 	public static final String ACCEPTED_MINECRAFT_VERSIONS = "[1.12.2,1.13)";
 	public static final String GUI_FACTORY = "panszelescik.moreplates.config.ModGuiFactory";
-	public static final String COFHCORE_VERSION = "4.4.1";
+	public static final String ACTUALLY_VERSION = "1.12.2-r135";
 	public static final String ENDERIO_VERSION = "5.0.22";
-	public static final String IMMERSIVEENGINEERING_VERSION = "0.12-82";
-	public static final String THERMALEXPANSION_VERSION = "5.4.2";
+	public static final String IC2_VERSION = "2.8.76-ex112";
+	public static final String IMMERSIVE_VERSION = "0.12-82";
+	public static final String THERMAL_VERSION = "5.4.2";
 	public static final String DEPENDENCIES = 
-			  "after:actuallyadditions;"
+			  "after:actuallyadditions@[" + ACTUALLY_VERSION + ",);"
 			+ "after:appliedenergistics2;"
 			+ "after:avaritia;"
 			+ "after:botania;"
@@ -23,7 +24,8 @@ public class Reference {
 			+ "after:draconicevolution;"
 			+ "after:enderio@[" + ENDERIO_VERSION + ",);"
 			+ "after:extrautils2;"
-			+ "after:immersiveengineering@[" + IMMERSIVEENGINEERING_VERSION + ",);"
+			+ "after:ic2@[" + IC2_VERSION + ",);"
+			+ "after:immersiveengineering@[" + IMMERSIVE_VERSION + ",);"
 			+ "after:mekanism;"
 			+ "after:mysticalagradditions;"
 			+ "after:mysticalagriculture;"
@@ -32,7 +34,7 @@ public class Reference {
 			+ "after:projecte;"
 			+ "after:projectred-core;"
 			+ "after:thaumcraft;"
-			+ "after:thermalexpansion@[" + THERMALEXPANSION_VERSION + ",);"
+			+ "after:thermalexpansion@[" + THERMAL_VERSION + ",);"
 			+ "after:tconstruct;"
 			+ "after:twilightforest";
 }

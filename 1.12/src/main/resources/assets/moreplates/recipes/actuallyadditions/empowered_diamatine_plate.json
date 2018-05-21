@@ -2,16 +2,16 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:empowered_emeraldic_plate"
+			"item": "moreplates:empowered_diamatine_plate"
 		}
 	],
 	"result": {
-		"item": "moreplates:empowered_emeraldic_plate"
+		"item": "moreplates:empowered_diamatine_plate"
 	},
 	"type": "forge:ore_shapeless",
 	"ingredients": [
 		{
-			"item": "#EMPOWERED_EMERALDIC"
+			"item": "#EMPOWERED_DIAMATINE"
 		},
 		{
 			"item": "#HAMMER"

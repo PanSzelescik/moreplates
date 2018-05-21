@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:diamantine_gear"
+			"item": "moreplates:diamatine_gear"
 		}
 	],
 	"result": {
-		"item": "moreplates:diamantine_gear"
+		"item": "moreplates:diamatine_gear"
 	},
 	"pattern": [
 		" M ",
@@ -16,7 +16,7 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"M": {
-			"item": "#DIAMANTINE"
+			"item": "#DIAMATINE"
 		},
 		"I": {
 			"item": "#IRON"

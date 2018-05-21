@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:empowered_diamantine_gear"
+			"item": "moreplates:empowered_emeradic_gear"
 		}
 	],
 	"result": {
-		"item": "moreplates:empowered_diamantine_gear"
+		"item": "moreplates:empowered_emeradic_gear"
 	},
 	"pattern": [
 		" M ",
@@ -16,7 +16,7 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"M": {
-			"item": "#EMPOWERED_DIAMANTINE"
+			"item": "#EMPOWERED_EMERADIC"
 		},
 		"I": {
 			"item": "#IRON"

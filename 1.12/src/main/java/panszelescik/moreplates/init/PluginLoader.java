@@ -92,9 +92,13 @@ public class PluginLoader {
 	}
 	
 	public static void postInit() {
-		if (isImmersiveEngineeringLoaded & loadImmersiveEngineering)
+		if (isActuallyAdditionsLoaded & loadActuallyAdditionsRecipes)
+			PluginActuallyAdditions.postInit();
+		if (isImmersiveEngineeringLoaded & loadImmersiveEngineeringRecipes)
 			PluginImmersiveEngineering.postInit();
-		if (isThermalExpansionLoaded & loadThermalExpansion)
+		if (isIndustrialCraft2Loaded & loadIndustrialCraft2Recipes)
+			PluginIndustrialCraft2.postInit();
+		if (isThermalExpansionLoaded & loadThermalExpansionRecipes)
 			PluginThermalExpansion.postInit();
 	}
 }

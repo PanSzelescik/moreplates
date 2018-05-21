@@ -9,12 +9,23 @@ public class Strings {
 	public static String CRYSTAL = "crystal";
 	public static String GEM = "gem";
 	public static String ITEM = "item";
+	public static String DUST = "dust";
 	
 	public static String REFINED = "Refined";
 	public static String ALLOY = "Alloy";
+	
+	public static String REDSTONE_MC = DUST + "Redstone";
 	public static String IRON = "Iron";
 	public static String GOLD = "Gold";
 	public static String STEEL = "Steel";
+	
+	public static String DYE = "dye";
+	public static String DYE_LIGHT_BLUE = DYE + "LightBlue";
+	public static String DYE_GRAY = DYE + "Gray";
+	public static String DYE_LIME = DYE + "Lime";
+	public static String DYE_BLUE = DYE + "Blue";
+	public static String DYE_RED = DYE + "Red";
+	public static String DYE_BLACK = DYE + "Black";
 	
 	//Infos
 	private static String INFO_1 = "Adding ";
@@ -27,9 +38,13 @@ public class Strings {
 	public static String INFO_8 = " for: ";
 	public static String INFO_9 = " to: ";
 	
+	private static String ACTUALLY_MACHINE_NAME = "Empowerer";
+	private static String IC2_MACHINE_NAME = "Metal Former";
 	private static String IE_MACHINE_NAME = "Metal Press";
 	private static String TE_MACHINE_NAME = "Compactor";
 	
+	public static String INFO_ACTUALLY = INFO_1 + ACTUALLY_MACHINE_NAME + INFO_2 + INFO_8;
+	public static String INFO_IC2 = INFO_1 + IC2_MACHINE_NAME + INFO_2 + INFO_8;;
 	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_REG_ITEM = INFO_4 + INFO_5;
@@ -40,15 +55,15 @@ public class Strings {
 	public static String EMPOWERED = "Empowered";
 	
 	public static String BLACK_QUARTZ = "QuartzBlack";
-	public static String DIAMANTINE = "Diamantine";
-	public static String EMERALDIC = "Emeraldic";
+	public static String DIAMATINE = "Diamatine";
+	public static String EMERADIC = "Emeradic";
 	public static String ENORI = "Enori";
 	public static String PALIS = "Palis";
 	public static String RESTONIA = "Restonia";
 	public static String VOID = "Void";
 	
-	public static String EMPOWERED_DIAMANTINE = DIAMANTINE + EMPOWERED;
-	public static String EMPOWERED_EMERALDIC = EMERALDIC + EMPOWERED;
+	public static String EMPOWERED_DIAMATINE = DIAMATINE + EMPOWERED;
+	public static String EMPOWERED_EMERADIC = EMERADIC + EMPOWERED;
 	public static String EMPOWERED_ENORI = ENORI + EMPOWERED;
 	public static String EMPOWERED_PALIS = PALIS + EMPOWERED;
 	public static String EMPOWERED_RESTONIA = RESTONIA + EMPOWERED;
@@ -57,8 +72,8 @@ public class Strings {
 	public static String CRYSTAL_NAME = "item_crystal";
 	public static String EMPOWERED_CRYSTAL_NAME = CRYSTAL_NAME + "_empowered";
 	
-	public static int DIAMANTINE_META = 2;
-	public static int EMERALDIC_META = 4;
+	public static int DIAMATINE_META = 2;
+	public static int EMERADIC_META = 4;
 	public static int ENORI_META = 5;
 	public static int PALIS_META = 1;
 	public static int RESTONIA_META = 0;
@@ -211,6 +226,9 @@ public class Strings {
 	
 	public static String IMMERSIVE_MODID = "immersiveengineering";
 	public static String IMMERSIVE_MODNAME = "Immersive Engineering";
+	
+	public static String IC2_MODID = "ic2";
+	public static String IC2_MODNAME = "IndustrialCraft 2";
 	
 	public static String MEKANISM_MODID = "mekanism";
 	public static String MEKANISM_MODNAME = "Mekanism";

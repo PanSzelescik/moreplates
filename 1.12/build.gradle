@@ -27,26 +27,18 @@ minecraft {
 
 repositories {
 	maven {
-		name = "CoFH Maven"
 		url = "http://maven.covers1624.net"
 	}
 	maven {
-		name = "ChickenBones Maven"
-		url = "http://chickenbones.net/maven/"
-	}
-	maven {
-		name = "JEI Maven"
-		url = "http://dvs1.progwml6.com/files/maven"
+		url = "https://modmaven.k-4u.nl"
 	}
 }
 
 dependencies {
-	compile "cofh:RedstoneFlux:${version_minecraft_rf}-${version_rf}:deobf"
-	compile "cofh:CoFHCore:${version_minecraft}-${version_cofh_core}:deobf"
-	compile "cofh:ThermalFoundation:${version_minecraft}-${version_tf}:deobf"
+	compile "de.ellpeck.actuallyadditions:ActuallyAdditions:${version_minecraft}-${version_actually}:api"
+	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
 	compile "cofh:ThermalExpansion:${version_minecraft}-${version_te}:deobf"
-
-	compile "codechicken:CodeChickenLib:${version_minecraft}-${version_ccl}:deobf"
+	
 	compile "mezz.jei:jei_${version_minecraft}:${version_jei}"
 }
 

@@ -51,7 +51,7 @@
 			"modid": "actuallyadditions"
 		}
 	],
-	"name": "DIAMANTINE",
+	"name": "DIAMATINE",
 	"ingredient": [
 		{
 			"item": "actuallyadditions:item_crystal",
@@ -66,7 +66,7 @@
 			"modid": "actuallyadditions"
 		}
 	],
-	"name": "EMERALDIC",
+	"name": "EMERADIC",
 	"ingredient": [
 		{
 			"item": "actuallyadditions:item_crystal",
@@ -141,7 +141,7 @@
 			"modid": "actuallyadditions"
 		}
 	],
-	"name": "EMPOWERED_DIAMANTINE",
+	"name": "EMPOWERED_DIAMATINE",
 	"ingredient": [
 		{
 			"item": "actuallyadditions:item_crystal_empowered",
@@ -156,7 +156,7 @@
 			"modid": "actuallyadditions"
 		}
 	],
-	"name": "EMPOWERED_EMERALDIC",
+	"name": "EMPOWERED_EMERADIC",
 	"ingredient": [
 		{
 			"item": "actuallyadditions:item_crystal_empowered",

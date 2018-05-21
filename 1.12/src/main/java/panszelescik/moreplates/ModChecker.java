@@ -15,6 +15,7 @@ public class ModChecker {
 	public static boolean isEnderIOLoaded;
 	public static boolean isExtraUtilitiesLoaded;
 	public static boolean isImmersiveEngineeringLoaded;
+	public static boolean isIndustrialCraft2Loaded;
 	public static boolean isMekanismLoaded;
 	public static boolean isMysticalAgradditionsLoaded;
 	public static boolean isMysticalAgricultureLoaded;
@@ -40,6 +41,7 @@ public class ModChecker {
 		isEnderIOLoaded = Loader.isModLoaded(ENDER_IO_MODID);
 		isExtraUtilitiesLoaded = Loader.isModLoaded(EXTRA_UTILITIES_MODID);
 		isImmersiveEngineeringLoaded = Loader.isModLoaded(IMMERSIVE_MODID);
+		isIndustrialCraft2Loaded = Loader.isModLoaded(IC2_MODID);
 		isMekanismLoaded = Loader.isModLoaded(MEKANISM_MODID);
 		isMysticalAgradditionsLoaded = Loader.isModLoaded(M_AGRADDITIONS_MODID);
 		isMysticalAgricultureLoaded = Loader.isModLoaded(M_AGRICULTURE_MODID);
@@ -73,6 +75,8 @@ public class ModChecker {
 			MorePlates.logger.info(EXTRA_UTILITIES_MODNAME + INFO);
 		if (isImmersiveEngineeringLoaded)
 			MorePlates.logger.info(IMMERSIVE_MODNAME + INFO);
+		if (isIndustrialCraft2Loaded)
+			MorePlates.logger.info(IC2_MODNAME + INFO);
 		if (isMekanismLoaded)
 			MorePlates.logger.info(MEKANISM_MODNAME + INFO);
 		if (isMysticalAgradditionsLoaded)
