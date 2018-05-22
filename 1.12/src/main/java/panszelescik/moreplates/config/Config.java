@@ -74,7 +74,7 @@ public class Config {
 	private static final String ENERGYMETALPRESS_COMMENT = "Energy used to make Gears and Plates in Metal Press from Immersive Engineering when support is loaded.";
 	private static final String LOADACTUALLY_COMMENT = "Enable this to add recipes for all Empowered Gears and Plates to Empowerer.";
 	private static final String LOADIMMERSIVE_COMMENT = "Enable this to add recipes for some Gears and Plates to Metal Press (not all, because Immersive Engineering adds).";
-	private static final String LOADIC2_COMMENT = "Enable this to add recipes for all Plates to Metal Former.";
+	private static final String LOADIC2_COMMENT = "Enable this to add recipes for all Plates to Metal Former and Block Cutting Machine.";
 	private static final String LOADPLUGIN_COMMENT = "Enable this to load this plugin when mod is loaded.";
 	private static final String LOADTHERMAL_COMMENT = "Enable this to add recipes for some Gears and Plates to Compactor (not all, because Thermal Expansion adds).";
 	private static final String TIMEEMPOWERER_COMMENT = "Time in seconds to craft Empowered Gears and Plates in Empowerer from Actually Additions when support is loaded.";

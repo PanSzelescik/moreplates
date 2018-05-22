@@ -481,47 +481,29 @@
 },
 
 {
-	"conditions": [
-		{
-			"type": "forge:mod_loaded",
-			"modid": "extrautils2"
-		}
-	],
 	"name": "DEMON",
 	"ingredient": [
 		{
-			"item": "extrautils2:ingredients",
-			"data": 11
+			"type": "forge:ore_dict",
+			"ore": "ingotDemonicMetal"
 		}
 	]
 },
 {
-	"conditions": [
-		{
-			"type": "forge:mod_loaded",
-			"modid": "extrautils2"
-		}
-	],
 	"name": "ENCHANTED",
 	"ingredient": [
 		{
-			"item": "extrautils2:ingredients",
-			"data": 12
+			"type": "forge:ore_dict",
+			"ore": "ingotEnchantedMetal"
 		}
 	]
 },
 {
-	"conditions": [
-		{
-			"type": "forge:mod_loaded",
-			"modid": "extrautils2"
-		}
-	],
 	"name": "EVIL_INFUSED_IRON",
 	"ingredient": [
 		{
-			"item": "extrautils2:ingredients",
-			"data": 17
+			"type": "forge:ore_dict",
+			"ore": "ingotEvilMetal"
 		}
 	]
 },

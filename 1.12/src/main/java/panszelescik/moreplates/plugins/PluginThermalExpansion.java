@@ -49,16 +49,10 @@ public class PluginThermalExpansion {
 			add(REDSTONE, REDSTONE_NAME, id);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 		}
-		if (isExtraUtilitiesLoaded & loadExtraUtilities) {
-			String id = EXTRA_UTILITIES_MODID;
-			add(DEMON, EXU2_NAME, id, DEMON_META);
-			add(ENCHANTED, EXU2_NAME, id, ENCHANTED_META);
-			add(EVIL_INFUSED_IRON, EXU2_NAME, id, EVIL_INFUSED_IRON_META);
-		}
 		if (isProjectELoaded & loadProjectE) {
 			String id = PROJECTE_MODID;
-			add(DARK_MATTER, DARK_MATTER_NAME, id, DARK_MATTER_META);
-			add(RED_MATTER, RED_MATTER_NAME, id, RED_MATTER_META);
+			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
+			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
 		}
 		if (isRefinedStorageLoaded & loadRefinedStorage) {
 			String id = REFINED_STORAGE_MODID;

@@ -9,6 +9,7 @@ public class Strings {
 	public static String CRYSTAL = "crystal";
 	public static String GEM = "gem";
 	public static String ITEM = "item";
+	public static String BLOCK = "block";
 	
 	public static String REFINED = "Refined";
 	public static String ALLOY = "Alloy";
@@ -16,6 +17,9 @@ public class Strings {
 	public static String IRON = "Iron";
 	public static String GOLD = "Gold";
 	public static String STEEL = "Steel";
+	
+	private static String STORAGE = "storage";
+	private static String MATERIAL = "material";
 	
 	public static String DYE = "dye";
 	public static String DYE_LIGHT_BLUE = DYE + "LightBlue";
@@ -37,12 +41,14 @@ public class Strings {
 	public static String INFO_9 = " to: ";
 	
 	private static String ACTUALLY_MACHINE_NAME = "Empowerer";
-	private static String IC2_MACHINE_NAME = "Metal Former";
+	private static String IC2_CUTTING_NAME = "Block Cutting Machine";
+	private static String IC2_FORMER_NAME = "Metal Former";
 	private static String IE_MACHINE_NAME = "Metal Press";
 	private static String TE_MACHINE_NAME = "Compactor";
 	
 	public static String INFO_ACTUALLY = INFO_1 + ACTUALLY_MACHINE_NAME + INFO_2 + INFO_8;
-	public static String INFO_IC2 = INFO_1 + IC2_MACHINE_NAME + INFO_2 + INFO_8;;
+	public static String INFO_CUTTING_IC2 = INFO_1 + IC2_CUTTING_NAME + INFO_2 + INFO_8;;
+	public static String INFO_FORMER_IC2 = INFO_1 + IC2_FORMER_NAME + INFO_2 + INFO_8;;
 	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_REG_ITEM = INFO_4 + INFO_5;
@@ -70,6 +76,10 @@ public class Strings {
 	public static String CRYSTAL_NAME = "item_crystal";
 	public static String EMPOWERED_CRYSTAL_NAME = CRYSTAL_NAME + "_empowered";
 	
+	public static String BLACK_QUARTZ_BLOCK_NAME = BLOCK + "_misc";
+	public static String CRYSTAL_BLOCK_NAME = BLOCK + "_crystal";
+	public static String EMPOWERED_CRYSTAL_BLOCK_NAME = CRYSTAL_BLOCK_NAME + "_empowered";
+	
 	public static int DIAMATINE_META = 2;
 	public static int EMERADIC_META = 4;
 	public static int ENORI_META = 5;
@@ -85,6 +95,9 @@ public class Strings {
 	
 	public static int PURE_CERTUS_QUARTZ_META = 10;
 	
+	public static String CERTUS_QUARTZ_BLOCK_NAME = "quartz_" + BLOCK;
+	public static String FLUIX_BLOCK_NAME = "fluix_" + BLOCK;
+	
 	//Avaritia
 	public static String CRYSTAL_MATRIX = "CrystalMatrix";
 	public static String INFINITY = "Infinity";
@@ -96,6 +109,12 @@ public class Strings {
 	public static String MANASTEEL = "Manasteel";
 	public static String TERRASTEEL = "Terrasteel";
 	
+	public static String BOTANIA_NAME = STORAGE;
+	
+	public static int ELEMENTIUM_META = 2;
+	public static int MANASTEEL_META = 0;
+	public static int TERRASTEEL_META = 1;
+	
 	//Calculator
 	public static String AMETHYST = "Amethyst";
 	public static String ENRICHED_GOLD = "Enriched" + GOLD;
@@ -105,6 +124,11 @@ public class Strings {
 	
 	public static String REDSTONE_NAME = "redstoneingot";
 	public static String REINFORCED_IRON_NAME = "reinforcedironingot";
+	public static String CALCULATOR_NAME = MATERIAL;
+	
+	public static int ENRICHED_GOLD_BLOCK_META = 2;
+	public static int REDSTONE_BLOCK_META = 9;
+	public static int REINFORCED_IRON_BLOCK_META = 3;
 	
 	//Draconic Evolution
 	public static String DRACONIUM = "Draconium";
@@ -124,9 +148,9 @@ public class Strings {
 	//Extra Utilities
 	public static String EXU2_NAME = "ingredients";
 	
-	public static String DEMON = "Demon";
-	public static String ENCHANTED = "Enchanted";
-	public static String EVIL_INFUSED_IRON = "EvilInfused" + IRON;
+	public static String DEMON = "DemonicMetal";
+	public static String ENCHANTED = "EnchantedMetal";
+	public static String EVIL_INFUSED_IRON = "EvilMetal";
 	
 	public static int DEMON_META = 11;
 	public static int ENCHANTED_META = 12;
@@ -161,8 +185,8 @@ public class Strings {
 	public static String DARK_MATTER = "DarkMatter";
 	public static String RED_MATTER = "RedMatter";
 	
-	public static String DARK_MATTER_NAME = "item.pe_matter";
-	public static String RED_MATTER_NAME = DARK_MATTER_NAME;
+	public static String MATTER_NAME = "item.pe_matter";
+	public static String MATTER_BLOCK_NAME = "matter_" + BLOCK;
 	
 	public static int DARK_MATTER_META = 0;
 	public static int RED_MATTER_META = 1;
@@ -175,12 +199,14 @@ public class Strings {
 	public static String QUARTZ_ENRICHED_IRON = "QuartzEnriched" + IRON;
 	
 	public static String QUARTZ_ENRICHED_IRON_NAME = "quartz_enriched_iron";
+	public static String QUARTZ_ENRICHED_IRON_BLOCK_NAME = QUARTZ_ENRICHED_IRON_NAME + "_" + BLOCK;
 	
 	//Thaumcraft
 	public static String AMBER = "Amber";
 	public static String QUICKSILVER = "Quicksilver";
 	
 	public static String QUICKSILVER_NAME = "quicksilver";
+	public static String AMBER_BLOCK_NAME = "amber_" + BLOCK;
 	
 	//Tinkers' Construct
 	public static String ARDITE = "Ardite";
@@ -193,6 +219,8 @@ public class Strings {
 	public static String FIERY = "Fiery";
 	public static String IRONWOOD = IRON + "wood";
 	public static String KNIGHTMETAL = "Knightmetal";
+	
+	public static String IRONWOOD_BLOCK_NAME = "knightmetal_" + BLOCK;
 	
 	//Silicon
 	public static String SILICON = "Silicon";

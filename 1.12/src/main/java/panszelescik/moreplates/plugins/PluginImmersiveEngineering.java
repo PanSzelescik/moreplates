@@ -78,12 +78,11 @@ public class PluginImmersiveEngineering {
 			add(SOULARIUM, INGOT + SOULARIUM);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 		}*/
-		if (isExtraUtilitiesLoaded & loadExtraUtilities) {
-			String id = EXTRA_UTILITIES_MODID;
-			add(DEMON, EXU2_NAME, id, DEMON_META);
-			add(ENCHANTED, EXU2_NAME, id, ENCHANTED_META);
-			add(EVIL_INFUSED_IRON, EXU2_NAME, id, EVIL_INFUSED_IRON_META);
-		}
+		/*if (isExtraUtilitiesLoaded & loadExtraUtilities) {
+			add(DEMON, INGOT + DEMON);
+			add(ENCHANTED, INGOT + ENCHANTED);
+			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
+		}*/
 		/*if (isMekanismLoaded & loadMekanism) {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
@@ -114,8 +113,8 @@ public class PluginImmersiveEngineering {
 		}
 		if (isProjectELoaded & loadProjectE) {
 			String id = PROJECTE_MODID;
-			add(DARK_MATTER, DARK_MATTER_NAME, id, DARK_MATTER_META);
-			add(RED_MATTER, RED_MATTER_NAME, id, RED_MATTER_META);
+			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
+			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
 		}
 		if (isProjectRedLoaded & loadProjectRed) {
 			add(ELECTROTINE, INGOT + ELECTROTINE);
