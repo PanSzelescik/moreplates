@@ -2,12 +2,16 @@ package panszelescik.moreplates.plugins;
 
 import cofh.thermalexpansion.util.managers.machine.CompactorManager;
 import cofh.thermalexpansion.util.managers.machine.CompactorManager.Mode;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 
 import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
+
+import java.util.List;
 
 public class PluginThermalExpansion {
 	
@@ -68,11 +72,14 @@ public class PluginThermalExpansion {
 			add(SILICON, ITEM + SILICON);
 		}
 	}
-	private static void add(String output, String input) {
-		CompactorManager.addRecipe(energy, getOre(input, 4), getOre(GEAR + output), Mode.GEAR);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getOre(input)) + " x4");
-		CompactorManager.addRecipe(energy, getOre(input), getOre(PLATE + output), Mode.PLATE);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getOre(input)));
+	private static void add(String output, String inputOre) {
+		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
+		for (ItemStack input : inputs) {
+			CompactorManager.addRecipe(energy, cloneStack(input, 4), getOre(GEAR + output), Mode.GEAR);
+			MorePlates.logger.debug(INFO_TE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(input) + " x4");
+			CompactorManager.addRecipe(energy, input, getOre(PLATE + output), Mode.PLATE);
+			MorePlates.logger.debug(INFO_TE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(input));
+		}
 	}
 	private static void add(String output, String input, String id) {
 		CompactorManager.addRecipe(energy, getItemStack(id, input, 4), getOre(GEAR + output), Mode.GEAR);

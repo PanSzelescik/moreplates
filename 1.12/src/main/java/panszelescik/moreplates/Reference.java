@@ -33,6 +33,7 @@ public class Reference {
 			+ "after:pneumaticcraft;"
 			+ "after:projecte;"
 			+ "after:projectred-core;"
+			+ "after:refinedstorage;"
 			+ "after:thaumcraft;"
 			+ "after:thermalexpansion@[" + THERMAL_VERSION + ",);"
 			+ "after:tconstruct;"
