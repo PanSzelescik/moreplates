@@ -2,12 +2,15 @@ package panszelescik.moreplates.plugins;
 
 import blusunrize.immersiveengineering.api.crafting.MetalPressRecipe;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 
 import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
+
+import java.util.List;
 
 public class PluginImmersiveEngineering {
 	
@@ -142,11 +145,14 @@ public class PluginImmersiveEngineering {
 			add(SILICON, ITEM + SILICON);
 		}
 	}
-	private static void add(String output, String input) {
-		MetalPressRecipe.addRecipe(getOre(GEAR + output), getOre(input, 4), mold_gear, energy);
-		MorePlates.logger.debug(INFO_IE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getOre(input)) + " x4");
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), input, mold_plate, energy);
-		MorePlates.logger.debug(INFO_IE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getOre(input)));
+	private static void add(String output, String inputOre) {
+		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
+		for (ItemStack input : inputs) {
+			MetalPressRecipe.addRecipe(getOre(GEAR + output), cloneStack(input, 4), mold_gear, energy);
+			MorePlates.logger.debug(INFO_IE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(input) + " x4");
+		}
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energy);
+		MorePlates.logger.debug(INFO_IE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getOre(inputOre)));
 	}
 	private static void add(String output, String input, String id) {
 		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4), mold_gear, energy);
