@@ -98,6 +98,8 @@ public class PluginLoader {
 			PluginImmersiveEngineering.postInit();
 		if (isIndustrialCraft2Loaded & loadIndustrialCraft2Recipes)
 			PluginIndustrialCraft2.postInit();
+		if (isTechRebornLoaded & loadTechRebornRecipes)
+			PluginTechReborn.postInit();
 		if (isThermalExpansionLoaded & loadThermalExpansionRecipes)
 			PluginThermalExpansion.postInit();
 	}

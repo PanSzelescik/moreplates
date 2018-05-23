@@ -24,6 +24,7 @@ public class ModChecker {
 	public static boolean isProjectELoaded;
 	public static boolean isProjectRedLoaded;
 	public static boolean isRefinedStorageLoaded;
+	public static boolean isTechRebornLoaded;
 	public static boolean isThaumcraftLoaded;
 	public static boolean isThermalExpansionLoaded;
 	public static boolean isTinkersConstructLoaded;
@@ -50,6 +51,7 @@ public class ModChecker {
 		isProjectELoaded = Loader.isModLoaded(PROJECTE_MODID);
 		isProjectRedLoaded = Loader.isModLoaded(PROJECT_RED_MODID);
 		isRefinedStorageLoaded = Loader.isModLoaded(REFINED_STORAGE_MODID);
+		isTechRebornLoaded = Loader.isModLoaded(TECHREBORN_MODID);
 		isThaumcraftLoaded = Loader.isModLoaded(THAUMCRAFT_MODID);
 		isThermalExpansionLoaded = Loader.isModLoaded(THERMAL_MODID);
 		isTinkersConstructLoaded = Loader.isModLoaded(TINKERS_MODID);
@@ -93,6 +95,8 @@ public class ModChecker {
 			MorePlates.logger.info(PROJECT_RED_MODNAME + INFO);
 		if (isRefinedStorageLoaded)
 			MorePlates.logger.info(REFINED_STORAGE_MODNAME + INFO);
+		if (isTechRebornLoaded)
+			MorePlates.logger.info(TECHREBORN_MODNAME + INFO);
 		if (isThaumcraftLoaded)
 			MorePlates.logger.info(THAUMCRAFT_MODNAME + INFO);
 		if (isThermalExpansionLoaded)

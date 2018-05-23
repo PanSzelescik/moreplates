@@ -45,12 +45,14 @@ public class Strings {
 	private static String IC2_FORMER_NAME = "Metal Former";
 	private static String IE_MACHINE_NAME = "Metal Press";
 	private static String TE_MACHINE_NAME = "Compactor";
+	private static String TECHREBORN_MACHINE_NAME = "Compressor";
 	
 	public static String INFO_ACTUALLY = INFO_1 + ACTUALLY_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_CUTTING_IC2 = INFO_1 + IC2_CUTTING_NAME + INFO_2 + INFO_8;;
 	public static String INFO_FORMER_IC2 = INFO_1 + IC2_FORMER_NAME + INFO_2 + INFO_8;;
 	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2 + INFO_8;
+	public static String INFO_TECHREBORN = INFO_1 + TECHREBORN_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_REG_ITEM = INFO_4 + INFO_5;
 	public static String INFO_REG_RENDER = INFO_4 + INFO_6;
 	public static String INFO_ORE = INFO_1 + INFO_7;
@@ -279,6 +281,9 @@ public class Strings {
 	
 	public static String REFINED_STORAGE_MODID = "refinedstorage";
 	public static String REFINED_STORAGE_MODNAME = "Refined Storage";
+	
+	public static String TECHREBORN_MODID = "techreborn";
+	public static String TECHREBORN_MODNAME = "Tech Reborn";
 	
 	public static String THAUMCRAFT_MODID = "thaumcraft";
 	public static String THAUMCRAFT_MODNAME = "Thaumcraft";

@@ -41,6 +41,7 @@ public class Config {
 	public static boolean loadProjectE = true;
 	public static boolean loadProjectRed = true;
 	public static boolean loadRefinedStorage = true;
+	public static boolean loadTechRebornRecipes = true;
 	public static boolean loadThaumcraft = true;
 	public static boolean loadThermalExpansionRecipes = true;
 	public static boolean loadTinkersConstruct = true;
@@ -55,13 +56,22 @@ public class Config {
 	private static int minEnergyCompactor = 1;
 	private static int maxEnergyCompactor = 60000;
 	
-	public static int energyMetalPress = 2400;
-	private static int minEnergyMetalPress = 1;
-	private static int maxEnergyMetalPress = 16000;
+	public static int energyCompressor = 4;
+	private static int minEnergyCompressor = 1;
+	private static int maxEnergyCompressor = 2048;
 	
 	public static int energyEmpowerer = 5000;
 	private static int minEnergyEmpowerer = 1;
 	private static int maxEnergyEmpowerer = 1000000;
+	
+	public static int energyMetalPress = 2400;
+	private static int minEnergyMetalPress = 1;
+	private static int maxEnergyMetalPress = 16000;
+	
+	
+	public static int timeCompressor = 300;
+	private static int minTimeCompressor = 10;
+	private static int maxTimeCompressor = 600;
 	
 	public static int timeEmpowerer = 50;
 	private static int minTimeEmpowerer = 1;
@@ -70,13 +80,16 @@ public class Config {
 	//Comments
 	private static final String DURABILITYHAMMER_COMMENT = "Durability of Hammer.";
 	private static final String ENERGYCOMPACTOR_COMMENT = "Energy used to make Gears and Plates in Compactor from Thermal Expansion when support is loaded.";
+	private static final String ENERGYCOMPRESSOR_COMMENT = "Energy used to make some Plates in Compressor from Tech Reborn when support is loaded (in EU/t).";
 	private static final String ENERGYEMPOWERER_COMMENT = "Energy per Display Stand used to make Empowered Gears and Plates in Empowerer from Actually Additions when support is loaded.";
 	private static final String ENERGYMETALPRESS_COMMENT = "Energy used to make Gears and Plates in Metal Press from Immersive Engineering when support is loaded.";
 	private static final String LOADACTUALLY_COMMENT = "Enable this to add recipes for all Empowered Gears and Plates to Empowerer.";
 	private static final String LOADIMMERSIVE_COMMENT = "Enable this to add recipes for some Gears and Plates to Metal Press (not all, because Immersive Engineering adds).";
 	private static final String LOADIC2_COMMENT = "Enable this to add recipes for all Plates to Metal Former and Block Cutting Machine.";
-	private static final String LOADPLUGIN_COMMENT = "Enable this to load this plugin when mod is loaded.";
+	private static final String LOADPLUGIN_COMMENT = "Enable this to load Gears and Plates from this mod when is loaded.";
+	private static final String LOADTECHREBORN_COMMENT = "Enable this to add recipes for some Plates to Compressor (not all, because Tech Reborn adds).";
 	private static final String LOADTHERMAL_COMMENT = "Enable this to add recipes for some Gears and Plates to Compactor (not all, because Thermal Expansion adds).";
+	private static final String TIMECOMPRESSOR_COMMENT = "Time in ticks to craft some Plates in Compressor from Tech Reborn when support is loaded.";
 	private static final String TIMEEMPOWERER_COMMENT = "Time in seconds to craft Empowered Gears and Plates in Empowerer from Actually Additions when support is loaded.";
 	
 	public Config(File configFile) {
@@ -119,15 +132,18 @@ public class Config {
 		loadProjectE = cfg.getBoolean("loadProjectE", CATEGORY_PLUGINS, loadProjectE, LOADPLUGIN_COMMENT);
 		loadProjectRed = cfg.getBoolean("loadProjectRed", CATEGORY_PLUGINS, loadProjectRed, LOADPLUGIN_COMMENT);
 		loadRefinedStorage = cfg.getBoolean("loadRefinedStorage", CATEGORY_PLUGINS, loadRefinedStorage, LOADPLUGIN_COMMENT);
+		loadTechRebornRecipes = cfg.getBoolean("loadTechRebornRecipes", CATEGORY_PLUGINS, loadTechRebornRecipes, LOADTECHREBORN_COMMENT);
 		loadThaumcraft = cfg.getBoolean("loadThaumcraft", CATEGORY_PLUGINS, loadThaumcraft, LOADPLUGIN_COMMENT);
 		loadThermalExpansionRecipes = cfg.getBoolean("loadThermalExpansionRecipes", CATEGORY_PLUGINS, loadThermalExpansionRecipes, LOADTHERMAL_COMMENT);
 		loadTinkersConstruct = cfg.getBoolean("loadTinkersConstruct", CATEGORY_PLUGINS, loadTinkersConstruct, LOADPLUGIN_COMMENT);
 		loadTwilightForest = cfg.getBoolean("loadTwilightForest", CATEGORY_PLUGINS, loadTwilightForest, LOADPLUGIN_COMMENT);
 		
 		energyCompactor = cfg.getInt("energyCompactor", CATEGORY_PLUGINS, energyCompactor, minEnergyCompactor, maxEnergyCompactor, ENERGYCOMPACTOR_COMMENT);
+		energyCompressor = cfg.getInt("energyCompressor", CATEGORY_PLUGINS, energyCompressor, minEnergyCompressor, maxEnergyCompressor, ENERGYCOMPRESSOR_COMMENT);
 		energyEmpowerer = cfg.getInt("energyEmpowerer", CATEGORY_PLUGINS, energyEmpowerer, minEnergyEmpowerer, maxEnergyEmpowerer, ENERGYEMPOWERER_COMMENT);
 		energyMetalPress = cfg.getInt("energyMetalPress", CATEGORY_PLUGINS, energyMetalPress, minEnergyMetalPress, maxEnergyMetalPress, ENERGYMETALPRESS_COMMENT);
 		
+		timeCompressor = cfg.getInt("timeCompressor", CATEGORY_PLUGINS, timeCompressor, minTimeCompressor, maxTimeCompressor, TIMECOMPRESSOR_COMMENT);
 		timeEmpowerer = cfg.getInt("timeEmpowerer", CATEGORY_PLUGINS, timeEmpowerer, minTimeEmpowerer, maxTimeEmpowerer, TIMEEMPOWERER_COMMENT);
 		
 		//General
