@@ -35,7 +35,7 @@ repositories {
 }
 
 dependencies {
-	compile "de.ellpeck.actuallyadditions:ActuallyAdditions:${version_minecraft}-${version_actually}:api"
+	compile "de.ellpeck.actuallyadditions:ActuallyAdditions-unstable:${version_minecraft}-${version_actually}:api"
 	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
 	compile "RebornCore:RebornCore-${version_minecraft}:${version_reborncore}:api"
 	compile "TechReborn:TechReborn-${version_minecraft}:${version_techreborn}:api"
