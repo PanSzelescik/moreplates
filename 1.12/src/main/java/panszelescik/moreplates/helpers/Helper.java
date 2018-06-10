@@ -80,6 +80,22 @@ public class Helper {
 		return retStack;
 	}
 	
+	public static String getItemNameFromOre (String oreName) {
+		return getItemName(getOre(oreName));
+	}
+	
+	public static String getItemNameFromItemStack (String id, String name, int amount, int meta) {
+		return getItemName(getItemStack(id, name, amount, meta));
+	}
+	
+	public static String getItemNameFromItemStack (String id, String name, int amount) {
+		return getItemName(getItemStack(id, name, amount, 0));
+	}
+	
+	public static String getItemNameFromItemStack (String id, String name) {
+		return getItemName(getItemStack(id, name, 1, 0));
+	}
+	
 	public static void oreGear(String ore, Item item) {
 		ore = GEAR + ore;
 		OreDictionary.registerOre(ore, item);

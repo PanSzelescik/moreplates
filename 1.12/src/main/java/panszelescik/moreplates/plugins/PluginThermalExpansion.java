@@ -70,28 +70,28 @@ public class PluginThermalExpansion {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
 			CompactorManager.addRecipe(energy, cloneStack(input, 4), getOre(GEAR + output), Mode.GEAR);
-			MorePlates.logger.debug(INFO_TE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(input) + " x4");
+			MorePlates.logger.debug(INFO_TE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
 			CompactorManager.addRecipe(energy, input, getOre(PLATE + output), Mode.PLATE);
-			MorePlates.logger.debug(INFO_TE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(input));
+			MorePlates.logger.debug(INFO_TE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(input));
 		}
 	}
 	private static void add(String output, String input, String id) {
 		CompactorManager.addRecipe(energy, getItemStack(id, input, 4), getOre(GEAR + output), Mode.GEAR);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getItemStack(id, input)) + " x4");
+		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
 		CompactorManager.addRecipe(energy, getItemStack(id, input), getOre(PLATE + output), Mode.PLATE);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getItemStack(id, input)));
+		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	private static void add(String output, String input, String id, int meta) {
 		CompactorManager.addRecipe(energy, getItemStack(id, input, 4, meta), getOre(GEAR + output), Mode.GEAR);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getItemStack(id, input, 1, meta)) + " x4");
+		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
 		CompactorManager.addRecipe(energy, getItemStack(id, input, 1, meta), getOre(PLATE + output), Mode.PLATE);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getItemStack(id, input, 1, meta)));
+		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 	}
 	//Special for Gaia Spirit Gear and Plate
 	private static void addGaia(String output, String input) {
 		CompactorManager.addRecipe(energy, getOre(input, 4), getOre(output + "Gear"), Mode.GEAR);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(output + "Gear")) + INFO_3 + getItemName(getOre(input)) + " x4");
+		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
 		CompactorManager.addRecipe(energy, getOre(input), getOre(output + "Plate"), Mode.PLATE);
-		MorePlates.logger.debug(INFO_TE + getItemName(getOre(output + "Plate")) + INFO_3 + getItemName(getOre(input)));
+		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 	}
 }

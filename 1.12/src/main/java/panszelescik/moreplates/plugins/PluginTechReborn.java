@@ -233,32 +233,32 @@ public class PluginTechReborn {
 	
 	private static void add(String output, String input) {
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getOre(input)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 	}
 	private static void add(String output, String input, String id) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getItemStack(id, input)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	private static void add(String output, String input, String id, int meta) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getItemStack(id, input, 1, meta)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 	}
 	//Special for Gaia Spirit Gear and Plate
 	private static void addGaia(String output, String input) {
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(output + "Plate")) + INFO_3 + getItemName(getOre(input)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 	}
 	
 	private static void addBlock(String name, int amount) {
 		RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(PLATE + name)) + " x" + amount + INFO_3 + getItemName(getOre(BLOCK + name)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 	}
 	private static void addBlock(String output, String input, int amount, String id) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(PLATE + output)) + " x" + amount + INFO_3 + getItemName(getItemStack(id, input)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	private static void addBlock(String output, String input, int amount, String id, int meta) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
-		MorePlates.logger.debug(INFO_TECHREBORN + getItemName(getOre(PLATE + output)) + " x" + amount + INFO_3 + getItemName(getItemStack(id, input, 1, meta)));
+		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 	}
 }

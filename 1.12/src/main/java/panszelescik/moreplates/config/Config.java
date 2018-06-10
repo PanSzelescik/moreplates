@@ -68,6 +68,10 @@ public class Config {
 	private static int minEnergyMetalPress = 1;
 	private static int maxEnergyMetalPress = 16000;
 	
+	public static int energyReconstructor = 50;
+	private static int minEnergyReconstructor = 1;
+	private static int maxEnergyReconstructor = 100000;
+	
 	
 	public static int timeCompressor = 300;
 	private static int minTimeCompressor = 10;
@@ -83,6 +87,7 @@ public class Config {
 	private static final String ENERGYCOMPRESSOR_COMMENT = "Energy used to make some Plates in Compressor from Tech Reborn when support is loaded (in EU/t).";
 	private static final String ENERGYEMPOWERER_COMMENT = "Energy per Display Stand used to make Empowered Gears and Plates in Empowerer from Actually Additions when support is loaded.";
 	private static final String ENERGYMETALPRESS_COMMENT = "Energy used to make Gears and Plates in Metal Press from Immersive Engineering when support is loaded.";
+	private static final String ENERGYRECONSTRUCTOR_COMMENT = "Energy used to make Gears and Plates in Atomic Reconstructor from Actually Additions when support is loaded and input Gear or Plate is exists.";
 	private static final String LOADACTUALLY_COMMENT = "Enable this to add recipes for all Empowered Gears and Plates to Empowerer.";
 	private static final String LOADIMMERSIVE_COMMENT = "Enable this to add recipes for some Gears and Plates to Metal Press (not all, because Immersive Engineering adds).";
 	private static final String LOADIC2_COMMENT = "Enable this to add recipes for all Plates to Metal Former and Block Cutting Machine.";
@@ -142,6 +147,7 @@ public class Config {
 		energyCompressor = cfg.getInt("energyCompressor", CATEGORY_PLUGINS, energyCompressor, minEnergyCompressor, maxEnergyCompressor, ENERGYCOMPRESSOR_COMMENT);
 		energyEmpowerer = cfg.getInt("energyEmpowerer", CATEGORY_PLUGINS, energyEmpowerer, minEnergyEmpowerer, maxEnergyEmpowerer, ENERGYEMPOWERER_COMMENT);
 		energyMetalPress = cfg.getInt("energyMetalPress", CATEGORY_PLUGINS, energyMetalPress, minEnergyMetalPress, maxEnergyMetalPress, ENERGYMETALPRESS_COMMENT);
+		energyReconstructor = cfg.getInt("energyReconstructor", CATEGORY_PLUGINS, energyReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_COMMENT);
 		
 		timeCompressor = cfg.getInt("timeCompressor", CATEGORY_PLUGINS, timeCompressor, minTimeCompressor, maxTimeCompressor, TIMECOMPRESSOR_COMMENT);
 		timeEmpowerer = cfg.getInt("timeEmpowerer", CATEGORY_PLUGINS, timeEmpowerer, minTimeEmpowerer, maxTimeEmpowerer, TIMEEMPOWERER_COMMENT);

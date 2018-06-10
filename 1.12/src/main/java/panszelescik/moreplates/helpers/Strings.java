@@ -17,6 +17,11 @@ public class Strings {
 	public static String IRON = "Iron";
 	public static String GOLD = "Gold";
 	public static String STEEL = "Steel";
+	public static String REDSTONE_MC = "Redstone";
+	public static String COAL = "Coal";
+	public static String DIAMOND = "Diamond";
+	public static String EMERALD = "Emerald";
+	public static String LAPIS = "Lapis";
 	
 	private static String STORAGE = "storage";
 	private static String MATERIAL = "material";
@@ -40,17 +45,19 @@ public class Strings {
 	public static String INFO_8 = " for: ";
 	public static String INFO_9 = " to: ";
 	
-	private static String ACTUALLY_MACHINE_NAME = "Empowerer";
+	private static String EMPOWERER_NAME = "Empowerer";
 	private static String IC2_CUTTING_NAME = "Block Cutting Machine";
 	private static String IC2_FORMER_NAME = "Metal Former";
 	private static String IE_MACHINE_NAME = "Metal Press";
+	private static String RECONSTRUCTOR_NAME = "Atomic Reconstructor";
 	private static String TE_MACHINE_NAME = "Compactor";
 	private static String TECHREBORN_MACHINE_NAME = "Compressor";
 	
-	public static String INFO_ACTUALLY = INFO_1 + ACTUALLY_MACHINE_NAME + INFO_2 + INFO_8;
-	public static String INFO_CUTTING_IC2 = INFO_1 + IC2_CUTTING_NAME + INFO_2 + INFO_8;;
-	public static String INFO_FORMER_IC2 = INFO_1 + IC2_FORMER_NAME + INFO_2 + INFO_8;;
+	public static String INFO_CUTTING_IC2 = INFO_1 + IC2_CUTTING_NAME + INFO_2 + INFO_8;
+	public static String INFO_EMPOWERER = INFO_1 + EMPOWERER_NAME + INFO_2 + INFO_8;
+	public static String INFO_FORMER_IC2 = INFO_1 + IC2_FORMER_NAME + INFO_2 + INFO_8;
 	public static String INFO_IE = INFO_1 + IE_MACHINE_NAME + INFO_2 + INFO_8;
+	public static String INFO_RECONSTRUCTOR = INFO_1 + RECONSTRUCTOR_NAME + INFO_2 + INFO_8;
 	public static String INFO_TE = INFO_1 + TE_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_TECHREBORN = INFO_1 + TECHREBORN_MACHINE_NAME + INFO_2 + INFO_8;
 	public static String INFO_REG_ITEM = INFO_4 + INFO_5;

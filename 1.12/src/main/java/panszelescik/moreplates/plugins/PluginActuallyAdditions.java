@@ -162,23 +162,47 @@ public class PluginActuallyAdditions {
 		registerRender(empowered_void_plate);
 	}
 	public static void postInit() {
-		add(EMPOWERED_DIAMATINE, DIAMATINE, DYE_LIGHT_BLUE, new ItemStack(Items.CLAY_BALL), new ItemStack(Items.CLAY_BALL), new ItemStack(Blocks.CLAY));
+		addEmpowerer(EMPOWERED_DIAMATINE, DIAMATINE, DYE_LIGHT_BLUE, new ItemStack(Items.CLAY_BALL), new ItemStack(Items.CLAY_BALL), new ItemStack(Blocks.CLAY));
 		List<ItemStack> balls = OreDictionary.getOres("slimeball");
 		for (ItemStack ball : balls) {
-			add(EMPOWERED_EMERADIC, EMERADIC, DYE_LIME, new ItemStack(Blocks.TALLGRASS, 1, 1), new ItemStack(Blocks.SAPLING), ball.copy());
+			addEmpowerer(EMPOWERED_EMERADIC, EMERADIC, DYE_LIME, new ItemStack(Blocks.TALLGRASS, 1, 1), new ItemStack(Blocks.SAPLING), ball.copy());
 		}
-		add(EMPOWERED_ENORI, ENORI, DYE_GRAY, new ItemStack(Items.SNOWBALL), new ItemStack(Blocks.STONE_BUTTON), new ItemStack(Blocks.COBBLESTONE));
-		add(EMPOWERED_PALIS, PALIS, DYE_CYAN, new ItemStack(Items.PRISMARINE_SHARD), new ItemStack(Items.PRISMARINE_SHARD), new ItemStack(Items.PRISMARINE_SHARD));
-		add(EMPOWERED_RESTONIA, RESTONIA, DYE_RED, new ItemStack(Items.NETHERBRICK), new ItemStack(Items.REDSTONE), new ItemStack(Items.BRICK));
-		add(EMPOWERED_VOID, VOID, DYE_BLACK, new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.FLINT), new ItemStack(Blocks.STONE));
+		addEmpowerer(EMPOWERED_ENORI, ENORI, DYE_GRAY, new ItemStack(Items.SNOWBALL), new ItemStack(Blocks.STONE_BUTTON), new ItemStack(Blocks.COBBLESTONE));
+		addEmpowerer(EMPOWERED_PALIS, PALIS, DYE_CYAN, new ItemStack(Items.PRISMARINE_SHARD), new ItemStack(Items.PRISMARINE_SHARD), new ItemStack(Items.PRISMARINE_SHARD));
+		addEmpowerer(EMPOWERED_RESTONIA, RESTONIA, DYE_RED, new ItemStack(Items.NETHERBRICK), new ItemStack(Items.REDSTONE), new ItemStack(Items.BRICK));
+		addEmpowerer(EMPOWERED_VOID, VOID, DYE_BLACK, new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.FLINT), new ItemStack(Blocks.STONE));
+		
+		addReconstructor(DIAMATINE, DIAMOND);
+		addReconstructor(EMERADIC, EMERALD);
+		addReconstructor(ENORI, IRON);
+		addReconstructor(PALIS, LAPIS);
+		addReconstructor(RESTONIA, REDSTONE_MC);
+		addReconstructor(VOID, COAL);
 	}
-	private static void add(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
+	private static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
 			ActuallyAdditionsAPI.addEmpowererRecipe(getOre(GEAR + input), getOre(GEAR + output), dyeStack, modifier2, modifier3, modifier4, energyEmpowerer, timeEmpowerer, null);
-			MorePlates.logger.debug(INFO_ACTUALLY + getItemName(getOre(GEAR + output)) + INFO_3 + getItemName(getOre(GEAR + input)) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
 			ActuallyAdditionsAPI.addEmpowererRecipe(getOre(PLATE + input), getOre(PLATE + output), dyeStack, modifier2, modifier3, modifier4, energyEmpowerer, timeEmpowerer, null);
-			MorePlates.logger.debug(INFO_ACTUALLY + getItemName(getOre(PLATE + output)) + INFO_3 + getItemName(getOre(PLATE + input)) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+		}
+	}
+	private static void addReconstructor(String output, String input) {
+		if (oreNameExists(GEAR + input)) {
+			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
+			for (ItemStack inputStack : inputs) {
+				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(inputStack, getOre(GEAR + output), energyReconstructor);
+				MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
+			}
+		}
+		
+		if (oreNameExists(PLATE + input)) {
+			List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
+			for (ItemStack inputStack : inputss) {
+				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(inputStack, getOre(PLATE + output), energyReconstructor);
+				MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
+			}
 		}
 	}
 }
