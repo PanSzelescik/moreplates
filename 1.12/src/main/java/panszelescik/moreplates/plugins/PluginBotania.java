@@ -2,7 +2,9 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
 import panszelescik.moreplates.items.*;
+import vazkii.botania.api.BotaniaAPI;
 
+import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
@@ -55,5 +57,24 @@ public class PluginBotania {
 		registerRender(manasteel_plate);
 		registerRender(terrasteel_gear);
 		registerRender(terrasteel_plate);
+	}
+	
+	public static void postInit() {
+		addManaInfusion(MANASTEEL, IRON);
+		addElvenTrade(ELEMENTIUM, MANASTEEL);
+	}
+	
+	private static void addManaInfusion(String output, String input) {
+		if (oreNameExists(GEAR + input)) {
+			BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana);
+		}
+		
+		if (oreNameExists(PLATE + input)) {
+			BotaniaAPI.registerManaInfusionRecipe(getOre(PLATE + output), PLATE + input, manasteelMana);
+		}
+	}
+	private static void addElvenTrade(String output, String input) {
+		BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
+		BotaniaAPI.registerElvenTradeRecipe(getOre(PLATE + output), PLATE + input, PLATE + input);
 	}
 }

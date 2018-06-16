@@ -94,6 +94,10 @@ public class PluginLoader {
 	public static void postInit() {
 		if (isActuallyAdditionsLoaded & loadActuallyAdditionsRecipes)
 			PluginActuallyAdditions.postInit();
+		if (isBotaniaLoaded & loadBotaniaRecipes)
+			PluginBotania.postInit();
+		if (isBotaniaTweaksLoaded & loadBotaniaTweaksRecipes)
+			PluginBotaniaTweaks.postInit();
 		if (isImmersiveEngineeringLoaded & loadImmersiveEngineeringRecipes)
 			PluginImmersiveEngineering.postInit();
 		if (isIndustrialCraft2Loaded & loadIndustrialCraft2Recipes)

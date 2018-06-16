@@ -28,8 +28,8 @@ public class PluginMultiMod {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
-			registerRender(silicon_gear);
-			registerRender(silicon_plate);
+			registerItem(silicon_gear);
+			registerItem(silicon_plate);
 			
 			oreGear(SILICON, silicon_gear);
 			orePlate(SILICON, silicon_plate);

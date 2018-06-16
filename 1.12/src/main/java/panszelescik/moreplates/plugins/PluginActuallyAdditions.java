@@ -1,5 +1,6 @@
 package panszelescik.moreplates.plugins;
 
+import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -7,8 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.items.*;
-
-import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
@@ -161,6 +160,7 @@ public class PluginActuallyAdditions {
 		registerRender(empowered_void_gear);
 		registerRender(empowered_void_plate);
 	}
+	
 	public static void postInit() {
 		addEmpowerer(EMPOWERED_DIAMATINE, DIAMATINE, DYE_LIGHT_BLUE, new ItemStack(Items.CLAY_BALL), new ItemStack(Items.CLAY_BALL), new ItemStack(Blocks.CLAY));
 		List<ItemStack> balls = OreDictionary.getOres("slimeball");
@@ -179,6 +179,7 @@ public class PluginActuallyAdditions {
 		addReconstructor(RESTONIA, REDSTONE_MC, energyRestoniaReconstructor);
 		addReconstructor(VOID, COAL, energyVoidReconstructor);
 	}
+	
 	private static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
@@ -188,6 +189,7 @@ public class PluginActuallyAdditions {
 			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
 		}
 	}
+	
 	private static void addReconstructor(String output, String input, int energy) {
 		if (oreNameExists(GEAR + input)) {
 			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);

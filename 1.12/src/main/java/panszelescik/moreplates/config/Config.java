@@ -24,6 +24,7 @@ public class Config {
 	private static final String CATEGORY_PLUGINS = "Plugins";
 	
 	private static final String CATEGORY_ACTUALLY = ACTUALLY_MODNAME;
+	private static final String CATEGORY_BOTANIA = BOTANIA_MODNAME;
 	private static final String CATEGORY_IMMERSIVE = IMMERSIVE_MODNAME;
 	private static final String CATEGORY_TECHREBORN = TECHREBORN_MODNAME;
 	private static final String CATEGORY_THERMAL = THERMAL_MODNAME;
@@ -34,6 +35,8 @@ public class Config {
 	public static boolean loadAppliedEnergistics2 = true;
 	public static boolean loadAvaritia = true;
 	public static boolean loadBotania = true;
+	public static boolean loadBotaniaRecipes = true;
+	public static boolean loadBotaniaTweaksRecipes = true;
 	public static boolean loadCalculator = true;
 	public static boolean loadDraconicEvolution = true;
 	public static boolean loadEnderIO = true;
@@ -85,6 +88,11 @@ public class Config {
 	private static int maxEnergyReconstructor = 100000;
 	
 	
+	public static int manasteelMana = 3000;
+	private static int minManasteelMana = 1;
+	private static int maxManasteelMana = 100000;
+	
+	
 	public static int timeCompressor = 300;
 	private static int minTimeCompressor = 10;
 	private static int maxTimeCompressor = 600;
@@ -102,11 +110,14 @@ public class Config {
 	private static final String ENERGYRECONSTRUCTOR_1_COMMENT = "Energy used to make ";
 	private static final String ENERGYRECONSTRUCTOR_2_COMMENT = " Gear and Plate in Atomic Reconstructor when support is loaded";
 	private static final String LOADACTUALLY_COMMENT = "Enable this to add recipes for Non-Empowered Gears and Plates to Atomic Reconstructor and Empowered Gears and Plates to Empowerer";
+	private static final String LOADBOTANIA_COMMENT = "Enable this to add recipes for Manasteel and Elementium Gears and Plates in Mana Pool and Elven Trade";
+	private static final String LOADBOTANIA_TWEAKS_COMMENT = "Enable this to add recipes for Terrasteel Gears and Plates in Terrestrial Agglomeration Plate";
 	private static final String LOADIMMERSIVE_COMMENT = "Enable this to add recipes for some Gears and Plates to Metal Press (not all, because Immersive Engineering adds)";
 	private static final String LOADIC2_COMMENT = "Enable this to add recipes for all Plates to Block Cutting Machine and Metal Former";
 	private static final String LOADPLUGIN_COMMENT = "Enable this to load Gears and Plates from this mod when is loaded";
 	private static final String LOADTECHREBORN_COMMENT = "Enable this to add recipes for some Plates to Compressor (not all, because Tech Reborn adds)";
 	private static final String LOADTHERMAL_COMMENT = "Enable this to add recipes for some Gears and Plates to Compactor (not all, because Thermal Expansion adds)";
+	private static final String MANASTEELMANA_COMMENT = "Amount of mana used to make Manasteel Gear and Plate";
 	private static final String TIMECOMPRESSOR_COMMENT = "Time in ticks to craft some Plates in Compressor when support is loaded";
 	private static final String TIMEEMPOWERER_COMMENT = "Time in seconds to craft Empowered Gears and Plates in Empowerer when support is loaded";
 	
@@ -136,6 +147,8 @@ public class Config {
 		loadAppliedEnergistics2 = cfg.getBoolean("loadAppliedEnergistics2", CATEGORY_PLUGINS, loadAppliedEnergistics2, LOADPLUGIN_COMMENT);
 		loadAvaritia = cfg.getBoolean("loadAvaritia", CATEGORY_PLUGINS, loadAvaritia, LOADPLUGIN_COMMENT);
 		loadBotania = cfg.getBoolean("loadBotania", CATEGORY_PLUGINS, loadBotania, LOADPLUGIN_COMMENT);
+		loadBotaniaRecipes = cfg.getBoolean("loadBotaniaRecipes", CATEGORY_PLUGINS, loadBotaniaRecipes, LOADBOTANIA_COMMENT);
+		loadBotaniaTweaksRecipes = cfg.getBoolean("loadBotaniaTweaksRecipes", CATEGORY_PLUGINS, loadBotaniaTweaksRecipes, LOADBOTANIA_TWEAKS_COMMENT);
 		loadCalculator = cfg.getBoolean("loadCalculator", CATEGORY_PLUGINS, loadCalculator, LOADPLUGIN_COMMENT);			
 		loadDraconicEvolution = cfg.getBoolean("loadDraconicEvolution", CATEGORY_PLUGINS, loadDraconicEvolution, LOADPLUGIN_COMMENT);
 		loadEnderIO = cfg.getBoolean("loadEnderIO", CATEGORY_PLUGINS, loadEnderIO, LOADPLUGIN_COMMENT);
@@ -170,6 +183,13 @@ public class Config {
 		energyPalisReconstructor = cfg.getInt("energyPalisReconstructor", CATEGORY_ACTUALLY, energyPalisReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Palis" + ENERGYRECONSTRUCTOR_2_COMMENT);
 		energyRestoniaReconstructor = cfg.getInt("energyRestoniaReconstructor", CATEGORY_ACTUALLY, energyRestoniaReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Restonia" + ENERGYRECONSTRUCTOR_2_COMMENT);
 		energyVoidReconstructor = cfg.getInt("energyVoidReconstructor", CATEGORY_ACTUALLY, energyVoidReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Void" + ENERGYRECONSTRUCTOR_2_COMMENT);
+		
+		
+		//Botania & Botania Tweaks
+		cfg.addCustomCategoryComment(CATEGORY_BOTANIA, "Botania & Botania Tweaks recipes settings");
+		cfg.setCategoryRequiresMcRestart(CATEGORY_BOTANIA, true);
+		
+		manasteelMana = cfg.getInt("manasteelMana", CATEGORY_BOTANIA, manasteelMana, minManasteelMana, maxManasteelMana, MANASTEELMANA_COMMENT);
 		
 		
 		//Immersive Engineering Recipes

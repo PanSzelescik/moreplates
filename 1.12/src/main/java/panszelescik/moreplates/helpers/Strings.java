@@ -247,6 +247,9 @@ public class Strings {
 	public static String BOTANIA_MODID = "botania";
 	public static String BOTANIA_MODNAME = "Botania";
 	
+	public static String BOTANIA_TWEAKS_MODID = "botaniatweaks";
+	public static String BOTANIA_TWEAKS_MODNAME = "Botania Tweaks";
+	
 	public static String CALCULATOR_MODID = "calculator";
 	public static String CALCULATOR_MODNAME = "Calculator";
 	
