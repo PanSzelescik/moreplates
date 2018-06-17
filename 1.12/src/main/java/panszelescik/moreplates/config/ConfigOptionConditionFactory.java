@@ -21,9 +21,13 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
         	case "enableIC2Hammer":
         		if (isIndustrialCraft2Loaded)
         			return () -> Config.enableIC2Hammer;
+        		else
+        			return () -> false;
         	case "enableIEHammer":
         		if (isImmersiveEngineeringLoaded)
         			return () -> Config.enableIEHammer;
+        		else
+            		return () -> false;
         	default:
         		throw new RuntimeException(String.format("Invalid config setting: %s", configSetting));
         }

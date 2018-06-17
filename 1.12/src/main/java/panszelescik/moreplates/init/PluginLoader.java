@@ -96,8 +96,6 @@ public class PluginLoader {
 			PluginActuallyAdditions.postInit();
 		if (isBotaniaLoaded & loadBotaniaRecipes)
 			PluginBotania.postInit();
-		if (isBotaniaTweaksLoaded & loadBotaniaTweaksRecipes)
-			PluginBotaniaTweaks.postInit();
 		if (isImmersiveEngineeringLoaded & loadImmersiveEngineeringRecipes)
 			PluginImmersiveEngineering.postInit();
 		if (isIndustrialCraft2Loaded & loadIndustrialCraft2Recipes)

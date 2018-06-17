@@ -19,7 +19,6 @@ public class Reference {
 			+ "after:appliedenergistics2;"
 			+ "after:avaritia;"
 			+ "after:botania;"
-			+ "after:botaniatweaks;"
 			+ "after:calculator;"
 			+ "after:draconicevolution;"
 			+ "after:enderio;"

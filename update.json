@@ -15,7 +15,7 @@
    },
    
    "1.12.2": {
-   "5.0.0": "Changed localization of update.json\nReworked config file (I recommend delete old config!)\nAdded Actually Additions support for Atomic Reconstructor, Empowerer and items\nAdded Avaritia support\nAdded Botania support for Mana Infusion and Elven Trade\nAdded Botania Tweaks support for Terrestrial Agglomeration Plate\nAdded Immersive Engineering support for Engineer's Hammer for all plates\nAdded IndustrialCraft 2 support for Block Cutting Machine, Metal Former and Forge Hammer for all plates\nAdded Tech Reborn support for Compressor\nFixed Oredict recipes in Compactor and Metal Press when is a few inputs with one Ore Dictionary",
+   "5.0.0": "Changed localization of update.json\nReworked config file (I recommend delete old config!)\nAdded Actually Additions support for Atomic Reconstructor, Empowerer and items\nAdded Avaritia support\nAdded Botania support for Mana Infusion and Elven Trade\nAdded Immersive Engineering support for Engineer's Hammer for all plates\nAdded IndustrialCraft 2 support for Block Cutting Machine, Metal Former and Forge Hammer for all plates\nAdded Tech Reborn support for Compressor\nFixed Oredict recipes in Compactor and Metal Press when is a few inputs with one Ore Dictionary",
    "4.1.0": "Added PlusTiC support\nAdded PneumaticCraft: Repressurized support\nAdded Thaumcraft support\nAdded The Twilight Forest support\nDisabled duplicated recipes in Metal Press from Immersive Engineering\nImmersive Engineering support no longer requires CoFH Core",
    "4.0.3": "Added debug informations\nFixed Project Red support\nOptimizations and cleanups",
    "4.0.2": "Cleanups and more infos in console",

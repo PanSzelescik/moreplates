@@ -37,7 +37,6 @@ public class Config {
 	public static boolean loadAvaritia = true;
 	public static boolean loadBotania = true;
 	public static boolean loadBotaniaRecipes = true;
-	public static boolean loadBotaniaTweaksRecipes = true;
 	public static boolean loadCalculator = true;
 	public static boolean loadDraconicEvolution = true;
 	public static boolean loadEnderIO = true;
@@ -117,7 +116,6 @@ public class Config {
 	private static final String IE_HAMMER_COMMENT = "Enable this to add option to make all Plates with Engineer's Hammer";
 	private static final String LOADACTUALLY_COMMENT = "Enable this to add recipes for Non-Empowered Gears and Plates to Atomic Reconstructor and Empowered Gears and Plates to Empowerer";
 	private static final String LOADBOTANIA_COMMENT = "Enable this to add recipes for Manasteel and Elementium Gears and Plates in Mana Pool and Elven Trade";
-	private static final String LOADBOTANIA_TWEAKS_COMMENT = "Enable this to add recipes for Terrasteel Gears and Plates in Terrestrial Agglomeration Plate";
 	private static final String LOADIMMERSIVE_COMMENT = "Enable this to add recipes for some Gears and Plates to Metal Press (not all, because Immersive Engineering adds)";
 	private static final String LOADIC2_COMMENT = "Enable this to add recipes for all Plates to Block Cutting Machine and Metal Former";
 	private static final String LOADPLUGIN_COMMENT = "Enable this to load Gears and Plates from this mod when is loaded";
@@ -154,7 +152,6 @@ public class Config {
 		loadAvaritia = cfg.getBoolean("loadAvaritia", CATEGORY_PLUGINS, loadAvaritia, LOADPLUGIN_COMMENT);
 		loadBotania = cfg.getBoolean("loadBotania", CATEGORY_PLUGINS, loadBotania, LOADPLUGIN_COMMENT);
 		loadBotaniaRecipes = cfg.getBoolean("loadBotaniaRecipes", CATEGORY_PLUGINS, loadBotaniaRecipes, LOADBOTANIA_COMMENT);
-		loadBotaniaTweaksRecipes = cfg.getBoolean("loadBotaniaTweaksRecipes", CATEGORY_PLUGINS, loadBotaniaTweaksRecipes, LOADBOTANIA_TWEAKS_COMMENT);
 		loadCalculator = cfg.getBoolean("loadCalculator", CATEGORY_PLUGINS, loadCalculator, LOADPLUGIN_COMMENT);			
 		loadDraconicEvolution = cfg.getBoolean("loadDraconicEvolution", CATEGORY_PLUGINS, loadDraconicEvolution, LOADPLUGIN_COMMENT);
 		loadEnderIO = cfg.getBoolean("loadEnderIO", CATEGORY_PLUGINS, loadEnderIO, LOADPLUGIN_COMMENT);
@@ -191,8 +188,8 @@ public class Config {
 		energyVoidReconstructor = cfg.getInt("energyVoidReconstructor", CATEGORY_ACTUALLY, energyVoidReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Void" + ENERGYRECONSTRUCTOR_2_COMMENT);
 		
 		
-		//Botania & Botania Tweaks
-		cfg.addCustomCategoryComment(CATEGORY_BOTANIA, "Botania & Botania Tweaks recipes settings");
+		//Botania
+		cfg.addCustomCategoryComment(CATEGORY_BOTANIA, "Botania recipes settings");
 		cfg.setCategoryRequiresMcRestart(CATEGORY_BOTANIA, true);
 		
 		manasteelMana = cfg.getInt("manasteelMana", CATEGORY_BOTANIA, manasteelMana, minManasteelMana, maxManasteelMana, MANASTEELMANA_COMMENT);
