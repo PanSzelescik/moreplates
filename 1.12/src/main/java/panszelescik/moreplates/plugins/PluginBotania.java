@@ -1,6 +1,7 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
+import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.items.*;
 import vazkii.botania.api.BotaniaAPI;
 
@@ -67,14 +68,18 @@ public class PluginBotania {
 	private static void addManaInfusion(String output, String input) {
 		if (oreNameExists(GEAR + input)) {
 			BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana);
+			MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input));
 		}
 		
 		if (oreNameExists(PLATE + input)) {
 			BotaniaAPI.registerManaInfusionRecipe(getOre(PLATE + output), PLATE + input, manasteelMana);
+			MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input));
 		}
 	}
 	private static void addElvenTrade(String output, String input) {
 		BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
+		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");
 		BotaniaAPI.registerElvenTradeRecipe(getOre(PLATE + output), PLATE + input, PLATE + input);
+		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + " x2");
 	}
 }

@@ -1,5 +1,26 @@
 [
 {
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIC2Hammer"
+					}
+				},
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIEHammer"
+					}
+				}
+			]
+		}
+	],
 	"name": "HAMMER",
 	"ingredient": [
 		{
@@ -7,6 +28,100 @@
 		}
 	]
 },
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIC2Hammer"
+				},
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIEHammer"
+					}
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "craftingToolForgeHammer"
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIC2Hammer"
+					}
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIEHammer"
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer"
+		},
+		{
+			"item": "immersiveengineering:tool",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIC2Hammer"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIEHammer"
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "craftingToolForgeHammer"
+		},
+		{
+			"item": "immersiveengineering:tool",
+			"data": 0
+		}
+	]
+},
+
+
+
 {
 	"name": "IRON",
 	"ingredient": [

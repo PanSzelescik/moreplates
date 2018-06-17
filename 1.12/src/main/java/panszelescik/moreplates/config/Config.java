@@ -26,6 +26,7 @@ public class Config {
 	private static final String CATEGORY_ACTUALLY = ACTUALLY_MODNAME;
 	private static final String CATEGORY_BOTANIA = BOTANIA_MODNAME;
 	private static final String CATEGORY_IMMERSIVE = IMMERSIVE_MODNAME;
+	private static final String CATEGORY_IC2 = IC2_MODNAME;
 	private static final String CATEGORY_TECHREBORN = TECHREBORN_MODNAME;
 	private static final String CATEGORY_THERMAL = THERMAL_MODNAME;
 	
@@ -56,6 +57,9 @@ public class Config {
 	public static boolean loadThermalExpansionRecipes = true;
 	public static boolean loadTinkersConstruct = true;
 	public static boolean loadTwilightForest = true;
+	
+	public static boolean enableIC2Hammer = true;
+	public static boolean enableIEHammer = true;
 	
 	//Ints
 	public static int durabilityHammer = 150;
@@ -109,6 +113,8 @@ public class Config {
 	private static final String ENERGYMETALPRESS_COMMENT = "Energy used to make Gears and Plates in Metal Press when support is loaded";
 	private static final String ENERGYRECONSTRUCTOR_1_COMMENT = "Energy used to make ";
 	private static final String ENERGYRECONSTRUCTOR_2_COMMENT = " Gear and Plate in Atomic Reconstructor when support is loaded";
+	private static final String IC2_HAMMER_COMMENT = "Enable this to add option to make all Plates with Forge Hammer";
+	private static final String IE_HAMMER_COMMENT = "Enable this to add option to make all Plates with Engineer's Hammer";
 	private static final String LOADACTUALLY_COMMENT = "Enable this to add recipes for Non-Empowered Gears and Plates to Atomic Reconstructor and Empowered Gears and Plates to Empowerer";
 	private static final String LOADBOTANIA_COMMENT = "Enable this to add recipes for Manasteel and Elementium Gears and Plates in Mana Pool and Elven Trade";
 	private static final String LOADBOTANIA_TWEAKS_COMMENT = "Enable this to add recipes for Terrasteel Gears and Plates in Terrestrial Agglomeration Plate";
@@ -196,7 +202,15 @@ public class Config {
 		cfg.addCustomCategoryComment(CATEGORY_IMMERSIVE, "Immersive Engineering recipes settings");
 		cfg.setCategoryRequiresMcRestart(CATEGORY_IMMERSIVE, true);
 		
+		enableIEHammer = cfg.getBoolean("enableIEHammer", CATEGORY_IMMERSIVE, enableIEHammer, IE_HAMMER_COMMENT);
 		energyMetalPress = cfg.getInt("energyMetalPress", CATEGORY_IMMERSIVE, energyMetalPress, minEnergyMetalPress, maxEnergyMetalPress, ENERGYMETALPRESS_COMMENT);
+		
+		
+		//Industrial Craft 2 Recipes
+		cfg.addCustomCategoryComment(CATEGORY_IC2, "Industrial Craft 2 recipes settings");
+		cfg.setCategoryRequiresMcRestart(CATEGORY_IC2, true);
+		
+		enableIC2Hammer = cfg.getBoolean("enableIC2Hammer", CATEGORY_IC2, enableIC2Hammer, IC2_HAMMER_COMMENT);
 		
 		
 		//Tech Reborn Recipes
@@ -232,7 +246,9 @@ public class Config {
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_PLUGINS)));
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_GENERAL)));
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_ACTUALLY)));
+		list.add(new ConfigElement(cfg.getCategory(CATEGORY_BOTANIA)));
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_IMMERSIVE)));
+		list.add(new ConfigElement(cfg.getCategory(CATEGORY_IC2)));
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_TECHREBORN)));
 		list.add(new ConfigElement(cfg.getCategory(CATEGORY_THERMAL)));
 		
