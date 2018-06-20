@@ -27,7 +27,7 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
         		if (isImmersiveEngineeringLoaded)
         			return () -> Config.enableIEHammer;
         		else
-            		return () -> false;
+        			return () -> false;
         	default:
         		throw new RuntimeException(String.format("Invalid config setting: %s", configSetting));
         }
