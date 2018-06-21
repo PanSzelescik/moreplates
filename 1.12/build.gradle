@@ -2,12 +2,15 @@ buildscript {
     repositories {
         jcenter()
         maven { url = "http://files.minecraftforge.net/maven" }
+		maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.0.10"
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'com.matthewprenger.cursegradle'
 
 version = "${mod_version}"
 group = "${mod_group}"
@@ -57,4 +60,38 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+curseforge {
+	apiKey = ''
+	project {
+		id = '266736'
+		releaseType = 'release'
+		changelog = 'https://github.com/PanSzelescik/moreplates/blob/master/CHANGELOG.md'
+		relations {
+			optionalLibrary 'tinkers-construct'
+			optionalLibrary 'thermalexpansion'
+			optionalLibrary 'the-twilight-forest'
+			optionalLibrary 'thaumcraft'
+			optionalLibrary 'techreborn'
+			optionalLibrary 'refined-storage'
+			optionalLibrary 'projecte'
+			optionalLibrary 'project-red-base'
+			optionalLibrary 'pneumaticcraft-repressurized'
+			optionalLibrary 'plustic'
+			optionalLibrary 'mystical-agriculture'
+			optionalLibrary 'mystical-agradditions'
+			optionalLibrary 'mekanism'
+			optionalLibrary 'industrial-craft'
+			optionalLibrary 'immersive-engineering'
+			optionalLibrary 'extra-utilities'
+			optionalLibrary 'ender-io'
+			optionalLibrary 'draconic-evolution'
+			optionalLibrary 'calculator'
+			optionalLibrary 'botania'
+			optionalLibrary 'avaritia-1-10'
+			optionalLibrary 'applied-energistics-2'
+			optionalLibrary 'actually-additions'
+		}
+	}
 }
