@@ -11,7 +11,7 @@
 	"type": "forge:ore_shapeless",
 	"ingredients": [
 		{
-			"item": "#REDSTONE"
+			"item": "#REDSTONE_CALCULATOR"
 		},
 		{
 			"item": "#HAMMER"

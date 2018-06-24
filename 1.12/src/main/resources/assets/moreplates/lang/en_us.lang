@@ -2,6 +2,26 @@ itemGroup.items=More Plates
 
 item.hammer.name=Hammer
 
+//Vanilla
+item.coal_gear.name=Coal Gear
+item.coal_plate.name=Coal Plate
+item.diamond_gear.name=Diamond Gear
+item.diamond_plate.name=Diamond Plate
+item.emerald_gear.name=Emerald Gear
+item.emerald_plate.name=Emerald Plate
+item.glowstone_gear.name=Glowstone Gear
+item.glowstone_plate.name=Glowstone Plate
+item.gold_gear.name=Gold Gear
+item.gold_plate.name=Gold Plate
+item.iron_gear.name=Iron Gear
+item.iron_plate.name=Iron Plate
+item.lapis_lazuli_gear.name=Lapis Lazuli Gear
+item.lapis_lazuli_plate.name=Lapis Lazuli Plate
+item.nether_quartz_gear.name=Nether Quartz Gear
+item.nether_quartz_plate.name=Nether Quartz Plate
+item.redstone_gear.name=Redstone Gear
+item.redstone_plate.name=Redstone Plate
+
 //Actually Additions
 
 item.black_quartz_gear.name=Black Quartz Gear

@@ -23,6 +23,7 @@ public class Strings {
 	public static String DIAMOND = "Diamond";
 	public static String EMERALD = "Emerald";
 	public static String LAPIS = "Lapis";
+	public static String QUARTZ = "Quartz";
 	
 	private static String STORAGE = "storage";
 	private static String MATERIAL = "material";

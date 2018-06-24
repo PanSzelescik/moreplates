@@ -209,20 +209,15 @@ public class PluginActuallyAdditions {
      * @param energy        The amount of RF used per conversion
      */
 	private static void addReconstructor(String output, String input, int energy) {
-		if (oreNameExists(GEAR + input)) {
-			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
-			for (ItemStack inputStack : inputs) {
-				MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
-				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(GEAR + output), energy);
-			}
+		List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
+		for (ItemStack inputStack : inputs) {
+			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
+			ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(GEAR + output), energy);
 		}
-		
-		if (oreNameExists(PLATE + input)) {
-			List<ItemStack> inputs = OreDictionary.getOres(PLATE + input);
-			for (ItemStack inputStack : inputs) {
-				MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
-				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(PLATE + output), energy);
-			}
+		List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
+		for (ItemStack inputStack : inputss) {
+			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
+			ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(PLATE + output), energy);
 		}
 	}
 }

@@ -16,7 +16,7 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"M": {
-			"item": "#REDSTONE"
+			"item": "#REDSTONE_CALCULATOR"
 		},
 		"I": {
 			"item": "#IRON"

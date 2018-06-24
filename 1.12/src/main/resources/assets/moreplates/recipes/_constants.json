@@ -121,7 +121,51 @@
 },
 
 
-
+{
+	"name": "COAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "coal"
+		}
+	]
+},
+{
+	"name": "DIAMOND",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemDiamond"
+		}
+	]
+},
+{
+	"name": "EMERALD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemEmerald"
+		}
+	]
+},
+{
+	"name": "GLOWSTONE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "dustGlowstone"
+		}
+	]
+},
+{
+	"name": "GOLD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotGold"
+		}
+	]
+},
 {
 	"name": "IRON",
 	"ingredient": [
@@ -132,11 +176,29 @@
 	]
 },
 {
-	"name": "GOLD",
+	"name": "LAPIS",
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
-			"ore": "ingotGold"
+			"ore": "gemLapis"
+		}
+	]
+},
+{
+	"name": "QUARTZ",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemQuartz"
+		}
+	]
+},
+{
+	"name": "REDSTONE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "dustRedstone"
 		}
 	]
 },
@@ -463,7 +525,7 @@
 			"modid": "calculator"
 		}
 	],
-	"name": "REDSTONE",
+	"name": "REDSTONE_CALCULATOR",
 	"ingredient": [
 		{
 			"item": "calculator:redstoneingot"
