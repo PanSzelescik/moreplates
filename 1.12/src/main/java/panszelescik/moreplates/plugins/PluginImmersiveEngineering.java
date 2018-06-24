@@ -154,11 +154,11 @@ public class PluginImmersiveEngineering {
 	private static void add(String output, String inputOre) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
-			MetalPressRecipe.addRecipe(getOre(GEAR + output), cloneStack(input, 4), mold_gear, energy);
 			MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
+			MetalPressRecipe.addRecipe(getOre(GEAR + output), cloneStack(input, 4), mold_gear, energy);
 		}
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(inputOre));
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energy);
 	}
 	
 	/**
@@ -169,10 +169,10 @@ public class PluginImmersiveEngineering {
      * @param id            The id as a String - ModID
      */
 	private static void add(String output, String input, String id) {
-		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4), mold_gear, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input), mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4), mold_gear, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input), mold_plate, energy);
 	}
 	
 	/**
@@ -184,10 +184,10 @@ public class PluginImmersiveEngineering {
      * @param meta          The meta as an Int - Metadata
      */
 	private static void add(String output, String input, String id, int meta) {
-		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4, meta), mold_gear, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input, 1, meta), mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4, meta), mold_gear, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input, 1, meta), mold_plate, energy);
 	}
 	
 	/**
@@ -199,9 +199,9 @@ public class PluginImmersiveEngineering {
      * @param input         The input as a String without Gear and Plate
      */
 	private static void addGaia(String output, String input) {
-		MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input, 4), mold_gear, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
-		MetalPressRecipe.addRecipe(getOre(output + "Plate"), input, mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input, 4), mold_gear, energy);
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
+		MetalPressRecipe.addRecipe(getOre(output + "Plate"), input, mold_plate, energy);
 	}
 }

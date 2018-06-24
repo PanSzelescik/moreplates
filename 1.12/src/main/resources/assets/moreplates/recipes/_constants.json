@@ -624,20 +624,20 @@
 },
 
 {
-	"name": "GLOWSTONE",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotRefinedGlowstone"
-		}
-	]
-},
-{
 	"name": "OSMIUM",
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
 			"ore": "ingotOsmium"
+		}
+	]
+},
+{
+	"name": "REFINED_GLOWSTONE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotRefinedGlowstone"
 		}
 	]
 },

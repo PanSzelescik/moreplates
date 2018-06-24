@@ -2,16 +2,16 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:glowstone_plate"
+			"item": "moreplates:refined_glowstone_plate"
 		}
 	],
 	"result": {
-		"item": "moreplates:glowstone_plate"
+		"item": "moreplates:refined_glowstone_plate"
 	},
 	"type": "forge:ore_shapeless",
 	"ingredients": [
 		{
-			"item": "#GLOWSTONE"
+			"item": "#REFINED_GLOWSTONE"
 		},
 		{
 			"item": "#HAMMER"

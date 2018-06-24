@@ -238,8 +238,8 @@ public class PluginTechReborn {
      * @param input         The input as a String
      */
 	private static void add(String output, String input) {
-		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
+		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
 	}
 	
 	/**
@@ -250,8 +250,8 @@ public class PluginTechReborn {
      * @param id            The id as a String - ModID
      */
 	private static void add(String output, String input, String id) {
-		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
+		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output), timeCompressor, energyCompressor));
 	}
 	
 	/**
@@ -263,8 +263,8 @@ public class PluginTechReborn {
      * @param meta          The meta as an Int - Metadata
      */
 	private static void add(String output, String input, String id, int meta) {
-		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
+		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor, energyCompressor));
 	}
 	
 	/**
@@ -276,8 +276,8 @@ public class PluginTechReborn {
      * @param input         The input as a String without Gear and Plate
      */
 	private static void addGaia(String output, String input) {
-		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
+		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor, energyCompressor));
 	}
 	
 	/**
@@ -287,8 +287,8 @@ public class PluginTechReborn {
      * @param amount        The amount of output as an Int
      */
 	private static void addBlock(String name, int amount) {
-		RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
+		RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
 	}
 	
 	/**
@@ -300,8 +300,8 @@ public class PluginTechReborn {
      * @param id            The id as an String - ModID
      */
 	private static void addBlock(String output, String input, int amount, String id) {
-		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
+		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 	}
 	
 	/**
@@ -314,7 +314,7 @@ public class PluginTechReborn {
      * @param meta          The meta as an Int - Metadata
      */
 	private static void addBlock(String output, String input, int amount, String id, int meta) {
-		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
+		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 	}
 }

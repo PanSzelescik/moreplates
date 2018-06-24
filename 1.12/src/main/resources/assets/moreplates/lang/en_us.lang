@@ -111,10 +111,10 @@ item.evil_infused_iron_plate.name=Evil Infused Iron Plate
 
 //Mekanism
 
-item.glowstone_gear.name=Glowstone Gear
-item.glowstone_plate.name=Glowstone Plate
 item.osmium_gear.name=Osmium Gear
 item.osmium_plate.name=Osmium Plate
+item.refined_glowstone_gear.name=Refined Glowstone Gear
+item.refined_glowstone_plate.name=Refined Glowstone Plate
 item.refined_obsidian_gear.name=Refined Obsidian Gear
 item.refined_obsidian_plate.name=Refined Obsidian Plate
 

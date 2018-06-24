@@ -6,8 +6,8 @@ import com.google.gson.JsonObject;
 import net.minecraft.util.JsonUtils;
 import net.minecraftforge.common.crafting.IConditionFactory;
 import net.minecraftforge.common.crafting.JsonContext;
-import panszelescik.moreplates.config.Config;
 
+import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.ModChecker.*;
 
 public class ConfigOptionConditionFactory implements IConditionFactory {
@@ -20,12 +20,12 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
         switch (configSetting) {
         	case "enableIC2Hammer":
         		if (isIndustrialCraft2Loaded)
-        			return () -> Config.enableIC2Hammer;
+        			return () -> enableIC2Hammer;
         		else
         			return () -> false;
         	case "enableIEHammer":
         		if (isImmersiveEngineeringLoaded)
-        			return () -> Config.enableIEHammer;
+        			return () -> enableIEHammer;
         		else
         			return () -> false;
         	default:

@@ -2,6 +2,9 @@
 
 ### 1.12.2-5.0.1
 - Updated to new Actually Additions API
+- Changed glowstone_gear to refined_glowstone_gear and glowstone_plate to refined_glowstone_plate
+- Added Induction Smelter support, Sand + Gear = 4 Ingots + 10% Slag, Sand + Plate = Ingot + 10% Slag
+- First logger, second add recipe
 
 ### 1.12.2-5.0.0
 - Changed localization of update.json

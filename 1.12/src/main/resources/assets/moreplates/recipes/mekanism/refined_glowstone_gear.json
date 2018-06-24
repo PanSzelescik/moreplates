@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:glowstone_gear"
+			"item": "moreplates:refined_glowstone_gear"
 		}
 	],
 	"result": {
-		"item": "moreplates:glowstone_gear"
+		"item": "moreplates:refined_glowstone_gear"
 	},
 	"pattern": [
 		" M ",
@@ -16,7 +16,7 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"M": {
-			"item": "#GLOWSTONE"
+			"item": "#REFINED_GLOWSTONE"
 		},
 		"I": {
 			"item": "#IRON"

@@ -240,8 +240,8 @@ public class PluginIndustrialCraft2 {
      * @param input         The input as a String
      */
 	private static void add(String output, String input) {
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
+		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
 	}
 	
 	/**
@@ -252,8 +252,8 @@ public class PluginIndustrialCraft2 {
      * @param id            The id as a String - ModID
      */
 	private static void add(String output, String input, String id) {
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output)), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
+		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output)), null, false);
 	}
 	
 	/**
@@ -265,8 +265,8 @@ public class PluginIndustrialCraft2 {
      * @param meta          The meta as an Int - Metadata
      */
 	private static void add(String output, String input, String id, int meta) {
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output)), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
+		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output)), null, false);
 	}
 	
 	/**
@@ -278,8 +278,8 @@ public class PluginIndustrialCraft2 {
      * @param input         The input as a String without Gear and Plate
      */
 	private static void addGaia(String output, String input) {
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(output + "Plate")), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
+		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(output + "Plate")), null, false);
 	}
 	
 	/**
@@ -289,8 +289,8 @@ public class PluginIndustrialCraft2 {
      * @param amount        The amount of output as an Int
      */
 	private static void addBlock(String name, int amount) {
-		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
+		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
 	}
 	
 	/**
@@ -302,8 +302,8 @@ public class PluginIndustrialCraft2 {
      * @param id            The id as an String - ModID
      */
 	private static void addBlock(String output, String input, int amount, String id) {
-		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
+		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 	}
 	
 	/**
@@ -316,7 +316,7 @@ public class PluginIndustrialCraft2 {
      * @param meta          The meta as an Int - Metadata
      */
 	private static void addBlock(String output, String input, int amount, String id, int meta) {
-		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
+		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 	}
 }
