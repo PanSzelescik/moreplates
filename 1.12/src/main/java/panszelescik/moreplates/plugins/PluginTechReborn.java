@@ -79,12 +79,12 @@ public class PluginTechReborn {
 			String id = CALCULATOR_MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
-			add(REDSTONE, REDSTONE_NAME, id);
+			add(REDSTONE_CALCULATOR, REDSTONE_NAME, id);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 			
 			addBlock(ENRICHED_GOLD, CALCULATOR_NAME, 9, id, ENRICHED_GOLD_BLOCK_META);
-			addBlock(REDSTONE, CALCULATOR_NAME, 9, id, REDSTONE_BLOCK_META);
+			addBlock(REDSTONE_CALCULATOR, CALCULATOR_NAME, 9, id, REDSTONE_BLOCK_META);
 			addBlock(REINFORCED_IRON, CALCULATOR_NAME, 9, id, REINFORCED_IRON_BLOCK_META);
 		}
 		if (isDraconicEvolutionLoaded & loadDraconicEvolution) {
@@ -125,11 +125,11 @@ public class PluginTechReborn {
 			addBlock(EVIL_INFUSED_IRON, 9);
 		}
 		if (isMekanismLoaded & loadMekanism) {
-			add(GLOWSTONE, INGOT + GLOWSTONE);
+			add(REFINED_GLOWSTONE, INGOT + REFINED_GLOWSTONE);
 			//add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
 			
-			addBlock(GLOWSTONE, 9);
+			addBlock(REFINED_GLOWSTONE, 9);
 			//addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
 		}
@@ -231,37 +231,88 @@ public class PluginTechReborn {
 		}
 	}
 	
+	/**
+     * Adds a recipe to the Compressor
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String
+     */
 	private static void add(String output, String input) {
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 	}
 	
+	/**
+     * Adds a recipe to the Compressor
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param id            The id as a String - ModID
+     */
 	private static void add(String output, String input, String id) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	
+	/**
+     * Adds a recipe to the Compressor
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param id            The id as an String - ModID
+     * @param meta          The meta as an Int - Metadata
+     */
 	private static void add(String output, String input, String id, int meta) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 	}
 	
-	//Special for Gaia Spirit Gear and Plate
+	/**
+     * Adds a recipe to the Compressor,
+     * 
+     * special for Gaia Spirit Gear and Plate
+     *
+     * @param output        The output as a String without Gear and Plate
+     * @param input         The input as a String without Gear and Plate
+     */
 	private static void addGaia(String output, String input) {
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 	}
 	
+	/**
+     * Adds a recipe to the Compressor
+     *
+     * @param name          The output and input as a String without block and plate
+     * @param amount        The amount of output as an Int
+     */
 	private static void addBlock(String name, int amount) {
 		RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 	}
 	
+	/**
+     * Adds a recipe to the Compressor
+     *
+     * @param output        The output as a String without plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param amount        The amount of output as an Int
+     * @param id            The id as an String - ModID
+     */
 	private static void addBlock(String output, String input, int amount, String id) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	
+	/**
+     * Adds a recipe to the Compressor
+     *
+     * @param output        The output as a String without plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param amount        The amount of output as an Int
+     * @param id            The id as an String - ModID
+     * @param meta          The meta as an Int - Metadata
+     */
 	private static void addBlock(String output, String input, int amount, String id, int meta) {
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));

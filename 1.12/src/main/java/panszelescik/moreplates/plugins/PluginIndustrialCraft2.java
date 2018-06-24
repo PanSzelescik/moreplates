@@ -81,12 +81,12 @@ public class PluginIndustrialCraft2 {
 			String id = CALCULATOR_MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
-			add(REDSTONE, REDSTONE_NAME, id);
+			add(REDSTONE_CALCULATOR, REDSTONE_NAME, id);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 			
 			addBlock(ENRICHED_GOLD, CALCULATOR_NAME, 9, id, ENRICHED_GOLD_BLOCK_META);
-			addBlock(REDSTONE, CALCULATOR_NAME, 9, id, REDSTONE_BLOCK_META);
+			addBlock(REDSTONE_CALCULATOR, CALCULATOR_NAME, 9, id, REDSTONE_BLOCK_META);
 			addBlock(REINFORCED_IRON, CALCULATOR_NAME, 9, id, REINFORCED_IRON_BLOCK_META);
 		}
 		if (isDraconicEvolutionLoaded & loadDraconicEvolution) {
@@ -127,11 +127,11 @@ public class PluginIndustrialCraft2 {
 			addBlock(EVIL_INFUSED_IRON, 9);
 		}
 		if (isMekanismLoaded & loadMekanism) {
-			add(GLOWSTONE, INGOT + GLOWSTONE);
+			add(REFINED_GLOWSTONE, INGOT + REFINED_GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
 			
-			addBlock(GLOWSTONE, 9);
+			addBlock(REFINED_GLOWSTONE, 9);
 			addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
 		}
@@ -233,37 +233,88 @@ public class PluginIndustrialCraft2 {
 		}
 	}
 	
+	/**
+     * Adds a recipe to the Metal Former
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String
+     */
 	private static void add(String output, String input) {
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 	}
 	
+	/**
+     * Adds a recipe to the Metal Former
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param id            The id as a String - ModID
+     */
 	private static void add(String output, String input, String id) {
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output)), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	
+	/**
+     * Adds a recipe to the Metal Former
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param id            The id as an String - ModID
+     * @param meta          The meta as an Int - Metadata
+     */
 	private static void add(String output, String input, String id, int meta) {
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output)), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 	}
 	
-	//Special for Gaia Spirit Gear and Plate
+	/**
+     * Adds a recipe to the Metal Former,
+     * 
+     * special for Gaia Spirit Gear and Plate
+     *
+     * @param output        The output as a String without Gear and Plate
+     * @param input         The input as a String without Gear and Plate
+     */
 	private static void addGaia(String output, String input) {
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(output + "Plate")), null, false);
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 	}
 	
+	/**
+     * Adds a recipe to the Block Cutting Machine
+     *
+     * @param name          The output and input as a String without block and plate
+     * @param amount        The amount of output as an Int
+     */
 	private static void addBlock(String name, int amount) {
 		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 	}
 	
+	/**
+     * Adds a recipe to the Block Cutting Machine
+     *
+     * @param output        The output as a String without plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param amount        The amount of output as an Int
+     * @param id            The id as an String - ModID
+     */
 	private static void addBlock(String output, String input, int amount, String id) {
 		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	
+	/**
+     * Adds a recipe to the Block Cutting Machine
+     *
+     * @param output        The output as a String without plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param amount        The amount of output as an Int
+     * @param id            The id as an String - ModID
+     * @param meta          The meta as an Int - Metadata
+     */
 	private static void addBlock(String output, String input, int amount, String id, int meta) {
 		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));

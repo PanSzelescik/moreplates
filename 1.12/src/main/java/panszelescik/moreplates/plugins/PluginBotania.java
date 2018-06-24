@@ -65,6 +65,12 @@ public class PluginBotania {
 		addElvenTrade(ELEMENTIUM, MANASTEEL);
 	}
 	
+	/**
+     * Adds a Mana Infusion Recipe
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String without gear and plate
+     */
 	private static void addManaInfusion(String output, String input) {
 		if (oreNameExists(GEAR + input)) {
 			BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana);
@@ -76,6 +82,13 @@ public class PluginBotania {
 			MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input));
 		}
 	}
+	
+	/**
+     * Adds an Elven Trade Recipe
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String without gear and plate
+     */
 	private static void addElvenTrade(String output, String input) {
 		BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
 		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");

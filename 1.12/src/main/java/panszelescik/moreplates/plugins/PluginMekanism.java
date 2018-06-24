@@ -30,8 +30,8 @@ public class PluginMekanism {
 		registerItem(refined_obsidian_gear);
 		registerItem(refined_obsidian_plate);
 		
-		oreGear(GLOWSTONE, glowstone_gear);
-		orePlate(GLOWSTONE, glowstone_plate);
+		oreGear(REFINED_GLOWSTONE, glowstone_gear);
+		orePlate(REFINED_GLOWSTONE, glowstone_plate);
 		oreGear(OSMIUM, osmium_gear);
 		orePlate(OSMIUM, osmium_plate);
 		oreGear(REFINED_OBSIDIAN, refined_obsidian_gear);

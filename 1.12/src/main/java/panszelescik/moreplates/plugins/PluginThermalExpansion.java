@@ -46,7 +46,7 @@ public class PluginThermalExpansion {
 		}
 		if (isCalculatorLoaded & loadCalculator) {
 			String id = CALCULATOR_MODID;
-			add(REDSTONE, REDSTONE_NAME, id);
+			add(REDSTONE_CALCULATOR, REDSTONE_NAME, id);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 		}
 		if (isProjectELoaded & loadProjectE) {
@@ -67,6 +67,12 @@ public class PluginThermalExpansion {
 		}
 	}
 	
+	/**
+     * Adds a recipe to the Compactor
+     *
+     * @param output        The output as a String without gear and plate
+     * @param inputOre      The input as a String
+     */
 	private static void add(String output, String inputOre) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
@@ -77,6 +83,13 @@ public class PluginThermalExpansion {
 		}
 	}
 	
+	/**
+     * Adds a recipe to the Compactor
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param id            The id as a String - ModID
+     */
 	private static void add(String output, String input, String id) {
 		CompactorManager.addRecipe(energy, getItemStack(id, input, 4), getOre(GEAR + output), Mode.GEAR);
 		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
@@ -84,6 +97,14 @@ public class PluginThermalExpansion {
 		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 	}
 	
+	/**
+     * Adds a recipe to the Compactor
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String - Unlocalized Name
+     * @param id            The id as an String - ModID
+     * @param meta          The meta as an Int - Metadata
+     */
 	private static void add(String output, String input, String id, int meta) {
 		CompactorManager.addRecipe(energy, getItemStack(id, input, 4, meta), getOre(GEAR + output), Mode.GEAR);
 		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
@@ -91,7 +112,14 @@ public class PluginThermalExpansion {
 		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 	}
 	
-	//Special for Gaia Spirit Gear and Plate
+	/**
+     * Adds a recipe to the Compactor,
+     * 
+     * special for Gaia Spirit Gear and Plate
+     *
+     * @param output        The output as a String without Gear and Plate
+     * @param input         The input as a String without Gear and Plate
+     */
 	private static void addGaia(String output, String input) {
 		CompactorManager.addRecipe(energy, getOre(input, 4), getOre(output + "Gear"), Mode.GEAR);
 		MorePlates.logger.debug(INFO_TE + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");

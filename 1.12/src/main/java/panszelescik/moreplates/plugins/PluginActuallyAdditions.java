@@ -177,10 +177,20 @@ public class PluginActuallyAdditions {
 		addReconstructor(EMERADIC, EMERALD, energyEmeradicReconstructor);
 		addReconstructor(ENORI, IRON, energyEnoriReconstructor);
 		addReconstructor(PALIS, LAPIS, energyPalisReconstructor);
-		addReconstructor(RESTONIA, REDSTONE_MC, energyRestoniaReconstructor);
+		addReconstructor(RESTONIA, REDSTONE, energyRestoniaReconstructor);
 		addReconstructor(VOID, COAL, energyVoidReconstructor);
 	}
 	
+	/**
+     * Adds a recipe to the Empowerer
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String without gear and plate
+     * @param dye           The dye as a String
+     * @param modifier2     The modifier2 as an ItemStack
+     * @param modifier3     The modifier3 as an ItemStack
+     * @param modifier4     The modifier4 as an ItemStack
+     */
 	private static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
@@ -191,6 +201,13 @@ public class PluginActuallyAdditions {
 		}
 	}
 	
+	/**
+     * Adds a recipe to the Atomic Reconstructor
+     *
+     * @param output        The output as an String without gear and plate
+     * @param input         The input as an String without gear and plate
+     * @param energy        The amount of RF used per conversion
+     */
 	private static void addReconstructor(String output, String input, int energy) {
 		if (oreNameExists(GEAR + input)) {
 			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);

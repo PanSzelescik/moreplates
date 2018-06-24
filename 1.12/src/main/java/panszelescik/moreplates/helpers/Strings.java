@@ -17,7 +17,7 @@ public class Strings {
 	public static String IRON = "Iron";
 	public static String GOLD = "Gold";
 	public static String STEEL = "Steel";
-	public static String REDSTONE_MC = "Redstone";
+	public static String REDSTONE = "Redstone";
 	public static String COAL = "Coal";
 	public static String DIAMOND = "Diamond";
 	public static String EMERALD = "Emerald";
@@ -133,7 +133,7 @@ public class Strings {
 	//Calculator
 	public static String AMETHYST = "Amethyst";
 	public static String ENRICHED_GOLD = "Enriched" + GOLD;
-	public static String REDSTONE = "Redstone";
+	public static String REDSTONE_CALCULATOR = "Redstone";
 	public static String REINFORCED_IRON = "Reinforced" + IRON;
 	public static String TANZANITE = "Tanzanite";
 	
@@ -172,7 +172,7 @@ public class Strings {
 	public static int EVIL_INFUSED_IRON_META = 17;
 	
 	//Mekanism
-	public static String GLOWSTONE = REFINED + "Glowstone";
+	public static String REFINED_GLOWSTONE = REFINED + "Glowstone";
 	public static String OSMIUM = "Osmium";
 	public static String REFINED_OBSIDIAN = REFINED + "Obsidian";
 	

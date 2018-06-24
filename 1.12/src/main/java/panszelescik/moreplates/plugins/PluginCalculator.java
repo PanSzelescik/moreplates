@@ -46,8 +46,8 @@ public class PluginCalculator {
 		orePlate(AMETHYST, amethyst_plate);
 		oreGear(ENRICHED_GOLD, enriched_gold_gear);
 		orePlate(ENRICHED_GOLD, enriched_gold_plate);
-		oreGear(REDSTONE, redstone_gear);
-		orePlate(REDSTONE, redstone_plate);
+		oreGear(REDSTONE_CALCULATOR, redstone_gear);
+		orePlate(REDSTONE_CALCULATOR, redstone_plate);
 		oreGear(REINFORCED_IRON, reinforced_iron_gear);
 		orePlate(REINFORCED_IRON, reinforced_iron_plate);
 		oreGear(TANZANITE, tanzanite_gear);
