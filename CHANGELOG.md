@@ -1,5 +1,8 @@
 # More Plates Changelog
 
+### 1.12.2-5.0.1
+- Updated to new Actually Additions API
+
 ### 1.12.2-5.0.0
 - Changed localization of update.json
 - Reworked config file (I recommend delete old config!)

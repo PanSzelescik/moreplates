@@ -5,6 +5,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.items.*;
@@ -183,9 +184,9 @@ public class PluginActuallyAdditions {
 	private static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
-			ActuallyAdditionsAPI.addEmpowererRecipe(getOre(GEAR + input), getOre(GEAR + output), dyeStack, modifier2, modifier3, modifier4, energyEmpowerer, timeEmpowerer, null);
+			ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(GEAR + input)), getOre(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer, timeEmpowerer, null);
 			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-			ActuallyAdditionsAPI.addEmpowererRecipe(getOre(PLATE + input), getOre(PLATE + output), dyeStack, modifier2, modifier3, modifier4, energyEmpowerer, timeEmpowerer, null);
+			ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(PLATE + input)), getOre(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer, timeEmpowerer, null);
 			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
 		}
 	}
@@ -194,15 +195,15 @@ public class PluginActuallyAdditions {
 		if (oreNameExists(GEAR + input)) {
 			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
 			for (ItemStack inputStack : inputs) {
-				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(inputStack, getOre(GEAR + output), energy);
+				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(GEAR + output), energy);
 				MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
 			}
 		}
 		
 		if (oreNameExists(PLATE + input)) {
-			List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
-			for (ItemStack inputStack : inputss) {
-				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(inputStack, getOre(PLATE + output), energy);
+			List<ItemStack> inputs = OreDictionary.getOres(PLATE + input);
+			for (ItemStack inputStack : inputs) {
+				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(PLATE + output), energy);
 				MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
 			}
 		}
