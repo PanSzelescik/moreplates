@@ -23,27 +23,11 @@ public class PluginTwilightForest {
 		knightmetal_gear = new ItemGear("knightmetal");
 		knightmetal_plate = new ItemPlate("knightmetal");
 		
-		registerItem(fiery_gear);
-		registerItem(fiery_plate);
-		registerItem(ironwood_gear);
-		registerItem(ironwood_plate);
-		registerItem(knightmetal_gear);
-		registerItem(knightmetal_plate);
-		
-		oreGear(FIERY, fiery_gear);
-		orePlate(FIERY, fiery_plate);
-		oreGear(IRONWOOD, ironwood_gear);
-		orePlate(IRONWOOD, ironwood_plate);
-		oreGear(KNIGHTMETAL, knightmetal_gear);
-		orePlate(KNIGHTMETAL, knightmetal_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(fiery_gear);
-		registerRender(fiery_plate);
-		registerRender(ironwood_gear);
-		registerRender(ironwood_plate);
-		registerRender(knightmetal_gear);
-		registerRender(knightmetal_plate);
+		regGear(fiery_gear, FIERY);
+		regPlate(fiery_plate, FIERY);
+		regGear(ironwood_gear, IRONWOOD);
+		regPlate(ironwood_plate, IRONWOOD);
+		regGear(knightmetal_gear, KNIGHTMETAL);
+		regPlate(knightmetal_plate, KNIGHTMETAL);
 	}
 }

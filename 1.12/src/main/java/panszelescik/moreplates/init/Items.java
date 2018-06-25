@@ -12,10 +12,6 @@ public class Items {
 	public static void preInit() {
 		hammer = new ItemHammer("hammer");
 		
-		registerItem(hammer);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(hammer);
+		regItem(hammer);
 	}
 }

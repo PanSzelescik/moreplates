@@ -912,21 +912,6 @@
 		}
 	]
 },
-{
-	"conditions": [
-		{
-			"type": "forge:mod_loaded",
-			"modid": "projecte"
-		}
-	],
-	"name": "AETERNALIS_FUEL",
-	"ingredient": [
-		{
-			"item": "projecte:item.pe_fuel",
-			"data": 2
-		}
-	]
-},
 
 {
 	"name": "ELECTROTINE",

@@ -19,21 +19,9 @@ public class PluginProjectRed {
 		red_alloy_gear = new ItemGear("red_alloy");
 		red_alloy_plate = new ItemPlate("red_alloy");
 		
-		registerItem(electrotine_alloy_gear);
-		registerItem(electrotine_alloy_plate);
-		registerItem(red_alloy_gear);
-		registerItem(red_alloy_plate);
-		
-		oreGear(ELECTROTINE, electrotine_alloy_gear);
-		orePlate(ELECTROTINE, electrotine_alloy_plate);
-		oreGear(RED_ALLOY, red_alloy_gear);
-		orePlate(RED_ALLOY, red_alloy_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(electrotine_alloy_gear);
-		registerRender(electrotine_alloy_plate);
-		registerRender(red_alloy_gear);
-		registerRender(red_alloy_plate);
+		regGear(electrotine_alloy_gear, ELECTROTINE);
+		regPlate(electrotine_alloy_plate, ELECTROTINE);
+		regGear(red_alloy_gear, RED_ALLOY);
+		regPlate(red_alloy_plate, RED_ALLOY);
 	}
 }

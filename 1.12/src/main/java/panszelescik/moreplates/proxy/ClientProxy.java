@@ -1,4 +1,4 @@
-package panszelescik.moreplates.proxy;
+/*package panszelescik.moreplates.proxy;
 
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -9,12 +9,10 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
-		Items.clientPreInit();
-		PluginLoader.clientPreInit();
 	}
 	
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		super.postInit(event);
 	}
-}
+}*/

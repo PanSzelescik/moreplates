@@ -75,91 +75,33 @@ public class PluginActuallyAdditions {
 		empowered_void_gear = new ItemGear("empowered_void");
 		empowered_void_plate = new ItemPlate("empowered_void");
 		
-		registerItem(black_quartz_gear);
-		registerItem(black_quartz_plate);
-		registerItem(diamatine_gear);
-		registerItem(diamatine_plate);
-		registerItem(emeradic_gear);
-		registerItem(emeradic_plate);
-		registerItem(enori_gear);
-		registerItem(enori_plate);
-		registerItem(palis_gear);
-		registerItem(palis_plate);
-		registerItem(restonia_gear);
-		registerItem(restonia_plate);
-		registerItem(void_gear);
-		registerItem(void_plate);
+		regGear(black_quartz_gear, BLACK_QUARTZ);
+		regPlate(black_quartz_plate, BLACK_QUARTZ);
+		regGear(diamatine_gear, DIAMATINE);
+		regPlate(diamatine_plate, DIAMATINE);
+		regGear(emeradic_gear, EMERADIC);
+		regPlate(emeradic_plate, EMERADIC);
+		regGear(enori_gear, ENORI);
+		regPlate(enori_plate, ENORI);
+		regGear(palis_gear, PALIS);
+		regPlate(palis_plate, PALIS);
+		regGear(restonia_gear, RESTONIA);
+		regPlate(restonia_plate, RESTONIA);
+		regGear(void_gear, VOID);
+		regPlate(void_plate, VOID);
 		
-		registerItem(empowered_diamatine_gear);
-		registerItem(empowered_diamatine_plate);
-		registerItem(empowered_emeradic_gear);
-		registerItem(empowered_emeradic_plate);
-		registerItem(empowered_enori_gear);
-		registerItem(empowered_enori_plate);
-		registerItem(empowered_palis_gear);
-		registerItem(empowered_palis_plate);
-		registerItem(empowered_restonia_gear);
-		registerItem(empowered_restonia_plate);
-		registerItem(empowered_void_gear);
-		registerItem(empowered_void_plate);
-		
-		oreGear(BLACK_QUARTZ, black_quartz_gear);
-		orePlate(BLACK_QUARTZ, black_quartz_plate);
-		oreGear(DIAMATINE, diamatine_gear);
-		orePlate(DIAMATINE, diamatine_plate);
-		oreGear(EMERADIC, emeradic_gear);
-		orePlate(EMERADIC, emeradic_plate);
-		oreGear(ENORI, enori_gear);
-		orePlate(ENORI, enori_plate);
-		oreGear(PALIS, palis_gear);
-		orePlate(PALIS, palis_plate);
-		oreGear(RESTONIA, restonia_gear);
-		orePlate(RESTONIA, restonia_plate);
-		oreGear(VOID, void_gear);
-		orePlate(VOID, void_plate);
-		
-		oreGear(EMPOWERED_DIAMATINE, empowered_diamatine_gear);
-		orePlate(EMPOWERED_DIAMATINE, empowered_diamatine_plate);
-		oreGear(EMPOWERED_EMERADIC, empowered_emeradic_gear);
-		orePlate(EMPOWERED_EMERADIC, empowered_emeradic_plate);
-		oreGear(EMPOWERED_ENORI, empowered_enori_gear);
-		orePlate(EMPOWERED_ENORI, empowered_enori_plate);
-		oreGear(EMPOWERED_PALIS, empowered_palis_gear);
-		orePlate(EMPOWERED_PALIS, empowered_palis_plate);
-		oreGear(EMPOWERED_RESTONIA, empowered_restonia_gear);
-		orePlate(EMPOWERED_RESTONIA, empowered_restonia_plate);
-		oreGear(EMPOWERED_VOID, empowered_void_gear);
-		orePlate(EMPOWERED_VOID, empowered_void_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(black_quartz_gear);
-		registerRender(black_quartz_plate);
-		registerRender(diamatine_gear);
-		registerRender(diamatine_plate);
-		registerRender(emeradic_gear);
-		registerRender(emeradic_plate);
-		registerRender(enori_gear);
-		registerRender(enori_plate);
-		registerRender(palis_gear);
-		registerRender(palis_plate);
-		registerRender(restonia_gear);
-		registerRender(restonia_plate);
-		registerRender(void_gear);
-		registerRender(void_plate);
-		
-		registerRender(empowered_diamatine_gear);
-		registerRender(empowered_diamatine_plate);
-		registerRender(empowered_emeradic_gear);
-		registerRender(empowered_emeradic_plate);
-		registerRender(empowered_enori_gear);
-		registerRender(empowered_enori_plate);
-		registerRender(empowered_palis_gear);
-		registerRender(empowered_palis_plate);
-		registerRender(empowered_restonia_gear);
-		registerRender(empowered_restonia_plate);
-		registerRender(empowered_void_gear);
-		registerRender(empowered_void_plate);
+		regGear(empowered_diamatine_gear, EMPOWERED_DIAMATINE);
+		regPlate(empowered_diamatine_plate, EMPOWERED_DIAMATINE);
+		regGear(empowered_emeradic_gear, EMPOWERED_EMERADIC);
+		regPlate(empowered_emeradic_plate, EMPOWERED_EMERADIC);
+		regGear(empowered_enori_gear, EMPOWERED_ENORI);
+		regPlate(empowered_enori_plate, EMPOWERED_ENORI);
+		regGear(empowered_palis_gear, EMPOWERED_PALIS);
+		regPlate(empowered_palis_plate, EMPOWERED_PALIS);
+		regGear(empowered_restonia_gear, EMPOWERED_RESTONIA);
+		regPlate(empowered_restonia_plate, EMPOWERED_RESTONIA);
+		regGear(empowered_void_gear, EMPOWERED_VOID);
+		regPlate(empowered_void_plate, EMPOWERED_VOID);
 	}
 	
 	public static void postInit() {

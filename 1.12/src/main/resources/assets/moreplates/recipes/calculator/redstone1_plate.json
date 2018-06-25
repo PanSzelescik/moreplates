@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:redstone_plate"
+			"item": "moreplates:redstone1_plate"
 		}
 	],
 	"result": {
-		"item": "moreplates:redstone_plate"
+		"item": "moreplates:redstone1_plate"
 	},
 	"type": "forge:ore_shapeless",
 	"ingredients": [

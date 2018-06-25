@@ -19,21 +19,9 @@ public class PluginThaumcraft {
 		quicksilver_gear = new ItemGear("quicksilver");
 		quicksilver_plate = new ItemPlate("quicksilver");
 		
-		registerItem(amber_gear);
-		registerItem(amber_plate);
-		registerItem(quicksilver_gear);
-		registerItem(quicksilver_plate);
-		
-		oreGear(AMBER, amber_gear);
-		orePlate(AMBER, amber_plate);
-		oreGear(QUICKSILVER, quicksilver_gear);
-		orePlate(QUICKSILVER, quicksilver_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(amber_gear);
-		registerRender(amber_plate);
-		registerRender(quicksilver_gear);
-		registerRender(quicksilver_plate);
+		regGear(amber_gear, AMBER);
+		regPlate(amber_plate, AMBER);
+		regGear(quicksilver_gear, QUICKSILVER);
+		regPlate(quicksilver_plate, QUICKSILVER);
 	}
 }

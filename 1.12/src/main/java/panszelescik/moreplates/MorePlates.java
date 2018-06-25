@@ -11,7 +11,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.creativetabs.TabMorePlates;
-import panszelescik.moreplates.proxy.CommonProxy;
+import panszelescik.moreplates.init.Items;
+import panszelescik.moreplates.init.PluginLoader;
+//import panszelescik.moreplates.proxy.CommonProxy;
 
 @Mod(
 		modid = Reference.MODID, 
@@ -33,8 +35,8 @@ public class MorePlates {
 	public Config config;
 	public static ModChecker modChecker;
 	
-	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
-	public static CommonProxy proxy;
+	//@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
+	//public static CommonProxy proxy;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
@@ -44,14 +46,17 @@ public class MorePlates {
 		modChecker = new ModChecker();
 		modChecker.printSuccessMessage();
 		
-		proxy.preInit(event);
+		Items.preInit();
+		PluginLoader.preInit();
+		//proxy.preInit(event);
 		logger.info("Completed PreInitialization.");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Started PostInitialization.");
-		proxy.postInit(event);
+		PluginLoader.postInit();
+		//proxy.postInit(event);
 		logger.info("Completed PostInitialization.");
 	}
 }

@@ -31,39 +31,15 @@ public class PluginTinkersConstruct {
 		pig_iron_gear = new ItemGear("pig_iron");
 		pig_iron_plate = new ItemPlate("pig_iron");
 		
-		registerItem(ardite_gear);
-		registerItem(ardite_plate);
-		registerItem(cobalt_gear);
-		registerItem(cobalt_plate);
-		registerItem(knightslime_gear);
-		registerItem(knightslime_plate);
-		registerItem(manyullyn_gear);
-		registerItem(manyullyn_plate);
-		registerItem(pig_iron_gear);
-		registerItem(pig_iron_plate);
-		
-		oreGear(ARDITE, ardite_gear);
-		orePlate(ARDITE, ardite_plate);
-		oreGear(COBALT, cobalt_gear);
-		orePlate(COBALT, cobalt_plate);
-		oreGear(KNIGHTSLIME, knightslime_gear);
-		orePlate(KNIGHTSLIME, knightslime_plate);
-		oreGear(MANYULLYN, manyullyn_gear);
-		orePlate(MANYULLYN, manyullyn_plate);
-		oreGear(PIG_IRON, pig_iron_gear);
-		orePlate(PIG_IRON, pig_iron_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(ardite_gear);
-		registerRender(ardite_plate);
-		registerRender(cobalt_gear);
-		registerRender(cobalt_plate);
-		registerRender(knightslime_gear);
-		registerRender(knightslime_plate);
-		registerRender(manyullyn_gear);
-		registerRender(manyullyn_plate);
-		registerRender(pig_iron_gear);
-		registerRender(pig_iron_plate);
+		regGear(ardite_gear, ARDITE);
+		regPlate(ardite_plate, ARDITE);
+		regGear(cobalt_gear, COBALT);
+		regPlate(cobalt_plate, COBALT);
+		regGear(knightslime_gear, KNIGHTSLIME);
+		regPlate(knightslime_plate, KNIGHTSLIME);
+		regGear(manyullyn_gear, MANYULLYN);
+		regPlate(manyullyn_plate, MANYULLYN);
+		regGear(pig_iron_gear, PIG_IRON);
+		regPlate(pig_iron_plate, PIG_IRON);
 	}
 }

@@ -11,24 +11,7 @@ import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearCoal;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearDiamond;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearEmerald;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearGlowstone;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearGold;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearIron;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearLapisLazuli;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearNetherQuartz;
-import static panszelescik.moreplates.plugins.PluginVanilla.gearRedstone;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateCoal;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateDiamond;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateEmerald;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateGlowstone;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateGold;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateIron;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateLapisLazuli;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateNetherQuartz;
-import static panszelescik.moreplates.plugins.PluginVanilla.plateRedstone;
+import static panszelescik.moreplates.plugins.PluginVanilla.*;
 
 public class PluginIndustrialCraft2 {
 	
@@ -330,7 +313,7 @@ public class PluginIndustrialCraft2 {
      * special for Gaia Spirit Gear and Plate
      *
      * @param output        The output as a String without Gear and Plate
-     * @param input         The input as a String without Gear and Plate
+     * @param input         The input as a String
      */
 	private static void addGaia(String output, String input) {
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));

@@ -23,27 +23,11 @@ public class PluginExtraUtilities {
 		evil_infused_iron_gear = new ItemGear("evil_infused_iron");
 		evil_infused_iron_plate = new ItemPlate("evil_infused_iron");
 		
-		registerItem(demon_gear);
-		registerItem(demon_plate);
-		registerItem(enchanted_gear);
-		registerItem(enchanted_plate);
-		registerItem(evil_infused_iron_gear);
-		registerItem(evil_infused_iron_plate);
-		
-		oreGear(DEMON, demon_gear);
-		orePlate(DEMON, demon_plate);
-		oreGear(ENCHANTED, enchanted_gear);
-		orePlate(ENCHANTED, enchanted_plate);
-		oreGear(EVIL_INFUSED_IRON, evil_infused_iron_gear);
-		orePlate(EVIL_INFUSED_IRON, evil_infused_iron_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(demon_gear);
-		registerRender(demon_plate);
-		registerRender(enchanted_gear);
-		registerRender(enchanted_plate);
-		registerRender(evil_infused_iron_gear);
-		registerRender(evil_infused_iron_plate);
+		regGear(demon_gear, DEMON);
+		regPlate(demon_plate, DEMON);
+		regGear(enchanted_gear, ENCHANTED);
+		regPlate(enchanted_plate, ENCHANTED);
+		regGear(evil_infused_iron_gear, EVIL_INFUSED_IRON);
+		regPlate(evil_infused_iron_plate, EVIL_INFUSED_IRON);
 	}
 }

@@ -15,15 +15,7 @@ public class PluginPneumaticCraft {
 		compressed_iron_gear = new ItemGear("compressed_iron");
 		compressed_iron_plate = new ItemPlate("compressed_iron");
 		
-		registerItem(compressed_iron_gear);
-		registerItem(compressed_iron_plate);
-		
-		oreGear(COMPRESSED_IRON, compressed_iron_gear);
-		orePlate(COMPRESSED_IRON, compressed_iron_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(compressed_iron_gear);
-		registerRender(compressed_iron_plate);
+		regGear(compressed_iron_gear, COMPRESSED_IRON);
+		regPlate(compressed_iron_plate, COMPRESSED_IRON);
 	}
 }

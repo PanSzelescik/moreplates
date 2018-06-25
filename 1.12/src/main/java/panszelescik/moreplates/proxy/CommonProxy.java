@@ -1,4 +1,4 @@
-package panszelescik.moreplates.proxy;
+/*package panszelescik.moreplates.proxy;
 
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -16,4 +16,4 @@ public class CommonProxy {
 	public void postInit(FMLPostInitializationEvent event) {
 		PluginLoader.postInit();
 	}
-}
+}*/

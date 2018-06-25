@@ -23,27 +23,11 @@ public class PluginMekanism {
 		refined_obsidian_gear = new ItemGear("refined_obsidian");
 		refined_obsidian_plate = new ItemPlate("refined_obsidian");
 		
-		registerItem(osmium_gear);
-		registerItem(osmium_plate);
-		registerItem(refined_glowstone_gear);
-		registerItem(refined_glowstone_plate);
-		registerItem(refined_obsidian_gear);
-		registerItem(refined_obsidian_plate);
-		
-		oreGear(OSMIUM, osmium_gear);
-		orePlate(OSMIUM, osmium_plate);
-		oreGear(REFINED_GLOWSTONE, refined_glowstone_gear);
-		orePlate(REFINED_GLOWSTONE, refined_glowstone_plate);
-		oreGear(REFINED_OBSIDIAN, refined_obsidian_gear);
-		orePlate(REFINED_OBSIDIAN, refined_obsidian_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(osmium_gear);
-		registerRender(osmium_plate);
-		registerRender(refined_glowstone_gear);
-		registerRender(refined_glowstone_plate);
-		registerRender(refined_obsidian_gear);
-		registerRender(refined_obsidian_plate);
+		regGear(osmium_gear, OSMIUM);
+		regPlate(osmium_plate, OSMIUM);
+		regGear(refined_glowstone_gear, REFINED_GLOWSTONE);
+		regPlate(refined_glowstone_plate, REFINED_GLOWSTONE);
+		regGear(refined_obsidian_gear, REFINED_OBSIDIAN);
+		regPlate(refined_obsidian_plate, REFINED_OBSIDIAN);
 	}
 }

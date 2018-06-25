@@ -47,63 +47,23 @@ public class PluginEnderIO {
 		vibrant_alloy_gear = new ItemGear("vibrant_alloy");
 		vibrant_alloy_plate = new ItemPlate("vibrant_alloy");
 		
-		registerItem(conductive_iron_gear);
-		registerItem(conductive_iron_plate);
-		registerItem(dark_steel_gear);
-		registerItem(dark_steel_plate);
-		registerItem(electrical_steel_gear);
-		registerItem(electrical_steel_plate);
-		registerItem(end_steel_gear);
-		registerItem(end_steel_plate);
-		registerItem(energetic_alloy_gear);
-		registerItem(energetic_alloy_plate);
-		registerItem(pulsating_iron_gear);
-		registerItem(pulsating_iron_plate);
-		registerItem(redstone_alloy_gear);
-		registerItem(redstone_alloy_plate);
-		registerItem(soularium_gear);
-		registerItem(soularium_plate);
-		registerItem(vibrant_alloy_gear);
-		registerItem(vibrant_alloy_plate);
-		
-		oreGear(CONDUCTIVE_IRON, conductive_iron_gear);
-		orePlate(CONDUCTIVE_IRON, conductive_iron_plate);
-		oreGear(DARK_STEEL, dark_steel_gear);
-		orePlate(DARK_STEEL, dark_steel_plate);
-		oreGear(ELECTRICAL_STEEL, electrical_steel_gear);
-		orePlate(ELECTRICAL_STEEL, electrical_steel_plate);
-		oreGear(END_STEEL, end_steel_gear);
-		orePlate(END_STEEL, end_steel_plate);
-		oreGear(ENERGETIC_ALLOY, energetic_alloy_gear);
-		orePlate(ENERGETIC_ALLOY, energetic_alloy_plate);
-		oreGear(PULSATING_IRON, pulsating_iron_gear);
-		orePlate(PULSATING_IRON, pulsating_iron_plate);
-		oreGear(REDSTONE_ALLOY, redstone_alloy_gear);
-		orePlate(REDSTONE_ALLOY, redstone_alloy_plate);
-		oreGear(SOULARIUM, soularium_gear);
-		orePlate(SOULARIUM, soularium_plate);
-		oreGear(VIBRANT_ALLOY, vibrant_alloy_gear);
-		orePlate(VIBRANT_ALLOY, vibrant_alloy_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(conductive_iron_gear);
-		registerRender(conductive_iron_plate);
-		registerRender(dark_steel_gear);
-		registerRender(dark_steel_plate);
-		registerRender(electrical_steel_gear);
-		registerRender(electrical_steel_plate);
-		registerRender(end_steel_gear);
-		registerRender(end_steel_plate);
-		registerRender(energetic_alloy_gear);
-		registerRender(energetic_alloy_plate);
-		registerRender(pulsating_iron_gear);
-		registerRender(pulsating_iron_plate);
-		registerRender(redstone_alloy_gear);
-		registerRender(redstone_alloy_plate);
-		registerRender(soularium_gear);
-		registerRender(soularium_plate);
-		registerRender(vibrant_alloy_gear);
-		registerRender(vibrant_alloy_plate);
+		regGear(conductive_iron_gear, CONDUCTIVE_IRON);
+		regPlate(conductive_iron_plate, CONDUCTIVE_IRON);
+		regGear(dark_steel_gear, DARK_STEEL);
+		regPlate(dark_steel_plate, DARK_STEEL);
+		regGear(electrical_steel_gear, ELECTRICAL_STEEL);
+		regPlate(electrical_steel_plate, ELECTRICAL_STEEL);
+		regGear(end_steel_gear, END_STEEL);
+		regPlate(end_steel_plate, END_STEEL);
+		regGear(energetic_alloy_gear, ENERGETIC_ALLOY);
+		regPlate(energetic_alloy_plate, ENERGETIC_ALLOY);
+		regGear(pulsating_iron_gear, PULSATING_IRON);
+		regPlate(pulsating_iron_plate, PULSATING_IRON);
+		regGear(redstone_alloy_gear, REDSTONE_ALLOY);
+		regPlate(redstone_alloy_plate, REDSTONE_ALLOY);
+		regGear(soularium_gear, SOULARIUM);
+		regPlate(soularium_plate, SOULARIUM);
+		regGear(vibrant_alloy_gear, VIBRANT_ALLOY);
+		regPlate(vibrant_alloy_plate, VIBRANT_ALLOY);
 	}
 }

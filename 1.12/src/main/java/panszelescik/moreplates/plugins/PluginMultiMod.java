@@ -18,32 +18,15 @@ public class PluginMultiMod {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
-			registerItem(silicon_gear);
-			registerItem(silicon_plate);
-			
-			oreGear(SILICON, silicon_gear);
-			orePlate(SILICON, silicon_plate);
+			regGear(silicon_gear, SILICON);
+			regPlate(silicon_plate, SILICON);
 		}
 		else if (isRefinedStorageLoaded & loadRefinedStorage) {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
-			registerItem(silicon_gear);
-			registerItem(silicon_plate);
-			
-			oreGear(SILICON, silicon_gear);
-			orePlate(SILICON, silicon_plate);
-		}
-	}
-	
-	public static void clientPreInit() {
-		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
-			registerRender(silicon_gear);
-			registerRender(silicon_plate);
-		}
-		else if (isRefinedStorageLoaded & loadRefinedStorage) {
-			registerRender(silicon_gear);
-			registerRender(silicon_plate);
+			regGear(silicon_gear, SILICON);
+			regPlate(silicon_plate, SILICON);
 		}
 	}
 }

@@ -49,150 +49,93 @@ public class PluginVanilla {
 	public static void preInit() {
 		if (!oreNameExists(GEAR + COAL)) {
 			coal_gear = new ItemGear("coal");
-			registerItem(coal_gear);
-			oreGear(COAL, coal_gear);
+			regGear(coal_gear, COAL);
 			gearCoal = true;
 		}
 		if (!oreNameExists(PLATE + COAL)) {
 			coal_plate = new ItemPlate("coal");
-			registerItem(coal_plate);
-			orePlate(COAL, coal_plate);
+			regPlate(coal_plate, COAL);
 			plateCoal = true;
 		}
 		if (!oreNameExists(GEAR + DIAMOND)) {
 			diamond_gear = new ItemGear("diamond");
-			registerItem(diamond_gear);
-			oreGear(DIAMOND, diamond_gear);
+			regGear(diamond_gear, DIAMOND);
 			gearDiamond = true;
 		}
 		if (!oreNameExists(PLATE + DIAMOND)) {
 			diamond_plate = new ItemPlate("diamond");
-			registerItem(diamond_plate);
-			orePlate(DIAMOND, diamond_plate);
+			regPlate(diamond_plate, DIAMOND);
 			plateDiamond = true;
 		}
 		if (!oreNameExists(GEAR + EMERALD)) {
 			emerald_gear = new ItemGear("emerald");
-			registerItem(emerald_gear);
-			oreGear(EMERALD, emerald_gear);
+			regGear(emerald_gear, EMERALD);
 			gearEmerald = true;
 		}
 		if (!oreNameExists(PLATE + EMERALD)) {
 			emerald_plate = new ItemPlate("emerald");
-			registerItem(emerald_plate);
-			orePlate(EMERALD, emerald_plate);
+			regPlate(emerald_plate, EMERALD);
 			plateEmerald = true;
 		}
 		if (!oreNameExists(GEAR + GLOWSTONE)) {
 			glowstone_gear = new ItemGear("glowstone");
-			registerItem(glowstone_gear);
-			oreGear(GLOWSTONE, glowstone_gear);
+			regGear(glowstone_gear, GLOWSTONE);
 			gearGlowstone = true;
 		}
 		if (!oreNameExists(PLATE + GLOWSTONE)) {
 			glowstone_plate = new ItemPlate("glowstone");
-			registerItem(glowstone_plate);
-			orePlate(GLOWSTONE, glowstone_plate);
+			regPlate(glowstone_plate, GLOWSTONE);
 			plateGlowstone = true;
 		}
 		if (!oreNameExists(GEAR + GOLD)) {
 			gold_gear = new ItemGear("gold");
-			registerItem(gold_gear);
-			oreGear(GOLD, gold_gear);
+			regGear(gold_gear, GOLD);
 			gearGold = true;
 		}
 		if (!oreNameExists(PLATE + GOLD)) {
 			glowstone_plate = new ItemPlate("gold");
-			registerItem(gold_plate);
-			orePlate(GOLD, gold_plate);
+			regPlate(gold_plate, GOLD);
 			plateGold = true;
 		}
 		if (!oreNameExists(GEAR + IRON)) {
 			iron_gear = new ItemGear("iron");
-			registerItem(iron_gear);
-			oreGear(IRON, iron_gear);
+			regGear(iron_gear, IRON);
 			gearIron = true;
 		}
 		if (!oreNameExists(PLATE + IRON)) {
 			iron_plate = new ItemPlate("iron");
-			registerItem(iron_plate);
-			orePlate(IRON, iron_plate);
+			regPlate(iron_plate, IRON);
 			plateIron = true;
 		}
 		if (!oreNameExists(GEAR + LAPIS)) {
 			lapis_lazuli_gear = new ItemGear("lapis_lazuli");
-			registerItem(lapis_lazuli_gear);
-			oreGear(LAPIS, lapis_lazuli_gear);
+			regGear(lapis_lazuli_gear, LAPIS);
 			gearLapisLazuli = true;
 		}
 		if (!oreNameExists(PLATE + LAPIS)) {
 			lapis_lazuli_plate = new ItemPlate("lapis_lazuli");
-			registerItem(lapis_lazuli_plate);
-			orePlate(LAPIS, lapis_lazuli_plate);
+			regPlate(lapis_lazuli_plate, LAPIS);
 			plateLapisLazuli = true;
 		}
 		if (!oreNameExists(GEAR + QUARTZ)) {
 			nether_quartz_gear = new ItemGear("nether_quartz");
-			registerItem(nether_quartz_gear);
-			oreGear(QUARTZ, nether_quartz_gear);
+			regGear(nether_quartz_gear, QUARTZ);
 			gearNetherQuartz = true;
 		}
 		if (!oreNameExists(PLATE + QUARTZ)) {
 			nether_quartz_plate = new ItemPlate("nether_quartz");
-			registerItem(nether_quartz_plate);
-			orePlate(QUARTZ, nether_quartz_plate);
+			regPlate(nether_quartz_plate, QUARTZ);
 			plateNetherQuartz = true;
 		}
 		if (!oreNameExists(GEAR + REDSTONE)) {
 			redstone_gear = new ItemGear("redstone");
-			registerItem(redstone_gear);
-			oreGear(REDSTONE, redstone_gear);
+			regGear(redstone_gear, REDSTONE);
 			gearRedstone = true;
 		}
 		if (!oreNameExists(PLATE + REDSTONE)) {
 			redstone_plate = new ItemPlate("redstone");
-			registerItem(redstone_plate);
-			orePlate(REDSTONE, redstone_plate);
+			regPlate(redstone_plate, REDSTONE);
 			plateRedstone = true;
 		}
-	}
-	
-	public static void clientPreInit() {
-		if (gearCoal)
-			registerRender(coal_gear);
-		if (plateCoal)
-			registerRender(coal_plate);
-		if (gearDiamond)
-			registerRender(diamond_gear);
-		if (plateDiamond)
-			registerRender(diamond_plate);
-		if (gearEmerald)
-			registerRender(emerald_gear);
-		if (plateEmerald)
-			registerRender(emerald_plate);
-		if (gearGlowstone)
-			registerRender(glowstone_gear);
-		if (plateGlowstone)
-			registerRender(glowstone_plate);
-		if (gearGold)
-			registerRender(gold_gear);
-		if (plateGold)
-			registerRender(gold_plate);
-		if (gearIron)
-			registerRender(iron_gear);
-		if (plateIron)
-			registerRender(iron_plate);
-		if (gearLapisLazuli)
-			registerRender(lapis_lazuli_gear);
-		if (plateLapisLazuli)
-			registerRender(lapis_lazuli_plate);
-		if (gearNetherQuartz)
-			registerRender(nether_quartz_gear);
-		if (plateNetherQuartz)
-			registerRender(nether_quartz_plate);
-		if (gearRedstone)
-			registerRender(redstone_gear);
-		if (plateRedstone)
-			registerRender(redstone_plate);
 	}
 }

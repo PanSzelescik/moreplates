@@ -51,50 +51,6 @@ public class PluginLoader {
 		PluginMultiMod.preInit();
 	}
 	
-	public static void clientPreInit() {
-		if (loadVanilla)
-			PluginVanilla.clientPreInit();
-		if (isActuallyAdditionsLoaded & loadActuallyAdditions)
-			PluginActuallyAdditions.clientPreInit();
-		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
-			PluginAppliedEnergistics2.clientPreInit();
-		if (isAvaritiaLoaded & loadAvaritia)
-			PluginAvaritia.clientPreInit();
-		if (isBotaniaLoaded & loadBotania)
-			PluginBotania.clientPreInit();
-		if (isCalculatorLoaded & loadCalculator)
-			PluginCalculator.clientPreInit();
-		if (isDraconicEvolutionLoaded & loadDraconicEvolution)
-			PluginDraconicEvolution.clientPreInit();
-		if (isEnderIOLoaded & loadEnderIO)
-			PluginEnderIO.clientPreInit();
-		if (isExtraUtilitiesLoaded & loadExtraUtilities)
-			PluginExtraUtilities.clientPreInit();
-		if (isMekanismLoaded & loadMekanism)
-			PluginMekanism.clientPreInit();
-		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions)
-			PluginMysticalAgradditions.clientPreInit();
-		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
-			PluginMysticalAgriculture.clientPreInit();
-		if (isPlusTiCLoaded & loadPlusTiC)
-			PluginPlusTiC.clientPreInit();
-		if (isPneumaticCraftLoaded & loadPneumaticCraft)
-			PluginPneumaticCraft.clientPreInit();
-		if (isProjectELoaded & loadProjectE)
-			PluginProjectE.clientPreInit();
-		if (isProjectRedLoaded & loadProjectRed)
-			PluginProjectRed.clientPreInit();
-		if (isRefinedStorageLoaded & loadRefinedStorage)
-			PluginRefinedStorage.clientPreInit();
-		if (isThaumcraftLoaded & loadThaumcraft)
-			PluginThaumcraft.clientPreInit();
-		if (isTinkersConstructLoaded & loadTinkersConstruct)
-			PluginTinkersConstruct.clientPreInit();
-		if (isTwilightForestLoaded & loadTwilightForest)
-			PluginTwilightForest.clientPreInit();
-		PluginMultiMod.clientPreInit();
-	}
-	
 	public static void postInit() {
 		if (isActuallyAdditionsLoaded & loadActuallyAdditionsRecipes)
 			PluginActuallyAdditions.postInit();

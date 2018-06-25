@@ -10,7 +10,7 @@ public class ItemHammer extends Item {
 	public ItemHammer(String name) {
 		setUnlocalizedName(name);
 		setRegistryName(new ResourceLocation(Reference.MODID, name));
-		setMaxDamage(Config.durabilityHammer);
+		setMaxDamage(Config.durabilityHammer - 1);
 		maxStackSize = 1;
 		setContainerItem(this);
 	}

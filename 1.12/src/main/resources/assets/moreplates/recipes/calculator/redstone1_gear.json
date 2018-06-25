@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "minecraft:item_exists",
-			"item": "moreplates:redstone_gear"
+			"item": "moreplates:redstone1_gear"
 		}
 	],
 	"result": {
-		"item": "moreplates:redstone_gear"
+		"item": "moreplates:redstone1_gear"
 	},
 	"pattern": [
 		" M ",

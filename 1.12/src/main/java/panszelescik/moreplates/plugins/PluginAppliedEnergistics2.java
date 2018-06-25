@@ -19,21 +19,9 @@ public class PluginAppliedEnergistics2 {
 		fluix_gear = new ItemGear("fluix");
 		fluix_plate = new ItemPlate("fluix");
 		
-		registerItem(certus_quartz_gear);
-		registerItem(certus_quartz_plate);
-		registerItem(fluix_gear);
-		registerItem(fluix_plate);
-		
-		oreGear(CERTUS_QUARTZ, certus_quartz_gear);
-		orePlate(CERTUS_QUARTZ, certus_quartz_plate);
-		oreGear(FLUIX, fluix_gear);
-		orePlate(FLUIX, fluix_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(certus_quartz_gear);
-		registerRender(certus_quartz_plate);
-		registerRender(fluix_gear);
-		registerRender(fluix_plate);
+		regGear(certus_quartz_gear, CERTUS_QUARTZ);
+		regPlate(certus_quartz_plate, CERTUS_QUARTZ);
+		regGear(fluix_gear, FLUIX);
+		regPlate(fluix_plate, FLUIX);
 	}
 }

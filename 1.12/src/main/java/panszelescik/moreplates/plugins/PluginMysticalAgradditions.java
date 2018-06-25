@@ -15,15 +15,7 @@ public class PluginMysticalAgradditions {
 		insanium_gear = new ItemGear("insanium");
 		insanium_plate = new ItemPlate("insanium");
 		
-		registerItem(insanium_gear);
-		registerItem(insanium_plate);
-		
-		oreGear(INSANIUM, insanium_gear);
-		orePlate(INSANIUM, insanium_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(insanium_gear);
-		registerRender(insanium_plate);
+		regGear(insanium_gear, INSANIUM);
+		regPlate(insanium_plate, INSANIUM);
 	}
 }

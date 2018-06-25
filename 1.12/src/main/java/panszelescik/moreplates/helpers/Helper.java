@@ -5,7 +5,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.Reference;
@@ -15,15 +17,37 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class Helper {
 	
+	private static boolean CLIENT = FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT;
+	
 	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
 	
-	public static void registerItem(Item item) {
+	public static void regGear(Item gear, String ore) {
+		register(gear);
+		oreGear(ore, gear);
+		if (CLIENT)
+			regRender(gear);
+	}
+	
+	public static void regPlate(Item plate, String ore) {
+		register(plate);
+		orePlate(ore, plate);
+		if (CLIENT)
+			regRender(plate);
+	}
+	
+	public static void regItem (Item item) {
+		register(item);
+		if (CLIENT)
+			regRender(item);
+	}
+	
+	private static void register (Item item) {
 		item.setCreativeTab(MorePlates.moreplates);
 		ForgeRegistries.ITEMS.register(item);
 		MorePlates.logger.debug(INFO_REG_ITEM + getItemNameFromItem(item));
 	}
 	
-	public static void registerRender(Item item) {
+	private static void regRender(Item item) {
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
 		MorePlates.logger.debug(INFO_REG_RENDER + getItemNameFromItem(item));
 	}
@@ -100,27 +124,27 @@ public class Helper {
 		return getItemName(getItemStack(item));
 	}
 	
-	public static void oreGear(String ore, Item item) {
+	public static void oreGear(String ore, Item gear) {
 		ore = GEAR + ore;
-		OreDictionary.registerOre(ore, item);
-		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(item));
+		OreDictionary.registerOre(ore, gear);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(gear));
 	}
 	
-	public static void orePlate(String ore, Item item) {
+	public static void orePlate(String ore, Item plate) {
 		ore = PLATE + ore;
-		OreDictionary.registerOre(ore, item);
-		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(item));
+		OreDictionary.registerOre(ore, plate);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plate));
 	}
 	
-	public static void oreGearGaia(String ore, Item item) {
+	public static void oreGearGaia(String ore, Item geargaia) {
 		ore += "Gear";
-		OreDictionary.registerOre(ore, item);
-		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(item));
+		OreDictionary.registerOre(ore, geargaia);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(geargaia));
 	}
 	
-	public static void orePlateGaia(String ore, Item item) {
+	public static void orePlateGaia(String ore, Item plategaia) {
 		ore += "Plate";
-		OreDictionary.registerOre(ore, item);
-		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(item));
+		OreDictionary.registerOre(ore, plategaia);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plategaia));
 	}
 }

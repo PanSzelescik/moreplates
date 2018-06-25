@@ -24,59 +24,29 @@ public class PluginPlusTiC {
 		alumite_gear = new ItemGear("alumite");
 		alumite_plate = new ItemPlate("alumite");
 		
-		registerItem(alumite_gear);
-		registerItem(alumite_plate);
-		
-		oreGear(ALUMITE, alumite_gear);
-		orePlate(ALUMITE, alumite_plate);
+		regGear(alumite_gear, ALUMITE);
+		regPlate(alumite_plate, ALUMITE);
 		
 		if (isBotaniaLoaded) {
 			mirion_gear = new ItemGear("mirion");
 			mirion_plate = new ItemPlate("mirion");
 			
-			registerItem(mirion_gear);
-			registerItem(mirion_plate);
-			
-			oreGear(MIRION, mirion_gear);
-			orePlate(MIRION, mirion_plate);
+			regGear(mirion_gear, MIRION);
+			regPlate(mirion_plate, MIRION);
 		}
 		if (isMekanismLoaded) {
 			osgloglas_gear = new ItemGear("osgloglas");
 			osgloglas_plate = new ItemPlate("osgloglas");
 			
-			registerItem(osgloglas_gear);
-			registerItem(osgloglas_plate);
-			
-			oreGear(OSGLOGLAS, osgloglas_gear);
-			orePlate(OSGLOGLAS, osgloglas_plate);
+			regGear(osgloglas_gear, OSGLOGLAS);
+			regPlate(osgloglas_plate, OSGLOGLAS);
 		}
 		if (isMekanismLoaded & isThermalExpansionLoaded) {
 			osmiridium_gear = new ItemGear("osmiridium");
 			osmiridium_plate = new ItemPlate("osmiridium");
 			
-			registerItem(osmiridium_gear);
-			registerItem(osmiridium_plate);
-			
-			oreGear(OSMIRIDIUM, osmiridium_gear);
-			orePlate(OSMIRIDIUM, osmiridium_plate);
-		}
-	}
-	
-	public static void clientPreInit() {
-		registerRender(alumite_gear);
-		registerRender(alumite_plate);
-		
-		if (isBotaniaLoaded) {
-			registerRender(mirion_gear);
-			registerRender(mirion_plate);
-		}
-		if (isMekanismLoaded) {
-			registerRender(osgloglas_gear);
-			registerRender(osgloglas_plate);
-		}
-		if (isMekanismLoaded & isThermalExpansionLoaded) {
-			registerRender(osmiridium_gear);
-			registerRender(osmiridium_plate);
+			regGear(osmiridium_gear, OSMIRIDIUM);
+			regPlate(osmiridium_plate, OSMIRIDIUM);
 		}
 	}
 }

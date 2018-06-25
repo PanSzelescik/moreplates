@@ -24,46 +24,22 @@ public class PluginCalculator {
 		amethyst_plate = new ItemPlate("amethyst");
 		enriched_gold_gear = new ItemGear("enriched_gold");
 		enriched_gold_plate = new ItemPlate("enriched_gold");
-		redstone_gear =	 new ItemGear("redstone");
-		redstone_plate = new ItemPlate("redstone");
+		redstone_gear =	 new ItemGear("redstone1");
+		redstone_plate = new ItemPlate("redstone1");
 		reinforced_iron_gear = new ItemGear("reinforced_iron");
 		reinforced_iron_plate = new ItemPlate("reinforced_iron");
 		tanzanite_gear = new ItemGear("tanzanite");
 		tanzanite_plate = new ItemPlate("tanzanite");
 		
-		registerItem(amethyst_gear);
-		registerItem(amethyst_plate);
-		registerItem(enriched_gold_gear);
-		registerItem(enriched_gold_plate);
-		registerItem(redstone_gear);
-		registerItem(redstone_plate);
-		registerItem(reinforced_iron_gear);
-		registerItem(reinforced_iron_plate);
-		registerItem(tanzanite_gear);
-		registerItem(tanzanite_plate);
-		
-		oreGear(AMETHYST, amethyst_gear);
-		orePlate(AMETHYST, amethyst_plate);
-		oreGear(ENRICHED_GOLD, enriched_gold_gear);
-		orePlate(ENRICHED_GOLD, enriched_gold_plate);
-		oreGear(REDSTONE_CALCULATOR, redstone_gear);
-		orePlate(REDSTONE_CALCULATOR, redstone_plate);
-		oreGear(REINFORCED_IRON, reinforced_iron_gear);
-		orePlate(REINFORCED_IRON, reinforced_iron_plate);
-		oreGear(TANZANITE, tanzanite_gear);
-		orePlate(TANZANITE, tanzanite_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(amethyst_gear);
-		registerRender(amethyst_plate);
-		registerRender(enriched_gold_gear);
-		registerRender(enriched_gold_plate);
-		registerRender(redstone_gear);
-		registerRender(redstone_plate);
-		registerRender(reinforced_iron_gear);
-		registerRender(reinforced_iron_plate);
-		registerRender(tanzanite_gear);
-		registerRender(tanzanite_plate);
+		regGear(amethyst_gear, AMETHYST);
+		regPlate(amethyst_plate, AMETHYST);
+		regGear(enriched_gold_gear, ENRICHED_GOLD);
+		regPlate(enriched_gold_plate, ENRICHED_GOLD);
+		regGear(redstone_gear, REDSTONE_CALCULATOR);
+		regPlate(redstone_plate, REDSTONE_CALCULATOR);
+		regGear(reinforced_iron_gear, REINFORCED_IRON);
+		regPlate(reinforced_iron_plate, REINFORCED_IRON);
+		regGear(tanzanite_gear, TANZANITE);
+		regPlate(tanzanite_plate, TANZANITE);
 	}
 }

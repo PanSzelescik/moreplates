@@ -19,21 +19,9 @@ public class PluginDraconicEvolution {
 		draconium_gear = new ItemGear("draconium");
 		draconium_plate = new ItemPlate("draconium");
 		
-		registerItem(awakened_draconium_gear);
-		registerItem(awakened_draconium_plate);
-		registerItem(draconium_gear);
-		registerItem(draconium_plate);
-		
-		oreGear(AWAKENED_DRACONIUM, awakened_draconium_gear);
-		orePlate(AWAKENED_DRACONIUM, awakened_draconium_plate);
-		oreGear(DRACONIUM, draconium_gear);
-		orePlate(DRACONIUM, draconium_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(awakened_draconium_gear);
-		registerRender(awakened_draconium_plate);
-		registerRender(draconium_gear);
-		registerRender(draconium_plate);
+		regGear(awakened_draconium_gear, AWAKENED_DRACONIUM);
+		regPlate(awakened_draconium_plate, AWAKENED_DRACONIUM);
+		regGear(draconium_gear, DRACONIUM);
+		regPlate(draconium_plate, DRACONIUM);
 	}
 }

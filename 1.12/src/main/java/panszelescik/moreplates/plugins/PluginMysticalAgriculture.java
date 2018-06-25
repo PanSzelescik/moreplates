@@ -35,45 +35,17 @@ public class PluginMysticalAgriculture {
 		supremium_gear = new ItemGear("supremium");
 		supremium_plate = new ItemPlate("supremium");
 		
-		registerItem(inferium_gear);
-		registerItem(inferium_plate);
-		registerItem(intermedium_gear);
-		registerItem(intermedium_plate);
-		registerItem(prudentium_gear);
-		registerItem(prudentium_plate);
-		registerItem(soulium_gear);
-		registerItem(soulium_plate);
-		registerItem(superium_gear);
-		registerItem(superium_plate);
-		registerItem(supremium_gear);
-		registerItem(supremium_plate);
-		
-		oreGear(INFERIUM, inferium_gear);
-		orePlate(INFERIUM, inferium_plate);
-		oreGear(INTERMEDIUM, intermedium_gear);
-		orePlate(INTERMEDIUM, intermedium_plate);
-		oreGear(PRUDENTIUM, prudentium_gear);
-		orePlate(PRUDENTIUM, prudentium_plate);
-		oreGear(SOULIUM, soulium_gear);
-		orePlate(SOULIUM, soulium_plate);
-		oreGear(SUPERIUM, superium_gear);
-		orePlate(SUPERIUM, superium_plate);
-		oreGear(SUPREMIUM, supremium_gear);
-		orePlate(SUPREMIUM, supremium_plate);
-	}
-	
-	public static void clientPreInit() {
-		registerRender(inferium_gear);
-		registerRender(inferium_plate);
-		registerRender(intermedium_gear);
-		registerRender(intermedium_plate);
-		registerRender(prudentium_gear);
-		registerRender(prudentium_plate);
-		registerRender(soulium_gear);
-		registerRender(soulium_plate);
-		registerRender(superium_gear);
-		registerRender(superium_plate);
-		registerRender(supremium_gear);
-		registerRender(supremium_plate);
+		regGear(inferium_gear, INFERIUM);
+		regPlate(inferium_plate, INFERIUM);
+		regGear(intermedium_gear, INTERMEDIUM);
+		regPlate(intermedium_plate, INTERMEDIUM);
+		regGear(prudentium_gear, PRUDENTIUM);
+		regPlate(prudentium_plate, PRUDENTIUM);
+		regGear(soulium_gear, SOULIUM);
+		regPlate(soulium_plate, SOULIUM);
+		regGear(superium_gear, SUPERIUM);
+		regPlate(superium_plate, SUPERIUM);
+		regGear(supremium_gear, SUPREMIUM);
+		regPlate(supremium_plate, SUPREMIUM);
 	}
 }
