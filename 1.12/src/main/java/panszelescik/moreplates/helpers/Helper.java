@@ -18,7 +18,7 @@ public class Helper {
 	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
 	
 	public static void registerItem(Item item) {
-		item.setCreativeTab(MorePlates.items);
+		item.setCreativeTab(MorePlates.moreplates);
 		ForgeRegistries.ITEMS.register(item);
 		MorePlates.logger.debug(INFO_REG_ITEM + getItemNameFromItem(item));
 	}

@@ -144,13 +144,13 @@ public class PluginVanilla {
 			plateQuartz = true;
 		}
 		if (!oreNameExists(GEAR + REDSTONE)) {
-			redstone_gear = new ItemGear("redstonemc");
+			redstone_gear = new ItemGear("redstone");
 			registerItem(redstone_gear);
 			oreGear(REDSTONE, redstone_gear);
 			gearRedstone = true;
 		}
 		if (!oreNameExists(PLATE + REDSTONE)) {
-			redstone_plate = new ItemPlate("redstonemc");
+			redstone_plate = new ItemPlate("redstone");
 			registerItem(redstone_plate);
 			orePlate(REDSTONE, redstone_plate);
 			plateRedstone = true;

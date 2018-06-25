@@ -31,6 +31,8 @@ public class Config {
 	private static final String CATEGORY_THERMAL = THERMAL_MODNAME;
 	
 	//Booleans
+	public static boolean centerMetals = true;
+	
 	public static boolean loadActuallyAdditions = true;
 	public static boolean loadActuallyAdditionsRecipes = true;
 	public static boolean loadAppliedEnergistics2 = true;
@@ -56,6 +58,7 @@ public class Config {
 	public static boolean loadThermalExpansionRecipes = true;
 	public static boolean loadTinkersConstruct = true;
 	public static boolean loadTwilightForest = true;
+	public static boolean loadVanilla = true;
 	
 	public static boolean enableIC2Hammer = true;
 	public static boolean enableIEHammer = true;
@@ -109,6 +112,7 @@ public class Config {
 	private static int maxTimeEmpowerer = 600;
 	
 	//Comments
+	private static final String CENTER_IN_GEAR_COMMENT = "Enable this to add option to make Gears with Bronze, Copper, Iron and Tin";
 	private static final String DURABILITYHAMMER_COMMENT = "Durability of Hammer";
 	private static final String ENERGYCOMPACTOR_COMMENT = "Energy used to make Gears and Plates in Compactor when support is loaded";
 	private static final String ENERGYCOMPRESSOR_COMMENT = "Energy used to make some Plates in Compressor when support is loaded (in EU/t)";
@@ -178,6 +182,7 @@ public class Config {
 			loadThermalExpansionRecipes = cfg.getBoolean("loadThermalExpansionRecipes", category, loadThermalExpansionRecipes, LOADTHERMAL_COMMENT);
 			loadTinkersConstruct = cfg.getBoolean("loadTinkersConstruct", category, loadTinkersConstruct, comment);
 			loadTwilightForest = cfg.getBoolean("loadTwilightForest", category, loadTwilightForest, comment);
+			loadVanilla = cfg.getBoolean("loadVanilla", category, loadVanilla, comment);
 		}
 		
 		{	//Actually Additions Recipes
@@ -244,6 +249,7 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "General settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
+			centerMetals = cfg.getBoolean("centerMetals", category, centerMetals, CENTER_IN_GEAR_COMMENT);
 			durabilityHammer = cfg.getInt("durabilityHammer", category, durabilityHammer, minDurabilityHammer, maxDurabilityHammer, DURABILITYHAMMER_COMMENT);
 		}
 		

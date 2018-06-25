@@ -2,12 +2,13 @@ package panszelescik.moreplates.creativetabs;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import panszelescik.moreplates.Reference;
 import panszelescik.moreplates.init.Items;
 
-public class TabItems extends CreativeTabs {
+public class TabMorePlates extends CreativeTabs {
 	
-	public TabItems() {
-		super("items");
+	public TabMorePlates() {
+		super(Reference.MODID);
 	}
 	
 	@Override

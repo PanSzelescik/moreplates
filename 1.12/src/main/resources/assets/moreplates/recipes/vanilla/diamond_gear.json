@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:diamond_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:diamond_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#DIAMOND"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

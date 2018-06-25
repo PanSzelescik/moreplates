@@ -10,7 +10,7 @@
 	},
 	"pattern": [
 		" M ",
-		"MIM",
+		"MCM",
 		" M "
 	],
 	"type": "forge:ore_shaped",
@@ -18,8 +18,8 @@
 		"M": {
 			"item": "#EMPOWERED_PALIS"
 		},
-		"I": {
-			"item": "#IRON"
+		"C": {
+			"item": "#CENTER"
 		}
 	}
 }

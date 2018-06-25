@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import panszelescik.moreplates.config.Config;
-import panszelescik.moreplates.creativetabs.TabItems;
+import panszelescik.moreplates.creativetabs.TabMorePlates;
 import panszelescik.moreplates.proxy.CommonProxy;
 
 @Mod(
@@ -25,7 +25,7 @@ import panszelescik.moreplates.proxy.CommonProxy;
 public class MorePlates {
 	
 	public static final Logger logger = LogManager.getFormatterLogger(Reference.MODID);
-	public static final CreativeTabs items = new TabItems();
+	public static final CreativeTabs moreplates = new TabMorePlates();
 	
 	@Mod.Instance(Reference.MODID)
 	public static MorePlates instance;

@@ -5,6 +5,8 @@
 - Changed glowstone_gear to refined_glowstone_gear and glowstone_plate to refined_glowstone_plate
 - Added Induction Smelter support, Sand + Gear = 4 Ingots + 10% Slag, Sand + Plate = Ingot + 10% Slag
 - First logger, second add recipe
+- Added option to make Gears with Bronze, Copper, Iron and Tin
+- Added Vanilla Gears and Plates
 
 ### 1.12.2-5.0.0
 - Changed localization of update.json
