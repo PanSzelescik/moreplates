@@ -12,6 +12,7 @@ import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
+import static panszelescik.moreplates.plugins.PluginVanilla.*;
 
 import java.util.List;
 
@@ -21,6 +22,17 @@ public class PluginThermalExpansion {
 	private static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
 	
 	public static void postInit() {
+		if (loadVanilla) {
+			add(COAL, "coal", gearCoal, plateCoal);
+			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
+			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
+			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
+			/*add(GOLD, INGOT + GOLD, gearGold, plateGold);
+			add(IRON, INGOT + IRON, gearIron, plateIron);*/
+			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
+		}
 		if (isActuallyAdditionsLoaded & loadActuallyAdditions) {
 			String id = ACTUALLY_MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
@@ -143,6 +155,33 @@ public class PluginThermalExpansion {
 		}
 		if (oreNameExists(ITEM + SILICON)) {
 			add(SILICON, ITEM + SILICON);
+		}
+	}
+	/**
+     * Adds a recipe to the Compactor and Induction Smelter,
+     * 
+     * special for Vanilla Gears and Plates
+     *
+     * @param output        The output as a String without gear and plate
+     * @param inputOre      The input as a String
+     * @param gear          The gear as a boolean
+     * @param plate         The plate as a boolean
+     */
+	private static void add(String output, String inputOre, boolean gear, boolean plate) {
+		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
+		for (ItemStack input : inputs) {
+			if (gear) {
+				MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
+				CompactorManager.addRecipe(energyCompactor, cloneStack(input, 4), getOre(GEAR + output), Mode.GEAR);
+				MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + " x4" + INFO_3 + getItemNameFromOre(GEAR + output));
+				SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), cloneStack(getOre(inputOre), 4), slag, 10);
+			}
+			if (plate) {
+				MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(input));
+				CompactorManager.addRecipe(energyCompactor, input, getOre(PLATE + output), Mode.PLATE);
+				MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + INFO_3 + getItemNameFromOre(PLATE + output));
+				SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getOre(inputOre), slag, 10);
+			}
 		}
 	}
 	

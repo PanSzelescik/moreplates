@@ -169,6 +169,15 @@
 
 
 {
+	"name": "COAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "coal"
+		}
+	]
+},
+{
 	"name": "DIAMOND",
 	"ingredient": [
 		{

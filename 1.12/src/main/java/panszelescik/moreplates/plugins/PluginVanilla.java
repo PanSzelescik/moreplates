@@ -27,24 +27,24 @@ public class PluginVanilla {
 	public static Item redstone_gear;
 	public static Item redstone_plate;
 	
-	static boolean gearCoal;
-	static boolean plateCoal;
-	static boolean gearDiamond;
-	static boolean plateDiamond;
-	static boolean gearEmerald;
-	static boolean plateEmerald;
-	static boolean gearGlowstone;
-	static boolean plateGlowstone;
-	static boolean gearGold;
-	static boolean plateGold;
-	static boolean gearIron;
-	static boolean plateIron;
-	static boolean gearLapisLazuli;
-	static boolean plateLapisLazuli;
-	static boolean gearQuartz;
-	static boolean plateQuartz;
-	static boolean gearRedstone;
-	static boolean plateRedstone;
+	public static boolean gearCoal;
+	public static boolean plateCoal;
+	public static boolean gearDiamond;
+	public static boolean plateDiamond;
+	public static boolean gearEmerald;
+	public static boolean plateEmerald;
+	public static boolean gearGlowstone;
+	public static boolean plateGlowstone;
+	public static boolean gearGold;
+	public static boolean plateGold;
+	public static boolean gearIron;
+	public static boolean plateIron;
+	public static boolean gearLapisLazuli;
+	public static boolean plateLapisLazuli;
+	public static boolean gearNetherQuartz;
+	public static boolean plateNetherQuartz;
+	public static boolean gearRedstone;
+	public static boolean plateRedstone;
 	
 	public static void preInit() {
 		if (!oreNameExists(GEAR + COAL)) {
@@ -135,13 +135,13 @@ public class PluginVanilla {
 			nether_quartz_gear = new ItemGear("nether_quartz");
 			registerItem(nether_quartz_gear);
 			oreGear(QUARTZ, nether_quartz_gear);
-			gearQuartz = true;
+			gearNetherQuartz = true;
 		}
 		if (!oreNameExists(PLATE + QUARTZ)) {
 			nether_quartz_plate = new ItemPlate("nether_quartz");
 			registerItem(nether_quartz_plate);
 			orePlate(QUARTZ, nether_quartz_plate);
-			plateQuartz = true;
+			plateNetherQuartz = true;
 		}
 		if (!oreNameExists(GEAR + REDSTONE)) {
 			redstone_gear = new ItemGear("redstone");
@@ -158,41 +158,41 @@ public class PluginVanilla {
 	}
 	
 	public static void clientPreInit() {
-		if (gearCoal == true)
+		if (gearCoal)
 			registerRender(coal_gear);
-		if (plateCoal == true)
+		if (plateCoal)
 			registerRender(coal_plate);
-		if (gearDiamond == true)
+		if (gearDiamond)
 			registerRender(diamond_gear);
-		if (plateDiamond == true)
+		if (plateDiamond)
 			registerRender(diamond_plate);
-		if (gearEmerald == true)
+		if (gearEmerald)
 			registerRender(emerald_gear);
-		if (plateEmerald == true)
+		if (plateEmerald)
 			registerRender(emerald_plate);
-		if (gearGlowstone == true)
+		if (gearGlowstone)
 			registerRender(glowstone_gear);
-		if (plateGlowstone == true)
+		if (plateGlowstone)
 			registerRender(glowstone_plate);
-		if (gearGold == true)
+		if (gearGold)
 			registerRender(gold_gear);
-		if (plateGold == true)
+		if (plateGold)
 			registerRender(gold_plate);
-		if (gearIron == true)
+		if (gearIron)
 			registerRender(iron_gear);
-		if (plateIron == true)
+		if (plateIron)
 			registerRender(iron_plate);
-		if (gearLapisLazuli == true)
+		if (gearLapisLazuli)
 			registerRender(lapis_lazuli_gear);
-		if (plateLapisLazuli == true)
+		if (plateLapisLazuli)
 			registerRender(lapis_lazuli_plate);
-		if (gearQuartz == true)
+		if (gearNetherQuartz)
 			registerRender(nether_quartz_gear);
-		if (plateQuartz == true)
+		if (plateNetherQuartz)
 			registerRender(nether_quartz_plate);
-		if (gearRedstone == true)
+		if (gearRedstone)
 			registerRender(redstone_gear);
-		if (plateRedstone == true)
+		if (plateRedstone)
 			registerRender(redstone_plate);
 	}
 }

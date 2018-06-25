@@ -7,12 +7,42 @@ import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateCoal;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateDiamond;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateEmerald;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateGlowstone;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateGold;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateIron;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateLapisLazuli;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateNetherQuartz;
+import static panszelescik.moreplates.plugins.PluginVanilla.plateRedstone;
 
 import panszelescik.moreplates.MorePlates;
 
 public class PluginTechReborn {
 	
 	public static void postInit() {
+		if (loadVanilla) {
+			/*add(COAL, "coal", plateCoal);
+			add(DIAMOND, GEM + DIAMOND, plateDiamond);
+			add(EMERALD, GEM + EMERALD, plateEmerald);*/
+			add(GLOWSTONE, DUST + GLOWSTONE, plateGlowstone);
+			/*add(GOLD, INGOT + GOLD, plateGold);
+			add(IRON, INGOT + IRON, plateIron);
+			add(LAPIS, GEM + LAPIS, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, plateRedstone);*/
+			
+			/*addBlock(COAL, 9, plateCoal);
+			addBlock(DIAMOND, 9, plateDiamond);
+			addBlock(EMERALD, 9, plateEmerald);*/
+			addBlock(GLOWSTONE, 4, plateGlowstone);
+			/*addBlock(GOLD, 9, plateGold);
+			addBlock(IRON, 9, plateIron);
+			addBlock(LAPIS, 9, plateLapisLazuli);
+			addBlock(QUARTZ, 4, plateNetherQuartz);
+			addBlock(REDSTONE, 9, plateRedstone);*/
+		}
 		if (isActuallyAdditionsLoaded & loadActuallyAdditions) {
 			String id = ACTUALLY_MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
@@ -232,6 +262,22 @@ public class PluginTechReborn {
 	}
 	
 	/**
+     * Adds a recipe to the Compressor,
+     * 
+     * special for Vanilla Gears and Plates
+     *
+     * @param output        The output as a String without gear and plate
+     * @param input         The input as a String
+     * @param plate         The plate as a boolean
+     */
+	private static void add(String output, String input, boolean plate) {
+		if (plate) {
+			MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
+			RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
+		}
+	}
+	
+	/**
      * Adds a recipe to the Compressor
      *
      * @param output        The output as a String without gear and plate
@@ -278,6 +324,22 @@ public class PluginTechReborn {
 	private static void addGaia(String output, String input) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor, energyCompressor));
+	}
+	
+	/**
+     * Adds a recipe to the Compressor,
+     * 
+     * special for Vanilla Gears and Plates
+     *
+     * @param name          The output and input as a String without block and plate
+     * @param amount        The amount of output as an Int
+     * @param plate         The plate as a boolean
+     */
+	private static void addBlock(String name, int amount, boolean plate) {
+		if (plate) {
+			MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
+			RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
+		}
 	}
 	
 	/**

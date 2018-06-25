@@ -9,6 +9,7 @@ import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
+import static panszelescik.moreplates.plugins.PluginVanilla.*;
 
 import java.util.List;
 
@@ -20,6 +21,17 @@ public class PluginImmersiveEngineering {
 	private static ItemStack mold_plate = getItemStack(IMMERSIVE_MODID, "mold", 1, 0);
 	
 	public static void postInit() {
+		if (loadVanilla) {
+			add(COAL, "coal", gearCoal, plateCoal);
+			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
+			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
+			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
+			/*add(GOLD, INGOT + GOLD, gearGold, plateGold);
+			add(IRON, INGOT + IRON, gearIron, plateIron);*/
+			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
+		}
 		if (isActuallyAdditionsLoaded & loadActuallyAdditions) {
 			String id = ACTUALLY_MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
@@ -142,6 +154,30 @@ public class PluginImmersiveEngineering {
 		}*/
 		if (oreNameExists(ITEM + SILICON)) {
 			add(SILICON, ITEM + SILICON);
+		}
+	}
+	
+	/**
+     * Adds a recipe to the Metal Press,
+     * 
+     * special for Vanilla Gears and Plates
+     *
+     * @param output        The output as a String without gear and plate
+     * @param inputOre      The inputOre as a String
+     * @param gear          The gear as a boolean
+     * @param plate         The plate as a boolean
+     */
+	private static void add(String output, String inputOre, boolean gear, boolean plate) {
+		if (gear) {
+			List<ItemStack> inputs = OreDictionary.getOres(inputOre);
+			for (ItemStack input : inputs) {
+				MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
+				MetalPressRecipe.addRecipe(getOre(GEAR + output), cloneStack(input, 4), mold_gear, energy);
+			}
+		}
+		if (plate) {
+			MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(inputOre));
+			MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energy);
 		}
 	}
 	

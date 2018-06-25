@@ -10,6 +10,7 @@ public class Strings {
 	public static String GEM = "gem";
 	public static String ITEM = "item";
 	public static String BLOCK = "block";
+	public static String DUST = "dust";
 	
 	public static String REFINED = "Refined";
 	public static String ALLOY = "Alloy";
