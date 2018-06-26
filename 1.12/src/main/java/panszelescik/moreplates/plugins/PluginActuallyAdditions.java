@@ -18,6 +18,9 @@ import java.util.List;
 
 public class PluginActuallyAdditions {
 	
+	private static int AtomicReconstructorRecipes = 0;
+	private static int EmpowererRecipes = 0;
+	
 	public static Item black_quartz_gear;
 	public static Item black_quartz_plate;
 	public static Item diamatine_gear;
@@ -121,6 +124,9 @@ public class PluginActuallyAdditions {
 		addReconstructor(PALIS, LAPIS, energyPalisReconstructor);
 		addReconstructor(RESTONIA, REDSTONE, energyRestoniaReconstructor);
 		addReconstructor(VOID, COAL, energyVoidReconstructor);
+		
+		MorePlates.logger.info("Added " + AtomicReconstructorRecipes + " recipes to Atomic Reconstructor");
+		MorePlates.logger.info("Added " + EmpowererRecipes + " recipes to Empowerer");
 	}
 	
 	/**
@@ -138,8 +144,13 @@ public class PluginActuallyAdditions {
 		for (ItemStack dyeStack : dyes) {
 			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
 			ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(GEAR + input)), getOre(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer, timeEmpowerer, null);
+			
+			EmpowererRecipes += 1;
+			
 			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
 			ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(PLATE + input)), getOre(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer, timeEmpowerer, null);
+			
+			EmpowererRecipes += 1;
 		}
 	}
 	
@@ -155,11 +166,15 @@ public class PluginActuallyAdditions {
 		for (ItemStack inputStack : inputs) {
 			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
 			ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(GEAR + output), energy);
+			
+			AtomicReconstructorRecipes += 1;
 		}
 		List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
 		for (ItemStack inputStack : inputss) {
 			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
 			ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(PLATE + output), energy);
+			
+			AtomicReconstructorRecipes += 1;
 		}
 	}
 }

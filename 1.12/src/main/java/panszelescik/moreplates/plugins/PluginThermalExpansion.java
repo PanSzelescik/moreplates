@@ -18,6 +18,8 @@ import java.util.List;
 
 public class PluginThermalExpansion {
 	
+	private static int CompactorRecipes = 0;
+	private static int InductionSmelterRecipes = 0;
 	private static ItemStack sand = new ItemStack(Blocks.SAND);
 	private static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
 	
@@ -156,6 +158,9 @@ public class PluginThermalExpansion {
 		if (oreNameExists(ITEM + SILICON)) {
 			add(SILICON, ITEM + SILICON);
 		}
+		
+		MorePlates.logger.info("Added " + CompactorRecipes + " recipes to Compactor");
+		MorePlates.logger.info("Added " + InductionSmelterRecipes + " recipes to Induction Smelter");
 	}
 	/**
      * Adds a recipe to the Compactor and Induction Smelter,
@@ -175,12 +180,18 @@ public class PluginThermalExpansion {
 				CompactorManager.addRecipe(energyCompactor, cloneStack(input, 4), getOre(GEAR + output), Mode.GEAR);
 				MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + " x4" + INFO_3 + getItemNameFromOre(GEAR + output));
 				SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), cloneStack(getOre(inputOre), 4), slag, 10);
+				
+				CompactorRecipes += 1;
+				InductionSmelterRecipes += 1;
 			}
 			if (plate) {
 				MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(input));
 				CompactorManager.addRecipe(energyCompactor, input, getOre(PLATE + output), Mode.PLATE);
 				MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + INFO_3 + getItemNameFromOre(PLATE + output));
 				SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getOre(inputOre), slag, 10);
+				
+				CompactorRecipes += 1;
+				InductionSmelterRecipes += 1;
 			}
 		}
 	}
@@ -202,6 +213,9 @@ public class PluginThermalExpansion {
 			SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), cloneStack(getOre(inputOre), 4), slag, 10);
 			MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + INFO_3 + getItemNameFromOre(PLATE + output));
 			SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getOre(inputOre), slag, 10);
+			
+			CompactorRecipes += 1;
+			InductionSmelterRecipes += 1;
 		}
 	}
 	
@@ -221,6 +235,9 @@ public class PluginThermalExpansion {
 		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), getItemStack(id, input, 4), slag, 10);
 		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromItemStack(id, input) + INFO_3 + getItemNameFromOre(PLATE + output));
 		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getItemStack(id, input), slag, 10);
+		
+		CompactorRecipes += 1;
+		InductionSmelterRecipes += 1;
 	}
 	
 	/**
@@ -240,6 +257,9 @@ public class PluginThermalExpansion {
 		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), getItemStack(id, input, 4, meta), slag, 10);
 		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromItemStack(id, input, 1, meta) + INFO_3 + getItemNameFromOre(PLATE + output));
 		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getItemStack(id, input, 1, meta), slag, 10);
+		
+		CompactorRecipes += 1;
+		InductionSmelterRecipes += 1;
 	}
 	
 	/**
@@ -259,5 +279,8 @@ public class PluginThermalExpansion {
 		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(output + "Gear"), cloneStack(getOre(input), 4), slag, 10);
 		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(input) + INFO_3 + getItemNameFromOre(output + "Plate"));
 		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(output + "Plate"), getOre(input), slag, 10);
+		
+		CompactorRecipes += 1;
+		InductionSmelterRecipes += 1;
 	}
 }

@@ -11,6 +11,9 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginBotania {
 	
+	private static int ElvenTradeRecipes = 0;
+	private static int ManaInfusionRecipes = 0;
+	
 	public static Item elementium_gear;
 	public static Item elementium_plate;
 	public static Item gaia_spirit_gear;
@@ -44,8 +47,11 @@ public class PluginBotania {
 	}
 	
 	public static void postInit() {
-		addManaInfusion(MANASTEEL, IRON);
 		addElvenTrade(ELEMENTIUM, MANASTEEL);
+		addManaInfusion(MANASTEEL, IRON);
+		
+		MorePlates.logger.info("Added " + ElvenTradeRecipes + " recipes to Elven Trade");
+		MorePlates.logger.info("Added " + ManaInfusionRecipes + " Mana Infusion recipes");
 	}
 	
 	/**
@@ -57,8 +63,13 @@ public class PluginBotania {
 	private static void addManaInfusion(String output, String input) {
 		MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input));
 		BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana);
+		
+		ManaInfusionRecipes += 1;
+		
 		MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input));
 		BotaniaAPI.registerManaInfusionRecipe(getOre(PLATE + output), PLATE + input, manasteelMana);
+		
+		ManaInfusionRecipes += 1;
 	}
 	
 	/**
@@ -70,7 +81,12 @@ public class PluginBotania {
 	private static void addElvenTrade(String output, String input) {
 		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");
 		BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
+		
+		ElvenTradeRecipes += 1;
+		
 		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + " x2");
 		BotaniaAPI.registerElvenTradeRecipe(getOre(PLATE + output), PLATE + input, PLATE + input);
+		
+		ElvenTradeRecipes += 1;
 	}
 }
