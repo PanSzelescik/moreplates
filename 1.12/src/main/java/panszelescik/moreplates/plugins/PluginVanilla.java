@@ -93,7 +93,7 @@ public class PluginVanilla {
 			gearGold = true;
 		}
 		if (!oreNameExists(PLATE + GOLD)) {
-			glowstone_plate = new ItemPlate("gold");
+			gold_plate = new ItemPlate("gold");
 			regPlate(gold_plate, GOLD);
 			plateGold = true;
 		}
