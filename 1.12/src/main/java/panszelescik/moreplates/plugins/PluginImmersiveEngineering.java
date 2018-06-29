@@ -160,16 +160,6 @@ public class PluginImmersiveEngineering {
 		MorePlates.logger.info("Added " + MetalPressRecipes + " recipes to Metal Press");
 	}
 	
-	/**
-     * Adds a recipe to the Metal Press,
-     * 
-     * special for Vanilla Gears and Plates
-     *
-     * @param output        The output as a String without gear and plate
-     * @param inputOre      The inputOre as a String
-     * @param gear          The gear as a boolean
-     * @param plate         The plate as a boolean
-     */
 	private static void add(String output, String inputOre, boolean gear, boolean plate) {
 		if (gear) {
 			List<ItemStack> inputs = OreDictionary.getOres(inputOre);
@@ -188,12 +178,6 @@ public class PluginImmersiveEngineering {
 		}
 	}
 	
-	/**
-     * Adds a recipe to the Metal Press
-     *
-     * @param output        The output as a String without gear and plate
-     * @param inputOre      The inputOre as a String
-     */
 	private static void add(String output, String inputOre) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
@@ -208,13 +192,6 @@ public class PluginImmersiveEngineering {
 		MetalPressRecipes += 1;
 	}
 	
-	/**
-     * Adds a recipe to the Metal Press
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String - Unlocalized Name
-     * @param id            The id as a String - ModID
-     */
 	private static void add(String output, String input, String id) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
 		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4), mold_gear, energy);
@@ -227,14 +204,6 @@ public class PluginImmersiveEngineering {
 		MetalPressRecipes += 1;
 	}
 	
-	/**
-     * Adds a recipe to the Metal Press
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String - Unlocalized Name
-     * @param id            The id as an String - ModID
-     * @param meta          The meta as an Int - Metadata
-     */
 	private static void add(String output, String input, String id, int meta) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
 		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 4, meta), mold_gear, energy);
@@ -247,14 +216,6 @@ public class PluginImmersiveEngineering {
 		MetalPressRecipes += 1;
 	}
 	
-	/**
-     * Adds a recipe to the Metal Press,
-     * 
-     * special for Gaia Spirit Gear and Plate
-     *
-     * @param output        The output as a String without Gear and Plate
-     * @param input         The input as a String without Gear and Plate
-     */
 	private static void addGaia(String output, String input) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
 		MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input, 4), mold_gear, energy);

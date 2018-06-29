@@ -19,9 +19,7 @@ public class PluginAppliedEnergistics2 {
 		fluix_gear = new ItemGear("fluix");
 		fluix_plate = new ItemPlate("fluix");
 		
-		regGear(certus_quartz_gear, CERTUS_QUARTZ);
-		regPlate(certus_quartz_plate, CERTUS_QUARTZ);
-		regGear(fluix_gear, FLUIX);
-		regPlate(fluix_plate, FLUIX);
+		reg(CERTUS_QUARTZ, certus_quartz_gear, certus_quartz_plate);
+		reg(FLUIX, fluix_gear, fluix_plate);
 	}
 }

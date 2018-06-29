@@ -19,9 +19,7 @@ public class PluginThaumcraft {
 		quicksilver_gear = new ItemGear("quicksilver");
 		quicksilver_plate = new ItemPlate("quicksilver");
 		
-		regGear(amber_gear, AMBER);
-		regPlate(amber_plate, AMBER);
-		regGear(quicksilver_gear, QUICKSILVER);
-		regPlate(quicksilver_plate, QUICKSILVER);
+		reg(AMBER, amber_gear, amber_plate);
+		reg(QUICKSILVER, quicksilver_gear, quicksilver_plate);
 	}
 }

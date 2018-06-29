@@ -15,7 +15,6 @@ public class PluginRefinedStorage {
 		quartz_enriched_iron_gear = new ItemGear("quartz_enriched_iron");
 		quartz_enriched_iron_plate = new ItemPlate("quartz_enriched_iron");
 		
-		regGear(quartz_enriched_iron_gear, QUARTZ_ENRICHED_IRON);
-		regPlate(quartz_enriched_iron_plate, QUARTZ_ENRICHED_IRON);
+		reg(QUARTZ_ENRICHED_IRON, quartz_enriched_iron_gear, quartz_enriched_iron_plate);
 	}
 }

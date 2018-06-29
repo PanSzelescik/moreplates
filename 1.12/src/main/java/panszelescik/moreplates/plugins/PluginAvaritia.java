@@ -23,11 +23,8 @@ public class PluginAvaritia {
 		neutronium_gear = new ItemGear("neutronium");
 		neutronium_plate = new ItemPlate("neutronium");
 		
-		regGear(crystal_matrix_gear, CRYSTAL_MATRIX);
-		regPlate(crystal_matrix_plate, CRYSTAL_MATRIX);
-		regGear(infinity_gear, INFINITY);
-		regPlate(infinity_plate, INFINITY);
-		regGear(neutronium_gear, NEUTRONIUM);
-		regPlate(neutronium_plate, NEUTRONIUM);
+		reg(CRYSTAL_MATRIX, crystal_matrix_gear, crystal_matrix_plate);
+		reg(INFINITY, infinity_gear, infinity_plate);
+		reg(NEUTRONIUM, neutronium_gear, neutronium_plate);
 	}
 }

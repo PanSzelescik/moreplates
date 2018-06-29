@@ -162,16 +162,7 @@ public class PluginThermalExpansion {
 		MorePlates.logger.info("Added " + CompactorRecipes + " recipes to Compactor");
 		MorePlates.logger.info("Added " + InductionSmelterRecipes + " recipes to Induction Smelter");
 	}
-	/**
-     * Adds a recipe to the Compactor and Induction Smelter,
-     * 
-     * special for Vanilla Gears and Plates
-     *
-     * @param output        The output as a String without gear and plate
-     * @param inputOre      The input as a String
-     * @param gear          The gear as a boolean
-     * @param plate         The plate as a boolean
-     */
+	
 	private static void add(String output, String inputOre, boolean gear, boolean plate) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
@@ -196,12 +187,6 @@ public class PluginThermalExpansion {
 		}
 	}
 	
-	/**
-     * Adds a recipe to the Compactor and Induction Smelter
-     *
-     * @param output        The output as a String without gear and plate
-     * @param inputOre      The input as a String
-     */
 	private static void add(String output, String inputOre) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
@@ -219,13 +204,6 @@ public class PluginThermalExpansion {
 		}
 	}
 	
-	/**
-     * Adds a recipe to the Compactor and Induction Smelter
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String - Unlocalized Name
-     * @param id            The id as a String - ModID
-     */
 	private static void add(String output, String input, String id) {
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
 		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 4), getOre(GEAR + output), Mode.GEAR);
@@ -240,14 +218,6 @@ public class PluginThermalExpansion {
 		InductionSmelterRecipes += 1;
 	}
 	
-	/**
-     * Adds a recipe to the Compactor and Induction Smelter
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String - Unlocalized Name
-     * @param id            The id as an String - ModID
-     * @param meta          The meta as an Int - Metadata
-     */
 	private static void add(String output, String input, String id, int meta) {
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
 		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 4, meta), getOre(GEAR + output), Mode.GEAR);
@@ -262,14 +232,6 @@ public class PluginThermalExpansion {
 		InductionSmelterRecipes += 1;
 	}
 	
-	/**
-     * Adds a recipe to the Compactor and Induction Smelter,
-     * 
-     * special for Gaia Spirit Gear and Plate
-     *
-     * @param output        The output as a String without Gear and Plate
-     * @param input         The input as a String without Gear and Plate
-     */
 	private static void addGaia(String output, String input) {
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
 		CompactorManager.addRecipe(energyCompactor, getOre(input, 4), getOre(output + "Gear"), Mode.GEAR);

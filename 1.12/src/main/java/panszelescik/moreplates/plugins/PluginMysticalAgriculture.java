@@ -35,17 +35,11 @@ public class PluginMysticalAgriculture {
 		supremium_gear = new ItemGear("supremium");
 		supremium_plate = new ItemPlate("supremium");
 		
-		regGear(inferium_gear, INFERIUM);
-		regPlate(inferium_plate, INFERIUM);
-		regGear(intermedium_gear, INTERMEDIUM);
-		regPlate(intermedium_plate, INTERMEDIUM);
-		regGear(prudentium_gear, PRUDENTIUM);
-		regPlate(prudentium_plate, PRUDENTIUM);
-		regGear(soulium_gear, SOULIUM);
-		regPlate(soulium_plate, SOULIUM);
-		regGear(superium_gear, SUPERIUM);
-		regPlate(superium_plate, SUPERIUM);
-		regGear(supremium_gear, SUPREMIUM);
-		regPlate(supremium_plate, SUPREMIUM);
+		reg(INFERIUM, inferium_gear, inferium_plate);
+		reg(INTERMEDIUM, intermedium_gear, intermedium_plate);
+		reg(PRUDENTIUM, prudentium_gear, prudentium_plate);
+		reg(SOULIUM, soulium_gear, soulium_plate);
+		reg(SUPERIUM, superium_gear, superium_plate);
+		reg(SUPREMIUM, supremium_gear, supremium_plate);
 	}
 }

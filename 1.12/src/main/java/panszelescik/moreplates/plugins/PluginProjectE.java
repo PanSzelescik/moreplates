@@ -19,9 +19,7 @@ public class PluginProjectE {
 		red_matter_gear = new ItemGear("red_matter");
 		red_matter_plate = new ItemPlate("red_matter");
 		
-		regGear(dark_matter_gear, DARK_MATTER);
-		regPlate(dark_matter_plate, DARK_MATTER);
-		regGear(red_matter_gear, RED_MATTER);
-		regPlate(red_matter_plate, RED_MATTER);
+		reg(DARK_MATTER, dark_matter_gear, dark_matter_plate);
+		reg(RED_MATTER, red_matter_gear, red_matter_plate);
 	}
 }

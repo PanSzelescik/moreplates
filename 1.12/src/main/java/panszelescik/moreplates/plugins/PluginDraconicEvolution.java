@@ -19,9 +19,7 @@ public class PluginDraconicEvolution {
 		draconium_gear = new ItemGear("draconium");
 		draconium_plate = new ItemPlate("draconium");
 		
-		regGear(awakened_draconium_gear, AWAKENED_DRACONIUM);
-		regPlate(awakened_draconium_plate, AWAKENED_DRACONIUM);
-		regGear(draconium_gear, DRACONIUM);
-		regPlate(draconium_plate, DRACONIUM);
+		reg(AWAKENED_DRACONIUM, awakened_draconium_gear, awakened_draconium_plate);
+		reg(DRACONIUM, draconium_gear, draconium_plate);
 	}
 }

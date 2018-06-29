@@ -23,11 +23,8 @@ public class PluginMekanism {
 		refined_obsidian_gear = new ItemGear("refined_obsidian");
 		refined_obsidian_plate = new ItemPlate("refined_obsidian");
 		
-		regGear(osmium_gear, OSMIUM);
-		regPlate(osmium_plate, OSMIUM);
-		regGear(refined_glowstone_gear, REFINED_GLOWSTONE);
-		regPlate(refined_glowstone_plate, REFINED_GLOWSTONE);
-		regGear(refined_obsidian_gear, REFINED_OBSIDIAN);
-		regPlate(refined_obsidian_plate, REFINED_OBSIDIAN);
+		reg(OSMIUM, osmium_gear, osmium_plate);
+		reg(REFINED_GLOWSTONE, refined_glowstone_gear, refined_glowstone_plate);
+		reg(REFINED_OBSIDIAN, refined_obsidian_gear, refined_obsidian_plate);
 	}
 }

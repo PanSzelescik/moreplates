@@ -23,11 +23,8 @@ public class PluginExtraUtilities {
 		evil_infused_iron_gear = new ItemGear("evil_infused_iron");
 		evil_infused_iron_plate = new ItemPlate("evil_infused_iron");
 		
-		regGear(demon_gear, DEMON);
-		regPlate(demon_plate, DEMON);
-		regGear(enchanted_gear, ENCHANTED);
-		regPlate(enchanted_plate, ENCHANTED);
-		regGear(evil_infused_iron_gear, EVIL_INFUSED_IRON);
-		regPlate(evil_infused_iron_plate, EVIL_INFUSED_IRON);
+		reg(DEMON, demon_gear, demon_plate);
+		reg(ENCHANTED, enchanted_gear, enchanted_plate);
+		reg(EVIL_INFUSED_IRON, evil_infused_iron_gear, evil_infused_iron_plate);
 	}
 }

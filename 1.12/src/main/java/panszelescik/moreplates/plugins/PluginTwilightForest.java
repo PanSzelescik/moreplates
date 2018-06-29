@@ -23,11 +23,8 @@ public class PluginTwilightForest {
 		knightmetal_gear = new ItemGear("knightmetal");
 		knightmetal_plate = new ItemPlate("knightmetal");
 		
-		regGear(fiery_gear, FIERY);
-		regPlate(fiery_plate, FIERY);
-		regGear(ironwood_gear, IRONWOOD);
-		regPlate(ironwood_plate, IRONWOOD);
-		regGear(knightmetal_gear, KNIGHTMETAL);
-		regPlate(knightmetal_plate, KNIGHTMETAL);
+		reg(FIERY, fiery_gear, fiery_plate);
+		reg(IRONWOOD, ironwood_gear, ironwood_plate);
+		reg(KNIGHTMETAL, knightmetal_gear, knightmetal_plate);
 	}
 }

@@ -15,7 +15,6 @@ public class PluginMysticalAgradditions {
 		insanium_gear = new ItemGear("insanium");
 		insanium_plate = new ItemPlate("insanium");
 		
-		regGear(insanium_gear, INSANIUM);
-		regPlate(insanium_plate, INSANIUM);
+		reg(INSANIUM, insanium_gear, insanium_plate);
 	}
 }

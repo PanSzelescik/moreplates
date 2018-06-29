@@ -31,15 +31,10 @@ public class PluginTinkersConstruct {
 		pig_iron_gear = new ItemGear("pig_iron");
 		pig_iron_plate = new ItemPlate("pig_iron");
 		
-		regGear(ardite_gear, ARDITE);
-		regPlate(ardite_plate, ARDITE);
-		regGear(cobalt_gear, COBALT);
-		regPlate(cobalt_plate, COBALT);
-		regGear(knightslime_gear, KNIGHTSLIME);
-		regPlate(knightslime_plate, KNIGHTSLIME);
-		regGear(manyullyn_gear, MANYULLYN);
-		regPlate(manyullyn_plate, MANYULLYN);
-		regGear(pig_iron_gear, PIG_IRON);
-		regPlate(pig_iron_plate, PIG_IRON);
+		reg(ARDITE, ardite_gear, ardite_plate);
+		reg(COBALT, cobalt_gear, cobalt_plate);
+		reg(KNIGHTSLIME, knightslime_gear, knightslime_plate);
+		reg(MANYULLYN, manyullyn_gear, manyullyn_plate);
+		reg(PIG_IRON, pig_iron_gear, pig_iron_plate);
 	}
 }

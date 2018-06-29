@@ -33,17 +33,10 @@ public class PluginBotania {
 		terrasteel_gear = new ItemGear("terrasteel");
 		terrasteel_plate = new ItemPlate("terrasteel");
 		
-		regGear(elementium_gear, ELEMENTIUM);
-		regPlate(elementium_plate, ELEMENTIUM);
-		regItem(gaia_spirit_gear);
-		regItem(gaia_spirit_plate);
-		regGear(manasteel_gear, MANASTEEL);
-		regPlate(manasteel_plate, MANASTEEL);
-		regGear(terrasteel_gear, TERRASTEEL);
-		regPlate(terrasteel_plate, TERRASTEEL);
-		
-		oreGearGaia(GAIA_SPIRIT, gaia_spirit_gear);
-		orePlateGaia(GAIA_SPIRIT, gaia_spirit_plate);
+		reg(ELEMENTIUM, elementium_gear, elementium_plate);
+		regGaia(GAIA_SPIRIT, gaia_spirit_gear, gaia_spirit_plate);
+		reg(MANASTEEL, manasteel_gear, manasteel_plate);
+		reg(TERRASTEEL, terrasteel_gear, terrasteel_plate);
 	}
 	
 	public static void postInit() {
@@ -54,12 +47,6 @@ public class PluginBotania {
 		MorePlates.logger.info("Added " + ManaInfusionRecipes + " Mana Infusion recipes");
 	}
 	
-	/**
-     * Adds a Mana Infusion Recipe
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String without gear and plate
-     */
 	private static void addManaInfusion(String output, String input) {
 		MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input));
 		BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana);
@@ -72,12 +59,6 @@ public class PluginBotania {
 		ManaInfusionRecipes += 1;
 	}
 	
-	/**
-     * Adds an Elven Trade Recipe
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String without gear and plate
-     */
 	private static void addElvenTrade(String output, String input) {
 		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");
 		BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);

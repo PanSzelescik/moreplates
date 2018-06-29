@@ -31,15 +31,10 @@ public class PluginCalculator {
 		tanzanite_gear = new ItemGear("tanzanite");
 		tanzanite_plate = new ItemPlate("tanzanite");
 		
-		regGear(amethyst_gear, AMETHYST);
-		regPlate(amethyst_plate, AMETHYST);
-		regGear(enriched_gold_gear, ENRICHED_GOLD);
-		regPlate(enriched_gold_plate, ENRICHED_GOLD);
-		regGear(redstone_gear, REDSTONE_CALCULATOR);
-		regPlate(redstone_plate, REDSTONE_CALCULATOR);
-		regGear(reinforced_iron_gear, REINFORCED_IRON);
-		regPlate(reinforced_iron_plate, REINFORCED_IRON);
-		regGear(tanzanite_gear, TANZANITE);
-		regPlate(tanzanite_plate, TANZANITE);
+		reg(AMETHYST, amethyst_gear, amethyst_plate);
+		reg(ENRICHED_GOLD, enriched_gold_gear, enriched_gold_plate);
+		reg(REDSTONE_CALCULATOR, redstone_gear, redstone_plate);
+		reg(REINFORCED_IRON, reinforced_iron_gear, reinforced_iron_plate);
+		reg(TANZANITE, tanzanite_gear, tanzanite_plate);
 	}
 }

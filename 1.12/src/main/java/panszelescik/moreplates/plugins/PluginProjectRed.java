@@ -19,9 +19,7 @@ public class PluginProjectRed {
 		red_alloy_gear = new ItemGear("red_alloy");
 		red_alloy_plate = new ItemPlate("red_alloy");
 		
-		regGear(electrotine_alloy_gear, ELECTROTINE);
-		regPlate(electrotine_alloy_plate, ELECTROTINE);
-		regGear(red_alloy_gear, RED_ALLOY);
-		regPlate(red_alloy_plate, RED_ALLOY);
+		reg(ELECTROTINE, electrotine_alloy_gear, electrotine_alloy_plate);
+		reg(RED_ALLOY, red_alloy_gear, red_alloy_plate);
 	}
 }

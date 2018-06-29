@@ -24,29 +24,25 @@ public class PluginPlusTiC {
 		alumite_gear = new ItemGear("alumite");
 		alumite_plate = new ItemPlate("alumite");
 		
-		regGear(alumite_gear, ALUMITE);
-		regPlate(alumite_plate, ALUMITE);
+		reg(ALUMITE, alumite_gear, alumite_plate);
 		
 		if (isBotaniaLoaded) {
 			mirion_gear = new ItemGear("mirion");
 			mirion_plate = new ItemPlate("mirion");
 			
-			regGear(mirion_gear, MIRION);
-			regPlate(mirion_plate, MIRION);
+			reg(MIRION, mirion_gear, mirion_plate);
 		}
 		if (isMekanismLoaded) {
 			osgloglas_gear = new ItemGear("osgloglas");
 			osgloglas_plate = new ItemPlate("osgloglas");
 			
-			regGear(osgloglas_gear, OSGLOGLAS);
-			regPlate(osgloglas_plate, OSGLOGLAS);
+			reg(OSGLOGLAS, osgloglas_gear, osgloglas_plate);
 		}
 		if (isMekanismLoaded & isThermalExpansionLoaded) {
 			osmiridium_gear = new ItemGear("osmiridium");
 			osmiridium_plate = new ItemPlate("osmiridium");
 			
-			regGear(osmiridium_gear, OSMIRIDIUM);
-			regPlate(osmiridium_plate, OSMIRIDIUM);
+			reg(OSMIRIDIUM, osmiridium_gear, osmiridium_plate);
 		}
 	}
 }

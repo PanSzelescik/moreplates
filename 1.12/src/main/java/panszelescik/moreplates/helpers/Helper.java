@@ -11,9 +11,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.Reference;
+import panszelescik.moreplates.items.*;
 import panszelescik.moreplates.proxy.OreDictionaryProxy;
 
 import static panszelescik.moreplates.helpers.Strings.*;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class Helper {
 	
@@ -21,28 +25,41 @@ public class Helper {
 	
 	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
 	
+	public static void reg(@Nonnull String ore, @Nullable Item gear, @Nullable Item plate) {
+		if (gear != null)
+			regGear(gear, ore);
+		if (plate != null)
+			regPlate(plate, ore);
+	}
+	
+	public static void regGaia(@Nonnull String ore, @Nullable Item gear, @Nullable Item plate) {
+		if (gear != null) {
+			regItem(gear);
+			oreGearGaia(ore, gear);
+		}
+		if (plate != null) {
+			regItem(plate);
+			orePlateGaia(ore, plate);
+		}
+	}
+	
 	public static void regGear(Item gear, String ore) {
-		register(gear);
+		regItem(gear);
 		oreGear(ore, gear);
-		if (CLIENT)
-			regRender(gear);
 	}
 	
 	public static void regPlate(Item plate, String ore) {
-		register(plate);
+		regItem(plate);
 		orePlate(ore, plate);
-		if (CLIENT)
-			regRender(plate);
 	}
 	
-	public static void regItem (Item item) {
+	public static void regItem(Item item) {
 		register(item);
 		if (CLIENT)
 			regRender(item);
 	}
 	
-	private static void register (Item item) {
-		item.setCreativeTab(MorePlates.moreplates);
+	private static void register(Item item) {
 		ForgeRegistries.ITEMS.register(item);
 		MorePlates.logger.debug(INFO_REG_ITEM + getItemNameFromItem(item));
 	}

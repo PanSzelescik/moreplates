@@ -18,15 +18,13 @@ public class PluginMultiMod {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
-			regGear(silicon_gear, SILICON);
-			regPlate(silicon_plate, SILICON);
+			reg(SILICON, silicon_gear, silicon_plate);
 		}
 		else if (isRefinedStorageLoaded & loadRefinedStorage) {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
-			regGear(silicon_gear, SILICON);
-			regPlate(silicon_plate, SILICON);
+			reg(SILICON, silicon_gear, silicon_plate);
 		}
 	}
 }

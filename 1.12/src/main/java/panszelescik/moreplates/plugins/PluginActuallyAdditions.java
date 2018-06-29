@@ -78,33 +78,20 @@ public class PluginActuallyAdditions {
 		empowered_void_gear = new ItemGear("empowered_void");
 		empowered_void_plate = new ItemPlate("empowered_void");
 		
-		regGear(black_quartz_gear, BLACK_QUARTZ);
-		regPlate(black_quartz_plate, BLACK_QUARTZ);
-		regGear(diamatine_gear, DIAMATINE);
-		regPlate(diamatine_plate, DIAMATINE);
-		regGear(emeradic_gear, EMERADIC);
-		regPlate(emeradic_plate, EMERADIC);
-		regGear(enori_gear, ENORI);
-		regPlate(enori_plate, ENORI);
-		regGear(palis_gear, PALIS);
-		regPlate(palis_plate, PALIS);
-		regGear(restonia_gear, RESTONIA);
-		regPlate(restonia_plate, RESTONIA);
-		regGear(void_gear, VOID);
-		regPlate(void_plate, VOID);
+		reg(BLACK_QUARTZ, black_quartz_gear, black_quartz_plate);
+		reg(DIAMATINE, diamatine_gear, diamatine_plate);
+		reg(EMERADIC, emeradic_gear, emeradic_plate);
+		reg(ENORI, enori_gear, enori_plate);
+		reg(PALIS, palis_gear, palis_plate);
+		reg(RESTONIA, restonia_gear, restonia_plate);
+		reg(VOID, void_gear, void_plate);
 		
-		regGear(empowered_diamatine_gear, EMPOWERED_DIAMATINE);
-		regPlate(empowered_diamatine_plate, EMPOWERED_DIAMATINE);
-		regGear(empowered_emeradic_gear, EMPOWERED_EMERADIC);
-		regPlate(empowered_emeradic_plate, EMPOWERED_EMERADIC);
-		regGear(empowered_enori_gear, EMPOWERED_ENORI);
-		regPlate(empowered_enori_plate, EMPOWERED_ENORI);
-		regGear(empowered_palis_gear, EMPOWERED_PALIS);
-		regPlate(empowered_palis_plate, EMPOWERED_PALIS);
-		regGear(empowered_restonia_gear, EMPOWERED_RESTONIA);
-		regPlate(empowered_restonia_plate, EMPOWERED_RESTONIA);
-		regGear(empowered_void_gear, EMPOWERED_VOID);
-		regPlate(empowered_void_plate, EMPOWERED_VOID);
+		reg(EMPOWERED_DIAMATINE, empowered_diamatine_gear, empowered_diamatine_plate);
+		reg(EMPOWERED_EMERADIC, empowered_emeradic_gear, empowered_emeradic_plate);
+		reg(EMPOWERED_ENORI, empowered_enori_gear, empowered_enori_plate);
+		reg(EMPOWERED_PALIS, empowered_palis_gear, empowered_palis_plate);
+		reg(EMPOWERED_RESTONIA, empowered_restonia_gear, empowered_restonia_plate);
+		reg(EMPOWERED_VOID, empowered_void_gear, empowered_void_plate);
 	}
 	
 	public static void postInit() {
@@ -129,16 +116,6 @@ public class PluginActuallyAdditions {
 		MorePlates.logger.info("Added " + EmpowererRecipes + " recipes to Empowerer");
 	}
 	
-	/**
-     * Adds a recipe to the Empowerer
-     *
-     * @param output        The output as a String without gear and plate
-     * @param input         The input as a String without gear and plate
-     * @param dye           The dye as a String
-     * @param modifier2     The modifier2 as an ItemStack
-     * @param modifier3     The modifier3 as an ItemStack
-     * @param modifier4     The modifier4 as an ItemStack
-     */
 	private static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
@@ -154,13 +131,6 @@ public class PluginActuallyAdditions {
 		}
 	}
 	
-	/**
-     * Adds a recipe to the Atomic Reconstructor
-     *
-     * @param output        The output as an String without gear and plate
-     * @param input         The input as an String without gear and plate
-     * @param energy        The amount of RF used per conversion
-     */
 	private static void addReconstructor(String output, String input, int energy) {
 		List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
 		for (ItemStack inputStack : inputs) {
