@@ -9,6 +9,8 @@ import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
+import javax.annotation.Nonnull;
+
 public class PluginBotania {
 	
 	private static int ElvenTradeRecipes = 0;
@@ -47,7 +49,7 @@ public class PluginBotania {
 		MorePlates.logger.info("Added " + ManaInfusionRecipes + " Mana Infusion recipes");
 	}
 	
-	private static void addManaInfusion(String output, String input) {
+	private static void addManaInfusion(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input));
 		BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana);
 		
@@ -59,7 +61,7 @@ public class PluginBotania {
 		ManaInfusionRecipes += 1;
 	}
 	
-	private static void addElvenTrade(String output, String input) {
+	private static void addElvenTrade(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");
 		BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
 		

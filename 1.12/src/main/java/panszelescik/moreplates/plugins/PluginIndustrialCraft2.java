@@ -2,6 +2,8 @@ package panszelescik.moreplates.plugins;
 
 import java.util.Collections;
 
+import javax.annotation.Nonnull;
+
 import ic2.api.recipe.IRecipeInput;
 import ic2.api.recipe.Recipes;
 import net.minecraft.item.ItemStack;
@@ -261,7 +263,7 @@ public class PluginIndustrialCraft2 {
 		MorePlates.logger.info("Added " + MetalFormerRecipes + " recipes to Metal Former");
 	}
 	
-	private static void add(String output, String input, boolean plate) {
+	private static void add(@Nonnull String output, @Nonnull String input, boolean plate) {
 		if (plate) {
 			MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 			Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
@@ -270,35 +272,35 @@ public class PluginIndustrialCraft2 {
 		}
 	}
 	
-	private static void add(String output, String input) {
+	private static void add(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
 		
 		MetalFormerRecipes += 1;
 	}
 	
-	private static void add(String output, String input, String id) {
+	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id) {
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output)), null, false);
 		
 		MetalFormerRecipes += 1;
 	}
 	
-	private static void add(String output, String input, String id, int meta) {
+	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id, int meta) {
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output)), null, false);
 		
 		MetalFormerRecipes += 1;
 	}
 	
-	private static void addGaia(String output, String input) {
+	private static void addGaia(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(output + "Plate")), null, false);
 		
 		MetalFormerRecipes += 1;
 	}
 	
-	private static void addBlock(String name, int amount, boolean plate) {
+	private static void addBlock(@Nonnull String name, int amount, boolean plate) {
 		if (plate) {
 			MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 			Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
@@ -307,21 +309,21 @@ public class PluginIndustrialCraft2 {
 		}
 	}
 	
-	private static void addBlock(String name, int amount) {
+	private static void addBlock(@Nonnull String name, int amount) {
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
 		
 		BlockCuttingMachineRecipes += 1;
 	}
 	
-	private static void addBlock(String output, String input, int amount, String id) {
+	private static void addBlock(@Nonnull String output, @Nonnull String input, int amount, @Nonnull String id) {
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
 		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 		
 		BlockCuttingMachineRecipes += 1;
 	}
 	
-	private static void addBlock(String output, String input, int amount, String id, int meta) {
+	private static void addBlock(@Nonnull String output, @Nonnull String input, int amount, @Nonnull String id, int meta) {
 		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
 		

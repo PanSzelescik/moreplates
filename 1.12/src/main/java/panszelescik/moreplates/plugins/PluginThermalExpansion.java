@@ -16,6 +16,8 @@ import static panszelescik.moreplates.plugins.PluginVanilla.*;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
 public class PluginThermalExpansion {
 	
 	private static int CompactorRecipes = 0;
@@ -163,7 +165,7 @@ public class PluginThermalExpansion {
 		MorePlates.logger.info("Added " + InductionSmelterRecipes + " recipes to Induction Smelter");
 	}
 	
-	private static void add(String output, String inputOre, boolean gear, boolean plate) {
+	private static void add(@Nonnull String output, @Nonnull String inputOre, boolean gear, boolean plate) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
 			if (gear) {
@@ -187,7 +189,7 @@ public class PluginThermalExpansion {
 		}
 	}
 	
-	private static void add(String output, String inputOre) {
+	private static void add(@Nonnull String output, @Nonnull String inputOre) {
 		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
 		for (ItemStack input : inputs) {
 			MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
@@ -204,7 +206,7 @@ public class PluginThermalExpansion {
 		}
 	}
 	
-	private static void add(String output, String input, String id) {
+	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id) {
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
 		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 4), getOre(GEAR + output), Mode.GEAR);
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
@@ -218,7 +220,7 @@ public class PluginThermalExpansion {
 		InductionSmelterRecipes += 1;
 	}
 	
-	private static void add(String output, String input, String id, int meta) {
+	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id, int meta) {
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
 		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 4, meta), getOre(GEAR + output), Mode.GEAR);
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
@@ -232,7 +234,7 @@ public class PluginThermalExpansion {
 		InductionSmelterRecipes += 1;
 	}
 	
-	private static void addGaia(String output, String input) {
+	private static void addGaia(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
 		CompactorManager.addRecipe(energyCompactor, getOre(input, 4), getOre(output + "Gear"), Mode.GEAR);
 		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));

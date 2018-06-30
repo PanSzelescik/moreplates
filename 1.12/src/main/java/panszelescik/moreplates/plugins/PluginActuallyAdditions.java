@@ -16,6 +16,8 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
+
 public class PluginActuallyAdditions {
 	
 	private static int AtomicReconstructorRecipes = 0;
@@ -116,7 +118,7 @@ public class PluginActuallyAdditions {
 		MorePlates.logger.info("Added " + EmpowererRecipes + " recipes to Empowerer");
 	}
 	
-	private static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
+	private static void addEmpowerer(@Nonnull String output, @Nonnull String input, @Nonnull String dye, @Nonnull ItemStack modifier2, @Nonnull ItemStack modifier3, @Nonnull ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
 			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
@@ -131,7 +133,7 @@ public class PluginActuallyAdditions {
 		}
 	}
 	
-	private static void addReconstructor(String output, String input, int energy) {
+	private static void addReconstructor(@Nonnull String output, @Nonnull String input, int energy) {
 		List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
 		for (ItemStack inputStack : inputs) {
 			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));

@@ -8,9 +8,11 @@ import panszelescik.moreplates.Reference;
 
 import static panszelescik.moreplates.helpers.Strings.*;
 
+import javax.annotation.Nonnull;
+
 public class ItemGear extends Item {
 	
-	public ItemGear(String name) {
+	public ItemGear(@Nonnull String name) {
 		name += "_gear";
 		setUnlocalizedName(name);
 		setRegistryName(new ResourceLocation(Reference.MODID, name));

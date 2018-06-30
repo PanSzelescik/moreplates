@@ -17,6 +17,8 @@ import static panszelescik.moreplates.plugins.PluginVanilla.plateLapisLazuli;
 import static panszelescik.moreplates.plugins.PluginVanilla.plateNetherQuartz;
 import static panszelescik.moreplates.plugins.PluginVanilla.plateRedstone;
 
+import javax.annotation.Nonnull;
+
 import panszelescik.moreplates.MorePlates;
 
 public class PluginTechReborn {
@@ -265,7 +267,7 @@ public class PluginTechReborn {
 		MorePlates.logger.info("Added " + CompressorRecipes + " recipes to Compressor");
 	}
 	
-	private static void add(String output, String input, boolean plate) {
+	private static void add(@Nonnull String output, @Nonnull String input, boolean plate) {
 		if (plate) {
 			MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 			RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
@@ -274,35 +276,35 @@ public class PluginTechReborn {
 		}
 	}
 	
-	private static void add(String output, String input) {
+	private static void add(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor, energyCompressor));
 		
 		CompressorRecipes += 1;
 	}
 	
-	private static void add(String output, String input, String id) {
+	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output), timeCompressor, energyCompressor));
 		
 		CompressorRecipes += 1;
 	}
 	
-	private static void add(String output, String input, String id, int meta) {
+	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id, int meta) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor, energyCompressor));
 		
 		CompressorRecipes += 1;
 	}
 	
-	private static void addGaia(String output, String input) {
+	private static void addGaia(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 		RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor, energyCompressor));
 		
 		CompressorRecipes += 1;
 	}
 	
-	private static void addBlock(String name, int amount, boolean plate) {
+	private static void addBlock(@Nonnull String name, int amount, boolean plate) {
 		if (plate) {
 			MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 			RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
@@ -311,21 +313,21 @@ public class PluginTechReborn {
 		}
 	}
 	
-	private static void addBlock(String name, int amount) {
+	private static void addBlock(@Nonnull String name, int amount) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
 		RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor, energyCompressor));
 		
 		CompressorRecipes += 1;
 	}
 	
-	private static void addBlock(String output, String input, int amount, String id) {
+	private static void addBlock(@Nonnull String output, @Nonnull String input, int amount, @Nonnull String id) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 		
 		CompressorRecipes += 1;
 	}
 	
-	private static void addBlock(String output, String input, int amount, String id, int meta) {
+	private static void addBlock(@Nonnull String output, @Nonnull String input, int amount, @Nonnull String id, int meta) {
 		MorePlates.logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 		RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output, amount), timeCompressor, energyCompressor));
 		
