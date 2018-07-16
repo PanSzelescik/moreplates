@@ -8,12 +8,12 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginTwilightForest {
 	
-	public static Item fiery_gear;
-	public static Item fiery_plate;
-	public static Item ironwood_gear;
-	public static Item ironwood_plate;
-	public static Item knightmetal_gear;
-	public static Item knightmetal_plate;
+	static Item fiery_gear;
+	static Item fiery_plate;
+	static Item ironwood_gear;
+	static Item ironwood_plate;
+	static Item knightmetal_gear;
+	static Item knightmetal_plate;
 	
 	public static void preInit() {
 		fiery_gear = new ItemGear("fiery");

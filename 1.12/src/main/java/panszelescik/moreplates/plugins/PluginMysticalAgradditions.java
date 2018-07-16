@@ -8,8 +8,8 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginMysticalAgradditions {
 	
-	public static Item insanium_gear;
-	public static Item insanium_plate;
+	static Item insanium_gear;
+	static Item insanium_plate;
 	
 	public static void preInit() {
 		insanium_gear = new ItemGear("insanium");

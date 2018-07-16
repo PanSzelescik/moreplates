@@ -8,10 +8,10 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginProjectRed {
 	
-	public static Item electrotine_alloy_gear;
-	public static Item electrotine_alloy_plate;
-	public static Item red_alloy_gear;
-	public static Item red_alloy_plate;
+	static Item electrotine_alloy_gear;
+	static Item electrotine_alloy_plate;
+	static Item red_alloy_gear;
+	static Item red_alloy_plate;
 	
 	public static void preInit() {
 		electrotine_alloy_gear = new ItemGear("electrotine_alloy");

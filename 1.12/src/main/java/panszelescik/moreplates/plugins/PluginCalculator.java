@@ -8,14 +8,14 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginCalculator {
 	
-	public static Item amethyst_gear;
-	public static Item amethyst_plate;
-	public static Item enriched_gold_gear;
-	public static Item enriched_gold_plate;
-	public static Item reinforced_iron_gear;
-	public static Item reinforced_iron_plate;
-	public static Item tanzanite_gear;
-	public static Item tanzanite_plate;
+	static Item amethyst_gear;
+	static Item amethyst_plate;
+	static Item enriched_gold_gear;
+	static Item enriched_gold_plate;
+	static Item reinforced_iron_gear;
+	static Item reinforced_iron_plate;
+	static Item tanzanite_gear;
+	static Item tanzanite_plate;
 	
 	public static void preInit() {
 		amethyst_gear = new ItemGear("amethyst");

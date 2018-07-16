@@ -8,10 +8,10 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginDraconicEvolution {
 	
-	public static Item awakened_draconium_gear;
-	public static Item awakened_draconium_plate;
-	public static Item draconium_gear;
-	public static Item draconium_plate;
+	static Item awakened_draconium_gear;
+	static Item awakened_draconium_plate;
+	static Item draconium_gear;
+	static Item draconium_plate;
 	
 	public static void preInit() {
 		awakened_draconium_gear = new ItemGear("awakened_draconium");

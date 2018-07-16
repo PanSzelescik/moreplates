@@ -8,12 +8,12 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginExtraUtilities {
 	
-	public static Item demon_gear;
-	public static Item demon_plate;
-	public static Item enchanted_gear;
-	public static Item enchanted_plate;
-	public static Item evil_infused_iron_gear;
-	public static Item evil_infused_iron_plate;
+	static Item demon_gear;
+	static Item demon_plate;
+	static Item enchanted_gear;
+	static Item enchanted_plate;
+	static Item evil_infused_iron_gear;
+	static Item evil_infused_iron_plate;
 	
 	public static void preInit() {
 		demon_gear = new ItemGear("demon");

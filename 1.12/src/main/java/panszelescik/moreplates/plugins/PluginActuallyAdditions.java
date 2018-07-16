@@ -20,36 +20,36 @@ import javax.annotation.Nonnull;
 
 public class PluginActuallyAdditions {
 	
-	private static int AtomicReconstructorRecipes = 0;
-	private static int EmpowererRecipes = 0;
+	static int AtomicReconstructorRecipes = 0;
+	static int EmpowererRecipes = 0;
 	
-	public static Item black_quartz_gear;
-	public static Item black_quartz_plate;
-	public static Item diamatine_gear;
-	public static Item diamatine_plate;
-	public static Item emeradic_gear;
-	public static Item emeradic_plate;
-	public static Item enori_gear;
-	public static Item enori_plate;
-	public static Item palis_gear;
-	public static Item palis_plate;
-	public static Item restonia_gear;
-	public static Item restonia_plate;
-	public static Item void_gear;
-	public static Item void_plate;
+	static Item black_quartz_gear;
+	static Item black_quartz_plate;
+	static Item diamatine_gear;
+	static Item diamatine_plate;
+	static Item emeradic_gear;
+	static Item emeradic_plate;
+	static Item enori_gear;
+	static Item enori_plate;
+	static Item palis_gear;
+	static Item palis_plate;
+	static Item restonia_gear;
+	static Item restonia_plate;
+	static Item void_gear;
+	static Item void_plate;
 	
-	public static Item empowered_diamatine_gear;
-	public static Item empowered_diamatine_plate;
-	public static Item empowered_emeradic_gear;
-	public static Item empowered_emeradic_plate;
-	public static Item empowered_enori_gear;
-	public static Item empowered_enori_plate;
-	public static Item empowered_palis_gear;
-	public static Item empowered_palis_plate;
-	public static Item empowered_restonia_gear;
-	public static Item empowered_restonia_plate;
-	public static Item empowered_void_gear;
-	public static Item empowered_void_plate;
+	static Item empowered_diamatine_gear;
+	static Item empowered_diamatine_plate;
+	static Item empowered_emeradic_gear;
+	static Item empowered_emeradic_plate;
+	static Item empowered_enori_gear;
+	static Item empowered_enori_plate;
+	static Item empowered_palis_gear;
+	static Item empowered_palis_plate;
+	static Item empowered_restonia_gear;
+	static Item empowered_restonia_plate;
+	static Item empowered_void_gear;
+	static Item empowered_void_plate;
 	
 	public static void preInit() {
 		black_quartz_gear = new ItemGear("black_quartz");

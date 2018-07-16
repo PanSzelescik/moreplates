@@ -23,7 +23,7 @@ import panszelescik.moreplates.MorePlates;
 
 public class PluginTechReborn {
 	
-	private static int CompressorRecipes = 0;
+	static int CompressorRecipes = 0;
 	
 	public static void postInit() {
 		if (loadVanilla) {

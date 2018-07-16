@@ -8,24 +8,24 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginVanilla {
 	
-	public static Item coal_gear;
-	public static Item coal_plate;
-	public static Item diamond_gear;
-	public static Item diamond_plate;
-	public static Item emerald_gear;
-	public static Item emerald_plate;
-	public static Item glowstone_gear;
-	public static Item glowstone_plate;
-	public static Item gold_gear;
-	public static Item gold_plate;
-	public static Item iron_gear;
-	public static Item iron_plate;
-	public static Item lapis_lazuli_gear;
-	public static Item lapis_lazuli_plate;
-	public static Item nether_quartz_gear;
-	public static Item nether_quartz_plate;
-	public static Item redstone_gear;
-	public static Item redstone_plate;
+	static Item coal_gear;
+	static Item coal_plate;
+	static Item diamond_gear;
+	static Item diamond_plate;
+	static Item emerald_gear;
+	static Item emerald_plate;
+	static Item glowstone_gear;
+	static Item glowstone_plate;
+	static Item gold_gear;
+	static Item gold_plate;
+	static Item iron_gear;
+	static Item iron_plate;
+	static Item lapis_lazuli_gear;
+	static Item lapis_lazuli_plate;
+	static Item nether_quartz_gear;
+	static Item nether_quartz_plate;
+	static Item redstone_gear;
+	static Item redstone_plate;
 	
 	public static boolean gearCoal;
 	public static boolean plateCoal;

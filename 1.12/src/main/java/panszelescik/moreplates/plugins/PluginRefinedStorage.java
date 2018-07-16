@@ -8,8 +8,8 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginRefinedStorage {
 	
-	public static Item quartz_enriched_iron_gear;
-	public static Item quartz_enriched_iron_plate;
+	static Item quartz_enriched_iron_gear;
+	static Item quartz_enriched_iron_plate;
 	
 	public static void preInit() {
 		quartz_enriched_iron_gear = new ItemGear("quartz_enriched_iron");

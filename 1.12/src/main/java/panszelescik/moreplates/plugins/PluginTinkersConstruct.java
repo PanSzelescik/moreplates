@@ -8,16 +8,16 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginTinkersConstruct {
 	
-	public static Item ardite_gear;
-	public static Item ardite_plate;
-	public static Item cobalt_gear;
-	public static Item cobalt_plate;
-	public static Item knightslime_gear;
-	public static Item knightslime_plate;
-	public static Item manyullyn_gear;
-	public static Item manyullyn_plate;
-	public static Item pig_iron_gear;
-	public static Item pig_iron_plate;
+	static Item ardite_gear;
+	static Item ardite_plate;
+	static Item cobalt_gear;
+	static Item cobalt_plate;
+	static Item knightslime_gear;
+	static Item knightslime_plate;
+	static Item manyullyn_gear;
+	static Item manyullyn_plate;
+	static Item pig_iron_gear;
+	static Item pig_iron_plate;
 	
 	public static void preInit() {
 		ardite_gear = new ItemGear("ardite");

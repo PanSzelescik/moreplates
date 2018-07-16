@@ -8,12 +8,12 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginMekanism {
 	
-	public static Item osmium_gear;
-	public static Item osmium_plate;
-	public static Item refined_glowstone_gear;
-	public static Item refined_glowstone_plate;
-	public static Item refined_obsidian_gear;
-	public static Item refined_obsidian_plate;
+	static Item osmium_gear;
+	static Item osmium_plate;
+	static Item refined_glowstone_gear;
+	static Item refined_glowstone_plate;
+	static Item refined_obsidian_gear;
+	static Item refined_obsidian_plate;
 	
 	public static void preInit() {
 		osmium_gear = new ItemGear("osmium");

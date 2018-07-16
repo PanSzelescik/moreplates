@@ -10,8 +10,8 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginMultiMod {
 	
-	public static Item silicon_gear;
-	public static Item silicon_plate;
+	static Item silicon_gear;
+	static Item silicon_plate;
 	
 	public static void preInit() {
 		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {

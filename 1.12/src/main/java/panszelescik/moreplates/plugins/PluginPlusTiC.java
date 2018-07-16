@@ -11,14 +11,14 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginPlusTiC {
 	
-	public static Item alumite_gear;
-	public static Item alumite_plate;
-	public static Item mirion_gear;
-	public static Item mirion_plate;
-	public static Item osgloglas_gear;
-	public static Item osgloglas_plate;
-	public static Item osmiridium_gear;
-	public static Item osmiridium_plate;
+	static Item alumite_gear;
+	static Item alumite_plate;
+	static Item mirion_gear;
+	static Item mirion_plate;
+	static Item osgloglas_gear;
+	static Item osgloglas_plate;
+	static Item osmiridium_gear;
+	static Item osmiridium_plate;
 	
 	public static void preInit() {
 		alumite_gear = new ItemGear("alumite");

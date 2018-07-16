@@ -8,24 +8,24 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginEnderIO {
 	
-	public static Item conductive_iron_gear;
-	public static Item conductive_iron_plate;
-	public static Item dark_steel_gear;
-	public static Item dark_steel_plate;
-	public static Item electrical_steel_gear;
-	public static Item electrical_steel_plate;
-	public static Item end_steel_gear;
-	public static Item end_steel_plate;
-	public static Item energetic_alloy_gear;
-	public static Item energetic_alloy_plate;
-	public static Item pulsating_iron_gear;
-	public static Item pulsating_iron_plate;
-	public static Item redstone_alloy_gear;
-	public static Item redstone_alloy_plate;
-	public static Item soularium_gear;
-	public static Item soularium_plate;
-	public static Item vibrant_alloy_gear;
-	public static Item vibrant_alloy_plate;
+	static Item conductive_iron_gear;
+	static Item conductive_iron_plate;
+	static Item dark_steel_gear;
+	static Item dark_steel_plate;
+	static Item electrical_steel_gear;
+	static Item electrical_steel_plate;
+	static Item end_steel_gear;
+	static Item end_steel_plate;
+	static Item energetic_alloy_gear;
+	static Item energetic_alloy_plate;
+	static Item pulsating_iron_gear;
+	static Item pulsating_iron_plate;
+	static Item redstone_alloy_gear;
+	static Item redstone_alloy_plate;
+	static Item soularium_gear;
+	static Item soularium_plate;
+	static Item vibrant_alloy_gear;
+	static Item vibrant_alloy_plate;
 	
 	public static void preInit() {
 		conductive_iron_gear = new ItemGear("conductive_iron");

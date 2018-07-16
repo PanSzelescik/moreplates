@@ -20,10 +20,10 @@ import javax.annotation.Nonnull;
 
 public class PluginThermalExpansion {
 	
-	private static int CompactorRecipes = 0;
-	private static int InductionSmelterRecipes = 0;
-	private static ItemStack sand = new ItemStack(Blocks.SAND);
-	private static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
+	static int CompactorRecipes = 0;
+	static int InductionSmelterRecipes = 0;
+	static ItemStack sand = new ItemStack(Blocks.SAND);
+	static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
 	
 	public static void postInit() {
 		if (loadVanilla) {

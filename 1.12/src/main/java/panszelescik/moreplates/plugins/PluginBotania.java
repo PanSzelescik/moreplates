@@ -13,17 +13,17 @@ import javax.annotation.Nonnull;
 
 public class PluginBotania {
 	
-	private static int ElvenTradeRecipes = 0;
-	private static int ManaInfusionRecipes = 0;
+	static int ElvenTradeRecipes = 0;
+	static int ManaInfusionRecipes = 0;
 	
-	public static Item elementium_gear;
-	public static Item elementium_plate;
-	public static Item gaia_spirit_gear;
-	public static Item gaia_spirit_plate;
-	public static Item manasteel_gear;
-	public static Item manasteel_plate;
-	public static Item terrasteel_gear;
-	public static Item terrasteel_plate;
+	static Item elementium_gear;
+	static Item elementium_plate;
+	static Item gaia_spirit_gear;
+	static Item gaia_spirit_plate;
+	static Item manasteel_gear;
+	static Item manasteel_plate;
+	static Item terrasteel_gear;
+	static Item terrasteel_plate;
 	
 	public static void preInit() {
 		elementium_gear = new ItemGear("elementium");

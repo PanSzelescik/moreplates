@@ -8,10 +8,10 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginThaumcraft {
 	
-	public static Item amber_gear;
-	public static Item amber_plate;
-	public static Item quicksilver_gear;
-	public static Item quicksilver_plate;
+	static Item amber_gear;
+	static Item amber_plate;
+	static Item quicksilver_gear;
+	static Item quicksilver_plate;
 	
 	public static void preInit() {
 		amber_gear = new ItemGear("amber");

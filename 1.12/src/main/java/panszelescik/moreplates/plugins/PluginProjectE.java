@@ -8,10 +8,10 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginProjectE {
 	
-	public static Item dark_matter_gear;
-	public static Item dark_matter_plate;
-	public static Item red_matter_gear;
-	public static Item red_matter_plate;
+	static Item dark_matter_gear;
+	static Item dark_matter_plate;
+	static Item red_matter_gear;
+	static Item red_matter_plate;
 	
 	public static void preInit() {
 		dark_matter_gear = new ItemGear("dark_matter");

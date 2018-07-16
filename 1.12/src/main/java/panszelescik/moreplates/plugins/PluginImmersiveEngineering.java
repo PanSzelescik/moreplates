@@ -14,11 +14,11 @@ import javax.annotation.Nonnull;
 
 public class PluginImmersiveEngineering {
 	
-	private static int energy = energyMetalPress;
-	private static int MetalPressRecipes = 0;
+	static int energy = energyMetalPress;
+	static int MetalPressRecipes = 0;
 
-	private static ItemStack mold_gear = getItemStack(IMMERSIVE_MODID, "mold", 1, 1);
-	private static ItemStack mold_plate = getItemStack(IMMERSIVE_MODID, "mold", 1, 0);
+	static ItemStack mold_gear = getItemStack(IMMERSIVE_MODID, "mold", 1, 1);
+	static ItemStack mold_plate = getItemStack(IMMERSIVE_MODID, "mold", 1, 0);
 	
 	public static void postInit() {
 		if (loadVanilla) {
@@ -161,13 +161,13 @@ public class PluginImmersiveEngineering {
 	private static void add(@Nonnull String output, @Nonnull String inputOre, boolean gear, boolean plate) {
 		if (gear) {
 			MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(inputOre) + " x4");
-			MetalPressRecipe.addRecipe(getOre(GEAR + output), inputOre, mold_gear, energy).setInputSize(4);
+			MetalPressRecipe.addRecipe(getOre(GEAR + output), inputOre, mold_gear, energyMetalPress).setInputSize(4);
 			
 			MetalPressRecipes += 1;
 		}
 		if (plate) {
 			MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(inputOre));
-			MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energy);
+			MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energyMetalPress);
 			
 			MetalPressRecipes += 1;
 		}
@@ -175,48 +175,48 @@ public class PluginImmersiveEngineering {
 	
 	private static void add(@Nonnull String output, @Nonnull String inputOre) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(inputOre) + " x4");
-		MetalPressRecipe.addRecipe(getOre(GEAR + output), inputOre, mold_gear, energy).setInputSize(4);
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), inputOre, mold_gear, energyMetalPress).setInputSize(4);
 			
 		MetalPressRecipes += 1;
 		
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(inputOre));
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), inputOre, mold_plate, energyMetalPress);
 		
 		MetalPressRecipes += 1;
 	}
 	
 	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
-		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input), mold_gear, energy).setInputSize(4);
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input), mold_gear, energyMetalPress).setInputSize(4);
 		
 		MetalPressRecipes += 1;
 		
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input), mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input), mold_plate, energyMetalPress);
 		
 		MetalPressRecipes += 1;
 	}
 	
 	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id, int meta) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
-		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 1, meta), mold_gear, energy).setInputSize(4);
+		MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 1, meta), mold_gear, energyMetalPress).setInputSize(4);
 		
 		MetalPressRecipes += 1;
 		
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
-		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input, 1, meta), mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input, 1, meta), mold_plate, energyMetalPress);
 		
 		MetalPressRecipes += 1;
 	}
 	
 	private static void addGaia(@Nonnull String output, @Nonnull String input) {
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
-		MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input), mold_gear, energy).setInputSize(4);
+		MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input), mold_gear, energyMetalPress).setInputSize(4);
 		
 		MetalPressRecipes += 1;
 		
 		MorePlates.logger.debug(INFO_IE + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
-		MetalPressRecipe.addRecipe(getOre(output + "Plate"), input, mold_plate, energy);
+		MetalPressRecipe.addRecipe(getOre(output + "Plate"), input, mold_plate, energyMetalPress);
 		
 		MetalPressRecipes += 1;
 	}

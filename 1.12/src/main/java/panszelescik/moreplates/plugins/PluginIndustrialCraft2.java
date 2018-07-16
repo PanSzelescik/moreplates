@@ -17,8 +17,8 @@ import static panszelescik.moreplates.plugins.PluginVanilla.*;
 
 public class PluginIndustrialCraft2 {
 	
-	private static int BlockCuttingMachineRecipes = 0;
-	private static int MetalFormerRecipes = 0;
+	static int BlockCuttingMachineRecipes = 0;
+	static int MetalFormerRecipes = 0;
 	
 	public static void postInit() {
 		if (loadVanilla) {

@@ -8,8 +8,8 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginPneumaticCraft {
 	
-	public static Item compressed_iron_gear;
-	public static Item compressed_iron_plate;
+	static Item compressed_iron_gear;
+	static Item compressed_iron_plate;
 	
 	public static void preInit() {
 		compressed_iron_gear = new ItemGear("compressed_iron");

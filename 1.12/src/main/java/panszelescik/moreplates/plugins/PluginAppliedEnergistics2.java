@@ -8,10 +8,10 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginAppliedEnergistics2 {
 
-	public static Item certus_quartz_gear;
-	public static Item certus_quartz_plate;
-	public static Item fluix_gear;
-	public static Item fluix_plate;
+	static Item certus_quartz_gear;
+	static Item certus_quartz_plate;
+	static Item fluix_gear;
+	static Item fluix_plate;
 	
 	public static void preInit() {
 		certus_quartz_gear = new ItemGear("certus_quartz");

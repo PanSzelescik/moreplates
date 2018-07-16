@@ -8,18 +8,18 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginMysticalAgriculture {
 	
-	public static Item inferium_gear;
-	public static Item inferium_plate;
-	public static Item intermedium_gear;
-	public static Item intermedium_plate;
-	public static Item prudentium_gear;
-	public static Item prudentium_plate;
-	public static Item soulium_gear;
-	public static Item soulium_plate;
-	public static Item superium_gear;
-	public static Item superium_plate;
-	public static Item supremium_gear;
-	public static Item supremium_plate;
+	static Item inferium_gear;
+	static Item inferium_plate;
+	static Item intermedium_gear;
+	static Item intermedium_plate;
+	static Item prudentium_gear;
+	static Item prudentium_plate;
+	static Item soulium_gear;
+	static Item soulium_plate;
+	static Item superium_gear;
+	static Item superium_plate;
+	static Item supremium_gear;
+	static Item supremium_plate;
 	
 	public static void preInit() {
 		inferium_gear  = new ItemGear("inferium");

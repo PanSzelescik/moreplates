@@ -8,12 +8,12 @@ import static panszelescik.moreplates.helpers.Strings.*;
 
 public class PluginAvaritia {
 	
-	public static Item crystal_matrix_gear;
-	public static Item crystal_matrix_plate;
-	public static Item infinity_gear;
-	public static Item infinity_plate;
-	public static Item neutronium_gear;
-	public static Item neutronium_plate;
+	static Item crystal_matrix_gear;
+	static Item crystal_matrix_plate;
+	static Item infinity_gear;
+	static Item infinity_plate;
+	static Item neutronium_gear;
+	static Item neutronium_plate;
 	
 	public static void preInit() {
 		crystal_matrix_gear = new ItemGear("crystal_matrix");
