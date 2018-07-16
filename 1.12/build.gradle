@@ -26,6 +26,9 @@ minecraft {
     runDir = "run"
     mappings = "${version_mcp}"
     // makeObfSourceJar = false
+    
+    replaceIn "Reference.java"
+    replace "@version@", project.version
 }
 
 repositories {
