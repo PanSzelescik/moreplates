@@ -3,7 +3,7 @@
 ### 1.12.2-5.0.1
 - Updated to new Actually Additions API
 - Changed glowstone_gear to refined_glowstone_gear and glowstone_plate to refined_glowstone_plate
-- Changed redstone_gear to redstone1_gear and redstone_plate to redstone1_plate
+- Removed Redstone Gear and Redstone Plate (now this is vanilla's items with the same unlocalized name)
 - Added Induction Smelter support, Sand + Gear = 4 Ingots + 10% Slag, Sand + Plate = Ingot + 10% Slag
 - First logger, second add recipe
 - Added option to make Gears with Bronze, Copper, Iron and Tin

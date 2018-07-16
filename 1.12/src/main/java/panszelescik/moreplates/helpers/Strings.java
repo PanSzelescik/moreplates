@@ -138,16 +138,13 @@ public class Strings {
 	//Calculator
 	public static String AMETHYST = "Amethyst";
 	public static String ENRICHED_GOLD = "Enriched" + GOLD;
-	public static String REDSTONE_CALCULATOR = "Redstone";
 	public static String REINFORCED_IRON = "Reinforced" + IRON;
 	public static String TANZANITE = "Tanzanite";
 	
-	public static String REDSTONE_NAME = "redstoneingot";
 	public static String REINFORCED_IRON_NAME = "reinforcedironingot";
 	public static String CALCULATOR_NAME = MATERIAL;
 	
 	public static int ENRICHED_GOLD_BLOCK_META = 2;
-	public static int REDSTONE_BLOCK_META = 9;
 	public static int REINFORCED_IRON_BLOCK_META = 3;
 	
 	//Draconic Evolution

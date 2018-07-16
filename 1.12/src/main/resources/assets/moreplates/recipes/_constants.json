@@ -572,20 +572,6 @@
 			"modid": "calculator"
 		}
 	],
-	"name": "REDSTONE_CALCULATOR",
-	"ingredient": [
-		{
-			"item": "calculator:redstoneingot"
-		}
-	]
-},
-{
-	"conditions": [
-		{
-			"type": "forge:mod_loaded",
-			"modid": "calculator"
-		}
-	],
 	"name": "REINFORCED_IRON",
 	"ingredient": [
 		{

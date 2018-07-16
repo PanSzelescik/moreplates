@@ -76,7 +76,6 @@ public class PluginThermalExpansion {
 			String id = CALCULATOR_MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
-			add(REDSTONE, REDSTONE_NAME, id);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 		}
