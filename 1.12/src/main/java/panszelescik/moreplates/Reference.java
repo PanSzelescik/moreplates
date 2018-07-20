@@ -13,5 +13,26 @@ public class Reference {
 	public static final String ACTUALLY_VERSION = "1.12.2-r136";
 	public static final String DEPENDENCIES = 
 			  "after:actuallyadditions@[" + ACTUALLY_VERSION + ",);"
-			+ "after:*";
+			+ "after:appliedenergistics2;"
+			+ "after:avaritia;"
+			+ "after:botania;"
+			+ "after:calculator;"
+			+ "after:draconicevolution;"
+			+ "after:enderio;"
+			+ "after:extrautils2;"
+			+ "after:immersiveengineering;"
+			+ "after:ic2;"
+			+ "after:mekanism;"
+			+ "after:mysticalagradditions;"
+			+ "after:mysticalagriculture;"
+			+ "after:plustic;"
+			+ "after:pneumaticcraft;"
+			+ "after:projecte;"
+			+ "after:projectred-core;"
+			+ "after:refinedstorage;"
+			+ "after:techreborn;"
+			+ "after:thaumcraft;"
+			+ "after:thermalexpansion;"
+			+ "after:tconstruct;"
+			+ "after:twilightforest";
 }
