@@ -14,13 +14,13 @@ public class PluginMultiMod {
 	static Item silicon_plate;
 	
 	public static void preInit() {
-		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {
+		if (isAppliedEnergisticsLoaded & AppliedEnergistics2) {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
 			reg(SILICON, silicon_gear, silicon_plate);
 		}
-		else if (isRefinedStorageLoaded & loadRefinedStorage) {
+		else if (isRefinedStorageLoaded & RefinedStorage) {
 			silicon_gear = new ItemGear("silicon");
 			silicon_plate = new ItemPlate("silicon");
 			
