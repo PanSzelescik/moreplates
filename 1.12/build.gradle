@@ -25,7 +25,7 @@ minecraft {
     version = "${version_minecraft}-${version_forge}"
     runDir = "run"
     mappings = "${version_mcp}"
-    // makeObfSourceJar = false
+    makeObfSourceJar = false
     
     replaceIn "Reference.java"
     replace "@version@", project.version

@@ -11,8 +11,8 @@ import net.minecraftforge.fml.client.config.IConfigElement;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.Reference;
 
+import static panszelescik.moreplates.Reference.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
 public class Config {
@@ -146,7 +146,7 @@ public class Config {
 	
 	@SubscribeEvent
 	public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
-		if (event.getModID().equalsIgnoreCase(Reference.MODID))
+		if (event.getModID().equalsIgnoreCase(MODID))
 			loadConfig();
 	}
 	

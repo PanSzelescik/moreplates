@@ -10,10 +10,10 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.Reference;
 import panszelescik.moreplates.items.*;
 import panszelescik.moreplates.proxy.OreDictionaryProxy;
 
+import static panszelescik.moreplates.Reference.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
 import javax.annotation.Nonnull;
@@ -65,7 +65,7 @@ public class Helper {
 	}
 	
 	private static void regRender(@Nonnull Item item) {
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(MODID, item.getTranslationKey().substring(5)), "inventory"));
 		MorePlates.logger.debug(INFO_REG_RENDER + getItemNameFromItem(item));
 	}
 	
