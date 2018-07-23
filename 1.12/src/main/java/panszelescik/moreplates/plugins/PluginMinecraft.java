@@ -6,7 +6,7 @@ import panszelescik.moreplates.items.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
-public class PluginVanilla {
+public class PluginMinecraft {
 	
 	static Item coal_gear;
 	static Item coal_plate;

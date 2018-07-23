@@ -8,61 +8,61 @@ import static panszelescik.moreplates.config.Config.*;
 public class PluginLoader {
 	
 	public static void preInit() {
-		if (loadVanilla)
-			PluginVanilla.preInit();
-		if (isActuallyAdditionsLoaded & loadActuallyAdditions)
+		if (Minecraft)
+			PluginMinecraft.preInit();
+		if (isActuallyAdditionsLoaded & ActuallyAdditions)
 			PluginActuallyAdditions.preInit();
-		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2)
+		if (isAppliedEnergisticsLoaded & AppliedEnergistics2)
 			PluginAppliedEnergistics2.preInit();
-		if (isAvaritiaLoaded & loadAvaritia)
+		if (isAvaritiaLoaded & Avaritia)
 			PluginAvaritia.preInit();
-		if (isBotaniaLoaded & loadBotania)
+		if (isBotaniaLoaded & Botania)
 			PluginBotania.preInit();
-		if (isCalculatorLoaded & loadCalculator)
+		if (isCalculatorLoaded & Calculator)
 			PluginCalculator.preInit();
-		if (isDraconicEvolutionLoaded & loadDraconicEvolution)
+		if (isDraconicEvolutionLoaded & DraconicEvolution)
 			PluginDraconicEvolution.preInit();
-		if (isEnderIOLoaded & loadEnderIO)
+		if (isEnderIOLoaded & EnderIO)
 			PluginEnderIO.preInit();
-		if (isExtraUtilitiesLoaded & loadExtraUtilities)
+		if (isExtraUtilitiesLoaded & ExtraUtilities)
 			PluginExtraUtilities.preInit();
-		if (isMekanismLoaded & loadMekanism)
+		if (isMekanismLoaded & Mekanism)
 			PluginMekanism.preInit();
-		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions)
+		if (isMysticalAgradditionsLoaded & MysticalAgradditions)
 			PluginMysticalAgradditions.preInit();
-		if (isMysticalAgricultureLoaded & loadMysticalAgriculture)
+		if (isMysticalAgricultureLoaded & MysticalAgriculture)
 			PluginMysticalAgriculture.preInit();
-		if (isPlusTiCLoaded & loadPlusTiC)
+		if (isPlusTiCLoaded & PlusTiC)
 			PluginPlusTiC.preInit();
-		if (isPneumaticCraftLoaded & loadPneumaticCraft)
+		if (isPneumaticCraftLoaded & PneumaticCraft)
 			PluginPneumaticCraft.preInit();
-		if (isProjectELoaded & loadProjectE)
+		if (isProjectELoaded & ProjectE)
 			PluginProjectE.preInit();
-		if (isProjectRedLoaded & loadProjectRed)
+		if (isProjectRedLoaded & ProjectRed)
 			PluginProjectRed.preInit();
-		if (isRefinedStorageLoaded & loadRefinedStorage)
+		if (isRefinedStorageLoaded & RefinedStorage)
 			PluginRefinedStorage.preInit();
-		if (isThaumcraftLoaded & loadThaumcraft)
+		if (isThaumcraftLoaded & Thaumcraft)
 			PluginThaumcraft.preInit();
-		if (isTinkersConstructLoaded & loadTinkersConstruct)
+		if (isTinkersConstructLoaded & TinkersConstruct)
 			PluginTinkersConstruct.preInit();
-		if (isTwilightForestLoaded & loadTwilightForest)
+		if (isTwilightForestLoaded & TwilightForest)
 			PluginTwilightForest.preInit();
 		PluginMultiMod.preInit();
 	}
 	
 	public static void postInit() {
-		if (isActuallyAdditionsLoaded & loadActuallyAdditionsRecipes)
+		if (isActuallyAdditionsLoaded & ActuallyAdditionsRecipes)
 			PluginActuallyAdditions.postInit();
-		if (isBotaniaLoaded & loadBotaniaRecipes)
+		if (isBotaniaLoaded & BotaniaRecipes)
 			PluginBotania.postInit();
-		if (isImmersiveEngineeringLoaded & loadImmersiveEngineeringRecipes)
+		if (isImmersiveEngineeringLoaded & ImmersiveEngineeringRecipes)
 			PluginImmersiveEngineering.postInit();
-		if (isIndustrialCraft2Loaded & loadIndustrialCraft2Recipes)
+		if (isIndustrialCraft2Loaded & IndustrialCraft2Recipes)
 			PluginIndustrialCraft2.postInit();
-		if (isTechRebornLoaded & loadTechRebornRecipes)
+		if (isTechRebornLoaded & TechRebornRecipes)
 			PluginTechReborn.postInit();
-		if (isThermalExpansionLoaded & loadThermalExpansionRecipes)
+		if (isThermalExpansionLoaded & ThermalExpansionRecipes)
 			PluginThermalExpansion.postInit();
 	}
 }

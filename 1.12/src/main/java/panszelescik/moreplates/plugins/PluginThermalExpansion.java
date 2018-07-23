@@ -12,7 +12,7 @@ import static panszelescik.moreplates.ModChecker.*;
 import static panszelescik.moreplates.config.Config.*;
 import static panszelescik.moreplates.helpers.Helper.*;
 import static panszelescik.moreplates.helpers.Strings.*;
-import static panszelescik.moreplates.plugins.PluginVanilla.*;
+import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class PluginThermalExpansion {
 	static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
 	
 	public static void postInit() {
-		if (loadVanilla) {
+		if (Minecraft) {
 			add(COAL, "coal", gearCoal, plateCoal);
 			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
 			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
@@ -37,7 +37,7 @@ public class PluginThermalExpansion {
 			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
 			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
 		}
-		if (isActuallyAdditionsLoaded & loadActuallyAdditions) {
+		if (isActuallyAdditionsLoaded & ActuallyAdditions) {
 			String id = ACTUALLY_MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
 			add(DIAMATINE, CRYSTAL_NAME, id, DIAMATINE_META);
@@ -54,36 +54,36 @@ public class PluginThermalExpansion {
 			add(EMPOWERED_RESTONIA, EMPOWERED_CRYSTAL_NAME, id, RESTONIA_META);
 			add(EMPOWERED_VOID, EMPOWERED_CRYSTAL_NAME, id, VOID_META);
 		}
-		if (isAppliedEnergisticsLoaded & loadAppliedEnergistics2) {	
+		if (isAppliedEnergisticsLoaded & AppliedEnergistics2) {	
 			String id = AE2_MODID;
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
 			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
 			add(FLUIX, CRYSTAL + FLUIX);
 			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
-		if (isAvaritiaLoaded & loadAvaritia) {
+		if (isAvaritiaLoaded & Avaritia) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
 			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
 		}
-		if (isBotaniaLoaded & loadBotania) {
+		if (isBotaniaLoaded & Botania) {
 			add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
 			add(MANASTEEL, INGOT + MANASTEEL);
 			add(TERRASTEEL, INGOT + TERRASTEEL);
 		}
-		if (isCalculatorLoaded & loadCalculator) {
+		if (isCalculatorLoaded & Calculator) {
 			String id = CALCULATOR_MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 		}
-		if (isDraconicEvolutionLoaded & loadDraconicEvolution) {
+		if (isDraconicEvolutionLoaded & DraconicEvolution) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
 		}
-		if (isEnderIOLoaded & loadEnderIO) {
+		if (isEnderIOLoaded & EnderIO) {
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(DARK_STEEL, INGOT + DARK_STEEL);
 			add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
@@ -94,20 +94,20 @@ public class PluginThermalExpansion {
 			add(SOULARIUM, INGOT + SOULARIUM);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 		}
-		if (isExtraUtilitiesLoaded & loadExtraUtilities) {
+		if (isExtraUtilitiesLoaded & ExtraUtilities) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);
 			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
 		}
-		if (isMekanismLoaded & loadMekanism) {
+		if (isMekanismLoaded & Mekanism) {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
 		}
-		if (isMysticalAgradditionsLoaded & loadMysticalAgradditions) {
+		if (isMysticalAgradditionsLoaded & MysticalAgradditions) {
 			add(INSANIUM, INGOT + INSANIUM);
 		}
-		if (isMysticalAgricultureLoaded & loadMysticalAgriculture) {
+		if (isMysticalAgricultureLoaded & MysticalAgriculture) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
@@ -115,7 +115,7 @@ public class PluginThermalExpansion {
 			add(SUPERIUM, INGOT + SUPERIUM);
 			add(SUPREMIUM, INGOT + SUPREMIUM);
 		}
-		if (isPlusTiCLoaded & loadPlusTiC) {
+		if (isPlusTiCLoaded & PlusTiC) {
 			add(ALUMITE, INGOT + ALUMITE);
 			if (isBotaniaLoaded)
 				add(MIRION, INGOT + MIRION);
@@ -124,34 +124,34 @@ public class PluginThermalExpansion {
 			if (isMekanismLoaded & isThermalExpansionLoaded)
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 		}
-		if (isPneumaticCraftLoaded & loadPneumaticCraft) {
+		if (isPneumaticCraftLoaded & PneumaticCraft) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 		}
-		if (isProjectELoaded & loadProjectE) {
+		if (isProjectELoaded & ProjectE) {
 			String id = PROJECTE_MODID;
 			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
 			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
 		}
-		if (isProjectRedLoaded & loadProjectRed) {
+		if (isProjectRedLoaded & ProjectRed) {
 			add(ELECTROTINE, INGOT + ELECTROTINE);
 			add(RED_ALLOY, INGOT + RED_ALLOY);
 		}
-		if (isRefinedStorageLoaded & loadRefinedStorage) {
+		if (isRefinedStorageLoaded & RefinedStorage) {
 			String id = REFINED_STORAGE_MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
-		if (isThaumcraftLoaded & loadThaumcraft) {
+		if (isThaumcraftLoaded & Thaumcraft) {
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 		}
-		if (isTinkersConstructLoaded & loadTinkersConstruct) {
+		if (isTinkersConstructLoaded & TinkersConstruct) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
 			add(MANYULLYN, INGOT + MANYULLYN);
 			add(PIG_IRON, INGOT + PIG_IRON);
 		}
-		if (isTwilightForestLoaded & loadTwilightForest) {
+		if (isTwilightForestLoaded & TwilightForest) {
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);

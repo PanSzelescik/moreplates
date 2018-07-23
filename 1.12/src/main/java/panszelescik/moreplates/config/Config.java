@@ -33,32 +33,32 @@ public class Config {
 	//Booleans
 	public static boolean centerMetals = true;
 	
-	public static boolean loadActuallyAdditions = true;
-	public static boolean loadActuallyAdditionsRecipes = true;
-	public static boolean loadAppliedEnergistics2 = true;
-	public static boolean loadAvaritia = true;
-	public static boolean loadBotania = true;
-	public static boolean loadBotaniaRecipes = true;
-	public static boolean loadCalculator = true;
-	public static boolean loadDraconicEvolution = true;
-	public static boolean loadEnderIO = true;
-	public static boolean loadExtraUtilities = true;
-	public static boolean loadImmersiveEngineeringRecipes = true;
-	public static boolean loadIndustrialCraft2Recipes = true;
-	public static boolean loadMekanism = true;
-	public static boolean loadMysticalAgradditions = true;
-	public static boolean loadMysticalAgriculture = true;
-	public static boolean loadPlusTiC = true;
-	public static boolean loadPneumaticCraft = true;
-	public static boolean loadProjectE = true;
-	public static boolean loadProjectRed = true;
-	public static boolean loadRefinedStorage = true;
-	public static boolean loadTechRebornRecipes = true;
-	public static boolean loadThaumcraft = true;
-	public static boolean loadThermalExpansionRecipes = true;
-	public static boolean loadTinkersConstruct = true;
-	public static boolean loadTwilightForest = true;
-	public static boolean loadVanilla = true;
+	public static boolean ActuallyAdditions = true;
+	public static boolean ActuallyAdditionsRecipes = true;
+	public static boolean AppliedEnergistics2 = true;
+	public static boolean Avaritia = true;
+	public static boolean Botania = true;
+	public static boolean BotaniaRecipes = true;
+	public static boolean Calculator = true;
+	public static boolean DraconicEvolution = true;
+	public static boolean EnderIO = true;
+	public static boolean ExtraUtilities = true;
+	public static boolean ImmersiveEngineeringRecipes = true;
+	public static boolean IndustrialCraft2Recipes = true;
+	public static boolean Mekanism = true;
+	public static boolean Minecraft = true;
+	public static boolean MysticalAgradditions = true;
+	public static boolean MysticalAgriculture = true;
+	public static boolean PlusTiC = true;
+	public static boolean PneumaticCraft = true;
+	public static boolean ProjectE = true;
+	public static boolean ProjectRed = true;
+	public static boolean RefinedStorage = true;
+	public static boolean TechRebornRecipes = true;
+	public static boolean Thaumcraft = true;
+	public static boolean ThermalExpansionRecipes = true;
+	public static boolean TinkersConstruct = true;
+	public static boolean TwilightForest = true;
 	
 	public static boolean enableIC2Hammer = true;
 	public static boolean enableIEHammer = true;
@@ -94,6 +94,7 @@ public class Config {
 	public static int energyPalisReconstructor = 40;
 	public static int energyRestoniaReconstructor = 40;
 	public static int energyVoidReconstructor = 60;
+	
 	private static int minEnergyReconstructor = 1;
 	private static int maxEnergyReconstructor = 100000;
 	
@@ -157,32 +158,32 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Loading plugins settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			loadActuallyAdditions = cfg.getBoolean("loadActuallyAdditions", category, loadActuallyAdditions, comment);
-			loadActuallyAdditionsRecipes = cfg.getBoolean("loadActuallyAdditionsRecipes", category, loadActuallyAdditionsRecipes, LOADACTUALLY_COMMENT);
-			loadAppliedEnergistics2 = cfg.getBoolean("loadAppliedEnergistics2", category, loadAppliedEnergistics2, comment);
-			loadAvaritia = cfg.getBoolean("loadAvaritia", category, loadAvaritia, comment);
-			loadBotania = cfg.getBoolean("loadBotania", category, loadBotania, comment);
-			loadBotaniaRecipes = cfg.getBoolean("loadBotaniaRecipes", category, loadBotaniaRecipes, LOADBOTANIA_COMMENT);
-			loadCalculator = cfg.getBoolean("loadCalculator", category, loadCalculator, comment);			
-			loadDraconicEvolution = cfg.getBoolean("loadDraconicEvolution", category, loadDraconicEvolution, comment);
-			loadEnderIO = cfg.getBoolean("loadEnderIO", category, loadEnderIO, comment);
-			loadExtraUtilities = cfg.getBoolean("loadExtraUtilities", category, loadExtraUtilities, comment);
-			loadImmersiveEngineeringRecipes = cfg.getBoolean("loadImmersiveEngineeringRecipes", category, loadImmersiveEngineeringRecipes, LOADIMMERSIVE_COMMENT);
-			loadIndustrialCraft2Recipes = cfg.getBoolean("loadIndustrialCraft2Recipes", category, loadIndustrialCraft2Recipes, LOADIC2_COMMENT);
-			loadMekanism = cfg.getBoolean("loadMekanism", category, loadMekanism, comment);
-			loadMysticalAgradditions = cfg.getBoolean("loadMysticalAgradditions", category, loadMysticalAgradditions, comment);
-			loadMysticalAgriculture = cfg.getBoolean("loadMysticalAgriculture", category, loadMysticalAgriculture, comment);
-			loadPlusTiC = cfg.getBoolean("loadPlusTiC", category, loadPlusTiC, comment);
-			loadPneumaticCraft = cfg.getBoolean("loadPneumaticCraft", category, loadPneumaticCraft, comment);
-			loadProjectE = cfg.getBoolean("loadProjectE", category, loadProjectE, comment);
-			loadProjectRed = cfg.getBoolean("loadProjectRed", category, loadProjectRed, comment);
-			loadRefinedStorage = cfg.getBoolean("loadRefinedStorage", category, loadRefinedStorage, comment);
-			loadTechRebornRecipes = cfg.getBoolean("loadTechRebornRecipes", category, loadTechRebornRecipes, LOADTECHREBORN_COMMENT);
-			loadThaumcraft = cfg.getBoolean("loadThaumcraft", category, loadThaumcraft, comment);
-			loadThermalExpansionRecipes = cfg.getBoolean("loadThermalExpansionRecipes", category, loadThermalExpansionRecipes, LOADTHERMAL_COMMENT);
-			loadTinkersConstruct = cfg.getBoolean("loadTinkersConstruct", category, loadTinkersConstruct, comment);
-			loadTwilightForest = cfg.getBoolean("loadTwilightForest", category, loadTwilightForest, comment);
-			loadVanilla = cfg.getBoolean("loadVanilla", category, loadVanilla, comment);
+			ActuallyAdditions = cfg.getBoolean("ActuallyAdditions", category, ActuallyAdditions, comment);
+			ActuallyAdditionsRecipes = cfg.getBoolean("ActuallyAdditionsRecipes", category, ActuallyAdditionsRecipes, LOADACTUALLY_COMMENT);
+			AppliedEnergistics2 = cfg.getBoolean("AppliedEnergistics2", category, AppliedEnergistics2, comment);
+			Avaritia = cfg.getBoolean("Avaritia", category, Avaritia, comment);
+			Botania = cfg.getBoolean("Botania", category, Botania, comment);
+			BotaniaRecipes = cfg.getBoolean("BotaniaRecipes", category, BotaniaRecipes, LOADBOTANIA_COMMENT);
+			Calculator = cfg.getBoolean("Calculator", category, Calculator, comment);			
+			DraconicEvolution = cfg.getBoolean("DraconicEvolution", category, DraconicEvolution, comment);
+			EnderIO = cfg.getBoolean("EnderIO", category, EnderIO, comment);
+			ExtraUtilities = cfg.getBoolean("ExtraUtilities", category, ExtraUtilities, comment);
+			ImmersiveEngineeringRecipes = cfg.getBoolean("ImmersiveEngineeringRecipes", category, ImmersiveEngineeringRecipes, LOADIMMERSIVE_COMMENT);
+			IndustrialCraft2Recipes = cfg.getBoolean("IndustrialCraft2Recipes", category, IndustrialCraft2Recipes, LOADIC2_COMMENT);
+			Mekanism = cfg.getBoolean("Mekanism", category, Mekanism, comment);
+			Minecraft = cfg.getBoolean("Minecraft", category, Minecraft, comment);
+			MysticalAgradditions = cfg.getBoolean("MysticalAgradditions", category, MysticalAgradditions, comment);
+			MysticalAgriculture = cfg.getBoolean("MysticalAgriculture", category, MysticalAgriculture, comment);
+			PlusTiC = cfg.getBoolean("PlusTiC", category, PlusTiC, comment);
+			PneumaticCraft = cfg.getBoolean("PneumaticCraft", category, PneumaticCraft, comment);
+			ProjectE = cfg.getBoolean("ProjectE", category, ProjectE, comment);
+			ProjectRed = cfg.getBoolean("ProjectRed", category, ProjectRed, comment);
+			RefinedStorage = cfg.getBoolean("RefinedStorage", category, RefinedStorage, comment);
+			TechRebornRecipes = cfg.getBoolean("TechRebornRecipes", category, TechRebornRecipes, LOADTECHREBORN_COMMENT);
+			Thaumcraft = cfg.getBoolean("Thaumcraft", category, Thaumcraft, comment);
+			ThermalExpansionRecipes = cfg.getBoolean("ThermalExpansionRecipes", category, ThermalExpansionRecipes, LOADTHERMAL_COMMENT);
+			TinkersConstruct = cfg.getBoolean("TinkersConstruct", category, TinkersConstruct, comment);
+			TwilightForest = cfg.getBoolean("TwilightForest", category, TwilightForest, comment);
 		}
 		
 		{	//Actually Additions Recipes

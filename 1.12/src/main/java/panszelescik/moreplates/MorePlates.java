@@ -29,6 +29,7 @@ import static panszelescik.moreplates.Reference.*;
 public class MorePlates {
 	
 	public static final Logger logger = LogManager.getFormatterLogger(MODID);
+	
 	public static final CreativeTabs TAB = new CreativeTabs(MODID) {
 		
 		@Override
