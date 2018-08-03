@@ -24,6 +24,8 @@ public class PluginLoader {
 			PluginDraconicEvolution.preInit();
 		if (isEnderIOLoaded & EnderIO)
 			PluginEnderIO.preInit();
+		if (isEnderIOEndergyLoaded & EnderIOEndergy)
+			PluginEnderIOEndergy.preInit();
 		if (isExtraUtilitiesLoaded & ExtraUtilities)
 			PluginExtraUtilities.preInit();
 		if (isMekanismLoaded & Mekanism)

@@ -19,6 +19,7 @@ public class Reference {
 			+ "after:calculator;"
 			+ "after:draconicevolution;"
 			+ "after:enderio;"
+			+ "after:enderioendergy;"
 			+ "after:extrautils2;"
 			+ "after:immersiveengineering;"
 			+ "after:ic2;"

@@ -162,6 +162,13 @@ public class Strings {
 	public static String SOULARIUM = "Soularium";
 	public static String VIBRANT_ALLOY = "Vibrant" + ALLOY;
 	
+	//Ender IO Endergy
+	public static String COMBUSTIVE_METAL = "CombustiveMetal";
+	public static String CRUDE_STEEL = "Crude" + STEEL;
+	public static String CRYSTALLINE_ALLOY = "Crystalline" + ALLOY;
+	public static String MELODIC_ALLOY = "Melodic" + ALLOY;
+	public static String STELLAR_ALLOY = "Stellar" + ALLOY;
+	
 	//Extra Utilities
 	public static String EXU2_NAME = "ingredients";
 	
@@ -174,7 +181,7 @@ public class Strings {
 	public static int EVIL_INFUSED_IRON_META = 17;
 	
 	//Mekanism
-	public static String REFINED_GLOWSTONE = REFINED + "Glowstone";
+	public static String REFINED_GLOWSTONE = REFINED + GLOWSTONE;
 	public static String OSMIUM = "Osmium";
 	public static String REFINED_OBSIDIAN = REFINED + "Obsidian";
 	
@@ -263,6 +270,9 @@ public class Strings {
 	
 	public static String ENDER_IO_MODID = "enderio";
 	public static String ENDER_IO_MODNAME = "Ender IO";
+	
+	public static String ENDER_IO_ENDERGY_MODID = "enderioendergy";
+	public static String ENDER_IO_ENDERGY_MODNAME = "Ender IO Endergy";
 	
 	public static String EXTRA_UTILITIES_MODID = "extrautils2";
 	public static String EXTRA_UTILITIES_MODNAME = "Extra Utilities 2";

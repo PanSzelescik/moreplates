@@ -691,6 +691,52 @@
 },
 
 {
+	"name": "COMBUSTIVE_METAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCombustiveMetal"
+		}
+	]
+},
+{
+	"name": "CRUDE_STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrudeSteel"
+		}
+	]
+},
+{
+	"name": "CRYSTALLINE_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystallineAlloy"
+		}
+	]
+},
+{
+	"name": "MELODIC_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotMelodicAlloy"
+		}
+	]
+},
+{
+	"name": "STELLAR_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotStellarAlloy"
+		}
+	]
+},
+
+{
 	"name": "DEMON",
 	"ingredient": [
 		{

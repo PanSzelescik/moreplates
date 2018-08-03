@@ -2,6 +2,7 @@ package panszelescik.moreplates.config;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +31,8 @@ public class Config {
 	private static final String CATEGORY_TECHREBORN = TECHREBORN_MODNAME;
 	private static final String CATEGORY_THERMAL = THERMAL_MODNAME;
 	
+	private static final List <String> CATEGORIES = Arrays.asList(CATEGORY_GENERAL, CATEGORY_PLUGINS, CATEGORY_ACTUALLY, CATEGORY_BOTANIA, CATEGORY_IMMERSIVE, CATEGORY_IC2, CATEGORY_TECHREBORN, CATEGORY_THERMAL);
+	
 	//Booleans
 	public static boolean centerMetals = true;
 	
@@ -42,6 +45,7 @@ public class Config {
 	public static boolean Calculator = true;
 	public static boolean DraconicEvolution = true;
 	public static boolean EnderIO = true;
+	public static boolean EnderIOEndergy = true;
 	public static boolean ExtraUtilities = true;
 	public static boolean ImmersiveEngineeringRecipes = true;
 	public static boolean IndustrialCraft2Recipes = true;
@@ -65,52 +69,20 @@ public class Config {
 	
 	//Ints
 	public static int durabilityHammer = 150;
-	private static int minDurabilityHammer = 50;
-	private static int maxDurabilityHammer = 1000;
-	
 	public static int energyCompactor = 4000;
-	private static int minEnergyCompactor = 1;
-	private static int maxEnergyCompactor = 60000;
-	
 	public static int energyCompressor = 4;
-	private static int minEnergyCompressor = 1;
-	private static int maxEnergyCompressor = 2048;
-	
 	public static int energyEmpowerer = 5000;
-	private static int minEnergyEmpowerer = 1;
-	private static int maxEnergyEmpowerer = 1000000;
-	
 	public static int energyInductionSmelter = 2000;
-	private static int minEnergyInductionSmelter = 1;
-	private static int maxEnergyInductionSmelter = 60000;
-	
 	public static int energyMetalPress = 2400;
-	private static int minEnergyMetalPress = 1;
-	private static int maxEnergyMetalPress = 16000;
-	
 	public static int energyDiamantineReconstructor = 60;
 	public static int energyEmeradicReconstructor = 100;
 	public static int energyEnoriReconstructor = 80;
 	public static int energyPalisReconstructor = 40;
 	public static int energyRestoniaReconstructor = 40;
 	public static int energyVoidReconstructor = 60;
-	
-	private static int minEnergyReconstructor = 1;
-	private static int maxEnergyReconstructor = 100000;
-	
-	
 	public static int manasteelMana = 3000;
-	private static int minManasteelMana = 1;
-	private static int maxManasteelMana = 100000;
-	
-	
 	public static int timeCompressor = 300;
-	private static int minTimeCompressor = 10;
-	private static int maxTimeCompressor = 600;
-	
 	public static int timeEmpowerer = 50;
-	private static int minTimeEmpowerer = 1;
-	private static int maxTimeEmpowerer = 600;
 	
 	//Comments
 	private static final String CENTER_IN_GEAR_COMMENT = "Enable this to add option to make Gears with Bronze, Copper, Iron and Tin";
@@ -158,32 +130,33 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Loading plugins settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			ActuallyAdditions = cfg.getBoolean("ActuallyAdditions", category, ActuallyAdditions, comment);
-			ActuallyAdditionsRecipes = cfg.getBoolean("ActuallyAdditionsRecipes", category, ActuallyAdditionsRecipes, LOADACTUALLY_COMMENT);
-			AppliedEnergistics2 = cfg.getBoolean("AppliedEnergistics2", category, AppliedEnergistics2, comment);
-			Avaritia = cfg.getBoolean("Avaritia", category, Avaritia, comment);
-			Botania = cfg.getBoolean("Botania", category, Botania, comment);
-			BotaniaRecipes = cfg.getBoolean("BotaniaRecipes", category, BotaniaRecipes, LOADBOTANIA_COMMENT);
-			Calculator = cfg.getBoolean("Calculator", category, Calculator, comment);			
-			DraconicEvolution = cfg.getBoolean("DraconicEvolution", category, DraconicEvolution, comment);
-			EnderIO = cfg.getBoolean("EnderIO", category, EnderIO, comment);
-			ExtraUtilities = cfg.getBoolean("ExtraUtilities", category, ExtraUtilities, comment);
-			ImmersiveEngineeringRecipes = cfg.getBoolean("ImmersiveEngineeringRecipes", category, ImmersiveEngineeringRecipes, LOADIMMERSIVE_COMMENT);
-			IndustrialCraft2Recipes = cfg.getBoolean("IndustrialCraft2Recipes", category, IndustrialCraft2Recipes, LOADIC2_COMMENT);
-			Mekanism = cfg.getBoolean("Mekanism", category, Mekanism, comment);
-			Minecraft = cfg.getBoolean("Minecraft", category, Minecraft, comment);
-			MysticalAgradditions = cfg.getBoolean("MysticalAgradditions", category, MysticalAgradditions, comment);
-			MysticalAgriculture = cfg.getBoolean("MysticalAgriculture", category, MysticalAgriculture, comment);
-			PlusTiC = cfg.getBoolean("PlusTiC", category, PlusTiC, comment);
-			PneumaticCraft = cfg.getBoolean("PneumaticCraft", category, PneumaticCraft, comment);
-			ProjectE = cfg.getBoolean("ProjectE", category, ProjectE, comment);
-			ProjectRed = cfg.getBoolean("ProjectRed", category, ProjectRed, comment);
-			RefinedStorage = cfg.getBoolean("RefinedStorage", category, RefinedStorage, comment);
-			TechRebornRecipes = cfg.getBoolean("TechRebornRecipes", category, TechRebornRecipes, LOADTECHREBORN_COMMENT);
-			Thaumcraft = cfg.getBoolean("Thaumcraft", category, Thaumcraft, comment);
-			ThermalExpansionRecipes = cfg.getBoolean("ThermalExpansionRecipes", category, ThermalExpansionRecipes, LOADTHERMAL_COMMENT);
-			TinkersConstruct = cfg.getBoolean("TinkersConstruct", category, TinkersConstruct, comment);
-			TwilightForest = cfg.getBoolean("TwilightForest", category, TwilightForest, comment);
+			ActuallyAdditions = getBoolean("Actually Additions", category, ActuallyAdditions, comment);
+			ActuallyAdditionsRecipes = getBoolean("Actually Additions recipes", category, ActuallyAdditionsRecipes, LOADACTUALLY_COMMENT);
+			AppliedEnergistics2 = getBoolean("Applied Energistics 2", category, AppliedEnergistics2, comment);
+			Avaritia = getBoolean("Avaritia", category, Avaritia, comment);
+			Botania = getBoolean("Botania", category, Botania, comment);
+			BotaniaRecipes = getBoolean("Botania recipes", category, BotaniaRecipes, LOADBOTANIA_COMMENT);
+			Calculator = getBoolean("Calculator", category, Calculator, comment);			
+			DraconicEvolution = getBoolean("Draconic Evolution", category, DraconicEvolution, comment);
+			EnderIO = getBoolean("Ender IO", category, EnderIO, comment);
+			EnderIOEndergy = getBoolean("Ender IO Endergy", category, EnderIOEndergy, comment);
+			ExtraUtilities = getBoolean("Extra Utilities", category, ExtraUtilities, comment);
+			ImmersiveEngineeringRecipes = getBoolean("Immersive Engineering recipes", category, ImmersiveEngineeringRecipes, LOADIMMERSIVE_COMMENT);
+			IndustrialCraft2Recipes = getBoolean("Industrial Craft 2 recipes", category, IndustrialCraft2Recipes, LOADIC2_COMMENT);
+			Mekanism = getBoolean("Mekanism", category, Mekanism, comment);
+			Minecraft = getBoolean("Minecraft", category, Minecraft, comment);
+			MysticalAgradditions = getBoolean("Mystical Agradditions", category, MysticalAgradditions, comment);
+			MysticalAgriculture = getBoolean("Mystical Agriculture", category, MysticalAgriculture, comment);
+			PlusTiC = getBoolean("PlusTiC", category, PlusTiC, comment);
+			PneumaticCraft = getBoolean("PneumaticCraft", category, PneumaticCraft, comment);
+			ProjectE = getBoolean("ProjectE", category, ProjectE, comment);
+			ProjectRed = getBoolean("Project Red", category, ProjectRed, comment);
+			RefinedStorage = getBoolean("Refined Storage", category, RefinedStorage, comment);
+			TechRebornRecipes = getBoolean("Tech Reborn recipes", category, TechRebornRecipes, LOADTECHREBORN_COMMENT);
+			Thaumcraft = getBoolean("Thaumcraft", category, Thaumcraft, comment);
+			ThermalExpansionRecipes = getBoolean("Thermal Expansion recipes", category, ThermalExpansionRecipes, LOADTHERMAL_COMMENT);
+			TinkersConstruct = getBoolean("Tinkers' Construct", category, TinkersConstruct, comment);
+			TwilightForest = getBoolean("Twilight Forest", category, TwilightForest, comment);
 		}
 		
 		{	//Actually Additions Recipes
@@ -191,15 +164,15 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Actually Additions recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			energyEmpowerer = cfg.getInt("energyEmpowerer", category, energyEmpowerer, minEnergyEmpowerer, maxEnergyEmpowerer, ENERGYEMPOWERER_COMMENT);
-			timeEmpowerer = cfg.getInt("timeEmpowerer", category, timeEmpowerer, minTimeEmpowerer, maxTimeEmpowerer, TIMEEMPOWERER_COMMENT);
+			energyEmpowerer = getInt("Energy in Empowerer", category, energyEmpowerer, ENERGYEMPOWERER_COMMENT);
+			timeEmpowerer = getInt("Time in Empowerer", category, timeEmpowerer, TIMEEMPOWERER_COMMENT);
 			
-			energyDiamantineReconstructor = cfg.getInt("energyDiamantineReconstructor", category, energyDiamantineReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Diamatine" + ENERGYRECONSTRUCTOR_2_COMMENT);
-			energyEmeradicReconstructor = cfg.getInt("energyEmeradicReconstructor", category, energyEmeradicReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Emeradic" + ENERGYRECONSTRUCTOR_2_COMMENT );
-			energyEnoriReconstructor = cfg.getInt("energyEnoriReconstructor", category, energyEnoriReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Enori" + ENERGYRECONSTRUCTOR_2_COMMENT);
-			energyPalisReconstructor = cfg.getInt("energyPalisReconstructor", category, energyPalisReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Palis" + ENERGYRECONSTRUCTOR_2_COMMENT);
-			energyRestoniaReconstructor = cfg.getInt("energyRestoniaReconstructor", category, energyRestoniaReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Restonia" + ENERGYRECONSTRUCTOR_2_COMMENT);
-			energyVoidReconstructor = cfg.getInt("energyVoidReconstructor", category, energyVoidReconstructor, minEnergyReconstructor, maxEnergyReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Void" + ENERGYRECONSTRUCTOR_2_COMMENT);
+			energyDiamantineReconstructor = getInt("Energy for Diamantine in Reconstructor", category, energyDiamantineReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Diamatine" + ENERGYRECONSTRUCTOR_2_COMMENT);
+			energyEmeradicReconstructor = getInt("Energy for Emeradic in Reconstructor", category, energyEmeradicReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Emeradic" + ENERGYRECONSTRUCTOR_2_COMMENT );
+			energyEnoriReconstructor = getInt("Energy for Enori in Reconstructor", category, energyEnoriReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Enori" + ENERGYRECONSTRUCTOR_2_COMMENT);
+			energyPalisReconstructor = getInt("Energy for Palis in Reconstructor", category, energyPalisReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Palis" + ENERGYRECONSTRUCTOR_2_COMMENT);
+			energyRestoniaReconstructor = getInt("Energy for Restonia in Reconstructor", category, energyRestoniaReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Restonia" + ENERGYRECONSTRUCTOR_2_COMMENT);
+			energyVoidReconstructor = getInt("Energy for Void in Reconstructor", category, energyVoidReconstructor, ENERGYRECONSTRUCTOR_1_COMMENT + "Void" + ENERGYRECONSTRUCTOR_2_COMMENT);
 		}
 		
 		{	//Botania
@@ -207,7 +180,7 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Botania recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			manasteelMana = cfg.getInt("manasteelMana", category, manasteelMana, minManasteelMana, maxManasteelMana, MANASTEELMANA_COMMENT);
+			manasteelMana = getInt("Mana for Manasteel", category, manasteelMana, MANASTEELMANA_COMMENT);
 		}
 		
 		{	//Immersive Engineering Recipes
@@ -215,8 +188,8 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Immersive Engineering recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			enableIEHammer = cfg.getBoolean("enableIEHammer", category, enableIEHammer, IE_HAMMER_COMMENT);
-			energyMetalPress = cfg.getInt("energyMetalPress", category, energyMetalPress, minEnergyMetalPress, maxEnergyMetalPress, ENERGYMETALPRESS_COMMENT);
+			enableIEHammer = getBoolean("Enable IE Hammer", category, enableIEHammer, IE_HAMMER_COMMENT);
+			energyMetalPress = getInt("Energy in Metal Press", category, energyMetalPress, ENERGYMETALPRESS_COMMENT);
 		}
 		
 		{	//Industrial Craft 2 Recipes
@@ -224,7 +197,7 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Industrial Craft 2 recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			enableIC2Hammer = cfg.getBoolean("enableIC2Hammer", category, enableIC2Hammer, IC2_HAMMER_COMMENT);
+			enableIC2Hammer = getBoolean("Enable IC2 Hammer", category, enableIC2Hammer, IC2_HAMMER_COMMENT);
 		}
 		
 		{	//Tech Reborn Recipes
@@ -232,8 +205,8 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Tech Reborn recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			energyCompressor = cfg.getInt("energyCompressor", category, energyCompressor, minEnergyCompressor, maxEnergyCompressor, ENERGYCOMPRESSOR_COMMENT);
-			timeCompressor = cfg.getInt("timeCompressor", category, timeCompressor, minTimeCompressor, maxTimeCompressor, TIMECOMPRESSOR_COMMENT);
+			energyCompressor = getInt("Energy in Compressor", category, energyCompressor, ENERGYCOMPRESSOR_COMMENT);
+			timeCompressor = getInt("Time in Compressor", category, timeCompressor, TIMECOMPRESSOR_COMMENT);
 		}
 		
 		{	//Thermal Expansion Recipes
@@ -241,8 +214,8 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Thermal Expansion recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			energyCompactor = cfg.getInt("energyCompactor", category, energyCompactor, minEnergyCompactor, maxEnergyCompactor, ENERGYCOMPACTOR_COMMENT);
-			energyInductionSmelter = cfg.getInt("energyInductionSmelter", category, energyInductionSmelter, minEnergyInductionSmelter, maxEnergyInductionSmelter, ENERGYINDUCTIONSMELTER_COMMENT);
+			energyCompactor = getInt("Energy in Compactor", category, energyCompactor, ENERGYCOMPACTOR_COMMENT);
+			energyInductionSmelter = getInt("Energy in Induction Smelter", category, energyInductionSmelter, ENERGYINDUCTIONSMELTER_COMMENT);
 		}
 		
 		{	//General
@@ -250,8 +223,8 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "General settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			centerMetals = cfg.getBoolean("centerMetals", category, centerMetals, CENTER_IN_GEAR_COMMENT);
-			durabilityHammer = cfg.getInt("durabilityHammer", category, durabilityHammer, minDurabilityHammer, maxDurabilityHammer, DURABILITYHAMMER_COMMENT);
+			centerMetals = getBoolean("Center metals in recipes", category, centerMetals, CENTER_IN_GEAR_COMMENT);
+			durabilityHammer = getInt("Hammer's durability", category, durabilityHammer, DURABILITYHAMMER_COMMENT);
 		}
 		
 		if (cfg.hasChanged())
@@ -260,17 +233,18 @@ public class Config {
 	
 	@SuppressWarnings("unchecked")
 	public List<IConfigElement> getConfigElements() {
-		List<IConfigElement> list = new ArrayList<>();
-		
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_PLUGINS)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_GENERAL)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_ACTUALLY)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_BOTANIA)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_IMMERSIVE)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_IC2)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_TECHREBORN)));
-		list.add(new ConfigElement(cfg.getCategory(CATEGORY_THERMAL)));
-		
+		List<IConfigElement> list = new ArrayList<>();		
+		for (String category : CATEGORIES) {
+			list.add(new ConfigElement(cfg.getCategory(category)));
+		}
 		return list;
+	}
+	
+	private int getInt(String name, String category, int intName, String comment) {
+		return cfg.getInt(name, category, intName, 1, Integer.MAX_VALUE, comment);
+	}
+	
+	private boolean getBoolean(String name, String category, boolean booleanName, String comment) {
+		return cfg.getBoolean(name, category, booleanName, comment);
 	}
 }

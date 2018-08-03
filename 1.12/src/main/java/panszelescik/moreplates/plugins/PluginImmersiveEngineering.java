@@ -89,6 +89,13 @@ public class PluginImmersiveEngineering {
 			add(SOULARIUM, INGOT + SOULARIUM);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 		}*/
+		/*if (isEnderIOEndergyLoaded & EnderIOEndergy) {
+			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
+			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
+			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
+			add(MELODIC_ALLOY, INGOT + MELODIC_ALLOY);
+			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
+		}*/
 		/*if (isExtraUtilitiesLoaded & ExtraUtilities) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);

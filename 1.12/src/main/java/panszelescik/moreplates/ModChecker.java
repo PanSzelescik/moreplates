@@ -13,6 +13,7 @@ public class ModChecker {
 	public static boolean isCalculatorLoaded;
 	public static boolean isDraconicEvolutionLoaded;
 	public static boolean isEnderIOLoaded;
+	public static boolean isEnderIOEndergyLoaded;
 	public static boolean isExtraUtilitiesLoaded;
 	public static boolean isImmersiveEngineeringLoaded;
 	public static boolean isIndustrialCraft2Loaded;
@@ -40,6 +41,7 @@ public class ModChecker {
 		isCalculatorLoaded = Loader.isModLoaded(CALCULATOR_MODID);
 		isDraconicEvolutionLoaded = Loader.isModLoaded(DRACONIC_MODID);
 		isEnderIOLoaded = Loader.isModLoaded(ENDER_IO_MODID);
+		isEnderIOEndergyLoaded = Loader.isModLoaded(ENDER_IO_ENDERGY_MODID);
 		isExtraUtilitiesLoaded = Loader.isModLoaded(EXTRA_UTILITIES_MODID);
 		isImmersiveEngineeringLoaded = Loader.isModLoaded(IMMERSIVE_MODID);
 		isIndustrialCraft2Loaded = Loader.isModLoaded(IC2_MODID);
@@ -73,6 +75,8 @@ public class ModChecker {
 			MorePlates.logger.info(DRACONIC_MODNAME + INFO);
 		if (isEnderIOLoaded)
 			MorePlates.logger.info(ENDER_IO_MODNAME + INFO);
+		if (isEnderIOEndergyLoaded)
+			MorePlates.logger.info(ENDER_IO_ENDERGY_MODNAME + INFO);
 		if (isExtraUtilitiesLoaded)
 			MorePlates.logger.info(EXTRA_UTILITIES_MODNAME + INFO);
 		if (isImmersiveEngineeringLoaded)

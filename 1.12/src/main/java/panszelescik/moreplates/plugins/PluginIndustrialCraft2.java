@@ -142,6 +142,19 @@ public class PluginIndustrialCraft2 {
 			addBlock(SOULARIUM, 9);
 			addBlock(VIBRANT_ALLOY, 9);
 		}
+		if (isEnderIOEndergyLoaded & EnderIOEndergy) {
+			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
+			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
+			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
+			add(MELODIC_ALLOY, INGOT + MELODIC_ALLOY);
+			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
+			
+			addBlock(COMBUSTIVE_METAL, 9);
+			addBlock(CRUDE_STEEL, 9);
+			addBlock(CRYSTALLINE_ALLOY, 9);
+			addBlock(MELODIC_ALLOY, 9);
+			addBlock(STELLAR_ALLOY, 9);
+		}
 		if (isExtraUtilitiesLoaded & ExtraUtilities) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);

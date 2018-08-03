@@ -2,7 +2,6 @@ itemGroup.moreplates=More Plates
 
 item.hammer.name=Hammer
 
-//Vanilla
 item.coal_gear.name=Coal Gear
 item.coal_plate.name=Coal Plate
 item.diamond_gear.name=Diamond Gear
@@ -22,8 +21,6 @@ item.nether_quartz_plate.name=Nether Quartz Plate
 item.redstone_gear.name=Redstone Gear
 item.redstone_plate.name=Redstone Plate
 
-//Actually Additions
-
 item.black_quartz_gear.name=Black Quartz Gear
 item.black_quartz_plate.name=Black Quartz Plate
 item.diamatine_gear.name=Diamatine Gear
@@ -38,7 +35,6 @@ item.restonia_gear.name=Restonia Gear
 item.restonia_plate.name=Restonia Plate
 item.void_gear.name=Void Gear
 item.void_plate.name=Void Plate
-
 item.empowered_diamatine_gear.name=Empowered Diamatine Gear
 item.empowered_diamatine_plate.name=Empowered Diamatine Plate
 item.empowered_emeradic_gear.name=Empowered Emeradic Gear
@@ -52,14 +48,10 @@ item.empowered_restonia_plate.name=Empowered Restonia Plate
 item.empowered_void_gear.name=Empowered Void Gear
 item.empowered_void_plate.name=Empowered Void Plate
 
-//Applied Energistics 2
-
 item.certus_quartz_gear.name=Certus Quartz Gear
 item.certus_quartz_plate.name=Certus Quartz Plate
 item.fluix_gear.name=Fluix Gear
 item.fluix_plate.name=Fluix Plate
-
-//Avaritia
 
 item.crystal_matrix_gear.name=Crystal Matrix Gear
 item.crystal_matrix_plate.name=Crystal Matrix Plate
@@ -67,8 +59,6 @@ item.infinity_gear.name=Infinity Gear
 item.infinity_plate.name=Infinity Plate
 item.neutronium_gear.name=Neutronium Gear
 item.neutronium_plate.name=Neutronium Plate
-
-//Botania
 
 item.elementium_gear.name=Elementium Gear
 item.elementium_plate.name=Elementium Plate
@@ -79,8 +69,6 @@ item.manasteel_plate.name=Manasteel Plate
 item.terrasteel_gear.name=Terrasteel Gear
 item.terrasteel_plate.name=Terrasteel Plate
 
-//Calculator
-
 item.amethyst_gear.name=Amethyst Gear
 item.amethyst_plate.name=Amethyst Plate
 item.enriched_gold_gear.name=Enriched Gold Gear
@@ -90,14 +78,10 @@ item.reinforced_iron_plate.name=Reinforced Iron Plate
 item.tanzanite_gear.name=Tanzanite Gear
 item.tanzanite_plate.name=Tanzanite Plate
 
-//Draconic Evolution
-
 item.awakened_draconium_gear.name=Awakened Draconium Gear
 item.awakened_draconium_plate.name=Awakened Draconium Plate
 item.draconium_gear.name=Draconium Gear
 item.draconium_plate.name=Draconium Plate
-
-//Ender IO
 
 item.conductive_iron_gear.name=Conductive Iron Gear
 item.conductive_iron_plate.name=Conductive Iron Plate
@@ -118,7 +102,16 @@ item.soularium_plate.name=Soularium Plate
 item.vibrant_alloy_gear.name=Vibrant Alloy Gear
 item.vibrant_alloy_plate.name=Vibrant Alloy Plate
 
-//Extra Utilities
+item.combustive_metal_gear.name=Combustive Metal Gear
+item.combustive_metal_plate.name=Combustive Metal Plate
+item.crude_steel_gear.name=Crude Steel Gear
+item.crude_steel_plate.name=Crude Steel Plate
+item.crystalline_alloy_gear.name=Crystalline Alloy Gear
+item.crystalline_alloy_plate.name=Crystalline Alloy Plate
+item.melodic_alloy_gear.name=Melodic Alloy Gear
+item.melodic_alloy_plate.name= Melodic ALloy Plate
+item.stellar_alloy_gear.name=Stellar Alloy Gear
+item.stellar_alloy_plate.name=Stellar Alloy Plate
 
 item.demon_gear.name=Demon Gear
 item.demon_plate.name=Demon Plate
@@ -127,8 +120,6 @@ item.enchanted_plate.name=Enchanted Plate
 item.evil_infused_iron_gear.name=Evil Infused Iron Gear
 item.evil_infused_iron_plate.name=Evil Infused Iron Plate
 
-//Mekanism
-
 item.osmium_gear.name=Osmium Gear
 item.osmium_plate.name=Osmium Plate
 item.refined_glowstone_gear.name=Refined Glowstone Gear
@@ -136,12 +127,8 @@ item.refined_glowstone_plate.name=Refined Glowstone Plate
 item.refined_obsidian_gear.name=Refined Obsidian Gear
 item.refined_obsidian_plate.name=Refined Obsidian Plate
 
-//Mystical Agradditions
-
 item.insanium_gear.name=Insanium Gear
 item.insanium_plate.name=Insanium Plate
-
-//Mystical Agriculture
 
 item.inferium_gear.name=Inferium Gear
 item.inferium_plate.name=Inferium Plate
@@ -156,8 +143,6 @@ item.superium_plate.name=Superium Plate
 item.supremium_gear.name=Supremium Gear
 item.supremium_plate.name=Supremium Plate
 
-//PlusTiC
-
 item.alumite_gear.name=Alumite Gear
 item.alumite_plate.name=Alumite Plate
 item.mirion_gear.name=Mirion Gear
@@ -167,38 +152,26 @@ item.osgloglas_plate.name=Osgloglas Plate
 item.osmiridium_gear.name=Osmiridium Gear
 item.osmiridium_plate.name=Osmiridium Plate
 
-//PneumaticCraft
-
 item.compressed_iron_gear.name=Compressed Iron Gear
 item.compressed_iron_plate.name=Compressed Iron Plate
-
-//ProjectE
 
 item.dark_matter_gear.name=Dark Matter Gear
 item.dark_matter_plate.name=Dark Matter Plate
 item.red_matter_gear.name=Red Matter Gear
 item.red_matter_plate.name=Red Matter Plate
 
-//Project Red
-
 item.electrotine_alloy_gear.name=Electrotine Alloy Gear
 item.electrotine_alloy_plate.name=Electrotine Alloy Plate
 item.red_alloy_gear.name=Red Alloy Gear
 item.red_alloy_plate.name=Red Alloy Plate
 
-//Refined Storage
-
 item.quartz_enriched_iron_gear.name=Quartz Enriched Iron Gear
 item.quartz_enriched_iron_plate.name=Quartz Enriched Iron Plate
-
-//Thaumcraft
 
 item.amber_gear.name=Amber Gear
 item.amber_plate.name=Amber Plate
 item.quicksilver_gear.name=Quicksilver Gear
 item.quicksilver_plate.name=Quicksilver Plate
-
-//Tinkers' Construct
 
 item.ardite_gear.name=Ardite Gear
 item.ardite_plate.name=Ardite Plate
@@ -211,16 +184,12 @@ item.manyullyn_plate.name=Manyullyn Plate
 item.pig_iron_gear.name=Pig Iron Gear
 item.pig_iron_plate.name=Pig Iron Plate
 
-//The Twilight Forest
-
 item.fiery_gear.name=Fiery Gear
 item.fiery_plate.name=Fiery Plate
 item.ironwood_gear.name=Ironwood Gear
 item.ironwood_plate.name=Ironwood Plate
 item.knightmetal_gear.name=Knightmetal Gear
 item.knightmetal_plate.name=Knightmetal Plate
-
-//MultiMod
 
 item.silicon_gear.name=Silicon Gear
 item.silicon_plate.name=Silicon Plate
