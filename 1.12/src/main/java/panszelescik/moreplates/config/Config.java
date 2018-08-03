@@ -130,38 +130,38 @@ public class Config {
 			cfg.addCustomCategoryComment(category, "Loading plugins settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
-			ActuallyAdditions = getBoolean("Actually Additions", category, ActuallyAdditions, comment);
-			ActuallyAdditionsRecipes = getBoolean("Actually Additions recipes", category, ActuallyAdditionsRecipes, LOADACTUALLY_COMMENT);
-			AppliedEnergistics2 = getBoolean("Applied Energistics 2", category, AppliedEnergistics2, comment);
-			Avaritia = getBoolean("Avaritia", category, Avaritia, comment);
-			Botania = getBoolean("Botania", category, Botania, comment);
-			BotaniaRecipes = getBoolean("Botania recipes", category, BotaniaRecipes, LOADBOTANIA_COMMENT);
-			Calculator = getBoolean("Calculator", category, Calculator, comment);			
-			DraconicEvolution = getBoolean("Draconic Evolution", category, DraconicEvolution, comment);
-			EnderIO = getBoolean("Ender IO", category, EnderIO, comment);
-			EnderIOEndergy = getBoolean("Ender IO Endergy", category, EnderIOEndergy, comment);
-			ExtraUtilities = getBoolean("Extra Utilities", category, ExtraUtilities, comment);
-			ImmersiveEngineeringRecipes = getBoolean("Immersive Engineering recipes", category, ImmersiveEngineeringRecipes, LOADIMMERSIVE_COMMENT);
-			IndustrialCraft2Recipes = getBoolean("Industrial Craft 2 recipes", category, IndustrialCraft2Recipes, LOADIC2_COMMENT);
-			Mekanism = getBoolean("Mekanism", category, Mekanism, comment);
+			ActuallyAdditions = getBoolean(ACTUALLY_MODNAME, category, ActuallyAdditions, comment);
+			ActuallyAdditionsRecipes = getBoolean(ACTUALLY_MODNAME + " recipes", category, ActuallyAdditionsRecipes, LOADACTUALLY_COMMENT);
+			AppliedEnergistics2 = getBoolean(AE2_MODNAME, category, AppliedEnergistics2, comment);
+			Avaritia = getBoolean(AVARITIA_MODNAME, category, Avaritia, comment);
+			Botania = getBoolean(BOTANIA_MODNAME, category, Botania, comment);
+			BotaniaRecipes = getBoolean(BOTANIA_MODNAME + " recipes", category, BotaniaRecipes, LOADBOTANIA_COMMENT);
+			Calculator = getBoolean(CALCULATOR_MODNAME, category, Calculator, comment);			
+			DraconicEvolution = getBoolean(DRACONIC_MODNAME, category, DraconicEvolution, comment);
+			EnderIO = getBoolean(ENDER_IO_MODNAME, category, EnderIO, comment);
+			EnderIOEndergy = getBoolean(ENDER_IO_ENDERGY_MODNAME, category, EnderIOEndergy, comment);
+			ExtraUtilities = getBoolean(EXTRA_UTILITIES_MODNAME, category, ExtraUtilities, comment);
+			ImmersiveEngineeringRecipes = getBoolean(IMMERSIVE_MODNAME + " recipes", category, ImmersiveEngineeringRecipes, LOADIMMERSIVE_COMMENT);
+			IndustrialCraft2Recipes = getBoolean(IC2_MODNAME + " recipes", category, IndustrialCraft2Recipes, LOADIC2_COMMENT);
+			Mekanism = getBoolean(MEKANISM_MODNAME, category, Mekanism, comment);
 			Minecraft = getBoolean("Minecraft", category, Minecraft, comment);
-			MysticalAgradditions = getBoolean("Mystical Agradditions", category, MysticalAgradditions, comment);
-			MysticalAgriculture = getBoolean("Mystical Agriculture", category, MysticalAgriculture, comment);
-			PlusTiC = getBoolean("PlusTiC", category, PlusTiC, comment);
-			PneumaticCraft = getBoolean("PneumaticCraft", category, PneumaticCraft, comment);
-			ProjectE = getBoolean("ProjectE", category, ProjectE, comment);
-			ProjectRed = getBoolean("Project Red", category, ProjectRed, comment);
-			RefinedStorage = getBoolean("Refined Storage", category, RefinedStorage, comment);
-			TechRebornRecipes = getBoolean("Tech Reborn recipes", category, TechRebornRecipes, LOADTECHREBORN_COMMENT);
-			Thaumcraft = getBoolean("Thaumcraft", category, Thaumcraft, comment);
-			ThermalExpansionRecipes = getBoolean("Thermal Expansion recipes", category, ThermalExpansionRecipes, LOADTHERMAL_COMMENT);
-			TinkersConstruct = getBoolean("Tinkers' Construct", category, TinkersConstruct, comment);
-			TwilightForest = getBoolean("Twilight Forest", category, TwilightForest, comment);
+			MysticalAgradditions = getBoolean(M_AGRADDITIONS_MODNAME, category, MysticalAgradditions, comment);
+			MysticalAgriculture = getBoolean(M_AGRICULTURE_MODNAME, category, MysticalAgriculture, comment);
+			PlusTiC = getBoolean(PLUSTIC_MODNAME, category, PlusTiC, comment);
+			PneumaticCraft = getBoolean(PNEUMATIC_MODNAME, category, PneumaticCraft, comment);
+			ProjectE = getBoolean(PROJECTE_MODNAME, category, ProjectE, comment);
+			ProjectRed = getBoolean(PROJECT_RED_MODNAME, category, ProjectRed, comment);
+			RefinedStorage = getBoolean(REFINED_STORAGE_MODNAME, category, RefinedStorage, comment);
+			TechRebornRecipes = getBoolean(TECHREBORN_MODNAME + " recipes", category, TechRebornRecipes, LOADTECHREBORN_COMMENT);
+			Thaumcraft = getBoolean(THAUMCRAFT_MODNAME, category, Thaumcraft, comment);
+			ThermalExpansionRecipes = getBoolean(THERMAL_MODNAME + " recipes", category, ThermalExpansionRecipes, LOADTHERMAL_COMMENT);
+			TinkersConstruct = getBoolean(TINKERS_MODNAME, category, TinkersConstruct, comment);
+			TwilightForest = getBoolean(TWILIGHT_MODNAME, category, TwilightForest, comment);
 		}
 		
 		{	//Actually Additions Recipes
 			String category = CATEGORY_ACTUALLY;
-			cfg.addCustomCategoryComment(category, "Actually Additions recipes settings");
+			cfg.addCustomCategoryComment(category, ACTUALLY_MODNAME + " recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			energyEmpowerer = getInt("Energy in Empowerer", category, energyEmpowerer, ENERGYEMPOWERER_COMMENT);
@@ -177,7 +177,7 @@ public class Config {
 		
 		{	//Botania
 			String category = CATEGORY_BOTANIA;
-			cfg.addCustomCategoryComment(category, "Botania recipes settings");
+			cfg.addCustomCategoryComment(category, BOTANIA_MODNAME + " recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			manasteelMana = getInt("Mana for Manasteel", category, manasteelMana, MANASTEELMANA_COMMENT);
@@ -185,7 +185,7 @@ public class Config {
 		
 		{	//Immersive Engineering Recipes
 			String category = CATEGORY_IMMERSIVE;
-			cfg.addCustomCategoryComment(category, "Immersive Engineering recipes settings");
+			cfg.addCustomCategoryComment(category, IMMERSIVE_MODNAME + " recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			enableIEHammer = getBoolean("Enable IE Hammer", category, enableIEHammer, IE_HAMMER_COMMENT);
@@ -194,7 +194,7 @@ public class Config {
 		
 		{	//Industrial Craft 2 Recipes
 			String category = CATEGORY_IC2;
-			cfg.addCustomCategoryComment(category, "Industrial Craft 2 recipes settings");
+			cfg.addCustomCategoryComment(category, IC2_MODNAME + " recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			enableIC2Hammer = getBoolean("Enable IC2 Hammer", category, enableIC2Hammer, IC2_HAMMER_COMMENT);
@@ -202,7 +202,7 @@ public class Config {
 		
 		{	//Tech Reborn Recipes
 			String category = CATEGORY_TECHREBORN;
-			cfg.addCustomCategoryComment(category, "Tech Reborn recipes settings");
+			cfg.addCustomCategoryComment(category, TECHREBORN_MODNAME + " recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			energyCompressor = getInt("Energy in Compressor", category, energyCompressor, ENERGYCOMPRESSOR_COMMENT);
@@ -211,7 +211,7 @@ public class Config {
 		
 		{	//Thermal Expansion Recipes
 			String category = CATEGORY_THERMAL;
-			cfg.addCustomCategoryComment(category, "Thermal Expansion recipes settings");
+			cfg.addCustomCategoryComment(category, THERMAL_MODNAME + " recipes settings");
 			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			energyCompactor = getInt("Energy in Compactor", category, energyCompactor, ENERGYCOMPACTOR_COMMENT);
