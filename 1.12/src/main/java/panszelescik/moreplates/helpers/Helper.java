@@ -21,8 +21,6 @@ import javax.annotation.Nullable;
 
 public class Helper {
 	
-	private static boolean CLIENT = FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT;
-	
 	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
 	
 	public static void reg(@Nonnull String ore, @Nullable Item gear, @Nullable Item plate) {
@@ -54,19 +52,8 @@ public class Helper {
 	}
 	
 	public static void regItem(@Nonnull Item item) {
-		register(item);
-		if (CLIENT)
-			regRender(item);
-	}
-	
-	private static void register(@Nonnull Item item) {
 		ForgeRegistries.ITEMS.register(item);
 		MorePlates.logger.debug(INFO_REG_ITEM + getItemNameFromItem(item));
-	}
-	
-	private static void regRender(@Nonnull Item item) {
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(new ResourceLocation(MODID, item.getTranslationKey().substring(5)), "inventory"));
-		MorePlates.logger.debug(INFO_REG_RENDER + getItemNameFromItem(item));
 	}
 	
 	//From CoFH Core

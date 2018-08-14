@@ -47,25 +47,6 @@ public class PluginEnderIO {
 		vibrant_alloy_gear = new ItemGear("vibrant_alloy");
 		vibrant_alloy_plate = new ItemPlate("vibrant_alloy");
 		
-		regGear(conductive_iron_gear, CONDUCTIVE_IRON);
-		regPlate(conductive_iron_plate, CONDUCTIVE_IRON);
-		regGear(dark_steel_gear, DARK_STEEL);
-		regPlate(dark_steel_plate, DARK_STEEL);
-		regGear(electrical_steel_gear, ELECTRICAL_STEEL);
-		regPlate(electrical_steel_plate, ELECTRICAL_STEEL);
-		regGear(end_steel_gear, END_STEEL);
-		regPlate(end_steel_plate, END_STEEL);
-		regGear(energetic_alloy_gear, ENERGETIC_ALLOY);
-		regPlate(energetic_alloy_plate, ENERGETIC_ALLOY);
-		regGear(pulsating_iron_gear, PULSATING_IRON);
-		regPlate(pulsating_iron_plate, PULSATING_IRON);
-		regGear(redstone_alloy_gear, REDSTONE_ALLOY);
-		regPlate(redstone_alloy_plate, REDSTONE_ALLOY);
-		regGear(soularium_gear, SOULARIUM);
-		regPlate(soularium_plate, SOULARIUM);
-		regGear(vibrant_alloy_gear, VIBRANT_ALLOY);
-		regPlate(vibrant_alloy_plate, VIBRANT_ALLOY);
-		
 		reg(CONDUCTIVE_IRON, conductive_iron_gear, conductive_iron_plate);
 		reg(DARK_STEEL, dark_steel_gear, dark_steel_plate);
 		reg(ELECTRICAL_STEEL, electrical_steel_gear, electrical_steel_plate);

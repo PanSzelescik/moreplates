@@ -10,7 +10,7 @@ public class Items {
 	public static Item hammer;
 	
 	public static void preInit() {
-		hammer = new ItemHammer("hammer");
+		hammer = new ItemHammer();
 		
 		regItem(hammer);
 	}
