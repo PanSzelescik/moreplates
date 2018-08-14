@@ -16,12 +16,15 @@ import panszelescik.moreplates.proxy.OreDictionaryProxy;
 import static panszelescik.moreplates.Reference.*;
 import static panszelescik.moreplates.helpers.Strings.*;
 
+import java.util.Random;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class Helper {
 	
 	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
+	public static final Random RAND = new Random();
 	
 	public static void reg(@Nonnull String ore, @Nullable Item gear, @Nullable Item plate) {
 		if (gear != null)

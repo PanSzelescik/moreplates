@@ -1,6 +1,7 @@
 itemGroup.moreplates=More Plates
 
 item.hammer.name=Hammer
+item.hammer.uses_left=Uses left: 
 
 item.coal_gear.name=Coal Gear
 item.coal_plate.name=Coal Plate

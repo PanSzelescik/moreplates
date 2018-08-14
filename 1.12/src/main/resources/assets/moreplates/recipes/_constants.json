@@ -24,7 +24,8 @@
 	"name": "HAMMER",
 	"ingredient": [
 		{
-			"item": "moreplates:hammer"
+			"item": "moreplates:hammer",
+			"data": 0
 		}
 	]
 },
@@ -50,7 +51,8 @@
 	"name": "HAMMER",
 	"ingredient": [
 		{
-			"item": "moreplates:hammer"
+			"item": "moreplates:hammer",
+			"data": 0
 		},
 		{
 			"type": "forge:ore_dict",
@@ -80,7 +82,8 @@
 	"name": "HAMMER",
 	"ingredient": [
 		{
-			"item": "moreplates:hammer"
+			"item": "moreplates:hammer",
+			"data": 0
 		},
 		{
 			"item": "immersiveengineering:tool",
@@ -107,7 +110,8 @@
 	"name": "HAMMER",
 	"ingredient": [
 		{
-			"item": "moreplates:hammer"
+			"item": "moreplates:hammer",
+			"data": 0
 		},
 		{
 			"type": "forge:ore_dict",

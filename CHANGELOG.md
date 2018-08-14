@@ -1,8 +1,9 @@
 # More Plates Changelog
 
-### 1.12.2-5.0.2
+### 1.12.2-5.1.0
 - Updated config (I recommend delete old config!)
 - Added Ender IO Endergy support
+- Hammer works! Has 150 durability, and have support for Unbreaking and Mending!
 
 ### 1.12.2-5.0.1
 - Updated to new Actually Additions API
