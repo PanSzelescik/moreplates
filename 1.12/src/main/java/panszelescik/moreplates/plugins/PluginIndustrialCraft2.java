@@ -1,49 +1,25 @@
 package panszelescik.moreplates.plugins;
 
-import java.util.Collections;
-
-import javax.annotation.Nonnull;
-
-import ic2.api.recipe.IRecipeInput;
-import ic2.api.recipe.Recipes;
-import net.minecraft.item.ItemStack;
-import panszelescik.moreplates.MorePlates;
-
-import static panszelescik.moreplates.ModChecker.*;
-import static panszelescik.moreplates.config.Config.*;
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
+import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 
-public class PluginIndustrialCraft2 {
+import net.minecraftforge.fml.common.Loader;
+import panszelescik.moreplates.helpers.IndustrialCraft2Helper;
+
+public class PluginIndustrialCraft2 extends PluginBase {
 	
-	static int BlockCuttingMachineRecipes = 0;
-	static int MetalFormerRecipes = 0;
+	public static final String MODID = "ic2";
+	public static final String MODNAME = "Industrial Craft 2";
+	public static int BlockCuttingMachineRecipes = 0;
+	public static int MetalFormerRecipes = 0;
 	
-	public static void postInit() {
-		if (Minecraft) {
-			add(COAL, "coal", plateCoal);
-			add(DIAMOND, GEM + DIAMOND, plateDiamond);
-			add(EMERALD, GEM + EMERALD, plateEmerald);
-			add(GLOWSTONE, DUST + GLOWSTONE, plateGlowstone);
-			/*add(GOLD, INGOT + GOLD, plateGold);
-			add(IRON, INGOT + IRON, plateIron);
-			add(LAPIS, GEM + LAPIS, plateLapisLazuli);*/
-			add(QUARTZ, GEM + QUARTZ, plateNetherQuartz);
-			add(REDSTONE, DUST + REDSTONE, plateRedstone);
-			
-			addBlock(COAL, 9, plateCoal);
-			addBlock(DIAMOND, 9, plateDiamond);
-			addBlock(EMERALD, 9, plateEmerald);
-			addBlock(GLOWSTONE, 4, plateGlowstone);
-			/*addBlock(GOLD, 9, plateGold);
-			addBlock(IRON, 9, plateIron);
-			addBlock(LAPIS, 9, plateLapisLazuli);*/
-			addBlock(QUARTZ, 4, plateNetherQuartz);
-			addBlock(REDSTONE, 9, plateRedstone);
-		}
-		if (isActuallyAdditionsLoaded & ActuallyAdditions) {
-			String id = ACTUALLY_MODID;
+	public PluginIndustrialCraft2() {
+		super(MODID, MODNAME);
+	}
+	
+	public void postInit() {
+		if (PluginActuallyAdditions.isEnabled()) {
+			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
 			add(DIAMATINE, CRYSTAL_NAME, id, DIAMATINE_META);
 			add(EMERADIC, CRYSTAL_NAME, id, EMERADIC_META);
@@ -74,8 +50,8 @@ public class PluginIndustrialCraft2 {
 			addBlock(EMPOWERED_RESTONIA, EMPOWERED_CRYSTAL_BLOCK_NAME, 9, id, RESTONIA_META);
 			addBlock(EMPOWERED_VOID, EMPOWERED_CRYSTAL_BLOCK_NAME, 9, id, VOID_META);
 		}
-		if (isAppliedEnergisticsLoaded & AppliedEnergistics2) {	
-			String id = AE2_MODID;
+		if (PluginAppliedEnergistics2.isEnabled()) {	
+			String id = PluginAppliedEnergistics2.MODID;
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
 			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
 			add(FLUIX, CRYSTAL + FLUIX);
@@ -84,7 +60,7 @@ public class PluginIndustrialCraft2 {
 			addBlock(CERTUS_QUARTZ, CERTUS_QUARTZ_BLOCK_NAME, 4, id);
 			addBlock(FLUIX, FLUIX_BLOCK_NAME, 4, id);
 		}
-		if (isAvaritiaLoaded & Avaritia) {
+		if (PluginAvaritia.isEnabled()) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
 			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
@@ -93,8 +69,8 @@ public class PluginIndustrialCraft2 {
 			addBlock(INFINITY, 9);
 			addBlock(NEUTRONIUM, 9);
 		}
-		if (isBotaniaLoaded & Botania) {
-			String id = BOTANIA_MODID;
+		if (PluginBotania.isEnabled()) {
+			String id = PluginBotania.MODID;
 			add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
 			add(MANASTEEL, INGOT + MANASTEEL);
@@ -104,8 +80,8 @@ public class PluginIndustrialCraft2 {
 			addBlock(MANASTEEL, BOTANIA_NAME, 9, id, MANASTEEL_META);
 			addBlock(TERRASTEEL, BOTANIA_NAME, 9, id, TERRASTEEL_META);
 		}
-		if (isCalculatorLoaded & Calculator) {
-			String id = CALCULATOR_MODID;
+		if (PluginCalculator.isEnabled()) {
+			String id = PluginCalculator.MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
@@ -114,14 +90,14 @@ public class PluginIndustrialCraft2 {
 			addBlock(ENRICHED_GOLD, CALCULATOR_NAME, 9, id, ENRICHED_GOLD_BLOCK_META);
 			addBlock(REINFORCED_IRON, CALCULATOR_NAME, 9, id, REINFORCED_IRON_BLOCK_META);
 		}
-		if (isDraconicEvolutionLoaded & DraconicEvolution) {
+		if (PluginDraconicEvolution.isEnabled()) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
 			
 			addBlock(AWAKENED_DRACONIUM, 9);
 			addBlock(DRACONIUM, 9);
 		}
-		if (isEnderIOLoaded & EnderIO) {
+		if (PluginEnderIO.isEnabled()) {
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(DARK_STEEL, INGOT + DARK_STEEL);
 			add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
@@ -142,7 +118,7 @@ public class PluginIndustrialCraft2 {
 			addBlock(SOULARIUM, 9);
 			addBlock(VIBRANT_ALLOY, 9);
 		}
-		if (isEnderIOEndergyLoaded & EnderIOEndergy) {
+		if (PluginEnderIOEndergy.isEnabled()) {
 			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
 			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
@@ -155,7 +131,7 @@ public class PluginIndustrialCraft2 {
 			addBlock(MELODIC_ALLOY, 9);
 			addBlock(STELLAR_ALLOY, 9);
 		}
-		if (isExtraUtilitiesLoaded & ExtraUtilities) {
+		if (PluginExtraUtilities.isEnabled()) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);
 			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
@@ -164,7 +140,7 @@ public class PluginIndustrialCraft2 {
 			addBlock(ENCHANTED, 9);
 			addBlock(EVIL_INFUSED_IRON, 9);
 		}
-		if (isMekanismLoaded & Mekanism) {
+		if (PluginMekanism.isEnabled()) {
 			add(REFINED_GLOWSTONE, INGOT + REFINED_GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
@@ -173,12 +149,36 @@ public class PluginIndustrialCraft2 {
 			addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
 		}
-		if (isMysticalAgradditionsLoaded & MysticalAgradditions) {
+		if (PluginMinecraft.isEnabled()) {
+			add(COAL, "coal", plateCoal);
+			add(DIAMOND, GEM + DIAMOND, plateDiamond);
+			add(EMERALD, GEM + EMERALD, plateEmerald);
+			add(GLOWSTONE, DUST + GLOWSTONE, plateGlowstone);
+			add(GOLD, INGOT + GOLD, plateGold);
+			add(IRON, INGOT + IRON, plateIron);
+			add(LAPIS, GEM + LAPIS, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, plateRedstone);
+			
+			addBlock(COAL, 9, plateCoal);
+			addBlock(DIAMOND, 9, plateDiamond);
+			addBlock(EMERALD, 9, plateEmerald);
+			addBlock(GLOWSTONE, 4, plateGlowstone);
+			addBlock(GOLD, 9, plateGold);
+			addBlock(IRON, 9, plateIron);
+			addBlock(LAPIS, 9, plateLapisLazuli);
+			addBlock(QUARTZ, 4, plateNetherQuartz);
+			addBlock(REDSTONE, 9, plateRedstone);
+		}
+		if (PluginMultiMod.isEnabled()) {
+			add(SILICON, ITEM + SILICON);
+		}
+		if (PluginMysticalAgradditions.isEnabled()) {
 			add(INSANIUM, INGOT + INSANIUM);
 			
 			addBlock(INSANIUM, 9);
 		}
-		if (isMysticalAgricultureLoaded & MysticalAgriculture) {
+		if (PluginMysticalAgriculture.isEnabled()) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
@@ -193,57 +193,57 @@ public class PluginIndustrialCraft2 {
 			addBlock(SUPERIUM, 9);
 			addBlock(SUPREMIUM, 9);
 		}
-		if (isPlusTiCLoaded & PlusTiC) {
+		if (PluginPlusTiC.isEnabled()) {
 			add(ALUMITE, INGOT + ALUMITE);
 			
 			addBlock(ALUMITE, 9);
-			if (isBotaniaLoaded) {
+			if (Loader.isModLoaded(PluginBotania.MODID)) {
 				add(MIRION, INGOT + MIRION);
 				
 				addBlock(MIRION, 9);
 			}
-			if (isMekanismLoaded) {
+			if (Loader.isModLoaded(PluginMekanism.MODID)) {
 				add(OSGLOGLAS, INGOT + OSGLOGLAS);
 				
 				addBlock(OSGLOGLAS, 9);
 			}
-			if (isMekanismLoaded & isThermalExpansionLoaded) {
+			if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID)) {
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 				
 				addBlock(OSMIRIDIUM, 9);
 			}
 		}
-		if (isPneumaticCraftLoaded & PneumaticCraft) {
+		if (PluginPneumaticCraft.isEnabled()) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 			
 			addBlock(COMPRESSED_IRON, 9);
 		}
-		if (isProjectELoaded & ProjectE) {
-			String id = PROJECTE_MODID;
+		if (PluginProjectE.isEnabled()) {
+			String id = PluginProjectE.MODID;
 			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
 			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
 			
 			addBlock(DARK_MATTER, MATTER_BLOCK_NAME, 4, id, DARK_MATTER_META);
 			addBlock(RED_MATTER, MATTER_BLOCK_NAME, 4, id, RED_MATTER_META);
 		}
-		if (isProjectRedLoaded & ProjectRed) {
+		if (PluginProjectRed.isEnabled()) {
 			add(ELECTROTINE, INGOT + ELECTROTINE);
 			add(RED_ALLOY, INGOT + RED_ALLOY);
 		}
-		if (isRefinedStorageLoaded & RefinedStorage) {
-			String id = REFINED_STORAGE_MODID;
+		if (PluginRefinedStorage.isEnabled()) {
+			String id = PluginRefinedStorage.MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 			
 			addBlock(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_BLOCK_NAME, 9, id);
 		}
-		if (isThaumcraftLoaded & Thaumcraft) {
-			String id = THAUMCRAFT_MODID;
+		if (PluginThaumcraft.isEnabled()) {
+			String id = PluginThaumcraft.MODID;
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 			
 			addBlock(AMBER, AMBER_BLOCK_NAME, 9, id);
 		}
-		if (isTinkersConstructLoaded & TinkersConstruct) {
+		if (PluginTinkersConstruct.isEnabled()) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
@@ -256,8 +256,8 @@ public class PluginIndustrialCraft2 {
 			addBlock(MANYULLYN, 9);
 			addBlock(PIG_IRON, 9);
 		}
-		if (isTwilightForestLoaded & TwilightForest) {
-			String id = TWILIGHT_MODID;
+		if (PluginTwilightForest.isEnabled()) {
+			String id = PluginTwilightForest.MODID;
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
@@ -266,78 +266,44 @@ public class PluginIndustrialCraft2 {
 			addBlock(IRONWOOD, IRONWOOD_BLOCK_NAME, 9, id);
 			addBlock(KNIGHTMETAL, 9);
 		}
-		if (oreNameExists(ITEM + SILICON)) {
-			add(SILICON, ITEM + SILICON);
-		}
 		
-		MorePlates.logger.info("Added " + BlockCuttingMachineRecipes + " recipes to Block Cutting Machine");
-		MorePlates.logger.info("Added " + MetalFormerRecipes + " recipes to Metal Former");
+		logger.info("Added " + BlockCuttingMachineRecipes + " recipes to Block Cutting Machine");
+		logger.info("Added " + MetalFormerRecipes + " recipes to Metal Former");
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String input, boolean plate) {
-		if (plate) {
-			MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
-			Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
-			
-			MetalFormerRecipes += 1;
-		}
+	private void add(String output, String input, boolean plate) {
+		IndustrialCraft2Helper.add(output, input, plate);
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String input) {
-		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(PLATE + output)), null, false);
-		
-		MetalFormerRecipes += 1;
+	private void add(String output, String input) {
+		IndustrialCraft2Helper.add(output, input);
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id) {
-		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output)), null, false);
-		
-		MetalFormerRecipes += 1;
+	private void add(String output, String input, String id) {
+		IndustrialCraft2Helper.add(output, input, id);
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id, int meta) {
-		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output)), null, false);
-		
-		MetalFormerRecipes += 1;
+	private void add(String output, String input, String id, int meta) {
+		IndustrialCraft2Helper.add(output, input, id, meta);
 	}
 	
-	private static void addGaia(@Nonnull String output, @Nonnull String input) {
-		MorePlates.logger.debug(INFO_FORMER_IC2 + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
-		Recipes.metalformerRolling.addRecipe(Recipes.inputFactory.forOreDict(input), Collections.singletonList(getOre(output + "Plate")), null, false);
-		
-		MetalFormerRecipes += 1;
+	private void addGaia(String output, String input) {
+		IndustrialCraft2Helper.addGaia(output, input);
 	}
 	
-	private static void addBlock(@Nonnull String name, int amount, boolean plate) {
-		if (plate) {
-			MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
-			Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
-			
-			BlockCuttingMachineRecipes += 1;
-		}
+	private void addBlock(String name, int amount, boolean plate) {
+		IndustrialCraft2Helper.addBlock(name, amount, plate);
 	}
 	
-	private static void addBlock(@Nonnull String name, int amount) {
-		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
-		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forOreDict(BLOCK + name), Collections.singletonList(getOre(PLATE + name, amount)), null, false);
-		
-		BlockCuttingMachineRecipes += 1;
+	private void addBlock(String name, int amount) {
+		IndustrialCraft2Helper.addBlock(name, amount);
 	}
 	
-	private static void addBlock(@Nonnull String output, @Nonnull String input, int amount, @Nonnull String id) {
-		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
-		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
-		
-		BlockCuttingMachineRecipes += 1;
+	private void addBlock(String output, String input, int amount, String id) {
+		IndustrialCraft2Helper.addBlock(output, input, amount, id);
 	}
 	
-	private static void addBlock(@Nonnull String output, @Nonnull String input, int amount, @Nonnull String id, int meta) {
-		MorePlates.logger.debug(INFO_CUTTING_IC2 + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
-		Recipes.blockcutter.addRecipe(Recipes.inputFactory.forStack(getItemStack(id, input, 1, meta)), Collections.singletonList(getOre(PLATE + output, amount)), null, false);
-		
-		BlockCuttingMachineRecipes += 1;
+	private void addBlock(String output, String input, int amount, String id, int meta) {
+		IndustrialCraft2Helper.addBlock(output, input, amount, id, meta);
 	}
 }

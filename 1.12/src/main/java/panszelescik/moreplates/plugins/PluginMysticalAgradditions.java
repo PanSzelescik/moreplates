@@ -1,19 +1,22 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginMysticalAgradditions {
+public class PluginMysticalAgradditions extends PluginBase {
 	
-	static Item insanium_gear;
-	static Item insanium_plate;
+	public static final String MODID = "mysticalagradditions";
+	public static final String MODNAME = "Mystical Agradditions";
 	
-	public static void preInit() {
-		insanium_gear = new ItemGear("insanium");
-		insanium_plate = new ItemPlate("insanium");
+	public PluginMysticalAgradditions() {
+		super(MODID, MODNAME);
+	}
+	
+	Item insanium_gear;
+	Item insanium_plate;
+	
+	public void preInit() {
+		insanium_gear = gear("insanium");
+		insanium_plate = plate("insanium");
 		
 		reg(INSANIUM, insanium_gear, insanium_plate);
 	}

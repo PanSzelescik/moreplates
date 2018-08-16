@@ -1,46 +1,47 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.helpers.Helper;
-import panszelescik.moreplates.items.ItemGear;
-import panszelescik.moreplates.items.ItemPlate;
+import net.minecraftforge.fml.common.Loader;
 
-import static panszelescik.moreplates.ModChecker.*;
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginPlusTiC {
+public class PluginPlusTiC extends PluginBase {
 	
-	static Item alumite_gear;
-	static Item alumite_plate;
-	static Item mirion_gear;
-	static Item mirion_plate;
-	static Item osgloglas_gear;
-	static Item osgloglas_plate;
-	static Item osmiridium_gear;
-	static Item osmiridium_plate;
+	public static final String MODID = "plustic";
+	public static final String MODNAME = "PlusTiC";
 	
-	public static void preInit() {
-		alumite_gear = new ItemGear("alumite");
-		alumite_plate = new ItemPlate("alumite");
+	public PluginPlusTiC() {
+		super(MODID, MODNAME);
+	}
+	
+	Item alumite_gear;
+	Item alumite_plate;
+	Item mirion_gear;
+	Item mirion_plate;
+	Item osgloglas_gear;
+	Item osgloglas_plate;
+	Item osmiridium_gear;
+	Item osmiridium_plate;
+	
+	public void preInit() {
+		alumite_gear = gear("alumite");
+		alumite_plate = plate("alumite");
 		
 		reg(ALUMITE, alumite_gear, alumite_plate);
 		
-		if (isBotaniaLoaded) {
-			mirion_gear = new ItemGear("mirion");
-			mirion_plate = new ItemPlate("mirion");
+		if (Loader.isModLoaded(PluginBotania.MODID)) {
+			mirion_gear = gear("mirion");
+			mirion_plate = plate("mirion");
 			
 			reg(MIRION, mirion_gear, mirion_plate);
 		}
-		if (isMekanismLoaded) {
-			osgloglas_gear = new ItemGear("osgloglas");
-			osgloglas_plate = new ItemPlate("osgloglas");
+		if (Loader.isModLoaded(PluginMekanism.MODID)) {
+			osgloglas_gear = gear("osgloglas");
+			osgloglas_plate = plate("osgloglas");
 			
 			reg(OSGLOGLAS, osgloglas_gear, osgloglas_plate);
 		}
-		if (isMekanismLoaded & isThermalExpansionLoaded) {
-			osmiridium_gear = new ItemGear("osmiridium");
-			osmiridium_plate = new ItemPlate("osmiridium");
+		if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID)) {
+			osmiridium_gear = gear("osmiridium");
+			osmiridium_plate = plate("osmiridium");
 			
 			reg(OSMIRIDIUM, osmiridium_gear, osmiridium_plate);
 		}

@@ -1,39 +1,28 @@
 package panszelescik.moreplates.helpers;
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.oredict.OreDictionary;
-import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.items.*;
-import panszelescik.moreplates.proxy.OreDictionaryProxy;
-
-import static panszelescik.moreplates.Reference.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-import java.util.Random;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class Helper {
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.MorePlates;
+import panszelescik.moreplates.proxy.OreDictionaryProxy;
+
+public abstract class Helper extends Strings {
 	
 	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
-	public static final Random RAND = new Random();
 	
-	public static void reg(@Nonnull String ore, @Nullable Item gear, @Nullable Item plate) {
+	public static void reg(String ore, @Nullable Item gear, @Nullable Item plate) {
 		if (gear != null)
 			regGear(gear, ore);
 		if (plate != null)
 			regPlate(plate, ore);
 	}
 	
-	public static void regGaia(@Nonnull String ore, @Nullable Item gear, @Nullable Item plate) {
+	public static void regGaia(String ore, @Nullable Item gear, @Nullable Item plate) {
 		if (gear != null) {
 			regItem(gear);
 			oreGearGaia(ore, gear);
@@ -44,65 +33,57 @@ public class Helper {
 		}
 	}
 	
-	public static void regGear(@Nonnull Item gear, @Nonnull String ore) {
+	public static void regGear(Item gear, String ore) {
 		regItem(gear);
 		oreGear(ore, gear);
 	}
 	
-	public static void regPlate(@Nonnull Item plate, @Nonnull String ore) {
+	public static void regPlate(Item plate, String ore) {
 		regItem(plate);
 		orePlate(ore, plate);
 	}
 	
-	public static void regItem(@Nonnull Item item) {
+	public static void regItem(Item item) {
 		ForgeRegistries.ITEMS.register(item);
 		MorePlates.logger.debug(INFO_REG_ITEM + getItemNameFromItem(item));
 	}
 	
-	//From CoFH Core
-	public static ItemStack getItemStack(@Nonnull String id, @Nonnull String name, int amount, int meta) {
+	public static ItemStack getItemStack(String id, String name, int amount, int meta) {
 		Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(id + ":" + name));
 		return item != null ? new ItemStack(item, amount, meta) : ItemStack.EMPTY;
 	}
 	
-	//From CoFH Core
-	public static ItemStack getItemStack(@Nonnull String id, @Nonnull String name, int amount) {
+	public static ItemStack getItemStack(String id, String name, int amount) {
 		return getItemStack(id, name, amount, 0);
 	}
 	
-	//From CoFH Core
-	public static ItemStack getItemStack(@Nonnull String id, @Nonnull String name) {
+	public static ItemStack getItemStack(String id, String name) {
 		return getItemStack(id, name, 1, 0);
 	}
 	
-	public static ItemStack getItemStack(@Nonnull Item item) {
+	public static ItemStack getItemStack(Item item) {
 		return item != null ? new ItemStack(item, 1, 0) : ItemStack.EMPTY;
 	}
 	
-	//From CoFH Core
-	public static String getItemName(@Nonnull ItemStack stack) {
+	public static String getItemName(ItemStack stack) {
 		String name = "";
 		name += stack.getDisplayName();
 		return name;
 	}
 	
-	//From CoFH Core
-	public static boolean oreNameExists(@Nonnull String oreName) {
+	public static boolean oreNameExists(String oreName) {
 		return oreProxy.oreNameExists(oreName);
 	}
 	
-	//From CoFH Core
-	public static ItemStack getOre(@Nonnull String oreName) {
+	public static ItemStack getOre(String oreName) {
 		return getOre(oreName, 1);
 	}
 	
-	//From CoFH Core
-	public static ItemStack getOre(@Nonnull String oreName, int amount) {
+	public static ItemStack getOre(String oreName, int amount) {
 		return oreProxy.getOre(oreName, amount);
 	}
 	
-	//From CoFH Core
-	public static ItemStack cloneStack(@Nonnull ItemStack stack, int stackSize) {
+	public static ItemStack cloneStack(ItemStack stack, int stackSize) {
 		if (stack.isEmpty())
 			return ItemStack.EMPTY;
 		ItemStack retStack = stack.copy();
@@ -111,45 +92,45 @@ public class Helper {
 		return retStack;
 	}
 	
-	public static String getItemNameFromOre(@Nonnull String oreName) {
+	public static String getItemNameFromOre(String oreName) {
 		return getItemName(getOre(oreName));
 	}
 	
-	public static String getItemNameFromItemStack(@Nonnull String id, @Nonnull String name, int amount, int meta) {
+	public static String getItemNameFromItemStack(String id, String name, int amount, int meta) {
 		return getItemName(getItemStack(id, name, amount, meta));
 	}
 	
-	public static String getItemNameFromItemStack(@Nonnull String id, @Nonnull String name, int amount) {
+	public static String getItemNameFromItemStack(String id, @Nonnull String name, int amount) {
 		return getItemName(getItemStack(id, name, amount, 0));
 	}
 	
-	public static String getItemNameFromItemStack(@Nonnull String id, @Nonnull String name) {
+	public static String getItemNameFromItemStack(String id, @Nonnull String name) {
 		return getItemName(getItemStack(id, name, 1, 0));
 	}
 	
-	public static String getItemNameFromItem(@Nonnull Item item) {
+	public static String getItemNameFromItem(Item item) {
 		return getItemName(getItemStack(item));
 	}
 	
-	public static void oreGear(@Nonnull String ore, @Nonnull Item gear) {
+	public static void oreGear(String ore, Item gear) {
 		ore = GEAR + ore;
 		OreDictionary.registerOre(ore, gear);
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(gear));
 	}
 	
-	public static void orePlate(@Nonnull String ore, @Nonnull Item plate) {
+	public static void orePlate(String ore, Item plate) {
 		ore = PLATE + ore;
 		OreDictionary.registerOre(ore, plate);
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plate));
 	}
 	
-	public static void oreGearGaia(@Nonnull String ore, @Nonnull Item geargaia) {
+	public static void oreGearGaia(String ore, Item geargaia) {
 		ore += "Gear";
 		OreDictionary.registerOre(ore, geargaia);
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(geargaia));
 	}
 	
-	public static void orePlateGaia(@Nonnull String ore, @Nonnull Item plategaia) {
+	public static void orePlateGaia(String ore, Item plategaia) {
 		ore += "Plate";
 		OreDictionary.registerOre(ore, plategaia);
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plategaia));

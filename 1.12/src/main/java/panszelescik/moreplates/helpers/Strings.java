@@ -1,6 +1,6 @@
 package panszelescik.moreplates.helpers;
 
-public class Strings {
+public abstract class Strings {
 	
 	public static String GEAR = "gear";
 	public static String PLATE = "plate";
@@ -248,77 +248,4 @@ public class Strings {
 	
 	//Silicon
 	public static String SILICON = "Silicon";
-	
-	//Mods
-	public static String ACTUALLY_MODID = "actuallyadditions";
-	public static String ACTUALLY_MODNAME = "Actually Additions";
-	
-	public static String AE2_MODID = "appliedenergistics2";
-	public static String AE2_MODNAME = "Applied Energistics 2";
-	
-	public static String AVARITIA_MODID = "avaritia";
-	public static String AVARITIA_MODNAME = "Avaritia";
-	
-	public static String BOTANIA_MODID = "botania";
-	public static String BOTANIA_MODNAME = "Botania";
-	
-	public static String CALCULATOR_MODID = "calculator";
-	public static String CALCULATOR_MODNAME = "Calculator";
-	
-	public static String DRACONIC_MODID = "draconicevolution";
-	public static String DRACONIC_MODNAME = "Draconic Evolution";
-	
-	public static String ENDER_IO_MODID = "enderio";
-	public static String ENDER_IO_MODNAME = "Ender IO";
-	
-	public static String ENDER_IO_ENDERGY_MODID = "enderioendergy";
-	public static String ENDER_IO_ENDERGY_MODNAME = "Ender IO Endergy";
-	
-	public static String EXTRA_UTILITIES_MODID = "extrautils2";
-	public static String EXTRA_UTILITIES_MODNAME = "Extra Utilities 2";
-	
-	public static String IMMERSIVE_MODID = "immersiveengineering";
-	public static String IMMERSIVE_MODNAME = "Immersive Engineering";
-	
-	public static String IC2_MODID = "ic2";
-	public static String IC2_MODNAME = "IndustrialCraft 2";
-	
-	public static String MEKANISM_MODID = "mekanism";
-	public static String MEKANISM_MODNAME = "Mekanism";
-	
-	public static String M_AGRADDITIONS_MODID = "mysticalagradditions";
-	public static String M_AGRADDITIONS_MODNAME = "Mystical Agradditions";
-	
-	public static String M_AGRICULTURE_MODID = "mysticalagriculture";
-	public static String M_AGRICULTURE_MODNAME = "Mystical Agriculture";
-	
-	public static String PLUSTIC_MODID = "plustic";
-	public static String PLUSTIC_MODNAME = "PlusTiC";
-	
-	public static String PNEUMATIC_MODID = "pneumaticcraft";
-	public static String PNEUMATIC_MODNAME = "PneumaticCraft: Repressurized";
-	
-	public static String PROJECTE_MODID = "projecte";
-	public static String PROJECTE_MODNAME = "ProjectE";
-	
-	public static String PROJECT_RED_MODID = "projectred-core";
-	public static String PROJECT_RED_MODNAME = "Project Red";
-	
-	public static String REFINED_STORAGE_MODID = "refinedstorage";
-	public static String REFINED_STORAGE_MODNAME = "Refined Storage";
-	
-	public static String TECHREBORN_MODID = "techreborn";
-	public static String TECHREBORN_MODNAME = "Tech Reborn";
-	
-	public static String THAUMCRAFT_MODID = "thaumcraft";
-	public static String THAUMCRAFT_MODNAME = "Thaumcraft";
-	
-	public static String THERMAL_MODID = "thermalexpansion";
-	public static String THERMAL_MODNAME = "Thermal Expansion";
-	
-	public static String TINKERS_MODID = "tconstruct";
-	public static String TINKERS_MODNAME = "Tinkers' Construct";
-	
-	public static String TWILIGHT_MODID = "twilightforest";
-	public static String TWILIGHT_MODNAME = "The Twilight Forest";
 }

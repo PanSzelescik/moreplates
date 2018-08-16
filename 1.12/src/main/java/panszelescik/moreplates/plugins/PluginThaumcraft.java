@@ -1,23 +1,26 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginThaumcraft {
+public class PluginThaumcraft extends PluginBase {
 	
-	static Item amber_gear;
-	static Item amber_plate;
-	static Item quicksilver_gear;
-	static Item quicksilver_plate;
+	public static final String MODID = "thaumcraft";
+	public static final String MODNAME = "Thaumcraft";
 	
-	public static void preInit() {
-		amber_gear = new ItemGear("amber");
-		amber_plate = new ItemPlate("amber");
-		quicksilver_gear = new ItemGear("quicksilver");
-		quicksilver_plate = new ItemPlate("quicksilver");
+	public PluginThaumcraft() {
+		super(MODID, MODNAME);
+	}
+	
+	Item amber_gear;
+	Item amber_plate;
+	Item quicksilver_gear;
+	Item quicksilver_plate;
+	
+	public void preInit() {
+		amber_gear = gear("amber");
+		amber_plate = plate("amber");
+		quicksilver_gear = gear("quicksilver");
+		quicksilver_plate = plate("quicksilver");
 		
 		reg(AMBER, amber_gear, amber_plate);
 		reg(QUICKSILVER, quicksilver_gear, quicksilver_plate);

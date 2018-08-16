@@ -1,84 +1,85 @@
 package panszelescik.moreplates.plugins;
 
-import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
+import static panszelescik.moreplates.MorePlates.*;
+import static panszelescik.moreplates.config.Config.*;
+
+import java.util.List;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.Ingredient;
 import net.minecraftforge.oredict.OreDictionary;
-import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.items.*;
+import panszelescik.moreplates.helpers.ActuallyAdditionsHelper;
 
-import static panszelescik.moreplates.config.Config.*;
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-import java.util.List;
-
-import javax.annotation.Nonnull;
-
-public class PluginActuallyAdditions {
+public class PluginActuallyAdditions extends PluginBase {
 	
-	static int AtomicReconstructorRecipes = 0;
-	static int EmpowererRecipes = 0;
+	public static final String MODID = "actuallyadditions";
+	public static final String MODNAME = "Actually Additions";
+	public static int AtomicReconstructorRecipes = 0;
+	public static int EmpowererRecipes = 0;
 	
-	static Item black_quartz_gear;
-	static Item black_quartz_plate;
-	static Item diamatine_gear;
-	static Item diamatine_plate;
-	static Item emeradic_gear;
-	static Item emeradic_plate;
-	static Item enori_gear;
-	static Item enori_plate;
-	static Item palis_gear;
-	static Item palis_plate;
-	static Item restonia_gear;
-	static Item restonia_plate;
-	static Item void_gear;
-	static Item void_plate;
+	public PluginActuallyAdditions() {
+		super(MODID, MODNAME);
+	}
 	
-	static Item empowered_diamatine_gear;
-	static Item empowered_diamatine_plate;
-	static Item empowered_emeradic_gear;
-	static Item empowered_emeradic_plate;
-	static Item empowered_enori_gear;
-	static Item empowered_enori_plate;
-	static Item empowered_palis_gear;
-	static Item empowered_palis_plate;
-	static Item empowered_restonia_gear;
-	static Item empowered_restonia_plate;
-	static Item empowered_void_gear;
-	static Item empowered_void_plate;
+	Item black_quartz_gear;
+	Item black_quartz_plate;
+	Item diamatine_gear;
+	Item diamatine_plate;
+	Item emeradic_gear;
+	Item emeradic_plate;
+	Item enori_gear;
+	Item enori_plate;
+	Item palis_gear;
+	Item palis_plate;
+	Item restonia_gear;
+	Item restonia_plate;
+	Item void_gear;
+	Item void_plate;
 	
-	public static void preInit() {
-		black_quartz_gear = new ItemGear("black_quartz");
-		black_quartz_plate = new ItemPlate("black_quartz");
-		diamatine_gear = new ItemGear("diamatine");
-		diamatine_plate = new ItemPlate("diamatine");
-		emeradic_gear = new ItemGear("emeradic");
-		emeradic_plate = new ItemPlate("emeradic");
-		enori_gear = new ItemGear("enori");
-		enori_plate = new ItemPlate("enori");
-		palis_gear = new ItemGear("palis");
-		palis_plate = new ItemPlate("palis");
-		restonia_gear = new ItemGear("restonia");
-		restonia_plate = new ItemPlate("restonia");
-		void_gear = new ItemGear("void");
-		void_plate = new ItemPlate("void");
+	Item empowered_diamatine_gear;
+	Item empowered_diamatine_plate;
+	Item empowered_emeradic_gear;
+	Item empowered_emeradic_plate;
+	Item empowered_enori_gear;
+	Item empowered_enori_plate;
+	Item empowered_palis_gear;
+	Item empowered_palis_plate;
+	Item empowered_restonia_gear;
+	Item empowered_restonia_plate;
+	Item empowered_void_gear;
+	Item empowered_void_plate;
+	
+	@Override
+	public void preInit() {
+		black_quartz_gear = gear("black_quartz");
+		black_quartz_plate = plate("black_quartz");
+		diamatine_gear = gear("diamatine");
+		diamatine_plate = plate("diamatine");
+		emeradic_gear = gear("emeradic");
+		emeradic_plate = plate("emeradic");
+		enori_gear = gear("enori");
+		enori_plate = plate("enori");
+		palis_gear = gear("palis");
+		palis_plate = plate("palis");
+		restonia_gear = gear("restonia");
+		restonia_plate = plate("restonia");
+		void_gear = gear("void");
+		void_plate = plate("void");
 		
-		empowered_diamatine_gear = new ItemGear("empowered_diamatine");
-		empowered_diamatine_plate = new ItemPlate("empowered_diamatine");
-		empowered_emeradic_gear = new ItemGear("empowered_emeradic");
-		empowered_emeradic_plate = new ItemPlate("empowered_emeradic");
-		empowered_enori_gear = new ItemGear("empowered_enori");
-		empowered_enori_plate = new ItemPlate("empowered_enori");
-		empowered_palis_gear = new ItemGear("empowered_palis");
-		empowered_palis_plate = new ItemPlate("empowered_palis");
-		empowered_restonia_gear = new ItemGear("empowered_restonia");
-		empowered_restonia_plate = new ItemPlate("empowered_restonia");
-		empowered_void_gear = new ItemGear("empowered_void");
-		empowered_void_plate = new ItemPlate("empowered_void");
+		empowered_diamatine_gear = gear("empowered_diamatine");
+		empowered_diamatine_plate = plate("empowered_diamatine");
+		empowered_emeradic_gear = gear("empowered_emeradic");
+		empowered_emeradic_plate = plate("empowered_emeradic");
+		empowered_enori_gear = gear("empowered_enori");
+		empowered_enori_plate = plate("empowered_enori");
+		empowered_palis_gear = gear("empowered_palis");
+		empowered_palis_plate = plate("empowered_palis");
+		empowered_restonia_gear = gear("empowered_restonia");
+		empowered_restonia_plate = plate("empowered_restonia");
+		empowered_void_gear = gear("empowered_void");
+		empowered_void_plate = plate("empowered_void");
 		
 		reg(BLACK_QUARTZ, black_quartz_gear, black_quartz_plate);
 		reg(DIAMATINE, diamatine_gear, diamatine_plate);
@@ -96,12 +97,12 @@ public class PluginActuallyAdditions {
 		reg(EMPOWERED_VOID, empowered_void_gear, empowered_void_plate);
 	}
 	
-	public static void postInit() {
+	@Override
+	public void postInit() {
 		addEmpowerer(EMPOWERED_DIAMATINE, DIAMATINE, DYE_LIGHT_BLUE, new ItemStack(Items.CLAY_BALL), new ItemStack(Items.CLAY_BALL), new ItemStack(Blocks.CLAY));
 		List<ItemStack> balls = OreDictionary.getOres("slimeball");
-		for (ItemStack ball : balls) {
+		for (ItemStack ball : balls)
 			addEmpowerer(EMPOWERED_EMERADIC, EMERADIC, DYE_LIME, new ItemStack(Blocks.TALLGRASS, 1, 1), new ItemStack(Blocks.SAPLING), ball.copy());
-		}
 		addEmpowerer(EMPOWERED_ENORI, ENORI, DYE_GRAY, new ItemStack(Items.SNOWBALL), new ItemStack(Blocks.STONE_BUTTON), new ItemStack(Blocks.COBBLESTONE));
 		addEmpowerer(EMPOWERED_PALIS, PALIS, DYE_CYAN, new ItemStack(Items.PRISMARINE_SHARD), new ItemStack(Items.PRISMARINE_SHARD), new ItemStack(Items.PRISMARINE_SHARD));
 		addEmpowerer(EMPOWERED_RESTONIA, RESTONIA, DYE_RED, new ItemStack(Items.NETHERBRICK), new ItemStack(Items.REDSTONE), new ItemStack(Items.BRICK));
@@ -114,39 +115,15 @@ public class PluginActuallyAdditions {
 		addReconstructor(RESTONIA, REDSTONE, energyRestoniaReconstructor);
 		addReconstructor(VOID, COAL, energyVoidReconstructor);
 		
-		MorePlates.logger.info("Added " + AtomicReconstructorRecipes + " recipes to Atomic Reconstructor");
-		MorePlates.logger.info("Added " + EmpowererRecipes + " recipes to Empowerer");
+		logger.info("Added " + AtomicReconstructorRecipes + " recipes to Atomic Reconstructor");
+		logger.info("Added " + EmpowererRecipes + " recipes to Empowerer");
 	}
 	
-	private static void addEmpowerer(@Nonnull String output, @Nonnull String input, @Nonnull String dye, @Nonnull ItemStack modifier2, @Nonnull ItemStack modifier3, @Nonnull ItemStack modifier4) {
-		List<ItemStack> dyes = OreDictionary.getOres(dye);
-		for (ItemStack dyeStack : dyes) {
-			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-			ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(GEAR + input)), getOre(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer, timeEmpowerer, null);
-			
-			EmpowererRecipes += 1;
-			
-			MorePlates.logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-			ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(PLATE + input)), getOre(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer, timeEmpowerer, null);
-			
-			EmpowererRecipes += 1;
-		}
+	private void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
+		ActuallyAdditionsHelper.addEmpowerer(output, input, dye, modifier2, modifier3, modifier4);
 	}
 	
-	private static void addReconstructor(@Nonnull String output, @Nonnull String input, int energy) {
-		List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
-		for (ItemStack inputStack : inputs) {
-			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
-			ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(GEAR + output), energy);
-			
-			AtomicReconstructorRecipes += 1;
-		}
-		List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
-		for (ItemStack inputStack : inputss) {
-			MorePlates.logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
-			ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(PLATE + output), energy);
-			
-			AtomicReconstructorRecipes += 1;
-		}
+	private void addReconstructor(String output, String input, int energy) {
+		ActuallyAdditionsHelper.addReconstructor(output, input, energy);
 	}
 }

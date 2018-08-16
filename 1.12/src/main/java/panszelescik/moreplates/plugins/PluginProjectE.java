@@ -1,23 +1,26 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginProjectE {
+public class PluginProjectE extends PluginBase {
 	
-	static Item dark_matter_gear;
-	static Item dark_matter_plate;
-	static Item red_matter_gear;
-	static Item red_matter_plate;
+	public static final String MODID = "projecte";
+	public static final String MODNAME = "ProjectE";
 	
-	public static void preInit() {
-		dark_matter_gear = new ItemGear("dark_matter");
-		dark_matter_plate = new ItemPlate("dark_matter");
-		red_matter_gear = new ItemGear("red_matter");
-		red_matter_plate = new ItemPlate("red_matter");
+	public PluginProjectE() {
+		super(MODID, MODNAME);
+	}
+	
+	Item dark_matter_gear;
+	Item dark_matter_plate;
+	Item red_matter_gear;
+	Item red_matter_plate;
+	
+	public void preInit() {
+		dark_matter_gear = gear("dark_matter");
+		dark_matter_plate = plate("dark_matter");
+		red_matter_gear = gear("red_matter");
+		red_matter_plate = plate("red_matter");
 		
 		reg(DARK_MATTER, dark_matter_gear, dark_matter_plate);
 		reg(RED_MATTER, red_matter_gear, red_matter_plate);

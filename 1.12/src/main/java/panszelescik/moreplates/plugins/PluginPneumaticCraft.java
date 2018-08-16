@@ -1,19 +1,22 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginPneumaticCraft {
+public class PluginPneumaticCraft extends PluginBase {
 	
-	static Item compressed_iron_gear;
-	static Item compressed_iron_plate;
+	public static final String MODID = "pneumaticcraft";
+	public static final String MODNAME = "PneumaticCraft: Repressurized";
 	
-	public static void preInit() {
-		compressed_iron_gear = new ItemGear("compressed_iron");
-		compressed_iron_plate = new ItemPlate("compressed_iron");
+	public PluginPneumaticCraft() {
+		super(MODID, MODNAME);
+	}
+	
+	Item compressed_iron_gear;
+	Item compressed_iron_plate;
+	
+	public void preInit() {
+		compressed_iron_gear = gear("compressed_iron");
+		compressed_iron_plate = plate("compressed_iron");
 		
 		reg(COMPRESSED_IRON, compressed_iron_gear, compressed_iron_plate);
 	}

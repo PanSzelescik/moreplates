@@ -1,35 +1,38 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginTinkersConstruct {
+public class PluginTinkersConstruct extends PluginBase {
 	
-	static Item ardite_gear;
-	static Item ardite_plate;
-	static Item cobalt_gear;
-	static Item cobalt_plate;
-	static Item knightslime_gear;
-	static Item knightslime_plate;
-	static Item manyullyn_gear;
-	static Item manyullyn_plate;
-	static Item pig_iron_gear;
-	static Item pig_iron_plate;
+	public static final String MODID = "tconstruct";
+	public static final String MODNAME = "Tinkers' Construct";
 	
-	public static void preInit() {
-		ardite_gear = new ItemGear("ardite");
-		ardite_plate = new ItemPlate("ardite");
-		cobalt_gear = new ItemGear("cobalt");
-		cobalt_plate = new ItemPlate("cobalt");
-		knightslime_gear = new ItemGear("knightslime");
-		knightslime_plate = new ItemPlate("knightslime");
-		manyullyn_gear = new ItemGear("manyullyn");
-		manyullyn_plate = new ItemPlate("manyullyn");
-		pig_iron_gear = new ItemGear("pig_iron");
-		pig_iron_plate = new ItemPlate("pig_iron");
+	public PluginTinkersConstruct() {
+		super(MODID, MODNAME);
+	}
+	
+	Item ardite_gear;
+	Item ardite_plate;
+	Item cobalt_gear;
+	Item cobalt_plate;
+	Item knightslime_gear;
+	Item knightslime_plate;
+	Item manyullyn_gear;
+	Item manyullyn_plate;
+	Item pig_iron_gear;
+	Item pig_iron_plate;
+	
+	public void preInit() {
+		ardite_gear = gear("ardite");
+		ardite_plate = plate("ardite");
+		cobalt_gear = gear("cobalt");
+		cobalt_plate = plate("cobalt");
+		knightslime_gear = gear("knightslime");
+		knightslime_plate = plate("knightslime");
+		manyullyn_gear = gear("manyullyn");
+		manyullyn_plate = plate("manyullyn");
+		pig_iron_gear = gear("pig_iron");
+		pig_iron_plate = plate("pig_iron");
 		
 		reg(ARDITE, ardite_gear, ardite_plate);
 		reg(COBALT, cobalt_gear, cobalt_plate);

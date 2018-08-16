@@ -1,44 +1,25 @@
 package panszelescik.moreplates.plugins;
 
-import cofh.thermalexpansion.util.managers.machine.CompactorManager;
-import cofh.thermalexpansion.util.managers.machine.CompactorManager.Mode;
-import cofh.thermalexpansion.util.managers.machine.SmelterManager;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-import panszelescik.moreplates.MorePlates;
-
-import static panszelescik.moreplates.ModChecker.*;
-import static panszelescik.moreplates.config.Config.*;
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
+import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 
-import java.util.List;
+import net.minecraftforge.fml.common.Loader;
+import panszelescik.moreplates.helpers.ThermalExpansionHelper;
 
-import javax.annotation.Nonnull;
-
-public class PluginThermalExpansion {
+public class PluginThermalExpansion extends PluginBase {
 	
-	static int CompactorRecipes = 0;
-	static int InductionSmelterRecipes = 0;
-	static ItemStack sand = new ItemStack(Blocks.SAND);
-	static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
+	public static final String MODID = "thermalexpansion";
+	public static final String MODNAME = "ThermalExpansion";
+	public static int CompactorRecipes = 0;
+	public static int InductionSmelterRecipes = 0;
 	
-	public static void postInit() {
-		if (Minecraft) {
-			add(COAL, "coal", gearCoal, plateCoal);
-			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
-			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
-			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
-			/*add(GOLD, INGOT + GOLD, gearGold, plateGold);
-			add(IRON, INGOT + IRON, gearIron, plateIron);*/
-			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
-			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
-			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
-		}
-		if (isActuallyAdditionsLoaded & ActuallyAdditions) {
-			String id = ACTUALLY_MODID;
+	public PluginThermalExpansion() {
+		super(MODID, MODNAME);
+	}
+	
+	public void postInit() {
+		if (PluginActuallyAdditions.isEnabled()) {
+			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
 			add(DIAMATINE, CRYSTAL_NAME, id, DIAMATINE_META);
 			add(EMERADIC, CRYSTAL_NAME, id, EMERADIC_META);
@@ -54,36 +35,36 @@ public class PluginThermalExpansion {
 			add(EMPOWERED_RESTONIA, EMPOWERED_CRYSTAL_NAME, id, RESTONIA_META);
 			add(EMPOWERED_VOID, EMPOWERED_CRYSTAL_NAME, id, VOID_META);
 		}
-		if (isAppliedEnergisticsLoaded & AppliedEnergistics2) {	
-			String id = AE2_MODID;
+		if (PluginAppliedEnergistics2.isEnabled()) {	
+			String id = PluginAppliedEnergistics2.MODID;
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
 			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
 			add(FLUIX, CRYSTAL + FLUIX);
 			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
-		if (isAvaritiaLoaded & Avaritia) {
+		/*if (PluginAvaritia.isEnabled()) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
 			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
-		}
-		if (isBotaniaLoaded & Botania) {
-			add(ELEMENTIUM, INGOT + ELEMENTIUM);
+		}*/
+		if (PluginBotania.isEnabled()) {
+			//add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
-			add(MANASTEEL, INGOT + MANASTEEL);
-			add(TERRASTEEL, INGOT + TERRASTEEL);
+			//add(MANASTEEL, INGOT + MANASTEEL);
+			//add(TERRASTEEL, INGOT + TERRASTEEL);
 		}
-		if (isCalculatorLoaded & Calculator) {
-			String id = CALCULATOR_MODID;
+		if (PluginCalculator.isEnabled()) {
+			String id = PluginCalculator.MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 		}
-		if (isDraconicEvolutionLoaded & DraconicEvolution) {
+		if (PluginDraconicEvolution.isEnabled()) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
 		}
-		if (isEnderIOLoaded & EnderIO) {
+		if (PluginEnderIO.isEnabled()) {
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(DARK_STEEL, INGOT + DARK_STEEL);
 			add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
@@ -94,27 +75,41 @@ public class PluginThermalExpansion {
 			add(SOULARIUM, INGOT + SOULARIUM);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 		}
-		if (isEnderIOEndergyLoaded & EnderIOEndergy) {
+		if (PluginEnderIOEndergy.isEnabled()) {
 			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
 			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
 			add(MELODIC_ALLOY, INGOT + MELODIC_ALLOY);
 			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
 		}
-		if (isExtraUtilitiesLoaded & ExtraUtilities) {
+		if (PluginExtraUtilities.isEnabled()) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);
 			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
 		}
-		if (isMekanismLoaded & Mekanism) {
+		if (PluginMekanism.isEnabled()) {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
 		}
-		if (isMysticalAgradditionsLoaded & MysticalAgradditions) {
+		if (PluginMinecraft.isEnabled()) {
+			add(COAL, "coal", gearCoal, plateCoal);
+			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
+			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
+			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
+			add(GOLD, INGOT + GOLD, gearGold, plateGold);
+			add(IRON, INGOT + IRON, gearIron, plateIron);
+			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
+		}
+		if (PluginMultiMod.isEnabled()) {
+			add(SILICON, ITEM + SILICON);
+		}
+		if (PluginMysticalAgradditions.isEnabled()) {
 			add(INSANIUM, INGOT + INSANIUM);
 		}
-		if (isMysticalAgricultureLoaded & MysticalAgriculture) {
+		if (PluginMysticalAgriculture.isEnabled()) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
@@ -122,135 +117,69 @@ public class PluginThermalExpansion {
 			add(SUPERIUM, INGOT + SUPERIUM);
 			add(SUPREMIUM, INGOT + SUPREMIUM);
 		}
-		if (isPlusTiCLoaded & PlusTiC) {
+		if (PluginPlusTiC.isEnabled()) {
 			add(ALUMITE, INGOT + ALUMITE);
-			if (isBotaniaLoaded)
+			if (Loader.isModLoaded(PluginBotania.MODID))
 				add(MIRION, INGOT + MIRION);
-			if (isMekanismLoaded)
+			if (Loader.isModLoaded(PluginMekanism.MODID))
 				add(OSGLOGLAS, INGOT + OSGLOGLAS);
-			if (isMekanismLoaded & isThermalExpansionLoaded)
+			if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID))
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 		}
-		if (isPneumaticCraftLoaded & PneumaticCraft) {
+		if (PluginPneumaticCraft.isEnabled()) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 		}
-		if (isProjectELoaded & ProjectE) {
-			String id = PROJECTE_MODID;
+		if (PluginProjectE.isEnabled()) {
+			String id = PluginProjectE.MODID;
 			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
 			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
 		}
-		if (isProjectRedLoaded & ProjectRed) {
+		if (PluginProjectRed.isEnabled()) {
 			add(ELECTROTINE, INGOT + ELECTROTINE);
 			add(RED_ALLOY, INGOT + RED_ALLOY);
 		}
-		if (isRefinedStorageLoaded & RefinedStorage) {
-			String id = REFINED_STORAGE_MODID;
+		if (PluginRefinedStorage.isEnabled()) {
+			String id = PluginRefinedStorage.MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
-		if (isThaumcraftLoaded & Thaumcraft) {
+		if (PluginThaumcraft.isEnabled()) {
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 		}
-		if (isTinkersConstructLoaded & TinkersConstruct) {
+		if (PluginTinkersConstruct.isEnabled()) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
 			add(MANYULLYN, INGOT + MANYULLYN);
 			add(PIG_IRON, INGOT + PIG_IRON);
 		}
-		if (isTwilightForestLoaded & TwilightForest) {
+		if (PluginTwilightForest.isEnabled()) {
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
 		}
-		if (oreNameExists(ITEM + SILICON)) {
-			add(SILICON, ITEM + SILICON);
-		}
 		
-		MorePlates.logger.info("Added " + CompactorRecipes + " recipes to Compactor");
-		MorePlates.logger.info("Added " + InductionSmelterRecipes + " recipes to Induction Smelter");
+		logger.info("Added " + CompactorRecipes + " recipes to Compactor");
+		logger.info("Added " + InductionSmelterRecipes + " recipes to Induction Smelter");
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String inputOre, boolean gear, boolean plate) {
-		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
-		for (ItemStack input : inputs) {
-			if (gear) {
-				MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
-				CompactorManager.addRecipe(energyCompactor, cloneStack(input, 4), getOre(GEAR + output), Mode.GEAR);
-				MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + " x4" + INFO_3 + getItemNameFromOre(GEAR + output));
-				SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), cloneStack(getOre(inputOre), 4), slag, 10);
-				
-				CompactorRecipes += 1;
-				InductionSmelterRecipes += 1;
-			}
-			if (plate) {
-				MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(input));
-				CompactorManager.addRecipe(energyCompactor, input, getOre(PLATE + output), Mode.PLATE);
-				MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + INFO_3 + getItemNameFromOre(PLATE + output));
-				SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getOre(inputOre), slag, 10);
-				
-				CompactorRecipes += 1;
-				InductionSmelterRecipes += 1;
-			}
-		}
+	private void add(String output, String inputOre, boolean gear, boolean plate) {
+		ThermalExpansionHelper.add(output, inputOre, gear, plate);
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String inputOre) {
-		List<ItemStack> inputs = OreDictionary.getOres(inputOre);
-		for (ItemStack input : inputs) {
-			MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(input) + " x4");
-			CompactorManager.addRecipe(energyCompactor, cloneStack(input, 4), getOre(GEAR + output), Mode.GEAR);
-			MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(input));
-			CompactorManager.addRecipe(energyCompactor, input, getOre(PLATE + output), Mode.PLATE);
-			MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + " x4" + INFO_3 + getItemNameFromOre(GEAR + output));
-			SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), cloneStack(getOre(inputOre), 4), slag, 10);
-			MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(inputOre) + INFO_3 + getItemNameFromOre(PLATE + output));
-			SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getOre(inputOre), slag, 10);
-			
-			CompactorRecipes += 1;
-			InductionSmelterRecipes += 1;
-		}
+	private void add(String output, String inputOre) {
+		ThermalExpansionHelper.add(output, inputOre);
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id) {
-		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
-		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 4), getOre(GEAR + output), Mode.GEAR);
-		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
-		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input), getOre(PLATE + output), Mode.PLATE);
-		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromItemStack(id, input) + " x4" + INFO_3 + getItemNameFromOre(GEAR + output));
-		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), getItemStack(id, input, 4), slag, 10);
-		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromItemStack(id, input) + INFO_3 + getItemNameFromOre(PLATE + output));
-		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getItemStack(id, input), slag, 10);
-		
-		CompactorRecipes += 1;
-		InductionSmelterRecipes += 1;
+	private void add(String output, String input, String id) {
+		ThermalExpansionHelper.add(output, input, id);
 	}
 	
-	private static void add(@Nonnull String output, @Nonnull String input, @Nonnull String id, int meta) {
-		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
-		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 4, meta), getOre(GEAR + output), Mode.GEAR);
-		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
-		CompactorManager.addRecipe(energyCompactor, getItemStack(id, input, 1, meta), getOre(PLATE + output), Mode.PLATE);
-		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromItemStack(id, input, 1, meta) + " x4" + INFO_3 + getItemNameFromOre(GEAR + output));
-		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(GEAR + output), getItemStack(id, input, 4, meta), slag, 10);
-		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromItemStack(id, input, 1, meta) + INFO_3 + getItemNameFromOre(PLATE + output));
-		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(PLATE + output), getItemStack(id, input, 1, meta), slag, 10);
-		
-		CompactorRecipes += 1;
-		InductionSmelterRecipes += 1;
+	private void add(String output, String input, String id, int meta) {
+		ThermalExpansionHelper.add(output, input, id, meta);
 	}
 	
-	private static void addGaia(@Nonnull String output, @Nonnull String input) {
-		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
-		CompactorManager.addRecipe(energyCompactor, getOre(input, 4), getOre(output + "Gear"), Mode.GEAR);
-		MorePlates.logger.debug(INFO_COMPACTOR + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
-		CompactorManager.addRecipe(energyCompactor, getOre(input), getOre(output + "Plate"), Mode.PLATE);
-		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(input) + " x4" + INFO_3 + getItemNameFromOre(output + "Gear"));
-		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(output + "Gear"), cloneStack(getOre(input), 4), slag, 10);
-		MorePlates.logger.debug(INFO_INDUCTION_SMELTER + getItemNameFromOre(input) + INFO_3 + getItemNameFromOre(output + "Plate"));
-		SmelterManager.addRecipe(energyInductionSmelter, sand, getOre(output + "Plate"), getOre(input), slag, 10);
-		
-		CompactorRecipes += 1;
-		InductionSmelterRecipes += 1;
+	private void addGaia(String output, String input) {
+		ThermalExpansionHelper.addGaia(output, input);
 	}
 }

@@ -1,51 +1,54 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginEnderIO {
+public class PluginEnderIO extends PluginBase {
 	
-	static Item conductive_iron_gear;
-	static Item conductive_iron_plate;
-	static Item dark_steel_gear;
-	static Item dark_steel_plate;
-	static Item electrical_steel_gear;
-	static Item electrical_steel_plate;
-	static Item end_steel_gear;
-	static Item end_steel_plate;
-	static Item energetic_alloy_gear;
-	static Item energetic_alloy_plate;
-	static Item pulsating_iron_gear;
-	static Item pulsating_iron_plate;
-	static Item redstone_alloy_gear;
-	static Item redstone_alloy_plate;
-	static Item soularium_gear;
-	static Item soularium_plate;
-	static Item vibrant_alloy_gear;
-	static Item vibrant_alloy_plate;
+	public static final String MODID = "enderio";
+	public static final String MODNAME = "Ender IO";
 	
-	public static void preInit() {
-		conductive_iron_gear = new ItemGear("conductive_iron");
-		conductive_iron_plate = new ItemPlate("conductive_iron");
-		dark_steel_gear = new ItemGear("dark_steel");
-		dark_steel_plate = new ItemPlate("dark_steel");
-		electrical_steel_gear =	 new ItemGear("electrical_steel");
-		electrical_steel_plate = new ItemPlate("electrical_steel");
-		end_steel_gear = new ItemGear("end_steel");
-		end_steel_plate = new ItemPlate("end_steel");
-		energetic_alloy_gear = new ItemGear("energetic_alloy");
-		energetic_alloy_plate =  new ItemPlate("energetic_alloy");
-		pulsating_iron_gear = new ItemGear("pulsating_iron");
-		pulsating_iron_plate = new ItemPlate("pulsating_iron");
-		redstone_alloy_gear = new ItemGear("redstone_alloy");
-		redstone_alloy_plate = new ItemPlate("redstone_alloy");
-		soularium_gear = new ItemGear("soularium");
-		soularium_plate = new ItemPlate("soularium");
-		vibrant_alloy_gear = new ItemGear("vibrant_alloy");
-		vibrant_alloy_plate = new ItemPlate("vibrant_alloy");
+	public PluginEnderIO() {
+		super(MODID, MODNAME);
+	}
+	
+	Item conductive_iron_gear;
+	Item conductive_iron_plate;
+	Item dark_steel_gear;
+	Item dark_steel_plate;
+	Item electrical_steel_gear;
+	Item electrical_steel_plate;
+	Item end_steel_gear;
+	Item end_steel_plate;
+	Item energetic_alloy_gear;
+	Item energetic_alloy_plate;
+	Item pulsating_iron_gear;
+	Item pulsating_iron_plate;
+	Item redstone_alloy_gear;
+	Item redstone_alloy_plate;
+	Item soularium_gear;
+	Item soularium_plate;
+	Item vibrant_alloy_gear;
+	Item vibrant_alloy_plate;
+	
+	public void preInit() {
+		conductive_iron_gear = gear("conductive_iron");
+		conductive_iron_plate = plate("conductive_iron");
+		dark_steel_gear = gear("dark_steel");
+		dark_steel_plate = plate("dark_steel");
+		electrical_steel_gear =	 gear("electrical_steel");
+		electrical_steel_plate = plate("electrical_steel");
+		end_steel_gear = gear("end_steel");
+		end_steel_plate = plate("end_steel");
+		energetic_alloy_gear = gear("energetic_alloy");
+		energetic_alloy_plate =  plate("energetic_alloy");
+		pulsating_iron_gear = gear("pulsating_iron");
+		pulsating_iron_plate = plate("pulsating_iron");
+		redstone_alloy_gear = gear("redstone_alloy");
+		redstone_alloy_plate = plate("redstone_alloy");
+		soularium_gear = gear("soularium");
+		soularium_plate = plate("soularium");
+		vibrant_alloy_gear = gear("vibrant_alloy");
+		vibrant_alloy_plate = plate("vibrant_alloy");
 		
 		reg(CONDUCTIVE_IRON, conductive_iron_gear, conductive_iron_plate);
 		reg(DARK_STEEL, dark_steel_gear, dark_steel_plate);

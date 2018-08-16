@@ -1,23 +1,26 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginProjectRed {
+public class PluginProjectRed extends PluginBase {
 	
-	static Item electrotine_alloy_gear;
-	static Item electrotine_alloy_plate;
-	static Item red_alloy_gear;
-	static Item red_alloy_plate;
+	public static final String MODID = "projectred-core";
+	public static final String MODNAME = "Project Red";
 	
-	public static void preInit() {
-		electrotine_alloy_gear = new ItemGear("electrotine_alloy");
-		electrotine_alloy_plate = new ItemPlate("electrotine_alloy");
-		red_alloy_gear = new ItemGear("red_alloy");
-		red_alloy_plate = new ItemPlate("red_alloy");
+	public PluginProjectRed() {
+		super(MODID, MODNAME);
+	}
+	
+	Item electrotine_alloy_gear;
+	Item electrotine_alloy_plate;
+	Item red_alloy_gear;
+	Item red_alloy_plate;
+	
+	public void preInit() {
+		electrotine_alloy_gear = gear("electrotine_alloy");
+		electrotine_alloy_plate = plate("electrotine_alloy");
+		red_alloy_gear = gear("red_alloy");
+		red_alloy_plate = plate("red_alloy");
 		
 		reg(ELECTROTINE, electrotine_alloy_gear, electrotine_alloy_plate);
 		reg(RED_ALLOY, red_alloy_gear, red_alloy_plate);

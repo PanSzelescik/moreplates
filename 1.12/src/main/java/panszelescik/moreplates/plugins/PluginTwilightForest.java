@@ -1,27 +1,30 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
 
-import static panszelescik.moreplates.helpers.Helper.*;
-import static panszelescik.moreplates.helpers.Strings.*;
-
-public class PluginTwilightForest {
+public class PluginTwilightForest extends PluginBase {
 	
-	static Item fiery_gear;
-	static Item fiery_plate;
-	static Item ironwood_gear;
-	static Item ironwood_plate;
-	static Item knightmetal_gear;
-	static Item knightmetal_plate;
+	public static final String MODID = "twilightforest";
+	public static final String MODNAME = "The Twilight Forest";
 	
-	public static void preInit() {
-		fiery_gear = new ItemGear("fiery");
-		fiery_plate = new ItemPlate("fiery");
-		ironwood_gear = new ItemGear("ironwood");
-		ironwood_plate = new ItemPlate("ironwood");
-		knightmetal_gear = new ItemGear("knightmetal");
-		knightmetal_plate = new ItemPlate("knightmetal");
+	public PluginTwilightForest() {
+		super(MODID, MODNAME);
+	}
+	
+	Item fiery_gear;
+	Item fiery_plate;
+	Item ironwood_gear;
+	Item ironwood_plate;
+	Item knightmetal_gear;
+	Item knightmetal_plate;
+	
+	public void preInit() {
+		fiery_gear = gear("fiery");
+		fiery_plate = plate("fiery");
+		ironwood_gear = gear("ironwood");
+		ironwood_plate = plate("ironwood");
+		knightmetal_gear = gear("knightmetal");
+		knightmetal_plate = plate("knightmetal");
 		
 		reg(FIERY, fiery_gear, fiery_plate);
 		reg(IRONWOOD, ironwood_gear, ironwood_plate);

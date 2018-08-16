@@ -1,8 +1,8 @@
 package panszelescik.moreplates.items;
 
-import net.minecraft.util.ResourceLocation;
-
 import static panszelescik.moreplates.Reference.*;
+
+import net.minecraft.util.ResourceLocation;
 
 public class ItemGear extends ItemBase {
 	

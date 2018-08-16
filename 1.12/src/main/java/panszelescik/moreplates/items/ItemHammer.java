@@ -1,5 +1,13 @@
 package panszelescik.moreplates.items;
 
+import static panszelescik.moreplates.Reference.*;
+
+import java.util.List;
+import java.util.Random;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -16,20 +24,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import panszelescik.moreplates.config.Config;
-import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.helpers.IItemDamageble;
 import panszelescik.moreplates.helpers.NBTHelper;
 
-import java.util.List;
-import java.util.Random;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import static panszelescik.moreplates.Reference.*;
-
 public class ItemHammer extends ItemBase implements IItemDamageble {
-
+	
+	static final Random RAND = new Random();
+	
 	public ItemHammer() {
 		super();
 		String name = "hammer";
@@ -66,7 +67,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	@Override
 	public ItemStack getContainerItem(@Nonnull ItemStack stack) {
 		ItemStack container = stack.copy();
-		this.damageTool(container, 1, Helper.RAND, null);
+		this.damageTool(container, 1, RAND, null);
 		return container;
 	}
 	
