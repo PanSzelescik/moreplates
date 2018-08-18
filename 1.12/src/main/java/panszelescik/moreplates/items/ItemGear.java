@@ -9,7 +9,7 @@ public class ItemGear extends ItemBase {
 	public ItemGear(String name) {
 		super();
 		name += "_gear";
-		setTranslationKey(name);
+		setTranslationKey(MODID + "." + name);
 		setRegistryName(new ResourceLocation(MODID, name));
 	}
 }

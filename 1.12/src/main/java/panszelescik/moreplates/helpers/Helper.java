@@ -1,6 +1,5 @@
 package panszelescik.moreplates.helpers;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import net.minecraft.item.Item;
@@ -100,11 +99,11 @@ public abstract class Helper extends Strings {
 		return getItemName(getItemStack(id, name, amount, meta));
 	}
 	
-	public static String getItemNameFromItemStack(String id, @Nonnull String name, int amount) {
+	public static String getItemNameFromItemStack(String id, String name, int amount) {
 		return getItemName(getItemStack(id, name, amount, 0));
 	}
 	
-	public static String getItemNameFromItemStack(String id, @Nonnull String name) {
+	public static String getItemNameFromItemStack(String id, String name) {
 		return getItemName(getItemStack(id, name, 1, 0));
 	}
 	

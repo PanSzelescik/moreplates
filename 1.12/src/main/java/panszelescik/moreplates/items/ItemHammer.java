@@ -34,7 +34,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	public ItemHammer() {
 		super();
 		String name = "hammer";
-		setTranslationKey(name);
+		setTranslationKey(MODID + "." + name);
 		setRegistryName(new ResourceLocation(MODID, name));
 		setContainerItem(this);
 		setMaxDamage(Config.durabilityHammer);
@@ -59,8 +59,8 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(I18n.format("item.hammer.uses_left") + (getItemMaxDamage(stack) - getItemDamage(stack)));
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(I18n.format(getTranslationKey() + ".uses_left") + (getItemMaxDamage(stack) - getItemDamage(stack)));
 	}
 	
 	@Nonnull

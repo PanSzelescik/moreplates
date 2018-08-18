@@ -51,7 +51,6 @@ public class PluginActuallyAdditions extends PluginBase {
 	Item empowered_void_gear;
 	Item empowered_void_plate;
 	
-	@Override
 	public void preInit() {
 		black_quartz_gear = gear("black_quartz");
 		black_quartz_plate = plate("black_quartz");
@@ -97,7 +96,6 @@ public class PluginActuallyAdditions extends PluginBase {
 		reg(EMPOWERED_VOID, empowered_void_gear, empowered_void_plate);
 	}
 	
-	@Override
 	public void postInit() {
 		addEmpowerer(EMPOWERED_DIAMATINE, DIAMATINE, DYE_LIGHT_BLUE, new ItemStack(Items.CLAY_BALL), new ItemStack(Items.CLAY_BALL), new ItemStack(Blocks.CLAY));
 		List<ItemStack> balls = OreDictionary.getOres("slimeball");

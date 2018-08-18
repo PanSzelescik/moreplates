@@ -9,7 +9,7 @@ public class ItemPlate extends ItemBase {
 	public ItemPlate(String name) {
 		super();
 		name += "_plate";
-		setTranslationKey(name);
+		setTranslationKey(MODID + "." + name);
 		setRegistryName(new ResourceLocation(MODID, name));
 	}
 }

@@ -16,7 +16,6 @@ public class PluginAppliedEnergistics2 extends PluginBase {
 	Item fluix_gear;
 	Item fluix_plate;
 	
-	@Override
 	public void preInit() {
 		certus_quartz_gear = gear("certus_quartz");
 		certus_quartz_plate = plate("certus_quartz");
