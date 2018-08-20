@@ -2,7 +2,7 @@
 
 ### 1.12.2-5.1.0
 - Updated config (I recommend delete old config!)
-- Added Ender IO Endergy support
+- Added new Ender IO alloys support
 - Hammer works! Has 150 durability, and have support for Unbreaking and Mending!
 
 ### 1.12.2-5.0.1

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "moreplates:enderioendergy/combustive_metal_gear"
+        "layer0": "moreplates:enderio/combustive_metal_gear"
     }
 }

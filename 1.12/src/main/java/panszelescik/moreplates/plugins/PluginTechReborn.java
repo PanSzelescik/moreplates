@@ -61,19 +61,19 @@ public class PluginTechReborn extends PluginBase {
 		}
 		if (PluginAvaritia.isEnabled()) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
-			//add(INFINITY, INGOT + INFINITY);
+			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
 			
 			addBlock(CRYSTAL_MATRIX, 9);
-			//addBlock(INFINITY, 9);
+			addBlock(INFINITY, 9);
 			addBlock(NEUTRONIUM, 9);
 		}
 		if (PluginBotania.isEnabled()) {
 			String id = PluginBotania.MODID;
 			add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
-			//add(MANASTEEL, INGOT + MANASTEEL);
-			//add(TERRASTEEL, INGOT + TERRASTEEL);
+			add(MANASTEEL, INGOT + MANASTEEL);
+			add(TERRASTEEL, INGOT + TERRASTEEL);
 			
 			addBlock(ELEMENTIUM, BOTANIA_NAME, 9, id, ELEMENTIUM_META);
 			addBlock(MANASTEEL, BOTANIA_NAME, 9, id, MANASTEEL_META);
@@ -91,44 +91,45 @@ public class PluginTechReborn extends PluginBase {
 		}
 		if (PluginDraconicEvolution.isEnabled()) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
-			//add(DRACONIUM, INGOT + DRACONIUM);
+			add(DRACONIUM, INGOT + DRACONIUM);
 			
 			addBlock(AWAKENED_DRACONIUM, 9);
-			//addBlock(DRACONIUM, 9);
+			addBlock(DRACONIUM, 9);
 		}
 		if (PluginEnderIO.isEnabled()) {
+			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
+			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
+			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
+			add(CRYSTALLINE_PINK_SLIME, INGOT + CRYSTALLINE_PINK_SLIME);
 			add(DARK_STEEL, INGOT + DARK_STEEL);
 			add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
 			add(END_STEEL, INGOT + END_STEEL);
 			add(ENERGETIC_ALLOY, INGOT + ENERGETIC_ALLOY);
+			add(ENERGETIC_SILVER, INGOT + ENERGETIC_SILVER);
+			add(MELODIC_ALLOY, INGOT + MELODIC_ALLOY);
 			add(PULSATING_IRON, INGOT + PULSATING_IRON);
 			add(REDSTONE_ALLOY, INGOT + REDSTONE_ALLOY);
-			//add(SOULARIUM, INGOT + SOULARIUM);
+			add(SOULARIUM, INGOT + SOULARIUM);
+			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 			
+			addBlock(COMBUSTIVE_METAL, 9);
 			addBlock(CONDUCTIVE_IRON, 9);
+			addBlock(CRUDE_STEEL, 9);
+			addBlock(CRYSTALLINE_ALLOY, 9);
+			addBlock(CRYSTALLINE_PINK_SLIME, 9);
 			addBlock(DARK_STEEL, 9);
 			addBlock(ELECTRICAL_STEEL, 9);
 			addBlock(END_STEEL, 9);
 			addBlock(ENERGETIC_ALLOY, 9);
+			addBlock(ENERGETIC_SILVER, 9);
+			addBlock(MELODIC_ALLOY, 9);
 			addBlock(PULSATING_IRON, 9);
 			addBlock(REDSTONE_ALLOY, 9);
-			//addBlock(SOULARIUM, 9);
-			addBlock(VIBRANT_ALLOY, 9);
-		}
-		if (PluginEnderIOEndergy.isEnabled()) {
-			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
-			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
-			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
-			add(MELODIC_ALLOY, INGOT + MELODIC_ALLOY);
-			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
-			
-			addBlock(COMBUSTIVE_METAL, 9);
-			addBlock(CRUDE_STEEL, 9);
-			addBlock(CRYSTALLINE_ALLOY, 9);
-			addBlock(MELODIC_ALLOY, 9);
+			addBlock(SOULARIUM, 9);
 			addBlock(STELLAR_ALLOY, 9);
+			addBlock(VIBRANT_ALLOY, 9);
 		}
 		if (PluginExtraUtilities.isEnabled()) {
 			add(DEMON, INGOT + DEMON);
@@ -141,11 +142,11 @@ public class PluginTechReborn extends PluginBase {
 		}
 		if (PluginMekanism.isEnabled()) {
 			add(REFINED_GLOWSTONE, INGOT + REFINED_GLOWSTONE);
-			//add(OSMIUM, INGOT + OSMIUM);
+			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
 			
 			addBlock(REFINED_GLOWSTONE, 9);
-			//addBlock(OSMIUM, 9);
+			addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
 		}
 		if (PluginMinecraft.isEnabled()) {
@@ -172,12 +173,12 @@ public class PluginTechReborn extends PluginBase {
 		if (PluginMultiMod.isEnabled()) {
 			add(SILICON, ITEM + SILICON);
 		}
-		/*if (PluginMysticalAgradditions.isEnabled()) {
+		if (PluginMysticalAgradditions.isEnabled()) {
 			add(INSANIUM, INGOT + INSANIUM);
 			
 			addBlock(INSANIUM, 9);
-		}*/
-		/*if (PluginMysticalAgriculture.isEnabled()) {
+		}
+		if (PluginMysticalAgriculture.isEnabled()) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
@@ -191,8 +192,8 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(SOULIUM, 9);
 			addBlock(SUPERIUM, 9);
 			addBlock(SUPREMIUM, 9);
-		}*/
-		/*if (PluginPlusTiC.isEnabled()) {
+		}
+		if (PluginPlusTiC.isEnabled()) {
 			add(ALUMITE, INGOT + ALUMITE);
 			
 			addBlock(ALUMITE, 9);
@@ -211,7 +212,7 @@ public class PluginTechReborn extends PluginBase {
 				
 				addBlock(OSMIRIDIUM, 9);
 			}
-		}*/
+		}
 		if (PluginPneumaticCraft.isEnabled()) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 			
@@ -242,7 +243,7 @@ public class PluginTechReborn extends PluginBase {
 			
 			addBlock(AMBER, AMBER_BLOCK_NAME, 9, id);
 		}
-		/*if (PluginTinkersConstruct.isEnabled()) {
+		if (PluginTinkersConstruct.isEnabled()) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
@@ -254,11 +255,11 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(KNIGHTSLIME, 9);
 			addBlock(MANYULLYN, 9);
 			addBlock(PIG_IRON, 9);
-		}*/
+		}
 		if (PluginTwilightForest.isEnabled()) {
 			String id = PluginTwilightForest.MODID;
 			add(FIERY, INGOT + FIERY);
-			//add(IRONWOOD, INGOT + IRONWOOD);
+			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
 			
 			addBlock(FIERY, 9);

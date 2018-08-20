@@ -613,11 +613,47 @@
 },
 
 {
+	"name": "COMBUSTIVE_METAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCombustiveMetal"
+		}
+	]
+},
+{
 	"name": "CONDUCTIVE_IRON",
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
 			"ore": "ingotConductiveIron"
+		}
+	]
+},
+{
+	"name": "CRUDE_STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrudeSteel"
+		}
+	]
+},
+{
+	"name": "CRYSTALLINE_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystallineAlloy"
+		}
+	]
+},
+{
+	"name": "CRYSTALLINE_PINK_SLIME",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystallinePinkSlime"
 		}
 	]
 },
@@ -658,6 +694,24 @@
 	]
 },
 {
+	"name": "ENERGETIC_SILVER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEnergeticSilver"
+		}
+	]
+},
+{
+	"name": "MELODIC_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotMelodicAlloy"
+		}
+	]
+},
+{
 	"name": "PULSATING_IRON",
 	"ingredient": [
 		{
@@ -685,57 +739,20 @@
 	]
 },
 {
-	"name": "VIBRANT_ALLOY",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotVibrantAlloy"
-		}
-	]
-},
-
-{
-	"name": "COMBUSTIVE_METAL",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotCombustiveMetal"
-		}
-	]
-},
-{
-	"name": "CRUDE_STEEL",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotCrudeSteel"
-		}
-	]
-},
-{
-	"name": "CRYSTALLINE_ALLOY",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotCrystallineAlloy"
-		}
-	]
-},
-{
-	"name": "MELODIC_ALLOY",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotMelodicAlloy"
-		}
-	]
-},
-{
 	"name": "STELLAR_ALLOY",
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
 			"ore": "ingotStellarAlloy"
+		}
+	]
+},
+{
+	"name": "VIBRANT_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotVibrantAlloy"
 		}
 	]
 },

@@ -17,7 +17,6 @@ public class PluginLoader {
 	private static PluginCalculator pluginCalculator;
 	private static PluginDraconicEvolution pluginDraconicEvolution;
 	private static PluginEnderIO pluginEnderIO;
-	private static PluginEnderIOEndergy pluginEnderIOEndergy;
 	private static PluginExtraUtilities pluginExtraUtilities;
 	private static PluginImmersiveEngineering pluginImmersiveEngineering;
 	private static PluginIndustrialCraft2 pluginIndustrialCraft2;
@@ -45,7 +44,6 @@ public class PluginLoader {
 		pluginCalculator = new PluginCalculator();
 		pluginDraconicEvolution = new PluginDraconicEvolution();
 		pluginEnderIO = new PluginEnderIO();
-		pluginEnderIOEndergy = new PluginEnderIOEndergy();
 		pluginExtraUtilities = new PluginExtraUtilities();
 		pluginImmersiveEngineering = new PluginImmersiveEngineering();
 		pluginIndustrialCraft2 = new PluginIndustrialCraft2();
@@ -72,7 +70,6 @@ public class PluginLoader {
 		initList.add(pluginCalculator);
 		initList.add(pluginDraconicEvolution);
 		initList.add(pluginEnderIO);
-		initList.add(pluginEnderIOEndergy);
 		initList.add(pluginExtraUtilities);
 		initList.add(pluginImmersiveEngineering);
 		initList.add(pluginIndustrialCraft2);

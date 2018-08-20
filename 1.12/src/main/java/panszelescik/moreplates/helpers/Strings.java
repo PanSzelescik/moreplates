@@ -152,22 +152,22 @@ public abstract class Strings {
 	public static String AWAKENED_DRACONIUM = DRACONIUM + "Awakened";
 	
 	//Ender IO
+	public static String COMBUSTIVE_METAL = "CombustiveMetal";
 	public static String CONDUCTIVE_IRON = "Conductive" + IRON;
+	public static String CRUDE_STEEL = "Crude" + STEEL;
+	public static String CRYSTALLINE_ALLOY = "Crystalline" + ALLOY;
+	public static String CRYSTALLINE_PINK_SLIME = "CrystallinePinkSlime";
 	public static String DARK_STEEL = "Dark" + STEEL;
 	public static String ELECTRICAL_STEEL = "Electrical" + STEEL;
 	public static String END_STEEL = "End" + STEEL;
 	public static String ENERGETIC_ALLOY = "Energetic" + ALLOY;
+	public static String ENERGETIC_SILVER = "EnergeticSilver";
+	public static String MELODIC_ALLOY = "Melodic" + ALLOY;
 	public static String PULSATING_IRON = "Pulsating" + IRON;
 	public static String REDSTONE_ALLOY = "Redstone" + ALLOY;
+	public static String STELLAR_ALLOY = "Stellar" + ALLOY;
 	public static String SOULARIUM = "Soularium";
 	public static String VIBRANT_ALLOY = "Vibrant" + ALLOY;
-	
-	//Ender IO Endergy
-	public static String COMBUSTIVE_METAL = "CombustiveMetal";
-	public static String CRUDE_STEEL = "Crude" + STEEL;
-	public static String CRYSTALLINE_ALLOY = "Crystalline" + ALLOY;
-	public static String MELODIC_ALLOY = "Melodic" + ALLOY;
-	public static String STELLAR_ALLOY = "Stellar" + ALLOY;
 	
 	//Extra Utilities
 	public static String EXU2_NAME = "ingredients";

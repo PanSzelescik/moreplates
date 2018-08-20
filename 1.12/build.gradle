@@ -91,7 +91,6 @@ curseforge {
 			optionalLibrary 'industrial-craft'
 			optionalLibrary 'immersive-engineering'
 			optionalLibrary 'extra-utilities'
-			optionalLibrary 'ender-io-endergy'
 			optionalLibrary 'ender-io-base'
 			optionalLibrary 'ender-io'
 			optionalLibrary 'draconic-evolution'
