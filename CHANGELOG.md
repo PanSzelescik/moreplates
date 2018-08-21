@@ -3,6 +3,7 @@
 ### 1.12.2-5.1.0
 - Updated config (I recommend delete old config!)
 - Added new Ender IO alloys support
+- Added Steel Gear and Plate
 - Hammer works! Has 150 durability, and have support for Unbreaking and Mending!
 
 ### 1.12.2-5.0.1

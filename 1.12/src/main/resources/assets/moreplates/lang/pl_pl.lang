@@ -20,6 +20,9 @@ item.moreplates.nether_quartz_plate.name=Płyta z kwarcu
 item.moreplates.redstone_gear.name=Przekładnia z redstonu
 item.moreplates.redstone_plate.name=Płyta z redstonu
 
+item.moreplates.steel_gear.name=Stalowa przekładnia
+item.moreplates.steel_plate.name=Stalowa płyta
+
 item.moreplates.osmium_gear.name=Przekładnia z osmu
 item.moreplates.osmium_plate.name=Płyta z osmu
 item.moreplates.refined_glowstone_gear.name=Przekładnia z jasnogłazu

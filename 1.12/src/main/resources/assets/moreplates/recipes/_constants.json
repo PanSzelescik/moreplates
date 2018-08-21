@@ -264,6 +264,16 @@
 },
 
 {
+	"name": "STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSteel"
+		}
+	]
+},
+
+{
 	"name": "BLACK_QUARTZ",
 	"ingredient": [
 		{

@@ -10,6 +10,9 @@ public class PluginLoader {
 	
 	private static ArrayList<IInit> initList = new ArrayList<>();
 	
+	private static PluginMinecraft pluginMinecraft;
+	private static PluginMetals pluginMetals;
+	
 	private static PluginActuallyAdditions pluginActuallyAdditions;
 	private static PluginAppliedEnergistics2 pluginAppliedEnergistics2;
 	private static PluginAvaritia pluginAvaritia;
@@ -21,7 +24,6 @@ public class PluginLoader {
 	private static PluginImmersiveEngineering pluginImmersiveEngineering;
 	private static PluginIndustrialCraft2 pluginIndustrialCraft2;
 	private static PluginMekanism pluginMekanism;
-	private static PluginMinecraft pluginMinecraft;
 	private static PluginMultiMod pluginMultiMod;
 	private static PluginMysticalAgradditions pluginMysticalAgradditions;
 	private static PluginMysticalAgriculture pluginMysticalAgriculture;
@@ -37,6 +39,9 @@ public class PluginLoader {
 	private static PluginTwilightForest pluginTwilightForest;
 	
 	public static void preInit() {
+		pluginMinecraft = new PluginMinecraft();
+		pluginMetals = new PluginMetals();
+		
 		pluginActuallyAdditions = new PluginActuallyAdditions();
 		pluginAppliedEnergistics2 = new PluginAppliedEnergistics2();
 		pluginAvaritia = new PluginAvaritia();
@@ -48,7 +53,6 @@ public class PluginLoader {
 		pluginImmersiveEngineering = new PluginImmersiveEngineering();
 		pluginIndustrialCraft2 = new PluginIndustrialCraft2();
 		pluginMekanism = new PluginMekanism();
-		pluginMinecraft = new PluginMinecraft();
 		pluginMultiMod = new PluginMultiMod();
 		pluginMysticalAgradditions = new PluginMysticalAgradditions();
 		pluginMysticalAgriculture = new PluginMysticalAgriculture();
@@ -63,6 +67,10 @@ public class PluginLoader {
 		pluginTinkersConstruct = new PluginTinkersConstruct();
 		pluginTwilightForest = new PluginTwilightForest();
 		
+		
+		initList.add(pluginMinecraft);
+		initList.add(pluginMetals);
+		
 		initList.add(pluginActuallyAdditions);
 		initList.add(pluginAppliedEnergistics2);
 		initList.add(pluginAvaritia);
@@ -74,7 +82,6 @@ public class PluginLoader {
 		initList.add(pluginImmersiveEngineering);
 		initList.add(pluginIndustrialCraft2);
 		initList.add(pluginMekanism);
-		initList.add(pluginMinecraft);
 		initList.add(pluginMultiMod);
 		initList.add(pluginMysticalAgradditions);
 		initList.add(pluginMysticalAgriculture);

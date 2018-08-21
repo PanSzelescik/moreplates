@@ -1,6 +1,7 @@
 package panszelescik.moreplates.plugins;
 
 import static panszelescik.moreplates.MorePlates.*;
+import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 
 import net.minecraftforge.fml.common.Loader;
@@ -17,6 +18,32 @@ public class PluginTechReborn extends PluginBase {
 	}
 	
 	public void postInit() {
+		if (PluginMinecraft.isEnabled()) {
+			add(COAL, "coal", plateCoal);
+			add(DIAMOND, GEM + DIAMOND, plateDiamond);
+			add(EMERALD, GEM + EMERALD, plateEmerald);
+			add(GLOWSTONE, DUST + GLOWSTONE, plateGlowstone);
+			add(GOLD, INGOT + GOLD, plateGold);
+			add(IRON, INGOT + IRON, plateIron);
+			add(LAPIS, GEM + LAPIS, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, plateRedstone);
+			
+			addBlock(COAL, 9, plateCoal);
+			addBlock(DIAMOND, 9, plateDiamond);
+			addBlock(EMERALD, 9, plateEmerald);
+			addBlock(GLOWSTONE, 4, plateGlowstone);
+			addBlock(GOLD, 9, plateGold);
+			addBlock(IRON, 9, plateIron);
+			addBlock(LAPIS, 9, plateLapisLazuli);
+			addBlock(QUARTZ, 4, plateNetherQuartz);
+			addBlock(REDSTONE, 9, plateRedstone);
+		}
+		if (PluginMetals.isEnabled()) {
+			add(STEEL, INGOT + STEEL, plateSteel);
+			
+			addBlock(STEEL, 9, plateSteel);
+		}
 		if (PluginActuallyAdditions.isEnabled()) {
 			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
@@ -148,27 +175,6 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(REFINED_GLOWSTONE, 9);
 			addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
-		}
-		if (PluginMinecraft.isEnabled()) {
-			add(COAL, "coal", plateCoal);
-			add(DIAMOND, GEM + DIAMOND, plateDiamond);
-			add(EMERALD, GEM + EMERALD, plateEmerald);
-			add(GLOWSTONE, DUST + GLOWSTONE, plateGlowstone);
-			add(GOLD, INGOT + GOLD, plateGold);
-			add(IRON, INGOT + IRON, plateIron);
-			add(LAPIS, GEM + LAPIS, plateLapisLazuli);
-			add(QUARTZ, GEM + QUARTZ, plateNetherQuartz);
-			add(REDSTONE, DUST + REDSTONE, plateRedstone);
-			
-			addBlock(COAL, 9, plateCoal);
-			addBlock(DIAMOND, 9, plateDiamond);
-			addBlock(EMERALD, 9, plateEmerald);
-			addBlock(GLOWSTONE, 4, plateGlowstone);
-			addBlock(GOLD, 9, plateGold);
-			addBlock(IRON, 9, plateIron);
-			addBlock(LAPIS, 9, plateLapisLazuli);
-			addBlock(QUARTZ, 4, plateNetherQuartz);
-			addBlock(REDSTONE, 9, plateRedstone);
 		}
 		if (PluginMultiMod.isEnabled()) {
 			add(SILICON, ITEM + SILICON);

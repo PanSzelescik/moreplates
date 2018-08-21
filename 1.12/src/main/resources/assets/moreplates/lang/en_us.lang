@@ -22,6 +22,9 @@ item.moreplates.nether_quartz_plate.name=Nether Quartz Plate
 item.moreplates.redstone_gear.name=Redstone Gear
 item.moreplates.redstone_plate.name=Redstone Plate
 
+item.moreplates.steel_gear.name=Steel Gear
+item.moreplates.steel_plate.name=Steel Plate
+
 item.moreplates.black_quartz_gear.name=Black Quartz Gear
 item.moreplates.black_quartz_plate.name=Black Quartz Plate
 item.moreplates.diamatine_gear.name=Diamatine Gear

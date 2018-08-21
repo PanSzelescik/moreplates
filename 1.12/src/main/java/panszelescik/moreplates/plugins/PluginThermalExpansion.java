@@ -1,6 +1,7 @@
 package panszelescik.moreplates.plugins;
 
 import static panszelescik.moreplates.MorePlates.*;
+import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 
 import net.minecraftforge.fml.common.Loader;
@@ -18,6 +19,20 @@ public class PluginThermalExpansion extends PluginBase {
 	}
 	
 	public void postInit() {
+		if (PluginMinecraft.isEnabled()) {
+			add(COAL, "coal", gearCoal, plateCoal);
+			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
+			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
+			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
+			add(GOLD, INGOT + GOLD, gearGold, plateGold);
+			add(IRON, INGOT + IRON, gearIron, plateIron);
+			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
+			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
+			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
+		}
+		if (PluginMetals.isEnabled()) {
+			add(STEEL, INGOT + STEEL, gearSteel, plateSteel);
+		}
 		if (PluginActuallyAdditions.isEnabled()) {
 			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
@@ -91,17 +106,6 @@ public class PluginThermalExpansion extends PluginBase {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
-		}
-		if (PluginMinecraft.isEnabled()) {
-			add(COAL, "coal", gearCoal, plateCoal);
-			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
-			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
-			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
-			add(GOLD, INGOT + GOLD, gearGold, plateGold);
-			add(IRON, INGOT + IRON, gearIron, plateIron);
-			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
-			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
-			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
 		}
 		if (PluginMultiMod.isEnabled()) {
 			add(SILICON, ITEM + SILICON);
