@@ -4,39 +4,12 @@ import java.util.ArrayList;
 
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.helpers.IInit;
+import panszelescik.moreplates.helpers.PluginList;
 import panszelescik.moreplates.plugins.*;
 
-public class PluginLoader {
+public class PluginLoader extends PluginList {
 	
 	private static ArrayList<IInit> initList = new ArrayList<>();
-	
-	private static PluginMinecraft pluginMinecraft;
-	private static PluginMetals pluginMetals;
-	
-	private static PluginActuallyAdditions pluginActuallyAdditions;
-	private static PluginAppliedEnergistics2 pluginAppliedEnergistics2;
-	private static PluginAvaritia pluginAvaritia;
-	private static PluginBotania pluginBotania;
-	private static PluginCalculator pluginCalculator;
-	private static PluginDraconicEvolution pluginDraconicEvolution;
-	private static PluginEnderIO pluginEnderIO;
-	private static PluginExtraUtilities pluginExtraUtilities;
-	private static PluginImmersiveEngineering pluginImmersiveEngineering;
-	private static PluginIndustrialCraft2 pluginIndustrialCraft2;
-	private static PluginMekanism pluginMekanism;
-	private static PluginMultiMod pluginMultiMod;
-	private static PluginMysticalAgradditions pluginMysticalAgradditions;
-	private static PluginMysticalAgriculture pluginMysticalAgriculture;
-	private static PluginPlusTiC pluginPlusTiC;
-	private static PluginPneumaticCraft pluginPneumaticCraft;
-	private static PluginProjectE pluginProjectE;
-	private static PluginProjectRed pluginProjectRed;
-	private static PluginRefinedStorage pluginRefinedStorage;
-	private static PluginTechReborn pluginTechReborn;
-	private static PluginThaumcraft pluginThaumcraft;
-	private static PluginThermalExpansion pluginThermalExpansion;
-	private static PluginTinkersConstruct pluginTinkersConstruct;
-	private static PluginTwilightForest pluginTwilightForest;
 	
 	public static void preInit() {
 		pluginMinecraft = new PluginMinecraft();

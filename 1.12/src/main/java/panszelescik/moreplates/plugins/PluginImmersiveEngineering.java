@@ -18,7 +18,7 @@ public class PluginImmersiveEngineering extends PluginBase {
 	}
 	
 	public void postInit() {
-		if (PluginMinecraft.isEnabled()) {
+		if (isEnabled(pluginMinecraft)) {
 			add(COAL, "coal", gearCoal, plateCoal);
 			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
 			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
@@ -29,10 +29,10 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
 			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
 		}
-		if (PluginMetals.isEnabled()) {
+		/*if (isEnabled(pluginMetals)) {
 			add(STEEL, INGOT + STEEL, gearSteel, plateSteel);
-		}
-		if (PluginActuallyAdditions.isEnabled()) {
+		}*/
+		if (isEnabled(pluginActuallyAdditions)) {
 			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
 			add(DIAMATINE, CRYSTAL_NAME, id, DIAMATINE_META);
@@ -49,36 +49,36 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(EMPOWERED_RESTONIA, EMPOWERED_CRYSTAL_NAME, id, RESTONIA_META);
 			add(EMPOWERED_VOID, EMPOWERED_CRYSTAL_NAME, id, VOID_META);
 		}
-		if (PluginAppliedEnergistics2.isEnabled()) {	
+		if (isEnabled(pluginAppliedEnergistics2)) {	
 			String id = PluginAppliedEnergistics2.MODID;
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
 			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
 			add(FLUIX, CRYSTAL + FLUIX);
 			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
-		/*if (PluginAvaritia.isEnabled()) {
+		/*if (isEnabled(pluginAvaritia)) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
 			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
 		}*/
-		if (PluginBotania.isEnabled()) {
+		if (isEnabled(pluginBotania)) {
 			//add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
 			//add(MANASTEEL, INGOT + MANASTEEL);
 			//add(TERRASTEEL, INGOT + TERRASTEEL);
 		}
-		if (PluginCalculator.isEnabled()) {
+		if (isEnabled(pluginCalculator)) {
 			String id = PluginCalculator.MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 		}
-		/*if (PluginDraconicEvolution.isEnabled()) {
+		/*if (isEnabled(pluginDraconicEvolution)) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
 		}*/
-		/*if (PluginEnderIO.isEnabled()) {
+		/*if (isEnabled(pluginEnderIO)) {
 			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
@@ -96,23 +96,23 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
 		}*/
-		/*if (PluginExtraUtilities.isEnabled()) {
+		/*if (isEnabled(pluginExtraUtilities)) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);
 			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
 		}*/
-		/*if (PluginMekanism.isEnabled()) {
+		/*if (isEnabled(pluginMekanism)) {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
 		}*/
-		if (PluginMultiMod.isEnabled()) {
+		if (isEnabled(pluginMultiMod)) {
 			add(SILICON, ITEM + SILICON);
 		}
-		/*if (PluginMysticalAgradditions.isEnabled()) {
+		/*if (isEnabled(pluginMysticalAgradditions)) {
 			add(INSANIUM, INGOT + INSANIUM);
 		}*/
-		/*if (PluginMysticalAgriculture.isEnabled()) {
+		/*if (isEnabled(pluginMysticalAgriculture)) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
@@ -120,7 +120,7 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(SUPERIUM, INGOT + SUPERIUM);
 			add(SUPREMIUM, INGOT + SUPREMIUM);
 		}*/
-		/*if (PluginPlusTiC.isEnabled()) {
+		/*if (isEnabled(pluginPlusTiC)) {
 			add(ALUMITE, INGOT + ALUMITE);
 			if (Loader.isModLoaded(PluginBotania.MODID))
 				add(MIRION, INGOT + MIRION);
@@ -129,34 +129,34 @@ public class PluginImmersiveEngineering extends PluginBase {
 			if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID))
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 		}*/
-		if (PluginPneumaticCraft.isEnabled()) {
+		if (isEnabled(pluginPneumaticCraft)) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 		}
-		if (PluginProjectE.isEnabled()) {
+		if (isEnabled(pluginProjectE)) {
 			String id = PluginProjectE.MODID;
 			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
 			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
 		}
-		if (PluginProjectRed.isEnabled()) {
+		if (isEnabled(pluginProjectRed)) {
 			add(ELECTROTINE, INGOT + ELECTROTINE);
 			add(RED_ALLOY, INGOT + RED_ALLOY);
 		}
-		if (PluginRefinedStorage.isEnabled()) {
+		if (isEnabled(pluginRefinedStorage)) {
 			String id = PluginRefinedStorage.MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
-		if (PluginThaumcraft.isEnabled()) {
+		if (isEnabled(pluginThaumcraft)) {
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 		}
-		/*if (PluginTinkersConstruct.isEnabled()) {
+		/*if (isEnabled(pluginTinkersConstruct)) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
 			add(MANYULLYN, INGOT + MANYULLYN);
 			add(PIG_IRON, INGOT + PIG_IRON);
 		}*/
-		/*if (PluginTwilightForest.isEnabled()) {
+		/*if (isEnabled(pluginTwilightForest)) {
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);

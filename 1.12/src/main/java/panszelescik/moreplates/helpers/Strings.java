@@ -1,6 +1,6 @@
 package panszelescik.moreplates.helpers;
 
-public abstract class Strings {
+public abstract class Strings extends PluginList {
 	
 	public static String GEAR = "gear";
 	public static String PLATE = "plate";

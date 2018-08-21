@@ -18,7 +18,7 @@ public class PluginTechReborn extends PluginBase {
 	}
 	
 	public void postInit() {
-		if (PluginMinecraft.isEnabled()) {
+		if (isEnabled(pluginMinecraft)) {
 			add(COAL, "coal", plateCoal);
 			add(DIAMOND, GEM + DIAMOND, plateDiamond);
 			add(EMERALD, GEM + EMERALD, plateEmerald);
@@ -39,12 +39,12 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(QUARTZ, 4, plateNetherQuartz);
 			addBlock(REDSTONE, 9, plateRedstone);
 		}
-		if (PluginMetals.isEnabled()) {
+		if (isEnabled(pluginMetals)) {
 			add(STEEL, INGOT + STEEL, plateSteel);
 			
 			addBlock(STEEL, 9, plateSteel);
 		}
-		if (PluginActuallyAdditions.isEnabled()) {
+		if (isEnabled(pluginActuallyAdditions)) {
 			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
 			add(DIAMATINE, CRYSTAL_NAME, id, DIAMATINE_META);
@@ -76,7 +76,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(EMPOWERED_RESTONIA, EMPOWERED_CRYSTAL_BLOCK_NAME, 9, id, RESTONIA_META);
 			addBlock(EMPOWERED_VOID, EMPOWERED_CRYSTAL_BLOCK_NAME, 9, id, VOID_META);
 		}
-		if (PluginAppliedEnergistics2.isEnabled()) {	
+		if (isEnabled(pluginAppliedEnergistics2)) {	
 			String id = PluginAppliedEnergistics2.MODID;
 			add(CERTUS_QUARTZ, CRYSTAL + CERTUS_QUARTZ);
 			add(CERTUS_QUARTZ, PURE_CERTUS_QUARTZ_NAME, id, PURE_CERTUS_QUARTZ_META);
@@ -86,7 +86,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(CERTUS_QUARTZ, CERTUS_QUARTZ_BLOCK_NAME, 4, id);
 			addBlock(FLUIX, FLUIX_BLOCK_NAME, 4, id);
 		}
-		if (PluginAvaritia.isEnabled()) {
+		if (isEnabled(pluginAvaritia)) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
 			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
@@ -95,7 +95,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(INFINITY, 9);
 			addBlock(NEUTRONIUM, 9);
 		}
-		if (PluginBotania.isEnabled()) {
+		if (isEnabled(pluginBotania)) {
 			String id = PluginBotania.MODID;
 			add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
@@ -106,7 +106,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(MANASTEEL, BOTANIA_NAME, 9, id, MANASTEEL_META);
 			addBlock(TERRASTEEL, BOTANIA_NAME, 9, id, TERRASTEEL_META);
 		}
-		if (PluginCalculator.isEnabled()) {
+		if (isEnabled(pluginCalculator)) {
 			String id = PluginCalculator.MODID;
 			add(AMETHYST, GEM + AMETHYST);
 			add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
@@ -116,14 +116,14 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(ENRICHED_GOLD, CALCULATOR_NAME, 9, id, ENRICHED_GOLD_BLOCK_META);
 			addBlock(REINFORCED_IRON, CALCULATOR_NAME, 9, id, REINFORCED_IRON_BLOCK_META);
 		}
-		if (PluginDraconicEvolution.isEnabled()) {
+		if (isEnabled(pluginDraconicEvolution)) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
 			
 			addBlock(AWAKENED_DRACONIUM, 9);
 			addBlock(DRACONIUM, 9);
 		}
-		if (PluginEnderIO.isEnabled()) {
+		if (isEnabled(pluginEnderIO)) {
 			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
@@ -158,7 +158,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(STELLAR_ALLOY, 9);
 			addBlock(VIBRANT_ALLOY, 9);
 		}
-		if (PluginExtraUtilities.isEnabled()) {
+		if (isEnabled(pluginExtraUtilities)) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);
 			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
@@ -167,7 +167,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(ENCHANTED, 9);
 			addBlock(EVIL_INFUSED_IRON, 9);
 		}
-		if (PluginMekanism.isEnabled()) {
+		if (isEnabled(pluginMekanism)) {
 			add(REFINED_GLOWSTONE, INGOT + REFINED_GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
@@ -176,15 +176,15 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
 		}
-		if (PluginMultiMod.isEnabled()) {
+		if (isEnabled(pluginMultiMod)) {
 			add(SILICON, ITEM + SILICON);
 		}
-		if (PluginMysticalAgradditions.isEnabled()) {
+		if (isEnabled(pluginMysticalAgradditions)) {
 			add(INSANIUM, INGOT + INSANIUM);
 			
 			addBlock(INSANIUM, 9);
 		}
-		if (PluginMysticalAgriculture.isEnabled()) {
+		if (isEnabled(pluginMysticalAgriculture)) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
@@ -199,7 +199,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(SUPERIUM, 9);
 			addBlock(SUPREMIUM, 9);
 		}
-		if (PluginPlusTiC.isEnabled()) {
+		if (isEnabled(pluginPlusTiC)) {
 			add(ALUMITE, INGOT + ALUMITE);
 			
 			addBlock(ALUMITE, 9);
@@ -219,12 +219,12 @@ public class PluginTechReborn extends PluginBase {
 				addBlock(OSMIRIDIUM, 9);
 			}
 		}
-		if (PluginPneumaticCraft.isEnabled()) {
+		if (isEnabled(pluginPneumaticCraft)) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 			
 			addBlock(COMPRESSED_IRON, 9);
 		}
-		if (PluginProjectE.isEnabled()) {
+		if (isEnabled(pluginProjectE)) {
 			String id = PluginProjectE.MODID;
 			add(DARK_MATTER, MATTER_NAME, id, DARK_MATTER_META);
 			add(RED_MATTER, MATTER_NAME, id, RED_MATTER_META);
@@ -232,24 +232,24 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(DARK_MATTER, MATTER_BLOCK_NAME, 4, id, DARK_MATTER_META);
 			addBlock(RED_MATTER, MATTER_BLOCK_NAME, 4, id, RED_MATTER_META);
 		}
-		if (PluginProjectRed.isEnabled()) {
+		if (isEnabled(pluginProjectRed)) {
 			add(ELECTROTINE, INGOT + ELECTROTINE);
 			add(RED_ALLOY, INGOT + RED_ALLOY);
 		}
-		if (PluginRefinedStorage.isEnabled()) {
+		if (isEnabled(pluginRefinedStorage)) {
 			String id = PluginRefinedStorage.MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 			
 			addBlock(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_BLOCK_NAME, 9, id);
 		}
-		if (PluginThaumcraft.isEnabled()) {
+		if (isEnabled(pluginThaumcraft)) {
 			String id = PluginThaumcraft.MODID;
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 			
 			addBlock(AMBER, AMBER_BLOCK_NAME, 9, id);
 		}
-		if (PluginTinkersConstruct.isEnabled()) {
+		if (isEnabled(pluginTinkersConstruct)) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
@@ -262,7 +262,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(MANYULLYN, 9);
 			addBlock(PIG_IRON, 9);
 		}
-		if (PluginTwilightForest.isEnabled()) {
+		if (isEnabled(pluginTwilightForest)) {
 			String id = PluginTwilightForest.MODID;
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);

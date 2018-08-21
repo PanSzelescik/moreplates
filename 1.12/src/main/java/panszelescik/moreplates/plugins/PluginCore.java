@@ -8,14 +8,13 @@ import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.helpers.IInit;
-import panszelescik.moreplates.items.ItemGear;
-import panszelescik.moreplates.items.ItemPlate;
+import panszelescik.moreplates.items.*;
 
 public abstract class PluginCore extends Helper implements IInit {
 	
 	protected final String modid;
 	protected final String modname;
-	protected static boolean enable;
+	protected boolean enable;
 	protected boolean error;
 	
 	public PluginCore(String modid, String modname) {
@@ -28,10 +27,6 @@ public abstract class PluginCore extends Helper implements IInit {
 
 	@Override
 	public abstract boolean initPlugin();
-	
-	public static boolean isEnabled() {
-		return enable;
-	}
 	
 	protected Item gear(String name) {
 		return new ItemGear(name);
