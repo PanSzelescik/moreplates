@@ -1,3 +1,10 @@
+config.moreplates.title=Konfiguracja More Plates
+
+config.moreplates.category.general=Ustawienia generalne
+config.moreplates.category.plugins=Pluginy
+
+config.moreplates.category.items=Przedmioty
+
 item.moreplates.hammer.name=Młot
 item.moreplates.hammer.uses_left=Pozostało użyć: 
 

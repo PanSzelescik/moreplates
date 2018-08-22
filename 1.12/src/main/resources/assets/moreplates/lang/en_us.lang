@@ -1,5 +1,18 @@
 itemGroup.moreplates=More Plates
 
+config.moreplates.title=More Plates Config
+
+config.moreplates.category.general=General
+config.moreplates.category.plugins=Plugins
+config.moreplates.category.actuallyadditions=Actually Additions
+config.moreplates.category.botania=Botania
+config.moreplates.category.immersiveengineering=Immersive Engineering
+config.moreplates.category.ic2=Industrial Craft 2
+config.moreplates.category.techreborn=Tech Reborn
+config.moreplates.category.thermalexpansion=Thermal Expansion
+
+config.moreplates.category.items=Items
+
 item.moreplates.hammer.name=Hammer
 item.moreplates.hammer.uses_left=Uses left: 
 

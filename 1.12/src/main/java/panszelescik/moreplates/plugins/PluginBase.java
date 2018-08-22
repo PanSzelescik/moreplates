@@ -30,7 +30,6 @@ public abstract class PluginBase extends PluginCore {
 		if (!enable)
 			return false;
 		try {
-			MorePlates.logger.info("Enabling Plugin: " + modname + " Phase 1");
 			postInit();
 		} catch (Throwable t) {
 			MorePlates.logger.error("Plugin: " + modname + " has an error:", t);
@@ -42,37 +41,21 @@ public abstract class PluginBase extends PluginCore {
 	}
 	
 	protected boolean enabled() {
-		String category = "Plugins";
-		String comment = "Enable this to load " + modname + " plugin";
-		boolean config = Config.getBoolean(modname, category, comment);
-		boolean modloaded = Loader.isModLoaded(modid);
-		return enable = config && modloaded;
-	}
-	
-	public boolean isEnabled(PluginMetals plugin) {
-		return Config.getBoolean("Metals", "Plugins", "Enable this to load Metals plugin");
-	}
-	
-	public boolean isEnabled(PluginMultiMod plugin) {
-		String category = "Plugins";
-		boolean config = Config.getBoolean(PluginAppliedEnergistics2.MODNAME, category, "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin");
-		boolean modloaded = Loader.isModLoaded(PluginAppliedEnergistics2.MODID);
-		boolean config2 = Config.getBoolean(PluginRefinedStorage.MODNAME, category, "Enable this to load " + PluginRefinedStorage.MODNAME + " plugin");
-		boolean modloaded2 = Loader.isModLoaded(PluginRefinedStorage.MODID);
-		if (config && modloaded)
-			return true;
-		else if (config2 && modloaded2)
-			return true;
-		else
-			return false;
+		return enable = isEnabled(this);
 	}
 	
 	public boolean isEnabled(PluginCore plugin) {
-		String category = "Plugins";
-		String comment = "Enable this to load " + plugin.modname + " plugin";
-		boolean config = Config.getBoolean(plugin.modname, category, comment);
-		boolean modloaded = Loader.isModLoaded(plugin.modid);
-		return config && modloaded;
+		if (plugin instanceof PluginMetals)
+			return Config.getBoolean("Metals", "Plugins", "Enable this to load Metals plugin");
+		else if (plugin instanceof PluginMultiMod) {
+			if (Config.getBoolean(PluginAppliedEnergistics2.MODNAME, "Plugins", "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin") && Loader.isModLoaded(PluginAppliedEnergistics2.MODID))
+				return true;
+			else if (Config.getBoolean(PluginRefinedStorage.MODNAME, "Plugins", "Enable this to load " + PluginRefinedStorage.MODNAME + " plugin") && Loader.isModLoaded(PluginRefinedStorage.MODID))
+				return true;
+			else
+				return false;
+		} else
+			return Config.getBoolean(plugin.modname, "Plugins", "Enable this to load " + plugin.modname + " plugin") && Loader.isModLoaded(plugin.modid);
 	}
 	
 	public void preInit() {}

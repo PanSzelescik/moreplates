@@ -2,7 +2,6 @@ package panszelescik.moreplates.init;
 
 import java.util.ArrayList;
 
-import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.helpers.IInit;
 import panszelescik.moreplates.helpers.PluginList;
 import panszelescik.moreplates.plugins.*;
@@ -71,8 +70,6 @@ public class PluginLoader extends PluginList {
 		
 		for (IInit init : initList)
 			init.preInitPlugin();
-		if (Config.cfg.hasChanged())
-			Config.cfg.save();
 	}
 	
 	public static void postInit() {

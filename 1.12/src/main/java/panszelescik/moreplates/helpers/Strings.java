@@ -2,6 +2,8 @@ package panszelescik.moreplates.helpers;
 
 public abstract class Strings extends PluginList {
 	
+	public static String CONFIG_TITLE = Helper.translate("config.moreplates.title");
+	
 	public static String GEAR = "gear";
 	public static String PLATE = "plate";
 	

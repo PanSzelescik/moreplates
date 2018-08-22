@@ -16,16 +16,6 @@ public class PluginMetals extends PluginBase {
 	public static boolean gearSteel;
 	public static boolean plateSteel;
 	
-	@Override
-	public boolean preInitPlugin() {
-		String category = "Plugins";
-		boolean enable = Config.getBoolean("Metals", category, "Enable this to load Metals plugin");
-		if (!enable)
-			return false;
-		preInit();
-		return !error;
-	}
-	
 	public void preInit() {
 		if (oreNameExists(INGOT + STEEL) || Loader.isModLoaded(PluginImmersiveEngineering.MODID)) {
 			if (!oreNameExists(GEAR + STEEL)) {

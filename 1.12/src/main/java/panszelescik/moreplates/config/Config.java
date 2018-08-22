@@ -20,8 +20,8 @@ public class Config {
 	public static Configuration cfg;
 	
 	//Categories
-	private static final String CATEGORY_GENERAL = "General";
-	private static final String CATEGORY_PLUGINS = "Plugins";
+	private static final String CATEGORY_GENERAL = "general";
+	private static final String CATEGORY_PLUGINS = "plugins";
 	
 	private static final String CATEGORY_ACTUALLY = PluginActuallyAdditions.MODID;
 	private static final String CATEGORY_BOTANIA = PluginBotania.MODID;
@@ -30,7 +30,7 @@ public class Config {
 	private static final String CATEGORY_TECHREBORN = PluginTechReborn.MODID;
 	private static final String CATEGORY_THERMAL = PluginThermalExpansion.MODID;
 	
-	private static final List <String> CATEGORIES = Arrays.asList(CATEGORY_GENERAL, CATEGORY_PLUGINS, CATEGORY_ACTUALLY, CATEGORY_BOTANIA, CATEGORY_IMMERSIVE, CATEGORY_IC2, CATEGORY_TECHREBORN, CATEGORY_THERMAL);
+	static final List <String> CATEGORIES = Arrays.asList(CATEGORY_GENERAL, CATEGORY_PLUGINS, CATEGORY_ACTUALLY, CATEGORY_BOTANIA, CATEGORY_IMMERSIVE, CATEGORY_IC2, CATEGORY_TECHREBORN, CATEGORY_THERMAL);
 	
 	//Booleans
 	public static boolean centerMetals = true;
@@ -90,13 +90,11 @@ public class Config {
 		{	//Plugins
 			String category = CATEGORY_PLUGINS;
 			cfg.addCustomCategoryComment(category, "Loading plugins settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
 		}
 		
 		{	//Actually Additions Recipes
 			String category = CATEGORY_ACTUALLY;
-			cfg.addCustomCategoryComment(category, CATEGORY_ACTUALLY + " recipes settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
+			cfg.addCustomCategoryComment(category, PluginActuallyAdditions.MODNAME + " recipes settings");
 			
 			energyEmpowerer = getInt("Energy in Empowerer", category, energyEmpowerer, ENERGYEMPOWERER_COMMENT);
 			timeEmpowerer = getInt("Time in Empowerer", category, timeEmpowerer, TIMEEMPOWERER_COMMENT);
@@ -111,16 +109,14 @@ public class Config {
 		
 		{	//Botania
 			String category = CATEGORY_BOTANIA;
-			cfg.addCustomCategoryComment(category, CATEGORY_BOTANIA + " recipes settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
+			cfg.addCustomCategoryComment(category, PluginBotania.MODNAME + " recipes settings");
 			
 			manasteelMana = getInt("Mana for Manasteel", category, manasteelMana, MANASTEELMANA_COMMENT);
 		}
 		
 		{	//Immersive Engineering Recipes
 			String category = CATEGORY_IMMERSIVE;
-			cfg.addCustomCategoryComment(category, CATEGORY_IMMERSIVE + " recipes settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
+			cfg.addCustomCategoryComment(category, PluginImmersiveEngineering.MODNAME + " recipes settings");
 			
 			enableIEHammer = getBoolean("Enable IE Hammer", category, IE_HAMMER_COMMENT);
 			energyMetalPress = getInt("Energy in Metal Press", category, energyMetalPress, ENERGYMETALPRESS_COMMENT);
@@ -128,16 +124,14 @@ public class Config {
 		
 		{	//Industrial Craft 2 Recipes
 			String category = CATEGORY_IC2;
-			cfg.addCustomCategoryComment(category, CATEGORY_IC2 + " recipes settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
+			cfg.addCustomCategoryComment(category, PluginIndustrialCraft2.MODNAME + " recipes settings");
 			
 			enableIC2Hammer = getBoolean("Enable IC2 Hammer", category, IC2_HAMMER_COMMENT);
 		}
 		
 		{	//Tech Reborn Recipes
 			String category = CATEGORY_TECHREBORN;
-			cfg.addCustomCategoryComment(category, CATEGORY_TECHREBORN + " recipes settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
+			cfg.addCustomCategoryComment(category, PluginTechReborn.MODNAME + " recipes settings");
 			
 			energyCompressor = getInt("Energy in Compressor", category, energyCompressor, ENERGYCOMPRESSOR_COMMENT);
 			timeCompressor = getInt("Time in Compressor", category, timeCompressor, TIMECOMPRESSOR_COMMENT);
@@ -145,8 +139,7 @@ public class Config {
 		
 		{	//Thermal Expansion Recipes
 			String category = CATEGORY_THERMAL;
-			cfg.addCustomCategoryComment(category, CATEGORY_THERMAL + " recipes settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
+			cfg.addCustomCategoryComment(category, PluginThermalExpansion.MODNAME + " recipes settings");
 			
 			energyCompactor = getInt("Energy in Compactor", category, energyCompactor, ENERGYCOMPACTOR_COMMENT);
 			energyInductionSmelter = getInt("Energy in Induction Smelter", category, energyInductionSmelter, ENERGYINDUCTIONSMELTER_COMMENT);
@@ -155,7 +148,6 @@ public class Config {
 		{	//General
 			String category = CATEGORY_GENERAL;
 			cfg.addCustomCategoryComment(category, "General settings");
-			cfg.setCategoryRequiresMcRestart(category, true);
 			
 			centerMetals = getBoolean("Center metals in recipes", category, CENTER_IN_GEAR_COMMENT);
 			durabilityHammer = getInt("Hammer's durability", category, durabilityHammer, DURABILITYHAMMER_COMMENT);
@@ -163,15 +155,6 @@ public class Config {
 		
 		if (cfg.hasChanged())
 			cfg.save();
-	}
-	
-	@SuppressWarnings("unchecked")
-	public List<IConfigElement> getConfigElements() {
-		List<IConfigElement> list = new ArrayList<>();		
-		for (String category : CATEGORIES) {
-			list.add(new ConfigElement(cfg.getCategory(category)));
-		}
-		return list;
 	}
 	
 	private int getInt(String name, String category, int intName, String comment) {

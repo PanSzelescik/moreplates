@@ -2,12 +2,14 @@ package panszelescik.moreplates.helpers;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
+import panszelescik.moreplates.config.ConfigItems;
 import panszelescik.moreplates.proxy.OreDictionaryProxy;
 
 public abstract class Helper extends Strings {
@@ -22,24 +24,28 @@ public abstract class Helper extends Strings {
 	}
 	
 	public static void regGaia(String ore, @Nullable Item gear, @Nullable Item plate) {
-		if (gear != null) {
+		if (gear != null && ConfigItems.loadItem(gear)) {
 			regItem(gear);
 			oreGearGaia(ore, gear);
 		}
-		if (plate != null) {
+		if (plate != null && ConfigItems.loadItem(plate)) {
 			regItem(plate);
 			orePlateGaia(ore, plate);
 		}
 	}
 	
 	public static void regGear(Item gear, String ore) {
-		regItem(gear);
-		oreGear(ore, gear);
+		if (ConfigItems.loadItem(gear)) {
+			regItem(gear);
+			oreGear(ore, gear);
+		}
 	}
 	
 	public static void regPlate(Item plate, String ore) {
-		regItem(plate);
-		orePlate(ore, plate);
+		if (ConfigItems.loadItem(plate)) {
+			regItem(plate);
+			orePlate(ore, plate);
+		}
 	}
 	
 	public static void regItem(Item item) {
@@ -133,5 +139,9 @@ public abstract class Helper extends Strings {
 		ore += "Plate";
 		OreDictionary.registerOre(ore, plategaia);
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plategaia));
+	}
+	
+	public static String translate(String key) {
+		return I18n.format(key);
 	}
 }
