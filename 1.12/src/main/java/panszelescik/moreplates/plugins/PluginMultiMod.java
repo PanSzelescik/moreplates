@@ -7,7 +7,7 @@ import panszelescik.moreplates.config.Config;
 public class PluginMultiMod extends PluginBase {
 	
 	public PluginMultiMod() {
-		super("", "");
+		super("", "MultiMod");
 	}
 	
 	Item silicon_gear;

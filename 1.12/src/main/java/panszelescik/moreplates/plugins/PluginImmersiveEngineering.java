@@ -165,12 +165,12 @@ public class PluginImmersiveEngineering extends PluginBase {
 		logger.info("Added " + MetalPressRecipes + " recipes to Metal Press");
 	}
 	
-	private void add(String output, String inputOre, boolean gear, boolean plate) {
-		ImmersiveEngineeringHelper.add(output, inputOre, gear, plate);
+	private void add(String output, String input, boolean gear, boolean plate) {
+		ImmersiveEngineeringHelper.add(output, input, gear, plate);
 	}
 	
-	private void add(String output, String inputOre) {
-		ImmersiveEngineeringHelper.add(output, inputOre);
+	private void add(String output, String input) {
+		ImmersiveEngineeringHelper.add(output, input);
 	}
 	
 	private void add(String output, String input, String id) {

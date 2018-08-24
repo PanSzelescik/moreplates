@@ -19,8 +19,13 @@ public abstract class PluginBase extends PluginCore {
 		enabled();
 		if (!enable)
 			return false;
-		MorePlates.logger.info("Enabling Plugin: " + modname + " Phase 1");
-		preInit();
+		try {
+			MorePlates.logger.info("Enabling Plugin: " + modname + " Phase 1");
+			preInit();
+		} catch (Throwable t) {
+			MorePlates.logger.error("Plugin: " + modname + " has an error:", t);
+			error = true;
+		}
 		return !error;
 	}
 	
@@ -30,6 +35,7 @@ public abstract class PluginBase extends PluginCore {
 		if (!enable)
 			return false;
 		try {
+			MorePlates.logger.info("Enabling Plugin: " + modname + " Phase 2");
 			postInit();
 		} catch (Throwable t) {
 			MorePlates.logger.error("Plugin: " + modname + " has an error:", t);
@@ -46,7 +52,7 @@ public abstract class PluginBase extends PluginCore {
 	
 	public boolean isEnabled(PluginCore plugin) {
 		if (plugin instanceof PluginMetals)
-			return Config.getBoolean("Metals", "Plugins", "Enable this to load Metals plugin");
+			return Config.getBoolean(plugin.modname, "Plugins", "Enable this to load " + plugin.modname + " plugin");
 		else if (plugin instanceof PluginMultiMod) {
 			if (Config.getBoolean(PluginAppliedEnergistics2.MODNAME, "Plugins", "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin") && Loader.isModLoaded(PluginAppliedEnergistics2.MODID))
 				return true;

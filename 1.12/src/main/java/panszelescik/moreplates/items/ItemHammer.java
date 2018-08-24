@@ -9,7 +9,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentDurability;
@@ -24,6 +23,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import panszelescik.moreplates.config.Config;
+import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.helpers.IItemDamageble;
 import panszelescik.moreplates.helpers.NBTHelper;
 
@@ -60,7 +60,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(I18n.format(getTranslationKey() + ".uses_left") + (getItemMaxDamage(stack) - getItemDamage(stack)));
+		tooltip.add(Helper.translate(getTranslationKey() + ".uses_left") + (getItemMaxDamage(stack) - getItemDamage(stack)));
 	}
 	
 	@Nonnull

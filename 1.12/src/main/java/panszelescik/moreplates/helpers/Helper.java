@@ -144,4 +144,16 @@ public abstract class Helper extends Strings {
 	public static String translate(String key) {
 		return I18n.format(key);
 	}
+	
+	public static boolean checkIsNotNull(String ore) {
+		return getOre(ore) != ItemStack.EMPTY;
+	}
+	
+	public static boolean checkIsNotNull(String id, String input) {
+		return getItemStack(id, input) != ItemStack.EMPTY;
+	}
+	
+	public static boolean checkIsNotNull(String id, String input, int meta) {
+		return getItemStack(id, input, 1, meta) != ItemStack.EMPTY;
+	}
 }

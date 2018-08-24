@@ -10,15 +10,14 @@ public class Reference {
 	//public static final String CLIENT_PROXY_CLASS = "panszelescik.moreplates.proxy.ClientProxy";
 	public static final String ACCEPTED_MINECRAFT_VERSIONS = "[1.12.2,1.13)";
 	public static final String GUI_FACTORY = "panszelescik.moreplates.config.ModGuiFactory";
-	public static final String ACTUALLY_VERSION = "1.12.2-r136";
 	public static final String DEPENDENCIES = 
-			  "after:actuallyadditions@[" + ACTUALLY_VERSION + ",);"
+			  "after:actuallyadditions@[1.12.2-r136,);"
 			+ "after:appliedenergistics2;"
 			+ "after:avaritia;"
 			+ "after:botania;"
 			+ "after:calculator;"
 			+ "after:draconicevolution;"
-			+ "after:enderio;"
+			+ "after:enderio@[5.0.32,);"
 			+ "after:extrautils2;"
 			+ "after:immersiveengineering;"
 			+ "after:ic2;"
