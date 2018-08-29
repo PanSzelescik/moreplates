@@ -10,7 +10,7 @@ import panszelescik.moreplates.helpers.ThermalExpansionHelper;
 public class PluginThermalExpansion extends PluginBase {
 	
 	public static final String MODID = "thermalexpansion";
-	public static final String MODNAME = "ThermalExpansion";
+	public static final String MODNAME = "Thermal Expansion";
 	public static int CompactorRecipes = 0;
 	public static int InductionSmelterRecipes = 0;
 	

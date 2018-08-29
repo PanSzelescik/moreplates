@@ -51,7 +51,9 @@ public abstract class PluginBase extends PluginCore {
 	}
 	
 	public boolean isEnabled(PluginCore plugin) {
-		if (plugin instanceof PluginMetals)
+		if (plugin instanceof PluginIndustrialCraft2)
+			return Config.getBoolean(plugin.modname, "Plugins", "Enable this to load " + plugin.modname + " plugin") && Loader.isModLoaded(plugin.modid) && !Loader.isModLoaded("ic2-classic-spmod");
+		else if (plugin instanceof PluginMetals)
 			return Config.getBoolean(plugin.modname, "Plugins", "Enable this to load " + plugin.modname + " plugin");
 		else if (plugin instanceof PluginMultiMod) {
 			if (Config.getBoolean(PluginAppliedEnergistics2.MODNAME, "Plugins", "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin") && Loader.isModLoaded(PluginAppliedEnergistics2.MODID))
