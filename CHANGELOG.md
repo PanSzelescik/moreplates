@@ -1,9 +1,12 @@
 # More Plates Changelog
 
+### 1.12.2-5.1.1
+- Added new Ender IO alloys support
+
 ### 1.12.2-5.1.0
 - Updated Config (I recommend delete old config!)
 - New Config, now you can disable every item!
-- Added new Ender IO alloys support
+- Changed Electrical Steel and End Steel textures
 - Added Steel Gear and Plate
 - Hammer works! Has 150 durability, and have support for Unbreaking and Mending!
 

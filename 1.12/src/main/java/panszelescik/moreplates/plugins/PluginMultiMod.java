@@ -13,10 +13,18 @@ public class PluginMultiMod extends PluginBase {
 	Item silicon_gear;
 	Item silicon_plate;
 	
+	public static boolean gearSilicon;
+	public static boolean plateSilicon;
+	
 	public void preInit() {
 		silicon_gear = gear("silicon");
-		silicon_plate = plate("silicon");
+		regGear(silicon_gear, SILICON);
+		gearSilicon = true;
 		
-		reg(SILICON, silicon_gear, silicon_plate);
+		if (!Loader.isModLoaded("libvulpes")) {
+			silicon_plate = plate("silicon");
+			regPlate(silicon_plate, SILICON);
+			plateSilicon = true;
+		}
 	}
 }

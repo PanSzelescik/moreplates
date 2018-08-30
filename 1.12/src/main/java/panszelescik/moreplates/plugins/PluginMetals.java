@@ -20,9 +20,11 @@ public class PluginMetals extends PluginBase {
 		if (oreNameExists(INGOT + STEEL)
 		|| Loader.isModLoaded(PluginImmersiveEngineering.MODID)
 		|| Loader.isModLoaded(PluginIndustrialCraft2.MODID)
+		|| Loader.isModLoaded("libvulpes")
 		|| Loader.isModLoaded(PluginTechReborn.MODID)
 		|| Loader.isModLoaded("thermalfoundation")) {
 			if (!oreNameExists(GEAR + STEEL)
+			&& !Loader.isModLoaded("libvulpes")
 			&& !Loader.isModLoaded("thermalfoundation")) {
 				steel_gear = gear("steel");
 				regGear(steel_gear, STEEL);
@@ -31,8 +33,9 @@ public class PluginMetals extends PluginBase {
 			if (!oreNameExists(PLATE + STEEL)
 			&& !Loader.isModLoaded(PluginImmersiveEngineering.MODID)
 			&& !Loader.isModLoaded(PluginIndustrialCraft2.MODID)
+			&& !Loader.isModLoaded("libvulpes")
 			&& !Loader.isModLoaded(PluginTechReborn.MODID)
-			&& Loader.isModLoaded("thermalfoundation")) {
+			&& !Loader.isModLoaded("thermalfoundation")) {
 				steel_plate = plate("steel");
 				regGear(steel_plate, STEEL);
 				plateSteel = true;

@@ -1,6 +1,9 @@
 package panszelescik.moreplates.plugins;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class PluginMinecraft extends PluginBase {
 	
@@ -50,6 +53,8 @@ public class PluginMinecraft extends PluginBase {
 	public static boolean plateRedstone;
 	
 	public void preInit() {
+		OreDictionary.registerOre("coal", Items.COAL);
+		
 		if (!oreNameExists(GEAR + COAL)) {
 			coal_gear = gear("coal");
 			regGear(coal_gear, COAL);
@@ -95,17 +100,17 @@ public class PluginMinecraft extends PluginBase {
 			regGear(gold_gear, GOLD);
 			gearGold = true;
 		}
-		if (!oreNameExists(PLATE + GOLD)) {
+		if (!oreNameExists(PLATE + GOLD) && !Loader.isModLoaded(PluginImmersiveEngineering.MODID) && !Loader.isModLoaded("libvulpes")) {
 			gold_plate = plate("gold");
 			regPlate(gold_plate, GOLD);
 			plateGold = true;
 		}
-		if (!oreNameExists(GEAR + IRON)) {
+		if (!oreNameExists(GEAR + IRON) && !Loader.isModLoaded("libvulpes")) {
 			iron_gear = gear("iron");
 			regGear(iron_gear, IRON);
 			gearIron = true;
 		}
-		if (!oreNameExists(PLATE + IRON)) {
+		if (!oreNameExists(PLATE + IRON) && !Loader.isModLoaded(PluginImmersiveEngineering.MODID) && !Loader.isModLoaded("libvulpes")) {
 			iron_plate = plate("iron");
 			regPlate(iron_plate, IRON);
 			plateIron = true;

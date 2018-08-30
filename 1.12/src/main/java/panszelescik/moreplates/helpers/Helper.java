@@ -10,11 +10,8 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.ConfigItems;
-import panszelescik.moreplates.proxy.OreDictionaryProxy;
 
 public abstract class Helper extends Strings {
-	
-	public static OreDictionaryProxy oreProxy = new OreDictionaryProxy();
 	
 	public static void reg(String ore, @Nullable Item gear, @Nullable Item plate) {
 		if (gear != null)
@@ -77,7 +74,7 @@ public abstract class Helper extends Strings {
 	}
 	
 	public static boolean oreNameExists(String oreName) {
-		return oreProxy.oreNameExists(oreName);
+		return OreDictionary.doesOreNameExist(oreName) && OreDictionary.getOres(oreName, false).size() > 0;
 	}
 	
 	public static ItemStack getOre(String oreName) {
@@ -85,7 +82,9 @@ public abstract class Helper extends Strings {
 	}
 	
 	public static ItemStack getOre(String oreName, int amount) {
-		return oreProxy.getOre(oreName, amount);
+		if (!oreNameExists(oreName))
+			return ItemStack.EMPTY;
+		return cloneStack(OreDictionary.getOres(oreName, false).get(0), amount);
 	}
 	
 	public static ItemStack cloneStack(ItemStack stack, int stackSize) {
@@ -146,7 +145,7 @@ public abstract class Helper extends Strings {
 	}
 	
 	public static boolean checkIsNotNull(String ore) {
-		return getOre(ore) != ItemStack.EMPTY;
+		return oreNameExists(ore);
 	}
 	
 	public static boolean checkIsNotNull(String id, String input) {
