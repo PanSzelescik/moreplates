@@ -35,29 +35,4 @@ public abstract class PluginCore extends Helper implements IInit {
 	protected Item plate(String name) {
 		return new ItemPlate(name);
 	}
-	
-	protected ItemStack getItemStack(String name, int amount, int meta) {
-		Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(modid + ":" + name));
-		return item != null ? new ItemStack(item, amount, meta) : ItemStack.EMPTY;
-	}
-		
-	protected ItemStack getItemStack(String name, int amount) {
-		return getItemStack(name, amount, 0);
-	}
-	
-	protected ItemStack getItemStack(String name) {
-		return getItemStack(name, 1, 0);
-	}
-	
-	protected String getItemNameFromItemStack(String name, int amount, int meta) {
-		return getItemName(getItemStack(name, amount, meta));
-	}
-	
-	protected String getItemNameFromItemStack(String name, int amount) {
-		return getItemName(getItemStack(name, amount, 0));
-	}
-	
-	protected String getItemNameFromItemStack(String name) {
-		return getItemName(getItemStack(name, 1, 0));
-	}
 }

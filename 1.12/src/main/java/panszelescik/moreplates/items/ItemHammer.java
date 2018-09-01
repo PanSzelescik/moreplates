@@ -37,7 +37,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 		setTranslationKey(MODID + "." + name);
 		setRegistryName(new ResourceLocation(MODID, name));
 		setContainerItem(this);
-		setMaxDamage(Config.durabilityHammer);
+		setMaxDamage(getDurability());
 		maxStackSize = 1;
 		canRepair = false;
 	}
@@ -49,7 +49,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	
 	@Override
 	public int getItemMaxDamage(ItemStack stack) {
-		return Config.durabilityHammer;
+		return getDurability();
 	}
 
 	@Override
@@ -84,7 +84,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 		curDamage += amount;
 		if (player instanceof EntityPlayerMP)
 			CriteriaTriggers.ITEM_DURABILITY_CHANGED.trigger((EntityPlayerMP)player, stack, curDamage);
-		if (curDamage >= Config.durabilityHammer) {
+		if (curDamage >= getDurability()) {
 			if (player != null) {
 				player.renderBrokenItemStack(stack);
 				player.addStat(StatList.getObjectBreakStats(this));
@@ -114,5 +114,9 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return enchantment == Enchantments.UNBREAKING || enchantment == Enchantments.MENDING;
+	}
+	
+	private int getDurability() {
+		return Config.getInt("Hammer's durability", Config.CATEGORY_GENERAL, 150, "Durability of Hammer");
 	}
 }

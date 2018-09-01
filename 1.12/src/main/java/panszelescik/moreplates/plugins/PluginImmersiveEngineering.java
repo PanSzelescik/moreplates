@@ -12,7 +12,6 @@ public class PluginImmersiveEngineering extends PluginBase {
 	
 	public static final String MODID = "immersiveengineering";
 	public static final String MODNAME = "Immersive Engineering";
-	public static int MetalPressRecipes = 0;
 	
 	public PluginImmersiveEngineering() {
 		super(MODID, MODNAME);
@@ -163,7 +162,7 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
 		}*/
 		
-		logger.info("Added " + MetalPressRecipes + " recipes to Metal Press");
+		logger.info("Added " + ImmersiveEngineeringHelper.MetalPressRecipes + " recipes to Metal Press");
 	}
 	
 	private void add(String output, String input, boolean gear, boolean plate) {

@@ -12,8 +12,6 @@ public class PluginIndustrialCraft2 extends PluginBase {
 	
 	public static final String MODID = "ic2";
 	public static final String MODNAME = "Industrial Craft 2";
-	public static int BlockCuttingMachineRecipes = 0;
-	public static int MetalFormerRecipes = 0;
 	
 	public PluginIndustrialCraft2() {
 		super(MODID, MODNAME);
@@ -275,8 +273,8 @@ public class PluginIndustrialCraft2 extends PluginBase {
 			addBlock(KNIGHTMETAL, 9);
 		}
 		
-		logger.info("Added " + BlockCuttingMachineRecipes + " recipes to Block Cutting Machine");
-		logger.info("Added " + MetalFormerRecipes + " recipes to Metal Former");
+		logger.info("Added " + IndustrialCraft2Helper.BlockCuttingMachineRecipes + " recipes to Block Cutting Machine");
+		logger.info("Added " + IndustrialCraft2Helper.MetalFormerRecipes + " recipes to Metal Former");
 	}
 	
 	private void add(String output, String input, boolean plate) {

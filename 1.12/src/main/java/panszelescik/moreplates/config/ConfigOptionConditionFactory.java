@@ -22,16 +22,16 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
     	switch (configSetting) {
     		case "enableIC2Hammer":
     			if (Loader.isModLoaded(PluginIndustrialCraft2.MODID))
-    				return () -> enableIC2Hammer;
+    				return () -> getBoolean("Enable IC2 Hammer", CATEGORY_IC2, "Enable this to add option to make all Plates with Forge Hammer");
     			else
     				return () -> false;
     		case "enableIEHammer":
     			if (Loader.isModLoaded(PluginImmersiveEngineering.MODID))
-    				return () -> enableIEHammer;
+    				return () -> getBoolean("Enable IE Hammer", CATEGORY_IMMERSIVE, "Enable this to add option to make all Plates with Engineer's Hammer");
     			else
     				return () -> false;
     		case "centerMetals":
-    			return () -> centerMetals;
+    			return () -> getBoolean("Center metals in recipes", CATEGORY_GENERAL, "Enable this to add option to make Gears with Bronze, Copper, Iron and Tin");
     		default:
     			throw new RuntimeException("Invalid config setting: " + configSetting);
     	}

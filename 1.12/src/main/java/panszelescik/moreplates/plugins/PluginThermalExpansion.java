@@ -12,8 +12,6 @@ public class PluginThermalExpansion extends PluginBase {
 	
 	public static final String MODID = "thermalexpansion";
 	public static final String MODNAME = "Thermal Expansion";
-	public static int CompactorRecipes = 0;
-	public static int InductionSmelterRecipes = 0;
 	
 	public PluginThermalExpansion() {
 		super(MODID, MODNAME);
@@ -164,8 +162,8 @@ public class PluginThermalExpansion extends PluginBase {
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
 		}
 		
-		logger.info("Added " + CompactorRecipes + " recipes to Compactor");
-		logger.info("Added " + InductionSmelterRecipes + " recipes to Induction Smelter");
+		logger.info("Added " + ThermalExpansionHelper.CompactorRecipes + " recipes to Compactor");
+		logger.info("Added " + ThermalExpansionHelper.InductionSmelterRecipes + " recipes to Induction Smelter");
 	}
 	
 	private void add(String output, String inputOre, boolean gear, boolean plate) {

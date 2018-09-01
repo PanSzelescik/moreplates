@@ -9,8 +9,6 @@ public class PluginBotania extends PluginBase {
 	
 	public static final String MODID = "botania";
 	public static final String MODNAME = "Botania";
-	public static int ElvenTradeRecipes = 0;
-	public static int ManaInfusionRecipes = 0;
 	
 	public PluginBotania() {
 		super(MODID, MODNAME);
@@ -45,8 +43,8 @@ public class PluginBotania extends PluginBase {
 		addElvenTrade(ELEMENTIUM, MANASTEEL);
 		addManaInfusion(MANASTEEL, IRON);
 		
-		logger.info("Added " + ElvenTradeRecipes + " recipes to Elven Trade");
-		logger.info("Added " + ManaInfusionRecipes + " Mana Infusion recipes");
+		logger.info("Added " + BotaniaHelper.ElvenTradeRecipes + " recipes to Elven Trade");
+		logger.info("Added " + BotaniaHelper.ManaInfusionRecipes + " Mana Infusion recipes");
 	}
 	
 	private void addManaInfusion(String output, String input) {

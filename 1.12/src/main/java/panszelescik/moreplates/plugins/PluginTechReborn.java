@@ -12,7 +12,6 @@ public class PluginTechReborn extends PluginBase {
 	
 	public static final String MODID = "techreborn";
 	public static final String MODNAME = "Tech Reborn";
-	public static int CompressorRecipes = 0;
 	
 	public PluginTechReborn() {
 		super(MODID, MODNAME);
@@ -274,7 +273,7 @@ public class PluginTechReborn extends PluginBase {
 			addBlock(KNIGHTMETAL, 9);
 		}
 		
-		logger.info("Added " + CompressorRecipes + " recipes to Compressor");
+		logger.info("Added " + TechRebornHelper.CompressorRecipes + " recipes to Compressor");
 	}
 	
 	private void add(String output, String input, boolean plate) {

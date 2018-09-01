@@ -10,6 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.event.FMLConstructionEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import panszelescik.moreplates.config.Config;
@@ -43,23 +45,42 @@ public class MorePlates {
 	public static final Logger logger = LogManager.getFormatterLogger(MODID);
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event){
-		logger.info("Started PreInitialization.");
+	public void construction(FMLConstructionEvent event) {
+		logger.info("Started Construction.");
 		config = new Config();
 		config2 = new ConfigItems();
+		saveConfig();
+		logger.info("Completed Construction.");
+	}
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		logger.info("Started PreInitialization.");
 		Items.preInit();
 		PluginLoader.preInit();
-		if (Config.cfg.hasChanged())
-			Config.cfg.save();
-		if (ConfigItems.cfg.hasChanged())
-			ConfigItems.cfg.save();
+		saveConfig();
 		logger.info("Completed PreInitialization.");
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
+		logger.info("Started Initialization.");
+		saveConfig();
+		logger.info("Completed Initialization.");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Started PostInitialization.");
 		PluginLoader.postInit();
+		saveConfig();
 		logger.info("Completed PostInitialization.");
+	}
+	
+	private void saveConfig() {
+		if (Config.cfg.hasChanged())
+			Config.cfg.save();
+		if (ConfigItems.cfg.hasChanged())
+			ConfigItems.cfg.save();
 	}
 }

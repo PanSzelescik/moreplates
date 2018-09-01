@@ -16,8 +16,6 @@ public class PluginActuallyAdditions extends PluginBase {
 	
 	public static final String MODID = "actuallyadditions";
 	public static final String MODNAME = "Actually Additions";
-	public static int AtomicReconstructorRecipes = 0;
-	public static int EmpowererRecipes = 0;
 	
 	public PluginActuallyAdditions() {
 		super(MODID, MODNAME);
@@ -106,15 +104,15 @@ public class PluginActuallyAdditions extends PluginBase {
 		addEmpowerer(EMPOWERED_RESTONIA, RESTONIA, DYE_RED, new ItemStack(Items.NETHERBRICK), new ItemStack(Items.REDSTONE), new ItemStack(Items.BRICK));
 		addEmpowerer(EMPOWERED_VOID, VOID, DYE_BLACK, new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.FLINT), new ItemStack(Blocks.STONE));
 		
-		addReconstructor(DIAMATINE, DIAMOND, energyDiamantineReconstructor);
-		addReconstructor(EMERADIC, EMERALD, energyEmeradicReconstructor);
-		addReconstructor(ENORI, IRON, energyEnoriReconstructor);
-		addReconstructor(PALIS, LAPIS, energyPalisReconstructor);
-		addReconstructor(RESTONIA, REDSTONE, energyRestoniaReconstructor);
-		addReconstructor(VOID, COAL, energyVoidReconstructor);
+		addReconstructor(DIAMATINE, DIAMOND, 60);
+		addReconstructor(EMERADIC, EMERALD, 100);
+		addReconstructor(ENORI, IRON, 80);
+		addReconstructor(PALIS, LAPIS, 40);
+		addReconstructor(RESTONIA, REDSTONE, 40);
+		addReconstructor(VOID, COAL, 60);
 		
-		logger.info("Added " + AtomicReconstructorRecipes + " recipes to Atomic Reconstructor");
-		logger.info("Added " + EmpowererRecipes + " recipes to Empowerer");
+		logger.info("Added " + ActuallyAdditionsHelper.AtomicReconstructorRecipes + " recipes to Atomic Reconstructor");
+		logger.info("Added " + ActuallyAdditionsHelper.EmpowererRecipes + " recipes to Empowerer");
 	}
 	
 	private void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {

@@ -23,9 +23,6 @@ public class ConfigItems {
 		loadConfig();
 	}
 	
-	public Configuration getConfig() {
-		return cfg;
-	}
 	
 	@SubscribeEvent
 	public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
