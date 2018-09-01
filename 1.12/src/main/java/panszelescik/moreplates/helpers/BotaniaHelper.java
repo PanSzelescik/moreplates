@@ -3,7 +3,6 @@ package panszelescik.moreplates.helpers;
 import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.config.Config.*;
 
-import net.minecraft.item.ItemStack;
 import panszelescik.moreplates.plugins.PluginBotania;
 import vazkii.botania.api.BotaniaAPI;
 

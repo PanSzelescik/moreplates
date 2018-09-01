@@ -8,7 +8,7 @@
 - New Config, now you can disable every item!
 - Changed Electrical Steel and End Steel textures
 - Added Steel Gear and Plate
-- Hammer works! Has 150 durability, and have support for Unbreaking and Mending!
+- Hammer works! Has 150 durability, and has support for Unbreaking and Mending!
 
 ### 1.12.2-5.0.1
 - Updated to new Actually Additions API

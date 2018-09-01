@@ -75,5 +75,7 @@ public class PluginLoader extends PluginList {
 	public static void postInit() {
 		for (IInit init : initList)
 			init.initPlugin();
+		
+		initList.clear();
 	}
 }

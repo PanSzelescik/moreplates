@@ -12,6 +12,7 @@ import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.IConfigElement;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import panszelescik.moreplates.plugins.*;
 
@@ -70,8 +71,8 @@ public class Config {
 	private static final String TIMECOMPRESSOR_COMMENT = "Time in ticks to craft some Plates in Compressor when support is loaded";
 	private static final String TIMEEMPOWERER_COMMENT = "Time in seconds to craft Empowered Gears and Plates in Empowerer when support is loaded";
 	
-	public Config(File configFile) {
-		cfg = new Configuration(configFile);
+	public Config() {
+		cfg = new Configuration(new File(Loader.instance().getConfigDir(), "/" + MODID + "/" + MODID + ".cfg"));
 		MinecraftForge.EVENT_BUS.register(this);
 		loadConfig();
 	}

@@ -6,8 +6,8 @@ import static panszelescik.moreplates.config.Config.*;
 import java.util.List;
 
 import cofh.thermalexpansion.util.managers.machine.CompactorManager;
-import cofh.thermalexpansion.util.managers.machine.SmelterManager;
 import cofh.thermalexpansion.util.managers.machine.CompactorManager.Mode;
+import cofh.thermalexpansion.util.managers.machine.SmelterManager;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;

@@ -2,14 +2,11 @@ package panszelescik.moreplates;
 
 import static panszelescik.moreplates.Reference.*;
 
-import java.io.File;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -48,8 +45,8 @@ public class MorePlates {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		logger.info("Started PreInitialization.");
-		config = new Config(new File(Loader.instance().getConfigDir(), "/" + MODID + "/" + MODID + ".cfg"));
-		config2 = new ConfigItems(new File(Loader.instance().getConfigDir(), "/" + MODID + "/items.cfg"));
+		config = new Config();
+		config2 = new ConfigItems();
 		Items.preInit();
 		PluginLoader.preInit();
 		if (Config.cfg.hasChanged())

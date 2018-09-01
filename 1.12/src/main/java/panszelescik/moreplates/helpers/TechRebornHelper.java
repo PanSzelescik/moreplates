@@ -3,7 +3,6 @@ package panszelescik.moreplates.helpers;
 import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.config.Config.*;
 
-import net.minecraft.item.ItemStack;
 import panszelescik.moreplates.plugins.PluginTechReborn;
 import reborncore.api.recipe.RecipeHandler;
 import techreborn.api.recipe.machines.CompressorRecipe;
@@ -38,7 +37,7 @@ public class TechRebornHelper extends Helper {
 	}
 	
 	public static void add(String output, String input, String id, int meta) {
-		if (getItemStack(id, input, 1, meta) != ItemStack.EMPTY) {
+		if (checkIsNotNull(id, input, meta)) {
 			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 			RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor, energyCompressor));
 			

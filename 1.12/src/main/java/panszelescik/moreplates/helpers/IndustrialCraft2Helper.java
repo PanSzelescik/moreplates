@@ -5,7 +5,6 @@ import static panszelescik.moreplates.MorePlates.*;
 import java.util.Collections;
 
 import ic2.api.recipe.Recipes;
-import net.minecraft.item.ItemStack;
 import panszelescik.moreplates.plugins.PluginIndustrialCraft2;
 
 public class IndustrialCraft2Helper extends Helper {

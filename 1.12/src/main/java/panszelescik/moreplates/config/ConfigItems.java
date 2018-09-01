@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ConfigItems {
@@ -16,8 +17,8 @@ public class ConfigItems {
 	
 	public static final String CATEGORY_ITEMS = "items";
 	
-	public ConfigItems(File configFile) {
-		cfg = new Configuration(configFile);
+	public ConfigItems() {
+		cfg = new Configuration(new File(Loader.instance().getConfigDir(), "/" + MODID + "/items.cfg"));
 		MinecraftForge.EVENT_BUS.register(this);
 		loadConfig();
 	}
