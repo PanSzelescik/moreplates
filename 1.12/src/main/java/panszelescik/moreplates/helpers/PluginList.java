@@ -26,6 +26,7 @@ public abstract class PluginList {
 	protected static PluginProjectE pluginProjectE;
 	protected static PluginProjectRed pluginProjectRed;
 	protected static PluginRefinedStorage pluginRefinedStorage;
+	protected static PluginSoulShards pluginSoulShards;
 	protected static PluginTechReborn pluginTechReborn;
 	protected static PluginThaumcraft pluginThaumcraft;
 	protected static PluginThermalExpansion pluginThermalExpansion;

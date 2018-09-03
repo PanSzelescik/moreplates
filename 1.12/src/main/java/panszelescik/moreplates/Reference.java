@@ -29,6 +29,7 @@ public class Reference {
 			+ "after:projecte;"
 			+ "after:projectred-core;"
 			+ "after:refinedstorage;"
+			+ "after:soulshardstow;"
 			+ "after:techreborn;"
 			+ "after:thaumcraft;"
 			+ "after:thermalexpansion;"

@@ -33,6 +33,7 @@ public class PluginLoader extends PluginList {
 		pluginProjectE = new PluginProjectE();
 		pluginProjectRed = new PluginProjectRed();
 		pluginRefinedStorage = new PluginRefinedStorage();
+		pluginSoulShards = new PluginSoulShards();
 		pluginTechReborn = new PluginTechReborn();
 		pluginThaumcraft = new PluginThaumcraft();
 		pluginThermalExpansion = new PluginThermalExpansion();
@@ -62,6 +63,7 @@ public class PluginLoader extends PluginList {
 		initList.add(pluginProjectE);
 		initList.add(pluginProjectRed);
 		initList.add(pluginRefinedStorage);
+		initList.add(pluginSoulShards);
 		initList.add(pluginTechReborn);
 		initList.add(pluginThaumcraft);
 		initList.add(pluginThermalExpansion);

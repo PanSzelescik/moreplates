@@ -189,6 +189,9 @@ item.moreplates.red_alloy_plate.name=Red Alloy Plate
 item.moreplates.quartz_enriched_iron_gear.name=Quartz Enriched Iron Gear
 item.moreplates.quartz_enriched_iron_plate.name=Quartz Enriched Iron Plate
 
+item.moreplates.corrupted_gear.name=Corrupted Gear
+item.moreplates.corrupted_plate.name=Corrupted Plate
+
 item.moreplates.amber_gear.name=Amber Gear
 item.moreplates.amber_plate.name=Amber Plate
 item.moreplates.quicksilver_gear.name=Quicksilver Gear

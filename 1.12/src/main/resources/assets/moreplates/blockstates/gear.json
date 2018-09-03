@@ -418,6 +418,12 @@
 				}
 			},
 			
+			"corrupted_gear": {
+				"textures": {
+					"layer0": "moreplates:soulshardstow/corrupted_gear"
+				}
+			},
+			
 			"amber_gear": {
 				"textures": {
 					"layer0": "moreplates:thaumcraft/amber_gear"

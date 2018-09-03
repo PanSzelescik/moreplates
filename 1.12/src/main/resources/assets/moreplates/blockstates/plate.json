@@ -418,6 +418,12 @@
 				}
 			},
 			
+			"corrupted_plate": {
+				"textures": {
+					"layer0": "moreplates:soulshardstow/corrupted_plate"
+				}
+			},
+			
 			"amber_plate": {
 				"textures": {
 					"layer0": "moreplates:thaumcraft/amber_plate"

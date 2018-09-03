@@ -227,6 +227,9 @@ public abstract class Strings extends PluginList {
 	public static String QUARTZ_ENRICHED_IRON_NAME = "quartz_enriched_iron";
 	public static String QUARTZ_ENRICHED_IRON_BLOCK_NAME = QUARTZ_ENRICHED_IRON_NAME + "_" + BLOCK;
 	
+	//Soul Shards
+	public static String CORRUPTED = "Corrupted";
+	
 	//Thaumcraft
 	public static String AMBER = "Amber";
 	public static String QUICKSILVER = "Quicksilver";

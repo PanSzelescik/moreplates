@@ -145,6 +145,9 @@ public class PluginThermalExpansion extends PluginBase {
 			String id = PluginRefinedStorage.MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
+		if (isEnabled(pluginSoulShards)) {
+			add(CORRUPTED, INGOT + CORRUPTED);
+		}
 		if (isEnabled(pluginThaumcraft)) {
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");

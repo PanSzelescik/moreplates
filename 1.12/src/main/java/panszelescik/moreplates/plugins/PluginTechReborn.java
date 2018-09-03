@@ -242,6 +242,9 @@ public class PluginTechReborn extends PluginBase {
 			
 			addBlock(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_BLOCK_NAME, 9, id);
 		}
+		if (isEnabled(pluginSoulShards)) {
+			add(CORRUPTED, INGOT + CORRUPTED);
+		}
 		if (isEnabled(pluginThaumcraft)) {
 			String id = PluginThaumcraft.MODID;
 			add(AMBER, GEM + AMBER);

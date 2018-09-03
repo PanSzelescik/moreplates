@@ -1011,6 +1011,16 @@
 },
 
 {
+	"name": "CORRUPTED",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCorrupted"
+		}
+	]
+},
+
+{
 	"name": "AMBER",
 	"ingredient": [
 		{
