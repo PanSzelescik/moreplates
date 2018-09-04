@@ -2,10 +2,10 @@ package panszelescik.moreplates.helpers;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
@@ -140,8 +140,9 @@ public abstract class Helper extends Strings {
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plategaia));
 	}
 	
+	//Deprecated, to change in 1.13
 	public static String translate(String key) {
-		return I18n.format(key);
+		return I18n.translateToLocal(key);
 	}
 	
 	public static boolean checkIsNotNull(String ore) {

@@ -3,6 +3,7 @@
 ### 1.12.2-5.1.1
 - Added new Ender IO alloys support
 - Added Soul Shards - The Old Ways support
+- Fixed crash on server (#43)
 
 ### 1.12.2-5.1.0
 - Updated Config (I recommend delete old config!)
