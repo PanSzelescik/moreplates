@@ -2,8 +2,8 @@
    "homepage": "https://minecraft.curseforge.com/projects/moreplates/files",
    
    "promos": {
-      "1.12.2-latest": "5.1.0",
-      "1.12.2-recommended": "5.1.0",
+      "1.12.2-latest": "5.1.1",
+      "1.12.2-recommended": "5.1.1",
       "1.12.1-latest": "3.2.0",
       "1.12.1-recommended": "3.2.0",
       "1.12-latest": "3.2.0",
@@ -15,7 +15,8 @@
    },
    
    "1.12.2": {
-   "5.1.1": "Added new Ender IO alloys support\nAdded Soul Shards - The Old Ways support\nFixed crash on server (#43)",
+   "5.1.2": "Added new Ender IO alloys support\n",
+   "5.1.1": "Added Soul Shards - The Old Ways support\nFixed crash on server (#43)",
    "5.1.0": "Updated Config (I recommend delete old config!)\nNew Config, now you can disable every item!\nChanged Electrical Steel and End Steel textures\nAdded Steel Gear and Plate\n- Hammer works! Has 150 durability, and has support for Unbreaking and Mending!",
    "5.0.1": "Updated to new Actually Additions API\nChanged glowstone_gear to refined_glowstone_gear and glowstone_plate to refined_glowstone_plate\nRemoved Redstone Gear and Redstone Plate (now this is vanilla's items with the same unlocalized name)\nAdded Induction Smelter support, Sand + Gear = 4 Ingots + 10% Slag, Sand + Plate = Ingot + 10% Slag\nFirst logger, second add recipe\nAdded option to make Gears with Bronze, Copper, Iron and Tin\nAdded Vanilla Gears and Plates\nCleanups",
    "5.0.0": "Changed localization of update.json\nReworked config file (I recommend delete old config!)\nAdded Actually Additions support for Atomic Reconstructor, Empowerer and items\nAdded Avaritia support\nAdded Botania support for Mana Infusion and Elven Trade\nAdded Immersive Engineering support for Engineer's Hammer for all plates\nAdded IndustrialCraft 2 support for Block Cutting Machine, Metal Former and Forge Hammer for all plates\nAdded Tech Reborn support for Compressor\nFixed Oredict recipes in Compactor and Metal Press when is a few inputs with one Ore Dictionary",

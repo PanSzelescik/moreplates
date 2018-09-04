@@ -1,7 +1,9 @@
 # More Plates Changelog
 
-### 1.12.2-5.1.1
+### 1.12.2-5.1.2
 - Added new Ender IO alloys support
+
+### 1.12.2-5.1.1
 - Added Soul Shards - The Old Ways support
 - Fixed crash on server (#43)
 
