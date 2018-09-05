@@ -32,12 +32,8 @@ minecraft {
 }
 
 repositories {
-	maven {
-		url = "http://maven.covers1624.net"
-	}
-	maven {
-		url = "https://modmaven.k-4u.nl"
-	}
+	maven { url = "http://maven.covers1624.net" }
+	maven { url = "https://modmaven.k-4u.nl" }
 }
 
 dependencies {

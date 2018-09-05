@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:manyullyn_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:manyullyn_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#MANYULLYN"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

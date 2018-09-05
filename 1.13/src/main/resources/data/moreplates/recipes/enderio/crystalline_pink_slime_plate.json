@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:crystalline_pink_slime_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:crystalline_pink_slime_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#CRYSTALLINE_PINK_SLIME"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

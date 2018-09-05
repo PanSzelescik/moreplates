@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:crude_steel_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:crude_steel_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#CRUDE_STEEL"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

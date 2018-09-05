@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:silicon_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:silicon_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#SILICON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

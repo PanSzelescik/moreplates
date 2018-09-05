@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:draconium_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:draconium_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#DRACONIUM"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

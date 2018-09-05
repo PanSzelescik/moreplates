@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:refined_obsidian_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:refined_obsidian_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#REFINED_OBSIDIAN"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

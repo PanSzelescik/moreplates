@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:gaia_spirit_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:gaia_spirit_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#GAIA"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

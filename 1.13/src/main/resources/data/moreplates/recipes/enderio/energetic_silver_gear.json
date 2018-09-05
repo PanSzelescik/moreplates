@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:energetic_silver_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:energetic_silver_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#ENERGETIC_SILVER"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:dark_matter_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:dark_matter_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#DARK_MATTER"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:amethyst_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:amethyst_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#AMETHYST"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

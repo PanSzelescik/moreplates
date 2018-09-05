@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:empowered_palis_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:empowered_palis_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#EMPOWERED_PALIS"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

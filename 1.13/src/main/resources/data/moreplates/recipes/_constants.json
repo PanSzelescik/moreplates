@@ -1,0 +1,1115 @@
+[
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIC2Hammer"
+					}
+				},
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIEHammer"
+					}
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIC2Hammer"
+				},
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIEHammer"
+					}
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer",
+			"data": 0
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "craftingToolForgeHammer"
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "forge:not",
+					"value": {
+						"type": "moreplates:option_enabled",
+						"config_setting": "enableIC2Hammer"
+					}
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIEHammer"
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer",
+			"data": 0
+		},
+		{
+			"item": "immersiveengineering:tool",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIC2Hammer"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableIEHammer"
+				}
+			]
+		}
+	],
+	"name": "HAMMER",
+	"ingredient": [
+		{
+			"item": "moreplates:hammer",
+			"data": 0
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "craftingToolForgeHammer"
+		},
+		{
+			"item": "immersiveengineering:tool",
+			"data": 0
+		}
+	]
+},
+
+
+{
+	"conditions": [
+		{
+			"type": "moreplates:option_enabled",
+			"config_setting": "centerMetals"
+		}
+	],
+	"name": "CENTER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIron"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotBronze"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCopper"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotTin"
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:not",
+			"value": {
+				"type": "moreplates:option_enabled",
+				"config_setting": "centerMetals"
+			}
+		}
+	],
+	"name": "CENTER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIron"
+		}
+	]
+},
+
+
+{
+	"name": "COAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "coal"
+		}
+	]
+},
+{
+	"name": "DIAMOND",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemDiamond"
+		}
+	]
+},
+{
+	"name": "EMERALD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemEmerald"
+		}
+	]
+},
+{
+	"name": "GLOWSTONE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "dustGlowstone"
+		}
+	]
+},
+{
+	"name": "GOLD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotGold"
+		}
+	]
+},
+{
+	"name": "IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIron"
+		}
+	]
+},
+{
+	"name": "LAPIS",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemLapis"
+		}
+	]
+},
+{
+	"name": "QUARTZ",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemQuartz"
+		}
+	]
+},
+{
+	"name": "REDSTONE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "dustRedstone"
+		}
+	]
+},
+{
+	"name": "STICK",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "stickWood"
+		}
+	]
+},
+
+{
+	"name": "STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSteel"
+		}
+	]
+},
+
+{
+	"name": "BLACK_QUARTZ",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemQuartzBlack"
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "DIAMATINE",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 2
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMERADIC",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 4
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "ENORI",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 5
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "PALIS",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 1
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "RESTONIA",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "VOID",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal",
+			"data": 3
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_DIAMATINE",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 2
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_EMERADIC",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 4
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_ENORI",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 5
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_PALIS",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 1
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_RESTONIA",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "actuallyadditions"
+		}
+	],
+	"name": "EMPOWERED_VOID",
+	"ingredient": [
+		{
+			"item": "actuallyadditions:item_crystal_empowered",
+			"data": 3
+		}
+	]
+},
+
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "appliedenergistics2"
+		}
+	],
+	"name": "CERTUS",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "crystalCertusQuartz"
+		},
+		{
+			"item": "appliedenergistics2:material",
+			"data": 10
+		}
+	]
+},
+{
+	"name": "FLUIX",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "crystalFluix"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "crystalPureFluix"
+		}
+	]
+},
+
+{
+	"name": "CRYSTAL_MATRIX",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystalMatrix"
+		}
+	]
+},
+{
+	"name": "INFINITY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotInfinity"
+		}
+	]
+},
+{
+	"name": "NEUTRONIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCosmicNeutronium"
+		}
+	]
+},
+
+{
+	"name": "ELEMENTIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotElvenElementium"
+		}
+	]
+},
+{
+	"name": "GAIA",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gaiaIngot"
+		}
+	]
+},
+{
+	"name": "MANASTEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotManasteel"
+		}
+	]
+},
+{
+	"name": "TERRASTEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotTerrasteel"
+		}
+	]
+},
+
+{
+	"name": "AMETHYST",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemAmethyst"
+		}
+	]
+},
+{
+	"name": "ENRICHED_GOLD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEnrichedGold"
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "calculator"
+		}
+	],
+	"name": "REINFORCED_IRON",
+	"ingredient": [
+		{
+			"item": "calculator:reinforcedironingot"
+		}
+	]
+},
+{
+	"name": "TANZANITE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemTanzanite"
+		}
+	]
+},
+
+{
+	"name": "AWAKENED_DRACONIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotDraconiumAwakened"
+		}
+	]
+},
+{
+	"name": "DRACONIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotDraconium"
+		}
+	]
+},
+
+{
+	"name": "COMBUSTIVE_METAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCombustiveMetal"
+		}
+	]
+},
+{
+	"name": "CONDUCTIVE_IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotConductiveIron"
+		}
+	]
+},
+{
+	"name": "CRUDE_STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrudeSteel"
+		}
+	]
+},
+{
+	"name": "CRYSTALLINE_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystallineAlloy"
+		}
+	]
+},
+{
+	"name": "CRYSTALLINE_PINK_SLIME",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCrystallinePinkSlime"
+		}
+	]
+},
+{
+	"name": "DARK_STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotDarkSteel"
+		}
+	]
+},
+{
+	"name": "ELECTRICAL_STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotElectricalSteel"
+		}
+	]
+},
+{
+	"name": "END_STEEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEndSteel"
+		}
+	]
+},
+{
+	"name": "ENERGETIC_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEnergeticAlloy"
+		}
+	]
+},
+{
+	"name": "ENERGETIC_SILVER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEnergeticSilver"
+		}
+	]
+},
+{
+	"name": "MELODIC_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotMelodicAlloy"
+		}
+	]
+},
+{
+	"name": "PULSATING_IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotPulsatingIron"
+		}
+	]
+},
+{
+	"name": "REDSTONE_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotRedstoneAlloy"
+		}
+	]
+},
+{
+	"name": "SOULARIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSoularium"
+		}
+	]
+},
+{
+	"name": "STELLAR_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotStellarAlloy"
+		}
+	]
+},
+{
+	"name": "VIBRANT_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotVibrantAlloy"
+		}
+	]
+},
+
+{
+	"name": "DEMON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotDemonicMetal"
+		}
+	]
+},
+{
+	"name": "ENCHANTED",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEnchantedMetal"
+		}
+	]
+},
+{
+	"name": "EVIL_INFUSED_IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEvilMetal"
+		}
+	]
+},
+
+{
+	"name": "OSMIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotOsmium"
+		}
+	]
+},
+{
+	"name": "REFINED_GLOWSTONE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotRefinedGlowstone"
+		}
+	]
+},
+{
+	"name": "REFINED_OBSIDIAN",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotRefinedObsidian"
+		}
+	]
+},
+
+{
+	"name": "SILICON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "itemSilicon"
+		}
+	]
+},
+
+{
+	"name": "INSANIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotInsanium"
+		}
+	]
+},
+
+{
+	"name": "INFERIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotInferium"
+		}
+	]
+},
+{
+	"name": "INTERMEDIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIntermedium"
+		}
+	]
+},
+{
+	"name": "PRUDENTIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotPrudentium"
+		}
+	]
+},
+{
+	"name": "SOULIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSoulium"
+		}
+	]
+},
+{
+	"name": "SUPERIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSuperium"
+		}
+	]
+},
+{
+	"name": "SUPREMIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSupremium"
+		}
+	]
+},
+
+{
+	"name": "ALUMITE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotAlumite"
+		}
+	]
+},
+{
+	"name": "MIRION",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotMirion"
+		}
+	]
+},
+{
+	"name": "OSGLOGLAS",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotOsgloglas"
+		}
+	]
+},
+{
+	"name": "OSMIRIDIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotOsmiridium"
+		}
+	]
+},
+
+{
+	"name": "COMPRESSED_IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIronCompressed"
+		}
+	]
+},
+
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "projecte"
+		}
+	],
+	"name": "DARK_MATTER",
+	"ingredient": [
+		{
+			"item": "projecte:item.pe_matter",
+			"data": 0
+		}
+	]
+},
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "projecte"
+		}
+	],
+	"name": "RED_MATTER",
+	"ingredient": [
+		{
+			"item": "projecte:item.pe_matter",
+			"data": 1
+		}
+	]
+},
+
+{
+	"name": "ELECTROTINE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotElectrotineAlloy"
+		}
+	]
+},
+{
+	"name": "RED_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotRedAlloy"
+		}
+	]
+},
+
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "refinedstorage"
+		}
+	],
+	"name": "QUARTZ_ENRICHED_IRON",
+	"ingredient": [
+		{
+			"item": "refinedstorage:quartz_enriched_iron"
+		}
+	]
+},
+
+{
+	"name": "CORRUPTED",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCorrupted"
+		}
+	]
+},
+
+{
+	"name": "AMBER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "gemAmber"
+		}
+	]
+},
+{
+	"name": "QUICKSILVER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "quicksilver"
+		}
+	]
+},
+
+{
+	"name": "ARDITE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotArdite"
+		}
+	]
+},
+{
+	"name": "COBALT",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCobalt"
+		}
+	]
+},
+{
+	"name": "KNIGHTSLIME",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotKnightslime"
+		}
+	]
+},
+{
+	"name": "MANYULLYN",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotManyullyn"
+		}
+	]
+},
+{
+	"name": "PIG_IRON",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotPigiron"
+		}
+	]
+},
+
+{
+	"name": "FIERY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotFiery"
+		}
+	]
+},
+{
+	"name": "IRONWOOD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIronwood"
+		}
+	]
+},
+{
+	"name": "KNIGHTMETAL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotKnightmetal"
+		}
+	]
+}
+]

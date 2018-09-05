@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:fiery_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:fiery_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#FIERY"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

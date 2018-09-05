@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:end_steel_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:end_steel_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#END_STEEL"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:awakened_draconium_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:awakened_draconium_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#AWAKENED_DRACONIUM"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

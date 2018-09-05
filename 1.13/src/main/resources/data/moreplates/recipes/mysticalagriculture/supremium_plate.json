@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:supremium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:supremium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#SUPREMIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

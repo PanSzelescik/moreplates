@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:elementium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:elementium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#ELEMENTIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

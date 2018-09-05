@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:soularium_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:soularium_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#SOULARIUM"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

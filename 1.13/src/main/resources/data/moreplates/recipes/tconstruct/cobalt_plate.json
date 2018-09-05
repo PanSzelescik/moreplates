@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:cobalt_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:cobalt_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#COBALT"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

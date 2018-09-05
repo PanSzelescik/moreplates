@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:red_alloy_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:red_alloy_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#RED_ALLOY"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

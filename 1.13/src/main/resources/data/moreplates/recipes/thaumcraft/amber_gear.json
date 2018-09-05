@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:amber_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:amber_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#AMBER"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

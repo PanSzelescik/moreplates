@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:prudentium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:prudentium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#PRUDENTIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

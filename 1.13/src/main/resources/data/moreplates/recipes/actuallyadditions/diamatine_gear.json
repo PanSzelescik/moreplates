@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:diamatine_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:diamatine_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#DIAMATINE"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:knightslime_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:knightslime_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#KNIGHTSLIME"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

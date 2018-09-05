@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:restonia_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:restonia_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#RESTONIA"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

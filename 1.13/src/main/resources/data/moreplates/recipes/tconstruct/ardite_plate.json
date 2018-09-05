@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:ardite_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:ardite_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#ARDITE"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

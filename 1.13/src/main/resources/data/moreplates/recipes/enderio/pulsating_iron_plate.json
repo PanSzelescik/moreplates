@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:pulsating_iron_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:pulsating_iron_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#PULSATING_IRON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

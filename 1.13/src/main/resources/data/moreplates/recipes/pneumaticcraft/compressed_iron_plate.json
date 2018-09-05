@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:compressed_iron_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:compressed_iron_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#COMPRESSED_IRON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

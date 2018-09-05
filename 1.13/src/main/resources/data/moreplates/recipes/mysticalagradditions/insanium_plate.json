@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:insanium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:insanium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#INSANIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

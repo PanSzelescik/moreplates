@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:inferium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:inferium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#INFERIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

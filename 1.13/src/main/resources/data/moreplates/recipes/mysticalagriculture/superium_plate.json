@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:superium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:superium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#SUPERIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

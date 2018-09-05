@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:ardite_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:ardite_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#ARDITE"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

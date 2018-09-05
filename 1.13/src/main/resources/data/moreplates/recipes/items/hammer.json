@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"IGI",
+		" S ",
+		" S "
+	],
+	"key": {
+		"G": {
+			"item": "#GOLD"
+		},
+		"I": {
+			"item": "#IRON"
+		},
+		"S": {
+			"item": "#STICK"
+		}
+	},
+	"result": {
+		"item": "moreplates:hammer"
+	}
+}

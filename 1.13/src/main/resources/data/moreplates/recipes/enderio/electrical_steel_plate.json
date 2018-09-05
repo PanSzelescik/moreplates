@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:electrical_steel_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:electrical_steel_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#ELECTRICAL_STEEL"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

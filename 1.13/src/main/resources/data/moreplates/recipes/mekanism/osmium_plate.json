@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:osmium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:osmium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#OSMIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

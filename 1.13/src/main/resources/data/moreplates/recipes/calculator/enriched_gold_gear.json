@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:enriched_gold_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:enriched_gold_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#ENRICHED_GOLD"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

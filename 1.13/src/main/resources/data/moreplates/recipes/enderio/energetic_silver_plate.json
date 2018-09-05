@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:energetic_silver_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:energetic_silver_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#ENERGETIC_SILVER"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

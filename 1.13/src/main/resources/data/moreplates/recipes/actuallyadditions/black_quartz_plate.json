@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:black_quartz_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:black_quartz_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#BLACK_QUARTZ"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

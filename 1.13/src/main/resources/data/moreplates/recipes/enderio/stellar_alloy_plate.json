@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:stellar_alloy_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:stellar_alloy_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#STELLAR_ALLOY"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

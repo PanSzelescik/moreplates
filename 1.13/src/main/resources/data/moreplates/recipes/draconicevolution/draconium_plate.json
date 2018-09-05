@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:draconium_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:draconium_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#DRACONIUM"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

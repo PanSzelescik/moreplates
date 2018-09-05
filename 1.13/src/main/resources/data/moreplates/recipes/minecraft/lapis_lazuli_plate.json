@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:lapis_lazuli_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:lapis_lazuli_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#LAPIS"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

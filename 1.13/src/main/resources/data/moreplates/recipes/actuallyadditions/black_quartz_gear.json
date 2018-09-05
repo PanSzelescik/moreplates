@@ -1,0 +1,25 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:black_quartz_gear"
+		}
+	],
+	"result": {
+		"item": "moreplates:black_quartz_gear"
+	},
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"M": {
+			"item": "#BLACK_QUARTZ"
+		},
+		"C": {
+			"item": "#CENTER"
+		}
+	}
+}

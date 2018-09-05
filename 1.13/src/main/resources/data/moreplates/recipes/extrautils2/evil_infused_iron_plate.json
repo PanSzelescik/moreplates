@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:evil_infused_iron_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:evil_infused_iron_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#EVIL_INFUSED_IRON"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

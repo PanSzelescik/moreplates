@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:certus_quartz_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:certus_quartz_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#CERTUS"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

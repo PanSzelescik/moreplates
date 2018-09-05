@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:gaia_spirit_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:gaia_spirit_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#GAIA"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

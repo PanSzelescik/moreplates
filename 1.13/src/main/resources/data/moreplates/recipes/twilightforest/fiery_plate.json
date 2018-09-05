@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:fiery_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:fiery_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#FIERY"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}

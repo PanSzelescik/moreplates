@@ -1,0 +1,20 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:combustive_metal_plate"
+		}
+	],
+	"result": {
+		"item": "moreplates:combustive_metal_plate"
+	},
+	"type": "forge:ore_shapeless",
+	"ingredients": [
+		{
+			"item": "#COMBUSTIVE_METAL"
+		},
+		{
+			"item": "#HAMMER"
+		}
+	]
+}
