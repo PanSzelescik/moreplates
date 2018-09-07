@@ -5,7 +5,6 @@ import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 import static panszelescik.moreplates.plugins.PluginMultiMod.*;
 
-import net.minecraftforge.fml.common.Loader;
 import panszelescik.moreplates.helpers.ThermalExpansionHelper;
 
 public class PluginThermalExpansion extends PluginBase {
@@ -122,11 +121,11 @@ public class PluginThermalExpansion extends PluginBase {
 		}
 		if (isEnabled(pluginPlusTiC)) {
 			add(ALUMITE, INGOT + ALUMITE);
-			if (Loader.isModLoaded(PluginBotania.MODID))
+			if (isLoaded(PluginBotania.MODID))
 				add(MIRION, INGOT + MIRION);
-			if (Loader.isModLoaded(PluginMekanism.MODID))
+			if (isLoaded(PluginMekanism.MODID))
 				add(OSGLOGLAS, INGOT + OSGLOGLAS);
-			if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID))
+			if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID))
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 		}
 		if (isEnabled(pluginPneumaticCraft)) {

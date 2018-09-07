@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.translation.I18n;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
@@ -42,6 +43,13 @@ public abstract class Helper extends Strings {
 		if (ConfigItems.loadItem(plate)) {
 			regItem(plate);
 			orePlate(ore, plate);
+		}
+	}
+	
+	public static void regStick(Item stick, String ore) {
+		if (ConfigItems.loadItem(stick)) {
+			regItem(stick);
+			oreStick(ore, stick);
 		}
 	}
 	
@@ -128,6 +136,12 @@ public abstract class Helper extends Strings {
 		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(plate));
 	}
 	
+	public static void oreStick(String ore, Item stick) {
+		ore = STICK + ore;
+		OreDictionary.registerOre(ore, stick);
+		MorePlates.logger.debug(INFO_ORE + ore + INFO_9 + getItemNameFromItem(stick));
+	}
+	
 	public static void oreGearGaia(String ore, Item geargaia) {
 		ore += "Gear";
 		OreDictionary.registerOre(ore, geargaia);
@@ -143,6 +157,10 @@ public abstract class Helper extends Strings {
 	//Deprecated, to change in 1.13
 	public static String translate(String key) {
 		return I18n.translateToLocal(key);
+	}
+	
+	public static boolean isLoaded(String modid) {
+		return Loader.isModLoaded(modid);
 	}
 	
 	public static boolean checkIsNotNull(String ore) {

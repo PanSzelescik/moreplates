@@ -1,8 +1,6 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.Loader;
-import panszelescik.moreplates.config.Config;
 
 public class PluginMultiMod extends PluginBase {
 	
@@ -21,7 +19,7 @@ public class PluginMultiMod extends PluginBase {
 		regGear(silicon_gear, SILICON);
 		gearSilicon = true;
 		
-		if (!Loader.isModLoaded("libvulpes")) {
+		if (!isLoaded("libvulpes")) {
 			silicon_plate = plate("silicon");
 			regPlate(silicon_plate, SILICON);
 			plateSilicon = true;

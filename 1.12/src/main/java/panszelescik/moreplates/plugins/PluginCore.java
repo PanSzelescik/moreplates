@@ -1,11 +1,6 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.oredict.OreDictionary;
-import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.helpers.Helper;
 import panszelescik.moreplates.helpers.IInit;
 import panszelescik.moreplates.items.*;
@@ -34,5 +29,9 @@ public abstract class PluginCore extends Helper implements IInit {
 	
 	protected Item plate(String name) {
 		return new ItemPlate(name);
+	}
+	
+	protected Item stick(String name) {
+		return new ItemStick(name);
 	}
 }

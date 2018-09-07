@@ -26,8 +26,10 @@ item.moreplates.glowstone_gear.name=Glowstone Gear
 item.moreplates.glowstone_plate.name=Glowstone Plate
 item.moreplates.gold_gear.name=Gold Gear
 item.moreplates.gold_plate.name=Gold Plate
+item.moreplates.gold_stick.name=Gold Rod
 item.moreplates.iron_gear.name=Iron Gear
 item.moreplates.iron_plate.name=Iron Plate
+item.moreplates.iron_stick.name=Iron Rod
 item.moreplates.lapis_lazuli_gear.name=Lapis Lazuli Gear
 item.moreplates.lapis_lazuli_plate.name=Lapis Lazuli Plate
 item.moreplates.nether_quartz_gear.name=Nether Quartz Gear
@@ -35,8 +37,10 @@ item.moreplates.nether_quartz_plate.name=Nether Quartz Plate
 item.moreplates.redstone_gear.name=Redstone Gear
 item.moreplates.redstone_plate.name=Redstone Plate
 
+item.moreplates.copper_stick.name=Copper Rod
 item.moreplates.steel_gear.name=Steel Gear
 item.moreplates.steel_plate.name=Steel Plate
+item.moreplates.steel_stick.name=Steel Rod
 
 item.moreplates.black_quartz_gear.name=Black Quartz Gear
 item.moreplates.black_quartz_plate.name=Black Quartz Plate

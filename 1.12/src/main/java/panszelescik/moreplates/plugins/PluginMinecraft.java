@@ -2,7 +2,6 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class PluginMinecraft extends PluginBase {
@@ -24,8 +23,10 @@ public class PluginMinecraft extends PluginBase {
 	Item glowstone_plate;
 	Item gold_gear;
 	Item gold_plate;
+	Item gold_stick;
 	Item iron_gear;
 	Item iron_plate;
+	Item iron_stick;
 	Item lapis_lazuli_gear;
 	Item lapis_lazuli_plate;
 	Item nether_quartz_gear;
@@ -43,8 +44,10 @@ public class PluginMinecraft extends PluginBase {
 	public static boolean plateGlowstone;
 	public static boolean gearGold;
 	public static boolean plateGold;
+	public static boolean stickGold;
 	public static boolean gearIron;
 	public static boolean plateIron;
+	public static boolean stickIron;
 	public static boolean gearLapisLazuli;
 	public static boolean plateLapisLazuli;
 	public static boolean gearNetherQuartz;
@@ -100,20 +103,30 @@ public class PluginMinecraft extends PluginBase {
 			regGear(gold_gear, GOLD);
 			gearGold = true;
 		}
-		if (!oreNameExists(PLATE + GOLD) && !Loader.isModLoaded(PluginImmersiveEngineering.MODID) && !Loader.isModLoaded("libvulpes")) {
+		if (!oreNameExists(PLATE + GOLD) && !isLoaded(PluginImmersiveEngineering.MODID) && !isLoaded("libvulpes")) {
 			gold_plate = plate("gold");
 			regPlate(gold_plate, GOLD);
 			plateGold = true;
 		}
-		if (!oreNameExists(GEAR + IRON) && !Loader.isModLoaded("libvulpes")) {
+		if (!oreNameExists(STICK + GOLD)) {
+			gold_stick = stick("gold");
+			regStick(gold_stick, GOLD);
+			stickGold = true;
+		}
+		if (!oreNameExists(GEAR + IRON) && !isLoaded("libvulpes")) {
 			iron_gear = gear("iron");
 			regGear(iron_gear, IRON);
 			gearIron = true;
 		}
-		if (!oreNameExists(PLATE + IRON) && !Loader.isModLoaded(PluginImmersiveEngineering.MODID) && !Loader.isModLoaded("libvulpes")) {
+		if (!oreNameExists(PLATE + IRON) && !isLoaded(PluginImmersiveEngineering.MODID) && !isLoaded("libvulpes")) {
 			iron_plate = plate("iron");
 			regPlate(iron_plate, IRON);
 			plateIron = true;
+		}
+		if (!oreNameExists(STICK + IRON) && !isLoaded(PluginImmersiveEngineering.MODID) && !isLoaded("libvulpes")) {
+			iron_stick = stick("iron");
+			regStick(iron_stick, IRON);
+			stickIron = true;
 		}
 		if (!oreNameExists(GEAR + LAPIS)) {
 			lapis_lazuli_gear = gear("lapis_lazuli");

@@ -264,6 +264,15 @@
 },
 
 {
+	"name": "COPPER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotCopper"
+		}
+	]
+},
+{
 	"name": "STEEL",
 	"ingredient": [
 		{

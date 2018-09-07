@@ -5,7 +5,6 @@ import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
 import static panszelescik.moreplates.plugins.PluginMultiMod.*;
 
-import net.minecraftforge.fml.common.Loader;
 import panszelescik.moreplates.helpers.ImmersiveEngineeringHelper;
 
 public class PluginImmersiveEngineering extends PluginBase {
@@ -23,15 +22,16 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
 			add(EMERALD, GEM + EMERALD, gearEmerald, plateEmerald);
 			add(GLOWSTONE, DUST + GLOWSTONE, gearGlowstone, plateGlowstone);
-			/*add(GOLD, INGOT + GOLD, gearGold, plateGold);
-			add(IRON, INGOT + IRON, gearIron, plateIron);*/
+			add(GOLD, INGOT + GOLD, gearGold, plateGold, stickGold);
+			add(IRON, INGOT + IRON, gearIron, plateIron, stickIron);
 			add(LAPIS, GEM + LAPIS, gearLapisLazuli, plateLapisLazuli);
 			add(QUARTZ, GEM + QUARTZ, gearNetherQuartz, plateNetherQuartz);
 			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
 		}
-		/*if (isEnabled(pluginMetals)) {
-			add(STEEL, INGOT + STEEL, gearSteel, plateSteel);
-		}*/
+		if (isEnabled(pluginMetals)) {
+			add(COPPER, INGOT + COPPER, false, false, stickCopper);
+			add(STEEL, INGOT + STEEL, gearSteel, plateSteel, stickSteel);
+		}
 		if (isEnabled(pluginActuallyAdditions)) {
 			String id = PluginActuallyAdditions.MODID;
 			add(BLACK_QUARTZ, GEM + BLACK_QUARTZ);
@@ -56,16 +56,16 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(FLUIX, CRYSTAL + FLUIX);
 			add(FLUIX, CRYSTAL + PURE_FLUIX);
 		}
-		/*if (isEnabled(pluginAvaritia)) {
+		if (isEnabled(pluginAvaritia)) {
 			add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
 			add(INFINITY, INGOT + INFINITY);
 			add(NEUTRONIUM, INGOT + NEUTRONIUM);
-		}*/
+		}
 		if (isEnabled(pluginBotania)) {
-			//add(ELEMENTIUM, INGOT + ELEMENTIUM);
+			add(ELEMENTIUM, INGOT + ELEMENTIUM);
 			addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
-			//add(MANASTEEL, INGOT + MANASTEEL);
-			//add(TERRASTEEL, INGOT + TERRASTEEL);
+			add(MANASTEEL, INGOT + MANASTEEL);
+			add(TERRASTEEL, INGOT + TERRASTEEL);
 		}
 		if (isEnabled(pluginCalculator)) {
 			String id = PluginCalculator.MODID;
@@ -74,11 +74,11 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(REINFORCED_IRON, REINFORCED_IRON_NAME, id);
 			add(TANZANITE, GEM + TANZANITE);
 		}
-		/*if (isEnabled(pluginDraconicEvolution)) {
+		if (isEnabled(pluginDraconicEvolution)) {
 			add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
 			add(DRACONIUM, INGOT + DRACONIUM);
-		}*/
-		/*if (isEnabled(pluginEnderIO)) {
+		}
+		if (isEnabled(pluginEnderIO)) {
 			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
 			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
@@ -95,40 +95,40 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(SOULARIUM, INGOT + SOULARIUM);
 			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
 			add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
-		}*/
-		/*if (isEnabled(pluginExtraUtilities)) {
+		}
+		if (isEnabled(pluginExtraUtilities)) {
 			add(DEMON, INGOT + DEMON);
 			add(ENCHANTED, INGOT + ENCHANTED);
 			add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
-		}*/
-		/*if (isEnabled(pluginMekanism)) {
+		}
+		if (isEnabled(pluginMekanism)) {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
-		}*/
+		}
 		if (isEnabled(pluginMultiMod)) {
 			add(SILICON, ITEM + SILICON, gearSilicon, plateSilicon);
 		}
-		/*if (isEnabled(pluginMysticalAgradditions)) {
+		if (isEnabled(pluginMysticalAgradditions)) {
 			add(INSANIUM, INGOT + INSANIUM);
-		}*/
-		/*if (isEnabled(pluginMysticalAgriculture)) {
+		}
+		if (isEnabled(pluginMysticalAgriculture)) {
 			add(INFERIUM, INGOT + INFERIUM);
 			add(INTERMEDIUM, INGOT + INTERMEDIUM);
 			add(PRUDENTIUM, INGOT + PRUDENTIUM);
 			add(SOULIUM, INGOT + SOULIUM);
 			add(SUPERIUM, INGOT + SUPERIUM);
 			add(SUPREMIUM, INGOT + SUPREMIUM);
-		}*/
-		/*if (isEnabled(pluginPlusTiC)) {
+		}
+		if (isEnabled(pluginPlusTiC)) {
 			add(ALUMITE, INGOT + ALUMITE);
-			if (Loader.isModLoaded(PluginBotania.MODID))
+			if (isLoaded(PluginBotania.MODID))
 				add(MIRION, INGOT + MIRION);
-			if (Loader.isModLoaded(PluginMekanism.MODID))
+			if (isLoaded(PluginMekanism.MODID))
 				add(OSGLOGLAS, INGOT + OSGLOGLAS);
-			if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID))
+			if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID))
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
-		}*/
+		}
 		if (isEnabled(pluginPneumaticCraft)) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
 		}
@@ -145,31 +145,35 @@ public class PluginImmersiveEngineering extends PluginBase {
 			String id = PluginRefinedStorage.MODID;
 			add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, id);
 		}
-		/*if (isEnabled(pluginSoulShards)) {
+		if (isEnabled(pluginSoulShards)) {
 			add(CORRUPTED, INGOT + CORRUPTED);
-		}*/
+		}
 		if (isEnabled(pluginThaumcraft)) {
 			add(AMBER, GEM + AMBER);
 			add(QUICKSILVER, "quicksilver");
 		}
-		/*if (isEnabled(pluginTinkersConstruct)) {
+		if (isEnabled(pluginTinkersConstruct)) {
 			add(ARDITE, INGOT + ARDITE);
 			add(COBALT, INGOT + COBALT);
 			add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
 			add(MANYULLYN, INGOT + MANYULLYN);
 			add(PIG_IRON, INGOT + PIG_IRON);
-		}*/
-		/*if (isEnabled(pluginTwilightForest)) {
+		}
+		if (isEnabled(pluginTwilightForest)) {
 			add(FIERY, INGOT + FIERY);
 			add(IRONWOOD, INGOT + IRONWOOD);
 			add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
-		}*/
+		}
 		
 		logger.info("Added " + ImmersiveEngineeringHelper.MetalPressRecipes + " recipes to Metal Press");
 	}
 	
+	private void add(String output, String input, boolean gear, boolean plate, boolean stick) {
+		ImmersiveEngineeringHelper.add(output, input, gear, plate, stick);
+	}
+	
 	private void add(String output, String input, boolean gear, boolean plate) {
-		ImmersiveEngineeringHelper.add(output, input, gear, plate);
+		ImmersiveEngineeringHelper.add(output, input, gear, plate, false);
 	}
 	
 	private void add(String output, String input) {

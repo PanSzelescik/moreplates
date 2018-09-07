@@ -1,0 +1,34 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "builtin/generated",
+		"textures": {
+			"layer0": "blocks/dirt"
+		},
+		"transform": "forge:default-item"
+	},
+	"variants": {
+		"type": {
+			"copper_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/copper_stick"
+				}
+			},
+			"steel_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/steel_stick"
+				}
+			},
+			"iron_stick": {
+				"textures": {
+					"layer0": "moreplates:minecraft/iron_stick"
+				}
+			},
+			"gold_stick": {
+				"textures": {
+					"layer0": "moreplates:minecraft/gold_stick"
+				}
+			}
+		}
+	}
+}
