@@ -15,7 +15,7 @@
    },
    
    "1.12.2": {
-   "5.1.3": "Added new Ender IO alloys support",
+   "5.2.0": "Added new Ender IO alloys support\nAdded a few rods!",
    "5.1.2": "Fixed error when loading More Plates with Ender IO",
    "5.1.1": "Added Soul Shards - The Old Ways support\nFixed crash on server (#43)",
    "5.1.0": "Updated Config (I recommend delete old config!)\nNew Config, now you can disable every item!\nChanged Electrical Steel and End Steel textures\nAdded Steel Gear and Plate\n- Hammer works! Has 150 durability, and has support for Unbreaking and Mending!",

@@ -1,0 +1,22 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:enderium_stick"
+		}
+	],
+	"result": {
+		"item": "moreplates:enderium_stick",
+		"count": 4
+	},
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"M",
+		"M"
+	],
+	"key": {
+		"M": {
+			"item": "#ENDERIUM"
+		}
+	}
+}

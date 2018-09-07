@@ -29,10 +29,19 @@ item.moreplates.nether_quartz_plate.name=Płyta z kwarcu
 item.moreplates.redstone_gear.name=Przekładnia z redstonu
 item.moreplates.redstone_plate.name=Płyta z redstonu
 
+item.moreplates.aluminum_stick.name=Aluminiowy pręt
+item.moreplates.bronze_stick.name=Brązowy pręt
 item.moreplates.copper_stick.name=Miedziany pręt
+item.moreplates.lead_stick.name=Ołowiany pręt
+item.moreplates.nickel_stick.name=Pręt z niklu
+item.moreplates.platinum_stick.name=Platynowy pręt
+item.moreplates.silicon_gear.name=Silicon Gear
+item.moreplates.silicon_plate.name=Silicon Plate
+item.moreplates.silver_stick.name=Srebrny pręt
 item.moreplates.steel_gear.name=Stalowa przekładnia
 item.moreplates.steel_plate.name=Stalowa płyta
 item.moreplates.steel_stick.name=Stalowy pręt
+item.moreplates.tin_stick.name=Cynowy pręt
 
 item.moreplates.osmium_gear.name=Przekładnia z osmu
 item.moreplates.osmium_plate.name=Płyta z osmu

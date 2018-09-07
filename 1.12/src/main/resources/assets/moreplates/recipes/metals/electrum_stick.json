@@ -1,0 +1,22 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:electrum_stick"
+		}
+	],
+	"result": {
+		"item": "moreplates:electrum_stick",
+		"count": 4
+	},
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"M",
+		"M"
+	],
+	"key": {
+		"M": {
+			"item": "#ELECTRUM"
+		}
+	}
+}

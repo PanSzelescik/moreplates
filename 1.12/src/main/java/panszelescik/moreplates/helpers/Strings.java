@@ -38,6 +38,13 @@ public abstract class Strings extends PluginList {
 	public static String PLATINUM = "Platinum";
 	public static String IRIDIUM = "Iridium";
 	public static String MITHRIL = "Mithril";
+	public static String BRONZE = "Bronze";
+	public static String CONSTANTAN = "Constantan";
+	public static String ELECTRUM = "Electrum";
+	public static String ENDERIUM = "Enderium";
+	public static String INVAR = "Invar";
+	public static String LUMIUM = "Lumium";
+	public static String SIGNALUM = "Signalum";
 	
 	private static String STORAGE = "storage";
 	private static String MATERIAL = "material";

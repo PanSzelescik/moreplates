@@ -1,7 +1,8 @@
 # More Plates Changelog
 
-### 1.12.2-5.1.3
+### 1.12.2-5.2.0
 - Added new Ender IO alloys support
+- Added a few rods!
 
 ### 1.12.2-5.1.2
 - Fixed error when loading More Plates with Ender IO

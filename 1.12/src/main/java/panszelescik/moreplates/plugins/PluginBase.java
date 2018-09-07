@@ -49,14 +49,7 @@ public abstract class PluginBase extends PluginCore {
 			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && isLoaded(plugin.modid) && !isLoaded("ic2-classic-spmod");
 		else if (plugin instanceof PluginMetals)
 			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin");
-		else if (plugin instanceof PluginMultiMod) {
-			if (getBoolean(PluginAppliedEnergistics2.MODNAME, CATEGORY_PLUGINS, "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin") && isLoaded(PluginAppliedEnergistics2.MODID))
-				return true;
-			else if (getBoolean(PluginRefinedStorage.MODNAME, CATEGORY_PLUGINS, "Enable this to load " + PluginRefinedStorage.MODNAME + " plugin") && isLoaded(PluginRefinedStorage.MODID))
-				return true;
-			else
-				return false;
-		} else
+		else
 			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && isLoaded(plugin.modid);
 	}
 	

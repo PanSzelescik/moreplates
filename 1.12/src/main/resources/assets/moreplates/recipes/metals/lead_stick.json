@@ -1,0 +1,22 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:lead_stick"
+		}
+	],
+	"result": {
+		"item": "moreplates:lead_stick",
+		"count": 4
+	},
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"M",
+		"M"
+	],
+	"key": {
+		"M": {
+			"item": "#LEAD"
+		}
+	}
+}

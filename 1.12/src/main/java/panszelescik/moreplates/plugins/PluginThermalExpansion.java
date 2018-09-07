@@ -3,7 +3,6 @@ package panszelescik.moreplates.plugins;
 import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
-import static panszelescik.moreplates.plugins.PluginMultiMod.*;
 
 import panszelescik.moreplates.helpers.ThermalExpansionHelper;
 
@@ -29,6 +28,7 @@ public class PluginThermalExpansion extends PluginBase {
 			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
 		}
 		if (isEnabled(pluginMetals)) {
+			add(SILICON, ITEM + SILICON, gearSilicon, plateSilicon);
 			add(STEEL, INGOT + STEEL, gearSteel, plateSteel);
 		}
 		if (isEnabled(pluginActuallyAdditions)) {
@@ -104,9 +104,6 @@ public class PluginThermalExpansion extends PluginBase {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
-		}
-		if (isEnabled(pluginMultiMod)) {
-			add(SILICON, ITEM + SILICON, gearSilicon, plateSilicon);
 		}
 		if (isEnabled(pluginMysticalAgradditions)) {
 			add(INSANIUM, INGOT + INSANIUM);

@@ -3,7 +3,6 @@ package panszelescik.moreplates.plugins;
 import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
-import static panszelescik.moreplates.plugins.PluginMultiMod.*;
 
 import panszelescik.moreplates.helpers.ImmersiveEngineeringHelper;
 
@@ -29,8 +28,24 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(REDSTONE, DUST + REDSTONE, gearRedstone, plateRedstone);
 		}
 		if (isEnabled(pluginMetals)) {
+			add(ALUMINUM, INGOT + ALUMINUM, false, false, stickAluminum);
+			add(BRONZE, INGOT + BRONZE, false, false, stickBronze);
+			add(CONSTANTAN, INGOT + CONSTANTAN, false, false, stickConstantan);
 			add(COPPER, INGOT + COPPER, false, false, stickCopper);
+			add(ELECTRUM, INGOT + ELECTRUM, false, false, stickElectrum);
+			add(ENDERIUM, INGOT + ENDERIUM, false, false, stickEnderium);
+			add(INVAR, INGOT + INVAR, false, false, stickInvar);
+			add(IRIDIUM, INGOT + IRIDIUM, false, false, stickIridium);
+			add(LEAD, INGOT + LEAD, false, false, stickLead);
+			add(LUMIUM, INGOT + LUMIUM, false, false, stickLumium);
+			add(MITHRIL, INGOT + MITHRIL, false, false, stickMithril);
+			add(NICKEL, INGOT + NICKEL, false, false, stickNickel);
+			add(PLATINUM, INGOT + PLATINUM, false, false, stickPlatinum);
+			add(SIGNALUM, INGOT + SIGNALUM, false, false, stickSignalum);
+			add(SILICON, ITEM + SILICON, gearSilicon, plateSilicon);
+			add(SILVER, INGOT + SILVER, false, false, stickSilver);
 			add(STEEL, INGOT + STEEL, gearSteel, plateSteel, stickSteel);
+			add(TIN, INGOT + TIN, false, false, stickTin);
 		}
 		if (isEnabled(pluginActuallyAdditions)) {
 			String id = PluginActuallyAdditions.MODID;
@@ -105,9 +120,6 @@ public class PluginImmersiveEngineering extends PluginBase {
 			add(GLOWSTONE, INGOT + GLOWSTONE);
 			add(OSMIUM, INGOT + OSMIUM);
 			add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
-		}
-		if (isEnabled(pluginMultiMod)) {
-			add(SILICON, ITEM + SILICON, gearSilicon, plateSilicon);
 		}
 		if (isEnabled(pluginMysticalAgradditions)) {
 			add(INSANIUM, INGOT + INSANIUM);

@@ -37,10 +37,27 @@ item.moreplates.nether_quartz_plate.name=Nether Quartz Plate
 item.moreplates.redstone_gear.name=Redstone Gear
 item.moreplates.redstone_plate.name=Redstone Plate
 
+item.moreplates.aluminum_stick.name=Aluminum Rod
+item.moreplates.bronze_stick.name=Bronze Rod
+item.moreplates.constantan_stick.name=Constantan Rod
 item.moreplates.copper_stick.name=Copper Rod
+item.moreplates.electrum_stick.name=Electrum Rod
+item.moreplates.enderium_stick.name=Enderium Rod
+item.moreplates.invar_stick.name=Invar Rod
+item.moreplates.iridium_stick.name=Iridium Rod
+item.moreplates.lead_stick.name=Lead Rod
+item.moreplates.lumium_stick.name=Lumium Rod
+item.moreplates.mana_infused_stick.name=Mana Infused Rod
+item.moreplates.nickel_stick.name=Nickel Rod
+item.moreplates.platinum_stick.name=Platinum Rod
+item.moreplates.signalum_stick.name=Signalum Rod
+item.moreplates.silicon_gear.name=Silicon Gear
+item.moreplates.silicon_plate.name=Silicon Plate
+item.moreplates.silver_stick.name=Silver Rod
 item.moreplates.steel_gear.name=Steel Gear
 item.moreplates.steel_plate.name=Steel Plate
 item.moreplates.steel_stick.name=Steel Rod
+item.moreplates.tin_stick.name=Tin Rod
 
 item.moreplates.black_quartz_gear.name=Black Quartz Gear
 item.moreplates.black_quartz_plate.name=Black Quartz Plate
@@ -218,6 +235,3 @@ item.moreplates.ironwood_gear.name=Ironwood Gear
 item.moreplates.ironwood_plate.name=Ironwood Plate
 item.moreplates.knightmetal_gear.name=Knightmetal Gear
 item.moreplates.knightmetal_plate.name=Knightmetal Plate
-
-item.moreplates.silicon_gear.name=Silicon Gear
-item.moreplates.silicon_plate.name=Silicon Plate

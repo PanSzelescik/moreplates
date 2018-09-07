@@ -264,6 +264,33 @@
 },
 
 {
+	"name": "ALUMINUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotAluminum"
+		}
+	]
+},
+{
+	"name": "BRONZE",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotBronze"
+		}
+	]
+},
+{
+	"name": "CONSTANTAN",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotConstantan"
+		}
+	]
+},
+{
 	"name": "COPPER",
 	"ingredient": [
 		{
@@ -273,11 +300,119 @@
 	]
 },
 {
+	"name": "ELECTRUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotElectrum"
+		}
+	]
+},
+{
+	"name": "ENDERIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotEnderium"
+		}
+	]
+},
+{
+	"name": "INVAR",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotInvar"
+		}
+	]
+},
+{
+	"name": "IRIDIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotIridium"
+		}
+	]
+},
+{
+	"name": "LEAD",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotLead"
+		}
+	]
+},
+{
+	"name": "LUMIUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotLumium"
+		}
+	]
+},
+{
+	"name": "MANA_INFUSED",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotMithril"
+		}
+	]
+},
+{
+	"name": "NICKEL",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotNickel"
+		}
+	]
+},
+{
+	"name": "PLATINUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotPlatinum"
+		}
+	]
+},
+{
+	"name": "SIGNALUM",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSignalum"
+		}
+	]
+},
+{
+	"name": "SILVER",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSilver"
+		}
+	]
+},
+{
 	"name": "STEEL",
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
 			"ore": "ingotSteel"
+		}
+	]
+},
+{
+	"name": "TIN",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotTin"
 		}
 	]
 },
