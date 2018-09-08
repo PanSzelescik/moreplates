@@ -1,5 +1,7 @@
 package panszelescik.moreplates.helpers;
 
+import panszelescik.moreplates.plugins.PluginList;
+
 public abstract class Strings extends PluginList {
 	
 	public static String CONFIG_TITLE = Helper.translate("config.moreplates.title");

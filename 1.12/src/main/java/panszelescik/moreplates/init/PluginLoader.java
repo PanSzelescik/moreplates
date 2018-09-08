@@ -3,7 +3,6 @@ package panszelescik.moreplates.init;
 import java.util.ArrayList;
 
 import panszelescik.moreplates.helpers.IInit;
-import panszelescik.moreplates.helpers.PluginList;
 import panszelescik.moreplates.plugins.*;
 
 public class PluginLoader extends PluginList {

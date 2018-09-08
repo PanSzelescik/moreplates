@@ -1,6 +1,4 @@
-package panszelescik.moreplates.helpers;
-
-import panszelescik.moreplates.plugins.*;
+package panszelescik.moreplates.plugins;
 
 public abstract class PluginList {
 	
