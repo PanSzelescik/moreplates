@@ -118,12 +118,9 @@ public class PluginThermalExpansion extends PluginBase {
 		}
 		if (isEnabled(pluginPlusTiC)) {
 			add(ALUMITE, INGOT + ALUMITE);
-			if (isLoaded(PluginBotania.MODID))
-				add(MIRION, INGOT + MIRION);
-			if (isLoaded(PluginMekanism.MODID))
-				add(OSGLOGLAS, INGOT + OSGLOGLAS);
-			if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID))
-				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
+			add(MIRION, INGOT + MIRION);
+			add(OSGLOGLAS, INGOT + OSGLOGLAS);
+			add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 		}
 		if (isEnabled(pluginPneumaticCraft)) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);

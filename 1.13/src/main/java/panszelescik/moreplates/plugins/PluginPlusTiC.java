@@ -1,7 +1,6 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.Loader;
 
 public class PluginPlusTiC extends PluginBase {
 	
@@ -27,19 +26,19 @@ public class PluginPlusTiC extends PluginBase {
 		
 		reg(ALUMITE, alumite_gear, alumite_plate);
 		
-		if (Loader.isModLoaded(PluginBotania.MODID)) {
+		if (isLoaded(PluginBotania.MODID)) {
 			mirion_gear = gear("mirion");
 			mirion_plate = plate("mirion");
 			
 			reg(MIRION, mirion_gear, mirion_plate);
 		}
-		if (Loader.isModLoaded(PluginMekanism.MODID)) {
+		if (isLoaded(PluginMekanism.MODID)) {
 			osgloglas_gear = gear("osgloglas");
 			osgloglas_plate = plate("osgloglas");
 			
 			reg(OSGLOGLAS, osgloglas_gear, osgloglas_plate);
 		}
-		if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID)) {
+		if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID)) {
 			osmiridium_gear = gear("osmiridium");
 			osmiridium_plate = plate("osmiridium");
 			

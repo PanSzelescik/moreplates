@@ -126,7 +126,7 @@ public class PluginMetals extends PluginBase {
 		}
 		//Iridium
 		if (oreNameExists(INGOT + IRIDIUM)
-		//|| isLoaded("advancedsolarpanels")
+		|| isLoaded("advanced_solar_panels")
 		|| isLoaded("libvulpes")
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {

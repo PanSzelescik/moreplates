@@ -197,23 +197,13 @@ public class PluginIndustrialCraft2 extends PluginBase {
 		}
 		if (isEnabled(pluginPlusTiC)) {
 			add(ALUMITE, INGOT + ALUMITE);
-			
+			add(MIRION, INGOT + MIRION);
+			add(OSGLOGLAS, INGOT + OSGLOGLAS);
+			add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 			addBlock(ALUMITE, 9);
-			if (isLoaded(PluginBotania.MODID)) {
-				add(MIRION, INGOT + MIRION);
-				
-				addBlock(MIRION, 9);
-			}
-			if (isLoaded(PluginMekanism.MODID)) {
-				add(OSGLOGLAS, INGOT + OSGLOGLAS);
-				
-				addBlock(OSGLOGLAS, 9);
-			}
-			if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID)) {
-				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
-				
-				addBlock(OSMIRIDIUM, 9);
-			}
+			addBlock(MIRION, 9);
+			addBlock(OSGLOGLAS, 9);
+			addBlock(OSMIRIDIUM, 9);
 		}
 		if (isEnabled(pluginPneumaticCraft)) {
 			add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
