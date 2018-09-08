@@ -11,10 +11,11 @@ public class ImmersiveEngineeringHelper extends Helper {
 	
 	public static int MetalPressRecipes = 0;
 	
-	static ItemStack mold_gear = getItemStack(PluginImmersiveEngineering.MODID, "mold", 1, 1);
-	static ItemStack mold_plate = getItemStack(PluginImmersiveEngineering.MODID, "mold", 1, 0);
+	static ItemStack mold_gear = getMold(1);
+	static ItemStack mold_plate = getMold(0);
+	static ItemStack mold_stick = getMold(2);
 	
-	public static void add(String output, String input, boolean gear, boolean plate) {
+	public static void add(String output, String input, boolean gear, boolean plate, boolean stick) {
 		if (checkIsNotNull(input)) {
 			if (gear && checkIsNotNull(GEAR + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(input) + " x4");
@@ -25,6 +26,12 @@ public class ImmersiveEngineeringHelper extends Helper {
 			if (plate && checkIsNotNull(PLATE + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 				MetalPressRecipe.addRecipe(getOre(PLATE + output), input, mold_plate, energyMetalPress());
+				
+				MetalPressRecipes += 1;
+			}
+			if (stick && checkIsNotNull(STICK + output)) {
+				logger.debug(INFO_IE + getItemNameFromOre(STICK + output) + INFO_3 + getItemNameFromOre(input));
+				MetalPressRecipe.addRecipe(getOre(STICK + output, 2), input, mold_stick, energyMetalPress());
 				
 				MetalPressRecipes += 1;
 			}
@@ -101,5 +108,9 @@ public class ImmersiveEngineeringHelper extends Helper {
 	
 	private static int energyMetalPress() {
 		return getInt("Energy in Metal Press", CATEGORY_IMMERSIVE, 2400, "Energy used to make Gears and Plates in Metal Press");
+	}
+	
+	private static ItemStack getMold(int meta) {
+		return getItemStack(PluginImmersiveEngineering.MODID, "mold", 1, meta);
 	}
 }

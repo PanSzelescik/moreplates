@@ -25,7 +25,6 @@ public class PluginLoader extends PluginList {
 		pluginImmersiveEngineering = new PluginImmersiveEngineering();
 		pluginIndustrialCraft2 = new PluginIndustrialCraft2();
 		pluginMekanism = new PluginMekanism();
-		pluginMultiMod = new PluginMultiMod();
 		pluginMysticalAgradditions = new PluginMysticalAgradditions();
 		pluginMysticalAgriculture = new PluginMysticalAgriculture();
 		pluginPlusTiC = new PluginPlusTiC();
@@ -55,7 +54,6 @@ public class PluginLoader extends PluginList {
 		initList.add(pluginImmersiveEngineering);
 		initList.add(pluginIndustrialCraft2);
 		initList.add(pluginMekanism);
-		initList.add(pluginMultiMod);
 		initList.add(pluginMysticalAgradditions);
 		initList.add(pluginMysticalAgriculture);
 		initList.add(pluginPlusTiC);

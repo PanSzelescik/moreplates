@@ -13,6 +13,7 @@ public abstract class Strings extends PluginList {
 	public static String ITEM = "item";
 	public static String BLOCK = "block";
 	public static String DUST = "dust";
+	public static String STICK = "stick";
 	
 	public static String REFINED = "Refined";
 	public static String ALLOY = "Alloy";
@@ -27,6 +28,23 @@ public abstract class Strings extends PluginList {
 	public static String EMERALD = "Emerald";
 	public static String LAPIS = "Lapis";
 	public static String QUARTZ = "Quartz";
+	
+	public static String COPPER = "Copper";
+	public static String TIN = "Tin";
+	public static String SILVER = "Silver";
+	public static String LEAD = "Lead";
+	public static String ALUMINUM = "Aluminum";
+	public static String NICKEL = "Nickel";
+	public static String PLATINUM = "Platinum";
+	public static String IRIDIUM = "Iridium";
+	public static String MITHRIL = "Mithril";
+	public static String BRONZE = "Bronze";
+	public static String CONSTANTAN = "Constantan";
+	public static String ELECTRUM = "Electrum";
+	public static String ENDERIUM = "Enderium";
+	public static String INVAR = "Invar";
+	public static String LUMIUM = "Lumium";
+	public static String SIGNALUM = "Signalum";
 	
 	private static String STORAGE = "storage";
 	private static String MATERIAL = "material";

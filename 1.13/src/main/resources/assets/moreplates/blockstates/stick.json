@@ -1,0 +1,109 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "builtin/generated",
+		"textures": {
+			"layer0": "blocks/dirt"
+		},
+		"transform": "forge:default-item"
+	},
+	"variants": {
+		"type": {
+			"aluminum_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/aluminum_stick"
+				}
+			},
+			"bronze_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/bronze_stick"
+				}
+			},
+			"constantan_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/constantan_stick"
+				}
+			},
+			"copper_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/copper_stick"
+				}
+			},
+			"electrum_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/electrum_stick"
+				}
+			},
+			"enderium_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/enderium_stick"
+				}
+			},
+			"invar_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/invar_stick"
+				}
+			},
+			"iridium_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/iridium_stick"
+				}
+			},
+			"lead_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/lead_stick"
+				}
+			},
+			"lumium_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/lumium_stick"
+				}
+			},
+			"mana_infused_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/mana_infused_stick"
+				}
+			},
+			"nickel_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/nickel_stick"
+				}
+			},
+			"platinum_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/platinum_stick"
+				}
+			},
+			"signalum_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/signalum_stick"
+				}
+			},
+			"silver_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/silver_stick"
+				}
+			},
+			"steel_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/steel_stick"
+				}
+			},
+			"tin_stick": {
+				"textures": {
+					"layer0": "moreplates:metals/tin_stick"
+				}
+			},
+			"iron_stick": {
+				"textures": {
+					"layer0": "moreplates:minecraft/iron_stick"
+				}
+			},
+			"gold_stick": {
+				"textures": {
+					"layer0": "moreplates:minecraft/gold_stick"
+				}
+			}
+		}
+	}
+}

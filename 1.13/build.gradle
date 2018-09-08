@@ -76,6 +76,7 @@ curseforge {
 			optionalDependency 'the-twilight-forest'
 			optionalDependency 'thaumcraft'
 			optionalDependency 'techreborn'
+			optionalDependency 'soul-shards-the-old-ways'
 			optionalDependency 'refined-storage'
 			optionalDependency 'projecte'
 			optionalDependency 'project-red-base'

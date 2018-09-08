@@ -3,9 +3,7 @@ package panszelescik.moreplates.plugins;
 import static panszelescik.moreplates.MorePlates.*;
 import static panszelescik.moreplates.plugins.PluginMetals.*;
 import static panszelescik.moreplates.plugins.PluginMinecraft.*;
-import static panszelescik.moreplates.plugins.PluginMultiMod.*;
 
-import net.minecraftforge.fml.common.Loader;
 import panszelescik.moreplates.helpers.IndustrialCraft2Helper;
 
 public class PluginIndustrialCraft2 extends PluginBase {
@@ -40,6 +38,7 @@ public class PluginIndustrialCraft2 extends PluginBase {
 			addBlock(REDSTONE, 9, plateRedstone);
 		}
 		if (isEnabled(pluginMetals)) {
+			add(SILICON, ITEM + SILICON, plateSilicon);
 			add(STEEL, INGOT + STEEL, plateSteel);
 			
 			addBlock(STEEL, 9, plateSteel);
@@ -176,9 +175,6 @@ public class PluginIndustrialCraft2 extends PluginBase {
 			addBlock(OSMIUM, 9);
 			addBlock(REFINED_OBSIDIAN, 9);
 		}
-		if (isEnabled(pluginMultiMod)) {
-			add(SILICON, ITEM + SILICON, plateSilicon);
-		}
 		if (isEnabled(pluginMysticalAgradditions)) {
 			add(INSANIUM, INGOT + INSANIUM);
 			
@@ -203,17 +199,17 @@ public class PluginIndustrialCraft2 extends PluginBase {
 			add(ALUMITE, INGOT + ALUMITE);
 			
 			addBlock(ALUMITE, 9);
-			if (Loader.isModLoaded(PluginBotania.MODID)) {
+			if (isLoaded(PluginBotania.MODID)) {
 				add(MIRION, INGOT + MIRION);
 				
 				addBlock(MIRION, 9);
 			}
-			if (Loader.isModLoaded(PluginMekanism.MODID)) {
+			if (isLoaded(PluginMekanism.MODID)) {
 				add(OSGLOGLAS, INGOT + OSGLOGLAS);
 				
 				addBlock(OSGLOGLAS, 9);
 			}
-			if (Loader.isModLoaded(PluginMekanism.MODID) && Loader.isModLoaded(PluginThermalExpansion.MODID)) {
+			if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID)) {
 				add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
 				
 				addBlock(OSMIRIDIUM, 9);

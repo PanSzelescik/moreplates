@@ -2,11 +2,6 @@ package panszelescik.moreplates.plugins;
 
 import static panszelescik.moreplates.config.Config.*;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import panszelescik.moreplates.MorePlates;
 
 public abstract class PluginBase extends PluginCore {
@@ -51,18 +46,11 @@ public abstract class PluginBase extends PluginCore {
 	
 	public boolean isEnabled(PluginCore plugin) {
 		if (plugin instanceof PluginIndustrialCraft2)
-			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && Loader.isModLoaded(plugin.modid) && !Loader.isModLoaded("ic2-classic-spmod");
+			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && isLoaded(plugin.modid) && !isLoaded("ic2-classic-spmod");
 		else if (plugin instanceof PluginMetals)
 			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin");
-		else if (plugin instanceof PluginMultiMod) {
-			if (getBoolean(PluginAppliedEnergistics2.MODNAME, CATEGORY_PLUGINS, "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin") && Loader.isModLoaded(PluginAppliedEnergistics2.MODID))
-				return true;
-			else if (getBoolean(PluginRefinedStorage.MODNAME, CATEGORY_PLUGINS, "Enable this to load " + PluginRefinedStorage.MODNAME + " plugin") && Loader.isModLoaded(PluginRefinedStorage.MODID))
-				return true;
-			else
-				return false;
-		} else
-			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && Loader.isModLoaded(plugin.modid);
+		else
+			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && isLoaded(plugin.modid);
 	}
 	
 	public void preInit() {}

@@ -1,0 +1,22 @@
+{
+	"conditions": [
+		{
+			"type": "minecraft:item_exists",
+			"item": "moreplates:iridium_stick"
+		}
+	],
+	"result": {
+		"item": "moreplates:iridium_stick",
+		"count": 4
+	},
+	"type": "forge:ore_shaped",
+	"pattern": [
+		"M",
+		"M"
+	],
+	"key": {
+		"M": {
+			"item": "#IRIDIUM"
+		}
+	}
+}

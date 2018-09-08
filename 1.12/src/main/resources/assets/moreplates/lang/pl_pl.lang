@@ -35,8 +35,8 @@ item.moreplates.copper_stick.name=Miedziany pręt
 item.moreplates.lead_stick.name=Ołowiany pręt
 item.moreplates.nickel_stick.name=Pręt z niklu
 item.moreplates.platinum_stick.name=Platynowy pręt
-item.moreplates.silicon_gear.name=Silicon Gear
-item.moreplates.silicon_plate.name=Silicon Plate
+item.moreplates.silicon_gear.name=Przekładnia z silikonu
+item.moreplates.silicon_plate.name=Płyta z silikonu
 item.moreplates.silver_stick.name=Srebrny pręt
 item.moreplates.steel_gear.name=Stalowa przekładnia
 item.moreplates.steel_plate.name=Stalowa płyta
@@ -49,6 +49,3 @@ item.moreplates.refined_glowstone_gear.name=Przekładnia z jasnogłazu
 item.moreplates.refined_glowstone_plate.name=Płyta z jasnogłazu
 item.moreplates.refined_obsidian_gear.name=Przekładnia z rafinowanego obsydianu
 item.moreplates.refined_obsidian_plate.name=Płyta z rafinowanego obsydianu
-
-item.moreplates.silicon_gear.name=Przekładnia z silikonu
-item.moreplates.silicon_plate.name=Płyta z silikonu

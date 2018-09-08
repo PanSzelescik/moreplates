@@ -18,7 +18,6 @@ public abstract class PluginList {
 	protected static PluginImmersiveEngineering pluginImmersiveEngineering;
 	protected static PluginIndustrialCraft2 pluginIndustrialCraft2;
 	protected static PluginMekanism pluginMekanism;
-	protected static PluginMultiMod pluginMultiMod;
 	protected static PluginMysticalAgradditions pluginMysticalAgradditions;
 	protected static PluginMysticalAgriculture pluginMysticalAgriculture;
 	protected static PluginPlusTiC pluginPlusTiC;
