@@ -13,8 +13,6 @@ public abstract class PluginList {
 	protected static PluginDraconicEvolution pluginDraconicEvolution;
 	protected static PluginEnderIO pluginEnderIO;
 	protected static PluginExtraUtilities pluginExtraUtilities;
-	protected static PluginImmersiveEngineering pluginImmersiveEngineering;
-	protected static PluginIndustrialCraft2 pluginIndustrialCraft2;
 	protected static PluginMekanism pluginMekanism;
 	protected static PluginMysticalAgradditions pluginMysticalAgradditions;
 	protected static PluginMysticalAgriculture pluginMysticalAgriculture;
@@ -22,11 +20,10 @@ public abstract class PluginList {
 	protected static PluginPneumaticCraft pluginPneumaticCraft;
 	protected static PluginProjectE pluginProjectE;
 	protected static PluginProjectRed pluginProjectRed;
+	protected static PluginRecipeAdder pluginRecipeAdder;
 	protected static PluginRefinedStorage pluginRefinedStorage;
 	protected static PluginSoulShards pluginSoulShards;
-	protected static PluginTechReborn pluginTechReborn;
 	protected static PluginThaumcraft pluginThaumcraft;
-	protected static PluginThermalExpansion pluginThermalExpansion;
 	protected static PluginTinkersConstruct pluginTinkersConstruct;
 	protected static PluginTwilightForest pluginTwilightForest;
 }

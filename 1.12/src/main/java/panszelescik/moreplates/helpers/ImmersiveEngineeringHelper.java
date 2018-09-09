@@ -16,20 +16,20 @@ public class ImmersiveEngineeringHelper extends Helper {
 	static ItemStack mold_stick = getMold(2);
 	
 	public static void add(String output, String input, boolean gear, boolean plate, boolean stick) {
-		if (checkIsNotNull(input)) {
-			if (gear && checkIsNotNull(GEAR + output)) {
+		if (oreNameExists(input)) {
+			if (gear && oreNameExists(GEAR + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(input) + " x4");
 				MetalPressRecipe.addRecipe(getOre(GEAR + output), input, mold_gear, energyMetalPress()).setInputSize(4);
 				
 				MetalPressRecipes += 1;
 			}
-			if (plate && checkIsNotNull(PLATE + output)) {
+			if (plate && oreNameExists(PLATE + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 				MetalPressRecipe.addRecipe(getOre(PLATE + output), input, mold_plate, energyMetalPress());
 				
 				MetalPressRecipes += 1;
 			}
-			if (stick && checkIsNotNull(STICK + output)) {
+			if (stick && oreNameExists(STICK + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(STICK + output) + INFO_3 + getItemNameFromOre(input));
 				MetalPressRecipe.addRecipe(getOre(STICK + output, 2), input, mold_stick, energyMetalPress());
 				
@@ -39,14 +39,14 @@ public class ImmersiveEngineeringHelper extends Helper {
 	}
 	
 	public static void add(String output, String input) {
-		if (checkIsNotNull(input)) {
-			if (checkIsNotNull(GEAR + output)) {
+		if (oreNameExists(input)) {
+			if (oreNameExists(GEAR + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(input) + " x4");
 				MetalPressRecipe.addRecipe(getOre(GEAR + output), input, mold_gear, energyMetalPress()).setInputSize(4);
 				
 				MetalPressRecipes += 1;
 			}
-			if (checkIsNotNull(PLATE + output)) {
+			if (oreNameExists(PLATE + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
 				MetalPressRecipe.addRecipe(getOre(PLATE + output), input, mold_plate, energyMetalPress());
 				
@@ -57,13 +57,13 @@ public class ImmersiveEngineeringHelper extends Helper {
 	
 	public static void add(String output, String input, String id) {
 		if (checkIsNotNull(id, input)) {
-			if (checkIsNotNull(GEAR + output)) {
+			if (oreNameExists(GEAR + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input) + " x4");
 				MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input), mold_gear, energyMetalPress()).setInputSize(4);
 				
 				MetalPressRecipes += 1;
 			}
-			if (checkIsNotNull(PLATE + output)) {
+			if (oreNameExists(PLATE + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
 				MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input), mold_plate, energyMetalPress());
 				
@@ -74,13 +74,13 @@ public class ImmersiveEngineeringHelper extends Helper {
 	
 	public static void add(String output, String input, String id, int meta) {
 		if (checkIsNotNull(id, input, meta)) {
-			if (checkIsNotNull(GEAR + output)) {
+			if (oreNameExists(GEAR + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta) + " x4");
 				MetalPressRecipe.addRecipe(getOre(GEAR + output), getItemStack(id, input, 1, meta), mold_gear, energyMetalPress()).setInputSize(4);
 				
 				MetalPressRecipes += 1;
 			}
-			if (checkIsNotNull(PLATE + output)) {
+			if (oreNameExists(PLATE + output)) {
 				logger.debug(INFO_IE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
 				MetalPressRecipe.addRecipe(getOre(PLATE + output), getItemStack(id, input, 1, meta), mold_plate, energyMetalPress());
 				
@@ -90,14 +90,14 @@ public class ImmersiveEngineeringHelper extends Helper {
 	}
 	
 	public static void addGaia(String output, String input) {
-		if (checkIsNotNull(input)) {
-			if (checkIsNotNull(output + "Gear")) {
+		if (oreNameExists(input)) {
+			if (oreNameExists(output + "Gear")) {
 				logger.debug(INFO_IE + getItemNameFromOre(output + "Gear") + INFO_3 + getItemNameFromOre(input) + " x4");
 				MetalPressRecipe.addRecipe(getOre(output + "Gear"), getOre(input), mold_gear, energyMetalPress()).setInputSize(4);
 				
 				MetalPressRecipes += 1;
 			}
-			if (checkIsNotNull(output + "Plate")) {
+			if (oreNameExists(output + "Plate")) {
 				logger.debug(INFO_IE + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
 				MetalPressRecipe.addRecipe(getOre(output + "Plate"), input, mold_plate, energyMetalPress());
 				

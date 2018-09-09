@@ -2,8 +2,7 @@ package panszelescik.moreplates.plugins;
 
 import static panszelescik.moreplates.MorePlates.*;
 
-import net.minecraft.item.Item;
-import panszelescik.moreplates.helpers.BotaniaHelper;
+import panszelescik.moreplates.helpers.*;
 
 public class PluginBotania extends PluginBase {
 	
@@ -14,29 +13,11 @@ public class PluginBotania extends PluginBase {
 		super(MODID, MODNAME);
 	}
 	
-	Item elementium_gear;
-	Item elementium_plate;
-	Item gaia_spirit_gear;
-	Item gaia_spirit_plate;
-	Item manasteel_gear;
-	Item manasteel_plate;
-	Item terrasteel_gear;
-	Item terrasteel_plate;
-	
 	public void preInit() {
-		elementium_gear = gear("elementium");
-		elementium_plate = plate("elementium");
-		gaia_spirit_gear = gear("gaia_spirit");
-		gaia_spirit_plate = plate("gaia_spirit");
-		manasteel_gear = gear("manasteel");
-		manasteel_plate = plate("manasteel");
-		terrasteel_gear = gear("terrasteel");
-		terrasteel_plate = plate("terrasteel");
-		
-		reg(ELEMENTIUM, elementium_gear, elementium_plate);
-		regGaia(GAIA_SPIRIT, gaia_spirit_gear, gaia_spirit_plate);
-		reg(MANASTEEL, manasteel_gear, manasteel_plate);
-		reg(TERRASTEEL, terrasteel_gear, terrasteel_plate);
+		reg(ELEMENTIUM, "elementium");
+		regGaia(GAIA_SPIRIT, "gaia_spirit");
+		reg(MANASTEEL, "manasteel");
+		reg(TERRASTEEL, "terrasteel");
 	}
 	
 	public void postInit() {

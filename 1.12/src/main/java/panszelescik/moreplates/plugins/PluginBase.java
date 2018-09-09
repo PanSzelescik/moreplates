@@ -45,10 +45,10 @@ public abstract class PluginBase extends PluginCore {
 	}
 	
 	public boolean isEnabled(PluginCore plugin) {
-		if (plugin instanceof PluginIndustrialCraft2)
-			return getB(plugin) && isLoaded(plugin.modid) && !isLoaded("ic2-classic-spmod");
-		else if (plugin instanceof PluginMetals)
+		if (plugin instanceof PluginMetals)
 			return getB(plugin);
+		else if (plugin instanceof PluginRecipeAdder)
+			return true;
 		else
 			return getB(plugin) && isLoaded(plugin.modid);
 	}

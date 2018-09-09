@@ -23,32 +23,20 @@ public abstract class PluginCore extends Helper implements IInit {
 	@Override
 	public abstract boolean initPlugin();
 	
-	protected Item gear(String name) {
-		return new ItemGear(name);
-	}
-	
-	protected Item plate(String name) {
-		return new ItemPlate(name);
-	}
-	
-	protected Item stick(String name) {
-		return new ItemStick(name);
-	}
-	
-	protected void regCustomGear(Item gear, boolean bool, String ore, String name) {
-		gear = gear(name);
+	protected void regCustomGear(boolean bool, String ore, String name) {
+		Item gear = gear(name);
 		regGear(gear, ore);
 		bool = true;
 	}
 	
-	protected void regCustomPlate(Item plate, boolean bool, String ore, String name) {
-		plate = plate(name);
+	protected void regCustomPlate(boolean bool, String ore, String name) {
+		Item plate = plate(name);
 		regPlate(plate, ore);
 		bool = true;
 	}
 	
-	protected void regCustomStick(Item stick, boolean bool, String ore, String name) {
-		stick = stick(name);
+	protected void regCustomStick(boolean bool, String ore, String name) {
+		Item stick = stick(name);
 		regStick(stick, ore);
 		bool = true;
 	}

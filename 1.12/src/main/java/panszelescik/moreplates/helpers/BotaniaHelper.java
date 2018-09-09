@@ -11,13 +11,13 @@ public class BotaniaHelper extends Helper {
 	public static int ManaInfusionRecipes = 0;
 	
 	public static void addManaInfusion(String output, String input) {
-		if (checkIsNotNull(GEAR + input) && checkIsNotNull(GEAR + output)) {
+		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
 			logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input));
 			BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana());
 			
 			ManaInfusionRecipes += 1;
 		}
-		if (checkIsNotNull(PLATE + input) && checkIsNotNull(PLATE + output)) {
+		if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
 			logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input));
 			BotaniaAPI.registerManaInfusionRecipe(getOre(PLATE + output), PLATE + input, manasteelMana());
 			
@@ -26,13 +26,13 @@ public class BotaniaHelper extends Helper {
 	}
 	
 	public static void addElvenTrade(String output, String input) {
-		if (checkIsNotNull(GEAR + input) && checkIsNotNull(GEAR + output)) {
+		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
 			logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");
 			BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
 			
 			ElvenTradeRecipes += 1;
 		}
-		if (checkIsNotNull(PLATE + input) && checkIsNotNull(PLATE + output)) {
+		if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
 			logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + " x2");
 			BotaniaAPI.registerElvenTradeRecipe(getOre(PLATE + output), PLATE + input, PLATE + input);
 			

@@ -1,7 +1,5 @@
 package panszelescik.moreplates.plugins;
 
-import net.minecraft.item.Item;
-
 public class PluginPlusTiC extends PluginBase {
 	
 	public static final String MODID = "plustic";
@@ -11,38 +9,13 @@ public class PluginPlusTiC extends PluginBase {
 		super(MODID, MODNAME);
 	}
 	
-	Item alumite_gear;
-	Item alumite_plate;
-	Item mirion_gear;
-	Item mirion_plate;
-	Item osgloglas_gear;
-	Item osgloglas_plate;
-	Item osmiridium_gear;
-	Item osmiridium_plate;
-	
 	public void preInit() {
-		alumite_gear = gear("alumite");
-		alumite_plate = plate("alumite");
-		
-		reg(ALUMITE, alumite_gear, alumite_plate);
-		
-		if (isLoaded(PluginBotania.MODID)) {
-			mirion_gear = gear("mirion");
-			mirion_plate = plate("mirion");
-			
-			reg(MIRION, mirion_gear, mirion_plate);
-		}
-		if (isLoaded(PluginMekanism.MODID)) {
-			osgloglas_gear = gear("osgloglas");
-			osgloglas_plate = plate("osgloglas");
-			
-			reg(OSGLOGLAS, osgloglas_gear, osgloglas_plate);
-		}
-		if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID)) {
-			osmiridium_gear = gear("osmiridium");
-			osmiridium_plate = plate("osmiridium");
-			
-			reg(OSMIRIDIUM, osmiridium_gear, osmiridium_plate);
-		}
+		reg(ALUMITE, "alumite");
+		if (isLoaded(PluginBotania.MODID))
+			reg(MIRION, "mirion");
+		if (isLoaded(PluginMekanism.MODID))
+			reg(OSGLOGLAS, "osgloglas");
+		if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID))
+			reg(OSMIRIDIUM, "osmiridium");
 	}
 }
