@@ -1,7 +1,6 @@
 package panszelescik.moreplates.plugins;
 
-import static panszelescik.moreplates.config.Config.CATEGORY_PLUGINS;
-import static panszelescik.moreplates.config.Config.getBoolean;
+import static panszelescik.moreplates.config.Config.*;
 
 import net.minecraft.item.Item;
 

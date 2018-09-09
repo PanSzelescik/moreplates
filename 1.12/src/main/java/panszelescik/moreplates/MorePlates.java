@@ -8,8 +8,6 @@ import org.apache.logging.log4j.Logger;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -38,13 +36,13 @@ public class MorePlates {
 		}
 	};
 	
-	@Instance(MODID)
+	@Mod.Instance(MODID)
 	public static MorePlates instance;
 	public Config config;
 	public ConfigItems config2;
 	public static final Logger logger = LogManager.getFormatterLogger(MODID);
 	
-	@EventHandler
+	@Mod.EventHandler
 	public void construction(FMLConstructionEvent event) {
 		logger.info("Started Construction.");
 		config = new Config();
@@ -53,7 +51,7 @@ public class MorePlates {
 		logger.info("Completed Construction.");
 	}
 	
-	@EventHandler
+	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger.info("Started PreInitialization.");
 		Items.preInit();
@@ -62,14 +60,14 @@ public class MorePlates {
 		logger.info("Completed PreInitialization.");
 	}
 	
-	@EventHandler
+	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		logger.info("Started Initialization.");
 		saveConfig();
 		logger.info("Completed Initialization.");
 	}
 	
-	@EventHandler
+	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Started PostInitialization.");
 		PluginLoader.postInit();

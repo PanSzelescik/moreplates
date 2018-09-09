@@ -46,13 +46,17 @@ public abstract class PluginBase extends PluginCore {
 	
 	public boolean isEnabled(PluginCore plugin) {
 		if (plugin instanceof PluginIndustrialCraft2)
-			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && isLoaded(plugin.modid) && !isLoaded("ic2-classic-spmod");
+			return getB(plugin) && isLoaded(plugin.modid) && !isLoaded("ic2-classic-spmod");
 		else if (plugin instanceof PluginMetals)
-			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin");
+			return getB(plugin);
 		else
-			return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin") && isLoaded(plugin.modid);
+			return getB(plugin) && isLoaded(plugin.modid);
 	}
 	
 	public void preInit() {}
 	public void postInit() {}
+	
+	private boolean getB(PluginCore plugin) {
+		return getBoolean(plugin.modname, CATEGORY_PLUGINS, "Enable this to load " + plugin.modname + " plugin");
+	}
 }

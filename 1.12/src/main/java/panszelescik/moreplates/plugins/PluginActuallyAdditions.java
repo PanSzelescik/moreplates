@@ -1,7 +1,6 @@
 package panszelescik.moreplates.plugins;
 
 import static panszelescik.moreplates.MorePlates.*;
-import static panszelescik.moreplates.config.Config.*;
 
 import java.util.List;
 

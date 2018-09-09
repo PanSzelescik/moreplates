@@ -3,14 +3,11 @@ package panszelescik.moreplates.config;
 import static panszelescik.moreplates.Reference.*;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.config.IConfigElement;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
