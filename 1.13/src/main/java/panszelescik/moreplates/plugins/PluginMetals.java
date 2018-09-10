@@ -2,35 +2,11 @@ package panszelescik.moreplates.plugins;
 
 import static panszelescik.moreplates.config.Config.*;
 
-import net.minecraft.item.Item;
-
 public class PluginMetals extends PluginBase {
 	
 	public PluginMetals() {
 		super("", "Metals");
 	}
-	
-	Item aluminum_stick;
-	Item bronze_stick;
-	Item constantan_stick;
-	Item copper_stick;
-	Item electrum_stick;
-	Item enderium_stick;
-	Item invar_stick;
-	Item iridium_stick;
-	Item lead_stick;
-	Item lumium_stick;
-	Item mithril_stick;
-	Item nickel_stick;
-	Item platinum_stick;
-	Item signalum_stick;
-	Item silicon_gear;
-	Item silicon_plate;
-	Item silver_stick;
-	Item steel_gear;
-	Item steel_plate;
-	Item steel_stick;
-	Item tin_stick;
 	
 	public static boolean stickAluminum;
 	public static boolean stickBronze;
@@ -61,7 +37,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + ALUMINUM)
 			&& !isLoaded(PluginImmersiveEngineering.MODID)) {
-				regCustomStick(aluminum_stick, stickAluminum, ALUMINUM, "aluminum");
+				regCustomStick(stickAluminum, ALUMINUM, "aluminum");
 			}
 		}
 		//Bronze
@@ -72,7 +48,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + BRONZE)) {
-				regCustomStick(bronze_stick, stickBronze, BRONZE, "bronze");
+				regCustomStick(stickBronze, BRONZE, "bronze");
 			}
 		}
 		//Constantan
@@ -80,7 +56,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginImmersiveEngineering.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + CONSTANTAN)) {
-				regCustomStick(constantan_stick, stickConstantan, CONSTANTAN, "constantan");
+				regCustomStick(stickConstantan, CONSTANTAN, "constantan");
 			}
 		}
 		//Copper
@@ -95,7 +71,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + COPPER)
 			&& !isLoaded("libvulpes")) {
-				regCustomStick(copper_stick, stickCopper, COPPER, "copper");
+				regCustomStick(stickCopper, COPPER, "copper");
 			}
 		}
 		//Electrum
@@ -104,14 +80,14 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + ELECTRUM)) {
-				regCustomStick(electrum_stick, stickElectrum, ELECTRUM, "electrum");
+				regCustomStick(stickElectrum, ELECTRUM, "electrum");
 			}
 		}
 		//Enderium
 		if (oreNameExists(INGOT + ENDERIUM)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + ENDERIUM)) {
-				regCustomStick(enderium_stick, stickEnderium, ENDERIUM, "enderium");
+				regCustomStick(stickEnderium, ENDERIUM, "enderium");
 			}
 		}
 		//Invar
@@ -120,7 +96,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + INVAR)) {
-				regCustomStick(invar_stick, stickInvar, INVAR, "invar");
+				regCustomStick(stickInvar, INVAR, "invar");
 			}
 		}
 		//Iridium
@@ -131,7 +107,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + IRIDIUM)
 			&& !isLoaded("libvulpes")) {
-				regCustomStick(iridium_stick, stickIridium, IRIDIUM, "iridium");
+				regCustomStick(stickIridium, IRIDIUM, "iridium");
 			}
 		}
 		//Lead
@@ -141,21 +117,21 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + LEAD)) {
-				regCustomStick(lead_stick, stickLead, LEAD, "lead");
+				regCustomStick(stickLead, LEAD, "lead");
 			}
 		}
 		//Lumium
 		if (oreNameExists(INGOT + LUMIUM)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + LUMIUM)) {
-				regCustomStick(lumium_stick, stickLumium, LUMIUM, "lumium");
+				regCustomStick(stickLumium, LUMIUM, "lumium");
 			}
 		}
 		//Mana Infused
 		if (oreNameExists(INGOT + MITHRIL)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + MITHRIL)) {
-				regCustomStick(mithril_stick, stickMithril, MITHRIL, "mana_infused");
+				regCustomStick(stickMithril, MITHRIL, "mana_infused");
 			}
 		}
 		//Nickel
@@ -164,7 +140,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + NICKEL)) {
-				regCustomStick(nickel_stick, stickNickel, NICKEL, "nickel");
+				regCustomStick(stickNickel, NICKEL, "nickel");
 			}
 		}
 		//Platinum
@@ -172,14 +148,14 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + PLATINUM)) {
-				regCustomStick(platinum_stick, stickPlatinum, PLATINUM, "platinum");
+				regCustomStick(stickPlatinum, PLATINUM, "platinum");
 			}
 		}
 		//Signalum
 		if (oreNameExists(INGOT + SIGNALUM)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + SIGNALUM)) {
-				regCustomStick(signalum_stick, stickSignalum, SIGNALUM, "signalum");
+				regCustomStick(stickSignalum, SIGNALUM, "signalum");
 			}
 		}
 		//Silicon
@@ -187,11 +163,11 @@ public class PluginMetals extends PluginBase {
 		|| checkAE()
 		|| checkRS()) {
 			if (!oreNameExists(GEAR + SILICON)) {
-				regCustomGear(silicon_gear, gearSilicon, SILICON, "silicon");
+				regCustomGear(gearSilicon, SILICON, "silicon");
 			}
 			if (!oreNameExists(PLATE + SILICON)
 			&& !isLoaded("libvulpes")) {
-				regCustomPlate(silicon_plate, plateSilicon, SILICON, "silicon");
+				regCustomPlate(plateSilicon, SILICON, "silicon");
 			}
 		}
 		//Silver
@@ -202,7 +178,7 @@ public class PluginMetals extends PluginBase {
 		|| isLoaded(PluginTechReborn.MODID)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + SILVER)) {
-				regCustomStick(silver_stick, stickSilver, SILVER, "silver");
+				regCustomStick(stickSilver, SILVER, "silver");
 			}
 		}
 		//Steel
@@ -215,7 +191,7 @@ public class PluginMetals extends PluginBase {
 			if (!oreNameExists(GEAR + STEEL)
 			&& !isLoaded("libvulpes")
 			&& !isLoaded("thermalfoundation")) {
-				regCustomGear(steel_gear, gearSteel, STEEL, "steel");
+				regCustomGear(gearSteel, STEEL, "steel");
 			}
 			if (!oreNameExists(PLATE + STEEL)
 			&& !isLoaded(PluginImmersiveEngineering.MODID)
@@ -223,19 +199,19 @@ public class PluginMetals extends PluginBase {
 			&& !isLoaded("libvulpes")
 			&& !isLoaded(PluginTechReborn.MODID)
 			&& !isLoaded("thermalfoundation")) {
-				regCustomPlate(steel_plate, plateSteel, STEEL, "steel");
+				regCustomPlate(plateSteel, STEEL, "steel");
 			}
 			if (!oreNameExists(STICK + STEEL)
 			&& !isLoaded(PluginImmersiveEngineering.MODID)
 			&& !isLoaded("libvulpes")) {
-				regCustomStick(steel_stick, stickSteel, STEEL, "steel");
+				regCustomStick(stickSteel, STEEL, "steel");
 			}
 		}
 		//Tin
 		if (oreNameExists(INGOT + TIN)
 		|| isLoaded("thermalfoundation")) {
 			if (!oreNameExists(STICK + TIN)) {
-				regCustomStick(tin_stick, stickTin, TIN, "tin");
+				regCustomStick(stickTin, TIN, "tin");
 			}
 		}
 	}

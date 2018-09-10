@@ -16,27 +16,25 @@ public class ActuallyAdditionsHelper extends Helper {
 	public static int EmpowererRecipes = 0;
 	
 	public static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
-		if (checkIsNotNull(dye)) {
-			List<ItemStack> dyes = OreDictionary.getOres(dye);
-			for (ItemStack dyeStack : dyes) {
-				if (checkIsNotNull(GEAR + input) && checkIsNotNull(GEAR + output)) {
-					logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-					ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(GEAR + input)), getOre(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
-					
-					EmpowererRecipes += 1;
-				}
-				if (checkIsNotNull(PLATE + input) && checkIsNotNull(PLATE + output)) {
-					logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-					ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(PLATE + input)), getOre(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
-					
-					EmpowererRecipes += 1;
-				}
+		List<ItemStack> dyes = OreDictionary.getOres(dye);
+		for (ItemStack dyeStack : dyes) {
+			if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
+				logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+				ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(GEAR + input)), getOre(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
+				
+				EmpowererRecipes += 1;
+			}
+			if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
+				logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+				ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(PLATE + input)), getOre(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
+				
+				EmpowererRecipes += 1;
 			}
 		}
 	}
 	
 	public static void addReconstructor(String output, String input, int energy) {
-		if (checkIsNotNull(GEAR + input) && checkIsNotNull(GEAR + output)) {
+		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
 			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
 			for (ItemStack inputStack : inputs) {
 				logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
@@ -45,7 +43,7 @@ public class ActuallyAdditionsHelper extends Helper {
 				AtomicReconstructorRecipes += 1;
 			}
 		}
-		if (checkIsNotNull(PLATE + input) && checkIsNotNull(PLATE + output)) {
+		if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
 			List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
 			for (ItemStack inputStack : inputss) {
 				logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));

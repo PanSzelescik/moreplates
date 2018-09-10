@@ -10,6 +10,7 @@ public class PluginLoader extends PluginList {
 	private static ArrayList<IInit> initList = new ArrayList<>();
 	
 	public static void preInit() {
+		pluginRecipeAdder = new PluginRecipeAdder();
 		pluginMinecraft = new PluginMinecraft();
 		pluginMetals = new PluginMetals();
 		
@@ -21,8 +22,6 @@ public class PluginLoader extends PluginList {
 		pluginDraconicEvolution = new PluginDraconicEvolution();
 		pluginEnderIO = new PluginEnderIO();
 		pluginExtraUtilities = new PluginExtraUtilities();
-		pluginImmersiveEngineering = new PluginImmersiveEngineering();
-		pluginIndustrialCraft2 = new PluginIndustrialCraft2();
 		pluginMekanism = new PluginMekanism();
 		pluginMysticalAgradditions = new PluginMysticalAgradditions();
 		pluginMysticalAgriculture = new PluginMysticalAgriculture();
@@ -32,13 +31,12 @@ public class PluginLoader extends PluginList {
 		pluginProjectRed = new PluginProjectRed();
 		pluginRefinedStorage = new PluginRefinedStorage();
 		pluginSoulShards = new PluginSoulShards();
-		pluginTechReborn = new PluginTechReborn();
 		pluginThaumcraft = new PluginThaumcraft();
-		pluginThermalExpansion = new PluginThermalExpansion();
 		pluginTinkersConstruct = new PluginTinkersConstruct();
 		pluginTwilightForest = new PluginTwilightForest();
 		
 		
+		initList.add(pluginRecipeAdder);
 		initList.add(pluginMinecraft);
 		initList.add(pluginMetals);
 		
@@ -50,8 +48,6 @@ public class PluginLoader extends PluginList {
 		initList.add(pluginDraconicEvolution);
 		initList.add(pluginEnderIO);
 		initList.add(pluginExtraUtilities);
-		initList.add(pluginImmersiveEngineering);
-		initList.add(pluginIndustrialCraft2);
 		initList.add(pluginMekanism);
 		initList.add(pluginMysticalAgradditions);
 		initList.add(pluginMysticalAgriculture);
@@ -61,9 +57,7 @@ public class PluginLoader extends PluginList {
 		initList.add(pluginProjectRed);
 		initList.add(pluginRefinedStorage);
 		initList.add(pluginSoulShards);
-		initList.add(pluginTechReborn);
 		initList.add(pluginThaumcraft);
-		initList.add(pluginThermalExpansion);
 		initList.add(pluginTinkersConstruct);
 		initList.add(pluginTwilightForest);
 		
