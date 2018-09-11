@@ -1,8 +1,17 @@
 {
 	"conditions": [
 		{
-			"type": "minecraft:item_exists",
-			"item": "moreplates:platinum_stick"
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "minecraft:item_exists",
+					"item": "moreplates:platinum_stick"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableStick"
+				}
+			]
 		}
 	],
 	"result": {

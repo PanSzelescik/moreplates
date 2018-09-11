@@ -1,8 +1,17 @@
 {
 	"conditions": [
 		{
-			"type": "minecraft:item_exists",
-			"item": "moreplates:tanzanite_plate"
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "minecraft:item_exists",
+					"item": "moreplates:tanzanite_plate"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enablePlate"
+				}
+			]
 		}
 	],
 	"result": {

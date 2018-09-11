@@ -3,6 +3,7 @@
 ### 1.12.2-5.2.0
 - Added new Ender IO alloys support
 - Added a few rods!
+- Added option to disable all crafting recipes for Gears, Plates and Rods
 
 ### 1.12.2-5.1.2
 - Fixed error when loading More Plates with Ender IO

@@ -1,10 +1,13 @@
 {
-	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "moreplates:hammer"
+	},
 	"pattern": [
 		"IGI",
 		" S ",
 		" S "
 	],
+	"type": "forge:ore_shaped",
 	"key": {
 		"G": {
 			"item": "#GOLD"
@@ -15,8 +18,5 @@
 		"S": {
 			"item": "#STICK"
 		}
-	},
-	"result": {
-		"item": "moreplates:hammer"
 	}
 }

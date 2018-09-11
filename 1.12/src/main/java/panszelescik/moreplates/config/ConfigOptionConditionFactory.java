@@ -32,6 +32,12 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
     				return () -> false;
     		case "centerMetals":
     			return () -> getBoolean("Center metals in recipes", CATEGORY_GENERAL, "Enable this to add option to make Gears with Bronze, Copper, Iron and Tin");
+    		case "enableGear":
+    			return () -> getBoolean("Enable Gear recipes", CATEGORY_GENERAL, "Set this to false, to disable all crafting recipes for Gears");
+    		case "enablePlate":
+    			return () -> getBoolean("Enable Plate recipes", CATEGORY_GENERAL, "Set this to false, to disable all crafting recipes for Plates");
+    		case "enableStick":
+    			return () -> getBoolean("Enable Rod recipes", CATEGORY_GENERAL, "Set this to false, to disable all crafting recipes for Rods");
     		default:
     			throw new RuntimeException("Invalid config setting: " + configSetting);
     	}
