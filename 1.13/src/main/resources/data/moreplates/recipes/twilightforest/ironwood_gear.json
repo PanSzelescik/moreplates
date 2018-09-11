@@ -1,8 +1,17 @@
 {
 	"conditions": [
 		{
-			"type": "minecraft:item_exists",
-			"item": "moreplates:ironwood_gear"
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "minecraft:item_exists",
+					"item": "moreplates:ironwood_gear"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enableGear"
+				}
+			]
 		}
 	],
 	"result": {
