@@ -15,7 +15,7 @@ public class Reference {
 			+ "after:botania;"
 			+ "after:calculator;"
 			+ "after:draconicevolution;"
-			+ "after:enderio@[5.0.32,);"
+			+ "after:enderio@[5.0.33,);"
 			+ "after:extrautils2;"
 			+ "after:immersiveengineering;"
 			+ "after:ic2;"
