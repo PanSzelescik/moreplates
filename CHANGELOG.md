@@ -1,5 +1,8 @@
 # More Plates Changelog
 
+### 1.12.2-5.2.1
+- Changed Ore Dictionaries: plateVoid --> plateVoidAA, gearVoid --> gearVoidAA
+
 ### 1.12.2-5.2.0
 - Added new Ender IO alloys support
 - Added a few rods!

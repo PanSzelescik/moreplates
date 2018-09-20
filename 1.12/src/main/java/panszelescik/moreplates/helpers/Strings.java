@@ -106,14 +106,14 @@ public abstract class Strings extends PluginList {
 	public static final String ENORI = "Enori";
 	public static final String PALIS = "Palis";
 	public static final String RESTONIA = "Restonia";
-	public static final String VOID = "Void";
+	public static final String VOID = "VoidAA";
 	
 	public static final String EMPOWERED_DIAMATINE = DIAMATINE + EMPOWERED;
 	public static final String EMPOWERED_EMERADIC = EMERADIC + EMPOWERED;
 	public static final String EMPOWERED_ENORI = ENORI + EMPOWERED;
 	public static final String EMPOWERED_PALIS = PALIS + EMPOWERED;
 	public static final String EMPOWERED_RESTONIA = RESTONIA + EMPOWERED;
-	public static final String EMPOWERED_VOID = VOID + EMPOWERED;
+	public static final String EMPOWERED_VOID = "Void" + EMPOWERED;
 	
 	public static final String CRYSTAL_NAME = "item_crystal";
 	public static final String EMPOWERED_CRYSTAL_NAME = CRYSTAL_NAME + "_empowered";
