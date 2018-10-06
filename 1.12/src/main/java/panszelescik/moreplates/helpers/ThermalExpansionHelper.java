@@ -14,11 +14,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class ThermalExpansionHelper extends Helper {
 	
-	public static int CompactorRecipes = 0;
-	public static int InductionSmelterRecipes = 0;
-	
-	static ItemStack sand = new ItemStack(Blocks.SAND);
-	static ItemStack slag = getItemStack("thermalfoundation", "material", 1, 864);
+	public static int CompactorRecipes = 0, InductionSmelterRecipes = 0;
+	static ItemStack sand = new ItemStack(Blocks.SAND), slag = getItemStack("thermalfoundation", "material", 1, 864);
 	
 	public static void add(String output, String inputOre, boolean gear, boolean plate) {
 		if (oreNameExists(inputOre)) {

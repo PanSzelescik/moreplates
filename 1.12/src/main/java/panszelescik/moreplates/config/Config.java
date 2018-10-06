@@ -16,17 +16,7 @@ import panszelescik.moreplates.plugins.*;
 public class Config {
 	
 	public static Configuration cfg;
-	
-	public static final String CATEGORY_GENERAL = "general";
-	public static final String CATEGORY_PLUGINS = "plugins";
-	
-	public static final String CATEGORY_ACTUALLY = PluginActuallyAdditions.MODID;
-	public static final String CATEGORY_BOTANIA = PluginBotania.MODID;
-	public static final String CATEGORY_IMMERSIVE = PluginImmersiveEngineering.MODID;
-	public static final String CATEGORY_IC2 = PluginIndustrialCraft2.MODID;
-	public static final String CATEGORY_TECHREBORN = PluginTechReborn.MODID;
-	public static final String CATEGORY_THERMAL = PluginThermalExpansion.MODID;
-	
+	public static final String CATEGORY_GENERAL = "general", CATEGORY_PLUGINS = "plugins", CATEGORY_ACTUALLY = PluginActuallyAdditions.MODID, CATEGORY_BOTANIA = PluginBotania.MODID, CATEGORY_IMMERSIVE = PluginImmersiveEngineering.MODID, CATEGORY_IC2 = PluginIndustrialCraft2.MODID, CATEGORY_TECHREBORN = PluginTechReborn.MODID, CATEGORY_THERMAL = PluginThermalExpansion.MODID;
 	static final List <String> CATEGORIES = Arrays.asList(CATEGORY_GENERAL, CATEGORY_PLUGINS, CATEGORY_ACTUALLY, CATEGORY_BOTANIA, CATEGORY_IMMERSIVE, CATEGORY_IC2, CATEGORY_TECHREBORN, CATEGORY_THERMAL);
 	
 	public Config() {

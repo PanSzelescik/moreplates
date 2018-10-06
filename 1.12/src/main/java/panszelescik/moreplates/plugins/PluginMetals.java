@@ -8,27 +8,7 @@ public class PluginMetals extends PluginBase {
 		super("", "Metals");
 	}
 	
-	public static boolean stickAluminum;
-	public static boolean stickBronze;
-	public static boolean stickConstantan;
-	public static boolean stickCopper;
-	public static boolean stickElectrum;
-	public static boolean stickEnderium;
-	public static boolean stickInvar;
-	public static boolean stickIridium;
-	public static boolean stickLead;
-	public static boolean stickLumium;
-	public static boolean stickMithril;
-	public static boolean stickNickel;
-	public static boolean stickPlatinum;
-	public static boolean stickSignalum;
-	public static boolean gearSilicon;
-	public static boolean plateSilicon;
-	public static boolean stickSilver;
-	public static boolean gearSteel;
-	public static boolean plateSteel;
-	public static boolean stickSteel;
-	public static boolean stickTin;
+	public static boolean stickAluminum, stickBronze, stickConstantan, stickCopper, stickElectrum, stickEnderium, stickInvar, stickIridium, stickLead, stickLumium, stickMithril, stickNickel, stickPlatinum, stickSignalum, gearSilicon, plateSilicon, stickSilver, gearSteel, plateSteel, stickSteel, stickTin;
 	
 	public void preInit() {
 		//Aluminum

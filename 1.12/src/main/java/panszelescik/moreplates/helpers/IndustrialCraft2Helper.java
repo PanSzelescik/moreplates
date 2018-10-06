@@ -8,8 +8,7 @@ import ic2.api.recipe.Recipes;
 
 public class IndustrialCraft2Helper extends Helper {
 	
-	public static int BlockCuttingMachineRecipes = 0;
-	public static int MetalFormerRecipes = 0;
+	public static int BlockCuttingMachineRecipes = 0, MetalFormerRecipes = 0;
 	
 	public static void add(String output, String input, boolean plate) {
 		if (oreNameExists(input) && plate && oreNameExists(PLATE + output)) {

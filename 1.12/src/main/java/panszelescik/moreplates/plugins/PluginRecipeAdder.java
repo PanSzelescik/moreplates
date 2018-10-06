@@ -14,6 +14,7 @@ public class PluginRecipeAdder extends PluginBase {
 	}
 	
 	public void postInit() {
+		if (icEnabled() || ieEnabled() || thEnabled() || teEnabled()) {
 		if (isEnabled(pluginMinecraft)) {
 			add(COAL, "coal", gearCoal, plateCoal);
 			add(DIAMOND, GEM + DIAMOND, gearDiamond, plateDiamond);
@@ -294,6 +295,7 @@ public class PluginRecipeAdder extends PluginBase {
 		if (teEnabled()) {
 			logger.info("Added " + ThermalExpansionHelper.CompactorRecipes + " recipes to Compactor");
 			logger.info("Added " + ThermalExpansionHelper.InductionSmelterRecipes + " recipes to Induction Smelter");
+		}
 		}
 	}
 	

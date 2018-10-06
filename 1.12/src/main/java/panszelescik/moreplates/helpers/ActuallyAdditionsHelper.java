@@ -12,8 +12,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class ActuallyAdditionsHelper extends Helper {
 	
-	public static int AtomicReconstructorRecipes = 0;
-	public static int EmpowererRecipes = 0;
+	public static int AtomicReconstructorRecipes = 0, EmpowererRecipes = 0;
 	
 	public static void addEmpowerer(String output, String input, String dye, ItemStack modifier2, ItemStack modifier3, ItemStack modifier4) {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);

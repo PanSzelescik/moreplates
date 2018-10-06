@@ -12,26 +12,7 @@ public class PluginMinecraft extends PluginBase {
 		super(MODID, MODNAME);
 	}
 	
-	public static boolean gearCoal;
-	public static boolean plateCoal;
-	public static boolean gearDiamond;
-	public static boolean plateDiamond;
-	public static boolean gearEmerald;
-	public static boolean plateEmerald;
-	public static boolean gearGlowstone;
-	public static boolean plateGlowstone;
-	public static boolean gearGold;
-	public static boolean plateGold;
-	public static boolean stickGold;
-	public static boolean gearIron;
-	public static boolean plateIron;
-	public static boolean stickIron;
-	public static boolean gearLapisLazuli;
-	public static boolean plateLapisLazuli;
-	public static boolean gearNetherQuartz;
-	public static boolean plateNetherQuartz;
-	public static boolean gearRedstone;
-	public static boolean plateRedstone;
+	public static boolean gearCoal, plateCoal, gearDiamond, plateDiamond, gearEmerald, plateEmerald, gearGlowstone, plateGlowstone, gearGold, plateGold, stickGold, gearIron, plateIron, stickIron, gearLapisLazuli, plateLapisLazuli, gearNetherQuartz, plateNetherQuartz, gearRedstone, plateRedstone;
 	
 	public void preInit() {
 		OreDictionary.registerOre("coal", Items.COAL);
@@ -71,7 +52,8 @@ public class PluginMinecraft extends PluginBase {
 		if (!oreNameExists(STICK + GOLD)) {
 			regCustomStick(stickGold, GOLD, "gold");
 		}
-		if (!oreNameExists(GEAR + IRON) && !isLoaded("libvulpes")) {
+		if (!oreNameExists(GEAR + IRON)
+		&& !isLoaded("libvulpes")) {
 			regCustomGear(gearIron, IRON, "iron");
 		}
 		if (!oreNameExists(PLATE + IRON)

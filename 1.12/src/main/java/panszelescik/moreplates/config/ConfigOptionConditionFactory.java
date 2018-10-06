@@ -16,7 +16,6 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
 	
 	@Override
 	public BooleanSupplier parse(JsonContext context, JsonObject json) {
-		
 		String configSetting = JsonUtils.getString(json, "config_setting", "");
     	
     	switch (configSetting) {

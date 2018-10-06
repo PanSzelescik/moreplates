@@ -29,7 +29,6 @@ import panszelescik.moreplates.init.PluginLoader;
 public class MorePlates {
 	
 	public static final CreativeTabs TAB = new CreativeTabs(MODID) {
-		
 		@Override
 		public ItemStack createIcon() {
 			return new ItemStack(Items.hammer);

@@ -10,10 +10,7 @@ import panszelescik.moreplates.plugins.PluginImmersiveEngineering;
 public class ImmersiveEngineeringHelper extends Helper {
 	
 	public static int MetalPressRecipes = 0;
-	
-	static ItemStack mold_gear = getMold(1);
-	static ItemStack mold_plate = getMold(0);
-	static ItemStack mold_stick = getMold(2);
+	static ItemStack mold_gear = getMold(1), mold_plate = getMold(0), mold_stick = getMold(2);
 	
 	public static void add(String output, String input, boolean gear, boolean plate, boolean stick) {
 		if (oreNameExists(input)) {

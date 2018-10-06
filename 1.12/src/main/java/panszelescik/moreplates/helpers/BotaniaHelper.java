@@ -7,8 +7,7 @@ import vazkii.botania.api.BotaniaAPI;
 
 public class BotaniaHelper extends Helper {
 	
-	public static int ElvenTradeRecipes = 0;
-	public static int ManaInfusionRecipes = 0;
+	public static int ElvenTradeRecipes = 0, ManaInfusionRecipes = 0;
 	
 	public static void addManaInfusion(String output, String input) {
 		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
