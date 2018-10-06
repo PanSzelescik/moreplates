@@ -292,6 +292,11 @@
 					"layer0": "moreplates:enderio/vibrant_alloy_plate"
 				}
 			},
+			"vivid_alloy_plate": {
+				"textures": {
+					"layer0": "moreplates:enderio/vivid_alloy_plate"
+				}
+			},
 			
 			"demon_plate": {
 				"textures": {

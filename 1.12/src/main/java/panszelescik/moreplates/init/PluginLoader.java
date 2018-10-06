@@ -21,6 +21,7 @@ public class PluginLoader extends PluginList {
 		pluginCalculator = new PluginCalculator();
 		pluginDraconicEvolution = new PluginDraconicEvolution();
 		pluginEnderIO = new PluginEnderIO();
+		pluginEnderIOEndergy = new PluginEnderIOEndergy();
 		pluginExtraUtilities = new PluginExtraUtilities();
 		pluginMekanism = new PluginMekanism();
 		pluginMysticalAgradditions = new PluginMysticalAgradditions();
@@ -47,6 +48,7 @@ public class PluginLoader extends PluginList {
 		initList.add(pluginCalculator);
 		initList.add(pluginDraconicEvolution);
 		initList.add(pluginEnderIO);
+		initList.add(pluginEnderIOEndergy);
 		initList.add(pluginExtraUtilities);
 		initList.add(pluginMekanism);
 		initList.add(pluginMysticalAgradditions);

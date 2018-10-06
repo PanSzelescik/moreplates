@@ -12,6 +12,7 @@ public abstract class PluginList {
 	protected static PluginCalculator pluginCalculator;
 	protected static PluginDraconicEvolution pluginDraconicEvolution;
 	protected static PluginEnderIO pluginEnderIO;
+	protected static PluginEnderIOEndergy pluginEnderIOEndergy;
 	protected static PluginExtraUtilities pluginExtraUtilities;
 	protected static PluginMekanism pluginMekanism;
 	protected static PluginMysticalAgradditions pluginMysticalAgradditions;

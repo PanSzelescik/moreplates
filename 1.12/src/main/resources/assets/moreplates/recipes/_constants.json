@@ -910,6 +910,15 @@
 		}
 	]
 },
+{
+	"name": "VIVID_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotVividAlloy"
+		}
+	]
+},
 
 {
 	"name": "DEMON",

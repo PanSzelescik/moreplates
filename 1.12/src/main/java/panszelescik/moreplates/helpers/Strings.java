@@ -190,6 +190,7 @@ public abstract class Strings extends PluginList {
 	public static final String STELLAR_ALLOY = "Stellar" + ALLOY;
 	public static final String SOULARIUM = "Soularium";
 	public static final String VIBRANT_ALLOY = "Vibrant" + ALLOY;
+	public static final String VIVID_ALLOY = "Vivid" + ALLOY;
 	
 	//Extra Utilities
 	public static final String EXU2_NAME = "ingredients";
