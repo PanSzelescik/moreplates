@@ -140,6 +140,10 @@
 		},
 		{
 			"type": "forge:ore_dict",
+			"ore": "ingotConstructionAlloy"
+		},
+		{
+			"type": "forge:ore_dict",
 			"ore": "ingotBronze"
 		},
 		{

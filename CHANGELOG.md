@@ -1,6 +1,7 @@
 # More Plates Changelog
 
 ### 1.12.2-5.2.3
+- Added option to make Gears with also Iron Alloy
 - Removed Combustive Metal, added Iron Alloy
 
 ### 1.12.2-5.2.2

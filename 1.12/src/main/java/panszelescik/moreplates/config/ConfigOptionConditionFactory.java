@@ -30,7 +30,7 @@ public class ConfigOptionConditionFactory implements IConditionFactory {
     			else
     				return () -> false;
     		case "centerMetals":
-    			return () -> getBoolean("Center metals in recipes", CATEGORY_GENERAL, "Enable this to add option to make Gears with Bronze, Copper, Iron and Tin");
+    			return () -> getBoolean("Center metals in recipes", CATEGORY_GENERAL, "Enable this to add option to make Gears with also Bronze, Copper, Iron Alloy and Tin in center");
     		case "enableGear":
     			return () -> getBoolean("Enable Gear recipes", CATEGORY_GENERAL, "Set this to false, to disable all crafting recipes for Gears");
     		case "enablePlate":
