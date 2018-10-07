@@ -88,6 +88,7 @@ curseforge {
 			optionalDependency 'industrial-craft'
 			optionalDependency 'immersive-engineering'
 			optionalDependency 'extra-utilities'
+			optionalDependency 'ender-io-endergy'
 			optionalDependency 'ender-io-base'
 			optionalDependency 'ender-io'
 			optionalDependency 'draconic-evolution'
