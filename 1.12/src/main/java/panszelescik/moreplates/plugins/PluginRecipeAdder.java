@@ -10,7 +10,7 @@ import panszelescik.moreplates.helpers.*;
 public class PluginRecipeAdder extends PluginBase {
 
 	public PluginRecipeAdder() {
-		super("", "");
+		super("", "Recipe Adder");
 	}
 	
 	public void postInit() {

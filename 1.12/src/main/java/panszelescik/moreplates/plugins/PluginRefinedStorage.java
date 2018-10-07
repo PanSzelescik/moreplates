@@ -1,7 +1,5 @@
 package panszelescik.moreplates.plugins;
 
-import net.minecraft.item.Item;
-
 public class PluginRefinedStorage extends PluginBase {
 	
 	public static final String MODID = "refinedstorage";
