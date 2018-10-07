@@ -767,15 +767,6 @@
 },
 
 {
-	"name": "COMBUSTIVE_METAL",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotCombustiveMetal"
-		}
-	]
-},
-{
 	"name": "CONDUCTIVE_IRON",
 	"ingredient": [
 		{
@@ -853,6 +844,15 @@
 		{
 			"type": "forge:ore_dict",
 			"ore": "ingotEnergeticSilver"
+		}
+	]
+},
+{
+	"name": "IRON_ALLOY",
+	"ingredient": [
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotConstructionAlloy"
 		}
 	]
 },

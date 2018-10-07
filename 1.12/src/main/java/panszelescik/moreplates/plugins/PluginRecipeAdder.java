@@ -143,6 +143,7 @@ public class PluginRecipeAdder extends PluginBase {
 			add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
 			add(END_STEEL, INGOT + END_STEEL);
 			add(ENERGETIC_ALLOY, INGOT + ENERGETIC_ALLOY);
+			add(IRON_ALLOY, INGOT + IRON_ALLOY);
 			add(PULSATING_IRON, INGOT + PULSATING_IRON);
 			add(REDSTONE_ALLOY, INGOT + REDSTONE_ALLOY);
 			add(SOULARIUM, INGOT + SOULARIUM);
@@ -153,13 +154,13 @@ public class PluginRecipeAdder extends PluginBase {
 			addBlock(ELECTRICAL_STEEL, 9);
 			addBlock(END_STEEL, 9);
 			addBlock(ENERGETIC_ALLOY, 9);
+			addBlock(IRON_ALLOY, 9);
 			addBlock(PULSATING_IRON, 9);
 			addBlock(REDSTONE_ALLOY, 9);
 			addBlock(SOULARIUM, 9);
 			addBlock(VIBRANT_ALLOY, 9);
 		}
 		if (isEnabled(pluginEnderIOEndergy)) {
-			add(COMBUSTIVE_METAL, INGOT + COMBUSTIVE_METAL);
 			add(CRUDE_STEEL, INGOT + CRUDE_STEEL);
 			add(CRYSTALLINE_ALLOY, INGOT + CRYSTALLINE_ALLOY);
 			add(CRYSTALLINE_PINK_SLIME, INGOT + CRYSTALLINE_PINK_SLIME);
@@ -168,7 +169,6 @@ public class PluginRecipeAdder extends PluginBase {
 			add(STELLAR_ALLOY, INGOT + STELLAR_ALLOY);
 			add(VIVID_ALLOY, INGOT + VIVID_ALLOY);
 			
-			addBlock(COMBUSTIVE_METAL, 9);
 			addBlock(CRUDE_STEEL, 9);
 			addBlock(CRYSTALLINE_ALLOY, 9);
 			addBlock(CRYSTALLINE_PINK_SLIME, 9);

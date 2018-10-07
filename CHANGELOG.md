@@ -1,5 +1,8 @@
 # More Plates Changelog
 
+### 1.12.2-5.2.3
+- Removed Combustive Metal, added Iron Alloy
+
 ### 1.12.2-5.2.2
 - Changes in Ender IO Endergy alloys
 

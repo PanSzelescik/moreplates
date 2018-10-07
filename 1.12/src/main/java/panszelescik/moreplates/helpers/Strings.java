@@ -174,7 +174,6 @@ public abstract class Strings extends PluginList {
 	public static final String AWAKENED_DRACONIUM = DRACONIUM + "Awakened";
 	
 	//Ender IO
-	public static final String COMBUSTIVE_METAL = "CombustiveMetal";
 	public static final String CONDUCTIVE_IRON = "Conductive" + IRON;
 	public static final String CRUDE_STEEL = "Crude" + STEEL;
 	public static final String CRYSTALLINE_ALLOY = "Crystalline" + ALLOY;
@@ -184,6 +183,7 @@ public abstract class Strings extends PluginList {
 	public static final String END_STEEL = "End" + STEEL;
 	public static final String ENERGETIC_ALLOY = "Energetic" + ALLOY;
 	public static final String ENERGETIC_SILVER = "EnergeticSilver";
+	public static final String IRON_ALLOY = "Construction" + ALLOY;
 	public static final String MELODIC_ALLOY = "Melodic" + ALLOY;
 	public static final String PULSATING_IRON = "Pulsating" + IRON;
 	public static final String REDSTONE_ALLOY = "Redstone" + ALLOY;

@@ -212,11 +212,6 @@
 				}
 			},
 			
-			"combustive_metal_gear": {
-				"textures": {
-					"layer0": "moreplates:enderio/combustive_metal_gear"
-				}
-			},
 			"conductive_iron_gear": {
 				"textures": {
 					"layer0": "moreplates:enderio/conductive_iron_gear"
@@ -260,6 +255,11 @@
 			"energetic_silver_gear": {
 				"textures": {
 					"layer0": "moreplates:enderio/energetic_silver_gear"
+				}
+			},
+			"iron_alloy_gear": {
+				"textures": {
+					"layer0": "moreplates:enderio/iron_alloy_gear"
 				}
 			},
 			"melodic_alloy_gear": {

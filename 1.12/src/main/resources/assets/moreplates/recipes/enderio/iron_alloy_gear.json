@@ -5,7 +5,7 @@
 			"values": [
 				{
 					"type": "minecraft:item_exists",
-					"item": "moreplates:combustive_metal_gear"
+					"item": "moreplates:iron_alloy_gear"
 				},
 				{
 					"type": "moreplates:option_enabled",
@@ -15,7 +15,7 @@
 		}
 	],
 	"result": {
-		"item": "moreplates:combustive_metal_gear"
+		"item": "moreplates:iron_alloy_gear"
 	},
 	"pattern": [
 		" M ",
@@ -25,7 +25,7 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"M": {
-			"item": "#COMBUSTIVE_METAL"
+			"item": "#IRON_ALLOY"
 		},
 		"C": {
 			"item": "#CENTER"

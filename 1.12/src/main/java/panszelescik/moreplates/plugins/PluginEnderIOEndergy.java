@@ -10,7 +10,6 @@ public class PluginEnderIOEndergy extends PluginBase {
 	}
 	
 	public void preInit() {
-		reg(COMBUSTIVE_METAL, "combustive_metal");
 		reg(CRUDE_STEEL, "crude_steel");
 		reg(CRYSTALLINE_ALLOY, "crystalline_alloy");
 		reg(CRYSTALLINE_PINK_SLIME, "crystalline_pink_slime");

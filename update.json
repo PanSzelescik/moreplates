@@ -13,6 +13,7 @@
 		"1.10.2-recommended": "2.6.1"
 	},
 	"1.12.2": {
+	"5.2.3": "Removed Combustive Metal, added Iron Alloy",
 	"5.2.2": "Changes in Ender IO Endergy alloys",
 	"5.2.1": "Changed Ore Dictionaries: plateVoid --> plateVoidAA, gearVoid --> gearVoidAA",
 	"5.2.0": "Added new Ender IO alloys support\nAdded a few rods!\nAdded option to disable all crafting recipes for Gears, Plates and Rods",

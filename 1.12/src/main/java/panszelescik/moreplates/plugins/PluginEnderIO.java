@@ -15,6 +15,7 @@ public class PluginEnderIO extends PluginBase {
 		reg(ELECTRICAL_STEEL, "electrical_steel");
 		reg(END_STEEL, "end_steel");
 		reg(ENERGETIC_ALLOY, "energetic_alloy");
+		reg(IRON_ALLOY, "iron_alloy");
 		reg(PULSATING_IRON, "pulsating_iron");
 		reg(REDSTONE_ALLOY, "redstone_alloy");
 		reg(SOULARIUM, "soularium");
