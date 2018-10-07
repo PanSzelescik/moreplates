@@ -52,4 +52,8 @@ public class Config {
 	public static boolean getBoolean(String name, String category, String comment) {
 		return cfg.getBoolean(name, category, true, comment);
 	}
+	
+	public static String[] getStrings(String name, String category, String[] defaultValues, String comment) {
+		return cfg.getStringList(name, category, defaultValues, comment);
+	}
 }

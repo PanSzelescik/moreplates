@@ -126,51 +126,10 @@
 
 
 {
-	"conditions": [
-		{
-			"type": "moreplates:option_enabled",
-			"config_setting": "centerMetals"
-		}
-	],
 	"name": "CENTER",
 	"ingredient": [
 		{
-			"type": "forge:ore_dict",
-			"ore": "ingotIron"
-		},
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotConstructionAlloy"
-		},
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotBronze"
-		},
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotCopper"
-		},
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotTin"
-		}
-	]
-},
-{
-	"conditions": [
-		{
-			"type": "forge:not",
-			"value": {
-				"type": "moreplates:option_enabled",
-				"config_setting": "centerMetals"
-			}
-		}
-	],
-	"name": "CENTER",
-	"ingredient": [
-		{
-			"type": "forge:ore_dict",
-			"ore": "ingotIron"
+			"type": "moreplates:center"
 		}
 	]
 },
