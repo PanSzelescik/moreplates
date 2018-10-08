@@ -15,14 +15,14 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class BigOreIngredient extends Ingredient {
+public class MultiOreIngredient extends Ingredient {
 	
 	private ArrayList<ItemStack> oreList = new ArrayList<ItemStack>();
 	private IntList itemIds = null;
 	private ItemStack[] array = null;
 	private int lastSizeA = -1, lastSizeL = -1;
 	
-	public BigOreIngredient(String... ores) {
+	public MultiOreIngredient(String... ores) {
 		super(0);
 		for (String ore : ores) {
 			if (Helper.oreNameExists(ore)) {
