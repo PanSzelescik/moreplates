@@ -1,5 +1,8 @@
 # More Plates Changelog
 
+### 1.12.2-5.3.1
+- Changed description and add logo
+
 ### 1.12.2-5.3.0
 - Added option to add your own item with Ore Dictionary to center in Gears recipes
 

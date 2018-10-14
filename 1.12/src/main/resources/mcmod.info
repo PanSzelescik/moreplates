@@ -2,10 +2,10 @@
 	{
 		"modid": "moreplates",
 		"name": "More Plates",
-		"description": "This mod adds plates and gears from a few mods.",
+		"description": "This mod adds some Gears, Plates and Rods",
 		"version": "${version}",
 		"credits": "",
-		"logoFile": "",
+		"logoFile": "logo.png",
 		"mcversion": "1.12.2",
 		"url": "https://minecraft.curseforge.com/projects/moreplates",
 		"updateUrl": "",
