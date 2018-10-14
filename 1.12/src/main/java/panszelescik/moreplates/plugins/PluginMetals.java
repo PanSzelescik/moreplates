@@ -139,7 +139,8 @@ public class PluginMetals extends PluginBase {
 			}
 		}
 		//Silicon
-		if (oreNameExists(ITEM + SILICON)
+		if (oreNameExists(INGOT + SILICON)
+		|| oreNameExists(ITEM + SILICON)
 		|| checkAE()
 		|| checkRS()) {
 			if (!oreNameExists(GEAR + SILICON)) {

@@ -945,6 +945,10 @@
 		{
 			"type": "forge:ore_dict",
 			"ore": "itemSilicon"
+		},
+		{
+			"type": "forge:ore_dict",
+			"ore": "ingotSilicon"
 		}
 	]
 },

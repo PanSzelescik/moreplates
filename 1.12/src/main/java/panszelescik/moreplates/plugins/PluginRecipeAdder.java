@@ -51,6 +51,7 @@ public class PluginRecipeAdder extends PluginBase {
 			add(NICKEL, INGOT + NICKEL, false, false, stickNickel);
 			add(PLATINUM, INGOT + PLATINUM, false, false, stickPlatinum);
 			add(SIGNALUM, INGOT + SIGNALUM, false, false, stickSignalum);
+			add(SILICON, INGOT + SILICON, gearSilicon, plateSilicon);
 			add(SILICON, ITEM + SILICON, gearSilicon, plateSilicon);
 			add(SILVER, INGOT + SILVER, false, false, stickSilver);
 			add(STEEL, INGOT + STEEL, gearSteel, plateSteel, stickSteel);
