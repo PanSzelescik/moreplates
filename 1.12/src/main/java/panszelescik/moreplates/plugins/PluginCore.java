@@ -1,11 +1,11 @@
 package panszelescik.moreplates.plugins;
 
 import net.minecraft.item.Item;
+import panszelescik.morelibs.api.IInitPlugin;
 import panszelescik.moreplates.helpers.Helper;
-import panszelescik.moreplates.helpers.IInit;
 import panszelescik.moreplates.items.*;
 
-public abstract class PluginCore extends Helper implements IInit {
+public abstract class PluginCore extends Helper implements IInitPlugin {
 	
 	protected final String modid;
 	protected final String modname;

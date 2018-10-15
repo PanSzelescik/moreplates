@@ -7,7 +7,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraftforge.common.crafting.IIngredientFactory;
 import net.minecraftforge.common.crafting.JsonContext;
-import panszelescik.moreplates.helpers.MultiOreIngredient;
+import panszelescik.morelibs.api.MultiOreIngredient;
 
 public class IngredientCenterFactory implements IIngredientFactory {
 	

@@ -2,12 +2,12 @@ package panszelescik.moreplates.init;
 
 import java.util.ArrayList;
 
-import panszelescik.moreplates.helpers.IInit;
+import panszelescik.morelibs.api.IInitPlugin;
 import panszelescik.moreplates.plugins.*;
 
 public class PluginLoader extends PluginList {
 	
-	private static ArrayList<IInit> initList = new ArrayList<>();
+	private static ArrayList<IInitPlugin> initList = new ArrayList<>();
 	
 	public static void preInit() {
 		pluginRecipeAdder = new PluginRecipeAdder();
@@ -63,12 +63,12 @@ public class PluginLoader extends PluginList {
 		initList.add(pluginTinkersConstruct);
 		initList.add(pluginTwilightForest);
 		
-		for (IInit init : initList)
+		for (IInitPlugin init : initList)
 			init.preInitPlugin();
 	}
 	
 	public static void postInit() {
-		for (IInit init : initList)
+		for (IInitPlugin init : initList)
 			init.initPlugin();
 		
 		initList.clear();

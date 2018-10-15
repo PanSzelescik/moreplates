@@ -1,6 +1,8 @@
 package panszelescik.moreplates.plugins;
 
-public abstract class PluginList {
+import panszelescik.morelibs.api.Helper;
+
+public abstract class PluginList extends Helper {
 	
 	protected static PluginMinecraft pluginMinecraft;
 	protected static PluginMetals pluginMetals;

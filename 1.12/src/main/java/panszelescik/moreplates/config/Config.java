@@ -1,6 +1,6 @@
 package panszelescik.moreplates.config;
 
-import static panszelescik.moreplates.Reference.*;
+import static panszelescik.moreplates.MorePlates.*;
 
 import java.io.File;
 import java.util.Arrays;

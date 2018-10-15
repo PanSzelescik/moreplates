@@ -7,7 +7,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.IConfigElement;
-import panszelescik.moreplates.Reference;
+import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.helpers.Strings;
 
 public class ModGuiConfig extends GuiConfig {
@@ -16,7 +16,7 @@ public class ModGuiConfig extends GuiConfig {
 		super(
         	guiScreen,
         	getConfigElements(),
-        	Reference.MODID,
+        	MorePlates.MODID,
         	false,
         	true,
         	Strings.CONFIG_TITLE

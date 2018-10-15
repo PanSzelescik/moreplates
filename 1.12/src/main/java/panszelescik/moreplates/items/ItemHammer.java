@@ -1,6 +1,6 @@
 package panszelescik.moreplates.items;
 
-import static panszelescik.moreplates.Reference.*;
+import static panszelescik.moreplates.MorePlates.*;
 
 import java.util.List;
 import java.util.Random;
@@ -22,17 +22,18 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import panszelescik.morelibs.api.IItemDamageble;
+import panszelescik.morelibs.api.ItemBase;
+import panszelescik.morelibs.api.NBTHelper;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.helpers.Helper;
-import panszelescik.moreplates.helpers.IItemDamageble;
-import panszelescik.moreplates.helpers.NBTHelper;
 
 public class ItemHammer extends ItemBase implements IItemDamageble {
 	
 	static final Random RAND = new Random();
 	
 	public ItemHammer() {
-		super();
+		super(TAB);
 		String name = "hammer";
 		setTranslationKey(MODID + "." + name);
 		setRegistryName(new ResourceLocation(MODID, name));

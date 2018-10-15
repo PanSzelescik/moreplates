@@ -27,7 +27,7 @@ minecraft {
     mappings = "${version_mcp}"
     makeObfSourceJar = false
     
-    replaceIn "Reference.java"
+    replaceIn "MorePlates.java"
     replace "@version@", project.version
 }
 
@@ -71,6 +71,8 @@ curseforge {
 		releaseType = 'release'
 		changelog = 'https://github.com/PanSzelescik/moreplates/blob/master/CHANGELOG.md'
 		relations {
+			requiredDependency 'morelibs'
+			
 			optionalDependency 'tinkers-construct'
 			optionalDependency 'thermalexpansion'
 			optionalDependency 'the-twilight-forest'

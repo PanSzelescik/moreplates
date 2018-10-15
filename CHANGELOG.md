@@ -1,5 +1,8 @@
 # More Plates Changelog
 
+### 1.12.2-5.4.0
+- Update to use More Libs - my library mod
+
 ### 1.12.2-5.3.1
 - Added option to make Silicon Gear and Plate with ingotSilicon
 - Changed description and add logo

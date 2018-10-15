@@ -1,7 +1,5 @@
 package panszelescik.moreplates;
 
-import static panszelescik.moreplates.Reference.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,16 +15,16 @@ import panszelescik.moreplates.config.ConfigItems;
 import panszelescik.moreplates.init.Items;
 import panszelescik.moreplates.init.PluginLoader;
 
-@Mod(
-		modid = MODID, 
-		name = NAME, 
-		version = VERSION, 
-		dependencies = DEPENDENCIES, 
-		guiFactory = GUI_FACTORY, 
-		acceptedMinecraftVersions = ACCEPTED_MINECRAFT_VERSIONS, 
-		updateJSON = UPDATE_JSON
-	)
+@Mod(modid = MorePlates.MODID, name = MorePlates.NAME, version = MorePlates.VERSION, dependencies = MorePlates.DEPENDENCIES, guiFactory = MorePlates.GUI_FACTORY, acceptedMinecraftVersions = MorePlates.ACCEPTED_MINECRAFT_VERSIONS, updateJSON = MorePlates.UPDATE_JSON)
 public class MorePlates {
+	
+	public static final String
+		MODID = "moreplates",
+		NAME = "More Plates",
+		VERSION = "@version@",
+		UPDATE_JSON = "https://raw.githubusercontent.com/PanSzelescik/moreplates/master/update.json",
+		ACCEPTED_MINECRAFT_VERSIONS = "[1.12.2,1.13)",
+		GUI_FACTORY = "panszelescik.moreplates.config.ModGuiFactory";
 	
 	public static final CreativeTabs TAB = new CreativeTabs(MODID) {
 		@Override
@@ -80,4 +78,31 @@ public class MorePlates {
 		if (ConfigItems.cfg.hasChanged())
 			ConfigItems.cfg.save();
 	}
+	
+	public static final String DEPENDENCIES = 
+			  "required-after:morelibs@[1.0.0,);"
+			+ "after:actuallyadditions@[1.12.2-r136,);"
+			+ "after:appliedenergistics2;"
+			+ "after:avaritia;"
+			+ "after:botania;"
+			+ "after:calculator;"
+			+ "after:draconicevolution;"
+			+ "after:enderio@[5.0.36,);"
+			+ "after:extrautils2;"
+			+ "after:immersiveengineering;"
+			+ "after:ic2;"
+			+ "after:mekanism;"
+			+ "after:mysticalagradditions;"
+			+ "after:mysticalagriculture;"
+			+ "after:plustic;"
+			+ "after:pneumaticcraft;"
+			+ "after:projecte;"
+			+ "after:projectred-core;"
+			+ "after:refinedstorage;"
+			+ "after:soulshardstow;"
+			+ "after:techreborn;"
+			+ "after:thaumcraft;"
+			+ "after:thermalexpansion;"
+			+ "after:tconstruct;"
+			+ "after:twilightforest";
 }
