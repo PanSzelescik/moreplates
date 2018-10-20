@@ -1,6 +1,11 @@
 # More Plates Changelog
 
+### 1.12.2-5.4.1
+- Requires More Libs 1.0.2+
+- Fixed version
+
 ### 1.12.2-5.4.0
+- Requires More Libs 1.0.0+
 - Update to use More Libs - my library mod
 
 ### 1.12.2-5.3.1
