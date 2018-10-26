@@ -55,7 +55,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 
 	@Override
 	public int getItemDamage(ItemStack stack) {
-		return NBTHelper.getInt(stack, "Damage");
+		return NBTHelper.getInt(stack, "Damage", 0);
 	}
 	
 	@Override
@@ -81,7 +81,7 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 				amount--;
 		if (amount <= 0)
 			return;
-		int curDamage = NBTHelper.getInt(stack, "Damage");
+		int curDamage = NBTHelper.getInt(stack, "Damage", 0);
 		curDamage += amount;
 		if (player instanceof EntityPlayerMP)
 			CriteriaTriggers.ITEM_DURABILITY_CHANGED.trigger((EntityPlayerMP)player, stack, curDamage);
@@ -98,13 +98,13 @@ public class ItemHammer extends ItemBase implements IItemDamageble {
 	
 	@Override
 	public boolean showDurabilityBar(ItemStack stack) {
-		return NBTHelper.getInt(stack, "Damage") > 0;
+		return NBTHelper.getInt(stack, "Damage", 0) > 0;
 	}
 	
 	@Override
 	public double getDurabilityForDisplay(ItemStack stack) {
 		double max = (double)getItemMaxDamage(stack);
-		return NBTHelper.getInt(stack, "Damage") / max;
+		return NBTHelper.getInt(stack, "Damage", 0) / max;
 	}
 	
 	@Override
