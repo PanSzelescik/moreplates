@@ -1,5 +1,9 @@
 # More Plates Changelog
 
+### 1.12.2-5.4.3
+- Requires More Libs 1.0.6+
+- Config now uses config stuff from More Libs
+
 ### 1.12.2-5.4.2
 - Requires More Libs 1.0.4+
 - Fix to new version More Libs

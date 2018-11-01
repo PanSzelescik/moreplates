@@ -1,8 +1,8 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/moreplates/files",
 	"promos": {
-		"1.12.2-latest": "5.4.2",
-		"1.12.2-recommended": "5.4.2",
+		"1.12.2-latest": "5.4.3",
+		"1.12.2-recommended": "5.4.3",
 		"1.12.1-latest": "3.2.0",
 		"1.12.1-recommended": "3.2.0",
 		"1.12-latest": "3.2.0",
@@ -13,6 +13,7 @@
 		"1.10.2-recommended": "2.6.1"
 	},
 	"1.12.2": {
+	"5.4.3": "Requires More Libs 1.0.6+\nConfig now uses config stuff from More Libs",
 	"5.4.2": "Requires More Libs 1.0.4+\nFix to new version More Libs",
 	"5.4.1": "Requires More Libs 1.0.2+\nFixed version",
 	"5.4.0": "Requires More Libs 1.0.0+\nUpdate to use More Libs - my library mod",

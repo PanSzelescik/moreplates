@@ -73,14 +73,14 @@ public class MorePlates {
 	}
 	
 	private void saveConfig() {
-		if (Config.cfg.hasChanged())
-			Config.cfg.save();
-		if (ConfigItems.cfg.hasChanged())
-			ConfigItems.cfg.save();
+		if (Config.getCfg().hasChanged())
+			Config.getCfg().save();
+		if (ConfigItems.getCfg().hasChanged())
+			ConfigItems.getCfg().save();
 	}
 	
 	public static final String DEPENDENCIES = 
-			  "required-after:morelibs@[1.0.2,);"
+			  "required-after:morelibs@[1.0.6,);"
 			+ "after:actuallyadditions@[1.12.2-r136,);"
 			+ "after:appliedenergistics2;"
 			+ "after:avaritia;"
