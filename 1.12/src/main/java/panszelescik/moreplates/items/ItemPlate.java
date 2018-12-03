@@ -3,19 +3,14 @@ package panszelescik.moreplates.items;
 import static panszelescik.moreplates.MorePlates.*;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import panszelescik.morelibs.api.ItemBase;
 
-public class ItemPlate extends ItemBase {
+public class ItemPlate extends BaseItem {
 	
 	public ItemPlate(String name) {
-		super(TAB);
-		name += "_plate";
-		setTranslationKey(MODID + "." + name);
-		setRegistryName(new ResourceLocation(MODID, name));
+		super(name + "_plate");
 	}
 	
 	@SideOnly(Side.CLIENT)

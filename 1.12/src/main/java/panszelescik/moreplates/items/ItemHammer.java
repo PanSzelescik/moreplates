@@ -1,7 +1,5 @@
 package panszelescik.moreplates.items;
 
-import static panszelescik.moreplates.MorePlates.*;
-
 import java.util.List;
 import java.util.Random;
 
@@ -18,25 +16,20 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import panszelescik.morelibs.api.IItemDamageble;
-import panszelescik.morelibs.api.ItemBase;
 import panszelescik.morelibs.api.NBTHelper;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.helpers.Helper;
 
-public class ItemHammer extends ItemBase implements IItemDamageble {
+public class ItemHammer extends BaseItem implements IItemDamageble {
 	
 	static final Random RAND = new Random();
 	
 	public ItemHammer() {
-		super(TAB);
-		String name = "hammer";
-		setTranslationKey(MODID + "." + name);
-		setRegistryName(new ResourceLocation(MODID, name));
+		super("hammer");
 		setContainerItem(this);
 		setMaxDamage(getDurability());
 		maxStackSize = 1;

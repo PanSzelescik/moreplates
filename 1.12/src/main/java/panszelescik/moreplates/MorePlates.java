@@ -80,7 +80,7 @@ public class MorePlates {
 	}
 	
 	public static final String DEPENDENCIES = 
-			  "required-after:morelibs@[1.0.6,);"
+			  "required-after:morelibs@[1.0.8,);"
 			+ "after:actuallyadditions@[1.12.2-r136,);"
 			+ "after:appliedenergistics2;"
 			+ "after:avaritia;"
