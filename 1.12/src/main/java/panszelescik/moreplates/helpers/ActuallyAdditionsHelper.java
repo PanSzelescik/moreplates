@@ -18,14 +18,14 @@ public class ActuallyAdditionsHelper extends Helper {
 		List<ItemStack> dyes = OreDictionary.getOres(dye);
 		for (ItemStack dyeStack : dyes) {
 			if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
-				logger.debug(INFO_EMPOWERER + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-				ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(GEAR + input)), getOre(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
+				logger.debug(INFO_EMPOWERER + getItemName(GEAR + output) + INFO_3 + getItemName(GEAR + input) + ", "  + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+				ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(get(GEAR + input)), get(GEAR + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
 				
 				EmpowererRecipes += 1;
 			}
 			if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
-				logger.debug(INFO_EMPOWERER + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
-				ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(getOre(PLATE + input)), getOre(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
+				logger.debug(INFO_EMPOWERER + getItemName(PLATE + output) + INFO_3 + getItemName(PLATE + input) + ", " + getItemName(dyeStack) + ", " + getItemName(modifier2) + ", " + getItemName(modifier3) + " and " + getItemName(modifier4));
+				ActuallyAdditionsAPI.addEmpowererRecipe(Ingredient.fromStacks(get(PLATE + input)), get(PLATE + output), Ingredient.fromStacks(dyeStack), Ingredient.fromStacks(modifier2), Ingredient.fromStacks(modifier3), Ingredient.fromStacks(modifier4), energyEmpowerer(), timeEmpowerer(), null);
 				
 				EmpowererRecipes += 1;
 			}
@@ -36,8 +36,8 @@ public class ActuallyAdditionsHelper extends Helper {
 		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
 			List<ItemStack> inputs = OreDictionary.getOres(GEAR + input);
 			for (ItemStack inputStack : inputs) {
-				logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(GEAR + output) + INFO_3 + getItemName(inputStack));
-				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(GEAR + output), energyReconstructor(output, energy));
+				logger.debug(INFO_RECONSTRUCTOR + getItemName(GEAR + output) + INFO_3 + getItemName(inputStack));
+				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), get(GEAR + output), energyReconstructor(output, energy));
 				
 				AtomicReconstructorRecipes += 1;
 			}
@@ -45,8 +45,8 @@ public class ActuallyAdditionsHelper extends Helper {
 		if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
 			List<ItemStack> inputss = OreDictionary.getOres(PLATE + input);
 			for (ItemStack inputStack : inputss) {
-				logger.debug(INFO_RECONSTRUCTOR + getItemNameFromOre(PLATE + output) + INFO_3 + getItemName(inputStack));
-				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), getOre(PLATE + output), energyReconstructor(output, energy));
+				logger.debug(INFO_RECONSTRUCTOR + getItemName(PLATE + output) + INFO_3 + getItemName(inputStack));
+				ActuallyAdditionsAPI.addReconstructorLensConversionRecipe(Ingredient.fromStacks(inputStack), get(PLATE + output), energyReconstructor(output, energy));
 				
 				AtomicReconstructorRecipes += 1;
 			}

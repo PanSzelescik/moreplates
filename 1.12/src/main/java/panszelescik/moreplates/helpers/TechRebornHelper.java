@@ -12,8 +12,8 @@ public class TechRebornHelper extends Helper {
 	
 	public static void add(String output, String input, boolean plate) {
 		if (oreNameExists(input) && plate && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
-			RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor(), energyCompressor()));
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + output) + INFO_3 + getItemName(input));
+			RecipeHandler.addRecipe(new CompressorRecipe(input, get(PLATE + output), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
@@ -21,26 +21,26 @@ public class TechRebornHelper extends Helper {
 	
 	public static void add(String output, String input) {
 		if (oreNameExists(input) && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(input));
-			RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(PLATE + output), timeCompressor(), energyCompressor()));
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + output) + INFO_3 + getItemName(input));
+			RecipeHandler.addRecipe(new CompressorRecipe(input, get(PLATE + output), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
 	}
 	
 	public static void add(String output, String input, String id) {
-		if (checkIsNotNull(id, input) && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input));
-			RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output), timeCompressor(), energyCompressor()));
+		if (notNull(id, input) && oreNameExists(PLATE + output)) {
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + output) + INFO_3 + getItemName(id, input));
+			RecipeHandler.addRecipe(new CompressorRecipe(get(id, input), get(PLATE + output), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
 	}
 	
 	public static void add(String output, String input, String id, int meta) {
-		if (checkIsNotNull(id, input, meta)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
-			RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output), timeCompressor(), energyCompressor()));
+		if (notNull(id, input, meta)) {
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + output) + INFO_3 + getItemName(id, input, 1, meta));
+			RecipeHandler.addRecipe(new CompressorRecipe(get(id, input, 1, meta), get(PLATE + output), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
@@ -48,8 +48,8 @@ public class TechRebornHelper extends Helper {
 	
 	public static void addGaia(String output, String input) {
 		if (oreNameExists(input) && oreNameExists(output + "Plate")) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(output + "Plate") + INFO_3 + getItemNameFromOre(input));
-			RecipeHandler.addRecipe(new CompressorRecipe(input, getOre(output + "Plate"), timeCompressor(), energyCompressor()));
+			logger.debug(INFO_TECHREBORN + getItemName(output + "Plate") + INFO_3 + getItemName(input));
+			RecipeHandler.addRecipe(new CompressorRecipe(input, get(output + "Plate"), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
@@ -57,8 +57,8 @@ public class TechRebornHelper extends Helper {
 	
 	public static void addBlock(String name, int amount, boolean plate) {
 		if (oreNameExists(BLOCK + name) && plate && oreNameExists(PLATE + name)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
-			RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor(), energyCompressor()));
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + name) + " x" + amount + INFO_3 + getItemName(BLOCK + name));
+			RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, get(PLATE + name, amount), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
@@ -66,26 +66,26 @@ public class TechRebornHelper extends Helper {
 	
 	public static void addBlock(String name, int amount) {
 		if (oreNameExists(BLOCK + name) && oreNameExists(PLATE + name)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + name) + " x" + amount + INFO_3 + getItemNameFromOre(BLOCK + name));
-			RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, getOre(PLATE + name, amount), timeCompressor(), energyCompressor()));
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + name) + " x" + amount + INFO_3 + getItemName(BLOCK + name));
+			RecipeHandler.addRecipe(new CompressorRecipe(BLOCK + name, get(PLATE + name, amount), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
 	}
 	
 	public static void addBlock(String output, String input, int amount, String id) {
-		if (checkIsNotNull(id, input) && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input));
-			RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input), getOre(PLATE + output, amount), timeCompressor(), energyCompressor()));
+		if (notNull(id, input) && oreNameExists(PLATE + output)) {
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + output) + " x" + amount + INFO_3 + getItemName(id, input));
+			RecipeHandler.addRecipe(new CompressorRecipe(get(id, input), get(PLATE + output, amount), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}
 	}
 	
 	public static void addBlock(String output, String input, int amount, String id, int meta) {
-		if (checkIsNotNull(id, input, meta) && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_TECHREBORN + getItemNameFromOre(PLATE + output) + " x" + amount + INFO_3 + getItemNameFromItemStack(id, input, 1, meta));
-			RecipeHandler.addRecipe(new CompressorRecipe(getItemStack(id, input, 1, meta), getOre(PLATE + output, amount), timeCompressor(), energyCompressor()));
+		if (notNull(id, input, meta) && oreNameExists(PLATE + output)) {
+			logger.debug(INFO_TECHREBORN + getItemName(PLATE + output) + " x" + amount + INFO_3 + getItemName(id, input, 1, meta));
+			RecipeHandler.addRecipe(new CompressorRecipe(get(id, input, 1, meta), get(PLATE + output, amount), timeCompressor(), energyCompressor()));
 			
 			CompressorRecipes += 1;
 		}

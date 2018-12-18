@@ -11,14 +11,14 @@ public class BotaniaHelper extends Helper {
 	
 	public static void addManaInfusion(String output, String input) {
 		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
-			logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input));
-			BotaniaAPI.registerManaInfusionRecipe(getOre(GEAR + output), GEAR + input, manasteelMana());
+			logger.debug(INFO_MANA_INFUSION + getItemName(GEAR + output) + INFO_3 + getItemName(GEAR + input));
+			BotaniaAPI.registerManaInfusionRecipe(get(GEAR + output), GEAR + input, manasteelMana());
 			
 			ManaInfusionRecipes += 1;
 		}
 		if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_MANA_INFUSION + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input));
-			BotaniaAPI.registerManaInfusionRecipe(getOre(PLATE + output), PLATE + input, manasteelMana());
+			logger.debug(INFO_MANA_INFUSION + getItemName(PLATE + output) + INFO_3 + getItemName(PLATE + input));
+			BotaniaAPI.registerManaInfusionRecipe(get(PLATE + output), PLATE + input, manasteelMana());
 			
 			ManaInfusionRecipes += 1;
 		}
@@ -26,14 +26,14 @@ public class BotaniaHelper extends Helper {
 	
 	public static void addElvenTrade(String output, String input) {
 		if (oreNameExists(GEAR + input) && oreNameExists(GEAR + output)) {
-			logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(GEAR + output) + INFO_3 + getItemNameFromOre(GEAR + input) + " x2");
-			BotaniaAPI.registerElvenTradeRecipe(getOre(GEAR + output), GEAR + input, GEAR + input);
+			logger.debug(INFO_ELVEN_TRADE + getItemName(GEAR + output) + INFO_3 + getItemName(GEAR + input) + " x2");
+			BotaniaAPI.registerElvenTradeRecipe(get(GEAR + output), GEAR + input, GEAR + input);
 			
 			ElvenTradeRecipes += 1;
 		}
 		if (oreNameExists(PLATE + input) && oreNameExists(PLATE + output)) {
-			logger.debug(INFO_ELVEN_TRADE + getItemNameFromOre(PLATE + output) + INFO_3 + getItemNameFromOre(PLATE + input) + " x2");
-			BotaniaAPI.registerElvenTradeRecipe(getOre(PLATE + output), PLATE + input, PLATE + input);
+			logger.debug(INFO_ELVEN_TRADE + getItemName(PLATE + output) + INFO_3 + getItemName(PLATE + input) + " x2");
+			BotaniaAPI.registerElvenTradeRecipe(get(PLATE + output), PLATE + input, PLATE + input);
 			
 			ElvenTradeRecipes += 1;
 		}
