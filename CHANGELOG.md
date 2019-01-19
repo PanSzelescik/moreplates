@@ -1,5 +1,12 @@
 # More Plates Changelog
 
+### 1.12.2-5.5.0
+- Requires More Libs 1.2.0+
+- Plugin system version 3.0
+- Use easy register system for Hammer
+- Cleanups
+- Refactors
+
 ### 1.12.2-5.4.4
 - Requires More Libs 1.0.8+
 - Changes for new More Libs

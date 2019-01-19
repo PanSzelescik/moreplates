@@ -5,8 +5,8 @@ config.moreplates.category.plugins=Pluginy
 
 config.moreplates.category.items=Przedmioty
 
-item.moreplates.hammer.name=Młot
-item.moreplates.hammer.uses_left=Pozostało użyć: 
+item.hammer.name=Młot
+item.hammer.uses_left=Pozostało użyć: 
 
 item.moreplates.coal_gear.name=Przekładnia z węgla
 item.moreplates.coal_plate.name=Płyta z węgla

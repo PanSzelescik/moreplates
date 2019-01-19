@@ -1,16 +1,17 @@
 package panszelescik.moreplates.plugins;
 
-public class PluginThaumcraft extends PluginBase {
-	
-	public static final String MODID = "thaumcraft";
-	public static final String MODNAME = "Thaumcraft";
-	
-	public PluginThaumcraft() {
-		super(MODID, MODNAME);
-	}
-	
-	public void preInit() {
-		reg(AMBER, "amber");
-		reg(QUICKSILVER, "quicksilver");
-	}
+import panszelescik.moreplates.helpers.PluginHelper;
+import panszelescik.moreplates.init.Plugin;
+
+@Plugin(modid = PluginThaumcraft.MODID, modname = PluginThaumcraft.MODNAME)
+public class PluginThaumcraft extends PluginHelper {
+
+    public static final String MODID = "thaumcraft";
+    public static final String MODNAME = "Thaumcraft";
+
+    @Plugin.PreInit
+    public static void preInit() {
+        reg(AMBER, "amber");
+        reg(QUICKSILVER, "quicksilver");
+    }
 }

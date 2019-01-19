@@ -2,87 +2,85 @@ package panszelescik.moreplates.plugins;
 
 import net.minecraft.init.Items;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.moreplates.helpers.PluginHelper;
+import panszelescik.moreplates.init.Plugin;
 
-public class PluginMinecraft extends PluginBase {
-	
-	public static final String MODID = "minecraft";
-	public static final String MODNAME = "Minecraft";
-	
-	public PluginMinecraft() {
-		super(MODID, MODNAME);
-	}
-	
-	public static boolean gearCoal, plateCoal, gearDiamond, plateDiamond, gearEmerald, plateEmerald, gearGlowstone, plateGlowstone, gearGold, plateGold, stickGold, gearIron, plateIron, stickIron, gearLapisLazuli, plateLapisLazuli, gearNetherQuartz, plateNetherQuartz, gearRedstone, plateRedstone;
-	
-	public void preInit() {
-		OreDictionary.registerOre("coal", Items.COAL);
-		
-		if (!oreNameExists(GEAR + COAL)) {
-			regCustomGear(gearCoal, COAL, "coal");
-		}
-		if (!oreNameExists(PLATE + COAL)) {
-			regCustomPlate(plateCoal, COAL, "coal");
-		}
-		if (!oreNameExists(GEAR + DIAMOND)) {
-			regCustomGear(gearDiamond, DIAMOND, "diamond");
-		}
-		if (!oreNameExists(PLATE + DIAMOND)) {
-			regCustomPlate(plateDiamond, DIAMOND, "diamond");
-		}
-		if (!oreNameExists(GEAR + EMERALD)) {
-			regCustomGear(gearEmerald, EMERALD, "emerald");
-		}
-		if (!oreNameExists(PLATE + EMERALD)) {
-			regCustomPlate(plateEmerald, EMERALD, "emerald");
-		}
-		if (!oreNameExists(GEAR + GLOWSTONE)) {
-			regCustomGear(gearGlowstone, GLOWSTONE, "glowstone");
-		}
-		if (!oreNameExists(PLATE + GLOWSTONE)) {
-			regCustomPlate(plateGlowstone, GLOWSTONE, "glowstone");
-		}
-		if (!oreNameExists(GEAR + GOLD)) {
-			regCustomGear(gearGold, GOLD, "gold");
-		}
-		if (!oreNameExists(PLATE + GOLD)
-		&& !isLoaded(PluginImmersiveEngineering.MODID)
-		&& !isLoaded("libvulpes")) {
-			regCustomPlate(plateGold, GOLD, "gold");
-		}
-		if (!oreNameExists(STICK + GOLD)) {
-			regCustomStick(stickGold, GOLD, "gold");
-		}
-		if (!oreNameExists(GEAR + IRON)
-		&& !isLoaded("libvulpes")) {
-			regCustomGear(gearIron, IRON, "iron");
-		}
-		if (!oreNameExists(PLATE + IRON)
-		&& !isLoaded(PluginImmersiveEngineering.MODID)
-		&& !isLoaded("libvulpes")) {
-			regCustomPlate(plateIron, IRON, "iron");
-		}
-		if (!oreNameExists(STICK + IRON)
-		&& !isLoaded(PluginImmersiveEngineering.MODID)
-		&& !isLoaded("libvulpes")) {
-			regCustomStick(stickIron, IRON, "iron");
-		}
-		if (!oreNameExists(GEAR + LAPIS)) {
-			regCustomGear(gearLapisLazuli, LAPIS, "lapis_lazuli");
-		}
-		if (!oreNameExists(PLATE + LAPIS)) {
-			regCustomPlate(plateLapisLazuli, LAPIS, "lapis_lazuli");
-		}
-		if (!oreNameExists(GEAR + QUARTZ)) {
-			regCustomGear(gearNetherQuartz, QUARTZ, "nether_quartz");
-		}
-		if (!oreNameExists(PLATE + QUARTZ)) {
-			regCustomPlate(plateNetherQuartz, QUARTZ, "nether_quartz");
-		}
-		if (!oreNameExists(GEAR + REDSTONE)) {
-			regCustomGear(gearRedstone, REDSTONE, "redstone");
-		}
-		if (!oreNameExists(PLATE + REDSTONE)) {
-			regCustomPlate(plateRedstone, REDSTONE, "redstone");
-		}
-	}
+@Plugin(modid = PluginMinecraft.MODID, modname = PluginMinecraft.MODNAME, checkModid = false)
+public class PluginMinecraft extends PluginHelper {
+
+    public static final String MODID = "minecraft";
+    public static final String MODNAME = "Minecraft";
+
+    @Plugin.PreInit
+    public static void preInit() {
+        OreDictionary.registerOre("coal", Items.COAL);
+
+        if (!oreNameExists(GEAR + COAL)) {
+            regGear("coal", COAL);
+        }
+        if (!oreNameExists(PLATE + COAL)) {
+            regPlate("coal", COAL);
+        }
+        if (!oreNameExists(GEAR + DIAMOND)) {
+            regGear("diamond", DIAMOND);
+        }
+        if (!oreNameExists(PLATE + DIAMOND)) {
+            regPlate("diamond", DIAMOND);
+        }
+        if (!oreNameExists(GEAR + EMERALD)) {
+            regGear("emerald", EMERALD);
+        }
+        if (!oreNameExists(PLATE + EMERALD)) {
+            regPlate("emerald", EMERALD);
+        }
+        if (!oreNameExists(GEAR + GLOWSTONE)) {
+            regGear("glowstone", GLOWSTONE);
+        }
+        if (!oreNameExists(PLATE + GLOWSTONE)) {
+            regPlate("glowstone", GLOWSTONE);
+        }
+        if (!oreNameExists(GEAR + GOLD)) {
+            regGear("gold", GOLD);
+        }
+        if (!oreNameExists(PLATE + GOLD)
+                && !isLoaded(PluginImmersiveEngineering.MODID)
+                && !isLoaded("libvulpes")) {
+            regPlate("gold", GOLD);
+        }
+        if (!oreNameExists(STICK + GOLD)) {
+            regStick("gold", GOLD);
+        }
+        if (!oreNameExists(GEAR + IRON)
+                && !isLoaded("libvulpes")) {
+            regGear("iron", IRON);
+        }
+        if (!oreNameExists(PLATE + IRON)
+                && !isLoaded(PluginImmersiveEngineering.MODID)
+                && !isLoaded("libvulpes")) {
+            regPlate("iron", IRON);
+        }
+        if (!oreNameExists(STICK + IRON)
+                && !isLoaded(PluginImmersiveEngineering.MODID)
+                && !isLoaded("libvulpes")) {
+            regStick("iron", IRON);
+        }
+        if (!oreNameExists(GEAR + LAPIS)) {
+            regGear("lapis_lazuli", LAPIS);
+        }
+        if (!oreNameExists(PLATE + LAPIS)) {
+            regPlate("lapis_lazuli", LAPIS);
+        }
+        if (!oreNameExists(GEAR + QUARTZ)) {
+            regGear("nether_quartz", QUARTZ);
+        }
+        if (!oreNameExists(PLATE + QUARTZ)) {
+            regPlate("nether_quartz", QUARTZ);
+        }
+        if (!oreNameExists(GEAR + REDSTONE)) {
+            regGear("redstone", REDSTONE);
+        }
+        if (!oreNameExists(PLATE + REDSTONE)) {
+            regPlate("redstone", REDSTONE);
+        }
+    }
 }

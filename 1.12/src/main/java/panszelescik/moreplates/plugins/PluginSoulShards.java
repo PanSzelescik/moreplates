@@ -1,15 +1,16 @@
 package panszelescik.moreplates.plugins;
 
-public class PluginSoulShards extends PluginBase {
-	
-	public static final String MODID = "soulshardstow";
-	public static final String MODNAME = "Soul Shards - The Old Ways";
-	
-	public PluginSoulShards() {
-		super(MODID, MODNAME);
-	}
-	
-	public void preInit() {
-		reg(CORRUPTED, "corrupted");
-	}
+import panszelescik.moreplates.helpers.PluginHelper;
+import panszelescik.moreplates.init.Plugin;
+
+@Plugin(modid = PluginSoulShards.MODID, modname = PluginSoulShards.MODNAME)
+public class PluginSoulShards extends PluginHelper {
+
+    public static final String MODID = "soulshardstow";
+    public static final String MODNAME = "Soul Shards - The Old Ways";
+
+    @Plugin.PreInit
+    public static void preInit() {
+        reg(CORRUPTED, "corrupted");
+    }
 }

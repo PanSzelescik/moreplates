@@ -1,12 +1,11 @@
 package panszelescik.moreplates.items;
 
-import static panszelescik.moreplates.MorePlates.*;
-
 import panszelescik.morelibs.api.ItemBase;
+import panszelescik.moreplates.MorePlates;
 
 public class BaseItem extends ItemBase {
 
-	public BaseItem(String name) {
-		super(TAB, MODID, name);
-	}
+    protected BaseItem(String name) {
+        super(MorePlates.TAB, MorePlates.MODID, name);
+    }
 }

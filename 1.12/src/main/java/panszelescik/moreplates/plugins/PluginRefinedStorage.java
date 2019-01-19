@@ -1,15 +1,16 @@
 package panszelescik.moreplates.plugins;
 
-public class PluginRefinedStorage extends PluginBase {
-	
-	public static final String MODID = "refinedstorage";
-	public static final String MODNAME = "Refined Storage";
-	
-	public PluginRefinedStorage() {
-		super(MODID, MODNAME);
-	}
-	
-	public void preInit() {
-		reg(QUARTZ_ENRICHED_IRON, "quartz_enriched_iron");
-	}
+import panszelescik.moreplates.helpers.PluginHelper;
+import panszelescik.moreplates.init.Plugin;
+
+@Plugin(modid = PluginRefinedStorage.MODID, modname = PluginRefinedStorage.MODNAME)
+public class PluginRefinedStorage extends PluginHelper {
+
+    public static final String MODID = "refinedstorage";
+    public static final String MODNAME = "Refined Storage";
+
+    @Plugin.PreInit
+    public static void preInit() {
+        reg(QUARTZ_ENRICHED_IRON, "quartz_enriched_iron");
+    }
 }

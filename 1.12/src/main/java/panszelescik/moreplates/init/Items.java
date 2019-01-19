@@ -1,17 +1,12 @@
 package panszelescik.moreplates.init;
 
-import static panszelescik.moreplates.helpers.Helper.*;
+import panszelescik.morelibs.register.Register;
+import panszelescik.moreplates.MorePlates;
+import panszelescik.moreplates.items.ItemHammer;
 
-import net.minecraft.item.Item;
-import panszelescik.moreplates.items.*;
-
+@Register(modid = MorePlates.MODID)
 public class Items {
-	
-	public static Item hammer;
-	
-	public static void preInit() {
-		hammer = new ItemHammer();
-		
-		regItem(hammer);
-	}
+
+    @Register.RegisterItem(registryName = "hammer")
+    public static ItemHammer hammer;
 }

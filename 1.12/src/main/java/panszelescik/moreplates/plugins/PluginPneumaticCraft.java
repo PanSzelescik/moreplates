@@ -1,15 +1,16 @@
 package panszelescik.moreplates.plugins;
 
-public class PluginPneumaticCraft extends PluginBase {
-	
-	public static final String MODID = "pneumaticcraft";
-	public static final String MODNAME = "PneumaticCraft: Repressurized";
-	
-	public PluginPneumaticCraft() {
-		super(MODID, MODNAME);
-	}
-	
-	public void preInit() {
-		reg(COMPRESSED_IRON, "compressed_iron");
-	}
+import panszelescik.moreplates.helpers.PluginHelper;
+import panszelescik.moreplates.init.Plugin;
+
+@Plugin(modid = PluginPneumaticCraft.MODID, modname = PluginPneumaticCraft.MODNAME)
+public class PluginPneumaticCraft extends PluginHelper {
+
+    public static final String MODID = "pneumaticcraft";
+    public static final String MODNAME = "PneumaticCraft: Repressurized";
+
+    @Plugin.PreInit
+    public static void preInit() {
+        reg(COMPRESSED_IRON, "compressed_iron");
+    }
 }
