@@ -1,8 +1,8 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/moreplates/files",
 	"promos": {
-		"1.12.2-latest": "5.5.0",
-		"1.12.2-recommended": "5.5.0",
+		"1.12.2-latest": "5.5.1",
+		"1.12.2-recommended": "5.5.1",
 		"1.12.1-latest": "3.2.0",
 		"1.12.1-recommended": "3.2.0",
 		"1.12-latest": "3.2.0",
@@ -13,6 +13,7 @@
 		"1.10.2-recommended": "2.6.1"
 	},
 	"1.12.2": {
+	"5.5.1": "Requires More Libs 1.2.0+\nFixed errors in Config, now is only one\nRecipes are now in Plugins, not in RecipeAdder",
 	"5.5.0": "Requires More Libs 1.2.0+\nPlugin system version 3.0\nUse easy register system for Hammer\nCleanups\nRefactors",
 	"5.4.4": "Requires More Libs 1.0.8+\nChanges for new More Libs",
 	"5.4.3": "Requires More Libs 1.0.6+\nConfig now uses config stuff from More Libs",

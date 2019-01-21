@@ -1,5 +1,10 @@
 # More Plates Changelog
 
+### 1.12.2-5.5.1
+- Requires More Libs 1.2.0+
+- Fixed errors in Config, now is only one
+- Recipes are now in Plugins, not in RecipeAdder
+
 ### 1.12.2-5.5.0
 - Requires More Libs 1.2.0+
 - Plugin system version 3.0
