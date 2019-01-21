@@ -3,9 +3,9 @@ package panszelescik.moreplates.config;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.fml.client.config.IConfigElement;
+import panszelescik.morelibs.api.Helper;
 import panszelescik.morelibs.config.ModGuiConfigBase;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.helpers.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public class ModGuiConfig extends ModGuiConfigBase {
 
     ModGuiConfig(GuiScreen guiScreen) {
-        super(guiScreen, getConfigElements(), MorePlates.MODID, Strings.CONFIG_TITLE);
+        super(guiScreen, getConfigElements(), MorePlates.MODID, Helper.translate("config.moreplates.title"));
     }
 
     private static List<IConfigElement> getConfigElements() {
@@ -22,8 +22,6 @@ public class ModGuiConfig extends ModGuiConfigBase {
             Config.getCfg().setCategoryLanguageKey(category, "config.moreplates.category." + category);
             list.add(new ConfigElement(Config.getCfg().getCategory(category)));
         }
-        ConfigItems.getCfg().setCategoryLanguageKey(ConfigItems.CATEGORY_ITEMS, "config.moreplates.category." + ConfigItems.CATEGORY_ITEMS);
-        list.add(new ConfigElement(ConfigItems.getCfg().getCategory(ConfigItems.CATEGORY_ITEMS)));
         return list;
     }
 }

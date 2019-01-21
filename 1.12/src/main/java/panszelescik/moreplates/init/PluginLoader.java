@@ -78,7 +78,7 @@ public class PluginLoader {
     }
 
     private static boolean getB(String modname) {
-        return Config.getBoolean(modname, Config.CATEGORY_PLUGINS, "Enable this to load " + modname + " plugin");
+        return MorePlates.config.getBoolean(modname, Config.CATEGORY_PLUGINS, "Enable this to load " + modname + " plugin");
     }
 
     public static boolean isLoaded(String modname) {

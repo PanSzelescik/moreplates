@@ -39,6 +39,6 @@ public class BotaniaHelper extends PluginHelper {
     }
 
     private static int manasteelMana() {
-        return Config.getInt("Mana for Manasteel", Config.CATEGORY_BOTANIA, 3000, "Amount of mana used to make Manasteel Gear and Plate");
+        return MorePlates.config.getInt("Mana for Manasteel", Config.CATEGORY_BOTANIA, 3000, "Amount of mana used to make Manasteel Gear and Plate");
     }
 }

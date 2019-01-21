@@ -53,14 +53,14 @@ public class ActuallyAdditionsHelper extends PluginHelper {
     }
 
     private static int energyEmpowerer() {
-        return Config.getInt("Energy in Empowerer", Config.CATEGORY_ACTUALLY, 5000, "Energy per Display Stand used to make Empowered Gears and Plates in Empowerer");
+        return MorePlates.config.getInt("Energy in Empowerer", Config.CATEGORY_ACTUALLY, 5000, "Energy per Display Stand used to make Empowered Gears and Plates in Empowerer");
     }
 
     private static int timeEmpowerer() {
-        return Config.getInt("Time in Empowerer", Config.CATEGORY_ACTUALLY, 50, "Time in seconds to craft Empowered Gears and Plates in Empowerer");
+        return MorePlates.config.getInt("Time in Empowerer", Config.CATEGORY_ACTUALLY, 50, "Time in seconds to craft Empowered Gears and Plates in Empowerer");
     }
 
     private static int energyReconstructor(String name, int energy) {
-        return Config.getInt("Energy for " + name + " in Reconstructor", Config.CATEGORY_ACTUALLY, energy, "Energy used to make " + name + " Gear and Plate in Atomic Reconstructor");
+        return MorePlates.config.getInt("Energy for " + name + " in Reconstructor", Config.CATEGORY_ACTUALLY, energy, "Energy used to make " + name + " Gear and Plate in Atomic Reconstructor");
     }
 }

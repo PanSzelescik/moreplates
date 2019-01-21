@@ -103,7 +103,7 @@ public class ImmersiveEngineeringHelper extends PluginHelper {
     }
 
     private static int energyMetalPress() {
-        return Config.getInt("Energy in Metal Press", Config.CATEGORY_IMMERSIVE, 2400, "Energy used to make Gears and Plates in Metal Press");
+        return MorePlates.config.getInt("Energy in Metal Press", Config.CATEGORY_IMMERSIVE, 2400, "Energy used to make Gears and Plates in Metal Press");
     }
 
     private static ItemStack getMold(int meta) {

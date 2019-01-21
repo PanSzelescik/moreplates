@@ -158,10 +158,10 @@ public class ThermalExpansionHelper extends PluginHelper {
     }
 
     private static int energyCompactor() {
-        return Config.getInt("Energy in Compactor", Config.CATEGORY_THERMAL, 4000, "Energy used to make Gears and Plates in Compactor");
+        return MorePlates.config.getInt("Energy in Compactor", Config.CATEGORY_THERMAL, 4000, "Energy used to make Gears and Plates in Compactor");
     }
 
     private static int energyInductionSmelter() {
-        return Config.getInt("Energy in Induction Smelter", Config.CATEGORY_THERMAL, 2000, "Energy used to make ingots from Gears and Plates");
+        return MorePlates.config.getInt("Energy in Induction Smelter", Config.CATEGORY_THERMAL, 2000, "Energy used to make ingots from Gears and Plates");
     }
 }

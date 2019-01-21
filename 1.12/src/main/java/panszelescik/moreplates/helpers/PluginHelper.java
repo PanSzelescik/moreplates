@@ -5,7 +5,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.config.ConfigItems;
+import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.items.ItemGear;
 import panszelescik.moreplates.items.ItemPlate;
 import panszelescik.moreplates.items.ItemStick;
@@ -23,12 +23,12 @@ public class PluginHelper extends Strings {
 
     protected static void regGaia(String ore, String name) {
         Item gear = gear(name);
-        if (ConfigItems.loadItem(gear)) {
+        if (Config.loadItem(gear)) {
             regItem(gear);
             oreGearGaia(ore, gear);
         }
         Item plate = plate(name);
-        if (ConfigItems.loadItem(plate)) {
+        if (Config.loadItem(plate)) {
             regItem(plate);
             orePlateGaia(ore, plate);
         }
@@ -36,7 +36,7 @@ public class PluginHelper extends Strings {
 
     protected static void regGear(String name, String ore) {
         Item gear = gear(name);
-        if (ConfigItems.loadItem(gear)) {
+        if (Config.loadItem(gear)) {
             regItem(gear);
             oreGear(ore, gear);
         }
@@ -44,7 +44,7 @@ public class PluginHelper extends Strings {
 
     protected static void regPlate(String name, String ore) {
         Item plate = plate(name);
-        if (ConfigItems.loadItem(plate)) {
+        if (Config.loadItem(plate)) {
             regItem(plate);
             orePlate(ore, plate);
         }
@@ -52,7 +52,7 @@ public class PluginHelper extends Strings {
 
     protected static void regStick(String name, String ore) {
         Item stick = stick(name);
-        if (ConfigItems.loadItem(stick)) {
+        if (Config.loadItem(stick)) {
             regItem(stick);
             oreStick(ore, stick);
         }

@@ -91,10 +91,10 @@ public class TechRebornHelper extends PluginHelper {
     }
 
     private static int energyCompressor() {
-        return Config.getInt("Energy in Compressor", Config.CATEGORY_TECHREBORN, 4, "Energy used to make some Plates in Compressor (in EU/t)");
+        return MorePlates.config.getInt("Energy in Compressor", Config.CATEGORY_TECHREBORN, 4, "Energy used to make some Plates in Compressor (in EU/t)");
     }
 
     private static int timeCompressor() {
-        return Config.getInt("Time in Compressor", Config.CATEGORY_TECHREBORN, 300, "Time in ticks to craft some Plates in Compressor");
+        return MorePlates.config.getInt("Time in Compressor", Config.CATEGORY_TECHREBORN, 300, "Time in ticks to craft some Plates in Compressor");
     }
 }

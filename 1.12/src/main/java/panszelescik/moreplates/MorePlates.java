@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import panszelescik.moreplates.config.Config;
-import panszelescik.moreplates.config.ConfigItems;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Items;
 import panszelescik.moreplates.init.PluginLoader;
@@ -26,35 +25,30 @@ public class MorePlates {
         }
     };
 
-    public Config config;
+    public static Config config;
     public static final Logger logger = LogManager.getFormatterLogger(MODID);
 
     @Mod.EventHandler
     public void construction(FMLConstructionEvent e) {
         config = new Config();
-        new ConfigItems();
-        saveConfig();
+        if (config.getCfg().hasChanged())
+            config.getCfg().save();
     }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
         PluginLoader.addPlugins(e.getAsmData());
         PluginLoader.preInitPlugin();
-        saveConfig();
+        if (config.getCfg().hasChanged())
+            config.getCfg().save();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent e) {
         PluginLoader.postInitPlugin();
         PluginHelper.printAmount();
-        saveConfig();
-    }
-
-    private void saveConfig() {
-        if (Config.getCfg().hasChanged())
-            Config.getCfg().save();
-        if (ConfigItems.getCfg().hasChanged())
-            ConfigItems.getCfg().save();
+        if (config.getCfg().hasChanged())
+            config.getCfg().save();
     }
 
     static final String DEPENDENCIES =
