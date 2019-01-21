@@ -22,4 +22,29 @@ public class PluginEnderIO extends PluginHelper {
         reg(SOULARIUM, "soularium");
         reg(VIBRANT_ALLOY, "vibrant_alloy");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(CONDUCTIVE_IRON, INGOT + CONDUCTIVE_IRON);
+        add(DARK_STEEL, INGOT + DARK_STEEL);
+        add(ELECTRICAL_STEEL, INGOT + ELECTRICAL_STEEL);
+        add(END_STEEL, INGOT + END_STEEL);
+        add(ENERGETIC_ALLOY, INGOT + ENERGETIC_ALLOY);
+        add(IRON_ALLOY, INGOT + IRON_ALLOY);
+        add(PULSATING_IRON, INGOT + PULSATING_IRON);
+        add(REDSTONE_ALLOY, INGOT + REDSTONE_ALLOY);
+        add(SOULARIUM, INGOT + SOULARIUM);
+        add(VIBRANT_ALLOY, INGOT + VIBRANT_ALLOY);
+
+        addBlock(CONDUCTIVE_IRON, 9);
+        addBlock(DARK_STEEL, 9);
+        addBlock(ELECTRICAL_STEEL, 9);
+        addBlock(END_STEEL, 9);
+        addBlock(ENERGETIC_ALLOY, 9);
+        addBlock(IRON_ALLOY, 9);
+        addBlock(PULSATING_IRON, 9);
+        addBlock(REDSTONE_ALLOY, 9);
+        addBlock(SOULARIUM, 9);
+        addBlock(VIBRANT_ALLOY, 9);
+    }
 }

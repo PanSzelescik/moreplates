@@ -197,6 +197,31 @@ public class PluginMetals extends PluginHelper {
         }
     }
 
+    @Plugin.PostInit
+    public static void postInit() {
+        add(ALUMINUM, INGOT + ALUMINUM, false, false, contains("aluminum_stick"));
+        add(BRONZE, INGOT + BRONZE, false, false, contains("bronze_stick"));
+        add(CONSTANTAN, INGOT + CONSTANTAN, false, false, contains("constantan_stick"));
+        add(COPPER, INGOT + COPPER, false, false, contains("copper_stick"));
+        add(ELECTRUM, INGOT + ELECTRUM, false, false, contains("electrum_stick"));
+        add(ENDERIUM, INGOT + ENDERIUM, false, false, contains("enderium_stick"));
+        add(INVAR, INGOT + INVAR, false, false, contains("invar_stick"));
+        add(IRIDIUM, INGOT + IRIDIUM, false, false, contains("iridium_stick"));
+        add(LEAD, INGOT + LEAD, false, false, contains("lead_stick"));
+        add(LUMIUM, INGOT + LUMIUM, false, false, contains("lumium_stick"));
+        add(MITHRIL, INGOT + MITHRIL, false, false, contains("mithril_stick"));
+        add(NICKEL, INGOT + NICKEL, false, false, contains("nickel_stick"));
+        add(PLATINUM, INGOT + PLATINUM, false, false, contains("platinum_stick"));
+        add(SIGNALUM, INGOT + SIGNALUM, false, false, contains("signalum_stick"));
+        add(SILICON, INGOT + SILICON, contains("silicon_gear"), contains("silicon_plate"));
+        add(SILICON, ITEM + SILICON, contains("silicon_gear"), contains("silicon_plate"));
+        add(SILVER, INGOT + SILVER, false, false, contains("silver_stick"));
+        add(STEEL, INGOT + STEEL, contains("steel_gear"), contains("steel_plate"), contains("steel_stick"));
+        add(TIN, INGOT + TIN, false, false, contains("tin_stick"));
+
+        addBlock(STEEL, 9, contains("steel_plate"));
+    }
+
     private static boolean checkAE() {
         return Config.getBoolean(PluginAppliedEnergistics2.MODNAME, Config.CATEGORY_PLUGINS, "Enable this to load " + PluginAppliedEnergistics2.MODNAME + " plugin") && isLoaded(PluginAppliedEnergistics2.MODID);
     }

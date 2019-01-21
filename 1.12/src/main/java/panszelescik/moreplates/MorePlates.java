@@ -10,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.config.ConfigItems;
+import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Items;
 import panszelescik.moreplates.init.PluginLoader;
 
@@ -45,6 +46,7 @@ public class MorePlates {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent e) {
         PluginLoader.postInitPlugin();
+        PluginHelper.printAmount();
         saveConfig();
     }
 

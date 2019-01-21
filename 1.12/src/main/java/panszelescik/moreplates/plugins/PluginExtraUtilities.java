@@ -15,4 +15,15 @@ public class PluginExtraUtilities extends PluginHelper {
         reg(ENCHANTED, "enchanted");
         reg(EVIL_INFUSED_IRON, "evil_infused_iron");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(DEMON, INGOT + DEMON);
+        add(ENCHANTED, INGOT + ENCHANTED);
+        add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
+
+        addBlock(DEMON, 9);
+        addBlock(ENCHANTED, 9);
+        addBlock(EVIL_INFUSED_IRON, 9);
+    }
 }

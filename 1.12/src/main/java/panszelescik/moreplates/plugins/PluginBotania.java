@@ -24,6 +24,15 @@ public class PluginBotania extends PluginHelper {
         addElvenTrade(ELEMENTIUM, MANASTEEL);
         addManaInfusion(MANASTEEL, IRON);
 
+        add(ELEMENTIUM, INGOT + ELEMENTIUM);
+        addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
+        add(MANASTEEL, INGOT + MANASTEEL);
+        add(TERRASTEEL, INGOT + TERRASTEEL);
+
+        addBlock(ELEMENTIUM, BOTANIA_NAME, 9, MODID, ELEMENTIUM_META);
+        addBlock(MANASTEEL, BOTANIA_NAME, 9, MODID, MANASTEEL_META);
+        addBlock(TERRASTEEL, BOTANIA_NAME, 9, MODID, TERRASTEEL_META);
+
         MorePlates.logger.info("Added " + BotaniaHelper.ElvenTradeRecipes + " recipes to Elven Trade");
         MorePlates.logger.info("Added " + BotaniaHelper.ManaInfusionRecipes + " Mana Infusion recipes");
     }

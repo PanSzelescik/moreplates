@@ -14,4 +14,12 @@ public class PluginThaumcraft extends PluginHelper {
         reg(AMBER, "amber");
         reg(QUICKSILVER, "quicksilver");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(AMBER, GEM + AMBER);
+        add(QUICKSILVER, "quicksilver");
+
+        addBlock(AMBER, AMBER_BLOCK_NAME, 9, MODID);
+    }
 }

@@ -15,4 +15,15 @@ public class PluginTwilightForest extends PluginHelper {
         reg(IRONWOOD, "ironwood");
         reg(KNIGHTMETAL, "knightmetal");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(FIERY, INGOT + FIERY);
+        add(IRONWOOD, INGOT + IRONWOOD);
+        add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
+
+        addBlock(FIERY, 9);
+        addBlock(IRONWOOD, IRONWOOD_BLOCK_NAME, 9, MODID);
+        addBlock(KNIGHTMETAL, 9);
+    }
 }

@@ -19,4 +19,22 @@ public class PluginPlusTiC extends PluginHelper {
         if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID))
             reg(OSMIRIDIUM, "osmiridium");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(ALUMITE, INGOT + ALUMITE);
+        addBlock(ALUMITE, 9);
+        if (isLoaded(PluginBotania.MODID)) {
+            add(MIRION, INGOT + MIRION);
+            addBlock(MIRION, 9);
+        }
+        if (isLoaded(PluginMekanism.MODID)) {
+            add(OSGLOGLAS, INGOT + OSGLOGLAS);
+            addBlock(OSGLOGLAS, 9);
+        }
+        if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID)) {
+            add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
+            addBlock(OSMIRIDIUM, 9);
+        }
+    }
 }

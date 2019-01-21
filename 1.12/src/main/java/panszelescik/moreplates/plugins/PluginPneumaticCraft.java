@@ -13,4 +13,11 @@ public class PluginPneumaticCraft extends PluginHelper {
     public static void preInit() {
         reg(COMPRESSED_IRON, "compressed_iron");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
+
+        addBlock(COMPRESSED_IRON, 9);
+    }
 }

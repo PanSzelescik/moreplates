@@ -13,4 +13,9 @@ public class PluginSoulShards extends PluginHelper {
     public static void preInit() {
         reg(CORRUPTED, "corrupted");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(CORRUPTED, INGOT + CORRUPTED);
+    }
 }

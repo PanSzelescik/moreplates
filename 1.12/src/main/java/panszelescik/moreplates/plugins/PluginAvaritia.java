@@ -15,4 +15,15 @@ public class PluginAvaritia extends PluginHelper {
         reg(INFINITY, "infinity");
         reg(NEUTRONIUM, "neutronium");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
+        add(INFINITY, INGOT + INFINITY);
+        add(NEUTRONIUM, INGOT + NEUTRONIUM);
+
+        addBlock(CRYSTAL_MATRIX, 9);
+        addBlock(INFINITY, 9);
+        addBlock(NEUTRONIUM, 9);
+    }
 }

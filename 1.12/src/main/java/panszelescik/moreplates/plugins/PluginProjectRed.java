@@ -14,4 +14,10 @@ public class PluginProjectRed extends PluginHelper {
         reg(ELECTROTINE, "electrotine_alloy");
         reg(RED_ALLOY, "red_alloy");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(ELECTROTINE, INGOT + ELECTROTINE);
+        add(RED_ALLOY, INGOT + RED_ALLOY);
+    }
 }

@@ -14,4 +14,13 @@ public class PluginProjectE extends PluginHelper {
         reg(DARK_MATTER, "dark_matter");
         reg(RED_MATTER, "red_matter");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(DARK_MATTER, MATTER_NAME, MODID, DARK_MATTER_META);
+        add(RED_MATTER, MATTER_NAME, MODID, RED_MATTER_META);
+
+        addBlock(DARK_MATTER, MATTER_BLOCK_NAME, 4, MODID, DARK_MATTER_META);
+        addBlock(RED_MATTER, MATTER_BLOCK_NAME, 4, MODID, RED_MATTER_META);
+    }
 }

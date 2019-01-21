@@ -13,4 +13,11 @@ public class PluginRefinedStorage extends PluginHelper {
     public static void preInit() {
         reg(QUARTZ_ENRICHED_IRON, "quartz_enriched_iron");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_NAME, MODID);
+
+        addBlock(QUARTZ_ENRICHED_IRON, QUARTZ_ENRICHED_IRON_BLOCK_NAME, 9, MODID);
+    }
 }

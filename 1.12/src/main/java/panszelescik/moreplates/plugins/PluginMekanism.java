@@ -15,4 +15,15 @@ public class PluginMekanism extends PluginHelper {
         reg(REFINED_GLOWSTONE, "refined_glowstone");
         reg(REFINED_OBSIDIAN, "refined_obsidian");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(OSMIUM, INGOT + OSMIUM);
+        add(REFINED_GLOWSTONE, INGOT + REFINED_GLOWSTONE);
+        add(REFINED_OBSIDIAN, INGOT + REFINED_OBSIDIAN);
+
+        addBlock(OSMIUM, 9);
+        addBlock(REFINED_GLOWSTONE, 9);
+        addBlock(REFINED_OBSIDIAN, 9);
+    }
 }

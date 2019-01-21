@@ -13,4 +13,11 @@ public class PluginMysticalAgradditions extends PluginHelper {
     public static void preInit() {
         reg(INSANIUM, "insanium");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(INSANIUM, INGOT + INSANIUM);
+
+        addBlock(INSANIUM, 9);
+    }
 }

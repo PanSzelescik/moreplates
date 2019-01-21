@@ -14,4 +14,13 @@ public class PluginDraconicEvolution extends PluginHelper {
         reg(AWAKENED_DRACONIUM, "awakened_draconium");
         reg(DRACONIUM, "draconium");
     }
+
+    @Plugin.PostInit
+    public static void postInit() {
+        add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
+        add(DRACONIUM, INGOT + DRACONIUM);
+
+        addBlock(AWAKENED_DRACONIUM, 9);
+        addBlock(DRACONIUM, 9);
+    }
 }
