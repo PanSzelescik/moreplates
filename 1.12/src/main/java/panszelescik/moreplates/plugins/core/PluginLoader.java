@@ -1,4 +1,4 @@
-package panszelescik.moreplates.init;
+package panszelescik.moreplates.plugins.core;
 
 import net.minecraftforge.fml.common.discovery.ASMDataTable;
 import org.apache.logging.log4j.Level;

@@ -1,6 +1,6 @@
 package panszelescik.moreplates.plugins;
 
-import panszelescik.moreplates.init.Plugin;
+import panszelescik.moreplates.plugins.core.Plugin;
 
 @Plugin(modid = PluginImmersiveEngineering.MODID, modname = PluginImmersiveEngineering.MODNAME)
 public class PluginImmersiveEngineering {

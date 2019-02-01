@@ -1,4 +1,4 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.core;
 
 import java.util.Locale;
 

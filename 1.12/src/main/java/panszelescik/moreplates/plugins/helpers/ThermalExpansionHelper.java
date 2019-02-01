@@ -1,4 +1,4 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import cofh.thermalexpansion.util.managers.machine.CompactorManager;
 import cofh.thermalexpansion.util.managers.machine.CompactorManager.Mode;
@@ -9,7 +9,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
 
-import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.Type.*;
 
 import java.util.List;
 

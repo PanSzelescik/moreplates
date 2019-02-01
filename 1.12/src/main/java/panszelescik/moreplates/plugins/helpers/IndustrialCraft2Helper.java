@@ -1,11 +1,11 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import ic2.api.recipe.Recipes;
 import panszelescik.moreplates.MorePlates;
 
 import java.util.Collections;
 
-import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.Type.*;
 
 public class IndustrialCraft2Helper extends PluginHelper {
 

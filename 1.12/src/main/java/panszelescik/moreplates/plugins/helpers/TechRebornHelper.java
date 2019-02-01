@@ -1,11 +1,11 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
 import reborncore.api.recipe.RecipeHandler;
 import techreborn.api.recipe.machines.CompressorRecipe;
 
-import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.Type.*;
 
 public class TechRebornHelper extends PluginHelper {
 

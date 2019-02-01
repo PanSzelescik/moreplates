@@ -3,13 +3,13 @@ package panszelescik.moreplates.plugins;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.helpers.BotaniaHelper;
-import panszelescik.moreplates.helpers.ItemInfo;
-import panszelescik.moreplates.helpers.PluginHelper;
-import panszelescik.moreplates.init.Plugin;
+import panszelescik.moreplates.plugins.helpers.BotaniaHelper;
+import panszelescik.moreplates.plugins.core.ItemInfo;
+import panszelescik.moreplates.plugins.helpers.PluginHelper;
+import panszelescik.moreplates.plugins.core.Plugin;
 import vazkii.botania.common.item.ModItems;
 
-import static panszelescik.moreplates.helpers.ItemInfo.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.*;
 
 @Plugin(modid = PluginBotania.MODID, modname = PluginBotania.MODNAME)
 public class PluginBotania extends PluginHelper {

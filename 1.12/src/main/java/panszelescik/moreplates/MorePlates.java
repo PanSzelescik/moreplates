@@ -9,9 +9,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import panszelescik.moreplates.config.Config;
-import panszelescik.moreplates.helpers.PluginHelper;
-import panszelescik.moreplates.init.Items;
-import panszelescik.moreplates.init.PluginLoader;
+import panszelescik.moreplates.plugins.helpers.PluginHelper;
+import panszelescik.moreplates.plugins.core.PluginLoader;
 
 @Mod(modid = MorePlates.MODID, name = "More Plates", version = "@version@", dependencies = MorePlates.DEPENDENCIES, guiFactory = "panszelescik.moreplates.config.ModGuiFactory", acceptedMinecraftVersions = "[1.12.2,1.13)", updateJSON = "https://raw.githubusercontent.com/PanSzelescik/moreplates/master/update.json")
 public class MorePlates {
@@ -21,7 +20,7 @@ public class MorePlates {
     public static final CreativeTabs TAB = new CreativeTabs(MODID) {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.hammer);
+            return new ItemStack(ModItems.hammer);
         }
     };
 

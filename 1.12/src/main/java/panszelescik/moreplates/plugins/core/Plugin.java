@@ -1,4 +1,4 @@
-package panszelescik.moreplates.init;
+package panszelescik.moreplates.plugins.core;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

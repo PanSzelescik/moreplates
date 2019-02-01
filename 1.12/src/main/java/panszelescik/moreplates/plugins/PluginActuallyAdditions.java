@@ -5,12 +5,12 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
-import panszelescik.moreplates.helpers.ActuallyAdditionsHelper;
-import panszelescik.moreplates.helpers.ItemInfo;
-import panszelescik.moreplates.helpers.PluginHelper;
-import panszelescik.moreplates.init.Plugin;
+import panszelescik.moreplates.plugins.helpers.ActuallyAdditionsHelper;
+import panszelescik.moreplates.plugins.core.ItemInfo;
+import panszelescik.moreplates.plugins.helpers.PluginHelper;
+import panszelescik.moreplates.plugins.core.Plugin;
 
-import static panszelescik.moreplates.helpers.ItemInfo.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.*;
 
 @Plugin(modid = PluginActuallyAdditions.MODID, modname = PluginActuallyAdditions.MODNAME)
 public class PluginActuallyAdditions extends PluginHelper {

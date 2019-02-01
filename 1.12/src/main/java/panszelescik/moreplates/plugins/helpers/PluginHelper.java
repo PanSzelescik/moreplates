@@ -1,4 +1,4 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -10,6 +10,7 @@ import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.items.ItemGear;
 import panszelescik.moreplates.items.ItemPlate;
 import panszelescik.moreplates.items.ItemStick;
+import panszelescik.moreplates.plugins.core.ItemInfo;
 import panszelescik.moreplates.plugins.PluginImmersiveEngineering;
 import panszelescik.moreplates.plugins.PluginIndustrialCraft2;
 import panszelescik.moreplates.plugins.PluginTechReborn;

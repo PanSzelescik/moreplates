@@ -1,6 +1,6 @@
 package panszelescik.moreplates.plugins;
 
-import panszelescik.moreplates.init.Plugin;
+import panszelescik.moreplates.plugins.core.Plugin;
 
 @Plugin(modid = PluginIndustrialCraft2.MODID, modname = PluginIndustrialCraft2.MODNAME)
 public class PluginIndustrialCraft2 {

@@ -1,9 +1,9 @@
 package panszelescik.moreplates.plugins;
 
-import panszelescik.moreplates.helpers.PluginHelper;
-import panszelescik.moreplates.init.Plugin;
+import panszelescik.moreplates.plugins.helpers.PluginHelper;
+import panszelescik.moreplates.plugins.core.Plugin;
 
-import static panszelescik.moreplates.helpers.ItemInfo.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.*;
 
 @Plugin(modid = PluginDraconicEvolution.MODID, modname = PluginDraconicEvolution.MODNAME)
 public class PluginDraconicEvolution extends PluginHelper {

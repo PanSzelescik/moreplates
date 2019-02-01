@@ -4,7 +4,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.util.JsonUtils;
 import net.minecraftforge.common.crafting.IConditionFactory;
 import net.minecraftforge.common.crafting.JsonContext;
-import panszelescik.moreplates.helpers.PluginHelper;
+import panszelescik.moreplates.plugins.helpers.PluginHelper;
 import panszelescik.moreplates.plugins.PluginImmersiveEngineering;
 import panszelescik.moreplates.plugins.PluginIndustrialCraft2;
 

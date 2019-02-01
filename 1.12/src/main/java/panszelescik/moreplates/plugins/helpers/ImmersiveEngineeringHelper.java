@@ -1,4 +1,4 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import blusunrize.immersiveengineering.api.crafting.MetalPressRecipe;
 import net.minecraft.item.ItemStack;
@@ -6,7 +6,7 @@ import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.plugins.PluginImmersiveEngineering;
 
-import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.Type.*;
 
 public class ImmersiveEngineeringHelper extends PluginHelper {
 

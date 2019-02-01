@@ -1,4 +1,4 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 import net.minecraft.item.ItemStack;
@@ -9,7 +9,7 @@ import panszelescik.moreplates.config.Config;
 
 import java.util.List;
 
-import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.Type.*;
 
 public class ActuallyAdditionsHelper extends PluginHelper {
 

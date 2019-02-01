@@ -1,10 +1,10 @@
-package panszelescik.moreplates.helpers;
+package panszelescik.moreplates.plugins.helpers;
 
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
 import vazkii.botania.api.BotaniaAPI;
 
-import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+import static panszelescik.moreplates.plugins.core.ItemInfo.Type.*;
 
 public class BotaniaHelper extends PluginHelper {
 
