@@ -645,7 +645,7 @@
 	"ingredient": [
 		{
 			"type": "forge:ore_dict",
-			"ore": "gaiaIngot"
+			"ore": "ingotGaia"
 		}
 	]
 },

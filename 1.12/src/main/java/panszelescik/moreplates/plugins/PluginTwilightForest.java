@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginTwilightForest.MODID, modname = PluginTwilightForest.MODNAME)
 public class PluginTwilightForest extends PluginHelper {
 
@@ -11,19 +13,19 @@ public class PluginTwilightForest extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(FIERY, "fiery");
-        reg(IRONWOOD, "ironwood");
-        reg(KNIGHTMETAL, "knightmetal");
+        reg(FIERY);
+        reg(IRONWOOD);
+        reg(KNIGHTMETAL);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(FIERY, INGOT + FIERY);
-        add(IRONWOOD, INGOT + IRONWOOD);
-        add(KNIGHTMETAL, INGOT + KNIGHTMETAL);
+        add(FIERY);
+        add(IRONWOOD);
+        add(KNIGHTMETAL);
 
-        addBlock(FIERY, 9);
-        addBlock(IRONWOOD, IRONWOOD_BLOCK_NAME, 9, MODID);
-        addBlock(KNIGHTMETAL, 9);
+        addBlock(FIERY);
+        addBlock(IRONWOOD, "knightmetal_block", 9, MODID);
+        addBlock(KNIGHTMETAL);
     }
 }

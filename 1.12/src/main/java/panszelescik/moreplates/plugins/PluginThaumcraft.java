@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginThaumcraft.MODID, modname = PluginThaumcraft.MODNAME)
 public class PluginThaumcraft extends PluginHelper {
 
@@ -11,15 +13,15 @@ public class PluginThaumcraft extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(AMBER, "amber");
-        reg(QUICKSILVER, "quicksilver");
+        reg(AMBER);
+        reg(QUICKSILVER);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(AMBER, GEM + AMBER);
-        add(QUICKSILVER, "quicksilver");
+        add(AMBER);
+        add(QUICKSILVER, "quicksilver", true, true);
 
-        addBlock(AMBER, AMBER_BLOCK_NAME, 9, MODID);
+        addBlock(AMBER, "amber_block", 9, MODID);
     }
 }

@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginExtraUtilities.MODID, modname = PluginExtraUtilities.MODNAME)
 public class PluginExtraUtilities extends PluginHelper {
 
@@ -11,19 +13,19 @@ public class PluginExtraUtilities extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(DEMON, "demon");
-        reg(ENCHANTED, "enchanted");
-        reg(EVIL_INFUSED_IRON, "evil_infused_iron");
+        reg(DEMON);
+        reg(ENCHANTED);
+        reg(EVIL_INFUSED_IRON);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(DEMON, INGOT + DEMON);
-        add(ENCHANTED, INGOT + ENCHANTED);
-        add(EVIL_INFUSED_IRON, INGOT + EVIL_INFUSED_IRON);
+        add(DEMON);
+        add(ENCHANTED);
+        add(EVIL_INFUSED_IRON);
 
-        addBlock(DEMON, 9);
-        addBlock(ENCHANTED, 9);
-        addBlock(EVIL_INFUSED_IRON, 9);
+        addBlock(DEMON);
+        addBlock(ENCHANTED);
+        addBlock(EVIL_INFUSED_IRON);
     }
 }

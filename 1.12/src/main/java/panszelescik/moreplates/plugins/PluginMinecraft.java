@@ -5,6 +5,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginMinecraft.MODID, modname = PluginMinecraft.MODNAME, checkModid = false)
 public class PluginMinecraft extends PluginHelper {
 
@@ -14,87 +16,86 @@ public class PluginMinecraft extends PluginHelper {
     @Plugin.PreInit
     public static void preInit() {
         OreDictionary.registerOre("coal", Items.COAL);
-
-        if (!oreNameExists(GEAR + COAL)) {
-            regGear("coal", COAL);
+        if (!oreNameExists(COAL, Type.GEAR)) {
+            regGear(COAL);
         }
-        if (!oreNameExists(PLATE + COAL)) {
-            regPlate("coal", COAL);
+        if (!oreNameExists(COAL, Type.PLATE)) {
+            regPlate(COAL);
         }
-        if (!oreNameExists(GEAR + DIAMOND)) {
-            regGear("diamond", DIAMOND);
+        if (!oreNameExists(DIAMOND, Type.GEAR)) {
+            regGear(DIAMOND);
         }
-        if (!oreNameExists(PLATE + DIAMOND)) {
-            regPlate("diamond", DIAMOND);
+        if (!oreNameExists(DIAMOND, Type.PLATE)) {
+            regPlate(DIAMOND);
         }
-        if (!oreNameExists(GEAR + EMERALD)) {
-            regGear("emerald", EMERALD);
+        if (!oreNameExists(EMERALD, Type.GEAR)) {
+            regGear(EMERALD);
         }
-        if (!oreNameExists(PLATE + EMERALD)) {
-            regPlate("emerald", EMERALD);
+        if (!oreNameExists(EMERALD, Type.PLATE)) {
+            regPlate(EMERALD);
         }
-        if (!oreNameExists(GEAR + GLOWSTONE)) {
-            regGear("glowstone", GLOWSTONE);
+        if (!oreNameExists(GLOWSTONE, Type.GEAR)) {
+            regGear(GLOWSTONE);
         }
-        if (!oreNameExists(PLATE + GLOWSTONE)) {
-            regPlate("glowstone", GLOWSTONE);
+        if (!oreNameExists(GLOWSTONE, Type.PLATE)) {
+            regPlate(GLOWSTONE);
         }
-        if (!oreNameExists(GEAR + GOLD)) {
-            regGear("gold", GOLD);
+        if (!oreNameExists(GOLD, Type.GEAR)) {
+            regGear(GOLD);
         }
-        if (!oreNameExists(PLATE + GOLD)
+        if (!oreNameExists(GOLD, Type.PLATE)
                 && !isLoaded(PluginImmersiveEngineering.MODID)
                 && !isLoaded("libvulpes")) {
-            regPlate("gold", GOLD);
+            regPlate(GOLD);
         }
-        if (!oreNameExists(STICK + GOLD)) {
-            regStick("gold", GOLD);
+        if (!oreNameExists(GOLD, Type.STICK)) {
+            regStick(GOLD);
         }
-        if (!oreNameExists(GEAR + IRON)
+        if (!oreNameExists(IRON, Type.GEAR)
                 && !isLoaded("libvulpes")) {
-            regGear("iron", IRON);
+            regGear(IRON);
         }
-        if (!oreNameExists(PLATE + IRON)
+        if (!oreNameExists(IRON, Type.PLATE)
                 && !isLoaded(PluginImmersiveEngineering.MODID)
                 && !isLoaded("libvulpes")) {
-            regPlate("iron", IRON);
+            regPlate(IRON);
         }
-        if (!oreNameExists(STICK + IRON)
+        if (!oreNameExists(IRON, Type.STICK)
                 && !isLoaded(PluginImmersiveEngineering.MODID)
                 && !isLoaded("libvulpes")) {
-            regStick("iron", IRON);
+            regStick(IRON);
         }
-        if (!oreNameExists(GEAR + LAPIS)) {
-            regGear("lapis_lazuli", LAPIS);
+        if (!oreNameExists(LAPIS_LAZULI, Type.GEAR)) {
+            regGear(LAPIS_LAZULI);
         }
-        if (!oreNameExists(PLATE + LAPIS)) {
-            regPlate("lapis_lazuli", LAPIS);
+        if (!oreNameExists(LAPIS_LAZULI, Type.PLATE)) {
+            regPlate(LAPIS_LAZULI);
         }
-        if (!oreNameExists(GEAR + QUARTZ)) {
-            regGear("nether_quartz", QUARTZ);
+        if (!oreNameExists(NETHER_QUARTZ, Type.GEAR)) {
+            regGear(NETHER_QUARTZ);
         }
-        if (!oreNameExists(PLATE + QUARTZ)) {
-            regPlate("nether_quartz", QUARTZ);
+        if (!oreNameExists(NETHER_QUARTZ, Type.PLATE)) {
+            regPlate(NETHER_QUARTZ);
         }
-        if (!oreNameExists(GEAR + REDSTONE)) {
-            regGear("redstone", REDSTONE);
+        if (!oreNameExists(REDSTONE, Type.GEAR)) {
+            regGear(REDSTONE);
         }
-        if (!oreNameExists(PLATE + REDSTONE)) {
-            regPlate("redstone", REDSTONE);
+        if (!oreNameExists(REDSTONE, Type.PLATE)) {
+            regPlate(REDSTONE);
         }
     }
 
     @Plugin.PostInit
     public static void postInit() {
         add(COAL, "coal", contains("coal_gear"), contains("coal_plate"));
-        add(DIAMOND, GEM + DIAMOND, contains("diamond_gear"), contains("diamond_plate"));
-        add(EMERALD, GEM + EMERALD, contains("emerald_gear"), contains("emerald_plate"));
-        add(GLOWSTONE, DUST + GLOWSTONE, contains("glowstone_gear"), contains("glowstone_plate"));
-        add(GOLD, INGOT + GOLD, contains("gold_gear"), contains("gold_plate"), contains("gold_stick"));
-        add(IRON, INGOT + IRON, contains("iron_gear"), contains("iron_plate"), contains("iron_stick"));
-        add(LAPIS, GEM + LAPIS, contains("lapis_lazuli_gear"), contains("lapis_lazuli_plate"));
-        add(QUARTZ, GEM + QUARTZ, contains("nether_quartz_gear"), contains("nether_quartz_plate"));
-        add(REDSTONE, DUST + REDSTONE, contains("redstone_gear"), contains("redstone_plate"));
+        add(DIAMOND, contains("diamond_gear"), contains("diamond_plate"));
+        add(EMERALD, contains("emerald_gear"), contains("emerald_plate"));
+        add(GLOWSTONE, contains("glowstone_gear"), contains("glowstone_plate"));
+        add(GOLD, contains("gold_gear"), contains("gold_plate"), contains("gold_stick"));
+        add(IRON, contains("iron_gear"), contains("iron_plate"), contains("iron_stick"));
+        add(LAPIS_LAZULI, contains("lapis_lazuli_gear"), contains("lapis_lazuli_plate"));
+        add(NETHER_QUARTZ, contains("nether_quartz_gear"), contains("nether_quartz_plate"));
+        add(REDSTONE, contains("redstone_gear"), contains("redstone_plate"));
 
         addBlock(COAL, 9, contains("coal_plate"));
         addBlock(DIAMOND, 9, contains("diamond_plate"));
@@ -102,8 +103,8 @@ public class PluginMinecraft extends PluginHelper {
         addBlock(GLOWSTONE, 4, contains("glowstone_plate"));
         addBlock(GOLD, 9, contains("gold_plate"));
         addBlock(IRON, 9, contains("iron_plate"));
-        addBlock(LAPIS, 9, contains("lapis_lazuli_plate"));
-        addBlock(QUARTZ, 4, contains("nether_quartz_plate"));
+        addBlock(LAPIS_LAZULI, 9, contains("lapis_lazuli_plate"));
+        addBlock(NETHER_QUARTZ, 4, contains("nether_quartz_plate"));
         addBlock(REDSTONE, 9, contains("redstone_plate"));
     }
 }

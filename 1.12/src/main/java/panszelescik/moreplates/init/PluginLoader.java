@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class PluginLoader {
 
     private static ArrayList<Class> initList = new ArrayList<>();
-    private static ArrayList<String> initMods = new ArrayList<>();
 
     public static void addPlugins(ASMDataTable dataTable) {
         for (ASMDataTable.ASMData data : dataTable.getAll(Plugin.class.getName())) {
@@ -33,7 +32,6 @@ public class PluginLoader {
                     config = true;
                 if (loaded && config) {
                     initList.add(clazz);
-                    initMods.add(modname);
                     MorePlates.logger.debug("Plugin " + modname + " loaded, adding");
                 } else {
                     MorePlates.logger.debug("Plugin " + modname + " not loaded, skipping");
@@ -79,9 +77,5 @@ public class PluginLoader {
 
     private static boolean getB(String modname) {
         return MorePlates.config.getBoolean(modname, Config.CATEGORY_PLUGINS, "Enable this to load " + modname + " plugin");
-    }
-
-    public static boolean isLoaded(String modname) {
-        return initMods.contains(modname);
     }
 }

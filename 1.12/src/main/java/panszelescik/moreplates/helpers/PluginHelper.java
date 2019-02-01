@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
+import panszelescik.morelibs.api.Helper;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.items.ItemGear;
@@ -14,177 +15,137 @@ import panszelescik.moreplates.plugins.PluginIndustrialCraft2;
 import panszelescik.moreplates.plugins.PluginTechReborn;
 import panszelescik.moreplates.plugins.PluginThermalExpansion;
 
-public class PluginHelper extends Strings {
+public class PluginHelper extends Helper {
 
-    public static void reg(String ore, String name) {
-        regGear(name, ore);
-        regPlate(name, ore);
+    public static void reg(ItemInfo info) {
+        regGear(info);
+        regPlate(info);
     }
 
-    protected static void regGaia(String ore, String name) {
-        Item gear = gear(name);
+    protected static void regGear(ItemInfo info) {
+        Item gear = new ItemGear(info.toString());
         if (Config.loadItem(gear)) {
             regItem(gear);
-            oreGearGaia(ore, gear);
+            OreDictionary.registerOre("gear" + info.getOre(), gear);
         }
-        Item plate = plate(name);
+    }
+
+    protected static void regPlate(ItemInfo info) {
+        Item plate = new ItemPlate(info.toString());
         if (Config.loadItem(plate)) {
             regItem(plate);
-            orePlateGaia(ore, plate);
+            OreDictionary.registerOre("plate" + info.getOre(), plate);
         }
     }
 
-    protected static void regGear(String name, String ore) {
-        Item gear = gear(name);
-        if (Config.loadItem(gear)) {
-            regItem(gear);
-            oreGear(ore, gear);
-        }
-    }
-
-    protected static void regPlate(String name, String ore) {
-        Item plate = plate(name);
-        if (Config.loadItem(plate)) {
-            regItem(plate);
-            orePlate(ore, plate);
-        }
-    }
-
-    protected static void regStick(String name, String ore) {
-        Item stick = stick(name);
+    protected static void regStick(ItemInfo info) {
+        Item stick = new ItemStick(info.toString());
         if (Config.loadItem(stick)) {
             regItem(stick);
-            oreStick(ore, stick);
+            OreDictionary.registerOre("stick" + info.getOre(), stick);
         }
     }
 
-    public static void regItem(Item item) {
+    private static void regItem(Item item) {
         ForgeRegistries.ITEMS.register(item);
-        MorePlates.logger.debug(INFO_REG_ITEM + getItemName(item));
-    }
-
-    private static Item gear(String name) {
-        return new ItemGear(name);
-    }
-
-    private static Item plate(String name) {
-        return new ItemPlate(name);
-    }
-
-    private static Item stick(String name) {
-        return new ItemStick(name);
-    }
-
-    private static void oreGear(String ore, Item gear) {
-        OreDictionary.registerOre("gear" + ore, gear);
-    }
-
-    private static void orePlate(String ore, Item plate) {
-        OreDictionary.registerOre("plate" + ore, plate);
-    }
-
-    private static void oreStick(String ore, Item stick) {
-        OreDictionary.registerOre("stick" + ore, stick);
-    }
-
-    private static void oreGearGaia(String ore, Item geargaia) {
-        OreDictionary.registerOre(ore + "Gear", geargaia);
-    }
-
-    private static void orePlateGaia(String ore, Item plategaia) {
-        OreDictionary.registerOre(ore + "Plate", plategaia);
+        MorePlates.logger.debug("Registering item: " + getItemName(item));
     }
 
     protected static boolean contains(String name) {
         return Item.REGISTRY.containsKey(new ResourceLocation("moreplates:" + name));
     }
 
-    protected static void add(String output, String input, boolean gear, boolean plate, boolean stick) {
-        if (ieEnabled())
-            ImmersiveEngineeringHelper.add(output, input, gear, plate, stick);
+    protected static boolean oreNameExists(ItemInfo ore) {
+        return oreNameExists(ore.getInput());
     }
 
-    protected static void add(String output, String input, boolean gear, boolean plate) {
+    protected static boolean oreNameExists(ItemInfo ore, ItemInfo.Type type) {
+        return oreNameExists(type.toString() + ore.getOre());
+    }
+
+    protected static void add(ItemInfo output, String input, boolean gear, boolean plate) {
         if (ieEnabled())
-            ImmersiveEngineeringHelper.add(output, input, gear, plate, false);
+            ImmersiveEngineeringHelper.add(output.getOre(), input, gear, plate, false);
         if (icEnabled())
-            IndustrialCraft2Helper.add(output, input, plate);
+            IndustrialCraft2Helper.add(output.getOre(), input, plate);
         if (thEnabled())
-            TechRebornHelper.add(output, input, plate);
+            TechRebornHelper.add(output.getOre(), input, plate);
         if (teEnabled())
-            ThermalExpansionHelper.add(output, input, gear, plate);
+            ThermalExpansionHelper.add(output.getOre(), input, gear, plate);
     }
 
-    protected static void add(String output, String input) {
+    protected static void add(ItemInfo item, boolean gear, boolean plate) {
+        add(item, gear, plate, false);
+    }
+
+    protected static void add(ItemInfo item, boolean gear, boolean plate, boolean stick) {
         if (ieEnabled())
-            ImmersiveEngineeringHelper.add(output, input);
+            ImmersiveEngineeringHelper.add(item.getOre(), item.getInput(), gear, plate, stick);
         if (icEnabled())
-            IndustrialCraft2Helper.add(output, input);
+            IndustrialCraft2Helper.add(item.getOre(), item.getInput(), plate);
         if (thEnabled())
-            TechRebornHelper.add(output, input);
+            TechRebornHelper.add(item.getOre(), item.getInput(), plate);
         if (teEnabled())
-            ThermalExpansionHelper.add(output, input);
+            ThermalExpansionHelper.add(item.getOre(), item.getInput(), gear, plate);
     }
 
-    protected static void add(String output, String input, String id) {
+    protected static void add(ItemInfo item) {
+        add(item, item);
+    }
+
+    protected static void add(ItemInfo output, ItemInfo input) {
         if (ieEnabled())
-            ImmersiveEngineeringHelper.add(output, input, id);
+            ImmersiveEngineeringHelper.add(output.getOre(), input.getInput());
         if (icEnabled())
-            IndustrialCraft2Helper.add(output, input, id);
+            IndustrialCraft2Helper.add(output.getOre(), input.getInput());
         if (thEnabled())
-            TechRebornHelper.add(output, input, id);
+            TechRebornHelper.add(output.getOre(), input.getInput());
         if (teEnabled())
-            ThermalExpansionHelper.add(output, input, id);
+            ThermalExpansionHelper.add(output.getOre(), input.getInput());
     }
 
-    protected static void add(String output, String input, String id, int meta) {
+    protected static void add(ItemInfo output, String input, String id) {
+        add(output, input, id, 0);
+    }
+
+    protected static void add(ItemInfo output, String input, String id, int meta) {
         if (ieEnabled())
-            ImmersiveEngineeringHelper.add(output, input, id, meta);
+            ImmersiveEngineeringHelper.add(output.getOre(), input, id, meta);
         if (icEnabled())
-            IndustrialCraft2Helper.add(output, input, id, meta);
+            IndustrialCraft2Helper.add(output.getOre(), input, id, meta);
         if (thEnabled())
-            TechRebornHelper.add(output, input, id, meta);
+            TechRebornHelper.add(output.getOre(), input, id, meta);
         if (teEnabled())
-            ThermalExpansionHelper.add(output, input, id, meta);
+            ThermalExpansionHelper.add(output.getOre(), input, id, meta);
     }
 
-    protected static void addGaia(String output, String input) {
-        if (ieEnabled())
-            ImmersiveEngineeringHelper.addGaia(output, input);
+    protected static void addBlock(ItemInfo name, int amount, boolean plate) {
         if (icEnabled())
-            IndustrialCraft2Helper.addGaia(output, input);
+            IndustrialCraft2Helper.addBlock(name.getOre(), amount, plate);
         if (thEnabled())
-            TechRebornHelper.addGaia(output, input);
-        if (teEnabled())
-            ThermalExpansionHelper.addGaia(output, input);
+            TechRebornHelper.addBlock(name.getOre(), amount, plate);
     }
 
-    protected static void addBlock(String name, int amount, boolean plate) {
-        if (icEnabled())
-            IndustrialCraft2Helper.addBlock(name, amount, plate);
-        if (thEnabled())
-            TechRebornHelper.addBlock(name, amount, plate);
+    protected static void addBlock(ItemInfo name) {
+        addBlock(name, 9);
     }
 
-    protected static void addBlock(String name, int amount) {
+    protected static void addBlock(ItemInfo name, int amount) {
         if (icEnabled())
-            IndustrialCraft2Helper.addBlock(name, amount);
+            IndustrialCraft2Helper.addBlock(name.getOre(), amount);
         if (thEnabled())
-            TechRebornHelper.addBlock(name, amount);
+            TechRebornHelper.addBlock(name.getOre(), amount);
     }
 
-    protected static void addBlock(String output, String input, int amount, String id) {
-        if (icEnabled())
-            IndustrialCraft2Helper.addBlock(output, input, amount, id);
-        if (thEnabled())
-            TechRebornHelper.addBlock(output, input, amount, id);
+    protected static void addBlock(ItemInfo output, String input, int amount, String id) {
+        addBlock(output, input, amount, id, 0);
     }
 
-    protected static void addBlock(String output, String input, int amount, String id, int meta) {
+    protected static void addBlock(ItemInfo output, String input, int amount, String id, int meta) {
         if (icEnabled())
-            IndustrialCraft2Helper.addBlock(output, input, amount, id, meta);
+            IndustrialCraft2Helper.addBlock(output.getOre(), input, amount, id, meta);
         if (thEnabled())
-            TechRebornHelper.addBlock(output, input, amount, id, meta);
+            TechRebornHelper.addBlock(output.getOre(), input, amount, id, meta);
     }
 
     private static boolean icEnabled() {

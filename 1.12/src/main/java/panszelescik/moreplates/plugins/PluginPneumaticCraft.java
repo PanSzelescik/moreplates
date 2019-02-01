@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginPneumaticCraft.MODID, modname = PluginPneumaticCraft.MODNAME)
 public class PluginPneumaticCraft extends PluginHelper {
 
@@ -11,13 +13,13 @@ public class PluginPneumaticCraft extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(COMPRESSED_IRON, "compressed_iron");
+        reg(COMPRESSED_IRON);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(COMPRESSED_IRON, INGOT + COMPRESSED_IRON);
+        add(COMPRESSED_IRON);
 
-        addBlock(COMPRESSED_IRON, 9);
+        addBlock(COMPRESSED_IRON);
     }
 }

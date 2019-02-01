@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginProjectE.MODID, modname = PluginProjectE.MODNAME)
 public class PluginProjectE extends PluginHelper {
 
@@ -11,16 +13,18 @@ public class PluginProjectE extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(DARK_MATTER, "dark_matter");
-        reg(RED_MATTER, "red_matter");
+        reg(DARK_MATTER);
+        reg(RED_MATTER);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(DARK_MATTER, MATTER_NAME, MODID, DARK_MATTER_META);
-        add(RED_MATTER, MATTER_NAME, MODID, RED_MATTER_META);
+        String name = "item.pe_matter";
+        add(DARK_MATTER, name, MODID, 0);
+        add(RED_MATTER, name, MODID, 1);
 
-        addBlock(DARK_MATTER, MATTER_BLOCK_NAME, 4, MODID, DARK_MATTER_META);
-        addBlock(RED_MATTER, MATTER_BLOCK_NAME, 4, MODID, RED_MATTER_META);
+        name = "matter_block";
+        addBlock(DARK_MATTER, name, 4, MODID, 0);
+        addBlock(RED_MATTER, name, 4, MODID, 1);
     }
 }

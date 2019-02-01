@@ -4,6 +4,8 @@ import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = "", modname = PluginMetals.MODNAME, checkModid = false)
 public class PluginMetals extends PluginHelper {
 
@@ -12,35 +14,35 @@ public class PluginMetals extends PluginHelper {
     @Plugin.PreInit
     public static void preInit() {
         //Aluminum
-        if (oreNameExists(INGOT + ALUMINUM)
+        if (oreNameExists(ALUMINUM)
                 || isLoaded("libvulpes")
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + ALUMINUM)
+            if (!oreNameExists(ALUMINUM, Type.STICK)
                     && !isLoaded(PluginImmersiveEngineering.MODID)) {
-                regStick("aluminum", ALUMINUM);
+                regStick(ALUMINUM);
             }
         }
         //Bronze
-        if (oreNameExists(INGOT + BRONZE)
+        if (oreNameExists(BRONZE)
                 || isLoaded("forestry")
                 || isLoaded(PluginIndustrialCraft2.MODID)
                 || isLoaded(PluginMekanism.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + BRONZE)) {
-                regStick("bronze", BRONZE);
+            if (!oreNameExists(BRONZE, Type.STICK)) {
+                regStick(BRONZE);
             }
         }
         //Constantan
-        if (oreNameExists(INGOT + CONSTANTAN)
+        if (oreNameExists(CONSTANTAN)
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + CONSTANTAN)) {
-                regStick("constantan", CONSTANTAN);
+            if (!oreNameExists(CONSTANTAN, Type.STICK)) {
+                regStick(CONSTANTAN);
             }
         }
         //Copper
-        if (oreNameExists(INGOT + COPPER)
+        if (oreNameExists(COPPER)
                 || isLoaded("forestry")
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded(PluginIndustrialCraft2.MODID)
@@ -49,175 +51,175 @@ public class PluginMetals extends PluginHelper {
                 || isLoaded(PluginProjectRed.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + COPPER)
+            if (!oreNameExists(COPPER, Type.STICK)
                     && !isLoaded("libvulpes")) {
-                regStick("copper", COPPER);
+                regStick(COPPER);
             }
         }
         //Electrum
-        if (oreNameExists(INGOT + ELECTRUM)
+        if (oreNameExists(ELECTRUM)
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + ELECTRUM)) {
-                regStick("electrum", ELECTRUM);
+            if (!oreNameExists(ELECTRUM, Type.STICK)) {
+                regStick(ELECTRUM);
             }
         }
         //Enderium
-        if (oreNameExists(INGOT + ENDERIUM)
+        if (oreNameExists(ENDERIUM)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + ENDERIUM)) {
-                regStick("enderium", ENDERIUM);
+            if (!oreNameExists(ENDERIUM, Type.STICK)) {
+                regStick(ENDERIUM);
             }
         }
         //Invar
-        if (oreNameExists(INGOT + INVAR)
+        if (oreNameExists(INVAR)
                 || isLoaded(PluginPlusTiC.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + INVAR)) {
-                regStick("invar", INVAR);
+            if (!oreNameExists(INVAR, Type.STICK)) {
+                regStick(INVAR);
             }
         }
         //Iridium
-        if (oreNameExists(INGOT + IRIDIUM)
+        if (oreNameExists(IRIDIUM)
                 || isLoaded("advanced_solar_panels")
                 || isLoaded("libvulpes")
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + IRIDIUM)
+            if (!oreNameExists(IRIDIUM, Type.STICK)
                     && !isLoaded("libvulpes")) {
-                regStick("iridium", IRIDIUM);
+                regStick(IRIDIUM);
             }
         }
         //Lead
-        if (oreNameExists(INGOT + LEAD)
+        if (oreNameExists(LEAD)
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded(PluginIndustrialCraft2.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + LEAD)) {
-                regStick("lead", LEAD);
+            if (!oreNameExists(LEAD, Type.STICK)) {
+                regStick(LEAD);
             }
         }
         //Lumium
-        if (oreNameExists(INGOT + LUMIUM)
+        if (oreNameExists(LUMIUM)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + LUMIUM)) {
-                regStick("lumium", LUMIUM);
+            if (!oreNameExists(LUMIUM, Type.STICK)) {
+                regStick(LUMIUM);
             }
         }
         //Mana Infused
-        if (oreNameExists(INGOT + MITHRIL)
+        if (oreNameExists(MANA_INFUSED)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + MITHRIL)) {
-                regStick("mana_infused", MITHRIL);
+            if (!oreNameExists(MANA_INFUSED, Type.STICK)) {
+                regStick(MANA_INFUSED);
             }
         }
         //Nickel
-        if (oreNameExists(INGOT + NICKEL)
+        if (oreNameExists(NICKEL)
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + NICKEL)) {
-                regStick("nickel", NICKEL);
+            if (!oreNameExists(NICKEL, Type.STICK)) {
+                regStick(NICKEL);
             }
         }
         //Platinum
-        if (oreNameExists(INGOT + PLATINUM)
+        if (oreNameExists(PLATINUM)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + PLATINUM)) {
-                regStick("platinum", PLATINUM);
+            if (!oreNameExists(PLATINUM, Type.STICK)) {
+                regStick(PLATINUM);
             }
         }
         //Signalum
-        if (oreNameExists(INGOT + SIGNALUM)
+        if (oreNameExists(SIGNALUM)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + SIGNALUM)) {
-                regStick("signalum", SIGNALUM);
+            if (!oreNameExists(SIGNALUM, Type.STICK)) {
+                regStick(SIGNALUM);
             }
         }
         //Silicon
-        if (oreNameExists(INGOT + SILICON)
-                || oreNameExists(ITEM + SILICON)
+        if (oreNameExists(SILICONN)
+                || oreNameExists(SILICON)
                 || checkAE()
                 || checkRS()) {
-            if (!oreNameExists(GEAR + SILICON)) {
-                regGear("silicon", SILICON);
+            if (!oreNameExists(SILICON, Type.GEAR)) {
+                regGear(SILICON);
             }
-            if (!oreNameExists(PLATE + SILICON)
+            if (!oreNameExists(SILICON, Type.PLATE)
                     && !isLoaded("libvulpes")) {
-                regPlate("silicon", SILICON);
+                regPlate(SILICON);
             }
         }
         //Silver
-        if (oreNameExists(INGOT + SILVER)
+        if (oreNameExists(SILVER)
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded(PluginIndustrialCraft2.MODID)
                 || isLoaded(PluginProjectRed.MODID)
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + SILVER)) {
-                regStick("silver", SILVER);
+            if (!oreNameExists(SILVER, Type.STICK)) {
+                regStick(SILVER);
             }
         }
         //Steel
-        if (oreNameExists(INGOT + STEEL)
+        if (oreNameExists(STEEL)
                 || isLoaded(PluginImmersiveEngineering.MODID)
                 || isLoaded(PluginIndustrialCraft2.MODID)
                 || isLoaded("libvulpes")
                 || isLoaded(PluginTechReborn.MODID)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(GEAR + STEEL)
+            if (!oreNameExists(STEEL, Type.GEAR)
                     && !isLoaded("libvulpes")
                     && !isLoaded("thermalfoundation")) {
-                regGear("steel", STEEL);
+                regGear(STEEL);
             }
-            if (!oreNameExists(PLATE + STEEL)
+            if (!oreNameExists(STEEL, Type.PLATE)
                     && !isLoaded(PluginImmersiveEngineering.MODID)
                     && !isLoaded(PluginIndustrialCraft2.MODID)
                     && !isLoaded("libvulpes")
                     && !isLoaded(PluginTechReborn.MODID)
                     && !isLoaded("thermalfoundation")) {
-                regPlate("steel", STEEL);
+                regPlate(STEEL);
             }
-            if (!oreNameExists(STICK + STEEL)
+            if (!oreNameExists(STEEL, Type.STICK)
                     && !isLoaded(PluginImmersiveEngineering.MODID)
                     && !isLoaded("libvulpes")) {
-                regStick("steel", STEEL);
+                regStick(STEEL);
             }
         }
         //Tin
-        if (oreNameExists(INGOT + TIN)
+        if (oreNameExists(TIN)
                 || isLoaded("thermalfoundation")) {
-            if (!oreNameExists(STICK + TIN)) {
-                regStick("tin", TIN);
+            if (!oreNameExists(TIN, Type.STICK)) {
+                regStick(TIN);
             }
         }
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(ALUMINUM, INGOT + ALUMINUM, false, false, contains("aluminum_stick"));
-        add(BRONZE, INGOT + BRONZE, false, false, contains("bronze_stick"));
-        add(CONSTANTAN, INGOT + CONSTANTAN, false, false, contains("constantan_stick"));
-        add(COPPER, INGOT + COPPER, false, false, contains("copper_stick"));
-        add(ELECTRUM, INGOT + ELECTRUM, false, false, contains("electrum_stick"));
-        add(ENDERIUM, INGOT + ENDERIUM, false, false, contains("enderium_stick"));
-        add(INVAR, INGOT + INVAR, false, false, contains("invar_stick"));
-        add(IRIDIUM, INGOT + IRIDIUM, false, false, contains("iridium_stick"));
-        add(LEAD, INGOT + LEAD, false, false, contains("lead_stick"));
-        add(LUMIUM, INGOT + LUMIUM, false, false, contains("lumium_stick"));
-        add(MITHRIL, INGOT + MITHRIL, false, false, contains("mithril_stick"));
-        add(NICKEL, INGOT + NICKEL, false, false, contains("nickel_stick"));
-        add(PLATINUM, INGOT + PLATINUM, false, false, contains("platinum_stick"));
-        add(SIGNALUM, INGOT + SIGNALUM, false, false, contains("signalum_stick"));
-        add(SILICON, INGOT + SILICON, contains("silicon_gear"), contains("silicon_plate"));
-        add(SILICON, ITEM + SILICON, contains("silicon_gear"), contains("silicon_plate"));
-        add(SILVER, INGOT + SILVER, false, false, contains("silver_stick"));
-        add(STEEL, INGOT + STEEL, contains("steel_gear"), contains("steel_plate"), contains("steel_stick"));
-        add(TIN, INGOT + TIN, false, false, contains("tin_stick"));
+        add(ALUMINUM, false, false, contains("aluminum_stick"));
+        add(BRONZE, false, false, contains("bronze_stick"));
+        add(CONSTANTAN, false, false, contains("constantan_stick"));
+        add(COPPER, false, false, contains("copper_stick"));
+        add(ELECTRUM, false, false, contains("electrum_stick"));
+        add(ENDERIUM, false, false, contains("enderium_stick"));
+        add(INVAR, false, false, contains("invar_stick"));
+        add(IRIDIUM, false, false, contains("iridium_stick"));
+        add(LEAD, false, false, contains("lead_stick"));
+        add(LUMIUM, false, false, contains("lumium_stick"));
+        add(MANA_INFUSED, false, false, contains("mana_infused_stick"));
+        add(NICKEL, false, false, contains("nickel_stick"));
+        add(PLATINUM, false, false, contains("platinum_stick"));
+        add(SIGNALUM, false, false, contains("signalum_stick"));
+        add(SILICONN, contains("silicon_gear"), contains("silicon_plate"));
+        add(SILICON, contains("silicon_gear"), contains("silicon_plate"));
+        add(SILVER, false, false, contains("silver_stick"));
+        add(STEEL, contains("steel_gear"), contains("steel_plate"), contains("steel_stick"));
+        add(TIN, false, false, contains("tin_stick"));
 
         addBlock(STEEL, 9, contains("steel_plate"));
     }

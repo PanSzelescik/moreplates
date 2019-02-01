@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginMysticalAgriculture.MODID, modname = PluginMysticalAgriculture.MODNAME)
 public class PluginMysticalAgriculture extends PluginHelper {
 
@@ -11,28 +13,28 @@ public class PluginMysticalAgriculture extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(INFERIUM, "inferium");
-        reg(INTERMEDIUM, "intermedium");
-        reg(PRUDENTIUM, "prudentium");
-        reg(SOULIUM, "soulium");
-        reg(SUPERIUM, "superium");
-        reg(SUPREMIUM, "supremium");
+        reg(INFERIUM);
+        reg(INTERMEDIUM);
+        reg(PRUDENTIUM);
+        reg(SOULIUM);
+        reg(SUPERIUM);
+        reg(SUPREMIUM);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(INFERIUM, INGOT + INFERIUM);
-        add(INTERMEDIUM, INGOT + INTERMEDIUM);
-        add(PRUDENTIUM, INGOT + PRUDENTIUM);
-        add(SOULIUM, INGOT + SOULIUM);
-        add(SUPERIUM, INGOT + SUPERIUM);
-        add(SUPREMIUM, INGOT + SUPREMIUM);
+        add(INFERIUM);
+        add(INTERMEDIUM);
+        add(PRUDENTIUM);
+        add(SOULIUM);
+        add(SUPERIUM);
+        add(SUPREMIUM);
 
-        addBlock(INFERIUM, 9);
-        addBlock(INTERMEDIUM, 9);
-        addBlock(PRUDENTIUM, 9);
-        addBlock(SOULIUM, 9);
-        addBlock(SUPERIUM, 9);
-        addBlock(SUPREMIUM, 9);
+        addBlock(INFERIUM);
+        addBlock(INTERMEDIUM);
+        addBlock(PRUDENTIUM);
+        addBlock(SOULIUM);
+        addBlock(SUPERIUM);
+        addBlock(SUPREMIUM);
     }
 }

@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginAvaritia.MODID, modname = PluginAvaritia.MODNAME)
 public class PluginAvaritia extends PluginHelper {
 
@@ -11,19 +13,19 @@ public class PluginAvaritia extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(CRYSTAL_MATRIX, "crystal_matrix");
-        reg(INFINITY, "infinity");
-        reg(NEUTRONIUM, "neutronium");
+        reg(CRYSTAL_MATRIX);
+        reg(INFINITY);
+        reg(NEUTRONIUM);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(CRYSTAL_MATRIX, INGOT + CRYSTAL_MATRIX);
-        add(INFINITY, INGOT + INFINITY);
-        add(NEUTRONIUM, INGOT + NEUTRONIUM);
+        add(CRYSTAL_MATRIX);
+        add(INFINITY);
+        add(NEUTRONIUM);
 
-        addBlock(CRYSTAL_MATRIX, 9);
-        addBlock(INFINITY, 9);
-        addBlock(NEUTRONIUM, 9);
+        addBlock(CRYSTAL_MATRIX);
+        addBlock(INFINITY);
+        addBlock(NEUTRONIUM);
     }
 }

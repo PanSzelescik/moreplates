@@ -6,6 +6,8 @@ import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
 import panszelescik.moreplates.plugins.PluginImmersiveEngineering;
 
+import static panszelescik.moreplates.helpers.ItemInfo.Type.*;
+
 public class ImmersiveEngineeringHelper extends PluginHelper {
 
     public static int MetalPressRecipes = 0;
@@ -14,19 +16,19 @@ public class ImmersiveEngineeringHelper extends PluginHelper {
     public static void add(String output, String input, boolean gear, boolean plate, boolean stick) {
         if (oreNameExists(input)) {
             if (gear && oreNameExists(GEAR + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(GEAR + output) + INFO_3 + getItemName(input) + " x4");
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(GEAR + output) + " from: " + getItemName(input) + " x4");
                 MetalPressRecipe.addRecipe(get(GEAR + output), input, mold_gear, energyMetalPress()).setInputSize(4);
 
                 MetalPressRecipes += 1;
             }
             if (plate && oreNameExists(PLATE + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(PLATE + output) + INFO_3 + getItemName(input));
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(PLATE + output) + " from: " + getItemName(input));
                 MetalPressRecipe.addRecipe(get(PLATE + output), input, mold_plate, energyMetalPress());
 
                 MetalPressRecipes += 1;
             }
             if (stick && oreNameExists(STICK + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(STICK + output) + INFO_3 + getItemName(input));
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(STICK + output) + " from: " + getItemName(input));
                 MetalPressRecipe.addRecipe(get(STICK + output, 2), input, mold_stick, energyMetalPress());
 
                 MetalPressRecipes += 1;
@@ -37,31 +39,14 @@ public class ImmersiveEngineeringHelper extends PluginHelper {
     public static void add(String output, String input) {
         if (oreNameExists(input)) {
             if (oreNameExists(GEAR + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(GEAR + output) + INFO_3 + getItemName(input) + " x4");
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(GEAR + output) + " from: " + getItemName(input) + " x4");
                 MetalPressRecipe.addRecipe(get(GEAR + output), input, mold_gear, energyMetalPress()).setInputSize(4);
 
                 MetalPressRecipes += 1;
             }
             if (oreNameExists(PLATE + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(PLATE + output) + INFO_3 + getItemName(input));
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(PLATE + output) + " from: " + getItemName(input));
                 MetalPressRecipe.addRecipe(get(PLATE + output), input, mold_plate, energyMetalPress());
-
-                MetalPressRecipes += 1;
-            }
-        }
-    }
-
-    public static void add(String output, String input, String id) {
-        if (notNull(id, input)) {
-            if (oreNameExists(GEAR + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(GEAR + output) + INFO_3 + getItemName(id, input) + " x4");
-                MetalPressRecipe.addRecipe(get(GEAR + output), get(id, input), mold_gear, energyMetalPress()).setInputSize(4);
-
-                MetalPressRecipes += 1;
-            }
-            if (oreNameExists(PLATE + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(PLATE + output) + INFO_3 + getItemName(id, input));
-                MetalPressRecipe.addRecipe(get(PLATE + output), get(id, input), mold_plate, energyMetalPress());
 
                 MetalPressRecipes += 1;
             }
@@ -71,31 +56,14 @@ public class ImmersiveEngineeringHelper extends PluginHelper {
     public static void add(String output, String input, String id, int meta) {
         if (notNull(id, input, meta)) {
             if (oreNameExists(GEAR + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(GEAR + output) + INFO_3 + getItemName(id, input, 1, meta) + " x4");
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(GEAR + output) + " from: " + getItemName(id, input, 1, meta) + " x4");
                 MetalPressRecipe.addRecipe(get(GEAR + output), get(id, input, 1, meta), mold_gear, energyMetalPress()).setInputSize(4);
 
                 MetalPressRecipes += 1;
             }
             if (oreNameExists(PLATE + output)) {
-                MorePlates.logger.debug(INFO_IE + getItemName(PLATE + output) + INFO_3 + getItemName(id, input, 1, meta));
+                MorePlates.logger.debug("Adding Metal Press recipe for: " + getItemName(PLATE + output) + " from: " + getItemName(id, input, 1, meta));
                 MetalPressRecipe.addRecipe(get(PLATE + output), get(id, input, 1, meta), mold_plate, energyMetalPress());
-
-                MetalPressRecipes += 1;
-            }
-        }
-    }
-
-    public static void addGaia(String output, String input) {
-        if (oreNameExists(input)) {
-            if (oreNameExists(output + "Gear")) {
-                MorePlates.logger.debug(INFO_IE + getItemName(output + "Gear") + INFO_3 + getItemName(input) + " x4");
-                MetalPressRecipe.addRecipe(get(output + "Gear"), get(input), mold_gear, energyMetalPress()).setInputSize(4);
-
-                MetalPressRecipes += 1;
-            }
-            if (oreNameExists(output + "Plate")) {
-                MorePlates.logger.debug(INFO_IE + getItemName(output + "Plate") + INFO_3 + getItemName(input));
-                MetalPressRecipe.addRecipe(get(output + "Plate"), input, mold_plate, energyMetalPress());
 
                 MetalPressRecipes += 1;
             }

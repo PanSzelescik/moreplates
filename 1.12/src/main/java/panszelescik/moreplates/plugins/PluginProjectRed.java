@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginProjectRed.MODID, modname = PluginProjectRed.MODNAME)
 public class PluginProjectRed extends PluginHelper {
 
@@ -11,13 +13,13 @@ public class PluginProjectRed extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(ELECTROTINE, "electrotine_alloy");
-        reg(RED_ALLOY, "red_alloy");
+        reg(ELECTROTINE_ALLOY);
+        reg(RED_ALLOY);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(ELECTROTINE, INGOT + ELECTROTINE);
-        add(RED_ALLOY, INGOT + RED_ALLOY);
+        add(ELECTROTINE_ALLOY);
+        add(RED_ALLOY);
     }
 }

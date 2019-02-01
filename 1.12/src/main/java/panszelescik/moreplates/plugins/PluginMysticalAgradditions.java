@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginMysticalAgradditions.MODID, modname = PluginMysticalAgradditions.MODNAME)
 public class PluginMysticalAgradditions extends PluginHelper {
 
@@ -11,13 +13,13 @@ public class PluginMysticalAgradditions extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(INSANIUM, "insanium");
+        reg(INSANIUM);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(INSANIUM, INGOT + INSANIUM);
+        add(INSANIUM);
 
-        addBlock(INSANIUM, 9);
+        addBlock(INSANIUM);
     }
 }

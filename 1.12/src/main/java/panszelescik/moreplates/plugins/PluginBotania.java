@@ -1,9 +1,15 @@
 package panszelescik.moreplates.plugins;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.helpers.BotaniaHelper;
+import panszelescik.moreplates.helpers.ItemInfo;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
+import vazkii.botania.common.item.ModItems;
+
+import static panszelescik.moreplates.helpers.ItemInfo.*;
 
 @Plugin(modid = PluginBotania.MODID, modname = PluginBotania.MODNAME)
 public class PluginBotania extends PluginHelper {
@@ -13,10 +19,12 @@ public class PluginBotania extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(ELEMENTIUM, "elementium");
-        regGaia(GAIA_SPIRIT, "gaia_spirit");
-        reg(MANASTEEL, "manasteel");
-        reg(TERRASTEEL, "terrasteel");
+        OreDictionary.registerOre("ingotGaia", new ItemStack(ModItems.manaResource, 1, 14));
+        MorePlates.logger.warn("This is not an error! I only registering this for easier adding recipes. Please ignore it.");
+        reg(ELEMENTIUM);
+        reg(GAIA_SPIRIT);
+        reg(MANASTEEL);
+        reg(TERRASTEEL);
     }
 
     @Plugin.PostInit
@@ -24,24 +32,25 @@ public class PluginBotania extends PluginHelper {
         addElvenTrade(ELEMENTIUM, MANASTEEL);
         addManaInfusion(MANASTEEL, IRON);
 
-        add(ELEMENTIUM, INGOT + ELEMENTIUM);
-        addGaia(GAIA_SPIRIT, GAIA_SPIRIT + "Ingot");
-        add(MANASTEEL, INGOT + MANASTEEL);
-        add(TERRASTEEL, INGOT + TERRASTEEL);
+        add(ELEMENTIUM);
+        add(GAIA_SPIRIT);
+        add(MANASTEEL);
+        add(TERRASTEEL);
 
-        addBlock(ELEMENTIUM, BOTANIA_NAME, 9, MODID, ELEMENTIUM_META);
-        addBlock(MANASTEEL, BOTANIA_NAME, 9, MODID, MANASTEEL_META);
-        addBlock(TERRASTEEL, BOTANIA_NAME, 9, MODID, TERRASTEEL_META);
+        String name = "storage";
+        addBlock(ELEMENTIUM, name, 9, MODID, 2);
+        addBlock(MANASTEEL, name, 9, MODID, 0);
+        addBlock(TERRASTEEL, name, 9, MODID, 1);
 
         MorePlates.logger.info("Added " + BotaniaHelper.ElvenTradeRecipes + " recipes to Elven Trade");
         MorePlates.logger.info("Added " + BotaniaHelper.ManaInfusionRecipes + " Mana Infusion recipes");
     }
 
-    private static void addManaInfusion(String output, String input) {
-        BotaniaHelper.addManaInfusion(output, input);
+    private static void addManaInfusion(ItemInfo output, ItemInfo input) {
+        BotaniaHelper.addManaInfusion(output.getOre(), input.getOre());
     }
 
-    private static void addElvenTrade(String output, String input) {
-        BotaniaHelper.addElvenTrade(output, input);
+    private static void addElvenTrade(ItemInfo output, ItemInfo input) {
+        BotaniaHelper.addElvenTrade(output.getOre(), input.getOre());
     }
 }

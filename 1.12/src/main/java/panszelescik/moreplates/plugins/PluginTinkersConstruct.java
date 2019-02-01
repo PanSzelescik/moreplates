@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginTinkersConstruct.MODID, modname = PluginTinkersConstruct.MODNAME)
 public class PluginTinkersConstruct extends PluginHelper {
 
@@ -11,25 +13,25 @@ public class PluginTinkersConstruct extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(ARDITE, "ardite");
-        reg(COBALT, "cobalt");
-        reg(KNIGHTSLIME, "knightslime");
-        reg(MANYULLYN, "manyullyn");
-        reg(PIG_IRON, "pig_iron");
+        reg(ARDITE);
+        reg(COBALT);
+        reg(KNIGHTSLIME);
+        reg(MANYULLYN);
+        reg(PIG_IRON);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(ARDITE, INGOT + ARDITE);
-        add(COBALT, INGOT + COBALT);
-        add(KNIGHTSLIME, INGOT + KNIGHTSLIME);
-        add(MANYULLYN, INGOT + MANYULLYN);
-        add(PIG_IRON, INGOT + PIG_IRON);
+        add(ARDITE);
+        add(COBALT);
+        add(KNIGHTSLIME);
+        add(MANYULLYN);
+        add(PIG_IRON);
 
-        addBlock(ARDITE, 9);
-        addBlock(COBALT, 9);
-        addBlock(KNIGHTSLIME, 9);
-        addBlock(MANYULLYN, 9);
-        addBlock(PIG_IRON, 9);
+        addBlock(ARDITE);
+        addBlock(COBALT);
+        addBlock(KNIGHTSLIME);
+        addBlock(MANYULLYN);
+        addBlock(PIG_IRON);
     }
 }

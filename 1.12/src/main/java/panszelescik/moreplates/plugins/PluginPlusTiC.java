@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginPlusTiC.MODID, modname = PluginPlusTiC.MODNAME)
 public class PluginPlusTiC extends PluginHelper {
 
@@ -11,30 +13,30 @@ public class PluginPlusTiC extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(ALUMITE, "alumite");
+        reg(ALUMITE);
         if (isLoaded(PluginBotania.MODID))
-            reg(MIRION, "mirion");
+            reg(MIRION);
         if (isLoaded(PluginMekanism.MODID))
-            reg(OSGLOGLAS, "osgloglas");
+            reg(OSGLOGLAS);
         if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID))
-            reg(OSMIRIDIUM, "osmiridium");
+            reg(OSMIRIDIUM);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(ALUMITE, INGOT + ALUMITE);
-        addBlock(ALUMITE, 9);
+        add(ALUMITE);
+        addBlock(ALUMITE);
         if (isLoaded(PluginBotania.MODID)) {
-            add(MIRION, INGOT + MIRION);
-            addBlock(MIRION, 9);
+            add(MIRION);
+            addBlock(MIRION);
         }
         if (isLoaded(PluginMekanism.MODID)) {
-            add(OSGLOGLAS, INGOT + OSGLOGLAS);
-            addBlock(OSGLOGLAS, 9);
+            add(OSGLOGLAS);
+            addBlock(OSGLOGLAS);
         }
         if (isLoaded(PluginMekanism.MODID) && isLoaded(PluginThermalExpansion.MODID)) {
-            add(OSMIRIDIUM, INGOT + OSMIRIDIUM);
-            addBlock(OSMIRIDIUM, 9);
+            add(OSMIRIDIUM);
+            addBlock(OSMIRIDIUM);
         }
     }
 }

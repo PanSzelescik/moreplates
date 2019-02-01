@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginCalculator.MODID, modname = PluginCalculator.MODNAME)
 public class PluginCalculator extends PluginHelper {
 
@@ -11,20 +13,21 @@ public class PluginCalculator extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(AMETHYST, "amethyst");
-        reg(ENRICHED_GOLD, "enriched_gold");
-        reg(REINFORCED_IRON, "reinforced_iron");
-        reg(TANZANITE, "tanzanite");
+        reg(AMETHYST);
+        reg(ENRICHED_GOLD);
+        reg(REINFORCED_IRON);
+        reg(TANZANITE);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(AMETHYST, GEM + AMETHYST);
-        add(ENRICHED_GOLD, INGOT + ENRICHED_GOLD);
-        add(REINFORCED_IRON, REINFORCED_IRON_NAME, MODID);
-        add(TANZANITE, GEM + TANZANITE);
+        add(AMETHYST);
+        add(ENRICHED_GOLD);
+        add(REINFORCED_IRON, "reinforcedironingot", MODID);
+        add(TANZANITE);
 
-        addBlock(ENRICHED_GOLD, CALCULATOR_NAME, 9, MODID, ENRICHED_GOLD_BLOCK_META);
-        addBlock(REINFORCED_IRON, CALCULATOR_NAME, 9, MODID, REINFORCED_IRON_BLOCK_META);
+        String name = "material";
+        addBlock(ENRICHED_GOLD, name, 9, MODID, 2);
+        addBlock(REINFORCED_IRON, name, 9, MODID, 3);
     }
 }

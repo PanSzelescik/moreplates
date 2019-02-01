@@ -3,6 +3,8 @@ package panszelescik.moreplates.plugins;
 import panszelescik.moreplates.helpers.PluginHelper;
 import panszelescik.moreplates.init.Plugin;
 
+import static panszelescik.moreplates.helpers.ItemInfo.*;
+
 @Plugin(modid = PluginDraconicEvolution.MODID, modname = PluginDraconicEvolution.MODNAME)
 public class PluginDraconicEvolution extends PluginHelper {
 
@@ -11,16 +13,16 @@ public class PluginDraconicEvolution extends PluginHelper {
 
     @Plugin.PreInit
     public static void preInit() {
-        reg(AWAKENED_DRACONIUM, "awakened_draconium");
-        reg(DRACONIUM, "draconium");
+        reg(AWAKENED_DRACONIUM);
+        reg(DRACONIUM);
     }
 
     @Plugin.PostInit
     public static void postInit() {
-        add(AWAKENED_DRACONIUM, INGOT + AWAKENED_DRACONIUM);
-        add(DRACONIUM, INGOT + DRACONIUM);
+        add(AWAKENED_DRACONIUM);
+        add(DRACONIUM);
 
-        addBlock(AWAKENED_DRACONIUM, 9);
-        addBlock(DRACONIUM, 9);
+        addBlock(AWAKENED_DRACONIUM);
+        addBlock(DRACONIUM);
     }
 }
