@@ -2,6 +2,7 @@ package panszelescik.moreplates.plugins.core;
 
 import net.minecraftforge.fml.common.discovery.ASMDataTable;
 import org.apache.logging.log4j.Level;
+import panszelescik.morelibs.api.ClassComparator;
 import panszelescik.morelibs.api.Helper;
 import panszelescik.moreplates.MorePlates;
 import panszelescik.moreplates.config.Config;
@@ -41,6 +42,7 @@ public class PluginLoader {
                 MorePlates.logger.catching(Level.ERROR, e);
             }
         }
+        initList.sort(new ClassComparator());
     }
 
     public static void preInitPlugin() {
