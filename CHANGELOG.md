@@ -1,5 +1,11 @@
 # More Plates Changelog
 
+### 1.12.2-5.5.2
+- Requires More Libs 1.2.1+
+- Switch to ItemInfo
+- Changed packages names
+- Added sorting for Plugin Classes
+
 ### 1.12.2-5.5.1
 - Requires More Libs 1.2.0+
 - Fixed errors in Config, now is only one
