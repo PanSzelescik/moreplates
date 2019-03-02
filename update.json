@@ -14,7 +14,7 @@
 		"1.10.2-recommended": "2.6.1"
 	},
 	"1.13.2": {
-		"6.0.0": "Requires More Libs 2.0.0+\nPort to Minecraft 1.13.2, only with support for Minecraft, beta!",
+		"6.0.0": "Requires More Libs 2.0.0+\nPort to Minecraft 1.13.2, only with support for Minecraft, beta!"
 	},
 	"1.12.2": {
 		"5.5.2": "Requires More Libs 1.2.1+\nSwitch to ItemInfo\nChanged packages names\nAdded sorting for Plugin Classes",

@@ -21,7 +21,7 @@ This mod adds some Gears, Plates and Rods
 [[dependencies.moreplates]]
     modId="morelibs"
     mandatory=true
-    versionRange="[1.2.2-alpha2,)"
+    versionRange="[2.0.0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.moreplates]]
