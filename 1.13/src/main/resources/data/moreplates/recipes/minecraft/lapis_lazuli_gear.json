@@ -1,0 +1,34 @@
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "forge:item_exists",
+					"item": "moreplates:lapis_lazuli_gear"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enable_gear"
+				}
+			]
+		}
+	],
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" M ",
+		"MCM",
+		" M "
+	],
+	"key": {
+		"M": {
+			"constant": "moreplates:lapis"
+		},
+		"C": {
+			"constant": "moreplates:center"
+		}
+	},
+	"result": {
+		"item": "moreplates:lapis_lazuli_gear"
+	}
+}

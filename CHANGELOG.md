@@ -1,5 +1,8 @@
 # More Plates Changelog
 
+### 1.13.2-6.0.0
+- Port to Minecraft 1.13.2, only with support for Minecraft, beta!
+
 ### 1.12.2-5.5.2
 - Requires More Libs 1.2.1+
 - Switch to ItemInfo

@@ -1,0 +1,29 @@
+{
+	"conditions": [
+		{
+			"type": "forge:and",
+			"values": [
+				{
+					"type": "forge:item_exists",
+					"item": "moreplates:iron_plate"
+				},
+				{
+					"type": "moreplates:option_enabled",
+					"config_setting": "enable_plate"
+				}
+			]
+		}
+	],
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"constant": "moreplates:iron"
+		},
+		{
+			"constant": "moreplates:hammer"
+		}
+	],
+	"result": {
+		"item": "moreplates:iron_plate"
+	}
+}

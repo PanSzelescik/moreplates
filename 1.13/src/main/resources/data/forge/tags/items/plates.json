@@ -1,0 +1,14 @@
+{
+	"replace": false,
+	"values": [
+		"moreplates:coal_plate",
+		"moreplates:diamond_plate",
+		"moreplates:emerald_plate",
+		"moreplates:glowstone_plate",
+		"moreplates:gold_plate",
+		"moreplates:iron_plate",
+		"moreplates:lapis_lazuli_plate",
+		"moreplates:nether_quartz_plate",
+		"moreplates:redstone_plate"
+	]
+}

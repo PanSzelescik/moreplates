@@ -1,0 +1,59 @@
+[
+	{
+		"name": "moreplates:center",
+		"tag": "forge:ingots"
+	},
+	{
+		"name": "moreplates:hammer",
+		"item": {
+			"item": "moreplates:hammer"
+		}
+	},
+	
+	{
+		"name": "moreplates:coal",
+		"item": {
+			"item": "minecraft:coal"
+		}
+	},
+	{
+		"name": "moreplates:diamond",
+		"tag": "forge:gems/diamond"
+	},
+	{
+		"name": "moreplates:emerald",
+		"tag": "forge:gems/emerald"
+	},
+	{
+		"name": "moreplates:glowstone",
+		"tag": "forge:dusts/glowstone"
+	},
+	{
+		"name": "moreplates:gold",
+		"tag": "forge:ingots/gold"
+	},
+	{
+		"name": "moreplates:iron",
+		"tag": "forge:ingots/iron"
+	},
+	{
+		"name": "moreplates:lapis",
+		"tag": "forge:gems/lapis"
+	},
+	{
+		"name": "moreplates:prismarine",
+		"tag": "forge:gems/prismarine"
+	},
+	{
+		"name": "moreplates:redstone",
+		"tag": "forge:dusts/redstone"
+	},
+	{
+		"name": "moreplates:stick",
+		"tag": "forge:rods/wooden"
+	},
+	{
+		"name": "moreplates:quartz",
+		"tag": "forge:gems/quartz"
+	}
+]
