@@ -9,7 +9,8 @@ import java.util.function.BooleanSupplier;
 
 public class ConfigOptionConditionFactory implements IConditionSerializer {
 
-    public ConfigOptionConditionFactory() {}
+    public ConfigOptionConditionFactory() {
+    }
 
     @Override
     public BooleanSupplier parse(JsonObject json) {

@@ -48,7 +48,7 @@ minecraft {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${version_forge}"
-    compile files('libs/morelibs-1.13.2-2.0.0.jar')
+    compile files('libs/morelibs-1.13.2-2.0.1.jar')
 }
 
 jar {

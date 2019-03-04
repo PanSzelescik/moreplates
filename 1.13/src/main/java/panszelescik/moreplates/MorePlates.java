@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import panszelescik.moreplates.config.BaseConfig;
 import panszelescik.moreplates.config.ConfigOptionConditionFactory;
+import panszelescik.moreplates.config.TagExistsConditionFactory;
 import panszelescik.moreplates.plugins.core.PluginLoader;
 
 @Mod(MorePlates.MODID)
@@ -41,6 +42,8 @@ public class MorePlates {
 
     private void setup(final FMLCommonSetupEvent e) {
         CraftingHelper.register(new ResourceLocation(MorePlates.MODID, "option_enabled"), new ConfigOptionConditionFactory());
+        CraftingHelper.register(new ResourceLocation(MorePlates.MODID, "tag_exists"), new TagExistsConditionFactory());
+        PluginLoader.postInitPlugin();
     }
 
     /*
