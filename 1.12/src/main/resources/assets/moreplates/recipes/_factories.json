@@ -1,8 +1,0 @@
-{
-	"conditions": {
-		"option_enabled": "panszelescik.moreplates.config.ConfigOptionConditionFactory"
-	},
-	"ingredients": {
-		"center": "panszelescik.moreplates.config.IngredientCenterFactory"
-	}
-}
