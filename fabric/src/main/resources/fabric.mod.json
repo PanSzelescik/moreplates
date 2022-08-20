@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "moreplates",
+  "version": "${version}",
+  "name": "More Plates",
+  "description": "This mod adds some Plates",
+  "authors": [
+    "PanSzelescik"
+  ],
+  "contact": {
+    "website": "https://www.curseforge.com/minecraft/mc-mods/moreplates",
+    "repo": "https://github.com/PanSzelescik/moreplates",
+    "issues": "https://github.com/PanSzelescik/moreplates/issues"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "pl.panszelescik.moreplates.fabric.MorePlatesFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": ">=1.19.2"
+  }
+}
