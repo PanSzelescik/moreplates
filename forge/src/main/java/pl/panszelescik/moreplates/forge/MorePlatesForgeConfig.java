@@ -1,6 +1,7 @@
 package pl.panszelescik.moreplates.forge;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraftforge.common.ForgeConfigSpec;
 import pl.panszelescik.moreplates.common.ItemType;
 import pl.panszelescik.moreplates.common.MaterialType;
@@ -15,6 +16,8 @@ public class MorePlatesForgeConfig {
 
     static {
         CONFIG.defaultReturnValue(false);
+
+        var tempConfig = new Object2ObjectOpenHashMap<String, ForgeConfigSpec.BooleanValue>();
 
         var builder = new ForgeConfigSpec.Builder()
                 .comment("More Plates settings")
@@ -35,12 +38,14 @@ public class MorePlatesForgeConfig {
                 var key = materialType.getRegistryName(itemType);
                 var value = builder.define(key, true);
 
-                CONFIG.put(MorePlates.ENABLED_ITEMS_PATH + "." + modId + "." + key, value.get().booleanValue());
+                tempConfig.put(MorePlates.ENABLED_ITEMS_PATH + "." + modId + "." + key, value);
             }
         }
 
         builder.pop(2);
 
         SPEC = builder.build();
+
+        tempConfig.forEach((key, value) -> CONFIG.put(key, value.get().booleanValue()));
     }
 }
