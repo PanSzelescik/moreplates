@@ -37,16 +37,6 @@ public class ForgeIntegrations implements Integrations {
 
     @Override
     public boolean isItemEnabled(String key) {
-        var configValue = MorePlatesForgeConfig.CONFIG.get(key);
-        if (configValue == null) {
-            return false;
-        }
-
-        var value = configValue.get();
-        if (value instanceof Boolean boolValue) {
-            return boolValue;
-        }
-
-        return false;
+        return MorePlatesForgeConfig.CONFIG.getBoolean(key);
     }
 }

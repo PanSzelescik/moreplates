@@ -11,7 +11,7 @@ public interface Integrations {
     CreativeModeTab getCreativeTab();
 
     default boolean isItemEnabled(MaterialType materialType, ItemType itemType) {
-        return isItemEnabled(materialType.getName() + "_" + itemType.getName());
+        return isItemEnabled(MorePlates.ENABLED_ITEMS_PATH + "." + materialType.getModId() + "." + materialType.getName() + "_" + itemType.getName());
     }
 
     boolean isItemEnabled(String key);

@@ -14,7 +14,7 @@ public class FabricIntegrations implements Integrations {
 
     public FabricIntegrations() {
         this.creativeTab = FabricItemGroupBuilder
-                .create(new ResourceLocation(MorePlates.MODID, "tab"))
+                .create(new ResourceLocation(MorePlates.MODID, "creative_tab"))
                 .icon(() -> new ItemStack(Registry.ITEM.get(new ResourceLocation(MorePlates.MODID, MaterialType.WOOD.getRegistryName(ItemType.PLATE)))))
                 .build();
     }
@@ -36,6 +36,6 @@ public class FabricIntegrations implements Integrations {
 
     @Override
     public boolean isItemEnabled(String key) {
-        return true; //TODO config
+        return MorePlatesFabricConfig.CONFIG.getBoolean(key);
     }
 }

@@ -2,6 +2,7 @@ package pl.panszelescik.moreplates.fabric;
 
 import it.unimi.dsi.fastutil.Pair;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -15,6 +16,12 @@ public class MorePlatesFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         MorePlates.INTEGRATIONS = new FabricIntegrations();
+
+        try {
+            MorePlatesFabricConfig.loadConfig(FabricLoader.getInstance().getConfigDir().toFile());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         MaterialType.getItemsToRegister().forEach(this::registerItem);
     }
