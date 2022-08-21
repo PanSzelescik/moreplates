@@ -3,6 +3,7 @@ package pl.panszelescik.moreplates.forge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.data.loading.DatagenModLoader;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import pl.panszelescik.moreplates.common.*;
@@ -38,5 +39,10 @@ public class ForgeIntegrations implements Integrations {
     @Override
     public boolean isItemEnabled(String key) {
         return MorePlatesForgeConfig.CONFIG.getBoolean(key);
+    }
+
+    @Override
+    public boolean isRunningDataGen() {
+        return DatagenModLoader.isRunningDataGen();
     }
 }

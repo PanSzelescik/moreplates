@@ -38,4 +38,9 @@ public class FabricIntegrations implements Integrations {
     public boolean isItemEnabled(String key) {
         return MorePlatesFabricConfig.CONFIG.getBoolean(key);
     }
+
+    @Override
+    public boolean isRunningDataGen() {
+        return false;
+    }
 }

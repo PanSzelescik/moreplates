@@ -46,6 +46,6 @@ public class MorePlatesForgeConfig {
 
         SPEC = builder.build();
 
-        tempConfig.forEach((key, value) -> CONFIG.put(key, value.get().booleanValue()));
+        tempConfig.forEach((key, value) -> CONFIG.put(key, MorePlates.INTEGRATIONS.isRunningDataGen() || value.get()));
     }
 }

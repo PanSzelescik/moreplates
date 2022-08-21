@@ -66,7 +66,7 @@ public enum MaterialType {
     }
 
     public boolean isMaterialEnabled() {
-        return this.getTag() != null && MorePlates.INTEGRATIONS.isModEnabled(this.getModId());
+        return MorePlates.INTEGRATIONS.isRunningDataGen() || (this.getTag() != null && MorePlates.INTEGRATIONS.isModEnabled(this.getModId()));
     }
 
     public boolean isItemEnabled(ItemType type) {

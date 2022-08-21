@@ -6,6 +6,14 @@ architectury {
     forge()
 }
 
+/*loom {
+    forge {
+        dataGen {
+            mod "moreplates"
+        }
+    }
+}*/
+
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.

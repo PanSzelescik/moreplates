@@ -15,4 +15,6 @@ public interface Integrations {
     }
 
     boolean isItemEnabled(String key);
+
+    boolean isRunningDataGen();
 }
