@@ -9,7 +9,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import pl.panszelescik.moreplates.common.MaterialType;
 import pl.panszelescik.moreplates.common.MorePlates;
 
 import java.util.function.Supplier;
@@ -24,7 +23,7 @@ public class MorePlatesForge {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MorePlatesForgeConfig.SPEC);
 
-        MaterialType.getItemsToRegister().forEach(this::registerItem);
+        MorePlates.getItemsToRegister().forEach(this::registerItem);
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 

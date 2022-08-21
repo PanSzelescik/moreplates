@@ -7,7 +7,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import pl.panszelescik.moreplates.common.MorePlates;
-import pl.panszelescik.moreplates.common.MaterialType;
 
 import java.util.function.Supplier;
 
@@ -23,7 +22,7 @@ public class MorePlatesFabric implements ModInitializer {
             throw new RuntimeException(e);
         }
 
-        MaterialType.getItemsToRegister().forEach(this::registerItem);
+        MorePlates.getItemsToRegister().forEach(this::registerItem);
     }
 
     private void registerItem(Pair<ResourceLocation, Supplier<Item>> pair) {
